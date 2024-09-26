@@ -1,17 +1,14 @@
 import Lake
 open Lake DSL
 
-package «LeanData» where
-  -- add any package-wide dependencies here
+package LeanData where
+  -- Add any package-wide settings here
+
+lean_lib NuminaMath where
+  -- This will include all .lean files under the NuminaMath directory
+  srcDir := "NuminaMath"
 
 @[default_target]
-lean_lib «NuminaMath» where
-  -- Point to the NuminaMath directory
-  srcDir := "NuminaMath"
-  -- Explicitly state that we don't have a root file
-  roots := #[]
-
-lean_exe «LeanData» where
+lean_exe leandata where
   root := `Main
-  -- Link the NuminaMath library
-  dependencies := #[`NuminaMath]
+  -- Assuming you'll have a Main.lean file in the root directory
