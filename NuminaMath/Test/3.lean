@@ -1,6 +1,10 @@
-namespace factorial_sum_perfect_square_iff
-
 import Mathlib
+import Mathlib.Analysis.SpecialFunctions.Sqrt
+import Mathlib.Data.Complex.Exponential
+import Mathlib.Data.Real.Basic
+import Mathlib.Data.Set.Basic
+
+namespace 3_factorial_sum_perfect_square_iff_3000
 
 def is_perfect_square (n : Nat) : Prop := ∃ m : Nat, m * m = n
 
@@ -12,11 +16,10 @@ theorem factorial_sum_perfect_square_iff (n : Nat) :
   sorry
 }
 
-end factorial_sum_perfect_square_iff
+end 3_factorial_sum_perfect_square_iff_3000
 
-namespace preservation_time_at_33_degrees
 
-import Mathlib
+namespace 3__3001
 
 noncomputable def preservation_time (x : ℝ) (k : ℝ) (b : ℝ) : ℝ :=
   Real.exp (k * x + b)
@@ -27,21 +30,19 @@ theorem preservation_time_at_33_degrees (k b : ℝ)
   preservation_time 33 k b = 24 := by
   sorry
 
-end preservation_time_at_33_degrees
+end 3__3001
 
-namespace square_of_1024
 
-import Mathlib
+namespace 3_square_of_1024_3002
 
 theorem square_of_1024 : 1024^2 = 1048576 :=
 by
   sorry
 
-end square_of_1024
+end 3_square_of_1024_3002
 
-namespace hexagon_unique_intersection_points_are_45
 
-import Mathlib
+namespace 3_hexagon_unique_intersection_points_are_45_3003
 
 -- Definitions related to hexagon for the proof problem
 def hexagon_vertices : ℕ := 6
@@ -58,11 +59,10 @@ theorem hexagon_unique_intersection_points_are_45 :
 by
   sorry
 
-end hexagon_unique_intersection_points_are_45
+end 3_hexagon_unique_intersection_points_are_45_3003
 
-namespace mailman_should_give_junk_mail
 
-import Mathlib
+namespace 3_mailman_should_give_junk_mail_3004
 
 -- Definitions from the conditions
 def houses_in_block := 20
@@ -73,22 +73,20 @@ theorem mailman_should_give_junk_mail :
   junk_mail_per_house * houses_in_block = 640 :=
   by sorry
 
-end mailman_should_give_junk_mail
+end 3_mailman_should_give_junk_mail_3004
 
-namespace inverse_proportion_quadrants
 
-import Mathlib
+namespace 3__3005
 
 theorem inverse_proportion_quadrants (k b : ℝ) (h1 : b > 0) (h2 : k < 0) :
   ∀ x : ℝ, (x > 0 → (y = kb / x) → y < 0) ∧ (x < 0 → (y = kb / x) → y > 0) :=
 by
   sorry
 
-end inverse_proportion_quadrants
+end 3__3005
 
-namespace systematic_sampling_first_group
 
-import Mathlib
+namespace 3__3006
 
 theorem systematic_sampling_first_group 
   (total_students sample_size group_size group_number drawn_number : ℕ)
@@ -102,22 +100,20 @@ theorem systematic_sampling_first_group
 sorry
 
 
-end systematic_sampling_first_group
+end 3__3006
 
-namespace citizens_own_a_cat
 
-import Mathlib
+namespace 3__3007
 
 theorem citizens_own_a_cat (p d : ℝ) (n : ℕ) (h1 : p = 0.60) (h2 : d = 0.50) (h3 : n = 100) : 
   (p * n - d * p * n) = 30 := 
 by 
   sorry
 
-end citizens_own_a_cat
+end 3__3007
 
-namespace total_points_other_members_18
 
-import Mathlib
+namespace 3_total_points_other_members_18_3008
 
 -- Definitions
 def total_points (x : ℕ) (S : ℕ) (T : ℕ) (M : ℕ) (y : ℕ) :=
@@ -140,11 +136,10 @@ by
   intros hSam hTaylor hMorgan hTotal hOther
   sorry
 
-end total_points_other_members_18
+end 3_total_points_other_members_18_3008
 
-namespace election_winner_votes
 
-import Mathlib
+namespace 3_election_winner_votes_3009
 
 variable (V : ℝ) (winner_votes : ℝ) (winner_margin : ℝ)
 variable (condition1 : V > 0)
@@ -154,11 +149,10 @@ variable (condition3 : winner_margin = 240)
 theorem election_winner_votes (h : winner_votes - 0.40 * V = winner_margin) : winner_votes = 720 := by
   sorry
 
-end election_winner_votes
+end 3_election_winner_votes_3009
 
-namespace exists_integer_K
 
-import Mathlib
+namespace 3__3010
 
 theorem exists_integer_K (Z : ℕ) (K : ℕ) : 
   1000 < Z ∧ Z < 2000 ∧ Z = K^4 → 
@@ -166,11 +160,10 @@ theorem exists_integer_K (Z : ℕ) (K : ℕ) :
 by
   sorry
 
-end exists_integer_K
+end 3__3010
 
-namespace original_savings
 
-import Mathlib
+namespace 3__3011
 
 variable (A B : ℕ)
 
@@ -184,11 +177,10 @@ def cond2 : Prop := (B + 60) = 2 * (A - 60)
 theorem original_savings (h1 : cond1 A B) (h2 : cond2 A B) : A = 100 ∧ B = 20 := by
   sorry
 
-end original_savings
+end 3__3011
 
-namespace adah_practiced_total_hours
 
-import Mathlib
+namespace 3_adah_practiced_total_hours_3012
 
 theorem adah_practiced_total_hours :
   let minutes_per_day := 86
@@ -200,11 +192,10 @@ theorem adah_practiced_total_hours :
 by
   sorry
 
-end adah_practiced_total_hours
+end 3_adah_practiced_total_hours_3012
 
-namespace stickers_distribution
 
-import Mathlib
+namespace 3__3013
 
 -- Define the mathematical problem: distributing 10 stickers among 5 sheets with each sheet getting at least one sticker.
 
@@ -214,20 +205,18 @@ theorem stickers_distribution (n : ℕ) (k : ℕ) (h₁ : n = 10) (h₂ : k = 5)
   partitions_count (n - k) k = 7 := by
   sorry
 
-end stickers_distribution
+end 3__3013
 
-namespace 
 
-import Mathlib
+namespace 3__3014
 
 theorem decreasing_exponential_range {a : ℝ} (h : ∀ x y : ℝ, x < y → (a + 1)^x > (a + 1)^y) : -1 < a ∧ a < 0 :=
 sorry
 
-end 
+end 3__3014
 
-namespace field_perimeter
 
-import Mathlib
+namespace 3_field_perimeter_3015
 
 noncomputable def outer_perimeter (posts : ℕ) (post_width_inches : ℝ) (spacing_feet : ℝ) : ℝ :=
   let posts_per_side := posts / 4
@@ -241,11 +230,10 @@ theorem field_perimeter :
 by
   sorry
 
-end field_perimeter
+end 3_field_perimeter_3015
 
-namespace max_remaining_area
 
-import Mathlib
+namespace 3__3016
 
 theorem max_remaining_area (original_area : ℕ) (rec1 : ℕ × ℕ) (rec2 : ℕ × ℕ) (rec3 : ℕ × ℕ)
   (rec4 : ℕ × ℕ) (total_area_cutout : ℕ):
@@ -260,33 +248,30 @@ by
   intros
   sorry
 
-end max_remaining_area
+end 3__3016
 
-namespace factorize_expression
 
-import Mathlib
+namespace 3_factorize_expression_3017
 
 variable (a : ℝ)
 
 theorem factorize_expression : a^3 + 4 * a^2 + 4 * a = a * (a + 2)^2 := by
   sorry
 
-end factorize_expression
+end 3_factorize_expression_3017
 
-namespace 
 
-import Mathlib
+namespace 3__3018
 
 def is_two_digit (x : ℕ) := x >= 10 ∧ x < 100
 
 theorem number_divisible_by_75 {a b : ℕ} (h1 : a * b = 35) (h2 : is_two_digit (10 * a + b)) : (10 * a + b) % 75 = 0 :=
 sorry
 
-end 
+end 3__3018
 
-namespace option_A_correct
 
-import Mathlib
+namespace 3_option_A_correct_3019
 
 variable (f g : ℝ → ℝ)
 
@@ -300,11 +285,10 @@ by
   -- Proving the theorem
   sorry
 
-end option_A_correct
+end 3_option_A_correct_3019
 
-namespace juniors_to_freshmen_ratio
 
-import Mathlib
+namespace 3__3020
 
 variable (f s j : ℕ)
 
@@ -320,11 +304,10 @@ theorem juniors_to_freshmen_ratio
 by
   sorry
 
-end juniors_to_freshmen_ratio
+end 3__3020
 
-namespace f_diff_ineq
 
-import Mathlib
+namespace 3__3021
 
 variable {f : ℝ → ℝ}
 variable (deriv_f : ∀ x > 0, x * (deriv f x) > 1)
@@ -332,11 +315,10 @@ variable (deriv_f : ∀ x > 0, x * (deriv f x) > 1)
 theorem f_diff_ineq (h : ∀ x > 0, x * (deriv f x) > 1) : f 2 - f 1 > Real.log 2 := by 
   sorry
 
-end f_diff_ineq
+end 3__3021
 
-namespace all_statements_correct
 
-import Mathlib
+namespace 3_all_statements_correct_3022
 
 theorem all_statements_correct :
   (∀ (b h : ℝ), (3 * b * h = 3 * (b * h))) ∧
@@ -349,11 +331,10 @@ by
   intros h
   sorry
 
-end all_statements_correct
+end 3_all_statements_correct_3022
 
-namespace distance_between_A_and_B
 
-import Mathlib
+namespace 3_distance_between_A_and_B_3023
 
 def scale : ℕ := 20000
 def map_distance : ℕ := 6
@@ -363,29 +344,26 @@ def actual_distance_m : ℕ := actual_distance_cm / 100
 theorem distance_between_A_and_B : actual_distance_m = 1200 := by
   sorry
 
-end distance_between_A_and_B
+end 3_distance_between_A_and_B_3023
 
-namespace no_injective_function
 
-import Mathlib
+namespace 3__3024
 
 theorem no_injective_function (f : ℕ → ℕ) (h : ∀ m n : ℕ, f (m * n) = f m + f n) : ¬ Function.Injective f := 
 sorry
 
-end no_injective_function
+end 3__3024
 
-namespace seventeen_divides_9x_plus_5y
 
-import Mathlib
+namespace 3__3025
 
 theorem seventeen_divides_9x_plus_5y (x y : ℤ) (h : 17 ∣ (2 * x + 3 * y)) : 17 ∣ (9 * x + 5 * y) :=
 sorry
 
-end seventeen_divides_9x_plus_5y
+end 3__3025
 
-namespace coffee_mix_price_per_pound
 
-import Mathlib
+namespace 3_coffee_mix_price_per_pound_3026
 
 -- Definitions based on conditions
 def total_weight : ℝ := 100
@@ -400,11 +378,10 @@ theorem coffee_mix_price_per_pound :
 by
   sorry
 
-end coffee_mix_price_per_pound
+end 3_coffee_mix_price_per_pound_3026
 
-namespace length_of_goods_train
 
-import Mathlib
+namespace 3_length_of_goods_train_3027
 
 -- Define the given conditions
 def speed_kmph := 72
@@ -423,11 +400,10 @@ def train_length := distance_covered - platform_length
 theorem length_of_goods_train : train_length = 260 := by
   sorry
 
-end length_of_goods_train
+end 3_length_of_goods_train_3027
 
-namespace jill_spent_30_percent_on_food
 
-import Mathlib
+namespace 3__3028
 
 variables (T F : ℝ)
 
@@ -438,11 +414,10 @@ theorem jill_spent_30_percent_on_food
 by 
   sorry
 
-end jill_spent_30_percent_on_food
+end 3__3028
 
-namespace probability_of_two_white_balls
 
-import Mathlib
+namespace 3_probability_of_two_white_balls_3029
 
 -- Define the total number of balls
 def total_balls : ℕ := 11
@@ -465,11 +440,10 @@ noncomputable def probability_white : ℚ := (white_combinations : ℚ) / (total
 -- Now, state the theorem that states the desired result
 theorem probability_of_two_white_balls : probability_white = 2 / 11 := sorry
 
-end probability_of_two_white_balls
+end 3_probability_of_two_white_balls_3029
 
-namespace no_solution_xyz
 
-import Mathlib
+namespace 3_no_solution_xyz_3030
 
 theorem no_solution_xyz : ∀ (x y z : Nat), (1 ≤ x) → (x ≤ 9) → (0 ≤ y) → (y ≤ 9) → (0 ≤ z) → (z ≤ 9) →
     100 * x + 10 * y + z ≠ 10 * x * y + x * z :=
@@ -477,11 +451,10 @@ by
   intros x y z hx1 hx9 hy1 hy9 hz1 hz9
   sorry
 
-end no_solution_xyz
+end 3_no_solution_xyz_3030
 
-namespace triangle_side_s
 
-import Mathlib
+namespace 3_triangle_side_s_3031
 
 /-- The sides of a triangle have lengths 8, 13, and s where s is a whole number.
     What is the smallest possible value of s?
@@ -492,11 +465,10 @@ theorem triangle_side_s (s : ℕ) :
 by
   sorry
 
-end triangle_side_s
+end 3_triangle_side_s_3031
 
-namespace butterflies_count
 
-import Mathlib
+namespace 3__3032
 
 theorem butterflies_count (total_black_dots : ℕ) (black_dots_per_butterfly : ℕ) 
                           (h1 : total_black_dots = 4764) 
@@ -505,11 +477,10 @@ theorem butterflies_count (total_black_dots : ℕ) (black_dots_per_butterfly : �
 by
   sorry
 
-end butterflies_count
+end 3__3032
 
-namespace increased_work
 
-import Mathlib
+namespace 3__3033
 
 variable (W p : ℕ)
 
@@ -517,11 +488,10 @@ theorem increased_work (hW : W > 0) (hp : p > 0) :
   (W / (7 * p / 8)) - (W / p) = W / (7 * p) := 
 sorry
 
-end increased_work
+end 3__3033
 
-namespace geometric_sequence_sum
 
-import Mathlib
+namespace 3__3034
 
 -- Definition of the sum of the first n terms of a geometric sequence
 variable (S : ℕ → ℝ)
@@ -534,11 +504,10 @@ def S_2n_given (n : ℕ) : Prop := S (2 * n) = 42
 theorem geometric_sequence_sum (n : ℕ) (S : ℕ → ℝ) 
     (h1 : S n = 36) (h2 : S (2 * n) = 42) : S (3 * n) = 48 := sorry
 
-end geometric_sequence_sum
+end 3__3034
 
-namespace min_value_of_quadratic
 
-import Mathlib
+namespace 3_min_value_of_quadratic_3035
 
 def quadratic_function (x : ℝ) : ℝ := x^2 + 6 * x + 13
 
@@ -546,11 +515,10 @@ theorem min_value_of_quadratic :
   (∃ x : ℝ, quadratic_function x = 4) ∧ (∀ y : ℝ, quadratic_function y ≥ 4) :=
 sorry
 
-end min_value_of_quadratic
+end 3_min_value_of_quadratic_3035
 
-namespace probability_at_least_one
 
-import Mathlib
+namespace 3__3036
 
 theorem probability_at_least_one (
     pA pB pC : ℝ
@@ -560,11 +528,10 @@ by
   rw [hA, hB, hC]
   sorry
 
-end probability_at_least_one
+end 3__3036
 
-namespace part1_part2
 
-import Mathlib
+namespace 3_part1_part2_3037
 
 variables {A B C : ℝ} {a b c : ℝ} -- Angles and sides of the triangle
 variable (h1 : (a - b + c) * (a - b - c) + a * b = 0)
@@ -578,11 +545,10 @@ theorem part2 : 6 < a + b ∧ a + b <= 4 * Real.sqrt 3 :=
 by
   sorry
 
-end part1_part2
+end 3_part1_part2_3037
 
-namespace discount_percentage_is_20
 
-import Mathlib
+namespace 3__3038
 
 theorem discount_percentage_is_20
   (regular_price_per_shirt : ℝ) (number_of_shirts : ℝ) (total_sale_price : ℝ)
@@ -591,11 +557,10 @@ theorem discount_percentage_is_20
 by
   sorry
 
-end discount_percentage_is_20
+end 3__3038
 
-namespace compute_xy
 
-import Mathlib
+namespace 3_compute_xy_3039
 
 variable (x y : ℝ)
 variable (h1 : x - y = 6)
@@ -604,11 +569,10 @@ variable (h2 : x^3 - y^3 = 108)
 theorem compute_xy : x * y = 0 := by
   sorry
 
-end compute_xy
+end 3_compute_xy_3039
 
-namespace expected_number_of_defective_products
 
-import Mathlib
+namespace 3__3040
 
 theorem expected_number_of_defective_products 
   (N : ℕ) (D : ℕ) (n : ℕ) (hN : N = 15000) (hD : D = 1000) (hn : n = 150) :
@@ -617,11 +581,10 @@ by {
   sorry
 }
 
-end expected_number_of_defective_products
+end 3__3040
 
-namespace find_largest_number
 
-import Mathlib
+namespace 3__3041
 
 theorem find_largest_number (a b c d e : ℕ)
     (h1 : a + b + c + d = 240)
@@ -633,22 +596,20 @@ theorem find_largest_number (a b c d e : ℕ)
     max a (max b (max c (max d e))) = 160 := by
   sorry
 
-end find_largest_number
+end 3__3041
 
-namespace roses_in_centerpiece
 
-import Mathlib
+namespace 3__3042
 
 variable (r : ℕ)
 
 theorem roses_in_centerpiece (h : 6 * 15 * (3 * r + 6) = 2700) : r = 8 := 
   sorry
 
-end roses_in_centerpiece
+end 3__3042
 
-namespace log_27_gt_point_53
 
-import Mathlib
+namespace 3_log_27_gt_point_53_3043
 
 open Real
 
@@ -657,21 +618,19 @@ theorem log_27_gt_point_53 :
 by
   sorry
 
-end log_27_gt_point_53
+end 3_log_27_gt_point_53_3043
 
-namespace fraction_subtraction
 
-import Mathlib
+namespace 3_fraction_subtraction_3044
 
 theorem fraction_subtraction : (9 / 23) - (5 / 69) = 22 / 69 :=
 by
   sorry
 
-end fraction_subtraction
+end 3_fraction_subtraction_3044
 
-namespace black_cars_count
 
-import Mathlib
+namespace 3_black_cars_count_3045
 
 -- Conditions
 def red_cars : ℕ := 28
@@ -682,11 +641,10 @@ theorem black_cars_count :
   ∃ (black_cars : ℕ), black_cars = 75 ∧ (red_cars : ℚ) / (black_cars) = ratio_red_black :=
 sorry
 
-end black_cars_count
+end 3_black_cars_count_3045
 
-namespace cosine_of_eight_times_alpha
 
-import Mathlib
+namespace 3__3046
 
 theorem cosine_of_eight_times_alpha (α : ℝ) (hypotenuse : ℝ) 
   (cos_α : ℝ) (cos_2α : ℝ) (cos_4α : ℝ) 
@@ -699,11 +657,10 @@ theorem cosine_of_eight_times_alpha (α : ℝ) (hypotenuse : ℝ)
   by
   sorry
 
-end cosine_of_eight_times_alpha
+end 3__3046
 
-namespace future_value_option_B_correct
 
-import Mathlib
+namespace 3_future_value_option_B_correct_3047
 
 noncomputable def future_value_option_B (p q : ℝ) : ℝ :=
   150 * (1 + p / 100 / 2) ^ 6 * (1 + q / 100 / 4) ^ 12
@@ -716,11 +673,10 @@ by
   use A₂
   exact h
 
-end future_value_option_B_correct
+end 3_future_value_option_B_correct_3047
 
-namespace maciek_total_purchase_cost
 
-import Mathlib
+namespace 3_maciek_total_purchase_cost_3048
 
 -- Define the cost of pretzels
 def pretzel_cost : ℕ := 4
@@ -737,11 +693,10 @@ by
   -- Skip the proof
   sorry
 
-end maciek_total_purchase_cost
+end 3_maciek_total_purchase_cost_3048
 
-namespace linear_dependency_k
 
-import Mathlib
+namespace 3_linear_dependency_k_3049
 
 theorem linear_dependency_k (k : ℝ) :
   (∃ (c1 c2 : ℝ), (c1 ≠ 0 ∨ c2 ≠ 0) ∧
@@ -751,11 +706,10 @@ theorem linear_dependency_k (k : ℝ) :
 by
   sorry
 
-end linear_dependency_k
+end 3_linear_dependency_k_3049
 
-namespace trig_identity
 
-import Mathlib
+namespace 3_trig_identity_3050
 
 noncomputable def trig_expr := 
   4.34 * (Real.cos (28 * Real.pi / 180) * Real.cos (56 * Real.pi / 180) / Real.sin (2 * Real.pi / 180)) + 
@@ -766,11 +720,10 @@ theorem trig_identity :
 by 
   sorry
 
-end trig_identity
+end 3_trig_identity_3050
 
-namespace fixed_points
 
-import Mathlib
+namespace 3_fixed_points_3051
 
 noncomputable def f (x : ℝ) : ℝ := x^2 - x - 3
 
@@ -778,11 +731,10 @@ theorem fixed_points : { x : ℝ | f x = x } = { -1, 3 } :=
 by
   sorry
 
-end fixed_points
+end 3_fixed_points_3051
 
-namespace Pam_current_balance
 
-import Mathlib
+namespace 3_Pam_current_balance_3052
 
 -- Given conditions as definitions
 def initial_balance : ℕ := 400
@@ -793,31 +745,28 @@ def current_balance : ℕ := tripled_balance - 250
 theorem Pam_current_balance : current_balance = 950 := by
   sorry
 
-end Pam_current_balance
+end 3_Pam_current_balance_3052
 
-namespace no_integer_solutions
 
-import Mathlib
+namespace 3_no_integer_solutions_3053
 
 theorem no_integer_solutions :
   ¬ ∃ (x y : ℤ), 19 * x^3 - 17 * y^3 = 50 := 
 by 
   sorry
 
-end no_integer_solutions
+end 3_no_integer_solutions_3053
 
-namespace find_y
 
-import Mathlib
+namespace 3__3054
 
 theorem find_y (x y : ℤ) (h1 : x^2 - 2*x + 5 = y + 3) (h2 : x = -3) : y = 17 := by
   sorry
 
-end find_y
+end 3__3054
 
-namespace triangle_angle_range
 
-import Mathlib
+namespace 3__3055
 
 theorem triangle_angle_range (α β γ : ℝ)
   (h1 : α + β + γ = 180)
@@ -827,21 +776,19 @@ theorem triangle_angle_range (α β γ : ℝ)
   45 ≤ β ∧ β ≤ 72 := 
 sorry
 
-end triangle_angle_range
+end 3__3055
 
-namespace area_of_square
 
-import Mathlib
+namespace 3__3056
 
 theorem area_of_square (r s l : ℕ) (h1 : l = (2 * r) / 5) (h2 : r = s) (h3 : l * 10 = 240) : s * s = 3600 :=
 by
   sorry
 
-end area_of_square
+end 3__3056
 
-namespace relationship_among_a_b_c
 
-import Mathlib
+namespace 3_relationship_among_a_b_c_3057
 
 -- Defining the properties and conditions of the function
 def is_even (f : ℝ → ℝ) : Prop := ∀ x : ℝ, f (-x) = f x
@@ -858,11 +805,10 @@ noncomputable def c : ℝ := f 0 0
 theorem relationship_among_a_b_c : c < a ∧ a < b := by
   sorry
 
-end relationship_among_a_b_c
+end 3_relationship_among_a_b_c_3057
 
-namespace math_proof_problem
 
-import Mathlib
+namespace 3_math_proof_problem_3058
 
 -- Definitions
 def PropA : Prop := ¬ (∀ n : ℤ, (3 ∣ n → ¬ (n % 2 = 1)))
@@ -877,11 +823,10 @@ theorem math_proof_problem : correct_options :=
 by
   sorry
 
-end math_proof_problem
+end 3_math_proof_problem_3058
 
-namespace tangent_line_computation
 
-import Mathlib
+namespace 3__3059
 
 variables (f : ℝ → ℝ)
 
@@ -889,33 +834,30 @@ theorem tangent_line_computation (h_tangent : ∀ x, (f x = -x + 8) ∧ (∃ y, 
     f 5 + deriv f 5 = 2 :=
 sorry
 
-end tangent_line_computation
+end 3__3059
 
-namespace find_positive_number
 
-import Mathlib
+namespace 3__3060
 
 theorem find_positive_number (m : ℝ) 
   (h : (m - 1)^2 = (3 * m - 5)^2) : 
   (m - 1)^2 = 1 ∨ (m - 1)^2 = 1 / 4 :=
 by sorry
 
-end find_positive_number
+end 3__3060
 
-namespace line_does_not_pass_second_quadrant
 
-import Mathlib
+namespace 3_line_does_not_pass_second_quadrant_3061
 
 theorem line_does_not_pass_second_quadrant (a : ℝ) :
   (∀ x y : ℝ, (a + 1) * x + y + 2 - a = 0 → ¬(x < 0 ∧ y > 0)) ↔ a ≤ -1 :=
 by
   sorry
 
-end line_does_not_pass_second_quadrant
+end 3_line_does_not_pass_second_quadrant_3061
 
-namespace dan_present_age
 
-import Mathlib
+namespace 3__3062
 
 -- Let x be Dan's present age
 variable (x : ℤ)
@@ -929,11 +871,10 @@ theorem dan_present_age (x : ℤ) (h : condition x) : x = 6 :=
 by
   sorry
 
-end dan_present_age
+end 3__3062
 
-namespace value_of_t_plus_k
 
-import Mathlib
+namespace 3__3063
 
 noncomputable def f (x t : ℝ) : ℝ := x^3 + (t - 1) * x^2 - 1
 
@@ -944,20 +885,18 @@ theorem value_of_t_plus_k (k t : ℝ)
   t + k = 7 :=
 sorry
 
-end value_of_t_plus_k
+end 3__3063
 
-namespace solve_for_r
 
-import Mathlib
+namespace 3__3064
 
 theorem solve_for_r (r : ℝ) (h: (r + 9) / (r - 3) = (r - 2) / (r + 5)) : r = -39 / 19 :=
 sorry
 
-end solve_for_r
+end 3__3064
 
-namespace problem
 
-import Mathlib
+namespace 3_problem_3065
 
 open Set
 
@@ -969,11 +908,10 @@ def C : Set ℕ := {1, 3}
 theorem problem : A ∩ (U \ B) = C := by
   sorry
 
-end problem
+end 3_problem_3065
 
-namespace integral_eval
 
-import Mathlib
+namespace 3_integral_eval_3066
 
 noncomputable def integral_problem : ℝ :=
   ∫ x in - (Real.pi / 2)..(Real.pi / 2), (x + Real.cos x)
@@ -982,31 +920,28 @@ theorem integral_eval : integral_problem = 2 :=
   by 
   sorry
 
-end integral_eval
+end 3_integral_eval_3066
 
-namespace floor_sum_min_value
 
-import Mathlib
+namespace 3__3067
 
 theorem floor_sum_min_value (x y z : ℝ) (hx : x > 0) (hy : y > 0) (hz : z > 0) :
   ⌊(x + y) / z⌋ + ⌊(y + z) / x⌋ + ⌊(z + x) / y⌋ = 4 :=
 sorry
 
-end floor_sum_min_value
+end 3__3067
 
-namespace one_twenty_percent_of_number
 
-import Mathlib
+namespace 3__3068
 
 theorem one_twenty_percent_of_number (x : ℝ) (h : 0.20 * x = 300) : 1.20 * x = 1800 :=
 by 
 sorry
 
-end one_twenty_percent_of_number
+end 3__3068
 
-namespace rosy_current_age
 
-import Mathlib
+namespace 3__3069
 
 theorem rosy_current_age 
   (R : ℕ) 
@@ -1015,21 +950,19 @@ theorem rosy_current_age
   R = 8 := 
 sorry
 
-end rosy_current_age
+end 3__3069
 
-namespace exists_sum_and_sum_of_squares_lt
 
-import Mathlib
+namespace 3_exists_sum_and_sum_of_squares_lt_3070
 
 theorem exists_sum_and_sum_of_squares_lt :
   ∃ (n : ℕ) (x : Fin n → ℝ), (∑ i, x i = 10) ∧ (∑ i, (x i)^2 < 0.2) :=
   sorry
 
-end exists_sum_and_sum_of_squares_lt
+end 3_exists_sum_and_sum_of_squares_lt_3070
 
-namespace find_rectangle_width
 
-import Mathlib
+namespace 3_find_rectangle_width_3071
 
 variable (length_square : ℕ) (length_rectangle : ℕ) (width_rectangle : ℕ)
 
@@ -1051,11 +984,10 @@ by
   intros
   sorry
 
-end find_rectangle_width
+end 3_find_rectangle_width_3071
 
-namespace problem_statement
 
-import Mathlib
+namespace 3__3072
 
 variable (a b c d x : ℕ)
 
@@ -1068,11 +1000,10 @@ theorem problem_statement
 by
   sorry
 
-end problem_statement
+end 3__3072
 
-namespace product_of_terms_eq_72
 
-import Mathlib
+namespace 3__3073
 
 theorem product_of_terms_eq_72
   (a b c : ℝ)
@@ -1082,11 +1013,10 @@ theorem product_of_terms_eq_72
 by
   sorry
 
-end product_of_terms_eq_72
+end 3__3073
 
-namespace binomial_divisible_by_prime
 
-import Mathlib
+namespace 3__3074
 
 -- Define the conditions: p is prime and 0 < k < p
 variables (p k : ℕ)
@@ -1100,20 +1030,18 @@ theorem binomial_divisible_by_prime
 by
   sorry
 
-end binomial_divisible_by_prime
+end 3__3074
 
-namespace muffin_count
 
-import Mathlib
+namespace 3__3075
 
 theorem muffin_count (doughnuts cookies muffins : ℕ) (h1 : doughnuts = 50) (h2 : cookies = (3 * doughnuts) / 5) (h3 : muffins = (1 * doughnuts) / 5) : muffins = 10 :=
 by sorry
 
-end muffin_count
+end 3__3075
 
-namespace frank_reading_days
 
-import Mathlib
+namespace 3_frank_reading_days_3076
 
 -- Define the parameters
 def pages_weekdays : ℚ := 5.7
@@ -1129,21 +1057,19 @@ theorem frank_reading_days :
   by
     sorry
 
-end frank_reading_days
+end 3_frank_reading_days_3076
 
-namespace max_value_of_XYZ_XY_YZ_ZX
 
-import Mathlib
+namespace 3__3077
 
 theorem max_value_of_XYZ_XY_YZ_ZX (X Y Z : ℕ) (h : X + Y + Z = 15) : 
   X * Y * Z + X * Y + Y * Z + Z * X ≤ 200 := 
 sorry
 
-end max_value_of_XYZ_XY_YZ_ZX
+end 3__3077
 
-namespace num_dinosaur_dolls
 
-import Mathlib
+namespace 3_num_dinosaur_dolls_3078
 
 -- Define the number of dinosaur dolls
 def dinosaur_dolls : Nat := 3
@@ -1153,20 +1079,18 @@ theorem num_dinosaur_dolls : dinosaur_dolls = 3 := by
   -- Add sorry to skip the proof
   sorry
 
-end num_dinosaur_dolls
+end 3_num_dinosaur_dolls_3078
 
-namespace find_number
 
-import Mathlib
+namespace 3__3079
 
 theorem find_number (N : ℝ) (h : 0.60 * N = 0.50 * 720) : N = 600 :=
 sorry
 
-end find_number
+end 3__3079
 
-namespace find_pos_ints
 
-import Mathlib
+namespace 3__3080
 
 theorem find_pos_ints (a m n : ℕ) (ha : 0 < a) (hm : 0 < m) (hn : 0 < n) :
     (((m = 1) ∨ (a = 1) ∨ (a = 2 ∧ m = 3 ∧ 2 ≤ n)) →
@@ -1174,11 +1098,10 @@ theorem find_pos_ints (a m n : ℕ) (ha : 0 < a) (hm : 0 < m) (hn : 0 < n) :
 by
   sorry
 
-end find_pos_ints
+end 3__3080
 
-namespace smallest_total_cells_marked
 
-import Mathlib
+namespace 3_smallest_total_cells_marked_3081
 
 -- Definitions based on problem conditions
 def grid_height : ℕ := 8
@@ -1201,11 +1124,10 @@ theorem smallest_total_cells_marked : total_marked_cells = 48 := by
     -- Proof is not required as per the instruction
     sorry
 
-end smallest_total_cells_marked
+end 3_smallest_total_cells_marked_3081
 
-namespace dyed_pink_correct
 
-import Mathlib
+namespace 3_dyed_pink_correct_3082
 
 def silk_dyed_green := 61921
 def total_yards_dyed := 111421
@@ -1214,11 +1136,10 @@ def yards_dyed_pink := total_yards_dyed - silk_dyed_green
 theorem dyed_pink_correct : yards_dyed_pink = 49500 := by 
   sorry
 
-end dyed_pink_correct
+end 3_dyed_pink_correct_3082
 
-namespace area_of_L_shape_is_58
 
-import Mathlib
+namespace 3_area_of_L_shape_is_58_3083
 
 -- Define the dimensions of the large rectangle
 def large_rectangle_length : ℕ := 10
@@ -1241,11 +1162,10 @@ def area_L_shape : ℕ := area_large_rectangle - area_small_rectangle
 theorem area_of_L_shape_is_58 : area_L_shape = 58 := by
   sorry
 
-end area_of_L_shape_is_58
+end 3_area_of_L_shape_is_58_3083
 
-namespace art_of_passing_through_walls
 
-import Mathlib
+namespace 3_art_of_passing_through_walls_3084
 
 theorem art_of_passing_through_walls (n : ℕ) :
   (2 * Real.sqrt (2 / 3) = Real.sqrt (2 * (2 / 3))) ∧
@@ -1257,11 +1177,10 @@ theorem art_of_passing_through_walls (n : ℕ) :
 by
   sorry
 
-end art_of_passing_through_walls
+end 3_art_of_passing_through_walls_3084
 
-namespace average_mark_excluded_students
 
-import Mathlib
+namespace 3_average_mark_excluded_students_3085
 
 variables (N A E A_R A_E : ℕ)
 
@@ -1275,20 +1194,18 @@ by
   have h : 4480 = 8 * A_E + 4320 := hEquation
   sorry
 
-end average_mark_excluded_students
+end 3_average_mark_excluded_students_3085
 
-namespace find_solution
 
-import Mathlib
+namespace 3__3086
 
 theorem find_solution (x y : ℕ) (h1 : y ∣ (x^2 + 1)) (h2 : x^2 ∣ (y^3 + 1)) : (x = 1 ∧ y = 1) :=
 sorry
 
-end find_solution
+end 3__3086
 
-namespace maximum_value_of_f
 
-import Mathlib
+namespace 3_maximum_value_of_f_3087
 
 noncomputable def f (x : ℝ) : ℝ := Real.log x - 2 * Real.sqrt x
 
@@ -1297,11 +1214,10 @@ theorem maximum_value_of_f :
 by
   sorry
 
-end maximum_value_of_f
+end 3_maximum_value_of_f_3087
 
-namespace cab_driver_income_day3
 
-import Mathlib
+namespace 3_cab_driver_income_day3_3088
 
 theorem cab_driver_income_day3 :
   let income1 := 200
@@ -1313,11 +1229,10 @@ theorem cab_driver_income_day3 :
   total_income - (income1 + income2 + income4 + income5) = 750 := by
   sorry
 
-end cab_driver_income_day3
+end 3_cab_driver_income_day3_3088
 
-namespace xiaomings_possible_score
 
-import Mathlib
+namespace 3_xiaomings_possible_score_3089
 
 def average_score_class_A : ℤ := 87
 def average_score_class_B : ℤ := 82
@@ -1326,20 +1241,18 @@ theorem xiaomings_possible_score (x : ℤ) :
   (average_score_class_B < x ∧ x < average_score_class_A) → x = 85 :=
 by sorry
 
-end xiaomings_possible_score
+end 3_xiaomings_possible_score_3089
 
-namespace range_of_a
 
-import Mathlib
+namespace 3__3090
 
 theorem range_of_a (a : ℝ) (h_decreasing : ∀ x y : ℝ, x < y → (a-1)^x > (a-1)^y) : 1 < a ∧ a < 2 :=
 sorry
 
-end range_of_a
+end 3__3090
 
-namespace max_value_f
 
-import Mathlib
+namespace 3_max_value_f_3091
 
 noncomputable def max_f (a : Fin 2019 → ℝ) : ℝ :=
   ∑ i, (a i) ^ 3
@@ -1350,11 +1263,10 @@ theorem max_value_f (a : Fin 2019 → ℝ) :
 by
   sorry
 
-end max_value_f
+end 3_max_value_f_3091
 
-namespace product_of_four_integers
 
-import Mathlib
+namespace 3__3092
 
 theorem product_of_four_integers 
   (w x y z : ℕ) 
@@ -1367,11 +1279,10 @@ by {
 sorry
 }
 
-end product_of_four_integers
+end 3__3092
 
-namespace negation_proof
 
-import Mathlib
+namespace 3_negation_proof_3093
 
 open Real
 
@@ -1380,20 +1291,18 @@ theorem negation_proof :
 by
   sorry
 
-end negation_proof
+end 3_negation_proof_3093
 
-namespace sixth_element_row_20
 
-import Mathlib
+namespace 3_sixth_element_row_20_3094
 
 theorem sixth_element_row_20 : (Nat.choose 20 5) = 15504 := by
   sorry
 
-end sixth_element_row_20
+end 3_sixth_element_row_20_3094
 
-namespace factory_days_worked
 
-import Mathlib
+namespace 3_factory_days_worked_3095
 
 -- Define the number of refrigerators produced per hour
 def refrigerators_per_hour : ℕ := 90
@@ -1421,11 +1330,10 @@ theorem factory_days_worked : days_worked = 5 :=
 by
   sorry
 
-end factory_days_worked
+end 3_factory_days_worked_3095
 
-namespace find_shop_width
 
-import Mathlib
+namespace 3_find_shop_width_3096
 
 def shop_width (monthly_rent : ℕ) (length : ℕ) (annual_rent_per_square_foot : ℕ) : ℕ :=
   let annual_rent := monthly_rent * 12
@@ -1438,11 +1346,10 @@ by
   -- Here would go the proof, but we add sorry to skip it
   sorry
 
-end find_shop_width
+end 3_find_shop_width_3096
 
-namespace factor_poly_eq_factored_form
 
-import Mathlib
+namespace 3_factor_poly_eq_factored_form_3097
 
 -- Defining the polynomial expressions
 def poly1 (x : ℝ) := x^2 + 4 * x + 3
@@ -1461,11 +1368,10 @@ theorem factor_poly_eq_factored_form (x : ℝ) :
 by
   sorry
 
-end factor_poly_eq_factored_form
+end 3_factor_poly_eq_factored_form_3097
 
-namespace problem1_problem2
 
-import Mathlib
+namespace 3_problem1_problem2_3098
 
 def setA (a : ℝ) : Set ℝ := {x | a ≤ x ∧ x ≤ a + 3}
 def setB : Set ℝ := {x | x > 1 ∨ x < -6}
@@ -1478,11 +1384,10 @@ theorem problem2 (a : ℝ) : (setA a ∪ setB = setB) → (a < -9 ∨ a > 1) := 
   intro h
   sorry
 
-end problem1_problem2
+end 3_problem1_problem2_3098
 
-namespace juan_distance
 
-import Mathlib
+namespace 3_juan_distance_3099
 
 def time : ℝ := 80.0
 def speed : ℝ := 10.0
@@ -1491,11 +1396,10 @@ def distance (t : ℝ) (s : ℝ) : ℝ := t * s
 theorem juan_distance : distance time speed = 800.0 := by
   sorry
 
-end juan_distance
+end 3_juan_distance_3099
 
-namespace plane_centroid
 
-import Mathlib
+namespace 3__3100
 
 theorem plane_centroid (a b : ℝ) (h : 1 / a ^ 2 + 1 / b ^ 2 + 1 / 25 = 1 / 4) :
   let p := a / 3
@@ -1505,11 +1409,10 @@ theorem plane_centroid (a b : ℝ) (h : 1 / a ^ 2 + 1 / b ^ 2 + 1 / 25 = 1 / 4) 
 by
   sorry
 
-end plane_centroid
+end 3__3100
 
-namespace gnomes_telling_the_truth
 
-import Mathlib
+namespace 3_gnomes_telling_the_truth_3101
 
 -- Conditions
 def gnome_height_claims : List ℕ := [60, 61, 62, 63, 64, 65, 66]
@@ -1525,11 +1428,10 @@ theorem gnomes_telling_the_truth :
 by
   sorry
 
-end gnomes_telling_the_truth
+end 3_gnomes_telling_the_truth_3101
 
-namespace star_neg5_4_star_neg3_neg6
 
-import Mathlib
+namespace 3_star_neg5_4_star_neg3_neg6_3102
 
 -- Definition of the new operation
 def star (a b : ℤ) : ℤ := 2 * a * b - b / 2
@@ -1540,11 +1442,10 @@ theorem star_neg5_4 : star (-5) 4 = -42 := by sorry
 -- The second proof problem
 theorem star_neg3_neg6 : star (-3) (-6) = 39 := by sorry
 
-end star_neg5_4_star_neg3_neg6
+end 3_star_neg5_4_star_neg3_neg6_3102
 
-namespace exponent_of_5_in_30_fact
 
-import Mathlib
+namespace 3_exponent_of_5_in_30_fact_3103
 
 def count_powers_of_5 (n : ℕ) : ℕ :=
   if n < 5 then 0
@@ -1554,11 +1455,10 @@ theorem exponent_of_5_in_30_fact : count_powers_of_5 30 = 7 :=
   by
     sorry
 
-end exponent_of_5_in_30_fact
+end 3_exponent_of_5_in_30_fact_3103
 
-namespace cost_price_percentage
 
-import Mathlib
+namespace 3__3104
 
 variables (CP MP SP : ℝ) (x : ℝ)
 
@@ -1568,11 +1468,10 @@ theorem cost_price_percentage (h1 : CP = (x / 100) * MP)
                              x = 25 := by
   sorry
 
-end cost_price_percentage
+end 3__3104
 
-namespace wire_length
 
-import Mathlib
+namespace 3_wire_length_3105
 
 variables (L M S W : ℕ)
 
@@ -1585,11 +1484,10 @@ def total_length (L M S : ℕ) : ℕ :=
 theorem wire_length (h : ratio_condition L M 16) : total_length L M 16 = 96 :=
 by sorry
 
-end wire_length
+end 3_wire_length_3105
 
-namespace six_times_eightx_plus_tenpi_eq_fourP
 
-import Mathlib
+namespace 3__3106
 
 variable {x : ℝ} {π P : ℝ}
 
@@ -1597,20 +1495,18 @@ theorem six_times_eightx_plus_tenpi_eq_fourP (h : 3 * (4 * x + 5 * π) = P) :
     6 * (8 * x + 10 * π) = 4 * P :=
 sorry
 
-end six_times_eightx_plus_tenpi_eq_fourP
+end 3__3106
 
-namespace range_of_a
 
-import Mathlib
+namespace 3__3107
 
 theorem range_of_a (a x : ℝ) (h_eq : 2 * x - 1 = x + a) (h_pos : x > 0) : a > -1 :=
 sorry
 
-end range_of_a
+end 3__3107
 
-namespace BDD1H_is_Spatial_in_Cube
 
-import Mathlib
+namespace 3_BDD1H_is_Spatial_in_Cube_3108
 
 structure Point3D :=
 (x : ℝ) (y : ℝ) (z : ℝ)
@@ -1632,11 +1528,10 @@ is_not_planar cube.B cube.D cube.D1 cube.midpoint_B1C1
 theorem BDD1H_is_Spatial_in_Cube (cube : Cube) : BDD1H_is_spatial cube :=
 sorry
 
-end BDD1H_is_Spatial_in_Cube
+end 3_BDD1H_is_Spatial_in_Cube_3108
 
-namespace q_zero
 
-import Mathlib
+namespace 3_q_zero_3109
 
 noncomputable def q (x : ℝ) : ℝ := sorry -- Definition of the polynomial q(x) is required here.
 
@@ -1646,11 +1541,10 @@ theorem q_zero :
 by 
   sorry
 
-end q_zero
+end 3_q_zero_3109
 
-namespace min_value_fraction_sum
 
-import Mathlib
+namespace 3__3110
 
 variable (a b : ℝ)
 variable (ha : a > 0)
@@ -1662,11 +1556,10 @@ theorem min_value_fraction_sum (a b : ℝ) (ha : a > 0) (hb : b > 0) (h_collinea
 by
   sorry
 
-end min_value_fraction_sum
+end 3__3110
 
-namespace sequence_positions
 
-import Mathlib
+namespace 3_sequence_positions_3111
 
 noncomputable def position_of_a4k1 (x : ℕ) : ℕ := 4 * x + 1
 noncomputable def position_of_a4k2 (x : ℕ) : ℕ := 4 * x + 2
@@ -1682,11 +1575,10 @@ theorem sequence_positions (k : ℕ) :
   (14 + 2 * (979 - 1) = 1970 ∧ position_of_a4k 979 = 3916) :=
 by sorry
 
-end sequence_positions
+end 3_sequence_positions_3111
 
-namespace mean_of_all_students
 
-import Mathlib
+namespace 3__3112
 
 variable (M A m a : ℕ)
 variable (M_val : M = 84)
@@ -1697,11 +1589,10 @@ theorem mean_of_all_students (M A m a : ℕ) (M_val : M = 84) (A_val : A = 70) (
     (63 * a + 70 * a) / (7 * a / 4) = 76 := by
   sorry
 
-end mean_of_all_students
+end 3__3112
 
-namespace smallest_d_for_inverse
 
-import Mathlib
+namespace 3_smallest_d_for_inverse_3113
 
 def g (x : ℝ) : ℝ := (x - 3) ^ 2 - 7
 
@@ -1710,11 +1601,10 @@ theorem smallest_d_for_inverse (d : ℝ) :
 by
   sorry
 
-end smallest_d_for_inverse
+end 3_smallest_d_for_inverse_3113
 
-namespace trader_sold_45_meters
 
-import Mathlib
+namespace 3_trader_sold_45_meters_3114
 
 -- Definitions based on conditions
 def selling_price_total : ℕ := 4500
@@ -1727,11 +1617,10 @@ theorem trader_sold_45_meters : ∃ x : ℕ, selling_price_per_meter * x = selli
 by
   sorry
 
-end trader_sold_45_meters
+end 3_trader_sold_45_meters_3114
 
-namespace fbox_eval_correct
 
-import Mathlib
+namespace 3_fbox_eval_correct_3115
 
 -- Define the function according to the condition
 def fbox (a b c : ℕ) : ℕ := a^b - b^c + c^a
@@ -1742,11 +1631,10 @@ by
   -- Proof will be provided here
   sorry
 
-end fbox_eval_correct
+end 3_fbox_eval_correct_3115
 
-namespace isabella_more_than_sam
 
-import Mathlib
+namespace 3_isabella_more_than_sam_3116
 
 variable (I S G : ℕ)
 
@@ -1757,11 +1645,10 @@ def total_donation : I + S + G = 345 := by sorry
 theorem isabella_more_than_sam : I - S = 45 := by
 sorry
 
-end isabella_more_than_sam
+end 3_isabella_more_than_sam_3116
 
-namespace pyramid_volume_correct
 
-import Mathlib
+namespace 3_pyramid_volume_correct_3117
 
 -- Define the side length of the equilateral triangle base
 noncomputable def side_length : ℝ := 1 / Real.sqrt 2
@@ -1786,11 +1673,10 @@ theorem pyramid_volume_correct :
 by
   sorry
 
-end pyramid_volume_correct
+end 3_pyramid_volume_correct_3117
 
-namespace rectangle_perimeter
 
-import Mathlib
+namespace 3_rectangle_perimeter_3118
 
 variables (L W : ℕ)
 
@@ -1802,11 +1688,10 @@ def conditions : Prop :=
 -- prove the solution
 theorem rectangle_perimeter (h : conditions L W) : 2 * L + 2 * W = 50 := sorry
 
-end rectangle_perimeter
+end 3_rectangle_perimeter_3118
 
-namespace total_combinations
 
-import Mathlib
+namespace 3_total_combinations_3119
 
 def varieties_of_wrapping_paper : Nat := 10
 def colors_of_ribbon : Nat := 4
@@ -1816,11 +1701,10 @@ def kinds_of_decorative_stickers : Nat := 2
 theorem total_combinations : varieties_of_wrapping_paper * colors_of_ribbon * types_of_gift_cards * kinds_of_decorative_stickers = 400 := by
   sorry
 
-end total_combinations
+end 3_total_combinations_3119
 
-namespace ellen_golf_cart_trips
 
-import Mathlib
+namespace 3_ellen_golf_cart_trips_3120
 
 def patrons_from_cars : ℕ := 12
 def patrons_from_bus : ℕ := 27
@@ -1829,11 +1713,10 @@ def patrons_per_cart : ℕ := 3
 theorem ellen_golf_cart_trips : (patrons_from_cars + patrons_from_bus) / patrons_per_cart = 13 := by
   sorry
 
-end ellen_golf_cart_trips
+end 3_ellen_golf_cart_trips_3120
 
-namespace solution_to_quadratic_solution_to_cubic
 
-import Mathlib
+namespace 3_solution_to_quadratic_solution_to_cubic_3121
 
 -- Problem 1: x^2 = 4
 theorem solution_to_quadratic (x : ℝ) : x^2 = 4 -> x = 2 ∨ x = -2 := by
@@ -1843,20 +1726,18 @@ theorem solution_to_quadratic (x : ℝ) : x^2 = 4 -> x = 2 ∨ x = -2 := by
 theorem solution_to_cubic (x : ℝ) : 64 * x^3 + 27 = 0 -> x = -3 / 4 := by
   sorry
 
-end solution_to_quadratic_solution_to_cubic
+end 3_solution_to_quadratic_solution_to_cubic_3121
 
-namespace cos_double_angle
 
-import Mathlib
+namespace 3__3122
 
 theorem cos_double_angle (α : ℝ) (h : Real.sin α = 3 / 5) : Real.cos (2 * α) = 7 / 25 :=
 sorry
 
-end cos_double_angle
+end 3__3122
 
-namespace line_l_passes_fixed_point_line_l_perpendicular_value_a
 
-import Mathlib
+namespace 3_line_l_passes_fixed_point_line_l_perpendicular_value_a_3123
 
 variable (a : ℝ)
 
@@ -1877,11 +1758,10 @@ theorem line_l_perpendicular_value_a (a : ℝ) :
 by
   sorry
 
-end line_l_passes_fixed_point_line_l_perpendicular_value_a
+end 3_line_l_passes_fixed_point_line_l_perpendicular_value_a_3123
 
-namespace cauchy_bunyakovsky_inequality
 
-import Mathlib
+namespace 3__3124
 
 theorem cauchy_bunyakovsky_inequality 
   (n : ℕ) 
@@ -1890,11 +1770,10 @@ theorem cauchy_bunyakovsky_inequality
 by
   sorry
 
-end cauchy_bunyakovsky_inequality
+end 3__3124
 
-namespace lines_coplanar_iff_k_eq_neg2
 
-import Mathlib
+namespace 3_lines_coplanar_iff_k_eq_neg2_3125
 
 noncomputable def line1 (s k : ℝ) : ℝ × ℝ × ℝ :=
 (2 + s, 4 - k * s, 2 + k * s)
@@ -1907,21 +1786,19 @@ theorem lines_coplanar_iff_k_eq_neg2 :
 by
   sorry
 
-end lines_coplanar_iff_k_eq_neg2
+end 3_lines_coplanar_iff_k_eq_neg2_3125
 
-namespace smaller_of_two_digit_numbers
 
-import Mathlib
+namespace 3__3126
 
 theorem smaller_of_two_digit_numbers (a b : ℕ) (h1 : 10 ≤ a ∧ a < 100) (h2 : 10 ≤ b ∧ b < 100) (h3 : a * b = 4725) :
   min a b = 15 :=
 sorry
 
-end smaller_of_two_digit_numbers
+end 3__3126
 
-namespace larry_wins_game
 
-import Mathlib
+namespace 3_larry_wins_game_3127
 
 -- Defining probabilities for Larry and Julius
 def larry_throw_prob : ℚ := 2 / 3
@@ -1939,22 +1816,20 @@ def larry_wins_prob : ℚ := p1 + p3 + p5
 theorem larry_wins_game : larry_wins_prob = 170 / 243 := by
   sorry
 
-end larry_wins_game
+end 3_larry_wins_game_3127
 
-namespace solve_inequality_system
 
-import Mathlib
+namespace 3_solve_inequality_system_3128
 
 theorem solve_inequality_system (x : ℝ) :
   (x / 3 + 2 > 0) ∧ (2 * x + 5 ≥ 3) ↔ (x ≥ -1) :=
 by
   sorry
 
-end solve_inequality_system
+end 3_solve_inequality_system_3128
 
-namespace solve_problem
 
-import Mathlib
+namespace 3_solve_problem_3129
 
 noncomputable def problem_statement : ℤ :=
   (-3)^6 / 3^4 - 4^3 * 2^2 + 9^2
@@ -1964,11 +1839,10 @@ by
   -- Proof omitted
   sorry
 
-end solve_problem
+end 3_solve_problem_3129
 
-namespace triangle_area_is_zero
 
-import Mathlib
+namespace 3_triangle_area_is_zero_3130
 
 structure Point3D :=
   (x : ℝ)
@@ -1998,11 +1872,10 @@ by {
   sorry
 }
 
-end triangle_area_is_zero
+end 3_triangle_area_is_zero_3130
 
-namespace max_ounces_among_items
 
-import Mathlib
+namespace 3__3131
 
 theorem max_ounces_among_items
   (budget : ℝ)
@@ -2020,11 +1893,10 @@ by
   intros h_budget h_candy_cost h_candy_ounces h_candy_stock h_chips_cost h_chips_ounces h_chips_stock
   sorry
 
-end max_ounces_among_items
+end 3__3131
 
-namespace probability_of_top_card_heart
 
-import Mathlib
+namespace 3_probability_of_top_card_heart_3132
 
 -- Define the total number of cards in the deck.
 def total_cards : ℕ := 39
@@ -2040,11 +1912,10 @@ theorem probability_of_top_card_heart : probability_top_card_heart = 1 / 3 :=
 by
   sorry
 
-end probability_of_top_card_heart
+end 3_probability_of_top_card_heart_3132
 
-namespace average_value_f
 
-import Mathlib
+namespace 3_average_value_f_3133
 
 def f (x : ℝ) : ℝ := (1 + x)^3
 
@@ -2052,21 +1923,19 @@ theorem average_value_f : (1 / (4 - 2)) * (∫ x in (2:ℝ)..(4:ℝ), f x) = 68 
 by
   sorry
 
-end average_value_f
+end 3_average_value_f_3133
 
-namespace simplify_fraction
 
-import Mathlib
+namespace 3_simplify_fraction_3134
 
 theorem simplify_fraction :
   ((1 / 4) + (1 / 6)) / ((3 / 8) - (1 / 3)) = 10 := by
   sorry
 
-end simplify_fraction
+end 3_simplify_fraction_3134
 
-namespace find_a_range_for_two_distinct_roots
 
-import Mathlib
+namespace 3_find_a_range_for_two_distinct_roots_3135
 
 def f (x : ℝ) : ℝ := x^3 - 3 * x + 5
 
@@ -2076,11 +1945,10 @@ by
   -- The proof will be here
   sorry
 
-end find_a_range_for_two_distinct_roots
+end 3_find_a_range_for_two_distinct_roots_3135
 
-namespace xavier_yvonne_not_zelda_prob
 
-import Mathlib
+namespace 3_xavier_yvonne_not_zelda_prob_3136
 
 def Px : ℚ := 1 / 4
 def Py : ℚ := 2 / 3
@@ -2091,11 +1959,10 @@ theorem xavier_yvonne_not_zelda_prob :
 by 
   sorry
 
-end xavier_yvonne_not_zelda_prob
+end 3_xavier_yvonne_not_zelda_prob_3136
 
-namespace bucket_full_weight
 
-import Mathlib
+namespace 3__3137
 
 variables (x y p q : Real)
 
@@ -2105,11 +1972,10 @@ theorem bucket_full_weight (h1 : x + (1 / 4) * y = p)
 by
   sorry
 
-end bucket_full_weight
+end 3__3137
 
-namespace minimum_perimeter
 
-import Mathlib
+namespace 3_minimum_perimeter_3138
 
 def fractional_part (x : ℚ) : ℚ := x - x.floor
 
@@ -2132,11 +1998,10 @@ by
   intros h_sides h_fractional
   sorry
 
-end minimum_perimeter
+end 3_minimum_perimeter_3138
 
-namespace fewer_than_ten_sevens_example1_fewer_than_ten_sevens_example2
 
-import Mathlib
+namespace 3_fewer_than_ten_sevens_example1_fewer_than_ten_sevens_example2_3139
 
 theorem fewer_than_ten_sevens_example1 : (777 / 7) - (77 / 7) = 100 :=
   by sorry
@@ -2144,22 +2009,20 @@ theorem fewer_than_ten_sevens_example1 : (777 / 7) - (77 / 7) = 100 :=
 theorem fewer_than_ten_sevens_example2 : (7 * 7 + 7 * 7 + 7 / 7 + 7 / 7) = 100 :=
   by sorry
 
-end fewer_than_ten_sevens_example1_fewer_than_ten_sevens_example2
+end 3_fewer_than_ten_sevens_example1_fewer_than_ten_sevens_example2_3139
 
-namespace sector_area
 
-import Mathlib
+namespace 3__3140
 
 theorem sector_area (alpha : ℝ) (r : ℝ) (h_alpha : alpha = Real.pi / 3) (h_r : r = 2) : 
   (1 / 2) * (alpha * r) * r = (2 * Real.pi) / 3 := 
 by
   sorry
 
-end sector_area
+end 3__3140
 
-namespace sum_of_g1
 
-import Mathlib
+namespace 3_sum_of_g1_3141
 
 -- Define the main conditions
 variable {g : ℝ → ℝ}
@@ -2171,11 +2034,10 @@ theorem sum_of_g1 :
   g 1 = 6075 :=
 sorry
 
-end sum_of_g1
+end 3_sum_of_g1_3141
 
-namespace area_of_trapezoid_DBCE
 
-import Mathlib
+namespace 3_area_of_trapezoid_DBCE_3142
 
 -- Define the conditions used in the problem
 variables {A B C D E : Type} -- Points in the plane
@@ -2195,11 +2057,10 @@ begin
   sorry
 end
 
-end area_of_trapezoid_DBCE
+end 3_area_of_trapezoid_DBCE_3142
 
-namespace photograph_area
 
-import Mathlib
+namespace 3__3143
 
 def dimensions_are_valid (a b : ℕ) : Prop :=
 a > 0 ∧ b > 0 ∧ (a + 4) * (b + 5) = 77
@@ -2208,11 +2069,10 @@ theorem photograph_area (a b : ℕ) (h : dimensions_are_valid a b) : (a * b = 18
 by 
   sorry
 
-end photograph_area
+end 3__3143
 
-namespace total_spent
 
-import Mathlib
+namespace 3__3144
 
 -- Define the conditions
 def cost_fix_automobile := 350
@@ -2224,11 +2084,10 @@ theorem total_spent (S : ℕ) (h : cost_fix_automobile = cost_fix_formula S) :
 by
   sorry
 
-end total_spent
+end 3__3144
 
-namespace eccentricity_range
 
-import Mathlib
+namespace 3__3145
 
 def ellipse (a b : ℝ) (h : a > 0 ∧ b > 0 ∧ a > b) :=
   ∀ x y : ℝ, x^2 / a^2 + y^2 / b^2 = 1
@@ -2247,11 +2106,10 @@ theorem eccentricity_range (a b e c x y : ℝ)
 by
   sorry
 
-end eccentricity_range
+end 3__3145
 
-namespace annette_miscalculation
 
-import Mathlib
+namespace 3_annette_miscalculation_3146
 
 theorem annette_miscalculation :
   let x := 6
@@ -2266,11 +2124,10 @@ by
   let y' := 4
   sorry
 
-end annette_miscalculation
+end 3_annette_miscalculation_3146
 
-namespace additional_books_acquired
 
-import Mathlib
+namespace 3_additional_books_acquired_3147
 
 def original_stock : ℝ := 40.0
 def shelves_used : ℕ := 15
@@ -2281,11 +2138,10 @@ theorem additional_books_acquired :
 by
   sorry
 
-end additional_books_acquired
+end 3_additional_books_acquired_3147
 
-namespace percent_employed_females_in_employed_population
 
-import Mathlib
+namespace 3_percent_employed_females_in_employed_population_3148
 
 def percent_employed (population: ℝ) : ℝ := 0.64 * population
 def percent_employed_males (population: ℝ) : ℝ := 0.50 * population
@@ -2296,11 +2152,10 @@ theorem percent_employed_females_in_employed_population (population: ℝ) :
 by
   sorry
 
-end percent_employed_females_in_employed_population
+end 3_percent_employed_females_in_employed_population_3148
 
-namespace field_trip_vans
 
-import Mathlib
+namespace 3_field_trip_vans_3149
 
 -- Define the number of students and adults
 def students := 12
@@ -2320,11 +2175,10 @@ by
   -- Calculation and proof would go here
   sorry
 
-end field_trip_vans
+end 3_field_trip_vans_3149
 
-namespace number_of_kids_stayed_home_is_668278
 
-import Mathlib
+namespace 3_number_of_kids_stayed_home_is_668278_3150
 
   def number_of_kids_who_stayed_home : Prop :=
     ∃ X : ℕ, X + 150780 = 819058 ∧ X = 668278
@@ -2332,11 +2186,10 @@ import Mathlib
   theorem number_of_kids_stayed_home_is_668278 : number_of_kids_who_stayed_home :=
     sorry
   
-end number_of_kids_stayed_home_is_668278
+end 3_number_of_kids_stayed_home_is_668278_3150
 
-namespace payment_correct
 
-import Mathlib
+namespace 3_payment_correct_3151
 
 def total_payment (hours1 hours2 hours3 : ℕ) (rate_per_hour : ℕ) (num_men : ℕ) : ℕ :=
   (hours1 + hours2 + hours3) * rate_per_hour * num_men
@@ -2347,11 +2200,10 @@ by
   -- We skip the proof here
   sorry
 
-end payment_correct
+end 3_payment_correct_3151
 
-namespace volume_of_prism
 
-import Mathlib
+namespace 3_volume_of_prism_3152
 
 variables (a b c : ℝ)
 variables (ab_prod : a * b = 36) (ac_prod : a * c = 48) (bc_prod : b * c = 72)
@@ -2360,20 +2212,18 @@ theorem volume_of_prism : a * b * c = 352.8 :=
 by
   sorry
 
-end volume_of_prism
+end 3_volume_of_prism_3152
 
-namespace evaluate_expression
 
-import Mathlib
+namespace 3_evaluate_expression_3153
 
 theorem evaluate_expression : 101^3 + 3 * 101^2 * 2 + 3 * 101 * 2^2 + 2^3 = 1092727 := by
   sorry
 
-end evaluate_expression
+end 3_evaluate_expression_3153
 
-namespace bridge_weight_requirement
 
-import Mathlib
+namespace 3_bridge_weight_requirement_3154
 
 def weight_soda_can : ℕ := 12
 def weight_empty_soda_can : ℕ := 2
@@ -2396,12 +2246,10 @@ by
     weight_empty_other_can num_other_cans wind_force_eq_soda_cans
   sorry
 
-end bridge_weight_requirement
+end 3_bridge_weight_requirement_3154
 
-namespace tan_8pi_over_3_eq_neg_sqrt3
 
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Complex.Exponential
+namespace 3_tan_8pi_over_3_eq_neg_sqrt3_3155
 
 open Real
 
@@ -2409,11 +2257,10 @@ theorem tan_8pi_over_3_eq_neg_sqrt3 : tan (8 * π / 3) = -√3 :=
 by
   sorry
 
-end tan_8pi_over_3_eq_neg_sqrt3
+end 3_tan_8pi_over_3_eq_neg_sqrt3_3155
 
-namespace min_value_144
 
-import Mathlib
+namespace 3__3156
 
 noncomputable def min_expression (a b c d : ℝ) : ℝ :=
   (a + b + c) / (a * b * c * d)
@@ -2423,11 +2270,10 @@ theorem min_value_144 (a b c d : ℝ) (h_pos_a : 0 < a) (h_pos_b : 0 < b) (h_pos
 by
   sorry
 
-end min_value_144
+end 3__3156
 
-namespace find_cows
 
-import Mathlib
+namespace 3__3157
 
 variable (D C : ℕ)
 
@@ -2436,22 +2282,20 @@ by
   -- Proof goes here
   sorry
 
-end find_cows
+end 3__3157
 
-namespace emily_quiz_score
 
-import Mathlib
+namespace 3_emily_quiz_score_3158
 
 theorem emily_quiz_score :
   ∃ x : ℕ, 94 + 88 + 92 + 85 + 97 + x = 6 * 90 :=
 by
   sorry
 
-end emily_quiz_score
+end 3_emily_quiz_score_3158
 
-namespace foci_distance_of_hyperbola
 
-import Mathlib
+namespace 3_foci_distance_of_hyperbola_3159
 
 theorem foci_distance_of_hyperbola :
   let a_sq := 25
@@ -2464,11 +2308,10 @@ by
   let c := Real.sqrt (a_sq + b_sq)
   sorry
 
-end foci_distance_of_hyperbola
+end 3_foci_distance_of_hyperbola_3159
 
-namespace originally_planned_days
 
-import Mathlib
+namespace 3__3160
 
 def man_days (men : ℕ) (days : ℕ) : ℕ := men * days
 
@@ -2476,11 +2319,10 @@ theorem originally_planned_days (D : ℕ) (h : man_days 5 10 = man_days 10 D) : 
 by 
   sorry
 
-end originally_planned_days
+end 3__3160
 
-namespace guest_bedroom_ratio
 
-import Mathlib
+namespace 3__3161
 
 theorem guest_bedroom_ratio 
   (lr_dr_kitchen : ℝ) (total_house : ℝ) (master_bedroom : ℝ) (guest_bedroom : ℝ) 
@@ -2492,11 +2334,10 @@ theorem guest_bedroom_ratio
 by
   sorry
 
-end guest_bedroom_ratio
+end 3__3161
 
-namespace binom_20_4_plus_10
 
-import Mathlib
+namespace 3_binom_20_4_plus_10_3162
 
 open Nat
 
@@ -2506,11 +2347,10 @@ theorem binom_20_4_plus_10 :
   binom 20 4 + 10 = 4855 := by
   sorry
 
-end binom_20_4_plus_10
+end 3_binom_20_4_plus_10_3162
 
-namespace professionals_work_days
 
-import Mathlib
+namespace 3__3163
 
 theorem professionals_work_days (cost_per_hour_1 cost_per_hour_2 hours_per_day total_cost : ℝ) (h_cost1: cost_per_hour_1 = 15) (h_cost2: cost_per_hour_2 = 15) (h_hours: hours_per_day = 6) (h_total: total_cost = 1260) : (∃ d : ℝ, total_cost = d * hours_per_day * (cost_per_hour_1 + cost_per_hour_2) ∧ d = 7) :=
 by
@@ -2519,11 +2359,10 @@ by
   simp
   sorry
 
-end professionals_work_days
+end 3__3163
 
-namespace find_C_and_D
 
-import Mathlib
+namespace 3_find_C_and_D_3164
 
 variables (C D : ℝ)
 
@@ -2531,11 +2370,10 @@ theorem find_C_and_D (h : 4 * C + 2 * D + 5 = 30) : C = 5.25 ∧ D = 2 :=
 by
   sorry
 
-end find_C_and_D
+end 3_find_C_and_D_3164
 
-namespace seq_problem_part1_seq_problem_part2
 
-import Mathlib
+namespace 3__3165
 
 def seq (a : ℕ → ℤ) : Prop :=
   ∀ n : ℕ, a (n + 2) = |a (n + 1) - a n|
@@ -2556,11 +2394,10 @@ theorem seq_problem_part2 (a : ℕ → ℤ)
   (∀ n : ℕ, ∃ m : ℕ, m > n ∧ a m = M) := 
 sorry
 
-end seq_problem_part1_seq_problem_part2
+end 3__3165
 
-namespace fruit_weights_determined
 
-import Mathlib
+namespace 3_fruit_weights_determined_3166
 
 noncomputable def fruit_weight_configuration : Prop :=
   let weights : List ℕ := [100, 150, 170, 200, 280]
@@ -2579,11 +2416,10 @@ theorem fruit_weights_determined :
 by
   sorry
 
-end fruit_weights_determined
+end 3_fruit_weights_determined_3166
 
-namespace winning_percentage_is_70
 
-import Mathlib
+namespace 3_winning_percentage_is_70_3167
 
 def percentage_of_votes (P : ℝ) : Prop :=
   ∃ (P : ℝ), (7 * P - 7 * (100 - P) = 280 ∧ 0 ≤ P ∧ P ≤ 100)
@@ -2593,20 +2429,18 @@ theorem winning_percentage_is_70 :
 by
   sorry
 
-end winning_percentage_is_70
+end 3_winning_percentage_is_70_3167
 
-namespace sqrt_defined_iff_ge_neg1
 
-import Mathlib
+namespace 3_sqrt_defined_iff_ge_neg1_3168
 
 theorem sqrt_defined_iff_ge_neg1 (x : ℝ) : (∃ y : ℝ, y = Real.sqrt (x + 1)) ↔ x ≥ -1 := by
   sorry
 
-end sqrt_defined_iff_ge_neg1
+end 3_sqrt_defined_iff_ge_neg1_3168
 
-namespace mn_eq_one
 
-import Mathlib
+namespace 3_mn_eq_one_3169
 
 noncomputable def f (x : ℝ) : ℝ := |Real.log x / Real.log 2|
 
@@ -2615,11 +2449,10 @@ variables (m n : ℝ) (hmn : m < n) (hm_pos : 0 < m) (hn_pos : 0 < n) (hmn_equal
 theorem mn_eq_one : m * n = 1 := by
   sorry
 
-end mn_eq_one
+end 3_mn_eq_one_3169
 
-namespace union_A_B
 
-import Mathlib
+namespace 3_union_A_B_3170
 
 def set_A : Set ℝ := { x | 1 / x ≤ 0 }
 def set_B : Set ℝ := { x | x^2 - 1 < 0 }
@@ -2628,32 +2461,29 @@ theorem union_A_B : set_A ∪ set_B = { x | x < 1 } :=
 by
   sorry
 
-end union_A_B
+end 3_union_A_B_3170
 
-namespace solve_ineq_system
 
-import Mathlib
+namespace 3_solve_ineq_system_3171
 
 theorem solve_ineq_system (x : ℝ) :
   (x - 1) / (x + 2) ≤ 0 ∧ x^2 - 2 * x - 3 < 0 ↔ -1 < x ∧ x ≤ 1 :=
 by sorry
 
-end solve_ineq_system
+end 3_solve_ineq_system_3171
 
-namespace max_contribution
 
-import Mathlib
+namespace 3__3172
 
 theorem max_contribution (total_contribution : ℝ) (num_people : ℕ) (min_contribution_each : ℝ) (h1 : total_contribution = 45.00) (h2 : num_people = 25) (h3 : min_contribution_each = 1.00) : 
   ∃ max_cont : ℝ, max_cont = 21.00 :=
 by
   sorry
 
-end max_contribution
+end 3__3172
 
-namespace right_triangle_height
 
-import Mathlib
+namespace 3__3173
 
 theorem right_triangle_height
   (h : ℕ)
@@ -2666,31 +2496,28 @@ theorem right_triangle_height
 by
   sorry
 
-end right_triangle_height
+end 3__3173
 
-namespace absolute_value_positive
 
-import Mathlib
+namespace 3__3174
 
 theorem absolute_value_positive (a : ℝ) (h : a ≠ 0) : |a| > 0 := by
   sorry
 
-end absolute_value_positive
+end 3__3174
 
-namespace solution_correct
 
-import Mathlib
+namespace 3__3175
 
 variable (a b c d : ℝ)
 
 theorem solution_correct (h1 : a > b) (h2 : c > d) : a - d > b - c := by
   sorry
 
-end solution_correct
+end 3__3175
 
-namespace tent_cost_solution
 
-import Mathlib
+namespace 3_tent_cost_solution_3176
 
 -- We define the prices of the tents and other relevant conditions.
 def tent_costs (m n : ℕ) : Prop :=
@@ -2707,21 +2534,19 @@ theorem tent_cost_solution :
 by
   sorry
 
-end tent_cost_solution
+end 3_tent_cost_solution_3176
 
-namespace max_value_abs_cube_sum
 
-import Mathlib
+namespace 3__3177
 
 theorem max_value_abs_cube_sum (x : Fin 5 → ℝ) (h : ∀ i, 0 ≤ x i ∧ x i ≤ 1) : 
   (|x 0 - x 1|^3 + |x 1 - x 2|^3 + |x 2 - x 3|^3 + |x 3 - x 4|^3 + |x 4 - x 0|^3) ≤ 4 :=
 sorry
 
-end max_value_abs_cube_sum
+end 3__3177
 
-namespace series_sum_eq
 
-import Mathlib
+namespace 3_series_sum_eq_3178
 
 -- Definitions from conditions
 def a : ℚ := 1 / 2
@@ -2733,31 +2558,28 @@ theorem series_sum_eq :
   (∑ i in Finset.range n, a * r^i) = 255 / 256 :=
 sorry
 
-end series_sum_eq
+end 3_series_sum_eq_3178
 
-namespace calculate_value
 
-import Mathlib
+namespace 3_calculate_value_3179
 
 theorem calculate_value : (245^2 - 225^2) / 20 = 470 :=
 by
   sorry
 
-end calculate_value
+end 3_calculate_value_3179
 
-namespace count_integer_values_of_x
 
-import Mathlib
+namespace 3__3180
 
 theorem count_integer_values_of_x (x : ℕ) (h : ⌈Real.sqrt x⌉ = 12) : ∃ (n : ℕ), n = 23 :=
 by
   sorry
 
-end count_integer_values_of_x
+end 3__3180
 
-namespace medians_inequality
 
-import Mathlib
+namespace 3__3181
 
   variable {a b c : ℝ} (h_triangle : a + b > c ∧ a + c > b ∧ b + c > a)
 
@@ -2775,11 +2597,10 @@ import Mathlib
     m_a^2 + m_b^2 + m_c^2 ≥ s^2 := by
   sorry
   
-end medians_inequality
+end 3__3181
 
-namespace find_A_in_terms_of_B_and_C
 
-import Mathlib
+namespace 3__3182
 
 noncomputable def f (A B : ℝ) (x : ℝ) := A * x - 3 * B^2
 noncomputable def g (B C : ℝ) (x : ℝ) := B * x + C
@@ -2787,22 +2608,20 @@ noncomputable def g (B C : ℝ) (x : ℝ) := B * x + C
 theorem find_A_in_terms_of_B_and_C (A B C : ℝ) (h : B ≠ 0) (h1 : f A B (g B C 1) = 0) : A = 3 * B^2 / (B + C) :=
 by sorry
 
-end find_A_in_terms_of_B_and_C
+end 3__3182
 
-namespace find_x
 
-import Mathlib
+namespace 3_find_x_3183
 
 def op (a b : ℕ) : ℕ := a * b - b + b ^ 2
 
 theorem find_x (x : ℕ) : (∃ x : ℕ, op x 8 = 80) :=
   sorry
 
-end find_x
+end 3_find_x_3183
 
-namespace 
 
-import Mathlib
+namespace 3__3184
 
 theorem positive_number_is_25 {a x : ℝ}
 (h1 : x = (3 * a + 1)^2)
@@ -2811,11 +2630,10 @@ theorem positive_number_is_25 {a x : ℝ}
 x = 25 :=
 sorry
 
-end 
+end 3__3184
 
-namespace average_production_per_day_for_entire_month
 
-import Mathlib
+namespace 3_average_production_per_day_for_entire_month_3185
 
 -- Definitions based on the conditions
 def average_first_25_days := 65
@@ -2831,11 +2649,10 @@ theorem average_production_per_day_for_entire_month :
 by
   sorry
 
-end average_production_per_day_for_entire_month
+end 3_average_production_per_day_for_entire_month_3185
 
-namespace households_used_both_brands
 
-import Mathlib
+namespace 3__3186
 
 /-- 
 A marketing firm determined that, of 160 households surveyed, 80 used neither brand A nor brand B soap.
@@ -2845,11 +2662,10 @@ theorem households_used_both_brands (X: ℕ) (H: 4*X + 140 = 160): X = 5 :=
 by
   sorry
 
-end households_used_both_brands
+end 3__3186
 
-namespace tangent_curves_line_exists
 
-import Mathlib
+namespace 3_tangent_curves_line_exists_3187
 
 theorem tangent_curves_line_exists (a : ℝ) :
   (∃ l : ℝ → ℝ, ∃ x₀ : ℝ, l 1 = 0 ∧ ∀ x, (l x = x₀^3 ∧ l x = a * x^2 + (15 / 4) * x - 9)) →
@@ -2857,42 +2673,38 @@ theorem tangent_curves_line_exists (a : ℝ) :
 by
   sorry
 
-end tangent_curves_line_exists
+end 3_tangent_curves_line_exists_3187
 
-namespace find_unknown_number
 
-import Mathlib
+namespace 3__3188
 
 theorem find_unknown_number (y : ℝ) (h : 25 / y = 80 / 100) : y = 31.25 :=
 sorry
 
-end find_unknown_number
+end 3__3188
 
-namespace students_in_trumpet_or_trombone
 
-import Mathlib
+namespace 3_students_in_trumpet_or_trombone_3189
 
 theorem students_in_trumpet_or_trombone (h₁ : 0.5 + 0.12 = 0.62) : 
   0.5 + 0.12 = 0.62 :=
 by
   exact h₁
 
-end students_in_trumpet_or_trombone
+end 3_students_in_trumpet_or_trombone_3189
 
-namespace solution_set_of_inequality
 
-import Mathlib
+namespace 3_solution_set_of_inequality_3190
 
 theorem solution_set_of_inequality :
   {x : ℝ | |x - 5| + |x + 3| >= 10} = {x : ℝ | x ≤ -4} ∪ {x : ℝ | x ≥ 6} :=
 by
   sorry
 
-end solution_set_of_inequality
+end 3_solution_set_of_inequality_3190
 
-namespace otimes_identity
 
-import Mathlib
+namespace 3_otimes_identity_3191
 
 def otimes (x y : ℝ) : ℝ := x^2 - y^2
 
@@ -2900,11 +2712,10 @@ theorem otimes_identity (h : ℝ) : otimes h (otimes h h) = h^2 :=
 by
   sorry
 
-end otimes_identity
+end 3_otimes_identity_3191
 
-namespace max_value_exponential_and_power_functions
 
-import Mathlib
+namespace 3_max_value_exponential_and_power_functions_3192
 
 variable (a b : ℝ)
 
@@ -2917,21 +2728,19 @@ theorem max_value_exponential_and_power_functions :
 by
   sorry
 
-end max_value_exponential_and_power_functions
+end 3_max_value_exponential_and_power_functions_3192
 
-namespace howard_items
 
-import Mathlib
+namespace 3__3193
 
 theorem howard_items (a b c : ℕ) (h1 : a + b + c = 40) (h2 : 40 * a + 300 * b + 400 * c = 5000) : a = 20 :=
 by
   sorry
 
-end howard_items
+end 3__3193
 
-namespace john_total_amount
 
-import Mathlib
+namespace 3_john_total_amount_3194
 
 def grandpa_amount : ℕ := 30
 def grandma_amount : ℕ := 3 * grandpa_amount
@@ -2943,33 +2752,30 @@ def total_amount : ℕ :=
 
 theorem john_total_amount : total_amount = 225 := by sorry
 
-end john_total_amount
+end 3_john_total_amount_3194
 
-namespace sum_series
 
-import Mathlib
+namespace 3_sum_series_3195
 
 theorem sum_series :
   (∑ n in Finset.range 100, 1 / ((2 * (n + 1) - 3) * (2 * (n + 1) + 5))) = 612 / 1640 :=
 by
   sorry
 
-end sum_series
+end 3_sum_series_3195
 
-namespace find_ordered_pairs
 
-import Mathlib
+namespace 3__3196
 
 theorem find_ordered_pairs (m n : ℕ) (hm : 0 < m) (hn : 0 < n) :
   (2 * m ∣ 3 * n - 2 ∧ 2 * n ∣ 3 * m - 2) ↔ (m, n) = (2, 2) ∨ (m, n) = (10, 14) ∨ (m, n) = (14, 10) :=
 by
   sorry
 
-end find_ordered_pairs
+end 3__3196
 
-namespace sum_of_three_fractions_is_one
 
-import Mathlib
+namespace 3__3197
 
 theorem sum_of_three_fractions_is_one (a b c : ℕ) (ha : a > 0) (hb : b > 0) (hc : c > 0) :
   1 / (a : ℝ) + 1 / (b : ℝ) + 1 / (c : ℝ) = 1 ↔ 
@@ -2981,11 +2787,10 @@ theorem sum_of_three_fractions_is_one (a b c : ℕ) (ha : a > 0) (hb : b > 0) (h
   (a = 3 ∧ b = 6 ∧ c = 2) :=
 by sorry
 
-end sum_of_three_fractions_is_one
+end 3__3197
 
-namespace sum_of_c
 
-import Mathlib
+namespace 3_sum_of_c_3198
 
 -- Define sequences a_n, b_n, and c_n
 def a (n : ℕ) := 2 * n + 2
@@ -2998,11 +2803,10 @@ theorem sum_of_c (n : ℕ) :
 by 
   sorry
 
-end sum_of_c
+end 3_sum_of_c_3198
 
-namespace seating_arrangement
 
-import Mathlib
+namespace 3_seating_arrangement_3199
 
 def numWaysCableCars (adults children cars capacity : ℕ) : ℕ := 
   sorry 
@@ -3013,11 +2817,10 @@ by {
   sorry
 }
 
-end seating_arrangement
+end 3_seating_arrangement_3199
 
-namespace train_length
 
-import Mathlib
+namespace 3__3200
 
 theorem train_length (speed_kmh : ℕ) (time_s : ℕ) (length_m : ℚ) : 
   speed_kmh = 120 → 
@@ -3028,11 +2831,10 @@ by
   intros
   sorry
 
-end train_length
+end 3__3200
 
-namespace largest_divisor_for_odd_n
 
-import Mathlib
+namespace 3__3201
 
 noncomputable def is_odd (n : ℤ) : Prop := ∃ k : ℤ, n = 2 * k + 1
 
@@ -3041,11 +2843,10 @@ theorem largest_divisor_for_odd_n (n : ℤ) (h : is_odd n ∧ n > 0) :
 by 
   sorry
 
-end largest_divisor_for_odd_n
+end 3__3201
 
-namespace find_y
 
-import Mathlib
+namespace 3__3202
 
 -- Define the points and slope conditions
 def point_R : ℝ × ℝ := (-3, 4)
@@ -3059,11 +2860,10 @@ theorem find_y (y : ℝ) (h : y_condition y) : y = 8 :=
 by
   sorry
 
-end find_y
+end 3__3202
 
-namespace inequality_ineqs
 
-import Mathlib
+namespace 3__3203
 
 theorem inequality_ineqs (x y z : ℝ) 
   (hx : 0 < x) (hy : 0 < y) (hz : 0 < z)
@@ -3077,20 +2877,18 @@ theorem inequality_ineqs (x y z : ℝ)
   6 * Real.sqrt 3 := by
   sorry
 
-end inequality_ineqs
+end 3__3203
 
-namespace certain_number
 
-import Mathlib
+namespace 3__3204
 
 theorem certain_number (x : ℝ) (h : 7125 / x = 5700) : x = 1.25 := 
 sorry
 
-end certain_number
+end 3__3204
 
-namespace local_value_of_4_in_564823
 
-import Mathlib
+namespace 3_local_value_of_4_in_564823_3205
 
 def face_value (d : ℕ) : ℕ := d
 def place_value_of_thousands : ℕ := 1000
@@ -3101,22 +2899,20 @@ theorem local_value_of_4_in_564823 :
 by 
   sorry
 
-end local_value_of_4_in_564823
+end 3_local_value_of_4_in_564823_3205
 
-namespace tyrone_gave_marbles_to_eric
 
-import Mathlib
+namespace 3__3206
 
 theorem tyrone_gave_marbles_to_eric (initial_tyrone_marbles : ℕ) (initial_eric_marbles : ℕ) (marbles_given : ℕ) :
   initial_tyrone_marbles = 150 ∧ initial_eric_marbles = 30 ∧ (initial_tyrone_marbles - marbles_given = 3 * initial_eric_marbles) → marbles_given = 60 :=
 by
   sorry
 
-end tyrone_gave_marbles_to_eric
+end 3__3206
 
-namespace annual_increase_of_chickens
 
-import Mathlib
+namespace 3__3207
 
 theorem annual_increase_of_chickens 
   (chickens_now : ℕ)
@@ -3129,11 +2925,10 @@ theorem annual_increase_of_chickens
 by
   sorry
 
-end annual_increase_of_chickens
+end 3__3207
 
-namespace smallest_possible_sum
 
-import Mathlib
+namespace 3__3208
 
 -- Defining the conditions for x and y.
 variables (x y : ℕ)
@@ -3143,11 +2938,10 @@ theorem smallest_possible_sum (hx : x > 0) (hy : y > 0) (hne : x ≠ y) (hxy : 1
 by
   sorry
 
-end smallest_possible_sum
+end 3__3208
 
-namespace seth_oranges
 
-import Mathlib
+namespace 3_seth_oranges_3209
 
 def initial_boxes := 9
 def boxes_given_to_mother := 1
@@ -3159,22 +2953,20 @@ def boxes_left := remaining_boxes_after_giving_to_mother - boxes_given_away
 theorem seth_oranges : boxes_left = 4 := by
   sorry
 
-end seth_oranges
+end 3_seth_oranges_3209
 
-namespace thirty_five_times_ninety_nine_is_not_thirty_five_times_hundred_plus_thirty_five
 
-import Mathlib
+namespace 3_thirty_five_times_ninety_nine_is_not_thirty_five_times_hundred_plus_thirty_five_3210
 
 theorem thirty_five_times_ninety_nine_is_not_thirty_five_times_hundred_plus_thirty_five :
   (35 * 99 ≠ 35 * 100 + 35) :=
 by
   sorry
 
-end thirty_five_times_ninety_nine_is_not_thirty_five_times_hundred_plus_thirty_five
+end 3_thirty_five_times_ninety_nine_is_not_thirty_five_times_hundred_plus_thirty_five_3210
 
-namespace ball_height_less_than_10_after_16_bounces
 
-import Mathlib
+namespace 3_ball_height_less_than_10_after_16_bounces_3211
 
 noncomputable def bounce_height (initial : ℝ) (ratio : ℝ) (bounces : ℕ) : ℝ :=
   initial * ratio^bounces
@@ -3188,31 +2980,28 @@ theorem ball_height_less_than_10_after_16_bounces :
   use 16
   sorry
 
-end ball_height_less_than_10_after_16_bounces
+end 3_ball_height_less_than_10_after_16_bounces_3211
 
-namespace sqrt_range_real
 
-import Mathlib
+namespace 3__3212
 
 theorem sqrt_range_real (x : ℝ) (h : 1 - 3 * x ≥ 0) : x ≤ 1 / 3 :=
 sorry
 
-end sqrt_range_real
+end 3__3212
 
-namespace exactly_one_correct
 
-import Mathlib
+namespace 3__3213
 
 theorem exactly_one_correct (P_A P_B : ℚ) (hA : P_A = 1/5) (hB : P_B = 1/4) :
   P_A * (1 - P_B) + (1 - P_A) * P_B = 7/20 :=
 by
   sorry
 
-end exactly_one_correct
+end 3__3213
 
-namespace total_spent_is_64
 
-import Mathlib
+namespace 3_total_spent_is_64_3214
 
 /-- Condition 1: The cost of each deck is 8 dollars -/
 def deck_cost : ℕ := 8
@@ -3230,11 +3019,10 @@ def total_amount_spent : ℕ := (tom_decks * deck_cost) + (friend_decks * deck_c
 theorem total_spent_is_64 : total_amount_spent = 64 := by
   sorry
 
-end total_spent_is_64
+end 3_total_spent_is_64_3214
 
-namespace slope_probability
 
-import Mathlib
+namespace 3_slope_probability_3215
 
 def line_equation (a x y : ℝ) : Prop := a * x + 2 * y - 3 = 0
 
@@ -3251,21 +3039,19 @@ by
   intros a h_in h_slope
   sorry
 
-end slope_probability
+end 3_slope_probability_3215
 
-namespace sum_of_squares_equality
 
-import Mathlib
+namespace 3__3216
 
 theorem sum_of_squares_equality (n : ℕ) (h : n = 5) :
   (∑ i in Finset.range (n + 1), i^2) = (∑ i in Finset.range (2 * n + 1), i) := by
   sorry
 
-end sum_of_squares_equality
+end 3__3216
 
-namespace find_all_pairs
 
-import Mathlib
+namespace 3_find_all_pairs_3217
 
 def is_solution (m n : ℕ) : Prop := 200 * m + 6 * n = 2006
 
@@ -3274,11 +3060,10 @@ def valid_pairs : List (ℕ × ℕ) := [(1, 301), (4, 201), (7, 101), (10, 1)]
 theorem find_all_pairs :
   ∀ (m n : ℕ), is_solution m n ↔ (m, n) ∈ valid_pairs := by sorry
 
-end find_all_pairs
+end 3_find_all_pairs_3217
 
-namespace sum_of_first_nine_terms
 
-import Mathlib
+namespace 3_sum_of_first_nine_terms_3218
 
 def arithmetic_sequence (a : ℕ → ℝ) : Prop :=
   ∃ (d : ℝ), ∀ (n : ℕ), a n = a 1 + d * (n - 1)
@@ -3293,11 +3078,10 @@ theorem sum_of_first_nine_terms (h : condition a) :
   (a 1 + a 2 + a 3 + a 4 + a 5 + a 6 + a 7 + a 8 + a 9) = 45 :=
 by sorry
 
-end sum_of_first_nine_terms
+end 3_sum_of_first_nine_terms_3218
 
-namespace gardener_cabbages_this_year
 
-import Mathlib
+namespace 3__3219
 
 -- Definitions for the conditions
 def side_length_last_year (x : ℕ) := true
@@ -3310,32 +3094,29 @@ theorem gardener_cabbages_this_year (x : ℕ) (hx : side_length_last_year x) :
 by 
   sorry
 
-end gardener_cabbages_this_year
+end 3__3219
 
-namespace compare_series
 
-import Mathlib
+namespace 3__3220
 
 theorem compare_series (x y : ℝ) (hx : -1 < x ∧ x < 1) (hy : -1 < y ∧ y < 1) : 
   (1 / (1 - x^2) + 1 / (1 - y^2)) ≥ (2 / (1 - x * y)) :=
 by
   sorry
 
-end compare_series
+end 3__3220
 
-namespace percentage_defective
 
-import Mathlib
+namespace 3__3221
 
 theorem percentage_defective (examined rejected : ℚ) (h1 : examined = 66.67) (h2 : rejected = 10) :
   (rejected / examined) * 100 = 15 := by
   sorry
 
-end percentage_defective
+end 3__3221
 
-namespace ratio_jordana_jennifer_10_years
 
-import Mathlib
+namespace 3_ratio_jordana_jennifer_10_years_3222
 
 -- Let's define the necessary terms and conditions:
 def Jennifer_future_age := 30
@@ -3351,21 +3132,19 @@ theorem ratio_jordana_jennifer_10_years :
   ratio_of_ages Jennifer_future_age Jordana_current_age years = 3 := by
   sorry
 
-end ratio_jordana_jennifer_10_years
+end 3_ratio_jordana_jennifer_10_years_3222
 
-namespace value_of_x
 
-import Mathlib
+namespace 3__3223
 
 theorem value_of_x (x : ℝ) (h : 4 * x + 5 * x + x + 2 * x = 360) : x = 30 := 
 by
   sorry
 
-end value_of_x
+end 3__3223
 
-namespace sophie_saves_money
 
-import Mathlib
+namespace 3__3224
 
 variable (loads_per_week : ℕ) (dryer_sheets_per_load : ℕ) (weeks_per_year : ℕ) (cost_per_box : ℝ) (sheets_per_box : ℕ)
 variable (given_on_birthday : Bool)
@@ -3386,11 +3165,10 @@ by
   have h6 : given_on_birthday = true := h_given_on_birthday
   sorry
 
-end sophie_saves_money
+end 3__3224
 
-namespace shooting_competition
 
-import Mathlib
+namespace 3__3225
 
 variable (x y : ℕ)
 
@@ -3400,20 +3178,18 @@ theorem shooting_competition (H1 : 20 * x - 12 * (10 - x) + 20 * y - 12 * (10 - 
 by 
   sorry
 
-end shooting_competition
+end 3__3225
 
-namespace quadratic_has_real_root
 
-import Mathlib
+namespace 3_quadratic_has_real_root_3226
 
 theorem quadratic_has_real_root (b : ℝ) :
   (∃ x : ℝ, x^2 + b * x + 25 = 0) ↔ (b ≤ -10 ∨ b ≥ 10) := sorry
 
-end quadratic_has_real_root
+end 3_quadratic_has_real_root_3226
 
-namespace number_of_distinct_arrangements
 
-import Mathlib
+namespace 3_number_of_distinct_arrangements_3227
 
 -- Given conditions: There are 7 items and we need to choose 4 out of these 7.
 def binomial_coefficient (n k : ℕ) : ℕ :=
@@ -3428,32 +3204,29 @@ theorem number_of_distinct_arrangements : binomial_coefficient 7 4 * factorial 4
 by
   sorry
 
-end number_of_distinct_arrangements
+end 3_number_of_distinct_arrangements_3227
 
-namespace min_value_a_plus_b_plus_c
 
-import Mathlib
+namespace 3__3228
 
 theorem min_value_a_plus_b_plus_c (a b c : ℝ) (h1 : 0 < a) (h2 : 0 < b) (h3 : 0 < c) 
   (h4 : 9 * a + 4 * b = a * b * c) : a + b + c ≥ 10 :=
 by
   sorry
 
-end min_value_a_plus_b_plus_c
+end 3__3228
 
-namespace transform_equation
 
-import Mathlib
+namespace 3__3229
 
 theorem transform_equation (x y : ℝ) (h : y = x + x⁻¹) :
   x^4 + x^3 - 5 * x^2 + x + 1 = 0 ↔ x^2 * (y^2 + y - 7) = 0 := 
 sorry
 
-end transform_equation
+end 3__3229
 
-namespace processing_rates_and_total_cost
 
-import Mathlib
+namespace 3__3230
 
 variables (products total_days total_days_A total_days_B daily_capacity_A daily_capacity_B total_cost_A total_cost_B : ℝ)
 
@@ -3470,21 +3243,19 @@ theorem processing_rates_and_total_cost
 by
   sorry
 
-end processing_rates_and_total_cost
+end 3__3230
 
-namespace compare_fractions
 
-import Mathlib
+namespace 3_compare_fractions_3231
 
 theorem compare_fractions : (31 : ℚ) / 11 > (17 : ℚ) / 14 := 
 by
   sorry
 
-end compare_fractions
+end 3_compare_fractions_3231
 
-namespace payment_option1_payment_option2_cost_effective_option_most_cost_effective_plan
 
-import Mathlib
+namespace 3_most_cost_effective_plan_3232
 
 variable (x : ℕ)
 variable (hx : x > 10)
@@ -3504,21 +3275,19 @@ by sorry
 theorem most_cost_effective_plan (h30 : x = 30) : (10000 + 3600 = 13600) :=
 by sorry
 
-end payment_option1_payment_option2_cost_effective_option_most_cost_effective_plan
+end 3_most_cost_effective_plan_3232
 
-namespace necessary_but_not_sufficient_condition_for_a_lt_neg_one
 
-import Mathlib
+namespace 3_necessary_but_not_sufficient_condition_for_a_lt_neg_one_3233
 
 theorem necessary_but_not_sufficient_condition_for_a_lt_neg_one (a : ℝ) : 
   (1 / a > -1) ↔ (a < -1) :=
 by sorry
 
-end necessary_but_not_sufficient_condition_for_a_lt_neg_one
+end 3_necessary_but_not_sufficient_condition_for_a_lt_neg_one_3233
 
-namespace students_like_burgers
 
-import Mathlib
+namespace 3__3234
 
 theorem students_like_burgers (total_students : ℕ) (french_fries_likers : ℕ) (both_likers : ℕ) (neither_likers : ℕ) 
     (h1 : total_students = 25) (h2 : french_fries_likers = 15) (h3 : both_likers = 6) (h4 : neither_likers = 6) : 
@@ -3527,11 +3296,10 @@ by
   -- The proof will go here.
   sorry
 
-end students_like_burgers
+end 3__3234
 
-namespace angle_Y_measure
 
-import Mathlib
+namespace 3_angle_Y_measure_3235
 
 def hexagon_interior_angle_sum (n : ℕ) : ℕ :=
   180 * (n - 2)
@@ -3552,11 +3320,10 @@ by
   intros C H E S1 S2 Y h1 h2 h3
   sorry
 
-end angle_Y_measure
+end 3_angle_Y_measure_3235
 
-namespace circles_intersect_iff
 
-import Mathlib
+namespace 3__3236
 
 -- Definitions of the two circles and their parameters
 def circle1 (x y : ℝ) : Prop := x^2 + y^2 = 9
@@ -3569,11 +3336,10 @@ theorem circles_intersect_iff (r : ℝ) (hr : 0 < r) :
 by
   sorry
 
-end circles_intersect_iff
+end 3__3236
 
-namespace range_of_m
 
-import Mathlib
+namespace 3__3237
 
 noncomputable def point := (ℝ × ℝ)
 noncomputable def P : point := (-1, 1)
@@ -3585,11 +3351,10 @@ theorem range_of_m (m : ℝ) (l : line_eq m) : -3 < m ∧ m < -2/3 :=
 by
   sorry
 
-end range_of_m
+end 3__3237
 
-namespace apple_distribution_ways
 
-import Mathlib
+namespace 3_apple_distribution_ways_3238
 
 -- Definitions based on conditions
 def distribute_apples (a b c : ℕ) : Prop := a + b + c = 30 ∧ a ≥ 3 ∧ b ≥ 3 ∧ c ≥ 3
@@ -3603,11 +3368,10 @@ by
   intros
   sorry
 
-end apple_distribution_ways
+end 3_apple_distribution_ways_3238
 
-namespace ratio_amyl_alcohol_to_ethanol
 
-import Mathlib
+namespace 3_ratio_amyl_alcohol_to_ethanol_3239
 
 noncomputable def mol_amyl_alcohol : ℕ := 3
 noncomputable def mol_hcl : ℕ := 3
@@ -3624,11 +3388,10 @@ by
   have h2 : mol_ethanol = 1 := by rfl
   sorry
 
-end ratio_amyl_alcohol_to_ethanol
+end 3_ratio_amyl_alcohol_to_ethanol_3239
 
-namespace ratio_dvds_to_cds
 
-import Mathlib
+namespace 3_ratio_dvds_to_cds_3240
 
 def total_sold : ℕ := 273
 def dvds_sold : ℕ := 168
@@ -3637,11 +3400,10 @@ def cds_sold : ℕ := total_sold - dvds_sold
 theorem ratio_dvds_to_cds : (dvds_sold : ℚ) / cds_sold = 8 / 5 := by
   sorry
 
-end ratio_dvds_to_cds
+end 3_ratio_dvds_to_cds_3240
 
-namespace length_of_platform_is_280
 
-import Mathlib
+namespace 3_length_of_platform_is_280_3241
 
 -- Add conditions for speed, times and conversions
 def speed_kmph : ℕ := 72
@@ -3661,11 +3423,10 @@ theorem length_of_platform_is_280 :
   length_of_platform = 280 := by
   sorry
 
-end length_of_platform_is_280
+end 3_length_of_platform_is_280_3241
 
-namespace find_v2002
 
-import Mathlib
+namespace 3_find_v2002_3242
 
 def g (x : ℕ) : ℕ :=
   match x with
@@ -3685,11 +3446,10 @@ def seq_v : ℕ → ℕ
 theorem find_v2002 : seq_v 2002 = 5 :=
   sorry
 
-end find_v2002
+end 3_find_v2002_3242
 
-namespace ratio_areas
 
-import Mathlib
+namespace 3__3243
 
 theorem ratio_areas (H : ℝ) (L : ℝ) (r : ℝ) (A_rectangle : ℝ) (A_circle : ℝ) :
   H = 45 ∧ (L / H = 4 / 3) ∧ r = H / 2 ∧ A_rectangle = L * H ∧ A_circle = π * r^2 →
@@ -3697,11 +3457,10 @@ theorem ratio_areas (H : ℝ) (L : ℝ) (r : ℝ) (A_rectangle : ℝ) (A_circle 
 by
   sorry
 
-end ratio_areas
+end 3__3243
 
-namespace find_f_k_l
 
-import Mathlib
+namespace 3__3244
 
 noncomputable
 def f : ℕ → ℕ := sorry
@@ -3717,21 +3476,19 @@ theorem find_f_k_l (k l : ℕ) (h : k < l) :
 by 
   sorry
 
-end find_f_k_l
+end 3__3244
 
-namespace inclination_angle
 
-import Mathlib
+namespace 3_inclination_angle_3245
 
 theorem inclination_angle (θ : ℝ) : 
   (∃ (x y : ℝ), x + y - 3 = 0) → θ = 3 * Real.pi / 4 := 
 sorry
 
-end inclination_angle
+end 3_inclination_angle_3245
 
-namespace value_of_n
 
-import Mathlib
+namespace 3__3246
 
 def is_3_digit_integer (n : ℕ) : Prop := (100 ≤ n) ∧ (n < 1000)
 
@@ -3744,11 +3501,10 @@ theorem value_of_n (d n : ℕ) (h1 : least_common_multiple d n 690)
 by
   sorry
 
-end value_of_n
+end 3__3246
 
-namespace find_a1_over_d
 
-import Mathlib
+namespace 3__3247
 
 variable {a : ℕ → ℝ} (d : ℝ)
 
@@ -3763,11 +3519,10 @@ theorem find_a1_over_d
 by 
   sorry
 
-end find_a1_over_d
+end 3__3247
 
-namespace find_Tom_favorite_numbers
 
-import Mathlib
+namespace 3_find_Tom_favorite_numbers_3248
 
 def sum_of_digits (n : ℕ) : ℕ :=
   n.digits 10 |>.sum
@@ -3786,11 +3541,10 @@ theorem find_Tom_favorite_numbers :
 by
   sorry
 
-end find_Tom_favorite_numbers
+end 3_find_Tom_favorite_numbers_3248
 
-namespace intersection_M_N
 
-import Mathlib
+namespace 3_intersection_M_N_3249
 
 def M : Set ℕ := {3, 5, 6, 8}
 def N : Set ℕ := {4, 5, 7, 8}
@@ -3798,11 +3552,10 @@ def N : Set ℕ := {4, 5, 7, 8}
 theorem intersection_M_N : M ∩ N = {5, 8} :=
   sorry
 
-end intersection_M_N
+end 3_intersection_M_N_3249
 
-namespace simultaneous_equations_solution
 
-import Mathlib
+namespace 3_simultaneous_equations_solution_3250
 
 -- Definition of the two equations
 def eq1 (m x y : ℝ) : Prop := y = m * x + 5
@@ -3813,11 +3566,10 @@ theorem simultaneous_equations_solution (m : ℝ) :
   (m ≠ 1) ↔ ∃ x y : ℝ, eq1 m x y ∧ eq2 m x y := 
 sorry
 
-end simultaneous_equations_solution
+end 3_simultaneous_equations_solution_3250
 
-namespace units_digit_fraction
 
-import Mathlib
+namespace 3_units_digit_fraction_3251
 
 -- Given conditions
 def numerator : ℕ := 30 * 31 * 32 * 33 * 34 * 35
@@ -3829,22 +3581,20 @@ theorem units_digit_fraction :
   (simplified_fraction) % 10 = 2 := by
   sorry
 
-end units_digit_fraction
+end 3_units_digit_fraction_3251
 
-namespace range_a_satisfies
 
-import Mathlib
+namespace 3__3252
 
 theorem range_a_satisfies (a : ℝ) (f : ℝ → ℝ) (h₁ : ∀ x : ℝ, f x = x^3) (h₂ : f 2 = 8) :
   (f (a - 3) > f (1 - a)) ↔ a > 2 :=
 by
   sorry
 
-end range_a_satisfies
+end 3__3252
 
-namespace find_enclosed_area
 
-import Mathlib
+namespace 3_find_enclosed_area_3253
 
 def area_square (side_length : ℕ) : ℕ :=
   side_length * side_length
@@ -3862,11 +3612,10 @@ theorem find_enclosed_area :
 by
   sorry
 
-end find_enclosed_area
+end 3_find_enclosed_area_3253
 
-namespace find_y_when_x_is_4
 
-import Mathlib
+namespace 3_find_y_when_x_is_4_3254
 
 variables (x y : ℕ)
 def inversely_proportional (C : ℕ) (x y : ℕ) : Prop := x * y = C
@@ -3876,11 +3625,10 @@ theorem find_y_when_x_is_4 :
 by
   sorry
 
-end find_y_when_x_is_4
+end 3_find_y_when_x_is_4_3254
 
-namespace product_is_58
 
-import Mathlib
+namespace 3_product_is_58_3255
 
 -- Definitions of the conditions
 def is_prime (n : ℕ) : Prop := n > 1 ∧ ∀ m : ℕ, m ∣ n → m = 1 ∨ m = n
@@ -3898,11 +3646,10 @@ theorem product_is_58 : p * q = 58 :=
 by
   sorry
 
-end product_is_58
+end 3_product_is_58_3255
 
-namespace determine_y
 
-import Mathlib
+namespace 3__3256
 
 variable {R : Type} [LinearOrderedField R]
 variables {x y : R}
@@ -3911,11 +3658,10 @@ theorem determine_y (h1 : 2 * x - 3 * y = 5) (h2 : 4 * x + 9 * y = 6) : y = -4 /
 by
   sorry
 
-end determine_y
+end 3__3256
 
-namespace find_angle_A
 
-import Mathlib
+namespace 3_find_angle_A_3257
 
 variable (a b c : ℝ)
 variable (A : ℝ)
@@ -3927,11 +3673,10 @@ by
   intro h
   sorry
 
-end find_angle_A
+end 3_find_angle_A_3257
 
-namespace train_crosses_platform_in_15_seconds
 
-import Mathlib
+namespace 3_train_crosses_platform_in_15_seconds_3258
 
 -- Definitions based on conditions
 def length_of_train : ℝ := 330 -- in meters
@@ -3948,13 +3693,10 @@ theorem train_crosses_platform_in_15_seconds :
 by
   sorry
 
-end train_crosses_platform_in_15_seconds
+end 3_train_crosses_platform_in_15_seconds_3258
 
-namespace ellipse_x_intercept_other
 
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Analysis.SpecialFunctions.Sqrt
+namespace 3__3259
 
 noncomputable def foci : (ℝ × ℝ) × (ℝ × ℝ) := ((0, 3), (4, 0))
 noncomputable def sum_of_distances : ℝ := 7
@@ -3970,20 +3712,18 @@ theorem ellipse_x_intercept_other
   ∃ (x : ℝ), x > 0 ∧ ((x, 0) = (56 / 11, 0)) := 
 sorry
 
-end ellipse_x_intercept_other
+end 3__3259
 
-namespace no_solution
 
-import Mathlib
+namespace 3_no_solution_3260
 
 theorem no_solution : ¬∃ x : ℝ, x^3 - 8*x^2 + 16*x - 32 / (x - 2) < 0 := by
   sorry
 
-end no_solution
+end 3_no_solution_3260
 
-namespace symmetric_points_sum
 
-import Mathlib
+namespace 3__3261
 
 theorem symmetric_points_sum
   (a b : ℝ)
@@ -3992,21 +3732,19 @@ theorem symmetric_points_sum
   a + b = -1 := by
   sorry
 
-end symmetric_points_sum
+end 3__3261
 
-namespace correct_operation
 
-import Mathlib
+namespace 3_correct_operation_3262
 
 theorem correct_operation (a : ℝ) : a^5 / a^2 = a^3 := by
   -- Proof steps will be supplied here
   sorry
 
-end correct_operation
+end 3_correct_operation_3262
 
-namespace even_three_digit_numbers_count
 
-import Mathlib
+namespace 3_even_three_digit_numbers_count_3263
 
 theorem even_three_digit_numbers_count :
   let digits := [0, 1, 2, 3, 4]
@@ -4020,11 +3758,10 @@ by
   show count = 18
   sorry
 
-end even_three_digit_numbers_count
+end 3_even_three_digit_numbers_count_3263
 
-namespace find_constants_to_satisfy_equation
 
-import Mathlib
+namespace 3_find_constants_to_satisfy_equation_3264
 
 -- Define the condition
 def equation_condition (x : ℝ) (A B C : ℝ) :=
@@ -4036,11 +3773,10 @@ theorem find_constants_to_satisfy_equation (A B C : ℝ) :
 by
   sorry
 
-end find_constants_to_satisfy_equation
+end 3_find_constants_to_satisfy_equation_3264
 
-namespace find_f_x_minus_1
 
-import Mathlib
+namespace 3_find_f_x_minus_1_3265
 
 -- Define the function f
 def f (x : ℝ) : ℝ := 2 * x - 1
@@ -4049,11 +3785,10 @@ def f (x : ℝ) : ℝ := 2 * x - 1
 theorem find_f_x_minus_1 (x : ℝ) : f (x - 1) = 2 * x - 3 := by
   sorry
 
-end find_f_x_minus_1
+end 3_find_f_x_minus_1_3265
 
-namespace find_c
 
-import Mathlib
+namespace 3__3266
 
 -- Definitions
 def is_root (x c : ℝ) : Prop := x^2 - 3*x + c = 0
@@ -4062,11 +3797,10 @@ def is_root (x c : ℝ) : Prop := x^2 - 3*x + c = 0
 theorem find_c (c : ℝ) (h : is_root 1 c) : c = 2 :=
 sorry
 
-end find_c
+end 3__3266
 
-namespace geometric_sequence_sum
 
-import Mathlib
+namespace 3__3267
 
 theorem geometric_sequence_sum (S : ℕ → ℝ) (a_n : ℕ → ℝ) (a : ℝ) : 
   (∀ n : ℕ, n > 0 → S n = 2^n + a) →
@@ -4077,11 +3811,10 @@ theorem geometric_sequence_sum (S : ℕ → ℝ) (a_n : ℕ → ℝ) (a : ℝ) :
 by
   sorry
 
-end geometric_sequence_sum
+end 3__3267
 
-namespace six_digit_number_condition
 
-import Mathlib
+namespace 3_six_digit_number_condition_3268
 
 theorem six_digit_number_condition :
   ∃ A B : ℕ, 100 ≤ A ∧ A < 1000 ∧ 100 ≤ B ∧ B < 1000 ∧
@@ -4089,11 +3822,10 @@ theorem six_digit_number_condition :
 by
   sorry
 
-end six_digit_number_condition
+end 3_six_digit_number_condition_3268
 
-namespace time_to_reach_ticket_window
 
-import Mathlib
+namespace 3_time_to_reach_ticket_window_3269
 
 -- Define the conditions as per the problem
 def rate_kit : ℕ := 2 -- feet per minute (rate)
@@ -4103,32 +3835,29 @@ def remaining_distance : ℕ := 210 -- feet
 theorem time_to_reach_ticket_window : remaining_distance / rate_kit = 105 :=
 by sorry
 
-end time_to_reach_ticket_window
+end 3_time_to_reach_ticket_window_3269
 
-namespace min_chord_length_intercepted_line_eq
 
-import Mathlib
+namespace 3__3270
 
 theorem min_chord_length_intercepted_line_eq (m : ℝ)
   (hC : ∀ (x y : ℝ), (x-1)^2 + (y-1)^2 = 16)
   (hL : ∀ (x y : ℝ), (2*m-1)*x + (m-1)*y - 3*m + 1 = 0)
   : ∃ x y : ℝ, x - 2*y - 4 = 0 := sorry
 
-end min_chord_length_intercepted_line_eq
+end 3__3270
 
-namespace division_result
 
-import Mathlib
+namespace 3_division_result_3271
 
 theorem division_result:
     35 / 0.07 = 500 := by
   sorry
 
-end division_result
+end 3_division_result_3271
 
-namespace minimize_fencing
 
-import Mathlib
+namespace 3__3272
 
 def area_requirement (w : ℝ) : Prop :=
   2 * (w * w) ≥ 800
@@ -4144,11 +3873,10 @@ theorem minimize_fencing (w l : ℝ) (h1 : area_requirement w) (h2 : length_twic
 by
   sorry
 
-end minimize_fencing
+end 3__3272
 
-namespace average_age_of_4_students
 
-import Mathlib
+namespace 3__3273
 
 theorem average_age_of_4_students (avg_age_15 : ℕ) (num_students_15 : ℕ)
     (avg_age_10 : ℕ) (num_students_10 : ℕ) (age_15th_student : ℕ) :
@@ -4156,22 +3884,20 @@ theorem average_age_of_4_students (avg_age_15 : ℕ) (num_students_15 : ℕ)
     (56 / 4 = 14) := by
   sorry
 
-end average_age_of_4_students
+end 3__3273
 
-namespace sufficient_but_not_necessary_condition
 
-import Mathlib
+namespace 3_sufficient_but_not_necessary_condition_3274
 
 theorem sufficient_but_not_necessary_condition (m : ℝ) :
   (∀ x : ℝ, 1 < x → x^2 - m * x + 1 > 0) → -2 < m ∧ m < 2 :=
 by
   sorry
 
-end sufficient_but_not_necessary_condition
+end 3_sufficient_but_not_necessary_condition_3274
 
-namespace intersection_sum_zero
 
-import Mathlib
+namespace 3_intersection_sum_zero_3275
 
 -- Definitions from conditions:
 def lineA (x : ℝ) : ℝ := -x
@@ -4180,11 +3906,10 @@ def lineB (x : ℝ) : ℝ := 5 * x - 10
 -- Declaration of the theorem:
 theorem intersection_sum_zero : ∃ a b : ℝ, lineA a = b ∧ lineB a = b ∧ a + b = 0 := sorry
 
-end intersection_sum_zero
+end 3_intersection_sum_zero_3275
 
-namespace infinitely_many_not_representable
 
-import Mathlib
+namespace 3_infinitely_many_not_representable_3276
 
 def can_be_represented_as_p_n_2k (c : ℕ) : Prop :=
   ∃ (p n k : ℕ), Prime p ∧ c = p + n^(2 * k)
@@ -4193,11 +3918,10 @@ theorem infinitely_many_not_representable :
   ∃ᶠ m in at_top, ¬ can_be_represented_as_p_n_2k (2^m + 1) := 
 sorry
 
-end infinitely_many_not_representable
+end 3_infinitely_many_not_representable_3276
 
-namespace math_problem
 
-import Mathlib
+namespace 3_math_problem_3277
 
 -- Define constants and conversions from decimal/mixed numbers to fractions
 def thirteen_and_three_quarters : ℚ := 55 / 4
@@ -4221,30 +3945,27 @@ def E : ℚ :=
 theorem math_problem : E = 29 / 3 := by
   sorry
 
-end math_problem
+end 3_math_problem_3277
 
-namespace isosceles_triangle_side_length
 
-import Mathlib
+namespace 3__3278
 
 theorem isosceles_triangle_side_length (a b : ℝ) (h : a < b) : 
   ∃ l : ℝ, l = (b - a) / 2 := 
 sorry
 
-end isosceles_triangle_side_length
+end 3__3278
 
-namespace smallest_portion_is_two
 
-import Mathlib
+namespace 3__3279
 
 theorem smallest_portion_is_two (a1 a2 a3 a4 a5 : ℕ) (d : ℕ) (h1 : a1 = a3 - 2 * d) (h2 : a2 = a3 - d) (h3 : a4 = a3 + d) (h4 : a5 = a3 + 2 * d) (h5 : a1 + a2 + a3 + a4 + a5 = 120) (h6 : a3 + a4 + a5 = 7 * (a1 + a2)) : a1 = 2 :=
 by sorry
 
-end smallest_portion_is_two
+end 3__3279
 
-namespace percentage_increase_proof
 
-import Mathlib
+namespace 3_percentage_increase_proof_3280
 
 def breakfast_calories : ℕ := 500
 def shakes_total_calories : ℕ := 3 * 300
@@ -4259,11 +3980,10 @@ theorem percentage_increase_proof : percentage_increase_in_calories 125 :=
 by
   sorry
 
-end percentage_increase_proof
+end 3_percentage_increase_proof_3280
 
-namespace jeff_total_run_is_290
 
-import Mathlib
+namespace 3_jeff_total_run_is_290_3281
 
 variables (monday_to_wednesday_run : ℕ)
 variables (thursday_run : ℕ)
@@ -4277,11 +3997,10 @@ theorem jeff_total_run_is_290 :
 by
   sorry
 
-end jeff_total_run_is_290
+end 3_jeff_total_run_is_290_3281
 
-namespace incorrect_reciprocal_quotient
 
-import Mathlib
+namespace 3__3282
 
 -- Definitions based on problem conditions
 def identity_property (x : ℚ) : x * 1 = x := by sorry
@@ -4292,11 +4011,10 @@ def additive_inverse_property (x : ℚ) : x * (-1) = -x := by sorry
 theorem incorrect_reciprocal_quotient (a b : ℚ) (h1 : a ≠ 0) (h2 : b = 1 / a) : a / b ≠ 1 :=
 by sorry
 
-end incorrect_reciprocal_quotient
+end 3__3282
 
-namespace total_matches_correct_total_points_earthlings_correct_total_players_is_square
 
-import Mathlib
+namespace 3_total_matches_correct_total_points_earthlings_correct_total_players_is_square_3283
 
 -- Definitions
 variables (t a : ℕ)
@@ -4319,11 +4037,10 @@ by sorry
 
 theorem total_players_is_square : is_total_players_square t a := by sorry
 
-end total_matches_correct_total_points_earthlings_correct_total_players_is_square
+end 3_total_matches_correct_total_points_earthlings_correct_total_players_is_square_3283
 
-namespace problem_inequality
 
-import Mathlib
+namespace 3__3284
 
 variable {a b c d : ℝ}
 
@@ -4331,11 +4048,10 @@ theorem problem_inequality (h1 : 0 ≤ a) (h2 : 0 ≤ d) (h3 : 0 < b) (h4 : 0 < 
   (b / (c + d)) + (c / (b + a)) ≥ (Real.sqrt 2) - (1 / 2) := 
 sorry
 
-end problem_inequality
+end 3__3284
 
-namespace express_train_speed_ratio
 
-import Mathlib
+namespace 3__3285
 
 noncomputable def speed_ratio (c h : ℝ) (x : ℝ) : Prop :=
   let t1 := h / ((1 + x) * c)
@@ -4349,11 +4065,10 @@ theorem express_train_speed_ratio
 by
   sorry
 
-end express_train_speed_ratio
+end 3__3285
 
-namespace larger_integer_of_two_integers_diff_8_prod_120
 
-import Mathlib
+namespace 3__3286
 
 noncomputable def larger_integer (a b : ℕ) : ℕ :=
 if a > b then a else b
@@ -4365,32 +4080,29 @@ theorem larger_integer_of_two_integers_diff_8_prod_120 (a b : ℕ)
   (h_positive_b : 0 < b) : larger_integer a b = 20 := by
   sorry
 
-end larger_integer_of_two_integers_diff_8_prod_120
+end 3__3286
 
-namespace minimum_value_inequality
 
-import Mathlib
+namespace 3__3287
 
 theorem minimum_value_inequality (x y z : ℝ) (hx : 0 < x) (hy : 0 < y) (hz : 0 < z)
     (h : x + 2 * y + 3 * z = 1) :
   (16 / x^3 + 81 / (8 * y^3) + 1 / (27 * z^3)) ≥ 1296 := sorry
 
-end minimum_value_inequality
+end 3__3287
 
-namespace positive_integer_solutions_inequality
 
-import Mathlib
+namespace 3_positive_integer_solutions_inequality_3288
 
 theorem positive_integer_solutions_inequality :
   {x : ℕ | 2 * x + 9 ≥ 3 * (x + 2)} = {1, 2, 3} :=
 by
   sorry
 
-end positive_integer_solutions_inequality
+end 3_positive_integer_solutions_inequality_3288
 
-namespace third_bowler_points_162
 
-import Mathlib
+namespace 3__3289
 
 variable (x : ℕ)
 
@@ -4403,11 +4115,10 @@ def total_score (x : ℕ) : Prop :=
 theorem third_bowler_points_162 (x : ℕ) (h : total_score x) : x = 162 := by
   sorry
 
-end third_bowler_points_162
+end 3__3289
 
-namespace height_of_david
 
-import Mathlib
+namespace 3__3290
 
 theorem height_of_david
   (building_height : ℕ)
@@ -4420,11 +4131,10 @@ theorem height_of_david
   (h4 : ratio = building_height / building_shadow) :
   david_shadow * ratio = 36 := sorry
 
-end height_of_david
+end 3__3290
 
-namespace tim_words_per_day
 
-import Mathlib
+namespace 3_tim_words_per_day_3291
 
 variable (original_words : ℕ)
 variable (years : ℕ)
@@ -4439,11 +4149,10 @@ theorem tim_words_per_day :
     words_per_day 14600 2 (50 / 100) = 10 := by
   sorry
 
-end tim_words_per_day
+end 3_tim_words_per_day_3291
 
-namespace seven_divides_n_iff_seven_divides_q_minus_2r_seven_divides_2023_thirteen_divides_n_iff_thirteen_divides_q_plus_4r
 
-import Mathlib
+namespace 3_seven_divides_2023_3292
 
 -- Problem 1
 theorem seven_divides_n_iff_seven_divides_q_minus_2r (n q r : ℕ) (h : n = 10 * q + r) :
@@ -4462,11 +4171,10 @@ theorem seven_divides_2023 : 7 ∣ 2023 :=
 theorem thirteen_divides_n_iff_thirteen_divides_q_plus_4r (n q r : ℕ) (h : n = 10 * q + r) :
   (13 ∣ n) ↔ (13 ∣ (q + 4 * r)) := sorry
 
-end seven_divides_n_iff_seven_divides_q_minus_2r_seven_divides_2023_thirteen_divides_n_iff_thirteen_divides_q_plus_4r
+end 3_seven_divides_2023_3292
 
-namespace banks_investments_count
 
-import Mathlib
+namespace 3_banks_investments_count_3293
 
 -- Conditions
 def revenue_per_investment_banks := 500
@@ -4484,21 +4192,19 @@ def number_of_investments_banks := total_revenue_banks / revenue_per_investment_
 theorem banks_investments_count : number_of_investments_banks = 8 := by
   sorry
 
-end banks_investments_count
+end 3_banks_investments_count_3293
 
-namespace perfect_square_iff_n_eq_5
 
-import Mathlib
+namespace 3__3294
 
 theorem perfect_square_iff_n_eq_5 (n : ℕ) (h_pos : 0 < n) :
   ∃ m : ℕ, n * 2^(n-1) + 1 = m^2 ↔ n = 5 := by
   sorry
 
-end perfect_square_iff_n_eq_5
+end 3__3294
 
-namespace max_point_f
 
-import Mathlib
+namespace 3_max_point_f_3295
 
 -- Define the function f(x) = x^3 - 12x
 def f (x : ℝ) : ℝ := x^3 - 12 * x
@@ -4508,11 +4214,10 @@ theorem max_point_f : ∃ m, m = -2 ∧ ∀ x, f x ≤ f (-2) :=
 by
   sorry
 
-end max_point_f
+end 3_max_point_f_3295
 
-namespace find_line_equation
 
-import Mathlib
+namespace 3_find_line_equation_3296
 
 theorem find_line_equation (x y : ℝ) : 
   (∃ A B, (A.x^2 / 6 + A.y^2 / 3 = 1) ∧ (B.x^2 / 6 + B.y^2 / 3 = 1) ∧
@@ -4524,11 +4229,10 @@ theorem find_line_equation (x y : ℝ) :
   x + sqrt 2 * y - 2 * sqrt 2 = 0 := 
 sorry
 
-end find_line_equation
+end 3_find_line_equation_3296
 
-namespace line_intersects_ellipse_with_conditions
 
-import Mathlib
+namespace 3_line_intersects_ellipse_with_conditions_3297
 
 theorem line_intersects_ellipse_with_conditions :
   ∃ l : ℝ → ℝ, (∃ A B : ℝ × ℝ, 
@@ -4542,11 +4246,10 @@ theorem line_intersects_ellipse_with_conditions :
 ) :=
 sorry
 
-end line_intersects_ellipse_with_conditions
+end 3_line_intersects_ellipse_with_conditions_3297
 
-namespace surface_area_of_sphere
 
-import Mathlib
+namespace 3__3298
 
 theorem surface_area_of_sphere (l w h : ℝ) (s t : ℝ) :
   l = 3 ∧ w = 2 ∧ h = 1 ∧ (s = (l^2 + w^2 + h^2).sqrt / 2) → t = 4 * Real.pi * s^2 → t = 14 * Real.pi :=
@@ -4554,11 +4257,10 @@ by
   intros
   sorry
 
-end surface_area_of_sphere
+end 3__3298
 
-namespace triangle_solutions
 
-import Mathlib.Data.Real.Basic -- To handle real numbers and basic arithmetic
+namespace 3_triangle_solutions_3299
 
 theorem triangle_solutions :
   ∀ (a b c : ℝ) (A B C : ℝ),
@@ -4571,31 +4273,28 @@ theorem triangle_solutions :
   c = 6.1355 :=
 sorry -- Proof goes here
 
-end triangle_solutions
+end 3_triangle_solutions_3299
 
-namespace ratio_t_q
 
-import Mathlib
+namespace 3__3300
 
 theorem ratio_t_q (q r s t : ℚ) (h1 : q / r = 8) (h2 : s / r = 4) (h3 : s / t = 1 / 3) : 
   t / q = 3 / 2 :=
 by
   sorry
 
-end ratio_t_q
+end 3__3300
 
-namespace find_fraction
 
-import Mathlib
+namespace 3__3301
 
 theorem find_fraction (x y : ℝ) (h1 : (1/3) * (1/4) * x = 18) (h2 : y * x = 64.8) : y = 0.3 :=
 sorry
 
-end find_fraction
+end 3__3301
 
-namespace simplify_expression_correct
 
-import Mathlib
+namespace 3__3302
 
 noncomputable def simplify_expression (a b : ℝ) (h : a ≠ 0 ∧ b ≠ 0) : ℝ :=
   let expr1 := (a^2 - b^2) / (a^2 + 2 * a * b + b^2)
@@ -4608,21 +4307,19 @@ theorem simplify_expression_correct (a b : ℝ) (h : a ≠ 0 ∧ b ≠ 0) :
   simplify_expression a b h = 2 / (a + b)^2 := by
   sorry
 
-end simplify_expression_correct
+end 3__3302
 
-namespace minimum_sum_of_box_dimensions
 
-import Mathlib
+namespace 3_minimum_sum_of_box_dimensions_3303
 
 theorem minimum_sum_of_box_dimensions :
   ∃ (a b c : ℕ), a * b * c = 2310 ∧ a + b + c = 42 ∧ 0 < a ∧ 0 < b ∧ 0 < c :=
 sorry
 
-end minimum_sum_of_box_dimensions
+end 3_minimum_sum_of_box_dimensions_3303
 
-namespace units_digit_of_147_pow_is_7_some_exponent_units_digit
 
-import Mathlib
+namespace 3_units_digit_of_147_pow_is_7_3304
 
 theorem units_digit_of_147_pow_is_7 (n : ℕ) : (147 ^ 25) % 10 = 7 % 10 :=
 by
@@ -4633,11 +4330,10 @@ by
   have base_units_digit := units_digit_of_147_pow_is_7 25
   sorry
 
-end units_digit_of_147_pow_is_7_some_exponent_units_digit
+end 3_units_digit_of_147_pow_is_7_3304
 
-namespace intersection_M_complement_N_eq
 
-import Mathlib
+namespace 3_intersection_M_complement_N_eq_3305
 
 open Set
 
@@ -4650,11 +4346,10 @@ theorem intersection_M_complement_N_eq : M ∩ complement_N = {x | -1 ≤ x ∧ 
 by
   sorry
 
-end intersection_M_complement_N_eq
+end 3_intersection_M_complement_N_eq_3305
 
-namespace competition_sequences
 
-import Mathlib
+namespace 3_competition_sequences_3306
 
 -- Define the problem conditions
 def team_size : Nat := 7
@@ -4666,11 +4361,10 @@ by
   -- Proof will go here
   sorry
 
-end competition_sequences
+end 3_competition_sequences_3306
 
-namespace find_vector_at_t4
 
-import Mathlib
+namespace 3_find_vector_at_t4_3307
 
 def vector_at (t : ℝ) (a d : ℝ × ℝ × ℝ) : ℝ × ℝ × ℝ :=
   let (x, y, z) := a
@@ -4686,11 +4380,10 @@ by
   intros a d h1 h2
   sorry
 
-end find_vector_at_t4
+end 3_find_vector_at_t4_3307
 
-namespace unique_three_digit_base_g
 
-import Mathlib
+namespace 3__3308
 
 theorem unique_three_digit_base_g (g : ℤ) (h : ℤ) (a b c : ℤ) 
   (hg : g > 2) 
@@ -4699,22 +4392,20 @@ theorem unique_three_digit_base_g (g : ℤ) (h : ℤ) (a b c : ℤ)
   a = (g + 1) / 2 ∧ b = (g - 1) / 2 ∧ c = (g - 1) / 2 :=
   sorry
 
-end unique_three_digit_base_g
+end 3__3308
 
-namespace solve_quadratic_inequality
 
-import Mathlib
+namespace 3_solve_quadratic_inequality_3309
 
 theorem solve_quadratic_inequality (x : ℝ) : 3 * x^2 - 5 * x - 2 < 0 → (-1 / 3 < x ∧ x < 2) :=
 by
   intro h
   sorry
 
-end solve_quadratic_inequality
+end 3_solve_quadratic_inequality_3309
 
-namespace find_highway_speed
 
-import Mathlib
+namespace 3_find_highway_speed_3310
 
 def car_local_distance := 40
 def car_local_speed := 20
@@ -4727,11 +4418,10 @@ theorem find_highway_speed :
 by
   sorry
 
-end find_highway_speed
+end 3_find_highway_speed_3310
 
-namespace range_of_a
 
-import Mathlib
+namespace 3__3311
 
 -- Defining the function f(x)
 def f (a x : ℝ) := x^2 + (a^2 - 1) * x + (a - 2)
@@ -4741,11 +4431,10 @@ theorem range_of_a (a : ℝ) (h : ∃ x1 x2 : ℝ, x1 > 1 ∧ x2 < 1 ∧ f a x1 
 by
   sorry -- Proof is omitted
 
-end range_of_a
+end 3__3311
 
-namespace count_seating_arrangements
 
-import Mathlib
+namespace 3_count_seating_arrangements_3312
 
 /-
   Definition of the seating problem at the round table:
@@ -4770,11 +4459,10 @@ theorem count_seating_arrangements :
   num_arrangements_valid_seating = N * (factorial 6)^3 :=
 sorry
 
-end count_seating_arrangements
+end 3_count_seating_arrangements_3312
 
-namespace members_play_both
 
-import Mathlib
+namespace 3__3313
 
 -- Define the conditions
 variables (N B T neither : ℕ)
@@ -4797,11 +4485,10 @@ theorem members_play_both (N B T neither B_union_T B_and_T : ℕ)
   (hInclusionExclusion : B_union_T = B + T - B_and_T) :
   B_and_T = 7 := sorry
 
-end members_play_both
+end 3__3313
 
-namespace colton_stickers_final_count
 
-import Mathlib
+namespace 3_colton_stickers_final_count_3314
 
 -- Definitions based on conditions
 def initial_stickers := 200
@@ -4819,11 +4506,10 @@ def final_stickers := remaining_after_justin - given_to_karen
 theorem colton_stickers_final_count : final_stickers = 15 := by
   sorry
 
-end colton_stickers_final_count
+end 3_colton_stickers_final_count_3314
 
-namespace hilt_books_transaction_difference
 
-import Mathlib
+namespace 3_hilt_books_transaction_difference_3315
 
 noncomputable def total_cost_paid (original_price : ℝ) (num_first_books : ℕ) (discount1 : ℝ) (num_second_books : ℕ) (discount2 : ℝ) : ℝ :=
   let cost_first_books := num_first_books * original_price * (1 - discount1)
@@ -4847,11 +4533,10 @@ theorem hilt_books_transaction_difference :
 by
   sorry
 
-end hilt_books_transaction_difference
+end 3_hilt_books_transaction_difference_3315
 
-namespace discount_is_one_percent
 
-import Mathlib
+namespace 3__3316
 
 /-
   Assuming the following:
@@ -4884,11 +4569,10 @@ theorem discount_is_one_percent
   discount_percentage market_price num_pens cost_price profit_percentage SP_per_pen = 1 := by
   sorry
 
-end discount_is_one_percent
+end 3__3316
 
-namespace total_goals
 
-import Mathlib
+namespace 3_total_goals_3317
 
 def first_period_goals (k: ℕ) : ℕ :=
   k
@@ -4925,11 +4609,10 @@ theorem total_goals (k1 k2 s1 s2 k3 s3 : ℕ) :
 by
   sorry
 
-end total_goals
+end 3_total_goals_3317
 
-namespace solve_equation1_solve_equation2
 
-import Mathlib
+namespace 3_solve_equation1_solve_equation2_3318
 
 -- Define the first equation as a condition
 def equation1 (x : ℝ) : Prop :=
@@ -4951,11 +4634,10 @@ by
   -- Proof steps would go here
   sorry
 
-end solve_equation1_solve_equation2
+end 3_solve_equation1_solve_equation2_3318
 
-namespace problem1_problem2
 
-import Mathlib
+namespace 3_problem1_problem2_3319
 
 -- Define the quadratic equation and condition for real roots
 def quadratic_eq (a b c x : ℝ) := a * x^2 + b * x + c = 0
@@ -4968,11 +4650,10 @@ theorem problem2 (m : ℝ) :
   (∀ x, (x = 1 ∨ x = 2) → (m - 2) * x^2 + 2 * x + 1 = 0) → (-1 ≤ m ∧ m < (3 / 4)) := 
 sorry
 
-end problem1_problem2
+end 3_problem1_problem2_3319
 
-namespace atomic_weight_S_is_correct
 
-import Mathlib
+namespace 3_atomic_weight_S_is_correct_3320
 
 -- Conditions
 def molecular_weight_BaSO4 : Real := 233
@@ -4991,11 +4672,10 @@ theorem atomic_weight_S_is_correct : atomic_weight_S = 31.67 := by
   -- placeholder for the proof
   sorry
 
-end atomic_weight_S_is_correct
+end 3_atomic_weight_S_is_correct_3320
 
-namespace find_a_b
 
-import Mathlib
+namespace 3__3321
 
 noncomputable def f (a b x : ℝ) : ℝ := a * Real.sin x + b
 
@@ -5006,11 +4686,10 @@ theorem find_a_b
 by
   sorry
 
-end find_a_b
+end 3__3321
 
-namespace fill_cistern_time
 
-import Mathlib
+namespace 3_fill_cistern_time_3322
 
 -- Definitions based on conditions
 def rate_A : ℚ := 1 / 8
@@ -5027,11 +4706,10 @@ def time_to_fill := 1 / combined_rate
 theorem fill_cistern_time : time_to_fill = 9.6 := by
   sorry
 
-end fill_cistern_time
+end 3_fill_cistern_time_3322
 
-namespace range_of_sum
 
-import Mathlib
+namespace 3_range_of_sum_3323
 
 variable {x y t : ℝ}
 
@@ -5042,11 +4720,10 @@ by {
   sorry
 }
 
-end range_of_sum
+end 3_range_of_sum_3323
 
-namespace total_children
 
-import Mathlib
+namespace 3__3324
 
 variable (S C B T : ℕ)
 
@@ -5057,11 +4734,10 @@ theorem total_children (h1 : T < 19)
                        T = 10 := 
   sorry
 
-end total_children
+end 3__3324
 
-namespace intersection_M_N_eq_2_4
 
-import Mathlib
+namespace 3_intersection_M_N_eq_2_4_3325
 
 def M : Set ℕ := {2, 4, 6, 8, 10}
 def N : Set ℕ := {x | ∃ y, y = Real.log (6 - x) ∧ x < 6}
@@ -5069,11 +4745,10 @@ def N : Set ℕ := {x | ∃ y, y = Real.log (6 - x) ∧ x < 6}
 theorem intersection_M_N_eq_2_4 : M ∩ N = {2, 4} :=
 by sorry
 
-end intersection_M_N_eq_2_4
+end 3_intersection_M_N_eq_2_4_3325
 
-namespace cannot_determine_total_movies
 
-import Mathlib
+namespace 3__3326
 
 def number_of_books : ℕ := 22
 def books_read : ℕ := 12
@@ -5085,11 +4760,10 @@ by
   intro h2 h3
   sorry
 
-end cannot_determine_total_movies
+end 3__3326
 
-namespace statement_boys_count
 
-import Mathlib
+namespace 3_statement_3327
 
 /-
 Conditions:
@@ -5111,11 +4785,10 @@ theorem boys_count (B G : Nat) (h1 : B + G = TotalMembers) (h2 : GirlsAttendance
 by
   sorry
 
-end statement_boys_count
+end 3_statement_3327
 
-namespace second_smallest_N_prevent_Bananastasia_win
 
-import Mathlib
+namespace 3_second_smallest_N_prevent_Bananastasia_win_3328
 
 -- Definition of the set S, as positive integers not divisible by any p^4.
 def S : Set ℕ := {n | ∀ p : ℕ, Prime p → ¬ (p ^ 4 ∣ n)}
@@ -5128,11 +4801,10 @@ theorem second_smallest_N_prevent_Bananastasia_win :
 by
   sorry
 
-end second_smallest_N_prevent_Bananastasia_win
+end 3_second_smallest_N_prevent_Bananastasia_win_3328
 
-namespace soda_choosers
 
-import Mathlib
+namespace 3_soda_choosers_3329
 
 -- Definitions based on conditions
 def total_people := 600
@@ -5144,11 +4816,10 @@ theorem soda_choosers : total_people * (soda_angle / full_circle) = 180 :=
 by
   sorry
 
-end soda_choosers
+end 3_soda_choosers_3329
 
-namespace martin_less_than_43
 
-import Mathlib
+namespace 3__3330
 
 variable (C K M : ℕ)
 
@@ -5163,11 +4834,10 @@ by {
   sorry
 }
 
-end martin_less_than_43
+end 3__3330
 
-namespace group_capacity
 
-import Mathlib
+namespace 3__3331
 
 theorem group_capacity (total_students : ℕ) (selected_students : ℕ) (removed_students : ℕ) :
   total_students = 5008 → selected_students = 200 → removed_students = 8 →
@@ -5176,11 +4846,10 @@ by
   intros h1 h2 h3
   sorry
 
-end group_capacity
+end 3__3331
 
-namespace find_cost_of_pencil_and_pen
 
-import Mathlib
+namespace 3__3332
 
 variable (p q r : ℝ)
 
@@ -5195,11 +4864,10 @@ theorem find_cost_of_pencil_and_pen (p q r : ℝ) (h1 : condition1 p q r) (h2 : 
 by
   sorry
 
-end find_cost_of_pencil_and_pen
+end 3__3332
 
-namespace cos_seventh_eq_sum_of_cos
 
-import Mathlib
+namespace 3_cos_seventh_eq_sum_of_cos_3333
 
 theorem cos_seventh_eq_sum_of_cos:
   ∃ (b₁ b₂ b₃ b₄ b₅ b₆ b₇ : ℝ),
@@ -5207,11 +4875,10 @@ theorem cos_seventh_eq_sum_of_cos:
   (b₁ ^ 2 + b₂ ^ 2 + b₃ ^ 2 + b₄ ^ 2 + b₅ ^ 2 + b₆ ^ 2 + b₇ ^ 2 = 1555 / 4096) :=
 sorry
 
-end cos_seventh_eq_sum_of_cos
+end 3_cos_seventh_eq_sum_of_cos_3333
 
-namespace project_selection_probability
 
-import Mathlib
+namespace 3_project_selection_probability_3334
 
 /-- Each employee can randomly select one project from four optional assessment projects. -/
 def employees : ℕ := 4
@@ -5228,11 +4895,10 @@ theorem project_selection_probability :
 by
   sorry
 
-end project_selection_probability
+end 3_project_selection_probability_3334
 
-namespace problem_solution
 
-import Mathlib
+namespace 3_problem_solution_3335
 
 def equal_group_B : Prop :=
   (-2)^3 = -(2^3)
@@ -5240,11 +4906,10 @@ def equal_group_B : Prop :=
 theorem problem_solution : equal_group_B := by
   sorry
 
-end problem_solution
+end 3_problem_solution_3335
 
-namespace ellipse_proof
 
-import Mathlib
+namespace 3__3336
 
 -- Ellipse definition and properties
 def ellipse_equation (a b : ℝ) (x y : ℝ) : Prop :=
@@ -5273,31 +4938,28 @@ by
   -- "sorry" is a placeholder. The actual proof would go here.
   sorry
 
-end ellipse_proof
+end 3__3336
 
-namespace min_value_of_m
 
-import Mathlib
+namespace 3_min_value_of_m_3337
 
 theorem min_value_of_m : (2 ∈ {x | ∃ (m : ℤ), x * (x - m) < 0}) → ∃ (m : ℤ), m = 3 :=
 by
   sorry
 
-end min_value_of_m
+end 3_min_value_of_m_3337
 
-namespace factorable_quadratic
 
-import Mathlib
+namespace 3_factorable_quadratic_3338
 
 theorem factorable_quadratic (b : Int) : 
   (∃ m n p q : Int, 35 * m * p = 35 ∧ m * q + n * p = b ∧ n * q = 35) ↔ (∃ k : Int, b = 2 * k) :=
 sorry
 
-end factorable_quadratic
+end 3_factorable_quadratic_3338
 
-namespace trig_identity
 
-import Mathlib
+namespace 3__3339
 
 noncomputable def f (x : ℝ) : ℝ := Real.sin x + Real.cos x
 noncomputable def f' (x : ℝ) : ℝ := Real.cos x - Real.sin x
@@ -5306,11 +4968,10 @@ theorem trig_identity (x : ℝ) (h : f x = 2 * f' x) :
   (1 + Real.sin x ^ 2) / (Real.cos x ^ 2 - Real.sin x * Real.cos x) = 11 / 6 := by
   sorry
 
-end trig_identity
+end 3__3339
 
-namespace find_m
 
-import Mathlib
+namespace 3__3340
 
 variables {a1 a2 b1 b2 c1 c2 : ℝ} {m : ℝ}
 def vectorA := (3, -2 * m)
@@ -5322,11 +4983,10 @@ theorem find_m (h : (5 * (m - 1) + (-2 * m - 1) * 2) = 0) :
   m = 7 := 
   sorry
 
-end find_m
+end 3__3340
 
-namespace lateral_surface_area_pyramid
 
-import Mathlib
+namespace 3__3341
 
 theorem lateral_surface_area_pyramid (α R : ℝ) (hR : R > 0) (hα : 0 < α ∧ α < π) :
     let S := 4 * R^2 * (Real.cot (α / 2)) * (Real.tan (π / 4 + α / 2))
@@ -5334,21 +4994,19 @@ theorem lateral_surface_area_pyramid (α R : ℝ) (hR : R > 0) (hα : 0 < α ∧
 by
     sorry
 
-end lateral_surface_area_pyramid
+end 3__3341
 
-namespace intersection_of_lines
 
-import Mathlib
+namespace 3_intersection_of_lines_3342
 
 theorem intersection_of_lines : ∃ (x y : ℝ), (9 * x - 4 * y = 30) ∧ (7 * x + y = 11) ∧ (x = 2) ∧ (y = -3) := 
 by
   sorry
 
-end intersection_of_lines
+end 3_intersection_of_lines_3342
 
-namespace by_how_much_were_the_numerator_and_denominator_increased
 
-import Mathlib
+namespace 3_by_how_much_were_the_numerator_and_denominator_increased_3343
 
 noncomputable def original_fraction_is_six_over_eleven (n : ℕ) : Prop :=
   n / (n + 5) = 6 / 11
@@ -5361,11 +5019,10 @@ theorem by_how_much_were_the_numerator_and_denominator_increased :
 by
   sorry
 
-end by_how_much_were_the_numerator_and_denominator_increased
+end 3_by_how_much_were_the_numerator_and_denominator_increased_3343
 
-namespace geometric_series_sum
 
-import Mathlib
+namespace 3_geometric_series_sum_3344
 
 theorem geometric_series_sum :
   let a := (1 : ℚ) / 3
@@ -5379,11 +5036,10 @@ theorem geometric_series_sum :
   let S₅ := (a * (1 - r ^ n)) / (1 - r)
   sorry
 
-end geometric_series_sum
+end 3_geometric_series_sum_3344
 
-namespace small_triangle_perimeter
 
-import Mathlib
+namespace 3__3345
 
 theorem small_triangle_perimeter (P : ℕ) (P₁ : ℕ) (P₂ : ℕ) (P₃ : ℕ)
   (h₁ : P = 11) (h₂ : P₁ = 5) (h₃ : P₂ = 7) (h₄ : P₃ = 9) :
@@ -5391,21 +5047,19 @@ theorem small_triangle_perimeter (P : ℕ) (P₁ : ℕ) (P₂ : ℕ) (P₃ : ℕ
 by
   sorry
 
-end small_triangle_perimeter
+end 3__3345
 
-namespace sin_range
 
-import Mathlib
+namespace 3__3346
 
 theorem sin_range (x : ℝ) (h : x ∈ Set.Icc (Real.pi / 6) (Real.pi / 2)) : 
   Set.range (fun x => Real.sin x) = Set.Icc (1/2 : ℝ) 1 :=
 sorry
 
-end sin_range
+end 3__3346
 
-namespace investment_ratio_same_period
 
-import Mathlib
+namespace 3_investment_ratio_same_period_3347
 
 -- Define the profits of A and B
 def profit_A : ℕ := 60000
@@ -5417,11 +5071,10 @@ by
   -- Proof skipped 
   sorry
 
-end investment_ratio_same_period
+end 3_investment_ratio_same_period_3347
 
-namespace find_ks
 
-import Mathlib
+namespace 3_find_ks_3348
 
 def is_valid_function (f : ℕ → ℤ) (k : ℤ) : Prop :=
   ∀ x y : ℕ, f (x * y) = f x + f y + k * f (Nat.gcd x y)
@@ -5432,11 +5085,10 @@ theorem find_ks (f : ℕ → ℤ) :
   k = 0 ∨ k = -1 :=
 sorry
 
-end find_ks
+end 3_find_ks_3348
 
-namespace concert_revenue
 
-import Mathlib
+namespace 3_concert_revenue_3349
 
 -- Define the prices and attendees
 def adult_price := 26
@@ -5454,11 +5106,10 @@ theorem concert_revenue : total_revenue = 6472 :=
 by
   sorry
 
-end concert_revenue
+end 3_concert_revenue_3349
 
-namespace solve_frac_eqn
 
-import Mathlib
+namespace 3_solve_frac_eqn_3350
 
 theorem solve_frac_eqn (x : ℝ) :
   (1 / ((x - 1) * (x - 3)) + 1 / ((x - 3) * (x - 5)) +
@@ -5467,20 +5118,18 @@ theorem solve_frac_eqn (x : ℝ) :
 by
   sorry
 
-end solve_frac_eqn
+end 3_solve_frac_eqn_3350
 
-namespace parabola_directrix_distance
 
-import Mathlib
+namespace 3__3351
 
 theorem parabola_directrix_distance (m : ℝ) (h : |1 / (4 * m)| = 2) : m = 1/8 ∨ m = -1/8 :=
 by { sorry }
 
-end parabola_directrix_distance
+end 3__3351
 
-namespace product_of_two_numbers
 
-import Mathlib
+namespace 3__3352
 
 theorem product_of_two_numbers 
   (x y : ℝ) 
@@ -5491,11 +5140,10 @@ theorem product_of_two_numbers
 by 
   sorry
 
-end product_of_two_numbers
+end 3__3352
 
-namespace total_cost_correct
 
-import Mathlib
+namespace 3_total_cost_correct_3353
 
 def cost_barette : ℕ := 3
 def cost_comb : ℕ := 1
@@ -5517,11 +5165,10 @@ theorem total_cost_correct :
 by
   sorry
 
-end total_cost_correct
+end 3_total_cost_correct_3353
 
-namespace B_is_criminal
 
-import Mathlib
+namespace 3_B_is_criminal_3354
 
 -- Introduce the conditions
 variable (A B C : Prop)  -- A, B, and C represent whether each individual is the criminal.
@@ -5538,11 +5185,10 @@ by
   -- Solution steps would go here
   sorry
 
-end B_is_criminal
+end 3_B_is_criminal_3354
 
-namespace 
 
-import Mathlib
+namespace 3_complement_of_union_eq_3355
 
 -- Define the universal set U
 def U : Set ℤ := {-1, 0, 1, 2, 3, 4}
@@ -5569,11 +5215,10 @@ by
   intros hU hA hB
   sorry
 
-end 
+end 3_complement_of_union_eq_3355
 
-namespace contestant_wins_probability
 
-import Mathlib
+namespace 3_contestant_wins_probability_3356
 
 -- Define the basic parameters: number of questions and number of choices
 def num_questions : ℕ := 4
@@ -5596,11 +5241,10 @@ theorem contestant_wins_probability :
   total_prob_winning = 1 / 9 := 
 sorry
 
-end contestant_wins_probability
+end 3_contestant_wins_probability_3356
 
-namespace lowest_price_for_16_oz_butter
 
-import Mathlib
+namespace 3_lowest_price_for_16_oz_butter_3357
 
 -- Define the constants
 def price_single_16_oz_package : ℝ := 7
@@ -5622,11 +5266,10 @@ theorem lowest_price_for_16_oz_butter :
   min price_single_16_oz_package total_price_using_coupon = 6 :=
 sorry
 
-end lowest_price_for_16_oz_butter
+end 3_lowest_price_for_16_oz_butter_3357
 
-namespace min_shift_value
 
-import Mathlib
+namespace 3__3358
 
 theorem min_shift_value (φ : ℝ) (hφ : φ > 0) :
   (∃ k : ℤ, φ = -k * π / 3 + π / 6) →
@@ -5638,11 +5281,10 @@ by
   . sorry
   . sorry
 
-end min_shift_value
+end 3__3358
 
-namespace expression_a_n1_geometric_sequence_general_term_sum_of_sequence
 
-import Mathlib
+namespace 3_expression_a_n1_geometric_sequence_general_term_sum_of_sequence_3359
 
 -- Define the quadratic equation and initial condition
 variable {α β : ℝ} (a : ℕ → ℝ)
@@ -5670,11 +5312,10 @@ sorry
 theorem sum_of_sequence (n : ℕ) : ∑ i in Finset.range n.succ, a i = (2 * n + 2) / 3 - (1 / 3) * (1 / 2)^(n - 1) :=
 sorry
 
-end expression_a_n1_geometric_sequence_general_term_sum_of_sequence
+end 3_expression_a_n1_geometric_sequence_general_term_sum_of_sequence_3359
 
-namespace revenue_difference
 
-import Mathlib
+namespace 3__3360
 
 def original_revenue : ℕ := 10000
 
@@ -5688,11 +5329,10 @@ theorem revenue_difference (X : ℕ) (hX : X > 0) : vasya_revenue X = 16000 ∧ 
 by
   sorry
 
-end revenue_difference
+end 3__3360
 
-namespace geometric_sequence_a3_eq_2
 
-import Mathlib
+namespace 3__3361
 
 theorem geometric_sequence_a3_eq_2 
   (a_1 a_3 a_5 : ℝ) 
@@ -5702,11 +5342,10 @@ theorem geometric_sequence_a3_eq_2
 by 
   sorry
 
-end geometric_sequence_a3_eq_2
+end 3__3361
 
-namespace total_license_groups
 
-import Mathlib
+namespace 3_total_license_groups_3362
 
 -- Defining the given conditions
 def letter_choices : Nat := 3
@@ -5717,11 +5356,10 @@ def number_of_digit_slots : Nat := 5
 theorem total_license_groups : letter_choices * (digit_choices_per_slot ^ number_of_digit_slots) = 300000 := by
   sorry
 
-end total_license_groups
+end 3_total_license_groups_3362
 
-namespace stream_speed
 
-import Mathlib
+namespace 3__3363
 
 def upstream_time : ℝ := 4  -- time in hours
 def downstream_time : ℝ := 4  -- time in hours
@@ -5737,11 +5375,10 @@ theorem stream_speed (vj vs : ℝ)
   (h2 : effective_speed_downstream vj vs) : 
   vs = 5 := sorry
 
-end stream_speed
+end 3__3363
 
-namespace max_min_z
 
-import Mathlib
+namespace 3__3364
 
 -- Define the ellipse
 def on_ellipse (x y : ℝ) : Prop :=
@@ -5764,21 +5401,19 @@ theorem max_min_z (x y : ℝ) (h : on_ellipse x y) :
 by
   sorry
 
-end max_min_z
+end 3__3364
 
-namespace exists_x_abs_ge_one_fourth
 
-import Mathlib
+namespace 3_exists_x_abs_ge_one_fourth_3365
 
 theorem exists_x_abs_ge_one_fourth :
   ∀ (a b c : ℝ), ∃ x : ℝ, |x| ≤ 1 ∧ |x^3 + a * x^2 + b * x + c| ≥ 1 / 4 :=
 by sorry
 
-end exists_x_abs_ge_one_fourth
+end 3_exists_x_abs_ge_one_fourth_3365
 
-namespace 
 
-import Mathlib
+namespace 3__3366
 
 theorem arithmetic_geometric_mean_inequality {n : ℕ} (h : 2 ≤ n) (a : Fin n → ℝ) (ha : ∀ i, 0 < a i) :
   (∑ i, a i) / n ≥ (∏ i, a i) ^ (1 / n) :=
@@ -5786,11 +5421,10 @@ by
   -- proof goes here
   sorry
 
-end 
+end 3__3366
 
-namespace andy_time_correct
 
-import Mathlib
+namespace 3_andy_time_correct_3367
 
 -- Define the conditions
 def time_dawn_wash_dishes : ℕ := 20
@@ -5802,11 +5436,10 @@ by
   -- Proof goes here
   sorry
 
-end andy_time_correct
+end 3_andy_time_correct_3367
 
-namespace dartboard_points_proof
 
-import Mathlib
+namespace 3__3368
 
 variable (points_one points_two points_three points_four : ℕ)
 
@@ -5820,11 +5453,10 @@ by {
   sorry
 }
 
-end dartboard_points_proof
+end 3__3368
 
-namespace eggs_per_snake
 
-import Mathlib
+namespace 3__3369
 
 -- Define the conditions
 def num_snakes : ℕ := 3
@@ -5838,11 +5470,10 @@ theorem eggs_per_snake (E : ℕ)
   E = 2 :=
 sorry
 
-end eggs_per_snake
+end 3__3369
 
-namespace reggie_games_lost
 
-import Mathlib
+namespace 3_reggie_games_lost_3370
 
 -- Define the necessary conditions
 def initial_marbles : ℕ := 100
@@ -5854,11 +5485,10 @@ def total_games : ℕ := 9
 theorem reggie_games_lost : (initial_marbles - marbles_after_games) / bet_per_game = 1 := by
   sorry
 
-end reggie_games_lost
+end 3_reggie_games_lost_3370
 
-namespace non_powers_of_a_meet_condition
 
-import Mathlib
+namespace 3__3371
 
 -- Definitions used directly from the conditions detailed in the problem:
 def Sa (a x : ℕ) : ℕ := sorry -- S_{a}(x): sum of the digits of x in base a
@@ -5869,11 +5499,10 @@ theorem non_powers_of_a_meet_condition (a M : ℕ) (h₁: a > 1) (h₂ : M ≥ 2
   ∀ n : ℕ, (n > 0) → (∀ k : ℕ, (k > 0) → (Sa a (k * n) = Sa a n ∧ Fa a (k * n) - fa a (k * n) > M)) ↔ (∃ α : ℕ, n = a ^ α) :=
 sorry
 
-end non_powers_of_a_meet_condition
+end 3__3371
 
-namespace annual_population_growth
 
-import Mathlib
+namespace 3_annual_population_growth_3372
 
 noncomputable def annual_percentage_increase := 
   let P0 := 15000
@@ -5885,11 +5514,10 @@ by
   -- Placeholder proof
   sorry
 
-end annual_population_growth
+end 3_annual_population_growth_3372
 
-namespace neg_p_necessary_not_sufficient_neg_q
 
-import Mathlib
+namespace 3_neg_p_necessary_not_sufficient_neg_q_3373
 
 def p (x : ℝ) : Prop := x^2 - 1 > 0
 def q (x : ℝ) : Prop := (x + 1) * (x - 2) > 0
@@ -5900,11 +5528,10 @@ theorem neg_p_necessary_not_sufficient_neg_q : ∀ (x : ℝ), (not_q x → not_p
 by
   sorry
 
-end neg_p_necessary_not_sufficient_neg_q
+end 3_neg_p_necessary_not_sufficient_neg_q_3373
 
-namespace degree_of_monomial
 
-import Mathlib
+namespace 3_degree_of_monomial_3374
 
 def degree (m : String) : Nat :=  -- Placeholder type, replace with appropriate type that represents a monomial
   sorry  -- Logic to compute the degree would go here, if required for full implementation
@@ -5912,11 +5539,10 @@ def degree (m : String) : Nat :=  -- Placeholder type, replace with appropriate 
 theorem degree_of_monomial : degree "-(3/5) * a * b^2" = 3 := by
   sorry
 
-end degree_of_monomial
+end 3_degree_of_monomial_3374
 
-namespace expand_product
 
-import Mathlib
+namespace 3_expand_product_3375
 
 -- Definitions of the polynomial functions
 def f (x : ℝ) : ℝ := x + 3
@@ -5928,11 +5554,10 @@ by
   -- Proof goes here, but is omitted for the statement only
   sorry
 
-end expand_product
+end 3_expand_product_3375
 
-namespace tan_alpha_of_sin_alpha_eq_neg_sqrt3_div_2
 
-import Mathlib
+namespace 3__3376
 
 theorem tan_alpha_of_sin_alpha_eq_neg_sqrt3_div_2 (alpha : ℝ) 
   (h1 : Real.sin alpha = - (Real.sqrt 3) / 2) 
@@ -5941,11 +5566,10 @@ theorem tan_alpha_of_sin_alpha_eq_neg_sqrt3_div_2 (alpha : ℝ)
 by 
   sorry
 
-end tan_alpha_of_sin_alpha_eq_neg_sqrt3_div_2
+end 3__3376
 
-namespace sufficient_but_not_necessary_condition
 
-import Mathlib
+namespace 3_sufficient_but_not_necessary_condition_3377
 
 noncomputable def P := {x : ℝ | 0 < x ∧ x < 3}
 noncomputable def Q := {x : ℝ | -3 < x ∧ x < 3}
@@ -5954,11 +5578,10 @@ theorem sufficient_but_not_necessary_condition :
   (∀ x, x ∈ P → x ∈ Q) ∧ ¬(∀ x, x ∈ Q → x ∈ P) := by
   sorry
 
-end sufficient_but_not_necessary_condition
+end 3_sufficient_but_not_necessary_condition_3377
 
-namespace Lyka_saves_for_8_weeks
 
-import Mathlib
+namespace 3_Lyka_saves_for_8_weeks_3378
 
 theorem Lyka_saves_for_8_weeks : 
   ∀ (C I W : ℕ), C = 160 → I = 40 → W = 15 → (C - I) / W = 8 := 
@@ -5966,11 +5589,10 @@ by
   intros C I W hC hI hW
   sorry
 
-end Lyka_saves_for_8_weeks
+end 3_Lyka_saves_for_8_weeks_3378
 
-namespace petya_digits
 
-import Mathlib
+namespace 3_petya_digits_3379
 
 def are_distinct (a b c d : Nat) : Prop :=
   a ≠ b ∧ a ≠ c ∧ a ≠ d ∧ b ≠ c ∧ b ≠ d ∧ c ≠ d 
@@ -5984,11 +5606,10 @@ theorem petya_digits :
 by
   sorry
 
-end petya_digits
+end 3_petya_digits_3379
 
-namespace part1_part2
 
-import Mathlib
+namespace 3_part1_part2_3380
 
 section
   variable {x a : ℝ}
@@ -6004,26 +5625,24 @@ section
     sorry
 end
 
-end part1_part2
+end 3_part1_part2_3380
 
-namespace unique_positive_integer_solution
 
-import Mathlib
+namespace 3_unique_positive_integer_solution_3381
 
 theorem unique_positive_integer_solution :
   ∃! n : ℕ, n > 0 ∧ ∃ k : ℕ, n^4 - n^3 + 3*n^2 + 5 = k^2 :=
 by
   sorry
 
-end unique_positive_integer_solution
+end 3_unique_positive_integer_solution_3381
 
-namespace direct_proportion
 
-import Mathlib
+namespace 3_direct_proportion_3382
 
 theorem direct_proportion : 
   ∃ k, (∀ x, y = k * x) ↔ (y = -2 * x) :=
 by
   sorry
 
-end direct_proportion
+end 3_direct_proportion_3382

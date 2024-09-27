@@ -1,2 +1,1 @@
-def main : IO Unit :=
-  IO.println "Hello, LeanData!"
+import NuminaMath
