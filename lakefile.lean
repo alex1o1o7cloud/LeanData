@@ -17,7 +17,3 @@ lean_lib «Main» {
 lean_lib «NuminaMath» {
   -- add any library configuration options here
 }
-
-lean_lib Lean4Repl {
-
-}
