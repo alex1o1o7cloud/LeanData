@@ -1,15902 +1,14403 @@
 import Mathlib
 
-namespace minimize_sum_of_sequence_l79_79004
+namespace largest_of_three_numbers_l79_79472
 
-variable (a_n : ℕ → ℝ)
-variable (n : ℕ)
+noncomputable def largest_root (p q r : ℝ) (h1 : p + q + r = 3) (h2 : p * q + p * r + q * r = -8) (h3 : p * q * r = -20) : ℝ :=
+  max p (max q r)
 
-def sequence_general_term (n : ℕ) : ℝ :=
-  3 * n - 50
-
-def sum_of_first_n_terms (n : ℕ) : ℝ :=
-  (n * (3 * n - 50 + 1)) / 2
-
-theorem minimize_sum_of_sequence : (S_n (sequence_general_term) n = minimize → n = 16) :=
+theorem largest_of_three_numbers (p q r : ℝ) 
+  (h1 : p + q + r = 3) 
+  (h2 : p * q + p * r + q * r = -8) 
+  (h3 : p * q * r = -20) :
+  largest_root p q r h1 h2 h3 = ( -1 + Real.sqrt 21 ) / 2 :=
 by
   sorry
 
-end minimize_sum_of_sequence_l79_79004
+end largest_of_three_numbers_l79_79472
 
 
-namespace euler_line_eq_l79_79109
+namespace min_value_2a_3b_6c_l79_79902
 
-structure Point where
+theorem min_value_2a_3b_6c (a b c : ℝ) (hpos_a : 0 < a) (hpos_b : 0 < b) (hpos_c : 0 < c) (habc : a * b * c = 27) :
+  2 * a + 3 * b + 6 * c ≥ 27 :=
+sorry
+
+end min_value_2a_3b_6c_l79_79902
+
+
+namespace solve_for_x_l79_79128
+
+theorem solve_for_x (x y : ℝ) (h : x / (x - 1) = (y^2 + 3 * y - 5) / (y^2 + 3 * y - 7)) :
+  x = (y^2 + 3 * y - 5) / 2 :=
+by 
+  sorry
+
+end solve_for_x_l79_79128
+
+
+namespace BANANA_arrangements_l79_79523
+
+theorem BANANA_arrangements : 
+  (Nat.factorial 6) / ((Nat.factorial 3) * (Nat.factorial 2)) = 60 := by 
+  sorry
+
+end BANANA_arrangements_l79_79523
+
+
+namespace point_on_line_l79_79867
+
+theorem point_on_line (m : ℝ) (P : ℝ × ℝ) (line_eq : ℝ × ℝ → Prop) (h : P = (2, m)) 
+  (h_line : line_eq = fun P => 3 * P.1 + P.2 = 2) : 
+  3 * 2 + m = 2 → m = -4 :=
+by
+  intro h1
+  linarith
+
+end point_on_line_l79_79867
+
+
+namespace no_equilateral_triangle_OAB_exists_l79_79752
+
+theorem no_equilateral_triangle_OAB_exists :
+  ∀ (A B : ℝ × ℝ), 
+  ((∃ a : ℝ, A = (a, (3 / 2) ^ a)) ∧ B.1 > 0 ∧ B.2 = 0) → 
+  ¬ (∃ k : ℝ, k = (A.2 / A.1) ∧ k > (3 ^ (1 / 2)) / 3) := 
+by 
+  intro A B h
+  sorry
+
+end no_equilateral_triangle_OAB_exists_l79_79752
+
+
+namespace common_factor_of_polynomial_l79_79926
+
+variables (x y m n : ℝ)
+
+theorem common_factor_of_polynomial :
+  ∃ (k : ℝ), (2 * (m - n)) = k ∧ (4 * x * (m - n) + 2 * y * (m - n)^2) = k * (2 * x * (m - n)) :=
+sorry
+
+end common_factor_of_polynomial_l79_79926
+
+
+namespace xiao_ming_proposition_false_l79_79815
+
+def is_prime (n : ℕ) : Prop :=
+  n > 1 ∧ ∀ m : ℕ, m * m ≤ n → m = 1 ∨ m = n → m ∣ n
+
+def check_xiao_ming_proposition : Prop :=
+  ∃ n : ℕ, ∃ (k : ℕ), k < n → ∃ (p q : ℕ), p = q → n^2 - n + 11 = p * q ∧ p > 1 ∧ q > 1
+
+theorem xiao_ming_proposition_false : ¬ (∀ n: ℕ, is_prime (n^2 - n + 11)) :=
+by
+  sorry
+
+end xiao_ming_proposition_false_l79_79815
+
+
+namespace independent_dependent_variables_max_acceptance_at_13_acceptance_increasing_decreasing_l79_79355
+
+-- Definitions of the given variables and conditions
+def time := ℝ
+def acceptance := ℝ
+
+def acceptance_ability (x : time) : acceptance :=
+  match x with
+  | 2 := 47.8
+  | 5 := 53.5
+  | 7 := 56.3
+  | 10 := 59
+  | 12 := 59.8
+  | 13 := 59.9
+  | 14 := 59.8
+  | 17 := 58.3
+  | 20 := 55
+  | _ := 0
+
+-- Statement 1: Independent and dependent variables
+theorem independent_dependent_variables :
+  ∃ (x : time → acceptance), 
+  ∃ (y : time → acceptance), 
+  (∀ t : time, 0 ≤ t ∧ t ≤ 30 → 
+    (x t = t) ∧ (y t = acceptance_ability t)) := sorry
+
+-- Statement 2: Maximum acceptance ability at x = 13
+theorem max_acceptance_at_13 :
+  ∃ t : time, (t = 13) ∧ (acceptance_ability t = 59.9) := sorry
+
+-- Statement 3: Increasing and decreasing ranges of acceptance ability
+theorem acceptance_increasing_decreasing :
+  (∀ t : time, 0 < t ∧ t < 13 → acceptance_ability t < acceptance_ability (t + 1)) ∧ 
+  (∀ t : time, 13 < t ∧ t < 20 → acceptance_ability t > acceptance_ability (t + 1)) := sorry
+
+end independent_dependent_variables_max_acceptance_at_13_acceptance_increasing_decreasing_l79_79355
+
+
+namespace pool_filling_times_l79_79493
+
+theorem pool_filling_times:
+  ∃ (x y z u : ℕ),
+    (1/x + 1/y = 1/70) ∧
+    (1/x + 1/z = 1/84) ∧
+    (1/y + 1/z = 1/140) ∧
+    (1/u = 1/x + 1/y + 1/z) ∧
+    (x = 105) ∧
+    (y = 210) ∧
+    (z = 420) ∧
+    (u = 60) := 
+  sorry
+
+end pool_filling_times_l79_79493
+
+
+namespace line_parallel_through_point_l79_79989
+
+theorem line_parallel_through_point (P : ℝ × ℝ) (a b c : ℝ) (ha : a = 3) (hb : b = -4) (hc : c = 6) (hP : P = (4, -1)) :
+  ∃ d : ℝ, (d = -16) ∧ (∀ x y : ℝ, a * x + b * y + d = 0 ↔ 3 * x - 4 * y - 16 = 0) :=
+by
+  sorry
+
+end line_parallel_through_point_l79_79989
+
+
+namespace proposition_D_l79_79159
+
+variable {A B C : Set α} (h1 : ∀ a (ha : a ∈ A), ∃ b ∈ B, a = b)
+variable {A B C : Set α} (h2 : ∀ c (hc : c ∈ C), ∃ b ∈ B, b = c) 
+
+theorem proposition_D (A B C : Set α) (h : A ∩ B = B ∪ C) : C ⊆ B :=
+by 
+  sorry
+
+end proposition_D_l79_79159
+
+
+namespace value_of_a_l79_79268
+
+open Set
+
+theorem value_of_a (a : ℝ) (h : {1, 2} ∪ {x | x^2 - a * x + a - 1 = 0} = {1, 2}) : a = 3 :=
+by
+  sorry
+
+end value_of_a_l79_79268
+
+
+namespace arithmetic_geometric_sequence_l79_79595
+
+theorem arithmetic_geometric_sequence :
+  ∀ (a : ℕ → ℕ) (b : ℕ → ℕ),
+    (a 1 + a 2 = 10) →
+    (a 4 - a 3 = 2) →
+    (b 2 = a 3) →
+    (b 3 = a 7) →
+    a 15 = b 4 :=
+by
+  intros a b h1 h2 h3 h4
+  sorry
+
+end arithmetic_geometric_sequence_l79_79595
+
+
+namespace ellie_oil_needs_l79_79571
+
+def oil_per_wheel : ℕ := 10
+def number_of_wheels : ℕ := 2
+def oil_for_rest : ℕ := 5
+def total_oil_needed : ℕ := oil_per_wheel * number_of_wheels + oil_for_rest
+
+theorem ellie_oil_needs : total_oil_needed = 25 := by
+  sorry
+
+end ellie_oil_needs_l79_79571
+
+
+namespace chad_ice_cost_l79_79839
+
+theorem chad_ice_cost
+  (n : ℕ) -- Number of people
+  (p : ℕ) -- Pounds of ice per person
+  (c : ℝ) -- Cost per 10 pound bag of ice
+  (h1 : n = 20) 
+  (h2 : p = 3)
+  (h3 : c = 4.5) :
+  (3 * 20 / 10) * 4.5 = 27 :=
+by
+  sorry
+
+end chad_ice_cost_l79_79839
+
+
+namespace shortest_handspan_is_Doyoon_l79_79784
+
+def Sangwon_handspan_cm : ℝ := 19.8
+def Doyoon_handspan_cm : ℝ := 18.9
+def Changhyeok_handspan_cm : ℝ := 19.3
+
+theorem shortest_handspan_is_Doyoon :
+  Doyoon_handspan_cm < Sangwon_handspan_cm ∧ Doyoon_handspan_cm < Changhyeok_handspan_cm :=
+by
+  sorry
+
+end shortest_handspan_is_Doyoon_l79_79784
+
+
+namespace max_balls_of_clay_l79_79941
+
+theorem max_balls_of_clay (radius cube_side_length : ℝ) (V_cube : ℝ) (V_ball : ℝ) (num_balls : ℕ) :
+  radius = 3 ->
+  cube_side_length = 10 ->
+  V_cube = cube_side_length ^ 3 ->
+  V_ball = (4 / 3) * π * radius ^ 3 ->
+  num_balls = ⌊ V_cube / V_ball ⌋ ->
+  num_balls = 8 :=
+by
+  sorry
+
+end max_balls_of_clay_l79_79941
+
+
+namespace union_of_A_and_B_l79_79590
+
+-- Condition definitions
+def A : Set ℝ := {x : ℝ | abs (x - 3) < 2}
+def B : Set ℝ := {x : ℝ | (x + 1) / (x - 2) ≤ 0}
+
+-- The theorem we need to prove
+theorem union_of_A_and_B : A ∪ B = {x : ℝ | -1 ≤ x ∧ x < 5} :=
+by
+  -- This is where the proof would go if it were required
+  sorry
+
+end union_of_A_and_B_l79_79590
+
+
+namespace prime_factor_difference_duodecimal_l79_79092
+
+theorem prime_factor_difference_duodecimal (A B : ℕ) (hA : 0 ≤ A ∧ A ≤ 11) (hB : 0 ≤ B ∧ B ≤ 11) (h : A ≠ B) : 
+  ∃ k : ℤ, (12 * A + B - (12 * B + A)) = 11 * k := 
+by sorry
+
+end prime_factor_difference_duodecimal_l79_79092
+
+
+namespace inequality_proof_l79_79289
+
+theorem inequality_proof (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (h : a + b + c = 1) :
+  (a + 1 / a)^3 + (b + 1 / b)^3 + (c + 1 / c)^3 = 1000 / 9 :=
+sorry
+
+end inequality_proof_l79_79289
+
+
+namespace total_hike_time_l79_79629
+
+/-!
+# Problem Statement
+Jeannie hikes the 12 miles to Mount Overlook at a pace of 4 miles per hour, 
+and then returns at a pace of 6 miles per hour. Prove that the total time 
+Jeannie spent on her hike is 5 hours.
+-/
+
+def distance_to_mountain : ℝ := 12
+def pace_up : ℝ := 4
+def pace_down : ℝ := 6
+
+theorem total_hike_time :
+  (distance_to_mountain / pace_up) + (distance_to_mountain / pace_down) = 5 := 
+by 
+  sorry
+
+end total_hike_time_l79_79629
+
+
+namespace initial_cheerleaders_count_l79_79650
+
+theorem initial_cheerleaders_count (C : ℕ) 
+  (initial_football_players : ℕ := 13) 
+  (quit_football_players : ℕ := 10) 
+  (quit_cheerleaders : ℕ := 4) 
+  (remaining_people : ℕ := 15) 
+  (initial_total : ℕ := initial_football_players + C) 
+  (final_total : ℕ := (initial_football_players - quit_football_players) + (C - quit_cheerleaders)) :
+  remaining_people = final_total → C = 16 :=
+by intros h; sorry
+
+end initial_cheerleaders_count_l79_79650
+
+
+namespace shekar_biology_marks_l79_79914
+
+variable (M S SS E A : ℕ)
+
+theorem shekar_biology_marks (hM : M = 76) (hS : S = 65) (hSS : SS = 82) (hE : E = 67) (hA : A = 77) :
+  let total_marks := M + S + SS + E
+  let total_average_marks := A * 5
+  let biology_marks := total_average_marks - total_marks
+  biology_marks = 95 :=
+by
+  sorry
+
+end shekar_biology_marks_l79_79914
+
+
+namespace find_y_l79_79610
+
+open Classical
+
+theorem find_y (a b c x y : ℚ)
+  (h1 : a / b = 5 / 4)
+  (h2 : b / c = 3 / x)
+  (h3 : a / c = y / 4) :
+  y = 15 / x :=
+sorry
+
+end find_y_l79_79610
+
+
+namespace Ben_cards_left_l79_79503
+
+def BenInitialBasketballCards : ℕ := 4 * 10
+def BenInitialBaseballCards : ℕ := 5 * 8
+def BenTotalInitialCards : ℕ := BenInitialBasketballCards + BenInitialBaseballCards
+def BenGivenCards : ℕ := 58
+def BenRemainingCards : ℕ := BenTotalInitialCards - BenGivenCards
+
+theorem Ben_cards_left : BenRemainingCards = 22 :=
+by 
+  -- The proof will be placed here.
+  sorry
+
+end Ben_cards_left_l79_79503
+
+
+namespace add_fifteen_sub_fifteen_l79_79455
+
+theorem add_fifteen (n : ℕ) (m : ℕ) : n + m = 195 :=
+by {
+  sorry  -- placeholder for the actual proof
+}
+
+theorem sub_fifteen (n : ℕ) (m : ℕ) : n - m = 165 :=
+by {
+  sorry  -- placeholder for the actual proof
+}
+
+-- Let's instantiate these theorems with the specific values from the problem:
+noncomputable def verify_addition : 180 + 15 = 195 :=
+by exact add_fifteen 180 15
+
+noncomputable def verify_subtraction : 180 - 15 = 165 :=
+by exact sub_fifteen 180 15
+
+end add_fifteen_sub_fifteen_l79_79455
+
+
+namespace original_list_length_l79_79675
+
+variable (n m : ℕ)   -- number of integers and the mean respectively
+variable (l : List ℤ) -- the original list of integers
+
+def mean (l : List ℤ) : ℚ :=
+  (l.sum : ℚ) / l.length
+
+-- Condition 1: Appending 25 increases mean by 3
+def condition1 (l : List ℤ) : Prop :=
+  mean (25 :: l) = mean l + 3
+
+-- Condition 2: Appending -4 to the enlarged list decreases the mean by 1.5
+def condition2 (l : List ℤ) : Prop :=
+  mean (-4 :: 25 :: l) = mean (25 :: l) - 1.5
+
+theorem original_list_length (l : List ℤ) (h1 : condition1 l) (h2 : condition2 l) : l.length = 4 := by
+  sorry
+
+end original_list_length_l79_79675
+
+
+namespace chemical_x_added_l79_79487
+
+theorem chemical_x_added (initial_volume : ℝ) (initial_percentage : ℝ) (final_percentage : ℝ) : 
+  initial_volume = 80 → initial_percentage = 0.2 → final_percentage = 0.36 → 
+  ∃ (a : ℝ), 0.20 * initial_volume + a = 0.36 * (initial_volume + a) ∧ a = 20 :=
+by
+  intros h1 h2 h3
+  use 20
+  sorry
+
+end chemical_x_added_l79_79487
+
+
+namespace find_P_and_Q_l79_79403
+
+variables {x P Q b c : ℝ}
+
+theorem find_P_and_Q :
+  (∃ b c : ℝ, (x^2 + 3 * x + 7) * (x^2 + b * x + c) = x^4 + P * x^2 + Q) →
+  (b + 3 = 0) →
+  (3 * b + c + 7 = P) →
+  (7 * b + 3 * c = 0) →
+  (7 * c = Q) →
+  P + Q = 54 :=
+by
+  intros h1 h2 h3 h4 h5
+  sorry
+
+end find_P_and_Q_l79_79403
+
+
+namespace distance_travelled_l79_79341
+
+def actual_speed : ℝ := 50
+def additional_speed : ℝ := 25
+def time_difference : ℝ := 0.5
+
+theorem distance_travelled (D : ℝ) : 0.5 = (D / actual_speed) - (D / (actual_speed + additional_speed)) → D = 75 :=
+by sorry
+
+end distance_travelled_l79_79341
+
+
+namespace complete_triangles_l79_79042
+
+noncomputable def possible_placements_count : Nat :=
+  sorry
+
+theorem complete_triangles {a b c : Nat} :
+  (1 + 2 + 4 + 10 + a + b + c) = 23 →
+  ∃ (count : Nat), count = 4 := 
+by
+  sorry
+
+end complete_triangles_l79_79042
+
+
+namespace sandy_hourly_wage_l79_79442
+
+theorem sandy_hourly_wage (x : ℝ)
+    (h1 : 10 * x + 6 * x + 14 * x = 450) : x = 15 :=
+by
+    sorry
+
+end sandy_hourly_wage_l79_79442
+
+
+namespace vector_dot_product_l79_79024
+
+variables (a b : ℝ × ℝ)
+variables (h1 : a = (1, 2))
+variables (h2 : a - (1 / 5) • b = (-2, 1))
+
+theorem vector_dot_product : (a.1 * b.1 + a.2 * b.2) = 25 :=
+by
+  sorry
+
+end vector_dot_product_l79_79024
+
+
+namespace coprime_n_minus_2_n_squared_minus_n_minus_1_l79_79212
+
+theorem coprime_n_minus_2_n_squared_minus_n_minus_1 (n : ℕ) : n - 2 ∣ n^2 - n - 1 → False :=
+by
+-- proof omitted as per instructions
+sorry
+
+end coprime_n_minus_2_n_squared_minus_n_minus_1_l79_79212
+
+
+namespace solution_of_equations_l79_79743
+
+variables (x y z w : ℤ)
+
+def system_of_equations :=
+  x + y + z + w = 20 ∧
+  y + 2 * z - 3 * w = 28 ∧
+  x - 2 * y + z = 36 ∧
+  -7 * x - y + 5 * z + 3 * w = 84
+
+theorem solution_of_equations (x y z w : ℤ) :
+  system_of_equations x y z w → (x, y, z, w) = (4, -6, 20, 2) :=
+by sorry
+
+end solution_of_equations_l79_79743
+
+
+namespace find_m_value_l79_79855
+
+theorem find_m_value (x y m : ℝ) 
+  (h1 : 2 * x + y = 5) 
+  (h2 : x - 2 * y = m)
+  (h3 : 2 * x - 3 * y = 1) : 
+  m = 0 := 
+sorry
+
+end find_m_value_l79_79855
+
+
+namespace price_per_glass_second_day_l79_79908
+
+-- Given conditions
+variables {O P : ℝ}
+axiom condition1 : 0.82 * 2 * O = P * 3 * O
+
+-- Problem statement
+theorem price_per_glass_second_day : 
+  P = 0.55 :=
+by
+  -- This is where the actual proof would go
+  sorry
+
+end price_per_glass_second_day_l79_79908
+
+
+namespace find_smallest_k_satisfying_cos_square_l79_79103
+
+theorem find_smallest_k_satisfying_cos_square (k : ℕ) (h : ∃ n : ℕ, k^2 = 180 * n - 64):
+  k = 48 ∨ k = 53 :=
+by sorry
+
+end find_smallest_k_satisfying_cos_square_l79_79103
+
+
+namespace sum_of_squares_of_medians_l79_79910
+
+-- Define the components of the triangle
+variables (a b c : ℝ)
+
+-- Define the medians of the triangle
+variables (s_a s_b s_c : ℝ)
+
+-- State the theorem
+theorem sum_of_squares_of_medians (h1 : s_a^2 + s_b^2 + s_c^2 = (3 / 4) * (a^2 + b^2 + c^2)) : 
+  s_a^2 + s_b^2 + s_c^2 = (3 / 4) * (a^2 + b^2 + c^2) :=
+by {
+  -- The proof goes here
+  sorry
+}
+
+end sum_of_squares_of_medians_l79_79910
+
+
+namespace janice_overtime_shifts_l79_79891
+
+theorem janice_overtime_shifts (x : ℕ) (h1 : 5 * 30 + 15 * x = 195) : x = 3 :=
+by
+  -- leaving the proof unfinished, as asked
+  sorry
+
+end janice_overtime_shifts_l79_79891
+
+
+namespace polynomial_division_remainder_zero_l79_79577
+
+theorem polynomial_division_remainder_zero (x : ℂ) (hx : x^5 + x^4 + x^3 + x^2 + x + 1 = 0)
+  : (x^55 + x^44 + x^33 + x^22 + x^11 + 1) % (x^5 + x^4 + x^3 + x^2 + x + 1) = 0 := by
+  sorry
+
+end polynomial_division_remainder_zero_l79_79577
+
+
+namespace expression_is_integer_if_k_eq_2_l79_79252
+
+def binom (n k : ℕ) := n.factorial / (k.factorial * (n-k).factorial)
+
+theorem expression_is_integer_if_k_eq_2 
+  (n k : ℕ) (h1 : 1 ≤ k) (h2 : k < n) (h3 : k = 2) : 
+  ∃ (m : ℕ), m = (n - 3 * k + 2) * binom n k / (k + 2) := sorry
+
+end expression_is_integer_if_k_eq_2_l79_79252
+
+
+namespace factor_polynomial_l79_79621
+
+theorem factor_polynomial (x y z : ℂ) : 
+  x^3 * (y^2 - z^2) + y^3 * (z^2 - x^2) + z^3 * (x^2 - y^2) = 
+  (x - y) * (y - z) * (z - x) * (-(x * y + x * z + y * z)) := by
+  sorry
+
+end factor_polynomial_l79_79621
+
+
+namespace candies_of_different_flavors_l79_79162
+
+theorem candies_of_different_flavors (total_treats chewing_gums chocolate_bars : ℕ) (h1 : total_treats = 155) (h2 : chewing_gums = 60) (h3 : chocolate_bars = 55) :
+  total_treats - (chewing_gums + chocolate_bars) = 40 := 
+by 
+  sorry
+
+end candies_of_different_flavors_l79_79162
+
+
+namespace possible_values_for_a_l79_79122
+
+noncomputable def f (a x : ℝ) : ℝ := Real.exp (a * x) - x - 1
+
+theorem possible_values_for_a (a : ℝ) (h: a ≠ 0) : 
+  (∀ x : ℝ, f a x ≥ 0) ↔ a = 1 :=
+by
+  sorry
+
+end possible_values_for_a_l79_79122
+
+
+namespace difference_length_width_l79_79338
+
+-- Definition of variables and conditions
+variables (L W : ℝ)
+def hall_width_half_length : Prop := W = (1/2) * L
+def hall_area_578 : Prop := L * W = 578
+
+-- Theorem to prove the desired result
+theorem difference_length_width (h1 : hall_width_half_length L W) (h2 : hall_area_578 L W) : L - W = 17 :=
+sorry
+
+end difference_length_width_l79_79338
+
+
+namespace total_students_l79_79883
+
+-- Given conditions
+variable (A B : ℕ)
+noncomputable def M_A := 80 * A
+noncomputable def M_B := 70 * B
+
+axiom classA_condition1 : M_A - 160 = 90 * (A - 8)
+axiom classB_condition1 : M_B - 180 = 85 * (B - 6)
+
+-- Required proof in Lean 4 statement
+theorem total_students : A + B = 78 :=
+by
+  sorry
+
+end total_students_l79_79883
+
+
+namespace find_a_plus_b_l79_79236
+
+theorem find_a_plus_b (a b : ℝ)
+  (h1 : ab^2 = 0)
+  (h2 : 2 * a^2 * b = 0)
+  (h3 : a^3 + b^2 = 0)
+  (h4 : ab = 1) : a + b = -2 :=
+sorry
+
+end find_a_plus_b_l79_79236
+
+
+namespace proof_problem_solution_l79_79291
+
+noncomputable def proof_problem (a b c d : ℝ) : Prop :=
+  a ≥ 0 ∧ b ≥ 0 ∧ c ≥ 0 ∧ d ≥ 0 ∧ (a * b + b * c + c * d + d * a = 1) →
+  (a^3 / (b + c + d) + b^3 / (a + c + d) + c^3 / (a + b + d) + d^3 / (a + b + c) ≥ 1 / 3)
+
+theorem proof_problem_solution (a b c d : ℝ) : proof_problem a b c d :=
+  sorry
+
+end proof_problem_solution_l79_79291
+
+
+namespace arrangement_of_BANANA_l79_79544
+
+theorem arrangement_of_BANANA : 
+  (Nat.factorial 6) / ((Nat.factorial 3) * (Nat.factorial 2)) = 60 :=
+by
+  sorry
+
+end arrangement_of_BANANA_l79_79544
+
+
+namespace saving_percentage_l79_79693
+
+variable (I S : Real)
+
+-- Conditions
+def cond1 : Prop := S = 0.3 * I -- Man saves 30% of his income
+
+def cond2 : Prop := let income_next_year := 1.3 * I
+                    let savings_next_year := 2 * S
+                    let expenditure_first_year := I - S
+                    let expenditure_second_year := income_next_year - savings_next_year
+                    expenditure_first_year + expenditure_second_year = 2 * expenditure_first_year
+
+-- Question
+theorem saving_percentage :
+  cond1 I S →
+  cond2 I S →
+  S = 0.3 * I :=
+by
+  intros
+  sorry
+
+end saving_percentage_l79_79693
+
+
+namespace incorrect_statement_d_l79_79755
+
+-- Definitions from the problem:
+variables (x y : ℝ)
+variables (b a : ℝ)
+variables (x_bar y_bar : ℝ)
+
+-- Linear regression equation:
+def linear_regression (x y : ℝ) (b a : ℝ) : Prop :=
+  y = b * x + a
+
+-- Properties given in the problem:
+axiom pass_through_point : ∀ (x_bar y_bar : ℝ), ∃ b a, y_bar = b * x_bar + a
+axiom avg_increase : ∀ (b a : ℝ), y = b * (x + 1) + a → y = b * x + a + b
+axiom possible_at_origin : ∀ (b a : ℝ), ∃ y, y = a
+
+-- The statement D which is incorrect:
+theorem incorrect_statement_d : ¬ (∀ (b a : ℝ), ∀ y, x = 0 → y = a) :=
+sorry
+
+end incorrect_statement_d_l79_79755
+
+
+namespace num_integers_between_sqrt_range_l79_79461
+
+theorem num_integers_between_sqrt_range :
+  {x : ℕ | 5 > Real.sqrt x ∧ Real.sqrt x > 3}.card = 15 :=
+by sorry
+
+end num_integers_between_sqrt_range_l79_79461
+
+
+namespace total_combinations_l79_79834
+
+/-- Tim's rearrangement choices for the week -/
+def monday_choices : Nat := 1
+def tuesday_choices : Nat := 2
+def wednesday_choices : Nat := 3
+def thursday_choices : Nat := 2
+def friday_choices : Nat := 1
+
+theorem total_combinations :
+  monday_choices * tuesday_choices * wednesday_choices * thursday_choices * friday_choices = 12 :=
+by
+  sorry
+
+end total_combinations_l79_79834
+
+
+namespace cost_of_50_snacks_l79_79150
+
+-- Definitions based on conditions
+def travel_time_to_work : ℕ := 2 -- hours
+def cost_of_snack : ℕ := 10 * (2 * travel_time_to_work) -- Ten times the round trip time
+
+-- The theorem to prove
+theorem cost_of_50_snacks : (50 * cost_of_snack) = 2000 := by
+  sorry
+
+end cost_of_50_snacks_l79_79150
+
+
+namespace find_y_l79_79108
+
+theorem find_y (y : ℝ) (a b : ℝ × ℝ) (h_a : a = (4, 2)) (h_b : b = (6, y)) (h_parallel : 4 * y - 2 * 6 = 0) :
+  y = 3 :=
+sorry
+
+end find_y_l79_79108
+
+
+namespace ratio_of_investments_l79_79183
+
+-- Define the conditions
+def ratio_of_profits (p q : ℝ) : Prop := 7/12 = (p * 5) / (q * 12)
+
+-- Define the problem: given the conditions, prove the ratio of investments is 7/5
+theorem ratio_of_investments (P Q : ℝ) (h : ratio_of_profits P Q) : P / Q = 7 / 5 :=
+by
+  sorry
+
+end ratio_of_investments_l79_79183
+
+
+namespace cylinder_volume_increase_l79_79131
+
+variable (r h : ℝ)
+
+theorem cylinder_volume_increase :
+  (π * (4 * r) ^ 2 * (2 * h)) = 32 * (π * r ^ 2 * h) :=
+by
+  sorry
+
+end cylinder_volume_increase_l79_79131
+
+
+namespace polynomial_equivalence_l79_79754
+
+-- Define the polynomial 'A' according to the conditions provided
+def polynomial_A (x : ℝ) : ℝ := x^2 - 2*x
+
+-- Define the given equation with polynomial A
+def given_equation (x : ℝ) (A : ℝ) : Prop :=
+  (x / (x + 2)) = (A / (x^2 - 4))
+
+-- Prove that for the given equation, the polynomial 'A' is 'x^2 - 2x'
+theorem polynomial_equivalence (x : ℝ) : given_equation x (polynomial_A x) :=
+  by
+    sorry -- Proof is skipped
+
+end polynomial_equivalence_l79_79754
+
+
+namespace composition_func_n_l79_79861
+
+variable (a b x : ℝ) (n : ℕ)
+hypothesis h1 : a ≠ 1
+
+noncomputable def f (x : ℝ) : ℝ := a * x / (1 + b * x)
+
+theorem composition_func_n (h1 : a ≠ 1) : 
+  (f^[n] x) = a^n * x / (1 + (a^n - 1) / (a - 1) * b * x) := 
+sorry
+
+end composition_func_n_l79_79861
+
+
+namespace cherry_sodas_in_cooler_l79_79689
+
+theorem cherry_sodas_in_cooler (C : ℕ) (h1 : (C + 2 * C = 24)) : C = 8 :=
+sorry
+
+end cherry_sodas_in_cooler_l79_79689
+
+
+namespace no_perfect_squares_in_ap_infinitely_many_perfect_cubes_in_ap_no_terms_of_form_x_pow_2m_infinitely_many_terms_of_form_x_pow_2m_plus_1_l79_79301
+
+theorem no_perfect_squares_in_ap (n x : ℤ) : ¬(3 * n + 2 = x^2) :=
+sorry
+
+theorem infinitely_many_perfect_cubes_in_ap : ∃ᶠ n in Filter.atTop, ∃ x : ℤ, 3 * n + 2 = x^3 :=
+sorry
+
+theorem no_terms_of_form_x_pow_2m (n x : ℤ) (m : ℕ) : 3 * n + 2 ≠ x^(2 * m) :=
+sorry
+
+theorem infinitely_many_terms_of_form_x_pow_2m_plus_1 (m : ℕ) : ∃ᶠ n in Filter.atTop, ∃ x : ℤ, 3 * n + 2 = x^(2 * m + 1) :=
+sorry
+
+end no_perfect_squares_in_ap_infinitely_many_perfect_cubes_in_ap_no_terms_of_form_x_pow_2m_infinitely_many_terms_of_form_x_pow_2m_plus_1_l79_79301
+
+
+namespace susan_strawberries_l79_79649
+
+def strawberries_picked (total_in_basket : ℕ) (handful_size : ℕ) (eats_per_handful : ℕ) : ℕ :=
+  let strawberries_per_handful := handful_size - eats_per_handful
+  (total_in_basket / strawberries_per_handful) * handful_size
+
+theorem susan_strawberries : strawberries_picked 60 5 1 = 75 := by
+  sorry
+
+end susan_strawberries_l79_79649
+
+
+namespace total_distance_covered_l79_79970
+
+theorem total_distance_covered :
+  let speed1 := 40 -- miles per hour
+  let speed2 := 50 -- miles per hour
+  let speed3 := 30 -- miles per hour
+  let time1 := 1.5 -- hours
+  let time2 := 1 -- hour
+  let time3 := 2.25 -- hours
+  let distance1 := speed1 * time1 -- distance covered in the first part of the trip
+  let distance2 := speed2 * time2 -- distance covered in the second part of the trip
+  let distance3 := speed3 * time3 -- distance covered in the third part of the trip
+  distance1 + distance2 + distance3 = 177.5 := 
+by
+  sorry
+
+end total_distance_covered_l79_79970
+
+
+namespace concert_revenue_l79_79791
+
+-- Define the prices and attendees
+def adult_price := 26
+def teenager_price := 18
+def children_price := adult_price / 2
+def num_adults := 183
+def num_teenagers := 75
+def num_children := 28
+
+-- Calculate total revenue
+def total_revenue := num_adults * adult_price + num_teenagers * teenager_price + num_children * children_price
+
+-- The goal is to prove that total_revenue equals 6472
+theorem concert_revenue : total_revenue = 6472 :=
+by
+  sorry
+
+end concert_revenue_l79_79791
+
+
+namespace find_value_of_f_at_1_l79_79601
+
+noncomputable def f (x : ℝ) : ℝ := sorry 
+
+theorem find_value_of_f_at_1 (f : ℝ → ℝ)
+  (h : ∀ x : ℝ, 2 * f x - f (- x) = 3 * x + 1) : f 1 = 2 :=
+by
+  sorry
+
+end find_value_of_f_at_1_l79_79601
+
+
+namespace time_for_tom_to_finish_wall_l79_79481
+
+theorem time_for_tom_to_finish_wall (avery_rate tom_rate : ℝ) (combined_duration : ℝ) (remaining_wall : ℝ) :
+  avery_rate = 1 / 2 ∧ tom_rate = 1 / 4 ∧ combined_duration = 1 ∧ remaining_wall = 1 / 4 →
+  (remaining_wall / tom_rate) = 1 :=
+by
+  intros h
+  -- Definitions from conditions
+  let avery_rate := 1 / 2
+  let tom_rate := 1 / 4
+  let combined_duration := 1
+  let remaining_wall := 1 / 4
+  -- Question to be proven
+  sorry
+
+end time_for_tom_to_finish_wall_l79_79481
+
+
+namespace fraction_d_can_be_zero_l79_79334
+
+theorem fraction_d_can_be_zero :
+  ∃ x : ℝ, (x + 1) / (x - 1) = 0 :=
+by {
+  sorry
+}
+
+end fraction_d_can_be_zero_l79_79334
+
+
+namespace evaluate_b3_l79_79373
+
+variable (b1 q : ℤ)
+variable (b1_cond : b1 = 5 ∨ b1 = -5)
+variable (q_cond : q = 3 ∨ q = -3)
+def b3 : ℤ := b1 * q^2
+
+theorem evaluate_b3 (h : b1^2 * (1 + q^2 + q^4) = 2275) : b3 = 45 ∨ b3 = -45 :=
+by sorry
+
+end evaluate_b3_l79_79373
+
+
+namespace cube_vertices_count_l79_79489
+
+-- Defining the conditions of the problem
+def num_faces : ℕ := 6
+def num_edges : ℕ := 12
+def euler_formula (V E F : ℕ) : Prop := V - E + F = 2
+
+-- Stating the proof problem
+theorem cube_vertices_count : ∃ V : ℕ, euler_formula V num_edges num_faces ∧ V = 8 :=
+by
+  sorry
+
+end cube_vertices_count_l79_79489
+
+
+namespace inequality_proof_l79_79288
+
+variable (a b c : ℝ)
+variable (h1 : a > 0)
+variable (h2 : b > 0)
+variable (h3 : c > 0)
+variable (h4 : a + b + c = 1)
+
+theorem inequality_proof : 
+  (a + 1/a)^3 + (b + 1/b)^3 + (c + 1/c)^3 ≥ 1000/9 := 
+by 
+  sorry
+
+end inequality_proof_l79_79288
+
+
+namespace sum_of_two_numbers_l79_79660
+
+theorem sum_of_two_numbers :
+  ∃ x y : ℝ, (x * y = 9375 ∧ y / x = 15) ∧ (x + y = 400) :=
+by
+  sorry
+
+end sum_of_two_numbers_l79_79660
+
+
+namespace quotient_of_0_009_div_0_3_is_0_03_l79_79955
+
+-- Statement:
+theorem quotient_of_0_009_div_0_3_is_0_03 (x : ℝ) (h : x = 0.3) : 0.009 / x = 0.03 :=
+by
+  sorry
+
+end quotient_of_0_009_div_0_3_is_0_03_l79_79955
+
+
+namespace algebra_expr_solution_l79_79723
+
+theorem algebra_expr_solution (a b : ℝ) (h : 2 * a - b = 5) : 2 * b - 4 * a + 8 = -2 :=
+by
+  sorry
+
+end algebra_expr_solution_l79_79723
+
+
+namespace solve_for_x_l79_79169
+
+variable {x : ℝ}
+
+theorem solve_for_x (h : (4 * x ^ 2 - 3 * x + 2) / (x + 2) = 4 * x - 3) : x = 1 :=
+sorry
+
+end solve_for_x_l79_79169
+
+
+namespace find_angle_between_altitude_and_median_l79_79884
+
+noncomputable def angle_between_altitude_and_median 
+  (a b S : ℝ) (h1 : a > b) (h2 : S > 0) : ℝ :=
+  Real.arctan ((a^2 - b^2) / (4 * S))
+
+theorem find_angle_between_altitude_and_median 
+  (a b S : ℝ) (h1 : a > b) (h2 : S > 0) : 
+  angle_between_altitude_and_median a b S h1 h2 = 
+    Real.arctan ((a^2 - b^2) / (4 * S)) := 
+  sorry
+
+end find_angle_between_altitude_and_median_l79_79884
+
+
+namespace original_faculty_members_l79_79206
+
+theorem original_faculty_members
+  (x : ℝ) (h : 0.87 * x = 195) : x = 224 := sorry
+
+end original_faculty_members_l79_79206
+
+
+namespace smallest_natural_b_for_root_exists_l79_79993
+
+-- Define the problem's conditions
+def quadratic_eqn (b : ℕ) := ∀ x : ℝ, x^2 + (b : ℝ) * x + 25 = 0
+
+def discriminant (a b c : ℝ) := b^2 - 4 * a * c
+
+-- Define the main problem statement
+theorem smallest_natural_b_for_root_exists :
+  ∃ b : ℕ, (discriminant 1 b 25 ≥ 0) ∧ (∀ b' : ℕ, b' < b → discriminant 1 b' 25 < 0) ∧ b = 10 :=
+by
+  sorry
+
+end smallest_natural_b_for_root_exists_l79_79993
+
+
+namespace tan_difference_of_angle_l79_79264
+
+noncomputable def point_on_terminal_side (θ : ℝ) : Prop :=
+  ∃ k : ℝ, k ≠ 0 ∧ (2, 3) = (k * Real.cos θ, k * Real.sin θ)
+
+theorem tan_difference_of_angle (θ : ℝ) (hθ : point_on_terminal_side θ) :
+  Real.tan (θ - Real.pi / 4) = 1 / 5 :=
+sorry
+
+end tan_difference_of_angle_l79_79264
+
+
+namespace range_of_b_l79_79409
+
+noncomputable def f (x : ℝ) (b : ℝ) : ℝ := 3^x + b
+
+theorem range_of_b (b : ℝ) :
+  (∀ x : ℝ, f x b ≥ 0) ↔ b ≤ -1 :=
+by sorry
+
+end range_of_b_l79_79409
+
+
+namespace probability_part_not_scrap_l79_79182
+
+noncomputable def probability_not_scrap : Prop :=
+  let p_scrap_first := 0.01
+  let p_scrap_second := 0.02
+  let p_not_scrap_first := 1 - p_scrap_first
+  let p_not_scrap_second := 1 - p_scrap_second
+  let p_not_scrap := p_not_scrap_first * p_not_scrap_second
+  p_not_scrap = 0.9702
+
+theorem probability_part_not_scrap : probability_not_scrap :=
+by simp [probability_not_scrap] ; sorry
+
+end probability_part_not_scrap_l79_79182
+
+
+namespace bus_seat_problem_l79_79134
+
+theorem bus_seat_problem 
+  (left_seats : ℕ) 
+  (right_seats := left_seats - 3) 
+  (left_capacity := 3 * left_seats)
+  (right_capacity := 3 * right_seats)
+  (back_seat_capacity := 12)
+  (total_capacity := left_capacity + right_capacity + back_seat_capacity)
+  (h1 : total_capacity = 93) 
+  : left_seats = 15 := 
+by 
+  sorry
+
+end bus_seat_problem_l79_79134
+
+
+namespace relationship_y1_y2_y3_l79_79739
+
+theorem relationship_y1_y2_y3 
+  (y_1 y_2 y_3 : ℝ)
+  (h1 : y_1 = (-2)^2 + 2*(-2) + 2)
+  (h2 : y_2 = (-1)^2 + 2*(-1) + 2)
+  (h3 : y_3 = 2^2 + 2*2 + 2) :
+  y_2 < y_1 ∧ y_1 < y_3 := 
+sorry
+
+end relationship_y1_y2_y3_l79_79739
+
+
+namespace find_number_l79_79213
+
+theorem find_number (x : ℝ) (h : 1345 - x / 20.04 = 1295) : x = 1002 :=
+sorry
+
+end find_number_l79_79213
+
+
+namespace range_of_c_l79_79615
+
+theorem range_of_c :
+  (∃ (c : ℝ), ∀ (x y : ℝ), (x^2 + y^2 = 4) → ((12 * x - 5 * y + c) / 13 = 1))
+  → (c > -13 ∧ c < 13) := 
+sorry
+
+end range_of_c_l79_79615
+
+
+namespace mart_income_more_than_tim_l79_79292
+
+variable (J : ℝ) -- Let's denote Juan's income as J
+def T : ℝ := J - 0.40 * J -- Tim's income is 40 percent less than Juan's income
+def M : ℝ := 0.78 * J -- Mart's income is 78 percent of Juan's income
+
+theorem mart_income_more_than_tim : (M - T) / T * 100 = 30 := by
+  sorry
+
+end mart_income_more_than_tim_l79_79292
+
+
+namespace square_carpet_side_length_l79_79497
+
+theorem square_carpet_side_length (area : ℝ) (h : area = 10) :
+  ∃ s : ℝ, s * s = area ∧ 3 < s ∧ s < 4 :=
+by
+  sorry
+
+end square_carpet_side_length_l79_79497
+
+
+namespace none_of_these_l79_79888
+
+def table : List (ℕ × ℕ) := [(1, 5), (2, 15), (3, 33), (4, 61), (5, 101)]
+
+def formula_A (x : ℕ) : ℕ := 2 * x^3 + 3 * x^2 - x + 1
+def formula_B (x : ℕ) : ℕ := 3 * x^3 + x^2 + x + 1
+def formula_C (x : ℕ) : ℕ := 2 * x^3 + x^2 + x + 1
+def formula_D (x : ℕ) : ℕ := 2 * x^3 + x^2 + x - 1
+
+theorem none_of_these :
+  ¬ (∀ (x y : ℕ), (x, y) ∈ table → (y = formula_A x ∨ y = formula_B x ∨ y = formula_C x ∨ y = formula_D x)) :=
+by {
+  sorry
+}
+
+end none_of_these_l79_79888
+
+
+namespace represent_259BC_as_neg259_l79_79032
+
+def year_AD (n: ℤ) : ℤ := n
+
+def year_BC (n: ℕ) : ℤ := -(n : ℤ)
+
+theorem represent_259BC_as_neg259 : year_BC 259 = -259 := 
+by 
+  rw [year_BC]
+  norm_num
+
+end represent_259BC_as_neg259_l79_79032
+
+
+namespace sample_size_community_A_l79_79369
+
+variable (A B C H : ℕ) (total_families : ℕ) (sampling_ratio : ℚ)
+
+def low_income_families_A := 360
+def low_income_families_B := 270
+def low_income_families_C := 180
+def housing_units := 90
+
+theorem sample_size_community_A (h1 : total_families = low_income_families_A + low_income_families_B + low_income_families_C)
+  (h2 : sampling_ratio = housing_units / total_families) : 
+  low_income_families_A * sampling_ratio = 40 :=
+by
+  rw [←h1, ←h2]
+  sorry
+
+end sample_size_community_A_l79_79369
+
+
+namespace books_at_end_l79_79812
+
+-- Define the conditions
+def initialBooks : ℕ := 98
+def checkoutsWednesday : ℕ := 43
+def returnsThursday : ℕ := 23
+def checkoutsThursday : ℕ := 5
+def returnsFriday : ℕ := 7
+
+-- Define the final number of books and the theorem to prove
+def finalBooks : ℕ := initialBooks - checkoutsWednesday + returnsThursday - checkoutsThursday + returnsFriday
+
+-- Prove that the final number of books is 80
+theorem books_at_end : finalBooks = 80 := by
+  sorry
+
+end books_at_end_l79_79812
+
+
+namespace feathers_already_have_l79_79977
+
+-- Given conditions
+def total_feathers : Nat := 900
+def feathers_still_needed : Nat := 513
+
+-- Prove that the number of feathers Charlie already has is 387
+theorem feathers_already_have : (total_feathers - feathers_still_needed) = 387 := by
+  sorry
+
+end feathers_already_have_l79_79977
+
+
+namespace union_of_A_and_B_l79_79588
+
+def setA : Set ℝ := { x : ℝ | abs (x - 3) < 2 }
+def setB : Set ℝ := { x : ℝ | (x + 1) / (x - 2) ≤ 0 }
+
+theorem union_of_A_and_B : setA ∪ setB = { x : ℝ | -1 ≤ x ∧ x < 5 } :=
+by
+  sorry
+
+end union_of_A_and_B_l79_79588
+
+
+namespace circles_chord_length_l79_79979
+
+theorem circles_chord_length (r1 r2 r3 : ℕ) (m n p : ℕ) (h1 : r1 = 4) (h2 : r2 = 10) (h3 : r3 = 14)
+(h4 : gcd m p = 1) (h5 : ¬ (∃ (k : ℕ), k^2 ∣ n)) : m + n + p = 19 :=
+by
+  sorry
+
+end circles_chord_length_l79_79979
+
+
+namespace arithmetic_sequence_sum_proof_l79_79286
+
+theorem arithmetic_sequence_sum_proof
+  (S : ℕ → ℕ) (a : ℕ → ℕ)
+  (h1 : S 17 = 170)
+  (h2 : a 2000 = 2001)
+  (h3 : ∀ n, S n = n * (2 * a 1 + (n - 1) * (a 2 - a 1)) / 2)
+  (h4 : ∀ n, a (n + 1) = a n + (a 2 - a 1)) :
+  S 2008 = 2019044 :=
+  sorry
+
+end arithmetic_sequence_sum_proof_l79_79286
+
+
+namespace carbon_copies_after_folding_l79_79205
+
+def initial_sheets : ℕ := 6
+def initial_carbons (sheets : ℕ) : ℕ := sheets - 1
+def final_copies (sheets : ℕ) : ℕ := sheets - 1
+
+theorem carbon_copies_after_folding :
+  (final_copies initial_sheets) =
+  initial_carbons initial_sheets :=
+by {
+    -- sorry is a placeholder for the proof
+    sorry
+}
+
+end carbon_copies_after_folding_l79_79205
+
+
+namespace change_received_proof_l79_79346
+
+-- Define the costs and amounts
+def regular_ticket_cost : ℕ := 9
+def children_ticket_discount : ℕ := 2
+def amount_given : ℕ := 2 * 20
+
+-- Define the number of people
+def number_of_adults : ℕ := 2
+def number_of_children : ℕ := 3
+
+-- Define the costs calculations
+def child_ticket_cost := regular_ticket_cost - children_ticket_discount
+def total_adults_cost := number_of_adults * regular_ticket_cost
+def total_children_cost := number_of_children * child_ticket_cost
+def total_cost := total_adults_cost + total_children_cost
+def change_received := amount_given - total_cost
+
+-- Lean statement to prove the change received
+theorem change_received_proof : change_received = 1 := by
+  sorry
+
+end change_received_proof_l79_79346
+
+
+namespace max_average_growth_rate_l79_79790
+
+theorem max_average_growth_rate 
+  (P1 P2 : ℝ) (M : ℝ)
+  (h1 : P1 + P2 = M) : 
+  (1 + (M / 2))^2 ≥ (1 + P1) * (1 + P2) := 
+by
+  -- AM-GM Inequality application and other mathematical steps go here.
+  sorry
+
+end max_average_growth_rate_l79_79790
+
+
+namespace extra_bananas_each_child_l79_79778
+
+theorem extra_bananas_each_child (total_children absent_children planned_bananas_per_child : ℕ) 
+    (h1 : total_children = 660) (h2 : absent_children = 330) (h3 : planned_bananas_per_child = 2) : (1320 / (total_children - absent_children)) - planned_bananas_per_child = 2 := by
+  sorry
+
+end extra_bananas_each_child_l79_79778
+
+
+namespace polynomial_factor_l79_79095
+
+theorem polynomial_factor (a b : ℝ) :
+  (∃ (c d : ℝ), a = 4 * c ∧ b = -3 * c + 4 * d ∧ 40 = 2 * c - 3 * d + 18 ∧ -20 = 2 * d - 9 ∧ 9 = 9) →
+  a = 11 ∧ b = -121 / 4 :=
+by
+  sorry
+
+end polynomial_factor_l79_79095
+
+
+namespace count_divisibles_in_range_l79_79599
+
+theorem count_divisibles_in_range :
+  let lower_bound := (2:ℤ)^10
+  let upper_bound := (2:ℤ)^18
+  let divisor := (2:ℤ)^9 
+  (upper_bound - lower_bound) / divisor + 1 = 511 :=
+by 
+  sorry
+
+end count_divisibles_in_range_l79_79599
+
+
+namespace num_seating_arrangements_l79_79719
+
+/-- Define the notion of people and seats with corresponding numbers. --/
+set_option pp.portableStrings true
+namespace SeatingArrangement
+
+/-- Define the total number of people and seats --/
+def numPeople := 5
+
+/-- Define a function that counts the number of permutations with at most two fixed points --/
+def countSeatingArrangementsWithAtMostTwoFixedPoints (n : ℕ) : ℕ :=
+  let total := n! -- Total number of permutations
+  let numThreeFixedPoints := Nat.choose n 3 -- Number of ways to choose 3 fixed points
+  let numAllFixedPoints := 1 -- Only 1 way to have all fixed points
+  total - numThreeFixedPoints - numAllFixedPoints -- Total - Three fixed points - All fixed points
+
+theorem num_seating_arrangements (n : ℕ) (h : n = 5) :
+  countSeatingArrangementsWithAtMostTwoFixedPoints n = 109 :=
+by
+  rw [h]
+  unfold countSeatingArrangementsWithAtMostTwoFixedPoints
+  norm_num
+  sorry -- Proof elided
+
+end num_seating_arrangements_l79_79719
+
+
+namespace relationship_between_M_n_and_N_n_plus_2_l79_79954
+
+theorem relationship_between_M_n_and_N_n_plus_2 (n : ℕ) (h : 2 ≤ n) :
+  let M_n := (n * (n + 1)) / 2 + 1
+  let N_n_plus_2 := n + 3
+  M_n < N_n_plus_2 :=
+by
+  sorry
+
+end relationship_between_M_n_and_N_n_plus_2_l79_79954
+
+
+namespace evaluate_expression_l79_79337
+
+theorem evaluate_expression : 7899665 - 12 * 3 * 2 = 7899593 :=
+by
+  -- This proof is skipped.
+  sorry
+
+end evaluate_expression_l79_79337
+
+
+namespace calculate_angle_C_l79_79138
+
+variable (A B C : ℝ)
+
+theorem calculate_angle_C (h1 : A = C - 40) (h2 : B = 2 * A) (h3 : A + B + C = 180) :
+  C = 75 :=
+by
+  sorry
+
+end calculate_angle_C_l79_79138
+
+
+namespace banana_arrangements_l79_79530
+
+theorem banana_arrangements : 
+  let letters := "BANANA".toList
+  let n := letters.length
+  let countA := letters.count (fun c => c = 'A')
+  let countN := letters.count (fun c => c = 'N')
+  let countB := letters.count (fun c => c = 'B')
+  n = 6 ∧ countA = 3 ∧ countN = 2 ∧ countB = 1 → (Nat.factorial n) / ((Nat.factorial countA) * (Nat.factorial countN) * (Nat.factorial countB)) = 60 := 
+by
+  intros letters n countA countN countB h
+  sorry
+
+end banana_arrangements_l79_79530
+
+
+namespace sum_of_multiples_is_even_l79_79305
+
+theorem sum_of_multiples_is_even (a b : ℤ) (h1 : ∃ m : ℤ, a = 4 * m) (h2 : ∃ n : ℤ, b = 6 * n) : Even (a + b) :=
+sorry
+
+end sum_of_multiples_is_even_l79_79305
+
+
+namespace multiple_of_pumpkins_l79_79233
+
+theorem multiple_of_pumpkins (M S : ℕ) (hM : M = 14) (hS : S = 54) (h : S = x * M + 12) : x = 3 := sorry
+
+end multiple_of_pumpkins_l79_79233
+
+
+namespace fish_tank_problem_l79_79422
+
+def number_of_fish_in_first_tank
+  (F : ℕ)          -- Let F represent the number of fish in the first tank
+  (twoF : ℕ)       -- Let twoF represent twice the number of fish in the first tank
+  (total : ℕ) :    -- Let total represent the total number of fish
+  Prop :=
+  (2 * F = twoF)  -- The other two tanks each have twice as many fish as the first
+  ∧ (F + twoF + twoF = total)  -- The sum of the fish in all three tanks equals the total number of fish
+
+theorem fish_tank_problem
+  (F : ℕ)
+  (H : number_of_fish_in_first_tank F (2 * F) 100) : F = 20 :=
+by
+  sorry
+
+end fish_tank_problem_l79_79422
+
+
+namespace perm_banana_l79_79561
+
+theorem perm_banana : 
+  let total_letters := 6
+  let A_letters := 3
+  let N_letters := 2
+  (fact total_letters) / ((fact A_letters) * (fact N_letters) * fact (total_letters - A_letters - N_letters)) = 60 :=
+by
+  let total_letters := 6
+  let A_letters := 3
+  let N_letters := 2
+  have h1 : fact total_letters = 720 := by decide
+  have h2 : fact A_letters = 6 := by decide
+  have h3 : fact N_letters = 2 := by decide
+  have h4 : fact (total_letters - A_letters - N_letters) = fact (6 - 3 - 2) := by decide
+  have h5 : fact (total_letters - A_letters - N_letters) = 1 := by decide
+  calc
+    (720 / (6 * 2 * 1) : ℝ)
+    _ = 60 := by norm_num
+
+end perm_banana_l79_79561
+
+
+namespace acute_angle_89_l79_79357
+
+def is_acute_angle (angle : ℝ) : Prop := angle > 0 ∧ angle < 90
+
+theorem acute_angle_89 :
+  is_acute_angle 89 :=
+by {
+  -- proof details would go here, since only the statement is required
+  sorry
+}
+
+end acute_angle_89_l79_79357
+
+
+namespace binom_1300_2_eq_844350_l79_79363
+
+theorem binom_1300_2_eq_844350 : (Nat.choose 1300 2) = 844350 := by
+  sorry
+
+end binom_1300_2_eq_844350_l79_79363
+
+
+namespace special_op_eight_four_l79_79456
+
+def special_op (a b : ℕ) : ℕ := 2 * a + a / b
+
+theorem special_op_eight_four : special_op 8 4 = 18 := by
+  sorry
+
+end special_op_eight_four_l79_79456
+
+
+namespace possible_distance_between_houses_l79_79893
+
+variable (d : ℝ)
+
+theorem possible_distance_between_houses (h_d1 : 1 ≤ d) (h_d2 : d ≤ 5) : 1 ≤ d ∧ d ≤ 5 :=
+by
+  exact ⟨h_d1, h_d2⟩
+
+end possible_distance_between_houses_l79_79893
+
+
+namespace jon_original_number_l79_79147
+
+theorem jon_original_number :
+  ∃ y : ℤ, (5 * (3 * y + 6) - 8 = 142) ∧ (y = 8) :=
+sorry
+
+end jon_original_number_l79_79147
+
+
+namespace factor_expression_l79_79717
+
+theorem factor_expression (a b c : ℝ) :
+    (a + b) * (b + c) * (c + a) = 
+    ((a^4 - b^4)^3 + (b^4 - c^4)^3 + (c^4 - a^4)^3) / ((a - b)^3 + (b - c)^3 + (c - a)^3) :=
+by
+  sorry
+
+end factor_expression_l79_79717
+
+
+namespace cube_probability_l79_79716
+
+noncomputable def probability_of_three_vertical_faces_same_color : ℚ :=
+  73 / 243
+
+theorem cube_probability :
+  let colors := {0, 1, 2} -- Represent Red, Blue, Yellow
+  let faces := Finset.range 6 -- Represent the 6 faces of the cube
+  let total_arrangements := colors.card ^ faces.card
+  let favorable_arrangements := 219
+  (favorable_arrangements : ℚ) / total_arrangements = probability_of_three_vertical_faces_same_color :=
+by
+  sorry
+
+end cube_probability_l79_79716
+
+
+namespace range_of_m_l79_79997
+
+theorem range_of_m (m : ℝ) (x : ℝ) :
+  (¬ (|1 - (x - 1) / 3| ≤ 2) → ¬ (x^2 - 2 * x + (1 - m^2) ≤ 0)) → 
+  (|m| ≥ 9) :=
+by
+  sorry
+
+end range_of_m_l79_79997
+
+
+namespace no_integer_b_for_four_integer_solutions_l79_79982
+
+theorem no_integer_b_for_four_integer_solutions :
+  ∀ (b : ℤ), ¬ ∃ x1 x2 x3 x4 : ℤ, 
+    (x1 ≠ x2 ∧ x1 ≠ x3 ∧ x1 ≠ x4 ∧ x2 ≠ x3 ∧ x2 ≠ x4 ∧ x3 ≠ x4) ∧
+    (∀ x : ℤ, (x^2 + b*x + 1 ≤ 0) ↔ (x = x1 ∨ x = x2 ∨ x = x3 ∨ x = x4)) :=
+by sorry
+
+end no_integer_b_for_four_integer_solutions_l79_79982
+
+
+namespace tv_height_l79_79033
+
+theorem tv_height (H : ℝ) : 
+  672 / (24 * H) = (1152 / (48 * 32)) + 1 → 
+  H = 16 := 
+by
+  have h_area_first_TV : 24 * H ≠ 0 := sorry
+  have h_new_condition: 1152 / (48 * 32) + 1 = 1.75 := sorry
+  have h_cost_condition: 672 / (24 * H) = 1.75 := sorry
+  sorry
+
+end tv_height_l79_79033
+
+
+namespace sqrt_product_simplification_l79_79916
+
+theorem sqrt_product_simplification : (ℝ) : 
+  (Real.sqrt 18) * (Real.sqrt 72) = 12 * (Real.sqrt 2) :=
+sorry
+
+end sqrt_product_simplification_l79_79916
+
+
+namespace text_messages_relationship_l79_79149
+
+theorem text_messages_relationship (l x : ℕ) (h_l : l = 111) (h_combined : l + x = 283) : x = l + 61 :=
+by sorry
+
+end text_messages_relationship_l79_79149
+
+
+namespace painter_completes_at_9pm_l79_79075
+
+noncomputable def mural_completion_time (start_time : Nat) (fraction_completed_time : Nat)
+    (fraction_completed : ℚ) : Nat :=
+  let fraction_per_hour := fraction_completed / fraction_completed_time
+  start_time + Nat.ceil (1 / fraction_per_hour)
+
+theorem painter_completes_at_9pm :
+  mural_completion_time 9 3 (1/4) = 21 := by
+  sorry
+
+end painter_completes_at_9pm_l79_79075
+
+
+namespace simplify_expression_correct_l79_79168
+
+def simplify_expression (y : ℝ) : ℝ :=
+  (3 * y - 2) * (5 * y ^ 12 + 3 * y ^ 11 + 5 * y ^ 9 + y ^ 8)
+
+theorem simplify_expression_correct (y : ℝ) :
+  simplify_expression y = 15 * y ^ 13 - y ^ 12 + 6 * y ^ 11 + 5 * y ^ 10 - 7 * y ^ 9 - 2 * y ^ 8 :=
+by
+  sorry
+
+end simplify_expression_correct_l79_79168
+
+
+namespace evaluate_at_10_l79_79389
+
+def f (x : ℝ) : ℝ := x^3 - 2 * x^2 - 5 * x + 6
+
+theorem evaluate_at_10 : f 10 = 756 := by
+  -- the proof is omitted
+  sorry
+
+end evaluate_at_10_l79_79389
+
+
+namespace inconsistent_coordinates_l79_79419
+
+theorem inconsistent_coordinates
+  (m n : ℝ) 
+  (h1 : m - (5/2)*n + 1 = 0) 
+  (h2 : (m + 1/2) - (5/2)*(n + 1) + 1 = 0) :
+  false :=
+by
+  sorry
+
+end inconsistent_coordinates_l79_79419
+
+
+namespace marble_244_is_white_l79_79494
+
+noncomputable def color_of_marble (n : ℕ) : String :=
+  let cycle := ["white", "white", "white", "white", "gray", "gray", "gray", "gray", "gray", "black", "black", "black"]
+  cycle.get! (n % 12)
+
+theorem marble_244_is_white : color_of_marble 244 = "white" :=
+by
+  sorry
+
+end marble_244_is_white_l79_79494
+
+
+namespace determine_fraction_l79_79312
+
+noncomputable def q (x : ℝ) : ℝ := (x + 3) * (x - 2)
+
+noncomputable def p (a b x : ℝ) : ℝ := a * x^2 + b * x
+
+theorem determine_fraction (a b : ℝ) (h : a + b = 1 / 4) :
+  (p a b (-1)) / (q (-1)) = (a - b) / 4 :=
+by
+  sorry
+
+end determine_fraction_l79_79312
+
+
+namespace fraction_evaluation_l79_79372
+
+theorem fraction_evaluation : 
+  (1/4 - 1/6) / (1/3 - 1/5) = 5/8 := by
+  sorry
+
+end fraction_evaluation_l79_79372
+
+
+namespace orensano_subset_count_l79_79697
+
+def is_orensano (T : Finset ℤ) : Prop :=
+  ∃ a b c, a < b ∧ b < c ∧ a ∈ T ∧ c ∈ T ∧ b ∉ T
+
+theorem orensano_subset_count :
+  let S := Finset.range 2020 in
+  (Finset.powerset S).filter is_orensano).card = 2^2019 - 2039191 :=
+begin
+  sorry,
+end
+
+end orensano_subset_count_l79_79697
+
+
+namespace g_h_of_2_eq_869_l79_79604
+
+-- Define the functions g and h
+def g (x : ℝ) : ℝ := 3 * x^2 + 2
+def h (x : ℝ) : ℝ := -2 * x^3 - 1
+
+-- State the theorem we need to prove
+theorem g_h_of_2_eq_869 : g (h 2) = 869 := by
+  sorry
+
+end g_h_of_2_eq_869_l79_79604
+
+
+namespace smallest_ninequality_l79_79578
+
+theorem smallest_ninequality 
+  (n : ℕ) 
+  (h : ∀ x : ℝ, (Real.sin x) ^ n + (Real.cos x) ^ n ≤ 2 ^ (1 - n)) : 
+  n = 2 := 
+by
+  sorry
+
+end smallest_ninequality_l79_79578
+
+
+namespace cherry_sodas_in_cooler_l79_79690
+
+theorem cherry_sodas_in_cooler (C : ℕ) (h1 : (C + 2 * C = 24)) : C = 8 :=
+sorry
+
+end cherry_sodas_in_cooler_l79_79690
+
+
+namespace prime_factors_of_expression_l79_79099
+
+theorem prime_factors_of_expression
+  (p : ℕ) (prime_p : Nat.Prime p) :
+  (∀ x y : ℕ, 0 < x → 0 < y → p ∣ ((x + y)^19 - x^19 - y^19)) ↔ (p = 2 ∨ p = 3 ∨ p = 7 ∨ p = 19) :=
+by
+  sorry
+
+end prime_factors_of_expression_l79_79099
+
+
+namespace problem_I_ellipse_equation_problem_II_range_of_t_l79_79113
+
+-- Problem (I) Proof statement
+theorem problem_I_ellipse_equation (a b c : ℝ) (e : ℝ) (h1 : a > b)
+  (h2 : b > 0) (h3 : e = 1/2)
+  (h4 : a^2 = b^2 + c^2) (h5 : 1/2 * (2 * c) * b = sqrt 3) :
+  (∃ (a b : ℝ), a = 2 ∧ b = sqrt 3 ∧ (a ^ 2 = 4 ∧ b ^ 2 = 3) ∧ 
+  ∀ x y : ℝ, (x^2 / a^2 + y^2 / b^2 = 1) ↔ 
+  (x^2 / 4 + y^2 / 3 = 1)) :=
+sorry
+
+-- Problem (II) Proof statement
+theorem problem_II_range_of_t (k t : ℝ) (h : t = k / (4 * k^2 + 3))
+  (hx1 : ∀ k > 0, 4 * k + 3 / k ≥ 4 * (sqrt 3))
+  (hx2 : ∀ k < 0, 4 * k + 3 / k ≤ -4 * (sqrt 3)) :
+  t ∈ set.Icc (- sqrt 3 / 12) (sqrt 3 / 12) :=
+sorry
+
+end problem_I_ellipse_equation_problem_II_range_of_t_l79_79113
+
+
+namespace beam_reflection_problem_l79_79486
+
+theorem beam_reflection_problem
+  (A B D C : Point)
+  (angle_CDA : ℝ)
+  (total_path_length_max : ℝ)
+  (equal_angle_reflections : ∀ (k : ℕ), angle_CDA * k ≤ 90)
+  (path_length_constraint : ∀ (n : ℕ) (d : ℝ), 2 * n * d ≤ total_path_length_max)
+  : angle_CDA = 5 ∧ total_path_length_max = 100 → ∃ (n : ℕ), n = 10 :=
+sorry
+
+end beam_reflection_problem_l79_79486
+
+
+namespace arithmetic_sequence_nth_term_l79_79617
+
+-- Definitions from conditions
+def a₁ : ℕ → ℤ := -60
+def a₁₇  : ℕ → ℤ := -12
+
+-- Lean statement
+
+theorem arithmetic_sequence_nth_term (n : ℕ) :
+  (∃ d, d = 3 ∧ ∀ n : ℕ, a₁₇ = a₁ + 16 * d ∧ (∀ n : ℕ, a_n = -60 + 3 * (n - 1))) ∧
+  sum_abs_first_30_terms : (∃ S, S = 765 ∧ ∑ i in range 1..31, abs (a_n(i)) = 765) :=
+sorry
+
+end arithmetic_sequence_nth_term_l79_79617
+
+
+namespace yeast_cells_at_2_20_pm_l79_79285
+
+noncomputable def yeast_population (initial : Nat) (rate : Nat) (intervals : Nat) : Nat :=
+  initial * rate ^ intervals
+
+theorem yeast_cells_at_2_20_pm :
+  let initial_population := 30
+  let triple_rate := 3
+  let intervals := 5 -- 20 minutes / 4 minutes per interval
+  yeast_population initial_population triple_rate intervals = 7290 :=
+by
+  let initial_population := 30
+  let triple_rate := 3
+  let intervals := 5
+  show yeast_population initial_population triple_rate intervals = 7290
+  sorry
+
+end yeast_cells_at_2_20_pm_l79_79285
+
+
+namespace pizza_consumption_order_l79_79412
+
+noncomputable def amount_eaten (fraction: ℚ) (total: ℚ) := fraction * total
+
+theorem pizza_consumption_order :
+  let total := 1
+  let samuel := (1 / 6 : ℚ)
+  let teresa := (2 / 5 : ℚ)
+  let uma := (1 / 4 : ℚ)
+  let victor := total - (samuel + teresa + uma)
+  let samuel_eaten := amount_eaten samuel 60
+  let teresa_eaten := amount_eaten teresa 60
+  let uma_eaten := amount_eaten uma 60
+  let victor_eaten := amount_eaten victor 60
+  (teresa_eaten > uma_eaten) 
+  ∧ (uma_eaten > victor_eaten) 
+  ∧ (victor_eaten > samuel_eaten) := 
+by
+  sorry
+
+end pizza_consumption_order_l79_79412
+
+
+namespace amy_hours_per_week_school_year_l79_79973
+
+variable (hours_per_week_summer : ℕ)
+variable (weeks_summer : ℕ)
+variable (earnings_summer : ℕ)
+variable (additional_earnings_needed : ℕ)
+variable (weeks_school_year : ℕ)
+variable (hourly_wage : ℝ := earnings_summer / (hours_per_week_summer * weeks_summer))
+
+theorem amy_hours_per_week_school_year :
+  hours_per_week_school_year = (additional_earnings_needed / hourly_wage) / weeks_school_year :=
+by 
+  -- Using the hourly wage and total income needed, calculate the hours.
+  let total_hours_needed := additional_earnings_needed / hourly_wage
+  have h1 : hours_per_week_school_year = total_hours_needed / weeks_school_year := sorry
+  exact h1
+
+end amy_hours_per_week_school_year_l79_79973
+
+
+namespace banana_arrangement_count_l79_79552
+
+theorem banana_arrangement_count :
+  let word := "BANANA"
+  let length_word := 6
+  let a_count := 3
+  let n_count := 2
+  (length_word)! / (a_count! * n_count!) = 60 := by
+  sorry
+
+end banana_arrangement_count_l79_79552
+
+
+namespace arithmetic_mean_difference_l79_79058
+
+theorem arithmetic_mean_difference (p q r : ℝ)
+  (h1 : (p + q) / 2 = 10)
+  (h2 : (q + r) / 2 = 22) :
+  r - p = 24 :=
+by
+  sorry
+
+end arithmetic_mean_difference_l79_79058
+
+
+namespace average_consecutive_pairs_is_correct_l79_79670
+
+/-- Definition of the set S and nCr function -/
+def S : Finset ℕ := Finset.range (33 - 5 + 1) + 5
+def nCr (n r : ℕ) : ℕ := (Finset.powersetLen r (Finset.range n)).card
+
+/-- Definitions of the specific combinatorial calculations -/
+def omega : ℕ := nCr 29 4
+def single_pair : ℕ := 4 * nCr 26 2
+def two_pairs : ℕ := 3 * nCr 27 1
+def three_pairs : ℕ := 26
+def average_consecutive_pairs : ℚ := (single_pair + two_pairs + three_pairs) / omega
+
+/-- The proof problem itself -/
+theorem average_consecutive_pairs_is_correct :
+  average_consecutive_pairs = 0.0648 := by
+  sorry
+
+end average_consecutive_pairs_is_correct_l79_79670
+
+
+namespace distinct_arrangements_of_BANANA_l79_79558
+
+theorem distinct_arrangements_of_BANANA :
+  let total_letters := 6
+  let freq_A := 3
+  let freq_N := 2
+  let freq_B := 1
+  (nat.factorial total_letters) / (nat.factorial freq_A * nat.factorial freq_N * nat.factorial freq_B) = 60 :=
+by
+  sorry
+
+end distinct_arrangements_of_BANANA_l79_79558
+
+
+namespace jackson_earned_on_monday_l79_79420
+
+-- Definitions
+def goal := 1000
+def tuesday_earnings := 40
+def avg_rate := 10
+def houses := 88
+def days_remaining := 3
+def total_collected_remaining_days := days_remaining * (houses / 4) * avg_rate
+
+-- The proof problem statement
+theorem jackson_earned_on_monday (m : ℕ) :
+  m + tuesday_earnings + total_collected_remaining_days = goal → m = 300 :=
+by
+  -- We will eventually provide the proof here
+  sorry
+
+end jackson_earned_on_monday_l79_79420
+
+
+namespace cube_volume_of_surface_area_l79_79343
+
+theorem cube_volume_of_surface_area (S : ℝ) (V : ℝ) (a : ℝ) (h1 : S = 150) (h2 : S = 6 * a^2) (h3 : V = a^3) : V = 125 := by
+  sorry
+
+end cube_volume_of_surface_area_l79_79343
+
+
+namespace intersection_M_N_l79_79433
+
+open Set
+
+noncomputable def M : Set ℕ := {x | x < 6}
+noncomputable def N : Set ℕ := {x | x^2 - 11 * x + 18 < 0}
+
+theorem intersection_M_N : M ∩ N = {3, 4, 5} := by
+  sorry
+
+end intersection_M_N_l79_79433
+
+
+namespace fixed_point_coordinates_l79_79485
+
+noncomputable def fixed_point (A : Real × Real) : Prop :=
+∀ (k : Real), ∃ (x y : Real), A = (x, y) ∧ (3 + k) * x + (1 - 2 * k) * y + 1 + 5 * k = 0
+
+theorem fixed_point_coordinates :
+  fixed_point (-1, 2) :=
+by
+  sorry
+
+end fixed_point_coordinates_l79_79485
+
+
+namespace probability_A_not_winning_l79_79667
+
+theorem probability_A_not_winning 
+  (prob_draw : ℚ := 1/2)
+  (prob_B_wins : ℚ := 1/3) : 
+  (prob_draw + prob_B_wins) = 5 / 6 := 
+by
+  sorry
+
+end probability_A_not_winning_l79_79667
+
+
+namespace rectangular_plot_area_l79_79453
+
+theorem rectangular_plot_area (breadth length : ℕ) (h1 : breadth = 14) (h2 : length = 3 * breadth) : (length * breadth) = 588 := 
+by 
+  -- imports, noncomputable keyword, and placeholder proof for compilation
+  sorry
+
+end rectangular_plot_area_l79_79453
+
+
+namespace division_multiplication_identity_l79_79704
+
+theorem division_multiplication_identity :
+  24 / (-6) * (3 / 2) / (- (4 / 3)) = 9 / 2 := 
+by 
+  sorry
+
+end division_multiplication_identity_l79_79704
+
+
+namespace ratio_of_larger_to_smaller_l79_79795
+
+theorem ratio_of_larger_to_smaller (x y : ℝ) (hx_pos : 0 < x) (hy_pos : 0 < y) (hx_gt_hy : x > y) (h_eq : x + y = 7 * (x - y)) : x / y = 4 / 3 := 
+by
+  sorry
+
+end ratio_of_larger_to_smaller_l79_79795
+
+
+namespace evaluate_expression_l79_79098
+
+theorem evaluate_expression (x z : ℤ) (hx : x = 4) (hz : z = -2) : 
+  z * (z - 4 * x) = 36 := by
+  sorry
+
+end evaluate_expression_l79_79098
+
+
+namespace find_y1_y2_over_y0_l79_79157
+
+variable (p : ℝ) (h : 0 < p)
+variable (y1 y2 y0 : ℝ)
+variable (k : ℝ) (hk : k ≠ 0) 
+variable (A B : ℝ × ℝ) 
+variable (Focus : ℝ × ℝ := ((p / 2), 0))
+variable (P O : ℝ × ℝ) (hO : O = (0, 0)) (hy0_O : P ≠ O)
+variable (concyclic : circline.concyclic ({P, A, B, O} : finset (ℝ × ℝ)))
+variable (coords : A.2 = y1 ∧ B.2 = y2 ∧ P.2 = y0)
+
+theorem find_y1_y2_over_y0 :
+  (\frac{y1 + y2}{y0}) = 4 :=
+sorry
+
+end find_y1_y2_over_y0_l79_79157
+
+
+namespace average_salary_proof_l79_79447
+
+noncomputable def average_salary_of_all_workers (tech_workers : ℕ) (tech_avg_sal : ℕ) (total_workers : ℕ) (non_tech_avg_sal : ℕ) : ℕ :=
+  let non_tech_workers := total_workers - tech_workers
+  let total_tech_salary := tech_workers * tech_avg_sal
+  let total_non_tech_salary := non_tech_workers * non_tech_avg_sal
+  let total_salary := total_tech_salary + total_non_tech_salary
+  total_salary / total_workers
+
+theorem average_salary_proof : average_salary_of_all_workers 7 14000 28 6000 = 8000 := by
+  sorry
+
+end average_salary_proof_l79_79447
+
+
+namespace initial_number_of_girls_l79_79579
+
+theorem initial_number_of_girls (b g : ℤ) 
+  (h1 : b = 3 * (g - 20)) 
+  (h2 : 3 * (b - 30) = g - 20) : 
+  g = 31 :=
+by
+  sorry
+
+end initial_number_of_girls_l79_79579
+
+
+namespace profit_percentage_l79_79974
+
+theorem profit_percentage (cost_price marked_price : ℝ) (discount_rate : ℝ) 
+  (h1 : cost_price = 66.5) (h2 : marked_price = 87.5) (h3 : discount_rate = 0.05) : 
+  (100 * ((marked_price * (1 - discount_rate) - cost_price) / cost_price)) = 25 :=
+by
+  sorry
+
+end profit_percentage_l79_79974
+
+
+namespace order_DABC_l79_79232
+
+-- Definitions of the variables given in the problem
+def A : ℕ := 77^7
+def B : ℕ := 7^77
+def C : ℕ := 7^7^7
+def D : ℕ := Nat.factorial 7
+
+-- The theorem stating the required ascending order
+theorem order_DABC : D < A ∧ A < B ∧ B < C :=
+by sorry
+
+end order_DABC_l79_79232
+
+
+namespace arrangement_of_BANANA_l79_79546
+
+theorem arrangement_of_BANANA : 
+  (Nat.factorial 6) / ((Nat.factorial 3) * (Nat.factorial 2)) = 60 :=
+by
+  sorry
+
+end arrangement_of_BANANA_l79_79546
+
+
+namespace banana_permutations_l79_79543
+
+theorem banana_permutations : (Nat.factorial 6) / ((Nat.factorial 3) * (Nat.factorial 2)) = 60 := by
+  sorry
+
+end banana_permutations_l79_79543
+
+
+namespace BANANA_arrangements_l79_79519
+
+theorem BANANA_arrangements : 
+  (Nat.factorial 6) / ((Nat.factorial 3) * (Nat.factorial 2)) = 60 := by 
+  sorry
+
+end BANANA_arrangements_l79_79519
+
+
+namespace max_angle_OAB_l79_79164
+
+/-- Let OA = a, OB = b, and OM = x on the right angle XOY, where a < b. 
+    The value of x which maximizes the angle ∠AMB is sqrt(ab). -/
+theorem max_angle_OAB (a b x : ℝ) (h : a < b) (h1 : x = Real.sqrt (a * b)) :
+  x = Real.sqrt (a * b) :=
+sorry
+
+end max_angle_OAB_l79_79164
+
+
+namespace BANANA_arrangements_l79_79522
+
+theorem BANANA_arrangements : 
+  (Nat.factorial 6) / ((Nat.factorial 3) * (Nat.factorial 2)) = 60 := by 
+  sorry
+
+end BANANA_arrangements_l79_79522
+
+
+namespace problem_statement_l79_79008
+
+theorem problem_statement (x y : ℝ) (h : |x + 1| + |y + 2 * x| = 0) : (x + y) ^ 2004 = 1 := by
+  sorry
+
+end problem_statement_l79_79008
+
+
+namespace quadrilateral_inequality_l79_79767
+
+theorem quadrilateral_inequality
+  (AB AC BD CD: ℝ)
+  (h1 : AB + BD ≤ AC + CD)
+  (h2 : AB + CD < AC + BD) :
+  AB < AC := by
+  sorry
+
+end quadrilateral_inequality_l79_79767
+
+
+namespace projection_correct_l79_79576
+
+open Real
+
+def vec1 : Vector ℝ := ⟨[5, -3, 2]⟩
+def dir : Vector ℝ := ⟨[4, -3, 2]⟩
+
+noncomputable def projection : Vector ℝ :=
+  let dot_uv := vec1.dot_product dir
+  let dot_vv := dir.dot_product dir
+  let scalar := dot_uv / dot_vv
+  ⟨dir.1.map (λ x => x * scalar)⟩
+
+theorem projection_correct : projection = ⟨[132 / 29, -99 / 29, 66 / 29]⟩ := by
+  sorry
+
+end projection_correct_l79_79576
+
+
+namespace train_length_calculation_l79_79701
+
+noncomputable def train_length (speed_km_hr : ℕ) (time_sec : ℕ) : ℝ :=
+  (speed_km_hr * 1000 / 3600) * time_sec
+
+theorem train_length_calculation :
+  train_length 250 6 = 416.67 :=
+by
+  sorry
+
+end train_length_calculation_l79_79701
+
+
+namespace base_number_mod_100_l79_79194
+
+theorem base_number_mod_100 (base : ℕ) (h : base ^ 8 % 100 = 1) : base = 1 := 
+sorry
+
+end base_number_mod_100_l79_79194
+
+
+namespace number_of_rectangles_in_5x5_grid_l79_79000
+
+theorem number_of_rectangles_in_5x5_grid : 
+  let n := 5 in (n.choose 2) * (n.choose 2) = 100 :=
+by
+  sorry
+
+end number_of_rectangles_in_5x5_grid_l79_79000
+
+
+namespace hiking_time_l79_79626
+
+-- Define the conditions
+def Distance : ℕ := 12
+def Pace_up : ℕ := 4
+def Pace_down : ℕ := 6
+
+-- Statement to be proved
+theorem hiking_time (d : ℕ) (pu : ℕ) (pd : ℕ) (h₁ : d = Distance) (h₂ : pu = Pace_up) (h₃ : pd = Pace_down) :
+  d / pu + d / pd = 5 :=
+by sorry
+
+end hiking_time_l79_79626
+
+
+namespace seq_a8_value_l79_79499
+
+theorem seq_a8_value 
+  (a : ℕ → ℕ) 
+  (h1 : ∀ n : ℕ, a n < a (n + 1)) 
+  (h2 : ∀ n : ℕ, a (n + 2) = a (n + 1) + a n) 
+  (a7_eq : a 7 = 120) 
+  : a 8 = 194 :=
+sorry
+
+end seq_a8_value_l79_79499
+
+
+namespace gcd_78_36_l79_79669
+
+theorem gcd_78_36 : Nat.gcd 78 36 = 6 := 
+by
+  sorry
+
+end gcd_78_36_l79_79669
+
+
+namespace complex_division_example_l79_79308
+
+theorem complex_division_example : (2 : ℂ) / (I * (3 - I)) = (1 - 3 * I) / 5 := 
+by {
+  sorry
+}
+
+end complex_division_example_l79_79308
+
+
+namespace evaluate_expression_l79_79933
+
+theorem evaluate_expression : 6 + 4 / 2 = 8 :=
+by
+  sorry
+
+end evaluate_expression_l79_79933
+
+
+namespace sequence_geometric_sum_bn_l79_79112
+
+theorem sequence_geometric (a : ℕ → ℕ) (h_recurrence : ∀ n ≥ 2, (a n)^2 = (a (n - 1)) * (a (n + 1)))
+  (h_init1 : a 2 + 2 * a 1 = 4) (h_init2 : (a 3)^2 = a 5) : 
+  (∀ n, a n = 2^n) :=
+by sorry
+
+theorem sum_bn (a : ℕ → ℕ) (b : ℕ → ℕ) (S : ℕ → ℕ)
+  (h_recurrence : ∀ n ≥ 2, (a n)^2 = (a (n - 1)) * (a (n + 1)))
+  (h_init1 : a 2 + 2 * a 1 = 4) (h_init2 : (a 3)^2 = a 5) 
+  (h_gen : ∀ n, a n = 2^n) (h_bn : ∀ n, b n = n * a n) :
+  (∀ n, S n = (n-1) * 2^(n+1) + 2) :=
+by sorry
+
+end sequence_geometric_sum_bn_l79_79112
+
+
+namespace pyarelal_loss_l79_79057
+
+theorem pyarelal_loss (total_loss : ℝ) (P : ℝ) (Ashok_capital : ℝ) (ratio_Ashok_Pyarelal : ℝ) :
+  total_loss = 670 →
+  Ashok_capital = P / 9 →
+  ratio_Ashok_Pyarelal = 1 / 9 →
+  Pyarelal_loss = 603 :=
+by
+  intro total_loss_eq Ashok_capital_eq ratio_eq
+  sorry
+
+end pyarelal_loss_l79_79057
+
+
+namespace smallest_circle_area_l79_79055
+
+/-- The smallest possible area of a circle passing through two given points in the coordinate plane. -/
+theorem smallest_circle_area (P Q : ℝ × ℝ) (hP : P = (-3, -2)) (hQ : Q = (2, 4)) : 
+  ∃ (A : ℝ), A = (61 * Real.pi) / 4 :=
+by
+  sorry
+
+end smallest_circle_area_l79_79055
+
+
+namespace baby_polar_bear_playing_hours_l79_79415
+
+-- Define the conditions
+def total_hours_in_a_day : ℕ := 24
+def total_central_angle : ℕ := 360
+def angle_sleeping : ℕ := 130
+def angle_eating : ℕ := 110
+
+-- Main theorem statement
+theorem baby_polar_bear_playing_hours :
+  let angle_playing := total_central_angle - angle_sleeping - angle_eating
+  let fraction_playing := angle_playing / total_central_angle
+  let hours_playing := fraction_playing * total_hours_in_a_day
+  hours_playing = 8 := by
+  sorry
+
+end baby_polar_bear_playing_hours_l79_79415
+
+
+namespace condition_A_condition_B_condition_C_condition_D_correct_answer_l79_79310
+
+theorem condition_A : ∀ x : ℝ, x^2 + 2 * x - 1 ≠ x * (x + 2) - 1 := sorry
+
+theorem condition_B : ∀ a b : ℝ, (a + b)^2 = a^2 + 2 * a * b + b^2 := sorry
+
+theorem condition_C : ∀ x y : ℝ, x^2 - 4 * y^2 = (x + 2 * y) * (x - 2 * y) := sorry
+
+theorem condition_D : ∀ a b : ℝ, a^2 - a * b - a ≠ a * (a - b) := sorry
+
+theorem correct_answer : ∀ x y : ℝ, (x^2 - 4 * y^2) = (x + 2 * y) * (x - 2 * y) := 
+  by 
+    exact condition_C
+
+end condition_A_condition_B_condition_C_condition_D_correct_answer_l79_79310
+
+
+namespace coplanar_lines_l79_79331
+
+def vector3 := ℝ × ℝ × ℝ
+
+def vec1 : vector3 := (2, -1, 3)
+def vec2 (k : ℝ) : vector3 := (3 * k, 1, 2)
+def pointVec : vector3 := (-3, 2, -3)
+
+def det3x3 (a b c d e f g h i : ℝ) : ℝ :=
+  a * (e * i - f * h) - b * (d * i - f * g) + c * (d * h - e * g)
+
+theorem coplanar_lines (k : ℝ) : det3x3 2 (-1) 3 (3 * k) 1 2 (-3) 2 (-3) = 0 → k = -29 / 9 :=
+  sorry
+
+end coplanar_lines_l79_79331
+
+
+namespace hiking_time_l79_79627
+
+-- Define the conditions
+def Distance : ℕ := 12
+def Pace_up : ℕ := 4
+def Pace_down : ℕ := 6
+
+-- Statement to be proved
+theorem hiking_time (d : ℕ) (pu : ℕ) (pd : ℕ) (h₁ : d = Distance) (h₂ : pu = Pace_up) (h₃ : pd = Pace_down) :
+  d / pu + d / pd = 5 :=
+by sorry
+
+end hiking_time_l79_79627
+
+
+namespace correct_time_after_2011_minutes_l79_79200
+
+def time_2011_minutes_after_midnight : String :=
+  "2011 minutes after midnight on January 1, 2011 is January 2 at 9:31AM"
+
+theorem correct_time_after_2011_minutes :
+  time_2011_minutes_after_midnight = "2011 minutes after midnight on January 1, 2011 is January 2 at 9:31AM" :=
+sorry
+
+end correct_time_after_2011_minutes_l79_79200
+
+
+namespace travel_time_l79_79220
+
+theorem travel_time (distance speed : ℕ) (h_distance : distance = 810) (h_speed : speed = 162) :
+  distance / speed = 5 :=
+by
+  sorry
+
+end travel_time_l79_79220
+
+
+namespace binom_12_11_eq_12_l79_79510
+
+theorem binom_12_11_eq_12 : nat.choose 12 11 = 12 := by
+  sorry
+
+end binom_12_11_eq_12_l79_79510
+
+
+namespace elizabeth_net_profit_l79_79097
+
+-- Define the conditions
+def cost_per_bag : ℝ := 3.00
+def bags_produced : ℕ := 20
+def selling_price_per_bag : ℝ := 6.00
+def bags_sold_full_price : ℕ := 15
+def discount_percentage : ℝ := 0.25
+
+-- Define the net profit computation
+def net_profit : ℝ :=
+  let revenue_full_price := bags_sold_full_price * selling_price_per_bag
+  let remaining_bags := bags_produced - bags_sold_full_price
+  let discounted_price_per_bag := selling_price_per_bag * (1 - discount_percentage)
+  let revenue_discounted := remaining_bags * discounted_price_per_bag
+  let total_revenue := revenue_full_price + revenue_discounted
+  let total_cost := bags_produced * cost_per_bag
+  total_revenue - total_cost
+
+theorem elizabeth_net_profit : net_profit = 52.50 := by
+  sorry
+
+end elizabeth_net_profit_l79_79097
+
+
+namespace simplify_sqrt_product_l79_79917
+
+theorem simplify_sqrt_product :
+  sqrt 18 * sqrt 72 = 36 :=
+sorry
+
+end simplify_sqrt_product_l79_79917
+
+
+namespace binom_identity1_binom_identity2_l79_79037
+
+variable (n k : ℕ)
+
+theorem binom_identity1 (hn : n > 0) (hk : k > 0) :
+  (Nat.choose n k) + (Nat.choose n (k + 1)) = (Nat.choose (n + 1) (k + 1)) :=
+sorry
+
+theorem binom_identity2 (hn : n > 0) (hk : k > 0) :
+  (Nat.choose n k) = (n * Nat.choose (n - 1) (k - 1)) / k :=
+sorry
+
+end binom_identity1_binom_identity2_l79_79037
+
+
+namespace problem_statement_l79_79859
+
+theorem problem_statement (k x₁ x₂ : ℝ) (hx₁x₂ : x₁ < x₂)
+  (h_eq : ∀ x : ℝ, x^2 - (k - 3) * x + (k + 4) = 0) 
+  (P : ℝ) (hP : P ≠ 0) 
+  (α β : ℝ) (hα : 0 < α ∧ α < π / 2) (hβ : 0 < β ∧ β < π / 2) 
+  (hacute : ∀ A B : ℝ, A = x₁ ∧ B = x₂ ∧ A < 0 ∧ B > 0) :
+  k < -4 ∧ α ≠ β ∧ α < β := 
+sorry
+
+end problem_statement_l79_79859
+
+
+namespace solve_xyz_eq_x_plus_y_l79_79919
+
+theorem solve_xyz_eq_x_plus_y (x y z : ℕ) (h1 : x * y * z = x + y) (h2 : x ≤ y) : (x = 2 ∧ y = 2 ∧ z = 1) ∨ (x = 1 ∧ y = 1 ∧ z = 2) :=
+by {
+    sorry -- The actual proof goes here
+}
+
+end solve_xyz_eq_x_plus_y_l79_79919
+
+
+namespace flour_needed_l79_79774
+
+-- Definitions
+def cups_per_loaf := 2.5
+def loaves := 2
+
+-- Statement we want to prove
+theorem flour_needed {cups_per_loaf loaves : ℝ} (h : cups_per_loaf = 2.5) (l : loaves = 2) : 
+  cups_per_loaf * loaves = 5 :=
+sorry
+
+end flour_needed_l79_79774
+
+
+namespace range_of_x_l79_79992
+
+variable {x p : ℝ}
+
+theorem range_of_x (H : 0 ≤ p ∧ p ≤ 4) : 
+  (x^2 + p * x > 4 * x + p - 3) ↔ (x ∈ Set.Iio (-1) ∪ Set.Ioi 3) := 
+by
+  sorry
+
+end range_of_x_l79_79992
+
+
+namespace books_from_first_shop_l79_79036
+
+theorem books_from_first_shop (x : ℕ) (h : (2080 : ℚ) / (x + 50) = 18.08695652173913) : x = 65 :=
+by
+  -- proof steps
+  sorry
+
+end books_from_first_shop_l79_79036
+
+
+namespace find_second_number_l79_79322
+
+def sum_of_three (a b c : ℚ) : Prop :=
+  a + b + c = 120
+
+def ratio_first_to_second (a b : ℚ) : Prop :=
+  a / b = 3 / 4
+
+def ratio_second_to_third (b c : ℚ) : Prop :=
+  b / c = 3 / 5
+
+theorem find_second_number (a b c : ℚ) 
+  (h_sum : sum_of_three a b c)
+  (h_ratio_ab : ratio_first_to_second a b)
+  (h_ratio_bc : ratio_second_to_third b c) : 
+  b = 1440 / 41 := 
+sorry
+
+end find_second_number_l79_79322
+
+
+namespace randy_biscuits_left_l79_79641
+
+-- Define the function biscuits_left
+def biscuits_left (initial: ℚ) (father_gift: ℚ) (mother_gift: ℚ) (brother_eat_percent: ℚ) : ℚ :=
+  let total_before_eat := initial + father_gift + mother_gift
+  let brother_ate := brother_eat_percent * total_before_eat
+  total_before_eat - brother_ate
+
+-- Given conditions
+def initial_biscuits : ℚ := 32
+def father_gift : ℚ := 2 / 3
+def mother_gift : ℚ := 15
+def brother_eat_percent : ℚ := 0.3
+
+-- Correct answer as an approximation since we're dealing with real-world numbers
+def approx (x y : ℚ) := abs (x - y) < 0.01
+
+-- The proof problem statement in Lean 4
+theorem randy_biscuits_left :
+  approx (biscuits_left initial_biscuits father_gift mother_gift brother_eat_percent) 33.37 :=
+by
+  sorry
+
+end randy_biscuits_left_l79_79641
+
+
+namespace polynomial_coefficients_sum_l79_79256
+
+theorem polynomial_coefficients_sum (a_0 a_1 a_2 a_3 a_4 a_5 : ℝ) :
+  (2*x - 3)^5 = a_0 + a_1*x + a_2*x^2 + a_3*x^3 + a_4*x^4 + a_5*x^5 →
+  a_1 + 2 * a_2 + 3 * a_3 + 4 * a_4 + 5 * a_5 = 160 :=
+by
+  sorry
+
+end polynomial_coefficients_sum_l79_79256
+
+
+namespace parallelogram_circumference_l79_79665
+
+-- Defining the conditions
+def isParallelogram (a b : ℕ) := a = 18 ∧ b = 12
+
+-- The theorem statement to prove
+theorem parallelogram_circumference (a b : ℕ) (h : isParallelogram a b) : 2 * (a + b) = 60 :=
+  by
+  -- Extract the conditions from hypothesis
+  cases h with
+  | intro hab' hab'' =>
+    sorry
+
+end parallelogram_circumference_l79_79665
+
+
+namespace unique_solution_l79_79248
+
+theorem unique_solution (x : ℝ) : (2:ℝ)^x + (3:ℝ)^x + (6:ℝ)^x = (7:ℝ)^x ↔ x = 2 :=
+by
+  sorry
+
+end unique_solution_l79_79248
+
+
+namespace probability_two_same_color_l79_79802
+
+-- Definitions based on conditions
+def total_pairs := 14
+def blue_pairs := 8
+def red_pairs := 4
+def green_pairs := 2
+
+def total_socks := 2 * total_pairs
+def blue_socks := 2 * blue_pairs
+def red_socks := 2 * red_pairs
+def green_socks := 2 * green_pairs
+
+-- Statement to prove: the probability that two randomly picked socks are of the same color
+theorem probability_two_same_color : 
+  ( (blue_socks * (blue_socks - 1) + red_socks * (red_socks - 1) + green_socks * (green_socks - 1)) / (total_socks * (total_socks - 1)) = (77 / 189 : ℚ) ) :=
+begin
+  sorry
+end
+
+end probability_two_same_color_l79_79802
+
+
+namespace max_colors_l79_79459
+
+theorem max_colors (n : ℕ) (color : ℕ → ℕ → ℕ)
+  (h_color_property : ∀ i j : ℕ, i < 2^n → j < 2^n → color i j = color j ((i + j) % 2^n)) :
+  ∃ (c : ℕ), c ≤ 2^n ∧ (∀ i j : ℕ, i < 2^n → j < 2^n → color i j < c) :=
+sorry
+
+end max_colors_l79_79459
+
+
+namespace martin_total_distance_l79_79570
+
+noncomputable def calculate_distance_traveled : ℕ :=
+  let segment1 := 70 * 3 -- 210 km
+  let segment2 := 80 * 4 -- 320 km
+  let segment3 := 65 * 3 -- 195 km
+  let segment4 := 50 * 2 -- 100 km
+  let segment5 := 90 * 4 -- 360 km
+  segment1 + segment2 + segment3 + segment4 + segment5
+
+theorem martin_total_distance : calculate_distance_traveled = 1185 :=
+by
+  sorry
+
+end martin_total_distance_l79_79570
+
+
+namespace distinct_arrangements_of_BANANA_l79_79557
+
+theorem distinct_arrangements_of_BANANA :
+  let total_letters := 6
+  let freq_A := 3
+  let freq_N := 2
+  let freq_B := 1
+  (nat.factorial total_letters) / (nat.factorial freq_A * nat.factorial freq_N * nat.factorial freq_B) = 60 :=
+by
+  sorry
+
+end distinct_arrangements_of_BANANA_l79_79557
+
+
+namespace tom_trip_cost_l79_79936
+
+-- Definitions of hourly rates
+def rate_6AM_to_10AM := 10
+def rate_10AM_to_2PM := 12
+def rate_2PM_to_6PM := 15
+def rate_6PM_to_10PM := 20
+
+-- Definitions of trip start times and durations
+def first_trip_start := 8
+def second_trip_start := 14
+def third_trip_start := 20
+
+-- Function to calculate the cost for each trip segment
+def cost (start_hour : Nat) (duration : Nat) : Nat :=
+  if start_hour >= 6 ∧ start_hour < 10 then duration * rate_6AM_to_10AM
+  else if start_hour >= 10 ∧ start_hour < 14 then duration * rate_10AM_to_2PM
+  else if start_hour >= 14 ∧ start_hour < 18 then duration * rate_2PM_to_6PM
+  else if start_hour >= 18 ∧ start_hour < 22 then duration * rate_6PM_to_10PM
+  else 0
+
+-- Function to calculate the total trip cost
+def total_cost : Nat :=
+  cost first_trip_start 2 + cost (first_trip_start + 2) 2 +
+  cost second_trip_start 4 +
+  cost third_trip_start 4
+
+-- Proof statement
+theorem tom_trip_cost : total_cost = 184 := by
+  -- The detailed steps of the proof would go here. Replaced with 'sorry' presently to indicate incomplete proof.
+  sorry
+
+end tom_trip_cost_l79_79936
+
+
+namespace find_value_of_expression_l79_79792
+
+theorem find_value_of_expression (y : ℝ) (h : 6 * y^2 + 7 = 4 * y + 13) : (12 * y - 5)^2 = 161 :=
+sorry
+
+end find_value_of_expression_l79_79792
+
+
+namespace BANANA_arrangements_l79_79517
+
+theorem BANANA_arrangements : 
+  let total_letters := 6
+  let A_count := 3
+  let N_count := 2
+  (Nat.factorial total_letters) / (Nat.factorial A_count * Nat.factorial N_count) = 60 := 
+by 
+  let total_letters := 6
+  let A_count := 3
+  let N_count := 2
+  sorry
+
+end BANANA_arrangements_l79_79517
+
+
+namespace product_of_two_numbers_l79_79788
+
+theorem product_of_two_numbers (x y : ℝ) (h1 : x - y = 6) (h2 : x^2 + y^2 = 170) : x * y = -67 := 
+by 
+  sorry
+
+end product_of_two_numbers_l79_79788
+
+
+namespace total_profit_is_27_l79_79437
+
+noncomputable def total_profit : ℕ :=
+  let natasha_money := 60
+  let carla_money := natasha_money / 3
+  let cosima_money := carla_money / 2
+  let sergio_money := 3 * cosima_money / 2
+
+  let natasha_spent := 4 * 15
+  let carla_spent := 6 * 10
+  let cosima_spent := 5 * 8
+  let sergio_spent := 3 * 12
+
+  let natasha_profit := natasha_spent * 10 / 100
+  let carla_profit := carla_spent * 15 / 100
+  let cosima_profit := cosima_spent * 12 / 100
+  let sergio_profit := sergio_spent * 20 / 100
+
+  natasha_profit + carla_profit + cosima_profit + sergio_profit
+
+theorem total_profit_is_27 : total_profit = 27 := by
+  sorry
+
+end total_profit_is_27_l79_79437
+
+
+namespace unique_solution_l79_79247
+
+theorem unique_solution (x : ℝ) : (2:ℝ)^x + (3:ℝ)^x + (6:ℝ)^x = (7:ℝ)^x ↔ x = 2 :=
+by
+  sorry
+
+end unique_solution_l79_79247
+
+
+namespace solution_is_63_l79_79939
+
+def is_prime (n : ℕ) : Prop := n > 1 ∧ (∀ m : ℕ, m ∣ n → m = 1 ∨ m = n)
+def last_digit (n : ℕ) : ℕ := n % 10
+def rhyming_primes_around (r : ℕ) : Prop :=
+  r >= 1 ∧ r <= 100 ∧
+  ¬ is_prime r ∧
+  ∃ ps : List ℕ, (∀ p ∈ ps, is_prime p ∧ last_digit p = last_digit r) ∧
+  (∀ q : ℕ, is_prime q ∧ last_digit q = last_digit r → q ∈ ps) ∧
+  List.length ps = 4
+
+theorem solution_is_63 : ∃ r : ℕ, rhyming_primes_around r ∧ r = 63 :=
+by sorry
+
+end solution_is_63_l79_79939
+
+
+namespace relationship_l79_79909
+
+-- Definitions for the points on the inverse proportion function
+def on_inverse_proportion (x : ℝ) (y : ℝ) : Prop :=
+  y = -6 / x
+
+-- Given conditions
+def A (y1 : ℝ) : Prop :=
+  on_inverse_proportion (-3) y1
+
+def B (y2 : ℝ) : Prop :=
+  on_inverse_proportion (-1) y2
+
+def C (y3 : ℝ) : Prop :=
+  on_inverse_proportion (2) y3
+
+-- The theorem that expresses the relationship
+theorem relationship (y1 y2 y3 : ℝ) (hA : A y1) (hB : B y2) (hC : C y3) : y3 < y1 ∧ y1 < y2 :=
+by
+  -- skeleton of proof
+  sorry
+
+end relationship_l79_79909
+
+
+namespace count_perfect_cubes_l79_79394
+
+theorem count_perfect_cubes (a b : ℤ) (h₁ : 100 < a) (h₂ : b < 1000) : 
+  ∃ n m : ℤ, (n^3 > 100 ∧ m^3 < 1000) ∧ m - n + 1 = 5 := 
+by
+  -- The proof is omitted and replaced with sorry.
+  sorry
+
+end count_perfect_cubes_l79_79394
+
+
+namespace total_feathers_needed_l79_79105
+
+theorem total_feathers_needed
+  (animals_first_group : ℕ := 934)
+  (feathers_first_group : ℕ := 7)
+  (animals_second_group : ℕ := 425)
+  (colored_feathers_second_group : ℕ := 7)
+  (golden_feathers_second_group : ℕ := 5)
+  (animals_third_group : ℕ := 289)
+  (colored_feathers_third_group : ℕ := 4)
+  (golden_feathers_third_group : ℕ := 10) :
+  (animals_first_group * feathers_first_group) +
+  (animals_second_group * (colored_feathers_second_group + golden_feathers_second_group)) +
+  (animals_third_group * (colored_feathers_third_group + golden_feathers_third_group)) = 15684 := by
+  sorry
+
+end total_feathers_needed_l79_79105
+
+
+namespace exists_quadratic_sequence_for_any_b_c_smallest_n_for_quadratic_sequence_0_to_2021_l79_79071
+
+noncomputable def quadratic_sequence (n : ℕ) (a : ℕ → ℤ) :=
+  ∀i : ℕ, 1 ≤ i ∧ i ≤ n → abs (a i - a (i - 1)) = i * i
+
+theorem exists_quadratic_sequence_for_any_b_c (b c : ℤ) :
+  ∃ (n : ℕ) (a : ℕ → ℤ), a 0 = b ∧ a n = c ∧ quadratic_sequence n a := by
+  sorry
+
+theorem smallest_n_for_quadratic_sequence_0_to_2021 :
+  ∃ n : ℕ, 0 < n ∧ ∀ (a : ℕ → ℤ), a 0 = 0 → a n = 2021 → quadratic_sequence n a := by
+  sorry
+
+end exists_quadratic_sequence_for_any_b_c_smallest_n_for_quadratic_sequence_0_to_2021_l79_79071
+
+
+namespace inequality_holds_l79_79300
+
+theorem inequality_holds (x y z : ℝ) (hx : 0 < x) (hy : 0 < y) (hz : 0 < z) :
+  (x^3 / (y * z)) + (y^3 / (z * x)) + (z^3 / (x * y)) ≥ x + y + z :=
+by
+  sorry
+
+end inequality_holds_l79_79300
+
+
+namespace permutations_of_BANANA_l79_79525
+
+/-- The number of distinct permutations of the word "BANANA" is 60. -/
+theorem permutations_of_BANANA : (Nat.factorial 6 / (Nat.factorial 3 * Nat.factorial 2 * Nat.factorial 1)) = 60 := by
+  sorry
+
+end permutations_of_BANANA_l79_79525
+
+
+namespace product_of_0_5_and_0_8_l79_79376
+
+theorem product_of_0_5_and_0_8 : (0.5 * 0.8) = 0.4 := by
+  sorry
+
+end product_of_0_5_and_0_8_l79_79376
+
+
+namespace remaining_money_l79_79826
+
+def initial_amount : Float := 499.9999999999999
+
+def spent_on_clothes (initial : Float) : Float :=
+  (1/3) * initial
+
+def remaining_after_clothes (initial : Float) : Float :=
+  initial - spent_on_clothes initial
+
+def spent_on_food (remaining_clothes : Float) : Float :=
+  (1/5) * remaining_clothes
+
+def remaining_after_food (remaining_clothes : Float) : Float :=
+  remaining_clothes - spent_on_food remaining_clothes
+
+def spent_on_travel (remaining_food : Float) : Float :=
+  (1/4) * remaining_food
+
+def remaining_after_travel (remaining_food : Float) : Float :=
+  remaining_food - spent_on_travel remaining_food
+
+theorem remaining_money :
+  remaining_after_travel (remaining_after_food (remaining_after_clothes initial_amount)) = 199.99 :=
+by
+  sorry
+
+end remaining_money_l79_79826
+
+
+namespace days_of_harvest_l79_79871
+
+-- Conditions
+def ripeOrangesPerDay : ℕ := 82
+def totalRipeOranges : ℕ := 2050
+
+-- Problem statement: Prove the number of days of harvest
+theorem days_of_harvest : (totalRipeOranges / ripeOrangesPerDay) = 25 :=
+by
+  sorry
+
+end days_of_harvest_l79_79871
+
+
+namespace tan_half_angle_eq_neg2_l79_79430
+
+-- Given conditions
+variable (a : ℝ) (ha : a ∈ Set.Ioo (π / 2) π) (hcos : Real.cos a = -3 / 5)
+
+-- Theorem statement
+theorem tan_half_angle_eq_neg2 : Real.tan (a / 2) = -2 :=
+sorry
+
+end tan_half_angle_eq_neg2_l79_79430
+
+
+namespace repeating_decimal_rational_representation_l79_79490
+
+theorem repeating_decimal_rational_representation :
+  (0.12512512512512514 : ℝ) = (125 / 999 : ℝ) :=
+sorry
+
+end repeating_decimal_rational_representation_l79_79490
+
+
+namespace total_amount_paid_l79_79638
+
+-- Definitions based on the conditions in step a)
+def ring_cost : ℕ := 24
+def ring_quantity : ℕ := 2
+
+-- Statement to prove that the total cost is $48.
+theorem total_amount_paid : ring_quantity * ring_cost = 48 := 
+by
+  sorry
+
+end total_amount_paid_l79_79638
+
+
+namespace solve_equation_l79_79920
+
+theorem solve_equation (x y z : ℤ) (h : 19 * (x + y) + z = 19 * (-x + y) - 21) (hx : x = 1) : z = -59 := by
+  sorry
+
+end solve_equation_l79_79920
+
+
+namespace add_least_number_l79_79044
+
+theorem add_least_number (n : ℕ) (h1 : n = 1789) (h2 : ∃ k : ℕ, 5 * k = n + 11) (h3 : ∃ j : ℕ, 6 * j = n + 11) (h4 : ∃ m : ℕ, 4 * m = n + 11) (h5 : ∃ l : ℕ, 11 * l = n + 11) : 11 = 11 :=
+by
+  sorry
+
+end add_least_number_l79_79044
+
+
+namespace paving_stones_correct_l79_79738
+
+def paving_stone_area : ℕ := 3 * 2
+def courtyard_breadth : ℕ := 6
+def number_of_paving_stones : ℕ := 15
+def courtyard_length : ℕ := 15
+
+theorem paving_stones_correct : 
+  number_of_paving_stones * paving_stone_area = courtyard_length * courtyard_breadth :=
+by
+  sorry
+
+end paving_stones_correct_l79_79738
+
+
+namespace bhanu_house_rent_l79_79090
+
+theorem bhanu_house_rent (I : ℝ) 
+  (h1 : 0.30 * I = 300) 
+  (h2 : 210 = 210) : 
+  210 / (I - 300) = 0.30 := 
+by 
+  sorry
+
+end bhanu_house_rent_l79_79090
+
+
+namespace percentage_reduction_in_production_l79_79070
+
+theorem percentage_reduction_in_production :
+  let daily_production_rate := 10
+  let days_in_year := 365
+  let total_production_first_year := daily_production_rate * days_in_year
+  let total_production_second_year := 3285
+  let reduction_in_production := total_production_first_year - total_production_second_year
+  let percentage_reduction := (reduction_in_production * 100) / total_production_first_year
+  percentage_reduction = 10 :=
+by
+  let daily_production_rate := 10
+  let days_in_year := 365
+  let total_production_first_year := daily_production_rate * days_in_year
+  let total_production_second_year := 3285
+  let reduction_in_production := total_production_first_year - total_production_second_year
+  let percentage_reduction := (reduction_in_production * 100) / total_production_first_year
+  sorry
+
+end percentage_reduction_in_production_l79_79070
+
+
+namespace books_left_on_Fri_l79_79811
+
+-- Define the conditions as constants or values
+def books_at_beginning : ℕ := 98
+def books_checked_out_Wed : ℕ := 43
+def books_returned_Thu : ℕ := 23
+def books_checked_out_Thu : ℕ := 5
+def books_returned_Fri : ℕ := 7
+
+-- The proof statement to verify the final number of books
+theorem books_left_on_Fri (b : ℕ) :
+  b = (books_at_beginning - books_checked_out_Wed) + books_returned_Thu - books_checked_out_Thu + books_returned_Fri := 
+  sorry
+
+end books_left_on_Fri_l79_79811
+
+
+namespace blue_balls_taken_out_l79_79801
+
+theorem blue_balls_taken_out (x : ℕ) :
+  ∀ (total_balls : ℕ) (initial_blue_balls : ℕ)
+    (remaining_probability : ℚ),
+    total_balls = 25 ∧ initial_blue_balls = 9 ∧ remaining_probability = 1/5 →
+    (9 - x : ℚ) / (25 - x : ℚ) = 1/5 →
+    x = 5 :=
+by
+  intros total_balls initial_blue_balls remaining_probability
+  rintro ⟨h_total_balls, h_initial_blue_balls, h_remaining_probability⟩ h_eq
+  -- Proof goes here
+  sorry
+
+end blue_balls_taken_out_l79_79801
+
+
+namespace intersection_complement_l79_79391
+
+open Set
+
+variable (x : ℝ)
+
+def M : Set ℝ := { x | -1 < x ∧ x < 2 }
+def N : Set ℝ := { x | 1 ≤ x }
+
+theorem intersection_complement :
+  M ∩ (univ \ N) = { x | -1 < x ∧ x < 1 } := by
+  sorry
+
+end intersection_complement_l79_79391
+
+
+namespace train_length_proof_l79_79967
+
+noncomputable def train_length (speed_km_per_hr : ℝ) (time_sec : ℝ) : ℝ :=
+  let speed_m_per_s := (speed_km_per_hr * 1000) / 3600 in
+  speed_m_per_s * time_sec
+
+theorem train_length_proof :
+  train_length 60 6 = 100.02 :=
+by
+  sorry
+
+end train_length_proof_l79_79967
+
+
+namespace interest_rate_is_10_percent_l79_79963
+
+theorem interest_rate_is_10_percent
+  (principal : ℝ)
+  (interest_rate_c : ℝ) 
+  (time : ℝ)
+  (gain_b : ℝ)
+  (interest_c : ℝ := principal * interest_rate_c / 100 * time)
+  (interest_a : ℝ := interest_c - gain_b)
+  (expected_rate : ℝ := (interest_a / (principal * time)) * 100)
+  (h1: principal = 3500)
+  (h2: interest_rate_c = 12)
+  (h3: time = 3)
+  (h4: gain_b = 210)
+  : expected_rate = 10 := 
+  by 
+  sorry
+
+end interest_rate_is_10_percent_l79_79963
+
+
+namespace find_first_dimension_l79_79696
+
+variable (w h cost_per_sqft total_cost : ℕ)
+
+def surface_area (l w h : ℕ) : ℕ := 2 * l * w + 2 * l * h + 2 * w * h
+
+def insulation_cost (A cost_per_sqft : ℕ) : ℕ := A * cost_per_sqft
+
+theorem find_first_dimension 
+  (w := 7) (h := 2) (cost_per_sqft := 20) (total_cost := 1640) : 
+  (∃ l : ℕ, insulation_cost (surface_area l w h) cost_per_sqft = total_cost) → 
+  l = 3 := 
+sorry
+
+end find_first_dimension_l79_79696
+
+
+namespace mean_equality_and_find_y_l79_79315
+
+theorem mean_equality_and_find_y : 
+  (8 + 9 + 18) / 3 = (15 + (25 / 3)) / 2 :=
+by
+  sorry
+
+end mean_equality_and_find_y_l79_79315
+
+
+namespace banana_arrangement_count_l79_79549
+
+theorem banana_arrangement_count :
+  let word := "BANANA"
+  let length_word := 6
+  let a_count := 3
+  let n_count := 2
+  (length_word)! / (a_count! * n_count!) = 60 := by
+  sorry
+
+end banana_arrangement_count_l79_79549
+
+
+namespace arrangement_of_BANANA_l79_79545
+
+theorem arrangement_of_BANANA : 
+  (Nat.factorial 6) / ((Nat.factorial 3) * (Nat.factorial 2)) = 60 :=
+by
+  sorry
+
+end arrangement_of_BANANA_l79_79545
+
+
+namespace cows_horses_ratio_l79_79500
+
+theorem cows_horses_ratio (cows horses : ℕ) (h : cows = 21) (ratio : cows / horses = 7 / 2) : horses = 6 :=
+sorry
+
+end cows_horses_ratio_l79_79500
+
+
+namespace factor_poly_l79_79400
+
+theorem factor_poly (P Q : ℝ) (h1 : ∃ b c : ℝ, 
+  (x^2 + 3*x + 7) * (x^2 + b*x + c) = x^4 + P*x^2 + Q)
+  : P + Q = 50 :=
+sorry
+
+end factor_poly_l79_79400
+
+
+namespace sum_of_integers_ending_in_2_between_100_and_600_l79_79362
+
+theorem sum_of_integers_ending_in_2_between_100_and_600 :
+  let a := 102
+  let d := 10
+  let l := 592
+  let n := (l - a) / d + 1
+  ∃ S : ℤ, S = n * (a + l) / 2 ∧ S = 17350 := 
+by
+  let a := 102
+  let d := 10
+  let l := 592
+  let n := (l - a) / d + 1
+  use n * (a + l) / 2
+  sorry
+
+end sum_of_integers_ending_in_2_between_100_and_600_l79_79362
+
+
+namespace wheel_rpm_l79_79209
+
+noncomputable def radius : ℝ := 175
+noncomputable def speed_kmh : ℝ := 66
+noncomputable def speed_cmm := speed_kmh * 100000 / 60 -- convert from km/h to cm/min
+noncomputable def circumference := 2 * Real.pi * radius -- circumference of the wheel
+noncomputable def rpm := speed_cmm / circumference -- revolutions per minute
+
+theorem wheel_rpm : rpm = 1000 := by
+  sorry
+
+end wheel_rpm_l79_79209
+
+
+namespace arithmetic_seq_solution_l79_79731
+
+variable {a : ℕ → ℝ}
+variable {S : ℕ → ℝ}
+variable {d : ℝ}
+
+-- Definition of arithmetic sequence
+def arithmetic_seq (a : ℕ → ℝ) (d : ℝ) : Prop :=
+  ∀ n : ℕ, a (n + 1) = a n + d
+
+-- Sum of first n terms of arithmetic sequence
+def sum_arithmetic_seq (S : ℕ → ℝ) (a : ℕ → ℝ) : Prop :=
+  ∀ n : ℕ, S n = (n + 1) / 2 * (a 0 + a n)
+
+-- Given conditions
+def given_conditions (a : ℕ → ℝ) : Prop :=
+  a 0 + a 4 + a 8 = 27
+
+-- Main theorem to be proved
+theorem arithmetic_seq_solution (a : ℕ → ℝ) (S : ℕ → ℝ) (d : ℝ)
+  (ha : arithmetic_seq a d)
+  (hs : sum_arithmetic_seq S a)
+  (h_given : given_conditions a) :
+  a 4 = 9 ∧ S 8 = 81 :=
+sorry
+
+end arithmetic_seq_solution_l79_79731
+
+
+namespace find_b_l79_79452
+
+def point := ℝ × ℝ
+
+def dir_vector (p1 p2 : point) : point := (p2.1 - p1.1, p2.2 - p1.2)
+
+def scale_vector (v : point) (s : ℝ) : point := (s * v.1, s * v.2)
+
+theorem find_b (p1 p2 : point) (b : ℝ) :
+  p1 = (-5, 0) → p2 = (-2, 2) →
+  dir_vector p1 p2 = (3, 2) →
+  scale_vector (3, 2) (2 / 3) = (2, b) →
+  b = 4 / 3 :=
+by
+  intros h1 h2 h3 h4
+  sorry
+
+end find_b_l79_79452
+
+
+namespace min_value_fraction_l79_79253
+
+theorem min_value_fraction (x : ℝ) (h : x > 0) : ∃ y, y = 4 ∧ (∀ z, z = (x + 5) / Real.sqrt (x + 1) → y ≤ z) := sorry
+
+end min_value_fraction_l79_79253
+
+
+namespace arithmetic_sequence_sum_l79_79903
+
+def f (x : ℝ) : ℝ := (x - 3) ^ 3 + x - 1
+
+-- Define the arithmetic sequence
+def is_arithmetic_sequence (a : ℕ → ℝ) : Prop :=
+  ∃ d ≠ 0, ∀ n : ℕ, a (n + 1) = a n + d
+
+-- Problem Statement
+theorem arithmetic_sequence_sum 
+  (a : ℕ → ℝ) 
+  (h_arith : is_arithmetic_sequence a) 
+  (h_f_sum : f (a 1) + f (a 2) + f (a 3) + f (a 4) + f (a 5) + f (a 6) + f (a 7) = 14) : 
+  a 1 + a 2 + a 3 + a 4 + a 5 + a 6 + a 7 = 21 :=
+sorry
+
+end arithmetic_sequence_sum_l79_79903
+
+
+namespace card_toss_sum_one_probability_l79_79470
+
+noncomputable def cardTossProbability : ℂ :=
+  let outcomes := [{0, 0}, {0, 1}, {1, 0}, {1, 1}] in
+  let favorable := [0, 1] ∪ [1, 0] in
+  (favorable.length / outcomes.length : ℂ)
+
+theorem card_toss_sum_one_probability :
+  cardTossProbability = 1/2 :=
+sorry
+
+end card_toss_sum_one_probability_l79_79470
+
+
+namespace sum_of_interior_angles_of_polygon_l79_79744
+
+theorem sum_of_interior_angles_of_polygon (exterior_angle : ℝ) (h : exterior_angle = 36) :
+  ∃ interior_sum : ℝ, interior_sum = 1440 :=
+by
+  sorry
+
+end sum_of_interior_angles_of_polygon_l79_79744
+
+
+namespace problem_l79_79741
+
+theorem problem
+  (x y : ℝ)
+  (h1 : x + 3 * y = 9)
+  (h2 : x * y = -27) :
+  x^2 + 9 * y^2 = 243 :=
+sorry
+
+end problem_l79_79741
+
+
+namespace min_value_inequality_l79_79765
+
+open Real
+
+theorem min_value_inequality (a b c : ℝ) (hpos : 0 < a ∧ 0 < b ∧ 0 < c)
+  (h : (a / b + b / c + c / a) + (b / a + c / b + a / c) = 10) :
+  (a / b + b / c + c / a) * (b / a + c / b + a / c) ≥ 47 :=
+sorry
+
+end min_value_inequality_l79_79765
+
+
+namespace solve_log_equation_l79_79444
+
+theorem solve_log_equation (x : ℝ) 
+  (h1 : 7 * x + 3 > 0)
+  (h2 : 4 * x + 5 > 0) :
+  (log (sqrt (7 * x + 3)) + log (sqrt (4 * x + 5)) = 1 / 2 + log 3) ↔ x = 1 := 
+begin
+  sorry
+end
+
+end solve_log_equation_l79_79444
+
+
+namespace min_a2_b2_c2_l79_79431
+
+theorem min_a2_b2_c2 (a b c : ℝ) (h1 : 0 < a) (h2 : 0 < b) (h3 : 0 < c) (h4 : 2 * a + 3 * b + 5 * c = 100) : 
+  a^2 + b^2 + c^2 ≥ (5000 / 19) :=
+by
+  sorry
+
+end min_a2_b2_c2_l79_79431
+
+
+namespace pradeep_pass_percentage_l79_79779
+
+-- Define the given data as constants
+def score : ℕ := 185
+def shortfall : ℕ := 25
+def maxMarks : ℕ := 840
+
+-- Calculate the passing mark
+def passingMark : ℕ := score + shortfall
+
+-- Calculate the percentage needed to pass
+def passPercentage (passingMark : ℕ) (maxMarks : ℕ) : ℕ :=
+  (passingMark * 100) / maxMarks
+
+-- Statement of the theorem that we aim to prove
+theorem pradeep_pass_percentage (score shortfall maxMarks : ℕ)
+  (h_score : score = 185) (h_shortfall : shortfall = 25) (h_maxMarks : maxMarks = 840) :
+  passPercentage (score + shortfall) maxMarks = 25 :=
+by
+  -- This is where the proof would go
+  sorry
+
+-- Example of calling the function to ensure definitions are correct
+#eval passPercentage (score + shortfall) maxMarks -- Should output 25
+
+end pradeep_pass_percentage_l79_79779
+
+
+namespace solve_system_l79_79646
+
+theorem solve_system (x y z a b c : ℝ)
+  (h1 : x * (x + y + z) = a^2)
+  (h2 : y * (x + y + z) = b^2)
+  (h3 : z * (x + y + z) = c^2) :
+  (x = a^2 / Real.sqrt (a^2 + b^2 + c^2) ∨ x = -a^2 / Real.sqrt (a^2 + b^2 + c^2)) ∧
+  (y = b^2 / Real.sqrt (a^2 + b^2 + c^2) ∨ y = -b^2 / Real.sqrt (a^2 + b^2 + c^2)) ∧
+  (z = c^2 / Real.sqrt (a^2 + b^2 + c^2) ∨ z = -c^2 / Real.sqrt (a^2 + b^2 + c^2)) :=
+by
+  sorry
+
+end solve_system_l79_79646
+
+
+namespace other_root_of_quadratic_l79_79260
+
+theorem other_root_of_quadratic 
+  (a b c: ℝ) 
+  (h : a * (b - c - d) * (1:ℝ)^2 + b * (c - a + d) * (1:ℝ) + c * (a - b - d) = 0) : 
+  ∃ k: ℝ, k = c * (a - b - d) / (a * (b - c - d)) :=
+sorry
+
+end other_root_of_quadratic_l79_79260
+
+
+namespace arithmetic_progression_x_value_l79_79928
+
+theorem arithmetic_progression_x_value :
+  ∃ x : ℝ, (2 * x - 1) + ((5 * x + 6) - (3 * x + 4)) = (3 * x + 4) + ((3 * x + 4) - (2 * x - 1)) ∧ x = 3 :=
+by
+  sorry
+
+end arithmetic_progression_x_value_l79_79928
+
+
+namespace max_length_MN_l79_79457
+
+theorem max_length_MN (p : ℝ) (h a b c r : ℝ)
+  (h_perimeter : a + b + c = 2 * p)
+  (h_tangent : r = (a * h) / (2 * p))
+  (h_parallel : ∀ h r : ℝ, ∃ k : ℝ, MN = k * (1 - 2 * r / h)) :
+  ∀ k : ℝ, MN = (p / 4) :=
+sorry
+
+end max_length_MN_l79_79457
+
+
+namespace batsman_average_increase_l79_79218
+
+theorem batsman_average_increase
+  (prev_avg : ℝ) -- average before the 17th innings
+  (total_runs_16 : ℝ := 16 * prev_avg) -- total runs scored in the first 16 innings
+  (score_17th : ℝ := 85) -- score in the 17th innings
+  (new_avg : ℝ := 37) -- new average after 17 innings
+  (total_runs_17 : ℝ := total_runs_16 + score_17th) -- total runs after 17 innings
+  (calc_total_runs_17 : ℝ := 17 * new_avg) -- new total runs calculated by the new average
+  (h : total_runs_17 = calc_total_runs_17) -- given condition: total_runs_17 = calc_total_runs_17
+  : (new_avg - prev_avg) = 3 := 
+by
+  sorry
+
+end batsman_average_increase_l79_79218
+
+
+namespace find_a_l79_79999
+
+noncomputable def A (a : ℝ) : Set ℝ := {-1, a^2 + 1, a^2 - 3}
+noncomputable def B (a : ℝ) : Set ℝ := {-4, a - 1, a + 1}
+
+theorem find_a (a : ℝ) (h : A a ∩ B a = {-2}) : a = -1 :=
+sorry
+
+end find_a_l79_79999
+
+
+namespace change_factor_w_l79_79130
+
+theorem change_factor_w (w d z F_w : Real)
+  (h_q : ∀ w d z, q = 5 * w / (4 * d * z^2))
+  (h1 : d' = 2 * d)
+  (h2 : z' = 3 * z)
+  (h3 : F_q = 0.2222222222222222)
+  : F_w = 4 :=
+by
+  sorry
+
+end change_factor_w_l79_79130
+
+
+namespace ratio_of_larger_to_smaller_l79_79796
+
+theorem ratio_of_larger_to_smaller (x y : ℝ) (hx_pos : 0 < x) (hy_pos : 0 < y) (hx_gt_hy : x > y) (h_eq : x + y = 7 * (x - y)) : x / y = 4 / 3 := 
+by
+  sorry
+
+end ratio_of_larger_to_smaller_l79_79796
+
+
+namespace factor_poly_l79_79399
+
+theorem factor_poly (P Q : ℝ) (h1 : ∃ b c : ℝ, 
+  (x^2 + 3*x + 7) * (x^2 + b*x + c) = x^4 + P*x^2 + Q)
+  : P + Q = 50 :=
+sorry
+
+end factor_poly_l79_79399
+
+
+namespace molecular_weight_compound_l79_79197
+
+/-- Definition of atomic weights for elements H, Cr, and O in AMU (Atomic Mass Units) --/
+def atomic_weight_H : ℝ := 1.008
+def atomic_weight_Cr : ℝ := 51.996
+def atomic_weight_O : ℝ := 15.999
+
+/-- Proof statement to calculate the molecular weight of a compound with 2 H, 1 Cr, and 4 O --/
+theorem molecular_weight_compound :
+  2 * atomic_weight_H + 1 * atomic_weight_Cr + 4 * atomic_weight_O = 118.008 :=
+by
+  sorry
+
+end molecular_weight_compound_l79_79197
+
+
+namespace f_g_2_equals_169_l79_79012
+
+-- Definitions of f and g
+def f (x : ℝ) : ℝ := x^2
+def g (x : ℝ) : ℝ := 2 * x^2 + x + 3
+
+-- The theorem statement
+theorem f_g_2_equals_169 : f (g 2) = 169 :=
+by
+  sorry
+
+end f_g_2_equals_169_l79_79012
+
+
+namespace percent_difference_l79_79137
+
+def boys := 100
+def girls := 125
+def diff := girls - boys
+def boys_less_than_girls_percent := (diff : ℚ) / girls  * 100
+def girls_more_than_boys_percent := (diff : ℚ) / boys  * 100
+
+theorem percent_difference :
+  boys_less_than_girls_percent = 20 ∧ girls_more_than_boys_percent = 25 :=
+by
+  -- The proof here demonstrates the percentage calculations.
+  sorry
+
+end percent_difference_l79_79137
+
+
+namespace BANANA_arrangements_l79_79515
+
+theorem BANANA_arrangements : 
+  let total_letters := 6
+  let A_count := 3
+  let N_count := 2
+  (Nat.factorial total_letters) / (Nat.factorial A_count * Nat.factorial N_count) = 60 := 
+by 
+  let total_letters := 6
+  let A_count := 3
+  let N_count := 2
+  sorry
+
+end BANANA_arrangements_l79_79515
+
+
+namespace part_a_part_b_l79_79948
+
+-- Part (a)
+
+theorem part_a : ∃ (a b : ℕ), 2015^2 + 2017^2 = 2 * (a^2 + b^2) :=
+by
+  -- The proof will go here
+  sorry
+
+-- Part (b)
+
+theorem part_b (k n : ℕ) : ∃ (a b : ℕ), (2 * k + 1)^2 + (2 * n + 1)^2 = 2 * (a^2 + b^2) :=
+by
+  -- The proof will go here
+  sorry
+
+end part_a_part_b_l79_79948
+
+
+namespace BANANA_arrangements_l79_79518
+
+theorem BANANA_arrangements : 
+  let total_letters := 6
+  let A_count := 3
+  let N_count := 2
+  (Nat.factorial total_letters) / (Nat.factorial A_count * Nat.factorial N_count) = 60 := 
+by 
+  let total_letters := 6
+  let A_count := 3
+  let N_count := 2
+  sorry
+
+end BANANA_arrangements_l79_79518
+
+
+namespace books_left_on_Fri_l79_79809
+
+-- Define the conditions as constants or values
+def books_at_beginning : ℕ := 98
+def books_checked_out_Wed : ℕ := 43
+def books_returned_Thu : ℕ := 23
+def books_checked_out_Thu : ℕ := 5
+def books_returned_Fri : ℕ := 7
+
+-- The proof statement to verify the final number of books
+theorem books_left_on_Fri (b : ℕ) :
+  b = (books_at_beginning - books_checked_out_Wed) + books_returned_Thu - books_checked_out_Thu + books_returned_Fri := 
+  sorry
+
+end books_left_on_Fri_l79_79809
+
+
+namespace find_p_q_l79_79392
+
+variable (R : Set ℝ)
+
+def A (p : ℝ) : Set ℝ := {x | x^2 + p * x + 12 = 0}
+def B (q : ℝ) : Set ℝ := {x | x^2 - 5 * x + q = 0}
+
+theorem find_p_q 
+  (h : (R \ (A p)) ∩ (B q) = {2}) : p + q = -1 :=
+by
+  sorry
+
+end find_p_q_l79_79392
+
+
+namespace kamari_toys_eq_65_l79_79087
+
+-- Define the number of toys Kamari has
+def number_of_toys_kamari_has : ℕ := sorry
+
+-- Define the number of toys Anais has in terms of K
+def number_of_toys_anais_has (K : ℕ) : ℕ := K + 30
+
+-- Define the total number of toys
+def total_number_of_toys (K A : ℕ) := K + A
+
+-- Prove that the number of toys Kamari has is 65
+theorem kamari_toys_eq_65 : ∃ K : ℕ, (number_of_toys_anais_has K) = K + 30 ∧ total_number_of_toys K (number_of_toys_anais_has K) = 160 ∧ K = 65 :=
+by
+  sorry
+
+end kamari_toys_eq_65_l79_79087
+
+
+namespace height_of_regular_triangular_pyramid_l79_79794
+
+-- Problem Statement: Given conditions and correct answer
+theorem height_of_regular_triangular_pyramid
+  (a : ℝ)
+  (ABC : Triangle)
+  (h_reg : is_equilateral ABC)
+  (P : Point)
+  (M : Point := centroid ABC)
+  (P_on_lateral : ∀ (X : Point), X ∈ ABC.vertices → ⦞ (angle (P -ᵥ M) (X -ᵥ M)) = 60) :
+  
+  height_of_pyramid ABC P = a :=
+begin
+  sorry
+end
+
+end height_of_regular_triangular_pyramid_l79_79794
+
+
+namespace inequality_proof_l79_79290
+
+theorem inequality_proof (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (h : a + b + c = 1) :
+  (a + 1 / a)^3 + (b + 1 / b)^3 + (c + 1 / c)^3 = 1000 / 9 :=
+sorry
+
+end inequality_proof_l79_79290
+
+
+namespace vector2d_propositions_l79_79887
+
+-- Define the vector structure in ℝ²
+structure Vector2D where
   x : ℝ
   y : ℝ
 
-def A : Point := ⟨3, 1⟩
-def B : Point := ⟨4, 2⟩
-def C : Point := ⟨2, 3⟩
+-- Define the relation > on Vector2D
+def Vector2D.gt (a1 a2 : Vector2D) : Prop :=
+  a1.x > a2.x ∨ (a1.x = a2.x ∧ a1.y > a2.y)
 
-def centroid (A B C : Point) : Point :=
-  ⟨(A.x + B.x + C.x) / 3, (A.y + B.y + C.y) / 3⟩
+-- Define vectors e1, e2, and 0
+def e1 : Vector2D := ⟨ 1, 0 ⟩
+def e2 : Vector2D := ⟨ 0, 1 ⟩
+def zero : Vector2D := ⟨ 0, 0 ⟩
 
-def orthocenter (A B C : Point) : Point := sorry -- Calculation skipped
+-- Define propositions
+def prop1 : Prop := Vector2D.gt e1 e2 ∧ Vector2D.gt e2 zero
+def prop2 (a1 a2 a3 : Vector2D) : Prop := Vector2D.gt a1 a2 → Vector2D.gt a2 a3 → Vector2D.gt a1 a3
+def prop3 (a1 a2 a : Vector2D) : Prop := Vector2D.gt a1 a2 → Vector2D.gt (Vector2D.mk (a1.x + a.x) (a1.y + a.y)) (Vector2D.mk (a2.x + a.x) (a2.y + a.y))
+def prop4 (a a1 a2 : Vector2D) : Prop := Vector2D.gt a zero → Vector2D.gt a1 a2 → Vector2D.gt (Vector2D.mk (a.x * a1.x + a.y * a1.y) (0)) (Vector2D.mk (a.x * a2.x + a.y * a2.y) 0)
 
--- Euler line of the triangle with vertices A, B, and C
-theorem euler_line_eq (A B C : Point) :
-  let G := centroid A B C
-  let H := orthocenter A B C
-  ∃ m b, (H.y - G.y) = m * (H.x - G.x) ∧
-  (∀ x y, y = m * x + b → y - 2 = -(x - 3) → x + y - 5 = 0) :=
-  sorry
-
-end euler_line_eq_l79_79109
-
-
-namespace divisibility_criterion_l79_79947
-
-theorem divisibility_criterion (x y : ℕ) (h_two_digit : 10 ≤ x ∧ x < 100) :
-  (1207 % x = 0) ↔ (x = 10 * (x / 10) + (x % 10) ∧ (x / 10)^3 + (x % 10)^3 = 344) :=
+-- Main theorem to prove
+theorem vector2d_propositions : prop1 ∧ (∀ a1 a2 a3, prop2 a1 a2 a3) ∧ (∀ a1 a2 a, prop3 a1 a2 a) := 
 by
   sorry
 
-end divisibility_criterion_l79_79947
+end vector2d_propositions_l79_79887
 
 
-namespace max_value_of_squares_l79_79913
+namespace sequence_sum_100_eq_200_l79_79727
 
-theorem max_value_of_squares (a b c d : ℝ) 
-  (h1 : a + b = 18) 
-  (h2 : ab + c + d = 91) 
-  (h3 : ad + bc = 187) 
-  (h4 : cd = 105) : 
-  a^2 + b^2 + c^2 + d^2 ≤ 107 :=
-sorry
-
-end max_value_of_squares_l79_79913
-
-
-namespace probability_sequence_rw_10_l79_79688
-
-noncomputable def probability_red_white_red : ℚ :=
-  (4 / 10) * (6 / 9) * (3 / 8)
-
-theorem probability_sequence_rw_10 :
-    probability_red_white_red = 1 / 10 := by
+theorem sequence_sum_100_eq_200
+  (a : ℕ → ℕ)
+  (h1 : a 1 = 1)
+  (h2 : a 2 = 1)
+  (h3 : a 3 = 2)
+  (h4 : ∀ n : ℕ, a n * a (n + 1) * a (n + 2) ≠ 1)
+  (h5 : ∀ n : ℕ, a n * a (n + 1) * a (n + 2) * a (n + 3) = a n + a (n + 1) + a (n + 2) + a (n + 3)) :
+  (Finset.range 100).sum (a ∘ Nat.succ) = 200 := by
   sorry
 
-end probability_sequence_rw_10_l79_79688
+end sequence_sum_100_eq_200_l79_79727
 
 
-namespace hexagon_area_half_l79_79799
+namespace length_OB_max_volume_l79_79655
 
-variables {P Q R : Type} [PlaneGeometry P] [∀ x : P, LinearOrder (IntersectTrajectory P)]
+-- Given conditions as definitions
+variables {P A B H C O : ℝ}
+def is_isosceles_right_triangle (P A B C : ℝ) : Prop := sorry
+def perpendicular (x y : ℝ) : Prop := sorry -- a stub for perpendicular property
+def on_circumference (A : ℝ) : Prop := sorry -- a stub for point on circumference
 
-open PlaneGeometry
-
-def midpoint (A B : P) : P := sorry
-def perpendicular (A B C : P) : P := sorry -- Point of intersection of perpendicular from A to line BC
-
-theorem hexagon_area_half (A B C : P) (h_acute_ABC : acute_angle_triangle A B C) :
-  let A1 := midpoint B C,
-      B1 := midpoint A C,
-      C1 := midpoint A B,
-      M := perpendicular C1 A B,
-      N := perpendicular C1 B C,
-      K := perpendicular A1 A C 
-  in 2 * area_of_poly {A1, K, B1, M, C1, N} = area_of_triangle A B C :=
+-- The main theorem statement
+theorem length_OB_max_volume (P A B H C O : ℝ) (h1 : is_isosceles_right_triangle P A B C) 
+  (h2 : on_circumference A) (h3 : perpendicular A B) (h4 : perpendicular O B)
+  (h5 : perpendicular O H) (h6 : PA = 4) (h7 : C = (P + A) / 2) :
+  ∃ OB : ℝ, OB = (2 * real.sqrt 6) / 3 := 
 sorry
 
-end hexagon_area_half_l79_79799
+end length_OB_max_volume_l79_79655
 
 
-namespace lines_intersect_or_parallel_l79_79523
+namespace chris_remaining_money_l79_79709
 
-namespace NinePointCircle
+variable (video_game_cost : ℝ)
+variable (discount_rate : ℝ)
+variable (candy_cost : ℝ)
+variable (tax_rate : ℝ)
+variable (shipping_fee : ℝ)
+variable (hourly_rate : ℝ)
+variable (hours_worked : ℝ)
 
-open EuclideanGeometry
+noncomputable def remaining_money (video_game_cost discount_rate candy_cost tax_rate shipping_fee hourly_rate hours_worked : ℝ) : ℝ :=
+  let discount := discount_rate * video_game_cost
+  let discounted_price := video_game_cost - discount
+  let total_video_game_cost := discounted_price + shipping_fee
+  let video_tax := tax_rate * total_video_game_cost
+  let candy_tax := tax_rate * candy_cost
+  let total_cost := (total_video_game_cost + video_tax) + (candy_cost + candy_tax)
+  let earnings := hourly_rate * hours_worked
+  earnings - total_cost
 
-/- Definitions for the problem setup -/
-variables (A B C A1 B1 C1 A2 B2 C2 : Point)
-variables (AA1 BB1 CC1 A1A2 B1B2 C1C2 : Line)
-
--- Triangle ABC
-axiom triangle_ABC : Triangle A B C
-
--- Altitudes in triangle
-axiom altitude_AA1 : Altitude AA1 A1 A B C
-axiom altitude_BB1 : Altitude BB1 B1 B A C
-axiom altitude_CC1 : Altitude CC1 C1 C A B
-
--- Nine-point circle diameters
-noncomputable def nine_point_circle_diameter_A1A2 : Line := A1A2
-noncomputable def nine_point_circle_diameter_B1B2 : Line := B1B2
-noncomputable def nine_point_circle_diameter_C1C2 : Line := C1C2
-
-/- The theorem to prove -/
-theorem lines_intersect_or_parallel
-  (h1: NinePointCircleDiameter A1A2)
-  (h2: NinePointCircleDiameter B1B2)
-  (h3: NinePointCircleDiameter C1C2) :
-  (Intersects (Line_through A A2) (Line_through B B2) ∧ Intersects (Line_through B B2) (Line_through C C2) ∧ Intersects (Line_through C C2) (Line_through A A2)) ∨
-  (Parallel (Line_through A A2) (Line_through B B2) ∧ Parallel (Line_through B B2) (Line_through C C2) ∧ Parallel (Line_through C C2) (Line_through A A2)) :=
-sorry
-
-end NinePointCircle
-
-end lines_intersect_or_parallel_l79_79523
-
-
-namespace sum_of_homothety_coeffs_geq_4_l79_79502
-
-theorem sum_of_homothety_coeffs_geq_4 (a : ℕ → ℝ)
-  (h_pos : ∀ i, 0 < a i)
-  (h_less_one : ∀ i, a i < 1)
-  (h_sum_cubes : ∑' i, (a i)^3 = 1) :
-  (∑' i, a i) ≥ 4 := sorry
-
-end sum_of_homothety_coeffs_geq_4_l79_79502
-
-
-namespace smallest_difference_div_by_5_sum_l79_79730
-
--- Function to calculate the sum of digits of a natural number.
-def sum_of_digits (n : ℕ) : ℕ := n.digits 10 |>.sum
-
--- Defining a predicate for natural numbers where sum of digits is divisible by 5.
-def div_by_5_sum (n : ℕ) : Prop := sum_of_digits n % 5 = 0
-
--- Theorem stating that the smallest positive difference between consecutive numbers in the sequence is 1.
-theorem smallest_difference_div_by_5_sum :
-  ∃ (a b : ℕ), div_by_5_sum a ∧ div_by_5_sum b ∧ a ≠ b ∧ (a - b).nat_abs = 1 :=
-sorry
-
-end smallest_difference_div_by_5_sum_l79_79730
-
-
-namespace tankard_one_quarter_full_l79_79634
-
-theorem tankard_one_quarter_full
-  (C : ℝ) 
-  (h : (3 / 4) * C = 480) : 
-  (1 / 4) * C = 160 := 
+theorem chris_remaining_money : remaining_money 60 0.15 5 0.10 3 8 9 = 7.1 :=
 by
   sorry
 
-end tankard_one_quarter_full_l79_79634
+end chris_remaining_money_l79_79709
 
 
-namespace find_a_l79_79834
+namespace diana_owes_amount_l79_79679
 
-theorem find_a (a : ℝ) : (∀ x : ℝ, (x^2 - 4 * x + a) + |x - 3| ≤ 5) → (∃ x : ℝ, x = 3) → a = 8 :=
+def principal : ℝ := 75
+def rate : ℝ := 0.07
+def time : ℝ := 1
+def interest : ℝ := principal * rate * time
+def total_amount_owed : ℝ := principal + interest
+
+theorem diana_owes_amount :
+  total_amount_owed = 80.25 :=
 by
   sorry
 
-end find_a_l79_79834
+end diana_owes_amount_l79_79679
 
 
-namespace cross_product_correct_l79_79387
+namespace annie_hamburgers_l79_79703
 
-def a : ℝ × ℝ × ℝ := (4, 3, -7)
-def b : ℝ × ℝ × ℝ := (2, -1, 4)
+theorem annie_hamburgers (H : ℕ) (h₁ : 4 * H + 6 * 5 = 132 - 70) : H = 8 := by
+  sorry
 
-def cross_product (u v : ℝ × ℝ × ℝ) : ℝ × ℝ × ℝ :=
-  (u.2 * v.3 - u.3 * v.2, u.3 * v.1 - u.1 * v.3, u.1 * v.2 - u.2 * v.1)
-
-theorem cross_product_correct : cross_product a b = (5, -30, -10) := sorry
-
-end cross_product_correct_l79_79387
+end annie_hamburgers_l79_79703
 
 
-namespace employee_discount_percentage_l79_79322
+namespace find_x_l79_79674
 
-noncomputable def wholesale_cost : ℝ := 200
-noncomputable def retail_markup : ℝ := 0.20
-noncomputable def employee_price : ℝ := 168
-
-def retail_price (wholesale_cost : ℝ) (retail_markup : ℝ) : ℝ :=
-  wholesale_cost * (1 + retail_markup)
-
-def discount_amount (retail_price : ℝ) (employee_price : ℝ) : ℝ :=
-  retail_price - employee_price
-
-def discount_percentage (discount_amount : ℝ) (retail_price : ℝ) : ℝ :=
-  (discount_amount / retail_price) * 100
-
-theorem employee_discount_percentage :
-  discount_percentage (discount_amount (retail_price wholesale_cost retail_markup) employee_price) 
-  (retail_price wholesale_cost retail_markup) = 30 :=
+theorem find_x (x y : ℤ) (h₁ : x + 3 * y = 10) (h₂ : y = 3) : x = 1 := 
 by
   sorry
 
-end employee_discount_percentage_l79_79322
+end find_x_l79_79674
 
 
-namespace river_width_is_correct_l79_79708
+namespace probability_point_closer_to_origin_than_4_1_l79_79965
 
-def river_depth : ℝ := 3
-def flow_rate : ℝ := 2 * 1000 / 60
-def volume_flow_per_minute : ℝ := 3600
+-- Define the rectangular region
+def region : set (ℝ × ℝ) :=
+  { p | 0 ≤ p.1 ∧ p.1 ≤ 3 ∧ 0 ≤ p.2 ∧ p.2 ≤ 1 }
 
-theorem river_width_is_correct :
-  volume_flow_per_minute = river_depth * 36 * flow_rate :=
-by 
-  sorry
+-- Define the origin
+def origin : ℝ × ℝ := (0, 0)
 
-end river_width_is_correct_l79_79708
+-- Define the point (4,1)
+def point_4_1 : ℝ × ℝ := (4, 1)
 
+-- Function to calculate Euclidean distance
+def euclidean_distance (a b : ℝ × ℝ) : ℝ :=
+  real.sqrt ((a.1 - b.1)^2 + (a.2 - b.2)^2)
 
-namespace trajectory_C₂_equation_area_triangle_ABO_l79_79895
-
-noncomputable def trajectory_equation (ρ θ : ℝ) : ℝ := 
-  ρ * cos θ
-
-theorem trajectory_C₂_equation (ρ θ x y : ℝ) 
-  (h₁ : ∀ θ, trajectory_equation ρ θ = 4)
-  (h₂ : x^2 + y^2 = 4 * real.abs x) 
-  (h₃ : ρ * θ = real.sqrt(x^2 + y^2) * real.sqrt(16 + (16 * y^2) / x^2)) :
-  x^2 + y^2 - 4x = 0 := by
-  sorry
-
-theorem area_triangle_ABO (θ : ℝ)
-  (A B O : ℝ × ℝ)
-  (hA : A = (1, real.sqrt 3))
-  (hB : B = (2 * real.sqrt 3 * cos θ, 2 * real.sqrt 3 * sin θ))
-  (hO : O = (0, 0))
-  (hC₂ : (2 * real.sqrt 3 * cos θ)^2 + (2 * real.sqrt 3 * sin θ)^2 - 4 * (2 * real.sqrt 3 * cos θ) = 0) :
-  area_of_triangle A B O = real.sqrt 3 ∨ area_of_triangle A B O = 2 * real.sqrt 3 := by
-  sorry
-
-noncomputable def area_of_triangle (A B O : ℝ × ℝ) : ℝ := 
-  0.5 * real.abs ((A.1 - O.1) * (B.2 - O.2) - (B.1 - O.1) * (A.2 - O.2))
-
-end trajectory_C₂_equation_area_triangle_ABO_l79_79895
-
-
-namespace shirley_sold_boxes_l79_79587
-
-theorem shirley_sold_boxes (cases boxes_per_case : ℕ) (h_cases : cases = 9) (h_boxes_per_case : boxes_per_case = 6) :
-  cases * boxes_per_case = 54 :=
-by
-  rw [h_cases, h_boxes_per_case]
-  exact rfl
-
-end shirley_sold_boxes_l79_79587
-
-
-namespace find_all_functions_l79_79775
-
-theorem find_all_functions 
-  (f : ℤ → ℝ)
-  (h1 : ∀ m n : ℤ, m < n → f m < f n)
-  (h2 : ∀ m n : ℤ, ∃ k : ℤ, f m - f n = f k) :
-  ∃ a t : ℝ, a > 0 ∧ (∀ n : ℤ, f n = a * (n + t)) :=
+-- Probability statement to be proven
+theorem probability_point_closer_to_origin_than_4_1 : 
+  measure_theory.measure.region (λ p, euclidean_distance p origin < euclidean_distance p point_4_1) / 
+  measure_theory.measure.region region = 2 / 3 :=
 sorry
 
-end find_all_functions_l79_79775
+end probability_point_closer_to_origin_than_4_1_l79_79965
 
 
-namespace triangle_angle_bisector_ratio_k_l79_79901
+namespace isosceles_triangle_base_length_l79_79359
 
--- Given definitions for a triangle and angle bisectors as per the problem statement
-variable {A B C L M : Type}
-variable (a b c : ℝ) -- sides of the triangle
-variable [noncomputable] def BC : ℝ := a
-variable [noncomputable] def AC : ℝ := b
-variable [noncomputable] def AB : ℝ := c
-variable [noncomputable] def k := c / a
-
--- Conditions for the angle bisectors
-variable (AL_bisector : ∀ {A B C L : Type}, Prop)
-variable (CM_bisector : ∀ {C A B M : Type}, Prop)
-
--- Proof problem statement
-theorem triangle_angle_bisector_ratio_k  :
-  AL_bisector A B C L ∧ 
-  CM_bisector C A B M ∧ 
-  L ∈ line BC ∧ 
-  M ∈ line AB →
-  (a ≠ 0) → (k = c / a) := sorry
-
-end triangle_angle_bisector_ratio_k_l79_79901
-
-
-namespace matrix_representation_l79_79600
-
-theorem matrix_representation (A B : Matrix (Fin n) (Fin n) Int) (hB : B.det ≠ 0) :
-  ∃ (m : ℕ) (N : Fin m → Matrix (Fin n) (Fin n) Int),
-    (A ⬝ B⁻¹) = (Finset.univ.sum (λ k, (N k)⁻¹)) ∧
-    (∀ i j, i ≠ j → N i ≠ N j) :=
+theorem isosceles_triangle_base_length (a b c : ℕ) (h_isosceles : a = b ∨ b = c ∨ c = a)
+  (h_perimeter : a + b + c = 16) (h_side_length : a = 6 ∨ b = 6 ∨ c = 6) :
+  (a = 4 ∨ b = 4 ∨ c = 4) ∨ (a = 6 ∨ b = 6 ∨ c = 6) :=
 sorry
 
-end matrix_representation_l79_79600
+end isosceles_triangle_base_length_l79_79359
 
 
-namespace find_BC_l79_79058
+namespace number_of_rectangles_in_5x5_grid_l79_79004
 
-open Real
-
--- Definitions based on the given problem
-def Point := (ℝ × ℝ)
-def Triangle (A B C : Point) := C = (0, 0) ∧ A.2 = 0 ∧ B.1 = 0 -- \(C\) at origin, \(A\) on x-axis, \(B\) on y-axis
-
-variables {A B C : Point}
-variables (h_triangle : Triangle A B C) (h_angle_C : ∠ C = 90) (h_tan_A : tan (angle A C B) = 3/4)
-variables (h_AC : dist A C = 6)
-
--- Statement to prove
-theorem find_BC : dist C B = 4.5 :=
-sorry
-
-end find_BC_l79_79058
-
-
-namespace ploughing_problem_l79_79864
-
-theorem ploughing_problem
-  (hours_per_day_group1 : ℕ)
-  (days_group1 : ℕ)
-  (bulls_group1 : ℕ)
-  (total_fields_group2 : ℕ)
-  (hours_per_day_group2 : ℕ)
-  (days_group2 : ℕ)
-  (bulls_group2 : ℕ)
-  (fields_group1 : ℕ)
-  (fields_group2 : ℕ) :
-    hours_per_day_group1 = 10 →
-    days_group1 = 3 →
-    bulls_group1 = 10 →
-    hours_per_day_group2 = 8 →
-    days_group2 = 2 →
-    bulls_group2 = 30 →
-    fields_group2 = 32 →
-    480 * fields_group1 = 300 * fields_group2 →
-    fields_group1 = 20 := by
-  sorry
-
-end ploughing_problem_l79_79864
-
-
-namespace nm_equals_9_identity_l79_79557
-
-theorem nm_equals_9_identity (M : Matrix (Fin 3) (Fin 2) ℝ) (N : Matrix (Fin 2) (Fin 3) ℝ)
-  (MN : Matrix (Fin 3) (Fin 3) ℝ)
-  (hMN : MN = ![![8, 2, -2], 
-                ![2, 5, 4], 
-                ![-2, 4, 5]])
-  (hM_N_Prod : (M ⬝ N) = MN) :
-  (N ⬝ M) = ![![9, 0], 
-              ![0, 9]] :=
+theorem number_of_rectangles_in_5x5_grid : 
+  let n := 5 in (n.choose 2) * (n.choose 2) = 100 :=
 by
   sorry
 
-end nm_equals_9_identity_l79_79557
+end number_of_rectangles_in_5x5_grid_l79_79004
 
 
-namespace roots_of_equation_l79_79754
+namespace solution_set_of_quadratic_inequality_l79_79662
 
-theorem roots_of_equation :
-  (∃ x, (18 / (x^2 - 9) - 3 / (x - 3) = 2) ↔ (x = 3 ∨ x = -4.5)) :=
+theorem solution_set_of_quadratic_inequality (a : ℝ) (x : ℝ) :
+  (∀ x, 0 < x - 0.5 ∧ x < 2 → ax^2 + 5 * x - 2 > 0) ∧ a = -2 →
+  (∀ x, -3 < x ∧ x < 0.5 → a * x^2 - 5 * x + a^2 - 1 > 0) :=
 by
   sorry
 
-end roots_of_equation_l79_79754
+end solution_set_of_quadratic_inequality_l79_79662
 
 
-namespace greatest_integer_l79_79642
-
--- Define the conditions
-def a : ℤ := 4^100 + 3^100
-def b : ℤ := 4^98 + 3^98
-
--- State the theorem
-theorem greatest_integer (a = 4^100 + 3^100) (b = 4^98 + 3^98) : 
-  (⌊a / b⌋ = 15) :=
-by
-  sorry
-
-end greatest_integer_l79_79642
-
-
-namespace deductible_amount_l79_79338
-
--- This definition represents the conditions of the problem.
-def current_annual_deductible_is_increased (D : ℝ) : Prop :=
-  (2 / 3) * D = 2000
-
--- This is the Lean statement, expressing the problem that needs to be proven.
-theorem deductible_amount (D : ℝ) (h : current_annual_deductible_is_increased D) : D = 3000 :=
-by
-  sorry
-
-end deductible_amount_l79_79338
-
-
-namespace simplify_expression_l79_79825
-
-theorem simplify_expression (α : ℝ) (hα : 0 < α ∧ α < π / 3) : 
-  3 ^ |Real.log3 (Real.sin α)| = 1 / Real.sin α :=
-sorry
-
-end simplify_expression_l79_79825
-
-
-namespace geometric_series_common_ratio_l79_79188
-
-theorem geometric_series_common_ratio :
-  ∀ (a r : ℝ), (r ≠ 1) → 
-  (∑' n, a * r^n = 64 * ∑' n, a * r^(n+4)) →
-  r = 1 / 2 :=
-by
-  intros a r hnr heq
-  have hsum1 : ∑' n, a * r^n = a / (1 - r) := sorry
-  have hsum2 : ∑' n, a * r^(n+4) = a * r^4 / (1 - r) := sorry
-  rw [hsum1, hsum2] at heq
-  -- Further steps to derive r = 1/2 are omitted
-  sorry
-
-end geometric_series_common_ratio_l79_79188
-
-
-namespace problem_part1_problem_part2_l79_79677
-
-variables {V : Type*} [inner_product_space ℝ V]
-variables (a b c d : V)
-variables (c1 c2 d1 d2 : ℝ)
-
--- Conditions
-axiom a_unit : ∥a∥ = 1
-axiom b_unit : ∥b∥ = 1
-axiom orthogonal_ab : ⟪a, b⟫ = 0
-axiom c_def : c = c1 • a + c2 • b
-axiom d_def : d = d1 • a + d2 • b
-axiom c_unit : ∥c∥ = 1
-axiom d_unit : ∥d∥ = 1
-axiom orthogonal_cd : ⟪c, d⟫ = 0
-
--- Proof statements
-theorem problem_part1 : 
-  c1^2 + d1^2 = 1 ∧ c2^2 + d2^2 = 1 ∧ (c1 * c2 + d1 * d2 = 0) :=
-sorry
-
-theorem problem_part2 : 
-  a = c1 • c + d1 • d ∧ b = c2 • c + d2 • d :=
-sorry
-
-end problem_part1_problem_part2_l79_79677
-
-
-namespace maximum_shareholder_ownership_l79_79308
-
-variable {S : Finset ℝ}
-variable (shares : Fin (100) → ℝ)
-variable (total_shares : ℝ := 100)
-
-theorem maximum_shareholder_ownership :
-  (∀ (T : Finset (Fin (100))), T.card = 66 → (T.sum shares) ≥ 50) →
-  ∃ (x : ℝ), x ≤ 25 ∧ 
-  shares (Fin.find (λ s, shares s = (Finset.univ.image shares).max')) = x := 
-sorry
-
-end maximum_shareholder_ownership_l79_79308
-
-
-namespace area_trapezoid_ABCD_l79_79215
-
--- Define the geometric entities and their properties
-variables (A B C D E F G : Point)
-variable [IsTrapezoid A B C D]
-variable (CE : LineSegment C E)
-variable [Midpoint F CE]
-variable [DividesTrapezoidIntoTriangleAndParallelogram CE A B C D]
-variables (DF : Line)
-variables [PassesThroughMidpoint DF B E]
-variable [AreaTriangleCDE : Area (Triangle C D E) = 3]
-
--- State the theorem
-theorem area_trapezoid_ABCD : Area (Trapezoid A B C D) = 12 := 
-sorry
-
-end area_trapezoid_ABCD_l79_79215
-
-
-namespace log_subtraction_l79_79087
-
-theorem log_subtraction (a b : ℝ) (h₁ : a = Real.log (10) / Real.log (3))
-                                      (h₂ : b = Real.log (7) / Real.log (3)) :
-  3^(a - b) = (10 / 7) :=
-sorry
-
-end log_subtraction_l79_79087
-
-
-namespace coplanar_vectors_has_lambda_eq_one_l79_79406
-
-open Real
-
-noncomputable def vec3 := (ℝ × ℝ × ℝ)
-
-def a : vec3 := (2, -1, 3)
-def b : vec3 := (-1, 4, -2)
-def c (λ : ℝ) : vec3 := (1, 3, λ)
-
--- Define the condition for coplanarity
-def coplanar (v1 v2 v3 : vec3) : Prop := 
-  ∃ m n : ℝ, v3 = (m * v1.1 + n * v2.1, m * v1.2 + n * v2.2, m * v1.3 + n * v2.3)
-
-theorem coplanar_vectors_has_lambda_eq_one (λ : ℝ) :
-  coplanar a b (c λ) ↔ λ = 1 :=
-by sorry  -- Proof omitted; main goal is to write the statement.
-
-end coplanar_vectors_has_lambda_eq_one_l79_79406
-
-
-namespace total_students_sampled_l79_79302
-
-theorem total_students_sampled :
-  ∀ (seniors juniors freshmen sampled_seniors sampled_juniors sampled_freshmen total_students : ℕ),
-    seniors = 1000 →
-    juniors = 1200 →
-    freshmen = 1500 →
-    sampled_freshmen = 75 →
-    sampled_seniors = seniors * (sampled_freshmen / freshmen) →
-    sampled_juniors = juniors * (sampled_freshmen / freshmen) →
-    total_students = sampled_seniors + sampled_juniors + sampled_freshmen →
-    total_students = 185 :=
-by
-sorry
-
-end total_students_sampled_l79_79302
-
-
-namespace geometric_series_common_ratio_l79_79179
-
-theorem geometric_series_common_ratio (a r : ℝ) (h : a / (1 - r) = 64 * (a * r^4 / (1 - r))) : r = 1/2 :=
-by {
-  sorry
-}
-
-end geometric_series_common_ratio_l79_79179
-
-
-namespace nec_but_not_suff_condition_l79_79681
-
-variables {p q : Prop}
-
-theorem nec_but_not_suff_condition (hp : ¬p) : 
-  (p ∨ q → False) ↔ (¬p) ∧ ¬(¬p → p ∨ q) :=
-by {
-  sorry
-}
-
-end nec_but_not_suff_condition_l79_79681
-
-
-namespace complex_conjugate_l79_79093
-
-noncomputable def i : ℂ := complex.I
-
-noncomputable def z : ℂ := (i) / (1 + i)
-
-theorem complex_conjugate :
-  complex.conj z = (1 / 2 : ℂ) - (1 / 2) * i :=
-by
-  sorry
-
-end complex_conjugate_l79_79093
-
-
-namespace justine_more_than_bailey_l79_79891
-
--- Definitions from conditions
-def J : ℕ := 22 -- Justine's initial rubber bands
-def B : ℕ := 12 -- Bailey's initial rubber bands
-
--- Theorem to prove
-theorem justine_more_than_bailey : J - B = 10 := by
-  -- Proof will be done here
-  sorry
-
-end justine_more_than_bailey_l79_79891
-
-
-namespace AM_CK_BH_intersects_l79_79898
-
-noncomputable theory
-
-open Classical
-
-variables {P Q R S T U V: Type*} [metric_space P] [metric_space Q] [metric_space R] 
-variables [inner_product_space ℝ P] [inner_product_space ℝ Q] [inner_product_space ℝ R]
-
-structure trapezoid (A B C D : P) := 
-  (BC_lt_AD : dist B C < dist A D)
-  (AB_eq_CD : dist A B = dist C D)
-  (K : P) (is_midpoint_AD : K = midpoint ℝ A D)
-  (M : P) (is_midpoint_CD : M = midpoint ℝ C D)
-  (H : P) (CH_is_height : mk_segment C H ⊥ mk_segment A B)
-
-theorem AM_CK_BH_intersects (A B C D K M H : P) (h_trap : trapezoid A B C D) :
-  ∃ G : P, collinear ℝ {A, M, G} ∧ collinear ℝ {C, K, G} ∧ collinear ℝ {B, H, G} :=
-sorry
-
-end AM_CK_BH_intersects_l79_79898
-
-
-namespace sum_last_two_digits_l79_79647
-
--- Definition of the problem conditions
-def seven : ℕ := 10 - 3
-def thirteen : ℕ := 10 + 3
-
--- Main statement of the problem
-theorem sum_last_two_digits (x : ℕ) (y : ℕ) : x = seven → y = thirteen → (7^25 + 13^25) % 100 = 0 :=
-by
-  intros
-  rw [←h, ←h_1] -- Rewriting x and y in terms of seven and thirteen
-  sorry -- Proof omitted
-
-end sum_last_two_digits_l79_79647
-
-
-namespace initial_comparison_discount_comparison_B_based_on_discounted_A_l79_79697
+namespace frog_jumps_within_distance_l79_79225
 
 noncomputable section
 
--- Definitions based on the problem conditions
-def A_price (x : ℝ) : ℝ := x
-def B_price (x : ℝ) : ℝ := (0.2 * 2 * x + 0.3 * 3 * x + 0.4 * 4 * x) / 3
-def A_discount_price (x : ℝ) : ℝ := 0.9 * x
+open ProbTheory
 
--- Initial comparison
-theorem initial_comparison (x : ℝ) (h : 0 < x) : B_price x < A_price x :=
-by {
-  sorry
-}
-
--- After A's discount comparison
-theorem discount_comparison (x : ℝ) (h : 0 < x) : A_discount_price x < B_price x :=
-by {
-  sorry
-}
-
--- B's price based on A’s discounted price comparison
-theorem B_based_on_discounted_A (x : ℝ) (h : 0 < x) : B_price (A_discount_price x) < A_discount_price x :=
-by {
-  sorry
-}
-
-end initial_comparison_discount_comparison_B_based_on_discounted_A_l79_79697
-
-
-namespace reflecting_BF_median_of_ABC_l79_79524
-
-variables {A B C D E F : Type*} [euclidean_geometry]
-
-open_locale euclidean_geometry
-
-noncomputable def is_median (A B C P : point) : Prop :=
-∃ M : point, midpoint M A C ∧ collinear A P M
-
-theorem reflecting_BF_median_of_ABC
-  (A B C D E F : point)
-  (h1 : AB ≠ BC)
-  (h2 : bisector ∠ABC D)
-  (h3 : lies_on D AC)
-  (h4 : bisector ∠ABC E)
-  (h5 : lies_on E (circumcircle A B C) ∧ E ≠ B)
-  (h6 : circle_with_diameter E D (intersect circumcircle A B C F) ∧ F ≠ E)
-  : is_median A B C (reflect_line BF (perp_bisector BD)) := 
-begin
-  sorry
-end
-
-end reflecting_BF_median_of_ABC_l79_79524
-
-
-namespace solve_for_a_l79_79872
-
-noncomputable theory
-
-def f (a x : ℝ) := (a * x - 1) * real.exp (x - 2)
-
-def tangent_line_slope (a : ℝ) : ℝ :=
-  let f' := λ x, (a) * real.exp(x-2) + (x * a - 1) * real.exp(x-2)
-  f' 2
-
-def tangent_line (a : ℝ) : ℝ → ℝ :=
-  let m := tangent_line_slope a
-  let f2 := f a 2
-  λ x, m * (x - 2) + f2
-
-theorem solve_for_a (a : ℝ) (h : tangent_line a 3 = 2) : a = 4/5 := 
-sorry
-
-end solve_for_a_l79_79872
-
-
-namespace jerry_coin_flip_configuration_count_l79_79905
-
-theorem jerry_coin_flip_configuration_count :
-  let initial_heads := 10
-  let flip_count := 2
-  let distinct_coins := {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
-  let configurations := (∃ (c1 c2 : distinct_coins), c1 = c2 ∨ c1 ≠ c2) →
-                                             if c1 = c2 then 1 else (nat.choose initial_heads 2)
-  configurations = 46 :=
-by
-  sorry
-
-end jerry_coin_flip_configuration_count_l79_79905
-
-
-namespace sum_of_solutions_of_equation_l79_79789
-
-theorem sum_of_solutions_of_equation :
-  let f := (fun x : ℝ => (x - 4) ^ 2)
-  ∃ S : Set ℝ, (S = {x | f x = 16}) ∧ (∑ s in S, s) = 8 := 
-by
-  sorry
-
-end sum_of_solutions_of_equation_l79_79789
-
-
-namespace worth_of_new_computer_l79_79635
-
-theorem worth_of_new_computer (initial_savings : ℕ) (old_computer_value : ℕ) (additional_needed : ℕ) : 
-  initial_savings = 50 → old_computer_value = 20 → additional_needed = 10 → 
-  initial_savings + old_computer_value + additional_needed = 80 :=
-begin
-  intros h₁ h₂ h₃,
-  rw [h₁, h₂, h₃],
-  norm_num,
-end
-
-end worth_of_new_computer_l79_79635
-
-
-namespace distance_focus_to_line_AP_minimized_l79_79432
-
-noncomputable def hyperbola_focus_distance : ℝ :=
-  let F : ℝ × ℝ := (-4, 0)
-  let A : ℝ × ℝ := (1, 4)
-  let F' : ℝ × ℝ := (4, 0)
-  let line_AP_equation : ℝ → ℝ := λ x => ((-4 / 3) * x) + (4 + (4 / 3))
-  
-  -- Function representing the distance from F to a line defined by ax + by + c = 0
-  let distance_to_line (x y a b c : ℝ) : ℝ := ( |a * x + b * y + c| / sqrt(a^2 + b^2) )
-
-  -- Final distance calculation
-  distance_to_line F.1 F.2 4 3 (-16)
-
-theorem distance_focus_to_line_AP_minimized :
-  hyperbola_focus_distance = 32 / 5 :=
-  by
-    -- The proof will be filled out here
-    sorry
-
-end distance_focus_to_line_AP_minimized_l79_79432
-
-
-namespace line_tangent_to_circle_l79_79848
-
-/-- 
-Let l be the line defined by the equation x * cos θ + y * sin θ + 2 = 0.
-Let C be the circle defined by the equation x^2 + y^2 = 4.
---/
-theorem line_tangent_to_circle (θ : ℝ) : 
-  let l := { p : ℝ × ℝ | p.1 * Real.cos θ + p.2 * Real.sin θ + 2 = 0 } in
-  let C := { p : ℝ × ℝ | p.1^2 + p.2^2 = 4 } in
-  ∀ (p₀ p₁ : ℝ × ℝ), p₀ ∈ l → p₁ ∈ C → Real.dist p₀ p₁ = 2 :=
-begin
-  sorry
-end
-
-end line_tangent_to_circle_l79_79848
-
-
-namespace slope_of_line_segment_CD_intersections_of_circles_l79_79392
-
-theorem slope_of_line_segment_CD_intersections_of_circles :
-  (∀ (C D : ℝ × ℝ), ((C.1 ^ 2 + C.2 ^ 2 - 6 * C.1 + 4 * C.2 - 8 = 0) ∧ 
-                     (C.1 ^ 2 + C.2 ^ 2 - 8 * C.1 + 6 * C.2 + 9 = 0) ∧ 
-                     (D.1 ^ 2 + D.2 ^ 2 - 6 * D.1 + 4 * D.2 - 8 = 0) ∧ 
-                     (D.1 ^ 2 + D.2 ^ 2 - 8 * D.1 + 6 * D.2 + 9 = 0))
-  → let m := -1 in m = -1) :=
-sorry
-
-end slope_of_line_segment_CD_intersections_of_circles_l79_79392
-
-
-namespace height_of_balcony_l79_79297
-
-variable (t : ℝ) (v₀ : ℝ) (g : ℝ) (h₀ : ℝ)
-
-axiom cond1 : t = 6
-axiom cond2 : v₀ = 20
-axiom cond3 : g = 10
-
-theorem height_of_balcony : h₀ + v₀ * t - (1/2 : ℝ) * g * t^2 = 0 → h₀ = 60 :=
-by
-  intro h'
-  sorry
-
-end height_of_balcony_l79_79297
-
-
-namespace distinct_real_roots_of_quadratic_l79_79469
-
-theorem distinct_real_roots_of_quadratic (m : ℝ) :
-  (∃ (x y : ℝ), x ≠ y ∧ x^2 + m * x + 9 = 0 ∧ y^2 + m * y + 9 = 0) ↔ m ∈ Ioo (-∞) (-6) ∪ Ioo 6 (∞) :=
-by
-  sorry
-
-end distinct_real_roots_of_quadratic_l79_79469
-
-
-namespace polynomial_division_result_l79_79546
-
-noncomputable def f (x : ℝ) : ℝ := 4 * x ^ 4 + 12 * x ^ 3 - 9 * x ^ 2 + x + 3
-noncomputable def d (x : ℝ) : ℝ := x ^ 2 + 4 * x - 2
-
-theorem polynomial_division_result :
-  ∃ q r : Polynomial ℝ, degree r < degree d ∧
-    f = q * d + r ∧
-    q.eval 1 + r.eval (-1) = -21 :=
-by
-  sorry
-
-end polynomial_division_result_l79_79546
-
-
-namespace geometric_series_common_ratio_l79_79198
-
-theorem geometric_series_common_ratio (a r : ℝ) (h₁ : r ≠ 1)
-    (h₂ : a / (1 - r) = 64 * (a * r^4) / (1 - r)) : r = 1/2 :=
-by
-  have h₃ : 1 = 64 * r^4 := by
-    have : 1 - r ≠ 0 := by linarith
-    field_simp at h₂; assumption
-  sorry
-
-end geometric_series_common_ratio_l79_79198
-
-
-namespace num_subsets_A_inter_B_l79_79818
-
-noncomputable theory
-open Set
-
-def A : Set (ℝ × ℝ) := {p : ℝ × ℝ | p.1^2 + p.2^2 = 1}
-def B : Set (ℝ × ℝ) := {p : ℝ × ℝ | p.2 = abs p.1}
-
-theorem num_subsets_A_inter_B : Fintype.card (Set.subsets (A ∩ B)) = 4 := 
-  sorry
-
-end num_subsets_A_inter_B_l79_79818
-
-
-namespace simplify_polynomial_l79_79128
-
-theorem simplify_polynomial :
-  (3 * x^3 + 4 * x^2 + 8 * x - 5) - (2 * x^3 + x^2 + 6 * x - 7) = x^3 + 3 * x^2 + 2 * x + 2 := 
-by
-  sorry
-
-end simplify_polynomial_l79_79128
-
-
-namespace bob_wins_strategy_l79_79327
-
--- Definitions for the conditions.
-noncomputable def game_board : Type := fin 8 × fin 8
-noncomputable def initial_tokens_positions (bob_initial alice_initial : game_board) : Prop := 
-  true -- We will just implicitly assume the tokens start on the board as we do not focus on precise positions.
-
--- Main statement for Bob's winning strategy.
-theorem bob_wins_strategy
-  (bob_initial alice_initial : game_board)
-  (move_token : game_board → game_board → ℕ → Prop)
-  (move_legally : ∀ pos1 pos2 : game_board, (fin.dist pos1.1 pos2.1 + fin.dist pos1.2 pos2.2 = 1) → move_token pos1 pos2 1) 
-  -- Condition for moving to adjacent squares horizontally or vertically.
-  (rounds: ℕ): 
-  (∀ round,  round < 2012) →
-  ¬ (∀ round, move_token (bob_initial) (alice_initial) round) → 
-  (∀ round, move_token (alice_initial) (bob_initial) round) :=
-sorry
-
-
-end bob_wins_strategy_l79_79327
-
-
-namespace quadratic_two_distinct_real_roots_l79_79987
-
-theorem quadratic_two_distinct_real_roots (m : ℝ) : 
-  ∀ x : ℝ, x^2 + m * x - 2 = 0 → ∃ x₁ x₂ : ℝ, x₁ ≠ x₂ ∧ (x - x₁) * (x - x₂) = 0 :=
-by
-  sorry
-
-end quadratic_two_distinct_real_roots_l79_79987
-
-
-namespace excenter_altitudes_l79_79539
-
--- Define that Oa, Ob, and Oc are the excircle centers of triangle ABC
-variables {A B C Oa Ob Oc : Type*}
-variables [has_e_excenter Oa B C A] [has_e_excenter Ob A C B] [has_e_excenter Oc A B C]
-
--- Define the statement to be proved
-theorem excenter_altitudes (A B C Oa Ob Oc : Type*) 
-  [has_e_excenter Oa B C A] [has_e_excenter Ob A C B] [has_e_excenter Oc A B C] :
-  are_feet_of_altitudes A B C Oa Ob Oc :=
-sorry
-
-end excenter_altitudes_l79_79539
-
-
-namespace pos_integer_solutions_count_l79_79464
-
-theorem pos_integer_solutions_count :
-  (finite {x : ℕ | 12 < -2 * (x : ℤ) + 17 ∧ x > 0}).to_finset.card = 2 :=
-by
-  sorry
-
-end pos_integer_solutions_count_l79_79464
-
-
-namespace meeting_time_l79_79350
-
--- Variables representing the conditions
-def uniform_rate_cassie := 15
-def uniform_rate_brian := 18
-def distance_route := 70
-def cassie_start_time := 8.0
-def brian_start_time := 9.25
-
--- The goal
-theorem meeting_time : ∃ T : ℝ, (15 * T + 18 * (T - 1.25) = 70) ∧ T = 2.803 := 
-by {
-  sorry
-}
-
-end meeting_time_l79_79350
-
-
-namespace proof_triangle_is_right_angle_proof_perimeter_range_l79_79504
-
-noncomputable def triangle_is_right_angle (a b c A B C : ℝ) (sin_A sin_B sin_C : ℝ) (cos_B : ℝ) (cos_2A : ℝ) :=
-  (b > 0) ∧ (sin A / (sin B + sin C) = 1 - (a - b) / (a - c)) ∧
-  (((8 * cos B) * sin A + cos_2A) = (-2 * (sin A - 1)^2 + 3)) ∧ (a > 0) ∧ (c > 0) ∧
-  (B = π / 3) ∧ (A = π / 2)
-
-noncomputable def perimeter_range (a b c : ℝ) (A : ℝ) : set ℝ :=
-  { p : ℝ | b = sqrt 3 ∧ (p = sqrt 3 + 2 * sqrt 3 * sin (A + π / 6)) ∧ ((A + π / 6) ∈ (π / 6, 5 * π / 6)) }
-
-theorem proof_triangle_is_right_angle (a b c A B C : ℝ) (sin_A sin_B sin_C : ℝ) (cos_B : ℝ) (cos_2A : ℝ) :
-  triangle_is_right_angle a b c A B C sin_A sin_B sin_C cos_B cos_2A → (A = π / 2) :=
-by sorry
-
-theorem proof_perimeter_range (a b c A : ℝ) :
-  b = sqrt 3 → ((a > 0) ∧ (c > 0)) →
-  ∃ l, l ∈ perimeter_range a b c A :=
-by sorry
-
-end proof_triangle_is_right_angle_proof_perimeter_range_l79_79504
-
-
-namespace num_common_tangents_l79_79610
-
-noncomputable def circle_center_radius (a b c d e : ℝ) : (ℝ × ℝ) × ℝ :=
-  let h := (-a / 2)
-  let k := (-b / 2)
-  let r := real.sqrt ((a / 2)^2 + (b / 2)^2 - e)
-  ((h, k), r)
-
-noncomputable def distance (p1 p2 : ℝ × ℝ) : ℝ :=
-  real.sqrt ((p2.1 - p1.1) ^ 2 + (p2.2 - p1.2) ^ 2)
-
--- Circle 1: x^2 + y^2 + 2x + y - 2 = 0
-def C1_center_radius := circle_center_radius 2 1 0 0 (-2)
--- Circle 2: x^2 + y^2 - 4x - 2y + 4 = 0
-def C2_center_radius := circle_center_radius (-4) (-2) 0 0 4
-
-theorem num_common_tangents :
-  let ((c1x, c1y), r1) := C1_center_radius in
-  let ((c2x, c2y), r2) := C2_center_radius in
-  distance (c1x, c1y) (c2x, c2y) > r1 + r2 →
-  ∃ (n : ℕ), n = 4 :=
-by
-  sorry
-
-end num_common_tangents_l79_79610
-
-
-namespace AM_GM_inequality_l79_79414
-
-theorem AM_GM_inequality (n : ℕ) (hn : n ≥ 2) (a : Finₙ → ℝ) (ha : ∀ i, 0 < a i) :
-  (∑ i, a i) / n.to_real ≥ (∏ i, a i) ^ (1 / n.to_real) :=
-sorry
-
-end AM_GM_inequality_l79_79414
-
-
-namespace eight_lines_divide_plane_into_37_regions_l79_79377
-
-theorem eight_lines_divide_plane_into_37_regions :
-  ∀ (lines : Fin 8 → Line)
-  (h1 : ∀ i j, i ≠ j → ¬parallel (lines i) (lines j))
-  (h2 : ∀ i j k, ¬concurrent (lines i) (lines j) (lines k)),
-  number_of_regions lines = 37 :=
-by
-  -- Proof omitted
-  sorry
-
-end eight_lines_divide_plane_into_37_regions_l79_79377
-
-
-namespace complementary_angle_measure_l79_79737
-
-theorem complementary_angle_measure (A S C : ℝ) (h1 : A = 45) (h2 : A + S = 180) (h3 : A + C = 90) (h4 : S = 3 * C) : C = 45 :=
-by
-  sorry
-
-end complementary_angle_measure_l79_79737
-
-
-namespace parallel_condition_l79_79086
-
-noncomputable theory
-
--- Define line l1 and line l2
-def line_l1 (a : ℝ) (x y : ℝ) : Prop := a * x + 2 * y - 1 = 0
-def line_l2 (a : ℝ) (x y : ℝ) : Prop := x + (a + 1) * y + 4 = 0
-
--- Define the conditions for lines to be parallel
-def parallel_lines (a b c d e f : ℝ) : Prop := a * e = b * d
-
--- The main theorem
-theorem parallel_condition (a : ℝ) :
-  (∀ x y : ℝ, line_l1 a x y ↔ line_l2 a x y) ↔ (a = 1) :=
-begin
-  sorry
-end
-
-end parallel_condition_l79_79086
-
-
-namespace max_consecutive_sum_le_1000_l79_79228
-
-theorem max_consecutive_sum_le_1000 : 
-  ∃ (n : ℕ), (∀ m : ℕ, m > n → ∑ k in finset.range (m + 1), k > 1000) ∧
-             ∑ k in finset.range (n + 1), k ≤ 1000 :=
-by
-  sorry
-
-end max_consecutive_sum_le_1000_l79_79228
-
-
-namespace max_equilateral_triangle_area_in_rectangle_l79_79705
-
--- Define the rectangle and conditions
-def rectangle_area (length width : ℝ) : ℝ := length * width
-
-def midpoint (a b : ℝ) : ℝ := (a + b) / 2
-
--- Define the maximum area of an equilateral triangle
-def equilateral_triangle_area (side : ℝ) : ℝ := (side * side * Math.sqrt 3) / 4
-
--- The problem statement
-theorem max_equilateral_triangle_area_in_rectangle 
-  (a b : ℝ) (h_a : a = 12) (h_b : b = 15) : 
-  ∃ (s : ℝ), equilateral_triangle_area s = 50.0625 * Math.sqrt 3 :=
-by
-  have h_area : (equilateral_triangle_area 14.15 = 50.0625 * Math.sqrt 3) :=
-    sorry,
-  use 14.15,
-  exact h_area
-
-end max_equilateral_triangle_area_in_rectangle_l79_79705
-
-
-namespace graph_stays_connected_after_edge_removal_l79_79876
-
-/-- Let G be a graph where every vertex has degree 100. 
-    Prove that removing any single edge does not disconnect the graph. -/
-theorem graph_stays_connected_after_edge_removal
-  {V : Type} {G : SimpleGraph V} 
-  (h_degree : ∀ v : V, G.degree v = 100)
-  (h_connected : G.IsConnected) 
-  (u v : V) (h_edge : G.Adj u v) :
-  (G.deleteEdge u v).IsConnected :=
-by
-  sorry
-
-end graph_stays_connected_after_edge_removal_l79_79876
-
-
-namespace sum_of_distances_l79_79875
-
--- Define the points
-def A : ℝ × ℝ := (15, 0)
-def B : ℝ × ℝ := (0, 5)
-def D : ℝ × ℝ := (4, 3)
-
--- Define a function to calculate Euclidean distance between two points
-def euclidean_distance (p1 p2 : ℝ × ℝ) : ℝ :=
-  Real.sqrt ((p1.1 - p2.1) ^ 2 + (p1.2 - p2.2) ^ 2)
-
--- Define the distances AD and BD
-def AD : ℝ := euclidean_distance A D
-def BD : ℝ := euclidean_distance B D
-
-theorem sum_of_distances : AD + BD = 2 * Real.sqrt 5 + Real.sqrt 130 := by
-  sorry
-
-end sum_of_distances_l79_79875
-
-
-namespace tangent_line_at_x0_l79_79671
-
--- Define the given function y = 2x / (x^2 + 1)
-def f (x : ℝ) : ℝ := (2 * x) / (x^2 + 1)
-
--- Define the point x0 = 1
-def x0 : ℝ := 1
-
--- Define the derivative of the function f(x)
-def f' (x : ℝ) : ℝ := ((2 * (x^2 + 1) - (2 * x) * (2 * x)) / (x^2 + 1)^2)
-
--- Evaluate the derivative at x0 = 1
-def y'_0 : ℝ := f' x0
-
--- Evaluate the original function at x0 = 1
-def y0 : ℝ := f x0
-
--- Theorem: The equation of the tangent line to the curve f(x) at x0, given the evaluations, is y = 1
-theorem tangent_line_at_x0 : ∀ x : ℝ, f' x0 * (x - x0) + y0 = 1 :=
-by
-  simp [f', x0, y'_0, y0]
-  sorry
-
-end tangent_line_at_x0_l79_79671
-
-
-namespace find_multiplier_l79_79273
-
-theorem find_multiplier (n x : ℤ) (h1: n = 12) (h2: 4 * n - 3 = (n - 7) * x) : x = 9 :=
-by {
-  sorry
-}
-
-end find_multiplier_l79_79273
-
-
-namespace axis_of_symmetry_parabola_l79_79003
-
-theorem axis_of_symmetry_parabola : 
-  ∀ (x : ℝ), 2 * (x - 3)^2 - 5 = 2 * (x - 3)^2 - 5 → (∃ h : ℝ, h = 3 ∧ ∀ x : ℝ, h = 3) :=
-by
-  sorry
-
-end axis_of_symmetry_parabola_l79_79003
-
-
-namespace cos_third_quadrant_l79_79021
-
-theorem cos_third_quadrant (B : ℝ) (hB: π < B ∧ B < 3 * π / 2) (hSinB : Real.sin B = -5 / 13) :
-  Real.cos B = -12 / 13 :=
-by
-  sorry
-
-end cos_third_quadrant_l79_79021
-
-
-namespace length_of_train_l79_79718
-
--- Definitions based on conditions
-def speed_kmph : ℝ := 90
-def time_sec : ℝ := 100
-
--- Conversion factor from km/hr to m/sec
-def kmph_to_mps : ℝ := 1000 / 3600
-
--- Mathematically equivalent proof problem
-theorem length_of_train (speed_kmph time_sec : ℝ) (kmph_to_mps : ℝ) :
-  (speed_kmph * kmph_to_mps) * time_sec = 2500 :=
-by
-  sorry
-
-end length_of_train_l79_79718
-
-
-namespace sum_of_perimeters_sum_of_areas_area_ratio_radii_ratio_l79_79868
-
-variable {α β γ : ℝ}
-variable {K T a b c a' b' c' : ℝ}
-
--- Given Conditions
-def triangle_angle_bisectors_to_circumcircle (ABC : Type) (circumcircle : Type) (A' B' C' A_1 B_1 C_1 A'' B'' C'' A_2 B_2 C_2 : Type) : Prop := sorry
-
-def triangle_perimeters_and_areas (triangle : Type) (perimeter : ℝ) (area : ℝ) : Prop := sorry
-
--- Sum of Perimeters
-theorem sum_of_perimeters (ABC A_1B_1C_1 A_2B_2C_2 : Type) (K : ℝ) :
-  triangle_angle_bisectors_to_circumcircle ABC Circumcircle A' B' C' A_1 B_1 C_1 A'' B'' C'' A_2 B_2 C_2 →
-  triangle_perimeters_and_areas ABC K 0 →
-  triangle_perimeters_and_areas A_1B_1C_1 (K / 2) 0 →
-  triangle_perimeters_and_areas A_2B_2C_2 (K / 4) 0 →
-  Σ (n : ℕ), triangle (n) = 2 * K := sorry
-
--- Sum of Areas
-theorem sum_of_areas (ABC A_1B_1C_1 A_2B_2C_2 : Type) (T : ℝ) :
-  triangle_angle_bisectors_to_circumcircle ABC Circumcircle A' B' C' A_1 B_1 C_1 A'' B'' C'' A_2 B_2 C_2 →
-  triangle_perimeters_and_areas ABC 0 T →
-  triangle_perimeters_and_areas A_1B_1C_1 0 (T / 4) →
-  triangle_perimeters_and_areas A_2B_2C_2 0 (T / 16) →
-  Σ (n : ℕ), triangle (n) = (4 / 3) * T := sorry
-
--- Area ratio
-theorem area_ratio (ABC A'B'C' : Type) (T T' : ℝ) :
-  triangle_angle_bisectors_to_circumcircle ABC Circumcircle A' B' C' A_1 B_1 C_1 A'' B'' C'' A_2 B_2 C_2 →
-  triangle_perimeters_and_areas ABC 0 T →
-  triangle_perimeters_and_areas A'B'C' 0 T' →
-  T / T' = 8 * sin (α / 2) * sin (β / 2) * sin (γ / 2) := sorry
-
--- Radii ratio
-theorem radii_ratio (ABC A'B'C' : Type) (r r' : ℝ) :
-  triangle_angle_bisectors_to_circumcircle ABC Circumcircle A' B' C' A_1 B_1 C_1 A'' B'' C'' A_2 B_2 C_2 →
-  triangle_perimeters_and_areas ABC 0 0 →
-  triangle_perimeters_and_areas A'B'C' 0 0 →
-  r / r' = (a * b * c * (a' + b' + c')) / (a' * b' * c' * (a + b + c)) := sorry
-
-end sum_of_perimeters_sum_of_areas_area_ratio_radii_ratio_l79_79868
-
-
-namespace problem_statement_l79_79561
-
--- Define the data set conditions
-def data_set (n : ℕ) : list ℕ :=
-  (list.replicate 12 (fin_range 1 n)) ++ list.replicate 7 (n + 1)
-
--- Define the mean calculation
-def mean (lst : list ℕ) : ℚ :=
-  (list.sum lst : ℚ) / list.length lst
-
--- Define the median calculation
-def median (lst : list ℕ) : ℚ :=
-  let sorted_lst := list.qsort (≤) lst in
-  let len := list.length sorted_lst in
-  if len % 2 = 0 then
-    ((sorted_lst.nth_le (len / 2 - 1) sorry + sorted_lst.nth_le (len / 2) sorry) : ℚ) / 2
-  else
-    sorted_lst.nth_le (len / 2) sorry
-
--- Define the modes calculation
-def modes (lst : list ℕ) : list ℕ :=
-  let freq := list.foldl (λ acc x, acc.insert x (acc.find x + 1)) list.dict.nil lst in
-  let max_freq := freq.values.max in
-  freq.keys.filter (λ k, freq.find k = max_freq)
-
--- Define the median of the modes
-def median_modes (modes_lst : list ℕ) : ℚ :=
-  median modes_lst
-
--- Theorem statement
-theorem problem_statement :
-  let data := data_set 30 in
-  let M := median data in
-  let mu := mean data in
-  let d := median_modes (modes data) in
-  d < mu ∧ mu < M :=
-by sorry
-
-end problem_statement_l79_79561
-
-
-namespace combined_weight_of_elephant_and_donkey_l79_79074
-
-theorem combined_weight_of_elephant_and_donkey 
-  (tons_to_pounds : ℕ → ℕ)
-  (elephant_weight_tons : ℕ) 
-  (donkey_percentage : ℕ) : 
-  tons_to_pounds elephant_weight_tons * (1 + donkey_percentage / 100) = 6600 :=
-by
-  let tons_to_pounds (t : ℕ) := 2000 * t
-  let elephant_weight_tons := 3
-  let donkey_percentage := 10
-  sorry
-
-end combined_weight_of_elephant_and_donkey_l79_79074
-
-
-namespace sum_possible_C_divisible_by_4_l79_79319
-
-theorem sum_possible_C_divisible_by_4 : 
-  let valid_C := {C | (10 * C + 92) % 4 = 0 ∧ C ∈ finset.range 10}
-  finset.sum (valid_C : finset ℕ) id = 12 :=
-by 
-  let valid_C := finset.filter (λ C, (10 * C + 92) % 4 = 0) (finset.range 10)
-  show finset.sum valid_C id = 12
-  apply finset.sum_filter
-  rw finset.range_filter_card
-  exact dec_trivial
-
-end sum_possible_C_divisible_by_4_l79_79319
-
-
-namespace difference_of_numbers_l79_79214
-
-/-- Given two natural numbers a and 10a whose sum is 23,320,
-prove that the difference between them is 19,080. -/
-theorem difference_of_numbers (a : ℕ) (h : a + 10 * a = 23320) : 10 * a - a = 19080 := by
-  sorry
-
-end difference_of_numbers_l79_79214
-
-
-namespace rectangular_box_diagonals_l79_79706
-
-noncomputable def interior_diagonals_sum (a b c : ℝ) : ℝ := 4 * Real.sqrt (a^2 + b^2 + c^2)
-
-theorem rectangular_box_diagonals 
-  (a b c : ℝ) 
-  (h1 : 2 * (a * b + b * c + c * a) = 150)
-  (h2 : 4 * (a + b + c) = 60)
-  (h3 : a * b * c = 216) :
-  interior_diagonals_sum a b c = 20 * Real.sqrt 3 :=
-by
-  sorry
-
-end rectangular_box_diagonals_l79_79706
-
-
-namespace exists_valid_configuration_l79_79739
-
--- Define the nine circles
-def circles : List ℕ := [1, 2, 3, 4, 5, 6, 7, 8, 9]
-
--- Define the connections (adjacency list) where each connected pair must sum to 23
-def lines : List (ℕ × ℕ) := [(1, 8), (8, 6), (8, 9), (9, 2), (2, 7), (7, 6), (7, 4), (4, 1), (4, 5), (5, 6), (5, 3), (6, 3)]
-
--- The main theorem that we need to prove: there exists a permutation of circles satisfying the line sum condition
-theorem exists_valid_configuration: 
-  ∃ (f : ℕ → ℕ), 
-    (∀ x ∈ circles, f x ∈ circles) ∧ 
-    (∀ (a b : ℕ), (a, b) ∈ lines → f a + f b = 23) :=
-sorry
-
-end exists_valid_configuration_l79_79739
-
-
-namespace volume_correct_l79_79756
-
-noncomputable def volume_of_extended_box : ℝ :=
-  let V_box := 4 * 5 * 6 in
-  let V_external_parallelepipeds := 2 * (4 * 5 * 1) + 2 * (4 * 6 * 1) + 2 * (5 * 6 * 1) in
-  let V_spheres := 8 * (1 / 8 * (4 / 3) * π * 1^3) in
-  let V_cylinders := 3 * π * 4 + 3 * π * 5 + 3 * π * 6 in
-  V_box + V_external_parallelepipeds + V_spheres + V_cylinders
-
-theorem volume_correct : volume_of_extended_box = (804 + 139 * π) / 3 := by
-  -- Proof to be filled in
-  sorry
-
-end volume_correct_l79_79756
-
-
-namespace geometric_series_common_ratio_l79_79174
-
-theorem geometric_series_common_ratio (a r S : ℝ) (h₁ : S = a / (1 - r)) (h₂ : ar^4 / (1 - r) = S / 64) : r = 1 / 2 :=
-  by
-  sorry
-
-end geometric_series_common_ratio_l79_79174
-
-
-namespace geometric_series_common_ratio_l79_79189
-
-theorem geometric_series_common_ratio :
-  ∀ (a r : ℝ), (r ≠ 1) → 
-  (∑' n, a * r^n = 64 * ∑' n, a * r^(n+4)) →
-  r = 1 / 2 :=
-by
-  intros a r hnr heq
-  have hsum1 : ∑' n, a * r^n = a / (1 - r) := sorry
-  have hsum2 : ∑' n, a * r^(n+4) = a * r^4 / (1 - r) := sorry
-  rw [hsum1, hsum2] at heq
-  -- Further steps to derive r = 1/2 are omitted
-  sorry
-
-end geometric_series_common_ratio_l79_79189
-
-
-namespace angle_of_inclination_BC_l79_79321
-
-noncomputable def angle_of_inclination (m : ℝ) : ℝ :=
-  real.arctan m
-
-noncomputable def pointA : ℝ × ℝ := (-2, real.sqrt 3)
-noncomputable def pointC : ℝ × ℝ := (1, 2 * real.sqrt 3)
-noncomputable def pointA' : ℝ × ℝ := (-2, -real.sqrt 3)
-
-theorem angle_of_inclination_BC : let Bx := (-(pointA.fst * pointA.snd) / real.sqrt (pointA.fst^2 + pointA.snd^2)) in 
-  let By := 0 in
-  let B := (Bx, By) in
-  (pointA'.snd ≠ pointC.snd ∧ pointA'.fst ≠ pointC.fst) →
-  Bx = (pointA'.snd * pointC.fst - pointA'.fst * pointC.snd) / (pointA'.snd - pointC.snd) →
-  let m := (pointC.snd - By) / (pointC.fst - Bx) in
-  angle_of_inclination m = real.pi / 3 :=
-by sorry
-
-end angle_of_inclination_BC_l79_79321
-
-
-namespace smallest_trapezoid_area_l79_79894
-
-theorem smallest_trapezoid_area :
-  ∀ (area_outer : ℝ) (area_inner : ℝ) (ratios : ℝ × ℝ × ℝ), 
-  area_outer = 36 → area_inner = 4 → ratios = (3, 2, 1) → 
-  (area_outer - area_inner) / (ratios.1 + ratios.2 + ratios.3) * min ratios.1 (min ratios.2 ratios.3) = 5.33 :=
-by
-  intros area_outer area_inner ratios h1 h2 h3
-  -- Proof to be completed
-  sorry
-
-end smallest_trapezoid_area_l79_79894
-
-
-namespace sophie_saves_money_l79_79595
-
--- Definitions based on the conditions
-def loads_per_week : ℕ := 4
-def sheets_per_load : ℕ := 1
-def cost_per_box : ℝ := 5.50
-def sheets_per_box : ℕ := 104
-def weeks_per_year : ℕ := 52
-
--- Main theorem statement
-theorem sophie_saves_money :
-  let sheets_per_week := loads_per_week * sheets_per_load
-  let total_sheets_per_year := sheets_per_week * weeks_per_year
-  let boxes_per_year := total_sheets_per_year / sheets_per_box
-  let annual_saving := boxes_per_year * cost_per_box
-  annual_saving = 11.00 := 
-by {
-  -- Calculation steps
-  let sheets_per_week := loads_per_week * sheets_per_load
-  let total_sheets_per_year := sheets_per_week * weeks_per_year
-  let boxes_per_year := total_sheets_per_year / sheets_per_box
-  let annual_saving := boxes_per_year * cost_per_box
-  -- Proving the final statement
-  sorry
-}
-
-end sophie_saves_money_l79_79595
-
-
-namespace slower_time_to_reach_top_l79_79554
-
-def time_for_lola (stories : ℕ) (time_per_story : ℕ) : ℕ :=
-  stories * time_per_story
-
-def time_for_tara (stories : ℕ) (time_per_story : ℕ) (stopping_time : ℕ) (num_stops : ℕ) : ℕ :=
-  (stories * time_per_story) + (num_stops * stopping_time)
-
-theorem slower_time_to_reach_top (stories : ℕ) (lola_time_per_story : ℕ) (tara_time_per_story : ℕ) 
-  (tara_stop_time : ℕ) (tara_num_stops : ℕ) : 
-  stories = 20 
-  → lola_time_per_story = 10 
-  → tara_time_per_story = 8 
-  → tara_stop_time = 3
-  → tara_num_stops = 18
-  → max (time_for_lola stories lola_time_per_story) (time_for_tara stories tara_time_per_story tara_stop_time tara_num_stops) = 214 :=
-by sorry
-
-end slower_time_to_reach_top_l79_79554
-
-
-namespace total_spent_l79_79402
-
-theorem total_spent (cost_per_deck : ℕ) (decks_frank : ℕ) (decks_friend : ℕ) (total : ℕ) : 
-  cost_per_deck = 7 → 
-  decks_frank = 3 → 
-  decks_friend = 2 → 
-  total = (decks_frank * cost_per_deck) + (decks_friend * cost_per_deck) → 
-  total = 35 :=
-by
-  sorry
-
-end total_spent_l79_79402
-
-
-namespace range_of_a_l79_79821
-
--- Given conditions and propositions
-variable (a : ℝ) (h : 0 < a)
-
--- Define proposition p: y = a^x is strictly decreasing
-def prop_p : Prop := 0 < a ∧ a < 1
-
--- Define proposition q: x^2 - 3ax + 1 > 0 for all x
-def prop_q : Prop := ∀ x : ℝ, x^2 - 3 * a * x + 1 > 0
-
--- The theorem statement
-theorem range_of_a (h_pq : xor prop_p prop_q) : 
-  (2 / 3) ≤ a ∧ a < 1 :=
-sorry
-
-end range_of_a_l79_79821
-
-
-namespace max_consecutive_integers_sum_lt_1000_l79_79242
-
-theorem max_consecutive_integers_sum_lt_1000
-  (n : ℕ)
-  (h : (n * (n + 1)) / 2 < 1000) : n ≤ 44 :=
-by
-  sorry
-
-end max_consecutive_integers_sum_lt_1000_l79_79242
-
-
-namespace correct_calculation_l79_79669
-
-theorem correct_calculation (a : ℝ) : -2 * a + (2 * a - 1) = -1 := by
-  sorry
-
-end correct_calculation_l79_79669
-
-
-namespace portion_of_pie_left_is_15_percent_l79_79749
-
-def fraction_of_pie_left_after_carlos (total_pie : ℝ) : ℝ :=
-  total_pie * 0.2
-
-def fraction_of_pie_taken_by_maria (remaining_pie : ℝ) : ℝ :=
-  remaining_pie * 0.25
-
-theorem portion_of_pie_left_is_15_percent (total_pie : ℝ) (H : total_pie = 1) :
-  let remaining_pie := fraction_of_pie_left_after_carlos total_pie in
-  let maria_pie := fraction_of_pie_taken_by_maria remaining_pie in
-  remaining_pie - maria_pie = 0.15 :=
-by
-  sorry
-
-end portion_of_pie_left_is_15_percent_l79_79749
-
-
-namespace point_bisector_second_quadrant_l79_79870
-
-theorem point_bisector_second_quadrant (a : ℝ) : 
-  (a < 0 ∧ 2 > 0) ∧ (2 = -a) → a = -2 :=
-by sorry
-
-end point_bisector_second_quadrant_l79_79870
-
-
-namespace last_duck_bread_l79_79623
-
-theorem last_duck_bread (total_bread : ℕ) (left_bread : ℕ) (first_duck_bread_fraction : ℚ) (second_duck_bread : ℕ) (total_pieces : ℕ) :
-  total_bread = 100 →
-  left_bread = 30 →
-  first_duck_bread_fraction = 1 / 2 →
-  second_duck_bread = 13 →
-  total_pieces = total_bread - left_bread →
-  ∃ (last_duck_bread : ℕ), last_duck_bread = total_pieces - (total_bread / 2) - second_duck_bread :=
-begin
-  intros h1 h2 h3 h4 h5,
-  use total_pieces - (total_bread / 2) - second_duck_bread,
-  rw [h1, h2, h3, h4, h5] at *,
-  norm_num,
-  sorry,
-end
-
-end last_duck_bread_l79_79623
-
-
-namespace coplanar_vectors_lambda_eq_one_l79_79404
-
-open Real
-
-def vector_a : Vector3 := ⟨2, -1, 3⟩
-def vector_b : Vector3 := ⟨-1, 4, -2⟩
-def vector_c (λ : Real) : Vector3 := ⟨1, 3, λ⟩
-
-theorem coplanar_vectors_lambda_eq_one (λ : Real) :
-  (λ : Real) → (⟨1, 3, λ⟩ ∈ span ℝ {⟨2, -1, 3⟩, ⟨-1, 4, -2⟩}) → λ = 1 :=
-by
-  sorry
-
-end coplanar_vectors_lambda_eq_one_l79_79404
-
-
-namespace mabel_shark_ratio_l79_79558
-
-variables (F1 F2 sharks_total sharks_day1 sharks_day2 ratio : ℝ)
-variables (fish_day1 := 15)
-variables (shark_percentage := 0.25)
-variables (total_sharks := 15)
-
-noncomputable def ratio_of_fish_counts := (F2 / F1)
-
-theorem mabel_shark_ratio 
-    (fish_day1 : ℝ := 15)
-    (shark_percentage : ℝ := 0.25)
-    (total_sharks : ℝ := 15)
-    (sharks_day1 := 0.25 * fish_day1)
-    (sharks_day2 := total_sharks - sharks_day1)
-    (F2 := sharks_day2 / shark_percentage)
-    (ratio := F2 / fish_day1):
-    ratio = 16 / 5 :=
-by
-  sorry
-
-end mabel_shark_ratio_l79_79558
-
-
-namespace determine_constant_m_l79_79544
-
-noncomputable def unit_vectors (u v w : ℝ^3) : Prop :=
-  ∥u∥ = 1 ∧ ∥v∥ = 1 ∧ ∥w∥ = 1
-
-noncomputable def orthogonal (x y : ℝ^3) : Prop := x ⋅ y = 0
-
-noncomputable def angle (x y : ℝ^3) : ℝ := real.arccos (x ⋅ y / (∥x∥ * ∥y∥))
-
-theorem determine_constant_m
-  (u v w : ℝ^3)
-  (hu : unit_vectors u v w)
-  (huv : orthogonal u v)
-  (huw : orthogonal u w)
-  (hvwa : angle v w = π / 3):
-  ∃ m : ℝ, u = m * (v × w) ∧ (m = 2 * real.sqrt 3 / 3 ∨ m = - (2 * real.sqrt 3 / 3)) :=
-sorry
-
-end determine_constant_m_l79_79544
-
-
-namespace buildings_subset_count_l79_79218
-
-theorem buildings_subset_count :
-  let buildings := Finset.range (16 + 1) \ {0}
-  ∃ S ⊆ buildings, ∀ (a b : ℕ), a ≠ b ∧ a ∈ S ∧ b ∈ S → ∃ k, (b - a = 2 * k + 1) ∨ (a - b = 2 * k + 1) ∧ Finset.card S = 510 :=
-sorry
-
-end buildings_subset_count_l79_79218
-
-
-namespace smallest_positive_period_axis_of_symmetry_max_value_on_interval_min_value_on_interval_l79_79447
-
-noncomputable def f (x : ℝ) : ℝ :=
-  sqrt 3 * sin (2 * x - π / 3) - 2 * sin (x - π / 4) * sin (x + π / 4)
-
-theorem smallest_positive_period : ∃ T > 0, ∀ x, f (x + T) = f x ∧ T = π := 
-  sorry
-
-theorem axis_of_symmetry : ∃ k : ℤ, ∀ x, (f (x) = f (k * (π / 2) + π / 3)) := 
-  sorry
-
-theorem max_value_on_interval : ∀ x, (-π / 12 ≤ x ∧ x ≤ π / 2 → (f x ≤ 1)) :=
-  ∃ x, (x = π / 3 ∧ f x = 1) := 
-  sorry
-
-theorem min_value_on_interval : ∀ x, (-π / 12 ≤ x ∧ x ≤ π / 2 → (f x ≥ - sqrt 3 / 2)) :=
-  ∃ x, (x = - π / 12 ∧ f x = - sqrt 3 / 2) := 
-  sorry
-
-end smallest_positive_period_axis_of_symmetry_max_value_on_interval_min_value_on_interval_l79_79447
-
-
-namespace regular_price_for_one_T_shirt_l79_79325
-
-theorem regular_price_for_one_T_shirt 
-    (total_tshirts : ℕ) 
-    (total_cost : ℝ) 
-    (discounted_cost : ℝ) 
-    (regular_cost : ℝ) 
-    (group_size : ℕ) 
-    (actual_group_count : total_tshirts / group_size) 
-    (cost_per_group : regular_cost + discounted_cost)
-    (total_spent : actual_group_count * cost_per_group = total_cost) : regular_cost = 14.5 :=
-by
-  sorry
-
-end regular_price_for_one_T_shirt_l79_79325
-
-
-namespace tangent_circle_solutions_l79_79361
-
-theorem tangent_circle_solutions (r R : ℝ) (O : ℝ × ℝ) (a b c : ℝ)
-  (h1 : 0 ≤ r)
-  (h2 : 0 ≤ R) :
-  ∃ n : ℕ, n ≤ 8 ∧ ∀ (P : ℝ × ℝ), 
-  (dist P O = R + r ∨ dist P O = R - r) ∧ 
-  (a * P.1 + b * P.2 + (c + r * real.sqrt (a^2 + b^2)) = 0 ∨ 
-   a * P.1 + b * P.2 + (c - r * real.sqrt (a^2 + b^2)) = 0) 
-  → n = 8 :=
-sorry
-
-end tangent_circle_solutions_l79_79361
-
-
-namespace spherical_to_rectangular_correct_l79_79362
-
-noncomputable def sphericalToRectangular (ρ θ φ : ℝ) : ℝ × ℝ × ℝ :=
-  (ρ * Real.sin φ * Real.cos θ, ρ * Real.sin φ * Real.sin θ, ρ * Real.cos φ)
-
-theorem spherical_to_rectangular_correct :
-  let ρ := 5
-  let θ := Real.pi / 4
-  let φ := Real.pi / 3
-  sphericalToRectangular ρ θ φ = (5 * Real.sqrt 6 / 4, 5 * Real.sqrt 6 / 4, 5 / 2) :=
-by
-  sorry
-
-end spherical_to_rectangular_correct_l79_79362
-
-
-namespace find_N_l79_79015
-
-theorem find_N : ∀ N : ℕ, (991 + 993 + 995 + 997 + 999 = 5000 - N) → N = 25 :=
-by
-  intro N h
-  sorry
-
-end find_N_l79_79015
-
-
-namespace total_votes_l79_79052
-
-theorem total_votes (V : ℝ) 
-  (valid_votes : ℝ := 0.8 * V) 
-  (candidate_A_valid_votes : ℝ := 0.55 * valid_votes) 
-  (candidate_B_valid_votes : ℝ = 1980) 
-  (valid_votes_eq : candidate_A_valid_votes + candidate_B_valid_votes = valid_votes) :
-  V = 5500 :=
-by
-  sorry
-
-end total_votes_l79_79052
-
-
-namespace part_i_part_ii_l79_79532
-
--- Define the setup
-variable (A B C D O : Point)
-variable (AB AD BC CD : ℝ)
-variable (semicircle_tangent : ∀ P Q R, IsTangent (semicircle O AB) BC ∧ IsTangent (semicircle O AB) CD ∧ IsTangent (semicircle O AB) DA)
-variable (quadrilateral_cyclic : IsCyclicQuadrilateral A B C D)
-variable (x y : ℝ)
-
--- Part (i) Statement
-theorem part_i : AB = AD + BC := by
-  sorry
-
--- Part (ii) Statement
-theorem part_ii (h1 : AB = x) (h2 : CD = y) :
-  maximal_area (quadrilateral_cyclic) = (x + y) * (sqrt (2 * x * y - y ^ 2)) / 4 := by
-  sorry
-
-end part_i_part_ii_l79_79532
-
-
-namespace earthquake_amplitude_ratio_l79_79057
-
-theorem earthquake_amplitude_ratio (A B : ℝ) (A0 : ℝ) 
-  (h1 : ∀ (M : ℝ), M = log10 (A/A0)) (h2 : 7.1 = log10 (A/A0)) (h3 : 6.2 = log10 (B/A0)) :
-  A / B = 10^0.9 :=
-by 
-  sorry
-
-end earthquake_amplitude_ratio_l79_79057
-
-
-namespace probability_of_specific_sequence_l79_79662
-
--- We define a structure representing the problem conditions.
-structure problem_conditions :=
-  (cards : multiset ℕ)
-  (permutation : list ℕ)
-
--- Noncomputable definition for the correct answer.
-noncomputable def probability := (1 : ℚ) / 720
-
--- The main theorem statement.
-theorem probability_of_specific_sequence :
-  ∀ (conds : problem_conditions),
-  conds.cards = {1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6} ∧
-  (∃ (perm : list ℕ), perm.perm conds.permutation) →
-  (∃ (sequence : list ℕ), sequence = [1, 2, 3, 4, 5, 6]) →
-  let prob := calculate_probability conds.permutation [1, 2, 3, 4, 5, 6] in
-  prob = (1 : ℚ) / 720 :=
-sorry
-
-end probability_of_specific_sequence_l79_79662
-
-
-namespace bing_column_guimao_2023_column_l79_79054
-
--- Define the cyclic arrangement and state the problem for 丙 (bǐng) and 癸卯 (guǐ mǎo).
-
--- Problem (1): Column of 丙 (bǐng) for the n-th time.
-theorem bing_column (n : ℕ) : ∃ k, n = 10 * k - 7 := 
-sorry
-
--- Problem (2): Column position for 2023 year 癸卯 (guǐ mǎo).
-theorem guimao_2023_column : column 2023 = 40 :=
-sorry
-
-end bing_column_guimao_2023_column_l79_79054
-
-
-namespace geometric_series_common_ratio_l79_79195
-
-theorem geometric_series_common_ratio (a r : ℝ) (h₁ : r ≠ 1)
-    (h₂ : a / (1 - r) = 64 * (a * r^4) / (1 - r)) : r = 1/2 :=
-by
-  have h₃ : 1 = 64 * r^4 := by
-    have : 1 - r ≠ 0 := by linarith
-    field_simp at h₂; assumption
-  sorry
-
-end geometric_series_common_ratio_l79_79195
-
-
-namespace area_of_inner_triangle_divided_by_1_2_l79_79984
-
--- Define the original triangle and the points dividing each side in 1:2 ratio
-variables {T : ℝ} (area_original : ℝ)
-variables (A B C : Point) 
-variables (P Q R : Point)
--- Assume that points P, Q, and R divide the sides in ratio 1:2
-
--- Assume P is 1/3 along from A to B, Q is 1/3 along from B to C, and R is 1/3 along from C to A
-def dividing_point (A B : Point) (ratio : ℝ) : Point := sorry -- Define how we compute these points
-
--- Assume relevant properties about triangle, its area, and scaled areas
-axiom area_triangle_proportional (T : ℝ) {Δ : Triangle} :
-    area_original Δ = T → ∃ Δ', Δ'.side_lengths = (1/3) • Δ.side_lengths ∧ area Δ' = (T / 9)
-
--- Main statement about areas
-theorem area_of_inner_triangle_divided_by_1_2 (T : ℝ) (area_original : T) : 
-    area_original = T → 
-    ∃ Δ', Δ'.side_lengths = (1/3) • Δ.side_lengths ∧ area Δ' = (T / 9) := 
-by 
-    sorry
-
-end area_of_inner_triangle_divided_by_1_2_l79_79984
-
-
-namespace cos_B_third_quadrant_l79_79028
-
-theorem cos_B_third_quadrant (B : ℝ) (hB1 : π < B ∧ B < 3 * π / 2) (hB2 : sin B = -5 / 13) : cos B = -12 / 13 :=
-by
-  sorry
-
-end cos_B_third_quadrant_l79_79028
-
-
-namespace capacitor_voltage_calculation_l79_79300
-
-theorem capacitor_voltage_calculation : 
-  ∀ (C₁ C₂ U₁ U₂ : ℝ), 
-    C₁ = 10 ∧ U₁ = 15 ∧ C₂ = 5 ∧ U₂ = 10 → 
-      (C₁ * U₁ - C₂ * U₂) / (C₁ + C₂) = 20 / 3 := by
-  intros C₁ C₂ U₁ U₂ h
-  cases h with h1 h2
-  cases h2 with h3 h4
-  cases h4 with h5 h6
-  rw [h1, h3, h5, h6]
-  norm_num
-  sorry
-
-end capacitor_voltage_calculation_l79_79300
-
-
-namespace right_triangle_ratio_is_4_l79_79707
-
-noncomputable def right_triangle_rectangle_ratio (b h xy : ℝ) : Prop :=
-  (0.4 * (1/2) * b * h = 0.25 * xy) ∧ (xy = b * h) → (b / h = 4)
-
-theorem right_triangle_ratio_is_4 (b h xy : ℝ) (h1 : 0.4 * (1/2) * b * h = 0.25 * xy)
-(h2 : xy = b * h) : b / h = 4 :=
-sorry
-
-end right_triangle_ratio_is_4_l79_79707
-
-
-namespace triangle_integer_lengths_impossible_l79_79084
-
-theorem triangle_integer_lengths_impossible
-  (A B C D E I : Type)
-  [Triangle A B C]
-  [RightAngle (Angle A)]
-  [OnSegment D A C]
-  [OnSegment E A B]
-  [AngleEqual (Angle A B D) (Angle D B C)]
-  [AngleEqual (Angle A C E) (Angle E C B)]
-  [Intersection (Segment B D) (Segment C E) I] :
-  ¬ (IsIntegerLength (Segment A B) ∧ IsIntegerLength (Segment A C) ∧
-     IsIntegerLength (Segment B I) ∧ IsIntegerLength (Segment I D) ∧
-     IsIntegerLength (Segment C I) ∧ IsIntegerLength (Segment I E)) :=
-sorry
-
-end triangle_integer_lengths_impossible_l79_79084
-
-
-namespace problem_statement_l79_79842
-
--- Definitions related to the given conditions
-noncomputable def f (x : ℝ) : ℝ := Real.sin (2 * x - (5 * Real.pi) / 6)
-
-theorem problem_statement :
-  (∀ x1 x2 : ℝ, (x1 ∈ Set.Ioo (Real.pi / 6) (2 * Real.pi / 3)) → (x2 ∈ Set.Ioo (Real.pi / 6) (2 * Real.pi / 3)) → x1 < x2 → f x1 < f x2) →
-  (f (Real.pi / 6) = f (2 * Real.pi / 3)) →
-  f (-((5 * Real.pi) / 12)) = (Real.sqrt 3) / 2 :=
-by
-  intros h_mono h_symm
-  sorry
-
-end problem_statement_l79_79842
-
-
-namespace max_consecutive_integers_lt_1000_l79_79255
-
-theorem max_consecutive_integers_lt_1000 : 
-  ∃ n : ℕ, (n * (n + 1)) / 2 < 1000 ∧ ∀ m : ℕ, m > n → (m * (m + 1)) / 2 ≥ 1000 :=
-sorry
-
-end max_consecutive_integers_lt_1000_l79_79255
-
-
-namespace number_of_possible_teams_less_than_5_percent_girls_teams_l79_79314
-
--- Definitions related to the problem conditions
-def boys : ℕ := 5
-def girls : ℕ := 4
-def students : ℕ := boys + girls
-def team_size : ℕ := 3
-def girl_team_size : ℕ := 3
-
--- Define combinations function
-def combination (n r : ℕ) : ℕ := (n.choose r)
-
--- Prove that the total number of teams is 84
-theorem number_of_possible_teams : combination students team_size = 84 :=
-by sorry
-
--- Number of ways to form a team of only girls
-def girl_teams : ℕ := combination girls girl_team_size
-
--- Prove that less than 5% of the possible teams consist only of girls
-theorem less_than_5_percent_girls_teams : girl_teams < 0.05 * combination students team_size :=
-by sorry
-
-end number_of_possible_teams_less_than_5_percent_girls_teams_l79_79314
-
-
-namespace equilateral_triangle_perimeter_l79_79694
-
-theorem equilateral_triangle_perimeter :
-  (∃ (x y : ℝ), y = -2 * x ∧ x = 1) ∧ 
-  (∃ (x y : ℝ), y = 2 + (1 / 2) * x ∧ x = 1) ∧ 
-  (∃ (x y1 y2 : ℝ), y1 = -2 * x ∧ y2 = 2 + (1 / 2) * x ∧ x = 1) → 
-  let side_length := 4.5 in
-  3 * side_length = 13.5 :=
-by
-  sorry
-
-end equilateral_triangle_perimeter_l79_79694
-
-
-namespace john_marble_choices_l79_79907
-
-open Nat
-
-theorem john_marble_choices :
-  (choose 4 2) * (choose 12 3) = 1320 :=
-by
-  sorry
-
-end john_marble_choices_l79_79907
-
-
-namespace current_population_l79_79685
-
-theorem current_population (initial_population deaths_leaving_percentage : ℕ) (current_population : ℕ) :
-  initial_population = 3161 → deaths_leaving_percentage = 5 →
-  deaths_leaving_percentage / 100 * initial_population + deaths_leaving_percentage * (initial_population - deaths_leaving_percentage / 100 * initial_population) / 100 = initial_population - current_population →
-  current_population = 2553 :=
- by
-  sorry
-
-end current_population_l79_79685
-
-
-namespace number_of_solutions_ineq_l79_79329
-
-theorem number_of_solutions_ineq : 
-  {x | x ∈ {-1, 0, (1/2), 1} ∧ 2*x - 1 < x}.card = 3 := 
-by 
-  sorry
-
-end number_of_solutions_ineq_l79_79329
-
-
-namespace number_of_members_in_league_l79_79562
-
--- Define the conditions
-def pair_of_socks_cost := 4
-def t_shirt_cost := pair_of_socks_cost + 6
-def cap_cost := t_shirt_cost - 3
-def total_cost_per_member := 2 * (pair_of_socks_cost + t_shirt_cost + cap_cost)
-def league_total_expenditure := 3144
-
--- Prove that the number of members in the league is 75
-theorem number_of_members_in_league : 
-  (∃ (n : ℕ), total_cost_per_member * n = league_total_expenditure) → 
-  (∃ (n : ℕ), n = 75) :=
-by
-  sorry
-
-end number_of_members_in_league_l79_79562
-
-
-namespace subtraction_888_55_555_55_l79_79137
-
-theorem subtraction_888_55_555_55 : 888.88 - 555.55 = 333.33 :=
-by
-  sorry
-
-end subtraction_888_55_555_55_l79_79137
-
-
-namespace cost_of_energy_drink_l79_79969
-
-/-- 
-The conditions stated in the problem 
--/
-variables (cupcakes_sold : ℕ) (cupcake_price : ℝ)
-variables (cookies_sold : ℕ) (cookie_price : ℝ)
-variables (basketballs_bought : ℕ) (basketball_price : ℝ)
-variables (energy_drinks_bought : ℕ)
-
-/--
-The proof statement: Given the number of items sold and their respective prices, 
-and the cost of basketballs, prove the cost of one energy drink.
--/
-theorem cost_of_energy_drink (h: cupcakes_sold = 50)
-                              (h1: cupcake_price = 2)
-                              (h2: cookies_sold = 40)
-                              (h3: cookie_price = 0.5)
-                              (h4: basketballs_bought = 2)
-                              (h5: basketball_price = 40)
-                              (h6: energy_drinks_bought = 20) :
-  (120 - 2 * 40 : ℝ) / 20 = 2 :=
-by
-  sorry
-
-end cost_of_energy_drink_l79_79969
-
-
-namespace sum_of_odd_cubes_div_sum_of_odds_l79_79582
-
-theorem sum_of_odd_cubes_div_sum_of_odds (n : ℕ) (h : n > 0) :
-  (∑ k in finset.range n, (2 * k + 1)^3) / (∑ k in finset.range n, (2 * k + 1)) = 2 * n^2 - 1 :=
-sorry
-
-end sum_of_odd_cubes_div_sum_of_odds_l79_79582
-
-
-namespace max_distance_l79_79505
-
-def polar_eq_line : ℝ → ℝ → Prop := λ ρ θ, sqrt 2 * ρ * real.cos (θ + real.pi / 4) = 1
-
-def parametric_eqn_curve (α : ℝ) : ℝ × ℝ :=
-  (1 + sqrt 3 * real.cos α, real.sin α)
-
-noncomputable def maximum_distance (C : ℝ × ℝ) : ℝ :=
-  sqrt 3
-
-theorem max_distance (α : ℝ) :
-  let M := parametric_eqn_curve α in
-  let l := polar_eq_line in
-  true → maximum_distance M = sqrt 3 :=
-by simp [maximum_distance]; sorry
-
-end max_distance_l79_79505
-
-
-namespace max_consecutive_sum_le_1000_l79_79232
-
-theorem max_consecutive_sum_le_1000 : 
-  ∃ (n : ℕ), (∀ m : ℕ, m > n → ∑ k in finset.range (m + 1), k > 1000) ∧
-             ∑ k in finset.range (n + 1), k ≤ 1000 :=
-by
-  sorry
-
-end max_consecutive_sum_le_1000_l79_79232
-
-
-namespace projectiles_meet_in_72_minutes_l79_79499
-
--- Define the constants based on the conditions
-def distance : ℝ := 1182  -- Distance in km
-def speed1 : ℝ := 460     -- Speed of first projectile in km/h
-def speed2 : ℝ := 525     -- Speed of second projectile in km/h
-def total_speed : ℝ := speed1 + speed2  -- Combined speed in km/h
-def time_hours : ℝ := distance / total_speed  -- Time in hours
-def time_minutes : ℝ := time_hours * 60      -- Time in minutes
-
--- Theorem statement to be proven
-theorem projectiles_meet_in_72_minutes : time_minutes = 72 :=
-by
-  sorry
-
-end projectiles_meet_in_72_minutes_l79_79499
-
-
-namespace intersect_dg_ei_on_Γ_l79_79096
-
--- Definitions of points and relations based on the conditions
-variable {A B C I D E F G : Point}
-variable {Γ : Circle}
-variable {AI_line : Line}
-
--- Conditions that define our specific point structures and relationships
-variable [incenter I A B C]
-variable [circumcircle Γ A B C]
-variable [on_line AI_line I]
-variable [intersect AI_line Γ D (hne : D ≠ A)]
-variable [on_bc F B C]
-variable [arc_bdc E B D C Γ]
-variable [angle_bisect A B F C A E < (1/2) ∠ BAC]
-
--- Interpretation of G as the midpoint of IF
-variable [midpoint G I F]
-
--- Statement to be proved: The lines DG and EI intersect on Γ
-theorem intersect_dg_ei_on_Γ : intersect (line_through D G) (line_through E I) Γ := by
-  sorry
-
-end intersect_dg_ei_on_Γ_l79_79096
-
-
-namespace find_g_neg_4_l79_79152
-
--- Define the function g and the conditions
-def g : ℝ → ℝ := sorry
-
--- The main theorem to prove
-theorem find_g_neg_4 : (∀ x y : ℝ, g(x + y) = g(x) * g(y)) → (∀ x : ℝ, g(x) ≠ 0) → g(-4) = 1 / g(4) :=
-by
-  intros h1 h2
-  sorry
-
-end find_g_neg_4_l79_79152
-
-
-namespace min_a2_b2_l79_79607
-
-noncomputable def minimum_a2_b2 (a b : ℝ) : Prop :=
-  (∃ a b : ℝ, (|(-2*a - 2*b + 4)|) / (Real.sqrt (a^2 + (2*b)^2)) = 2) → (a^2 + b^2 = 2)
-
-theorem min_a2_b2 : minimum_a2_b2 a b :=
-by
-  sorry
-
-end min_a2_b2_l79_79607
-
-
-namespace olivia_cookies_total_l79_79114
-
-def cookies_total (baggie_cookie_count : ℝ) (chocolate_chip_cookies : ℝ) 
-                  (baggies_oatmeal_cookies : ℝ) (total_cookies : ℝ) : Prop :=
-  let oatmeal_cookies := baggies_oatmeal_cookies * baggie_cookie_count
-  oatmeal_cookies + chocolate_chip_cookies = total_cookies
-
-theorem olivia_cookies_total :
-  cookies_total 9.0 13.0 3.111111111 41.0 :=
-by
-  -- Proof goes here
-  sorry
-
-end olivia_cookies_total_l79_79114
-
-
-namespace geometric_series_common_ratio_l79_79178
-
-theorem geometric_series_common_ratio (a r S : ℝ) (h₁ : S = a / (1 - r)) (h₂ : ar^4 / (1 - r) = S / 64) : r = 1 / 2 :=
-  by
-  sorry
-
-end geometric_series_common_ratio_l79_79178
-
-
-namespace least_k_cubed_divisible_by_168_l79_79286
-
-theorem least_k_cubed_divisible_by_168 : ∃ k : ℤ, (k ^ 3) % 168 = 0 ∧ ∀ n : ℤ, (n ^ 3) % 168 = 0 → k ≤ n :=
-sorry
-
-end least_k_cubed_divisible_by_168_l79_79286
-
-
-namespace phone_extension_permutations_l79_79908
-
-theorem phone_extension_permutations : 
-  (∃ (l : List ℕ), l = [5, 7, 8, 9, 0] ∧ Nat.factorial l.length = 120) :=
-sorry
-
-end phone_extension_permutations_l79_79908
-
-
-namespace ribbon_length_required_correct_l79_79608
-
-noncomputable def area : ℝ := 50
-noncomputable def pi_approx : ℝ := 22 / 7
-noncomputable def required_ribbon_length (area : ℝ) (pi_approx : ℝ) : ℝ :=
-  let r_squared := area * (7 / 22) in
-  let r := Real.sqrt r_squared in
-  let circumference := 2 * pi_approx * r in
-  let rounded_circumference := Real.floor (circumference + 0.5) in
-  rounded_circumference + 5
-
-theorem ribbon_length_required_correct : required_ribbon_length area pi_approx = 30 :=
-  by
-    -- Proof omitted
-    sorry
-
-end ribbon_length_required_correct_l79_79608
-
-
-namespace cos_pi_plus_alpha_l79_79435
-
--- Definitions for the conditions given in the problem
--- Point P(3, 4) lies on the terminal side of angle α
-def P := (3 : ℕ, 4 : ℕ)
-
--- Function to calculate the hypotenuse
-def hypotenuse (x y : ℕ) : ℝ :=
-  real.sqrt ((x : ℝ) ^ 2 + (y : ℝ) ^ 2)
-
-noncomputable def cos_alpha : ℝ :=
-  P.1 / hypotenuse P.1 P.2
-
-theorem cos_pi_plus_alpha (P : ℕ × ℕ) (hP : P = (3, 4)) :
-  cos (π + real.arccos(cos_alpha)) = -3/5 :=
-by {
-  sorry
-}
-
-end cos_pi_plus_alpha_l79_79435
-
-
-namespace sum_of_lucky_numbers_divisible_by_13_l79_79343
-
-def is_lucky_number (n : ℕ) : Prop :=
-  let digits := Nat.digits 10 n
-  ∃ a b c d e f : ℕ, digits = [f, e, d, c, b, a] ∧ (a + b + c = d + e + f)
-
-theorem sum_of_lucky_numbers_divisible_by_13 :
-  let lucky_numbers := {n : ℕ | n < 1000000 ∧ is_lucky_number n}
-  ∑ n in lucky_numbers, n % 13 = 0 :=
-by
-  sorry
-
-end sum_of_lucky_numbers_divisible_by_13_l79_79343
-
-
-namespace sum_seq_b_div_3np1_eq_one_fifth_l79_79088
-
-def seq_b : ℕ → ℕ
-| 1     := 1
-| 2     := 1
-| (n+3) := seq_b (n+2) + seq_b (n+1)
-
-theorem sum_seq_b_div_3np1_eq_one_fifth : (∑' n : ℕ, (seq_b (n + 1) / (3 : ℝ)^(n + 2))) = (1 / 5 : ℝ) :=
-by
-  sorry
-
-end sum_seq_b_div_3np1_eq_one_fifth_l79_79088
-
-
-namespace remainder_when_N_divided_by_1000_l79_79398
-
--- Define the greatest integer function floor and the fractional part
-def floor (x : ℝ) : ℤ := int.floor x
-def frac (x : ℝ) : ℝ := x - (floor x)
-
--- Define f(x) = x * frac(x)
-def f (x : ℝ) : ℝ := x * frac(x)
-
--- Define the number of solutions N to f(f(f(x))) = 17 for 0 <= x <= 2020
-noncomputable def N : ℕ := {
-  -- To be computed
-  sorry
-}
-
--- The main theorem to be proven: Remainder when N is divided by 1000
-theorem remainder_when_N_divided_by_1000 : N % 1000 = 10 := by
-  sorry
-
-end remainder_when_N_divided_by_1000_l79_79398
-
-
-namespace factor_polynomial_l79_79771
-
-theorem factor_polynomial :
-  ∀ (x : ℤ), 9 * (x + 3) * (x + 4) * (x + 7) * (x + 8) - 5 * x^2 = (x^2 + 4) * (9 * x^2 + 22 * x + 342) :=
-by
-  intro x
-  sorry
-
-end factor_polynomial_l79_79771
-
-
-namespace shares_correct_l79_79674
-
-open Real
-
--- Problem setup
-def original_problem (a b c d e : ℝ) : Prop :=
-  a + b + c + d + e = 1020 ∧
-  a = (3 / 4) * b ∧
-  b = (2 / 3) * c ∧
-  c = (1 / 4) * d ∧
-  d = (5 / 6) * e
-
--- Goal
-theorem shares_correct : ∃ (a b c d e : ℝ),
-  original_problem a b c d e ∧
-  abs (a - 58.17) < 0.01 ∧
-  abs (b - 77.56) < 0.01 ∧
-  abs (c - 116.34) < 0.01 ∧
-  abs (d - 349.02) < 0.01 ∧
-  abs (e - 419.42) < 0.01 := by
-  sorry
-
-end shares_correct_l79_79674
-
-
-namespace max_consecutive_integers_sum_lt_1000_l79_79259
-
-theorem max_consecutive_integers_sum_lt_1000 :
-  ∃ n : ℕ, (∀ m : ℕ, m ≤ n → m * (m + 1) / 2 < 1000) ∧ (n * (n + 1) / 2 < 1000) ∧ ¬((n + 1) * (n + 2) / 2 < 1000) :=
-sorry
-
-end max_consecutive_integers_sum_lt_1000_l79_79259
-
-
-namespace max_friday_more_than_wednesday_l79_79560
-
--- Definitions and conditions
-def played_hours_wednesday : ℕ := 2
-def played_hours_thursday : ℕ := 2
-def played_average_hours : ℕ := 3
-def played_days : ℕ := 3
-
--- Total hours over three days
-def total_hours : ℕ := played_average_hours * played_days
-
--- Hours played on Friday
-def played_hours_wednesday_thursday : ℕ := played_hours_wednesday + played_hours_thursday
-
-def played_hours_friday : ℕ := total_hours - played_hours_wednesday_thursday
-
--- Proof problem statement
-theorem max_friday_more_than_wednesday : 
-  played_hours_friday - played_hours_wednesday = 3 := 
-sorry
-
-end max_friday_more_than_wednesday_l79_79560
-
-
-namespace find_a_l79_79452
-
--- Definition of the parabola
-def parabola (p : ℝ) : set (ℝ × ℝ) := {P | P.snd ^ 2 = 2 * p * P.fst}
-
--- Point M on the parabola
-def M (m : ℝ) (p : ℝ) : Prop := (1, m) ∈ parabola p
-
--- Distance from M to the focus of the parabola is 5
-def distance_to_focus (m p : ℝ) : Prop := 5 = 1 + p / 2
-
--- Definition of the hyperbola
-def hyperbola (a : ℝ) : set (ℝ × ℝ) := {P | P.fst ^ 2 / a - P.snd ^ 2 = 1}
-
--- The slope condition for parallel lines
-def slopes_parallel (p a m : ℝ) : Prop := Real.sqrt (1 / a) = 4 / (1 + Real.sqrt a)
-
--- Main theorem: find the value of a given the conditions.
-theorem find_a (m p : ℝ) (h_parabola : p > 0) (hM : m > 0) (hM_parabola : M m p) 
-  (h_dist : distance_to_focus m p) (a : ℝ) (hyper : hyperbola a) 
-  (left_vertex_A : a > 0) (asymptote_parallel : slopes_parallel p a m) : 
-  a = 1 / 9 := by
-  sorry
-
-end find_a_l79_79452
-
-
-namespace minimal_moves_for_7_disks_l79_79997
-
-/-- Mathematical model of the Tower of Hanoi problem with special rules --/
-def tower_of_hanoi_moves (n : ℕ) : ℚ :=
-  if n = 7 then 23 / 4 else sorry
-
-/-- Proof problem for the minimal number of moves required to transfer all seven disks to rod C --/
-theorem minimal_moves_for_7_disks : tower_of_hanoi_moves 7 = 23 / 4 := 
-  sorry
-
-end minimal_moves_for_7_disks_l79_79997
-
-
-namespace max_consecutive_sum_lt_1000_l79_79234
-
-theorem max_consecutive_sum_lt_1000 : ∃ (n : ℕ), (∀ (m : ℕ), m > n → (m * (m + 1)) / 2 ≥ 1000) ∧ (∀ (k : ℕ), k ≤ n → (k * (k + 1)) / 2 < 1000) :=
-begin
-  sorry,
-end
-
-end max_consecutive_sum_lt_1000_l79_79234
-
-
-namespace relationship_of_a_b_l79_79860
-
-theorem relationship_of_a_b
-  (a b : Real)
-  (h1 : a < 0)
-  (h2 : b > 0)
-  (h3 : a + b < 0) : 
-  -a > b ∧ b > -b ∧ -b > a := 
-by
-  sorry
-
-end relationship_of_a_b_l79_79860
-
-
-namespace num_ways_to_pay_16_rubles_l79_79758
-
-theorem num_ways_to_pay_16_rubles :
-  ∃! (n : ℕ), n = 13 ∧ ∀ (x y z : ℕ), (x ≥ 0) ∧ (y ≥ 0) ∧ (z ≥ 0) ∧ 
-  (10 * x + 2 * y + 1 * z = 16) ∧ (x < 2) ∧ (y + z > 0) := sorry
-
-end num_ways_to_pay_16_rubles_l79_79758
-
-
-namespace mustard_found_at_second_table_l79_79339
-
-variables (total_mustard first_table third_table second_table : ℝ)
-
-def mustard_found (total_mustard first_table third_table : ℝ) := total_mustard - (first_table + third_table)
-
-theorem mustard_found_at_second_table
-    (h_total : total_mustard = 0.88)
-    (h_first : first_table = 0.25)
-    (h_third : third_table = 0.38) :
-    mustard_found total_mustard first_table third_table = 0.25 :=
-by
-    rw [mustard_found, h_total, h_first, h_third]
-    simp
-    sorry
-
-end mustard_found_at_second_table_l79_79339
-
-
-namespace geometric_series_common_ratio_l79_79212
-
-theorem geometric_series_common_ratio (a r S : ℝ) 
-  (hS : S = a / (1 - r)) 
-  (h64 : (a * r^4) / (1 - r) = S / 64) : 
-  r = 1 / 2 :=
-by
-  sorry
-
-end geometric_series_common_ratio_l79_79212
-
-
-namespace find_x_l79_79324
-
--- Define the conditions according to the problem statement
-variables {C x : ℝ} -- C is the cost per liter of pure spirit, x is the volume of water in the first solution
-
--- Condition 1: The cost for the first solution
-def cost_first_solution (C : ℝ) (x : ℝ) : Prop := 0.50 = C * (1 / (1 + x))
-
--- Condition 2: The cost for the second solution (approximating 0.4999999999999999 as 0.50)
-def cost_second_solution (C : ℝ) : Prop := 0.50 = C * (1 / 3)
-
--- The theorem to prove: x = 2 given the two conditions
-theorem find_x (C : ℝ) (x : ℝ) (h1 : cost_first_solution C x) (h2 : cost_second_solution C) : x = 2 := 
-sorry
-
-end find_x_l79_79324
-
-
-namespace pair_product_not_72_l79_79670
-
-theorem pair_product_not_72 : (2 * (-36) ≠ 72) :=
-by
-  sorry
-
-end pair_product_not_72_l79_79670
-
-
-namespace negation_of_universal_proposition_l79_79454
-
-theorem negation_of_universal_proposition :
-  (¬ (∀ x : ℝ, x^2 - x + 1 / 4 > 0)) = ∃ x : ℝ, x^2 - x + 1 / 4 ≤ 0 :=
-by
-  sorry
-
-end negation_of_universal_proposition_l79_79454
-
-
-namespace number_dislike_both_radio_and_music_l79_79577
-
-variable (total_people : ℕ)
-variable (percentage_dislike_radio : ℝ)
-variable (percentage_dislike_both : ℝ)
-variable (num_dislike_radio : ℕ)
-variable (num_dislike_both : ℕ)
-
--- Conditions based on the problem
-axiom total_people_eq : total_people = 1500
-axiom percentage_dislike_radio_eq : percentage_dislike_radio = 0.4
-axiom percentage_dislike_both_eq : percentage_dislike_both = 0.15
-
--- Compute intermediate value: number of people who dislike radio
-def compute_num_dislike_radio : ℕ :=
-  (percentage_dislike_radio * total_people).toNat
-
-axiom num_dislike_radio_eq : num_dislike_radio = compute_num_dislike_radio
-
--- Compute final value: number of people who dislike both radio and music
-def compute_num_dislike_both : ℕ :=
-  (percentage_dislike_both * num_dislike_radio).toNat
-
-axiom num_dislike_both_eq : num_dislike_both = compute_num_dislike_both
-
--- Theorem statement
-theorem number_dislike_both_radio_and_music :
-  num_dislike_both = 90 :=
-by
-  rw [num_dislike_both_eq, compute_num_dislike_both]
-  rw [num_dislike_radio_eq, compute_num_dislike_radio]
-  rw [total_people_eq, percentage_dislike_radio_eq, percentage_dislike_both_eq]
-  sorry
-
-end number_dislike_both_radio_and_music_l79_79577
-
-
-namespace am_gm_hm_inequality_l79_79540
-
-theorem am_gm_hm_inequality (a b c : ℝ) (h1 : 0 < a) (h2 : 0 < b) (h3 : 0 < c) (h4 : a ≠ b) (h5 : b ≠ c) (h6 : a ≠ c) : 
-  (a + b + c) / 3 > (a * b * c) ^ (1 / 3) ∧ (a * b * c) ^ (1 / 3) > 3 * a * b * c / (a * b + b * c + c * a) :=
-by
-  sorry
-
-end am_gm_hm_inequality_l79_79540
-
-
-namespace triangle_inequality_l79_79930
-
-variable {α β γ a b c : ℝ}
-
-theorem triangle_inequality (h1: α ≥ β) (h2: β ≥ γ) (h3: a ≥ b) (h4: b ≥ c) (h5: α ≥ γ) (h6: a ≥ c) :
-  a * α + b * β + c * γ ≥ a * β + b * γ + c * α :=
-by
-  sorry
-
-end triangle_inequality_l79_79930
-
-
-namespace arc_length_cosh_l79_79746
-
-theorem arc_length_cosh (x1 x2 : ℝ) : ∫ x in x1 .. x2, Real.cosh x = Real.sinh x2 - Real.sinh x1 := 
-sorry
-
-end arc_length_cosh_l79_79746
-
-
-namespace lattice_points_interval_sum_l79_79917
-
-theorem lattice_points_interval_sum :
-  let T := {p : ℕ × ℕ | 1 ≤ p.1 ∧ p.1 ≤ 45 ∧ 1 ≤ p.2 ∧ p.2 ≤ 45}
-  let below_line (m : ℚ) :=
-    {p ∈ T | p.2 ≤ m * p.1}
-  ∃ c d : ℕ, let frac := (c : ℚ) / d in
-    (∀ m : ℚ, m ∈ Icc (64/99) (65/99) → below_line m = 700) →
-    (c.gcd d = 1) →
-    c + d = 100 := sorry
-
-end lattice_points_interval_sum_l79_79917
-
-
-namespace pair_b_equiv_pair_c_equiv_l79_79276
-
--- Definitions of the two function pairs that need to be proven equivalent
-noncomputable def f1 (x : ℝ) := x^2 - 2 * x - 1
-noncomputable def g1 (t : ℝ) := t^2 - 2 * t - 1
-
-def f2 (x : ℝ) := x^0
-def g2 (x : ℝ) := 1 / x^0
-
--- Theorems to show the equivalence of the pairs
-
--- Pair B: f1(x) = g1(t) for all x and t in ℝ
-theorem pair_b_equiv : ∀ x t : ℝ, f1 x = g1 t :=
-by
-  intros
-  exact rfl
-
--- Pair C: f2(x) = g2(x) for all x in ℝ, x ≠ 0
-theorem pair_c_equiv : ∀ x : ℝ, x ≠ 0 → f2 x = g2 x :=
-by
-  intros x hne
-  change 1 = 1
-  exact rfl
-
-end pair_b_equiv_pair_c_equiv_l79_79276
-
-
-namespace original_average_of_15_numbers_l79_79072
-
-theorem original_average_of_15_numbers (A : ℝ) (h1 : 15 * A + 15 * 12 = 52 * 15) :
-  A = 40 :=
-sorry
-
-end original_average_of_15_numbers_l79_79072
-
-
-namespace possible_values_of_m_l79_79486
-
--- Define the conditions that m is a real number and the quadratic equation having two distinct real roots
-variable (m : ℝ)
-
--- Define the discriminant condition for having two distinct real roots
-def discriminant_condition (a b c : ℝ) := b^2 - 4 * a * c > 0
-
--- State the required theorem
-theorem possible_values_of_m (h : discriminant_condition 1 m 9) : m ∈ set.Ioo (-∞) (-6) ∪ set.Ioo 6 ∞ :=
-sorry
-
-end possible_values_of_m_l79_79486
-
-
-namespace geometric_series_common_ratio_l79_79197
-
-theorem geometric_series_common_ratio (a r : ℝ) (h₁ : r ≠ 1)
-    (h₂ : a / (1 - r) = 64 * (a * r^4) / (1 - r)) : r = 1/2 :=
-by
-  have h₃ : 1 = 64 * r^4 := by
-    have : 1 - r ≠ 0 := by linarith
-    field_simp at h₂; assumption
-  sorry
-
-end geometric_series_common_ratio_l79_79197
-
-
-namespace missing_digit_divisible_by_9_l79_79976
-
-def is_multiple_of_9 (n : ℕ) : Prop := n % 9 = 0
-
-theorem missing_digit_divisible_by_9 : 
-  ∃ (x : ℤ), 0 ≤ x ∧ x ≤ 9 ∧ is_multiple_of_9 (1 + 3 + 5 + 7 + x) :=
-by
-  sorry
-
-end missing_digit_divisible_by_9_l79_79976
-
-
-namespace divisibility_criterion_l79_79946
-
-theorem divisibility_criterion :
-  (∃ x : ℕ, 10 ≤ x ∧ x < 100 ∧ (1207 % x = 0) ∧
-  (let a := x / 10 in let b := x % 10 in a^3 + b^3 = 344)) ↔
-  (1207 % 17 = 0 ∧ let a1 := 1 in let b1 := 7 in a1^3 + b1^3 = 344) ∨
-  (1207 % 71 = 0 ∧ let a2 := 7 in let b2 := 1 in a2^3 + b2^3 = 344) :=
-by sorry
-
-end divisibility_criterion_l79_79946
-
-
-namespace radius_of_circle_l79_79146
-
-theorem radius_of_circle :
-  ∃ r : ℝ, (θ : ℝ) (A : ℝ), θ = 54 ∧ A = 67.88571428571429 ∧ A = (θ / 360) * Real.pi * r^2 ∧ r = 12 :=
-by
-  let r := 12
-  let θ := 54
-  let A := 67.88571428571429
-  use r
-  split; norm_num
-  sorry
-
-end radius_of_circle_l79_79146
-
-
-namespace selection_methods_at_least_one_female_l79_79586
-
-theorem selection_methods_at_least_one_female :
-  let total_students := 7
-  let male_students := 5
-  let female_students := 2
-  let selection_size := 3
-  nat.choose total_students selection_size - nat.choose male_students selection_size = 25 :=
-by
-  sorry
-
-end selection_methods_at_least_one_female_l79_79586
-
-
-namespace gcd_linear_combination_l79_79121
-
-theorem gcd_linear_combination (a b : ℤ) : Int.gcd (5 * a + 3 * b) (13 * a + 8 * b) = Int.gcd a b := by
-  sorry
-
-end gcd_linear_combination_l79_79121
-
-
-namespace geometric_series_common_ratio_l79_79187
-
-theorem geometric_series_common_ratio :
-  ∀ (a r : ℝ), (r ≠ 1) → 
-  (∑' n, a * r^n = 64 * ∑' n, a * r^(n+4)) →
-  r = 1 / 2 :=
-by
-  intros a r hnr heq
-  have hsum1 : ∑' n, a * r^n = a / (1 - r) := sorry
-  have hsum2 : ∑' n, a * r^(n+4) = a * r^4 / (1 - r) := sorry
-  rw [hsum1, hsum2] at heq
-  -- Further steps to derive r = 1/2 are omitted
-  sorry
-
-end geometric_series_common_ratio_l79_79187
-
-
-namespace jacobi_symbol_part_a_l79_79673
-
-theorem jacobi_symbol_part_a (n : ℕ) (hn : 1 < n) (h_prime : nat.prime (2^n - 1)) : 
-  legendreSym 3 (2^n - 1) = -1 :=
-sorry
-
-end jacobi_symbol_part_a_l79_79673
-
-
-namespace area_of_quadrilateral_l79_79956
-
--- Assume the lengths of the sides of the quadrilateral and the given angle information
-variables (AB BC CD DA : ℝ) (angleCBA : ℝ) (tanACD : ℝ)
-
--- Given values as per the problem
-def values := (AB = 6 ∧ BC = 8 ∧ CD = 5 ∧ DA = 10 ∧ angleCBA = Real.pi / 2 ∧ tanACD = 4 / 3)
-
--- Final statement to prove the area of the quadrilateral ABCD
-theorem area_of_quadrilateral (h : values) : 
-  let ABC_area := (1/2) * AB * BC,
-      h_ACD := CD * tanACD,
-      ACD_area := (1/2) * CD * h_ACD in
-  ABC_area + ACD_area = 122 / 3 :=
-sorry
-
-end area_of_quadrilateral_l79_79956
-
-
-namespace sum_of_valid_numbers_is_72_l79_79790
-
-noncomputable def digit_sum_divides_square (a b : ℕ) : Prop :=
-  a + b ∣ (10 * a + b) ^ 2
-
-noncomputable def digit_product_divides_cube (a b : ℕ) : Prop :=
-  a * b ∣ (10 * a + b) ^ 3
-
-noncomputable def valid_digit_pair (a b : ℕ) : Prop :=
-  1 ≤ a ∧ a ≤ 9 ∧ 0 ≤ b ∧ b ≤ 9 ∧ digit_sum_divides_square a b ∧ digit_product_divides_cube a b
-
-noncomputable def valid_two_digit_numbers_sum : ℕ :=
-  (finset.range 10).sum (λ b, (finset.range 10).sum (λ a, if valid_digit_pair a b then 10 * a + b else 0))
-
-theorem sum_of_valid_numbers_is_72 :
-  valid_two_digit_numbers_sum = 72 :=
-sorry
-
-end sum_of_valid_numbers_is_72_l79_79790
-
-
-namespace stratified_sampling_total_students_sampled_l79_79305
-
-theorem stratified_sampling_total_students_sampled 
-  (seniors juniors freshmen : ℕ)
-  (sampled_freshmen : ℕ)
-  (ratio : ℚ)
-  (h_freshmen : freshmen = 1500)
-  (h_sampled_freshmen_ratio : sampled_freshmen = 75)
-  (h_seniors : seniors = 1000)
-  (h_juniors : juniors = 1200)
-  (h_ratio : ratio = (sampled_freshmen : ℚ) / (freshmen : ℚ))
-  (h_freshmen_ratio : ratio * (freshmen : ℚ) = sampled_freshmen) :
-  let sampled_juniors := ratio * (juniors : ℚ)
-  let sampled_seniors := ratio * (seniors : ℚ)
-  sampled_freshmen + sampled_juniors + sampled_seniors = 185 := sorry
-
-end stratified_sampling_total_students_sampled_l79_79305
-
-
-namespace vitya_probability_l79_79653
-
-theorem vitya_probability :
-  let total_sequences := (finset.range 6).card * 
-                         (finset.range 5).card * 
-                         (finset.range 4).card * 
-                         (finset.range 3).card * 
-                         (finset.range 2).card * 
-                         (finset.range 1).card,
-      favorable_sequences := 1 * 3 * 5 * 7 * 9 * 11,
-      total_possibilities := nat.choose 12 2 * nat.choose 10 2 * 
-                             nat.choose 8 2 * nat.choose 6 2 * 
-                             nat.choose 4 2 * nat.choose 2 2,
-      P := (favorable_sequences : ℚ) / (total_possibilities : ℚ)
-  in P = 1 / 720 := 
-sorry
-
-end vitya_probability_l79_79653
-
-
-namespace equation_of_the_line_l79_79974
-
-open Real
-
-def intersection_point (l1 l2 : ℝ × ℝ × ℝ) : ℝ × ℝ :=
-  let ⟨a1, b1, c1⟩ := l1
-  let ⟨a2, b2, c2⟩ := l2
-  let x := (b2 * c1 - b1 * c2) / (a1 * b2 - a2 * b1)
-  let y := (a1 * c2 - a2 * c1) / (a2 * b1 - a1 * b2)
-  (x, y)
-
-noncomputable def line_inclined_angle (p : ℝ × ℝ) (θ : ℝ) : ℝ × ℝ × ℝ :=
-  let m := tan θ
-  let ⟨x, y⟩ := p
-  let b := y - m * x
-  (m, -1, b)
-
-theorem equation_of_the_line :
-  let l1 := (1, -1, 3)
-  let l2 := (2, 1, 0)
-  let p := intersection_point l1 l2
-  let θ := π / 3
-  let line := line_inclined_angle p θ
-  line = (sqrt 3, -1, sqrt 3 + 2) := by
-  sorry
-
-end equation_of_the_line_l79_79974
-
-
-namespace last_bead_is_yellow_l79_79903
-
--- Defining the conditions
-def bead_pattern := [ "Red", "Orange", "Yellow", "Yellow", "Green", "Blue", "Purple"]
-def first_bead := "Red"
-def total_beads := 81
-
--- Function to determine the color of the nth bead given the pattern
-def nth_bead (n : Nat) : String :=
-  bead_pattern[(n - 1) % bead_pattern.length]
-
--- Theorem statement
-theorem last_bead_is_yellow : nth_bead total_beads = "Yellow" :=
-  by
-    -- The proof should go here
-    sorry
-
-end last_bead_is_yellow_l79_79903
-
-
-namespace num_cool_sequences_l79_79955
-open Nat 
-
-def is_cool_sequence (seq : List Nat) : Prop :=
-  seq.length = 8 ∧
-  (∀ (i : Nat), i < 7 → Nat.gcd (seq.get i).toNat (seq.get (i+1)).toNat = 1) ∧
-  (∃ (perm : List Nat), List.Perm perm [1,2,3,4,5,6,7,8] ∧ seq = perm)
-
-theorem num_cool_sequences : ∃ (n : Nat), n = 648 ∧ 
-  (∃ (seqs : List (List Nat)), 
-    (∀ seq ∈ seqs, is_cool_sequence seq) ∧ 
-    seqs.length = n) :=
-sorry
-
-end num_cool_sequences_l79_79955
-
-
-namespace number_of_arrangements_l79_79047
-
--- Define the conditions as Lean definitions
-def students := {m1, m2, f1, f2, f3} -- 2 male (m1 and m2), 3 female (f1, f2, f3)
-def isMale (s : Type) : bool := s = m1 ∨ s = m2
-def isFemale (s : Type) : bool := s = f1 ∨ s = f2 ∨ s = f3
-def notAtEnds (s : Type) : bool := ¬(s = m1) ∧ ¬(s = m2)
-def twoFemalesTogether (arrangement : list Type) : bool := ∃ (i : ℕ), (arrangement.get? i).isSome ∧ (arrangement.get? (i+1)).isSome ∧ (isFemale (option.get (arrangement.get? i)) = tt) ∧ (isFemale (option.get (arrangement.get? (i+1))) = tt)
-
--- The statement of what we need to prove
-theorem number_of_arrangements : ∃ (arrangements : list (list Type)),
-                 (∀ a ∈ arrangements, length a = 5) ∧
-                 (∀ a ∈ arrangements, notAtEnds (a.nth 1) = tt) ∧
-                 (∀ a ∈ arrangements, twoFemalesTogether a = tt) ∧
-                 arrangements.length = 48 :=
-sorry
-
-end number_of_arrangements_l79_79047
-
-
-namespace convert_spherical_to_rectangular_l79_79364
-
-def spherical_to_rectangular (ρ θ φ : ℝ) : ℝ × ℝ × ℝ :=
-  (ρ * Real.sin φ * Real.cos θ, ρ * Real.sin φ * Real.sin θ, ρ * Real.cos φ)
-
-theorem convert_spherical_to_rectangular :
-  spherical_to_rectangular 5 (Real.pi / 4) (Real.pi / 3) = (5 * (Real.sqrt 3 / 2) * (Real.sqrt 2 / 2), 5 * (Real.sqrt 3 / 2) * (Real.sqrt 2 / 2), 5 * (1 / 2)) :=
-by
-  sorry
-
-end convert_spherical_to_rectangular_l79_79364
-
-
-namespace geometric_series_ratio_half_l79_79200
-
-theorem geometric_series_ratio_half (a r S : ℝ) (hS : S = a / (1 - r)) 
-  (h_ratio : (ar^4) / (1 - r) = S / 64) : r = 1 / 2 :=
-by
-  sorry
-
-end geometric_series_ratio_half_l79_79200
-
-
-namespace max_top_young_men_l79_79866
-
-def young_man := {height : ℕ, weight : ℕ}
-
--- Definition of "not inferior"
-def not_inferior (a b : young_man) : Prop := a.height > b.height ∨ a.weight > b.weight
-
--- Definition of "top young man"
-def top_young_man (a : young_man) (others : List young_man) : Prop :=
-  ∀ b ∈ others, not_inferior a b
-
--- List of 100 young men
-def young_men : List young_man := List.range 100 |>.map (λ i, {height := 100 - i, weight := i + 1})
-
--- Prove that all 100 young men in the list are top young men
-theorem max_top_young_men : ∀ a ∈ young_men, top_young_man a (List.erase young_men a) :=
-by
-  sorry
-
-end max_top_young_men_l79_79866
-
-
-namespace geometric_series_common_ratio_l79_79191
-
-theorem geometric_series_common_ratio :
-  ∀ (a r : ℝ), (r ≠ 1) → 
-  (∑' n, a * r^n = 64 * ∑' n, a * r^(n+4)) →
-  r = 1 / 2 :=
-by
-  intros a r hnr heq
-  have hsum1 : ∑' n, a * r^n = a / (1 - r) := sorry
-  have hsum2 : ∑' n, a * r^(n+4) = a * r^4 / (1 - r) := sorry
-  rw [hsum1, hsum2] at heq
-  -- Further steps to derive r = 1/2 are omitted
-  sorry
-
-end geometric_series_common_ratio_l79_79191
-
-
-namespace trigonometric_expression_equality_l79_79975
-
-theorem trigonometric_expression_equality :
-  (cos 85 * π / 180 + sin 25 * π / 180 * cos 30 * π / 180) / cos 25 * π / 180 = 1 / 2 :=
-by sorry
-
-end trigonometric_expression_equality_l79_79975
-
-
-namespace fill_interior_averaged_l79_79599
-
-noncomputable def boundary_filled_rect (m n : ℕ) (boundary_values : (Fin (2 * (m + n)) → ℝ)) : Prop :=
-  ∃ (f : Fin m → Fin n → ℝ),
-    (∀ (i : Fin m) (j : Fin n),
-      f i j = (f (i.pred.pred mod m).pred j + 
-                f i (j.pred.pred mod n).pred + 
-                f (i.succ.pred mod m) j + 
-                f i (j.succ.pred mod n)) / 4)
-
-theorem fill_interior_averaged (m n : ℕ) (boundary_values : (Fin (2 * (m + n)) → ℝ)) :
-  boundary_filled_rect m n boundary_values :=
-sorry
-
-end fill_interior_averaged_l79_79599
-
-
-namespace avg_adjacent_boy_girl_pairs_l79_79962
-
-theorem avg_adjacent_boy_girl_pairs (boys : ℕ) (girls : ℕ) (total : ℕ) :
-  boys = 9 → girls = 15 → total = 24 →
-  let T := λ (lineup : list ℕ), 
-    ∑ i in finset.range (total - 1), 
-      if (lineup.nth i = some 0 ∧ lineup.nth (i+1) = some 1) ∨ 
-         (lineup.nth i = some 1 ∧ lineup.nth (i+1) = some 0) then 1 else 0
-  in (\(lineup : list ℕ) (h : lineup.length = total), ↑(T lineup)) / 
-     (total.choose 9) ≈ 11 :=
-begin
-  -- Proof omitted
-  sorry
-end
-
-end avg_adjacent_boy_girl_pairs_l79_79962
-
-
-namespace thought_number_is_24_l79_79676
-
-variable (x : ℝ)
-
-theorem thought_number_is_24 (h : x / 4 + 9 = 15) : x = 24 := by
-  sorry
-
-end thought_number_is_24_l79_79676
-
-
-namespace molecular_weight_NH4I_correct_l79_79347
-
-noncomputable def atomic_weight_N : ℝ := 14.01
-noncomputable def atomic_weight_H : ℝ := 1.01
-noncomputable def atomic_weight_I : ℝ := 126.90
-
-def molecular_weight_NH4I : ℝ :=
-  atomic_weight_N + (4 * atomic_weight_H) + atomic_weight_I
-
-theorem molecular_weight_NH4I_correct :
-  molecular_weight_NH4I = 144.95 :=
-by
-  unfold molecular_weight_NH4I
-  simp [atomic_weight_N, atomic_weight_H, atomic_weight_I]
-  norm_num
-  sorry
-
-end molecular_weight_NH4I_correct_l79_79347
-
-
-namespace geometric_series_common_ratio_l79_79211
-
-theorem geometric_series_common_ratio (a r S : ℝ) 
-  (hS : S = a / (1 - r)) 
-  (h64 : (a * r^4) / (1 - r) = S / 64) : 
-  r = 1 / 2 :=
-by
-  sorry
-
-end geometric_series_common_ratio_l79_79211
-
-
-namespace staff_battle_station_l79_79349
-
-def number_of_ways_to_staff (resumes : ℕ) (thrilled_fraction : ℚ) (job_openings : ℕ) : ℕ :=
-  let suitable_candidates := (thrilled_fraction * resumes : ℚ).to_nat in
-  (List.range job_openings).reverse.foldl (λ acc i, acc * (suitable_candidates - i)) 1
-
-theorem staff_battle_station : 
-  number_of_ways_to_staff 30 (1/3 : ℚ) 5 = 30240 :=
-by
-  sorry
-
-end staff_battle_station_l79_79349
-
-
-namespace coefficient_of_a_neg_half_l79_79760
-
-theorem coefficient_of_a_neg_half (a : ℝ) : 
-  (∑ k in Finset.range 9, 
-    (Nat.choose 8 k) * (a ^ (8 - k) * (2 / (a ^ (1 / 2))) ^ k)) = 0 :=
-by sorry
-
-end coefficient_of_a_neg_half_l79_79760
-
-
-namespace possible_values_of_m_l79_79490
-
--- Define the conditions that m is a real number and the quadratic equation having two distinct real roots
-variable (m : ℝ)
-
--- Define the discriminant condition for having two distinct real roots
-def discriminant_condition (a b c : ℝ) := b^2 - 4 * a * c > 0
-
--- State the required theorem
-theorem possible_values_of_m (h : discriminant_condition 1 m 9) : m ∈ set.Ioo (-∞) (-6) ∪ set.Ioo 6 ∞ :=
-sorry
-
-end possible_values_of_m_l79_79490
-
-
-namespace sphere_surface_area_radius_one_l79_79871
-
-theorem sphere_surface_area_radius_one (r : ℝ) (h : r = 1) : 4 * real.pi * r^2 = 4 * real.pi :=
-by
-  rw [h]
-  simp
-  sorry
-
-end sphere_surface_area_radius_one_l79_79871
-
-
-namespace linear_regression_equation_l79_79143
-
--- Define data for area and number of species
-def x : List ℕ := [6, 15, 25, 34, 44, 54]
-def y : List ℕ := [5, 10, 15, 19, 24, 31]
-
--- Sums provided
-def sum_x_squared : ℕ := 2042
-def sum_xy : ℕ := 1201
-
--- Mean values for the first four samples
-def x_bar : ℕ := (6 + 15 + 25 + 34) / 4
-def y_bar : ℕ := (5 + 10 + 15 + 19) / 4
-
--- Slope calculation
-def b_hat := (sum_xy - 4 * x_bar * 12.25) / (sum_x_squared - 4 * 400)
-
--- Intercept calculation
-def a_hat := 12.25 - b_hat * x_bar
-
--- Statement to prove the obtained linear regression equation
-theorem linear_regression_equation :
-  a_hat = 2.25 ∧ b_hat = 0.5 ∧ ∀ x, y = 0.5 * x + 2.25 :=
-by
-  sorry
-
-end linear_regression_equation_l79_79143
-
-
-namespace geometric_series_common_ratio_l79_79181
-
-theorem geometric_series_common_ratio (a r : ℝ) (h : a / (1 - r) = 64 * (a * r^4 / (1 - r))) : r = 1/2 :=
-by {
-  sorry
-}
-
-end geometric_series_common_ratio_l79_79181
-
-
-namespace distinct_real_roots_interval_l79_79482
-
-open Set Real
-
-theorem distinct_real_roots_interval (m : ℝ) : 
-  (∃ (r1 r2 : ℝ), r1 ≠ r2 ∧ IsRoot (λ x => x^2 + m * x + 9) r1 ∧ IsRoot (λ x => x^2 + m * x + 9) r2) ↔ 
-  m ∈ Iio (-6) ∪ Ioi 6 :=
-sorry
-
-end distinct_real_roots_interval_l79_79482
-
-
-namespace inequality_condition_l79_79615
-
-theorem inequality_condition (a : ℝ) : 
-  (∀ x y : ℝ, x^2 + 2 * x + a ≥ -y^2 - 2 * y) → a ≥ 2 :=
-by
-  sorry
-
-end inequality_condition_l79_79615
-
-
-namespace problem_1_problem_2_l79_79450
-noncomputable def f (x : ℝ) : ℝ := x / (Real.log x)
-def g (k x : ℝ) : ℝ := k * (x - 1)
-
-theorem problem_1 (k : ℝ) : ¬∃ x₀, f x₀ = g k x₀ ∧ deriv f x₀ = deriv (g k) x₀ :=
-by
-  sorry
-
-theorem problem_2 (k : ℝ) :
-  (∃ x, x ∈ Icc Real.exp 1 (Real.exp 2) ∧ f x ≤ g k x + 1/2) → k ≥ 1/2 :=
-by
-  sorry
-
-end problem_1_problem_2_l79_79450
-
-
-namespace max_consecutive_sum_lt_1000_l79_79235
-
-theorem max_consecutive_sum_lt_1000 : ∃ (n : ℕ), (∀ (m : ℕ), m > n → (m * (m + 1)) / 2 ≥ 1000) ∧ (∀ (k : ℕ), k ≤ n → (k * (k + 1)) / 2 < 1000) :=
-begin
-  sorry,
-end
-
-end max_consecutive_sum_lt_1000_l79_79235
-
-
-namespace inequality_proof_l79_79829
-
-theorem inequality_proof
-  (a b c : ℝ)
-  (h_pos : a > 0 ∧ b > 0 ∧ c > 0)
-  (h_sum : a + b + c = 1) :
-  (a^2 + b^2 + c^2) * ((a / (b + c)) + (b / (a + c)) + (c / (a + b))) ≥ 1/2 := by
-  sorry
-
-end inequality_proof_l79_79829
-
-
-namespace remainder_of_3_pow_600_mod_19_l79_79668
-
-theorem remainder_of_3_pow_600_mod_19 :
-  (3 ^ 600) % 19 = 11 :=
-sorry
-
-end remainder_of_3_pow_600_mod_19_l79_79668
-
-
-namespace divisible_by_1001_l79_79764
-
-theorem divisible_by_1001 (A B : ℕ) (n : ℕ) 
-  (a : Fin n → ℕ) (b : Fin n → ℕ) :
-  (A = ∑ i in Finset.range n, (1000^(2*i) * a i) + ∑ i in Finset.range n, (1000^(2*i+1) * b i)) →
-  (B = ∑ i in Finset.range n, a (2*i) - ∑ i in Finset.range n, b (2*i+1)) →
-  ((A - B) % 1001 = 0 ↔ A % 1001 = 0) :=
-sorry
-
-end divisible_by_1001_l79_79764
-
-
-namespace number_dislike_both_radio_and_music_l79_79576
-
-variable (total_people : ℕ)
-variable (percentage_dislike_radio : ℝ)
-variable (percentage_dislike_both : ℝ)
-variable (num_dislike_radio : ℕ)
-variable (num_dislike_both : ℕ)
-
--- Conditions based on the problem
-axiom total_people_eq : total_people = 1500
-axiom percentage_dislike_radio_eq : percentage_dislike_radio = 0.4
-axiom percentage_dislike_both_eq : percentage_dislike_both = 0.15
-
--- Compute intermediate value: number of people who dislike radio
-def compute_num_dislike_radio : ℕ :=
-  (percentage_dislike_radio * total_people).toNat
-
-axiom num_dislike_radio_eq : num_dislike_radio = compute_num_dislike_radio
-
--- Compute final value: number of people who dislike both radio and music
-def compute_num_dislike_both : ℕ :=
-  (percentage_dislike_both * num_dislike_radio).toNat
-
-axiom num_dislike_both_eq : num_dislike_both = compute_num_dislike_both
-
--- Theorem statement
-theorem number_dislike_both_radio_and_music :
-  num_dislike_both = 90 :=
-by
-  rw [num_dislike_both_eq, compute_num_dislike_both]
-  rw [num_dislike_radio_eq, compute_num_dislike_radio]
-  rw [total_people_eq, percentage_dislike_radio_eq, percentage_dislike_both_eq]
-  sorry
-
-end number_dislike_both_radio_and_music_l79_79576
-
-
-namespace vitya_probability_l79_79652
-
-theorem vitya_probability :
-  let total_sequences := (finset.range 6).card * 
-                         (finset.range 5).card * 
-                         (finset.range 4).card * 
-                         (finset.range 3).card * 
-                         (finset.range 2).card * 
-                         (finset.range 1).card,
-      favorable_sequences := 1 * 3 * 5 * 7 * 9 * 11,
-      total_possibilities := nat.choose 12 2 * nat.choose 10 2 * 
-                             nat.choose 8 2 * nat.choose 6 2 * 
-                             nat.choose 4 2 * nat.choose 2 2,
-      P := (favorable_sequences : ℚ) / (total_possibilities : ℚ)
-  in P = 1 / 720 := 
-sorry
-
-end vitya_probability_l79_79652
-
-
-namespace sum_max_min_value_f_l79_79840
-
-noncomputable def f (x : ℝ) : ℝ := ((x + 1) ^ 2 + x) / (x ^ 2 + 1)
-
-theorem sum_max_min_value_f : 
-  let M := (⨆ x : ℝ, f x)
-  let m := (⨅ x : ℝ, f x)
-  M + m = 2 :=
-by
--- Proof to be filled in
-  sorry
-
-end sum_max_min_value_f_l79_79840
-
-
-namespace find_EF_distance_l79_79007
-
-def skew_lines_distance (a b : Line) (θ d m n : ℝ) : ℝ :=
-  sqrt (d^2 + m^2 + n^2 + 2 * m * n * cos θ) -- one of the possible cases
-  -- sqrt (d^2 + m^2 + n^2 - 2 * m * n * cos θ) -- other possible case
-
-theorem find_EF_distance
-  (a b : Line) (θ d m n : ℝ)
-  (skew_a_b : ¬\(\exists p\). p ∈ a ∧ p ∈ b) -- skew lines condition
-  (angle_a_b : \(\exists v \in a, w \in b\), ∠(v, w) = θ) -- angle between lines
-  (common_perp : ∃ p1 p2, p1 ∈ a ∧ p2 ∈ b ∧ ∃ q, q ∈ Line.through p1 p2 ∧ d = dist p1 p2) -- common perpendicular of length d 
-  (A_prime_E : ∃ A' ∈ a, dist A' E = m) -- distance A'E = m
-  (A_F : ∃ A ∈ b, dist A F = n) -- distance AF = n
-: dist E F = sqrt (d^2 + m^2 + n^2 + 2 * m * n * cos θ) ∨ 
-  dist E F = sqrt (d^2 + m^2 + n^2 - 2 * m * n * cos θ) := by
-  sorry
-
-end find_EF_distance_l79_79007
-
-
-namespace find_positive_solution_l79_79457
-
--- Defining the variables x, y, and z as real numbers
-variables (x y z : ℝ)
-
--- Define the conditions from the problem statement
-def condition1 : Prop := x * y + 3 * x + 4 * y + 10 = 30
-def condition2 : Prop := y * z + 4 * y + 2 * z + 8 = 6
-def condition3 : Prop := x * z + 4 * x + 3 * z + 12 = 30
-
--- The theorem that states the positive solution for x is 3
-theorem find_positive_solution (h1 : condition1 x y) (h2 : condition2 y z) (h3 : condition3 x z) : x = 3 :=
-by {
-  sorry
-}
-
-end find_positive_solution_l79_79457
-
-
-namespace intervals_of_decrease_for_f_l79_79781
-
-noncomputable def f : ℝ → ℝ := λ x, Real.sin (-2 * x + Real.pi / 2)
-
-theorem intervals_of_decrease_for_f :
-  ∀ k : ℤ, ∃ a b : ℝ, a = k * Real.pi ∧ b = k * Real.pi + Real.pi / 2 ∧ (∀ x y : ℝ, a ≤ x ∧ x < y ∧ y ≤ b → f y ≤ f x) :=
-by
-  sorry
-
-end intervals_of_decrease_for_f_l79_79781
-
-
-namespace pos_integer_solutions_count_l79_79465
-
-theorem pos_integer_solutions_count :
-  (finite {x : ℕ | 12 < -2 * (x : ℤ) + 17 ∧ x > 0}).to_finset.card = 2 :=
-by
-  sorry
-
-end pos_integer_solutions_count_l79_79465
-
-
-namespace geometric_series_common_ratio_l79_79176
-
-theorem geometric_series_common_ratio (a r S : ℝ) (h₁ : S = a / (1 - r)) (h₂ : ar^4 / (1 - r) = S / 64) : r = 1 / 2 :=
-  by
-  sorry
-
-end geometric_series_common_ratio_l79_79176
-
-
-namespace value_of_y_l79_79631
-
-variable (y : ℚ)
-
-def first_boy_marbles : ℚ := 4 * y + 2
-def second_boy_marbles : ℚ := 2 * y
-def third_boy_marbles : ℚ := y + 3
-def total_marbles : ℚ := 31
-
-theorem value_of_y (h : first_boy_marbles y + second_boy_marbles y + third_boy_marbles y = total_marbles) :
-  y = 26 / 7 :=
-by
-  sorry
-
-end value_of_y_l79_79631
-
-
-namespace equal_split_payment_l79_79395
-
-def cost_taco_salad := 10.0
-def cost_single_hamburger := 5.0
-def num_hamburgers := 5
-def cost_french_fries := 2.5
-def num_fries := 4
-def cost_peach_lemonade := 2.0
-def num_lemonades := 5
-def num_friends := 5
-
-theorem equal_split_payment : 
-  let total_cost := cost_taco_salad 
-    + (num_hamburgers * cost_single_hamburger)
-    + (num_fries * cost_french_fries)
-    + (num_lemonades * cost_peach_lemonade) in
-  total_cost / num_friends = 11.0 :=
-by 
-  sorry
-
-end equal_split_payment_l79_79395
-
-
-namespace perimeter_of_triangle_hyperbola_l79_79616
-
-theorem perimeter_of_triangle_hyperbola (x y : ℝ) (F1 F2 A B : ℝ) :
-  (x^2 / 16) - (y^2 / 9) = 1 →
-  |A - F2| - |A - F1| = 8 →
-  |B - F2| - |B - F1| = 8 →
-  |B - A| = 5 →
-  |A - F2| + |B - F2| + |B - A| = 26 :=
-by
-  sorry
-
-end perimeter_of_triangle_hyperbola_l79_79616
-
-
-namespace speed_of_man_in_still_water_l79_79696
-
-variable (v_m v_s : ℝ)
-
-theorem speed_of_man_in_still_water :
-  (v_m + v_s) * 4 = 48 →
-  (v_m - v_s) * 6 = 24 →
-  v_m = 8 :=
-by
-  intros h1 h2
-  -- Proof would go here
-  sorry
-
-end speed_of_man_in_still_water_l79_79696
-
-
-namespace slower_time_is_Tara_l79_79555
-
-def time_to_top (stories : ℕ) (time_per_story : ℕ) : ℕ :=
-  stories * time_per_story
-
-def elevator_total_time (stories : ℕ) (time_per_story : ℕ) (stop_time : ℕ) : ℕ :=
-  stories * time_per_story + (stories - 1) * stop_time
-
-theorem slower_time_is_Tara :
-  let stories := 20
-  let lola_time_per_story := 10
-  let tara_elevator_time_per_story := 8
-  let tara_stop_time := 3 in
-  max (time_to_top stories lola_time_per_story) (elevator_total_time stories tara_elevator_time_per_story tara_stop_time) = elevator_total_time stories tara_elevator_time_per_story tara_stop_time :=
-by
-  sorry
-
-end slower_time_is_Tara_l79_79555
-
-
-namespace geometric_series_common_ratio_l79_79185
-
-theorem geometric_series_common_ratio (a r : ℝ) (h : a / (1 - r) = 64 * (a * r^4 / (1 - r))) : r = 1/2 :=
-by {
-  sorry
-}
-
-end geometric_series_common_ratio_l79_79185
-
-
-namespace distinct_real_roots_of_quadratic_l79_79475
-
--- Define the problem's condition: m is a real number and the discriminant of x^2 + mx + 9 > 0
-def discriminant_positive (m : ℝ) := m^2 - 36 > 0
-
-theorem distinct_real_roots_of_quadratic (m : ℝ) (h : discriminant_positive m) :
-  m ∈ Iio (-6) ∪ Ioi (6) :=
-sorry
-
-end distinct_real_roots_of_quadratic_l79_79475
-
-
-namespace unique_midpoints_are_25_l79_79223
-
-/-- Define the properties of a parallelogram with marked points such as vertices, midpoints of sides, and intersection point of diagonals --/
-structure Parallelogram :=
-(vertices : Set ℝ)
-(midpoints : Set ℝ)
-(diagonal_intersection : ℝ)
-
-def congruent_parallelograms (P P' : Parallelogram) : Prop :=
-  P.vertices = P'.vertices ∧ P.midpoints = P'.midpoints ∧ P.diagonal_intersection = P'.diagonal_intersection
-
-def unique_midpoints_count (P P' : Parallelogram) : ℕ := sorry
-
-theorem unique_midpoints_are_25
-  (P P' : Parallelogram)
-  (h_congruent : congruent_parallelograms P P') :
-  unique_midpoints_count P P' = 25 := sorry
-
-end unique_midpoints_are_25_l79_79223
-
-
-namespace tetrahedron_angle_difference_l79_79123
-
-theorem tetrahedron_angle_difference (dihedral_angles : Fin 6 → ℝ) (trihedral_angles : Fin 4 → Fin 3 → ℝ) :
-  let solid_angle (angles : Fin 3 → ℝ) := ∑ i, angles i - Real.pi
-  let total_dihedral := 2 * ∑ i, dihedral_angles i
-   in total_dihedral - ∑ i, solid_angle (trihedral_angles i) = 4 * Real.pi :=
-by
-  sorry
-
-end tetrahedron_angle_difference_l79_79123
-
-
-namespace min_value_of_u_l79_79290
-
-theorem min_value_of_u : ∀ (x y : ℝ), x ∈ Set.Ioo (-2) 2 → y ∈ Set.Ioo (-2) 2 → x * y = -1 → 
-  (∀ u, u = (4 / (4 - x^2)) + (9 / (9 - y^2)) → u ≥ 12 / 5) :=
-by
-  intros x y hx hy hxy u hu
-  sorry
-
-end min_value_of_u_l79_79290
-
-
-namespace circle_radius_of_tangent_to_ellipse_l79_79331
-
-noncomputable theory
-open Real
-
--- Definitions of the ellipse and circle properties
-def ellipse_eqn (x y : ℝ) : Prop := (x ^ 2) / 36 + (y ^ 2) / 9 = 1
-
-def focus_x : ℝ := 3 * sqrt 3
-def circle_eqn (r x y : ℝ) : Prop := (x - focus_x) ^ 2 + y ^ 2 = r ^ 2
-
-variable {r : ℝ}
-
--- The theorem stating the radius of the circle is 3
-theorem circle_radius_of_tangent_to_ellipse :
-  (∀ x y : ℝ, circle_eqn r x y → ellipse_eqn x y) → r = 3 :=
-by sorry
-
-end circle_radius_of_tangent_to_ellipse_l79_79331
-
-
-namespace max_consecutive_integers_sum_lt_1000_l79_79262
-
-theorem max_consecutive_integers_sum_lt_1000 :
-  ∃ n : ℕ, (∀ m : ℕ, m ≤ n → m * (m + 1) / 2 < 1000) ∧ (n * (n + 1) / 2 < 1000) ∧ ¬((n + 1) * (n + 2) / 2 < 1000) :=
-sorry
-
-end max_consecutive_integers_sum_lt_1000_l79_79262
-
-
-namespace func_range_l79_79784
-
-def func (x : Real) : Real := (3 * x^2 - 1) / (x^2 + 2)
-
-theorem func_range : ∀ y : Real, y = func x → -1/2 ≤ y ∧ y < 3 :=
-by
-  sorry
-
-end func_range_l79_79784
-
-
-namespace white_area_of_painting_l79_79162
-
-theorem white_area_of_painting (s : ℝ) (total_gray_area : ℝ) (gray_area_squares : ℕ)
-  (h1 : ∀ t, t = 3 * s) -- The frame is 3 times the smaller square's side length.
-  (h2 : total_gray_area = 62) -- The gray area is 62 cm^2.
-  (h3 : gray_area_squares = 31) -- The gray area is composed of 31 smaller squares.
-  : ∃ white_area, white_area = 10 := 
-  sorry
-
-end white_area_of_painting_l79_79162
-
-
-namespace total_grains_in_grey_parts_l79_79055
-
-theorem total_grains_in_grey_parts (total_circle1 : ℝ) (total_circle2 : ℝ) (overlapped_white : ℝ) : 
-  (total_circle2 - overlapped_white) + (total_circle1 - overlapped_white) = 61 :=
-by 
-  have total_grey1 := total_circle1 - overlapped_white
-  have total_grey2 := total_circle2 - overlapped_white
-  have sum_grey := total_grey1 + total_grey2
-  sorry
-
-# Example values for context
-# noncomputable def total_circle1 : ℝ := 87
-# noncomputable def total_circle2 : ℝ := 110
-# noncomputable def overlapped_white : ℝ := 68
-
-end total_grains_in_grey_parts_l79_79055
-
-
-namespace parabola_zeros_sum_is_10_l79_79979
-
-noncomputable def parabola_sum_of_zeros : ℝ :=
-let original_eq : ℝ → ℝ := λ x, (x - 3)^2 + 4 in
-let rotated_eq : ℝ → ℝ := λ x, -(x - 3)^2 + 4 in
-let shifted_right_eq : ℝ → ℝ := λ x, rotated_eq (x - 2) in
-let shifted_down_eq : ℝ → ℝ := λ x, shifted_right_eq x - 3 in
-  let zeros := {x : ℝ | shifted_down_eq x = 0} in
-  if h : set.finite zeros then (finset.sum (h.to_finset) (λ x, x)) else 0
-
-theorem parabola_zeros_sum_is_10 : parabola_sum_of_zeros = 10 :=
-sorry
-
-end parabola_zeros_sum_is_10_l79_79979
-
-
-namespace number_of_false_propositions_is_even_l79_79982
-
-theorem number_of_false_propositions_is_even 
-  (P Q : Prop) : 
-  ∃ (n : ℕ), (P ∧ ¬P ∧ (¬Q → ¬P) ∧ (Q → P)) = false ∧ n % 2 = 0 := sorry
-
-end number_of_false_propositions_is_even_l79_79982
-
-
-namespace age_difference_l79_79584
-
--- Define the given conditions
-variable (S : ℝ) (R : ℝ) (D : ℝ)
-hypothesis h1 : S = 24.5
-hypothesis h2 : S / R = 7 / 9
-
--- Define the statement we want to prove
-theorem age_difference : D = R - S → D = 7 := 
-by
-  intro h3
-  sorry
-
-end age_difference_l79_79584
-
-
-namespace most_cost_effective_supermarket_l79_79998
-
-theorem most_cost_effective_supermarket :
-  let P := 1 in
-  let price_A := 0.8 * 0.8 * P in
-  let price_B := 0.6 * P in
-  let price_C := 0.7 * 0.9 * P in
-  price_B < price_A ∧ price_B < price_C :=
-by {
-  -- Initial price is assumed to be 1 for simplicity of comparison.
-  let P := 1,
-  let price_A := 0.8 * 0.8 * P,
-  let price_B := 0.6 * P,
-  let price_C := 0.7 * 0.9 * P,
-  split,
-  -- Price at B is less than Price at A
-  calc 0.6 * P < 0.8 * 0.8 * P : by linarith,
-  -- Price at B is less than Price at C
-  calc 0.6 * P < 0.7 * 0.9 * P : by linarith,
-  done
-}
-
-end most_cost_effective_supermarket_l79_79998
-
-
-namespace integer_solutions_count_l79_79161
-
-theorem integer_solutions_count : 
-  ∃ (s : Finset ℤ), 
-    (∀ x ∈ s, 2 * x + 1 > -3 ∧ -x + 3 ≥ 0) ∧ 
-    s.card = 5 := 
-by 
-  sorry
-
-end integer_solutions_count_l79_79161
-
-
-namespace sam_dimes_proof_l79_79954
-
-def initial_dimes : ℕ := 9
-def remaining_dimes : ℕ := 2
-def dimes_given : ℕ := 7
-
-theorem sam_dimes_proof : initial_dimes - remaining_dimes = dimes_given :=
-by
-  sorry
-
-end sam_dimes_proof_l79_79954
-
-
-namespace represent_in_scientific_notation_l79_79570
-
-def million : ℕ := 10^6
-def rural_residents : ℝ := 42.39 * million
-
-theorem represent_in_scientific_notation :
-  42.39 * 10^6 = 4.239 * 10^7 :=
-by
-  -- The proof is omitted.
-  sorry
-
-end represent_in_scientific_notation_l79_79570
-
-
-namespace three_digit_number_probability_not_divisible_by_3_l79_79580
-
-noncomputable def probability_not_divisible_by_3 : ℚ :=
-  2 / 3
-
-theorem three_digit_number_probability_not_divisible_by_3 :
-  ∃ (s : Finset (Fin 1000)), (s.card = 720) ∧
-    (∃ (not_divisible_by_3 : Finset (Fin 1000)),
-      (not_divisible_by_3.card = 480) ∧
-      (∀ d ∈ not_divisible_by_3, ¬ (d.val % 3 = 0)) ∧
-      (probability_not_divisible_by_3 = not_divisible_by_3.card / s.card)) :=
-begin
-  sorry
-end
-
-end three_digit_number_probability_not_divisible_by_3_l79_79580
-
-
-namespace quinn_participation_weeks_l79_79949
-
-theorem quinn_participation_weeks (books_per_donut : ℕ) (books_per_week : ℕ) (num_donuts : ℕ)
-  (h1 : books_per_donut = 5) (h2 : books_per_week = 2) (h3 : num_donuts = 4) :
-  (num_donuts * books_per_donut) / books_per_week = 10 := by
-  rw [h1, h2, h3]
-  norm_num
-  sorry
-
-end quinn_participation_weeks_l79_79949
-
-
-namespace range_of_a_l79_79622
-
-theorem range_of_a (a : ℝ) :
-  (∃ x ∈ Ioo 1 2, 3^x - 4 / x - a = 0) ↔ -1 < a ∧ a < 7 :=
-by
-  sorry
-
-end range_of_a_l79_79622
-
-
-namespace car_relationship_possible_arrangements_maximize_profit_l79_79301
-
--- Definitions based on the given conditions
-def total_cars : Nat := 40
-def total_tons : Nat := 200
-def tons_per_car_A : Nat := 6
-def tons_per_car_B : Nat := 5
-def tons_per_car_C : Nat := 4
-def min_cars_per_type : Nat := 4
-
--- Relationship y = -2x + 40
-theorem car_relationship (x y : Nat) (h1 : 6 * x + 5 * y + 4 * (total_cars - x - y) = total_tons) :
-  y = -2 * x + 40 := by
-  sorry
-
--- Possible arrangements (must have at least 'min_cars' cars for each type)
-theorem possible_arrangements (x y z : Nat) (h2 : x + y + z = total_cars)
-  (hx : x ≥ min_cars_per_type) (hy : y ≥ min_cars_per_type) (hz : z ≥ min_cars_per_type)
-  (h_rel : y = -2 * x + 40) :
-  ∃ n : Nat, n = 15 := by
-  sorry
-
--- Maximizing profit
-theorem maximize_profit (x y z : Nat) (hx : x = 4) (hy : y = 32) (hz : z = 4)
-  (h2 : x + y + z = total_cars) (h_rel : y = -2 * x + 40) :
-  6 * x * 5 + 5 * y * 7 + 4 * z * 8 = 1368 := by
-  sorry
-
-end car_relationship_possible_arrangements_maximize_profit_l79_79301
-
-
-namespace xyz_problem_l79_79492
-
-variables {x y z : ℝ}
-
-theorem xyz_problem
-  (h1 : y + z = 10 - 4 * x)
-  (h2 : x + z = -16 - 4 * y)
-  (h3 : x + y = 9 - 4 * z) :
-  3 * x + 3 * y + 3 * z = 1.5 :=
-by 
-  sorry
-
-end xyz_problem_l79_79492
-
-
-namespace max_consecutive_integers_sum_l79_79248
-
-theorem max_consecutive_integers_sum (S_n : ℕ → ℕ) : (∀ n, S_n n = n * (n + 1) / 2) → ∀ n, (S_n n < 1000 ↔ n ≤ 44) :=
-by
-  intros H n
-  split
-  · intro H1
-    have H2 : n * (n + 1) < 2000 := by
-      rw [H n] at H1
-      exact H1
-    sorry
-  · intro H1
-    have H2 : n ≤ 44 := H1
-    have H3 : n * (n + 1) < 2000 := by
-      sorry
-    have H4 : S_n n < 1000 := by
-      rw [H n]
-      exact H3
-    exact H4
-
-end max_consecutive_integers_sum_l79_79248
-
-
-namespace james_huskies_count_l79_79904
-
-theorem james_huskies_count 
-  (H : ℕ) 
-  (pitbulls : ℕ := 2) 
-  (golden_retrievers : ℕ := 4) 
-  (husky_pups_per_husky : ℕ := 3) 
-  (pitbull_pups_per_pitbull : ℕ := 3) 
-  (extra_pups_per_golden_retriever : ℕ := 2) 
-  (pup_difference : ℕ := 30) :
-  H + pitbulls + golden_retrievers + pup_difference = 3 * H + pitbulls * pitbull_pups_per_pitbull + golden_retrievers * (husky_pups_per_husky + extra_pups_per_golden_retriever) :=
-sorry
-
-end james_huskies_count_l79_79904
-
-
-namespace lines_concurrent_or_parallel_l79_79816
-
-open Affine Geometry
-
-variable {P : Type*} [AffineSpace P]  {R : Type*} [Ring R] [Module R P]    
-variables (A1 A2 A3 A4 B1 B2 B3 B4 : P) 
-
-noncomputable def are_parallel (l1 l2 : Line P) : Prop := 
-∃ x : P, x ∈ l1 ∧ x ∉ l2
-
-noncomputable def M (i j : ℕ) : P := intersection_point (line_through A (i) B (j)) (line_through A (j) B(i))
-
--- One possible definition of the problem using the broader library
-theorem lines_concurrent_or_parallel :
-  ∀ (A1 A2 A3 A4 B1 B2 B3 B4 : P), 
-    (∀ i j : fin 4, intersect (line_through A i B j) (line_through A j B i) ≠ ⊥) → 
-    are_parallel (line_through (M 1 2) (M 3 4)) (line_through (M 1 3) (M 2 4)) ∨ collinear (line_through (M 1 2) (M 3 4)) (line_through (M 1 3) (M 2 4)) :=
-sorry
-
-end lines_concurrent_or_parallel_l79_79816
-
-
-namespace aftershave_lotion_volume_l79_79736
-
-theorem aftershave_lotion_volume (V : ℝ) (h1 : 0.30 * V = 0.1875 * (V + 30)) : V = 50 := 
-by 
--- sorry is added to indicate proof is omitted.
-sorry
-
-end aftershave_lotion_volume_l79_79736
-
-
-namespace sum_of_alternating_sums_l79_79793
-
--- Define the alternating sum for a nonempty subset of nat numbers
-def alternating_sum (s : List ℕ) : ℤ :=
-  s.reverse.enum.map (λ ⟨i, a⟩, if i % 2 = 0 then (a : ℤ) else -(a : ℤ)).sum
-
--- Define the problem statement
-def problem_statement : Prop :=
-  let S := finset.powerset (finset.range 8).succ \ {∅} in
-  S.sum (λ s, alternating_sum s.val.to_list) = 1024
-
--- This is the theorem to prove
-theorem sum_of_alternating_sums : problem_statement :=
-begin
-  sorry
-end
-
-end sum_of_alternating_sums_l79_79793
-
-
-namespace feeding_order_count_correct_l79_79726
-
-def numFeedingWays : Nat :=
-  288
-
-theorem feeding_order_count_correct :
-  ∀ (animals : List (String × String)) (start : String) 
-    (condition1 : ∀ a ∈ animals, a.1 ≠ a.2)
-    (condition2 : start = "female_lion")
-    (condition3 : ∀ a b ∈ animals, a ≠ b → (condition_a_b a b))
-    (condition4 : ∀ a b ∈ animals, (a.1 = "female_lion") → (b.2 ≠ "male_lion")),
-  count_feeding_ways animals start = numFeedingWays := 
-  sorry
-
-end feeding_order_count_correct_l79_79726
-
-
-namespace unique_rational_point_line_l79_79060
-
-open Set
-
-def isRational (x : ℝ) : Prop := ∃ a b : ℤ, b ≠ 0 ∧ x = a / b
-
-noncomputable def line_through (p1 p2 : ℝ × ℝ) : ℝ → ℝ :=
-  let (x1, y1) := p1
-  let (x2, y2) := p2
-  if x1 = x2 then y1
-  else λ x, y1 + ((y2 - y1) / (x2 - x1)) * (x - x1)
-
-theorem unique_rational_point_line (a : ℝ) (a_irrational : ¬ isRational a) :
-  ∃! p : ℝ × ℝ, p = (a, 0) ∧ ∀ q1 q2 : ℝ × ℝ, isRational q1.1 → isRational q1.2 → 
-    isRational q2.1 → isRational q2.2 → line_through q1 q2 (a, 0).1 = (a, 0).2 :=
-by
-  sorry
-
-end unique_rational_point_line_l79_79060
-
-
-namespace cost_of_energy_drink_l79_79966
-
--- Definitions for given conditions as constants
-def cupcakes_sold : ℕ := 50
-def price_per_cupcake : ℝ := 2.0
-def cookies_sold : ℕ := 40
-def price_per_cookie : ℝ := 0.5
-def basketballs_bought : ℕ := 2
-def price_per_basketball : ℝ := 40.0
-def bottles_bought : ℕ := 20
-
--- Goal: prove the cost per bottle of energy drink
-theorem cost_of_energy_drink :
-  let total_money := (cupcakes_sold * price_per_cupcake) + (cookies_sold * price_per_cookie),
-      total_basketballs_cost := basketballs_bought * price_per_basketball,
-      remaining_money := total_money - total_basketballs_cost,
-      cost_per_bottle := remaining_money / bottles_bought
-  in cost_per_bottle = 2.0 :=
-sorry
-
-end cost_of_energy_drink_l79_79966
-
-
-namespace arithmetic_geometric_sequence_l79_79815
-
-open Real
-
-noncomputable def a_4 (a1 q : ℝ) : ℝ := a1 * q^3
-noncomputable def sum_five_terms (a1 q : ℝ) : ℝ := a1 * (1 - q^5) / (1 - q)
-
-theorem arithmetic_geometric_sequence :
-  ∀ (a1 q : ℝ),
-    (a1 + a1 * q^2 = 10) →
-    (a1 * q^3 + a1 * q^5 = 5 / 4) →
-    (a_4 a1 q = 1) ∧ (sum_five_terms a1 q = 31 / 2) :=
-by
-  intros a1 q h1 h2
-  sorry
-
-end arithmetic_geometric_sequence_l79_79815
-
-
-namespace fraction_of_plot_occupied_by_beds_l79_79115
-
--- Define the conditions based on plot area and number of beds
-def plot_area : ℕ := 64
-def total_beds : ℕ := 13
-def outer_beds : ℕ := 12
-def central_bed_area : ℕ := 4 * 4
-
--- The proof statement showing that fraction of the plot occupied by the beds is 15/32
-theorem fraction_of_plot_occupied_by_beds : 
-  (central_bed_area + (plot_area - central_bed_area)) / plot_area = 15 / 32 := 
-sorry
-
-end fraction_of_plot_occupied_by_beds_l79_79115
-
-
-namespace dot_product_AB_AC_l79_79889
-
-open Real
-open EuclideanGeometry
-
-/-- Define the vectors and assume the conditions -/
-def rhombus_OABC_vectors : Prop :=
-  let O := (0 : ℝ, 0 : ℝ)
-  let A := (1 : ℝ, 1 : ℝ)
-  ∃ C : ℝ × ℝ, (O - A) ⋅ (O - C) = 1 ∧ (O - A).norm = (O - C).norm ∧ 
-  ∃ B : ℝ × ℝ, (A - B).norm = (A - O).norm ∧ (A - B).norm = (A - C).norm
-
-theorem dot_product_AB_AC : rhombus_OABC_vectors →
-  ∃ O A B C : ℝ × ℝ, (A - B) ⋅ (A - C) = 1 :=
-by
-  intro h
-  obtain ⟨C, hOC, hOAnorm, hOCnorm⟩ := h 
-  have O := (0 : ℝ, 0 : ℝ)
-  have A := (1 : ℝ, 1 : ℝ)
-  sorry
-
-end dot_product_AB_AC_l79_79889
-
-
-namespace intersection_of_parabolas_l79_79360
-
--- Define the condition set
-def directrix_lines (a_vals : Set ℤ) (b_vals : Set ℤ) :=
-  { p : ℤ × ℤ | p.1 ∈ a_vals ∧ p.2 ∈ b_vals }
-
--- The given set of possible values for a and b
-def a_vals : Set ℤ := {-3, -2, -1, 0, 1, 2, 3}
-def b_vals : Set ℤ := {-4, -3, -2, -1, 0, 1, 2, 3, 4}
-
--- Define the problem
-theorem intersection_of_parabolas :
-  let parabolas := directrix_lines a_vals b_vals in
-  (points_of_intersection parabolas).count = 3528 :=
-by sorry
-
-end intersection_of_parabolas_l79_79360
-
-
-namespace modulus_of_given_complex_number_l79_79442
-
-def complex_modulus_problem : Prop :=
-  let i := Complex.I in
-  let z := (1 + 2 * i) / (i * i) in
-  z.abs = Real.sqrt 5
-
-theorem modulus_of_given_complex_number : complex_modulus_problem :=
-by
-  sorry
-
-end modulus_of_given_complex_number_l79_79442
-
-
-namespace determine_arrow_sequence_l79_79809
-
--- Conditions and problem setup
-def repeats_every_six (n : ℕ) : Prop := n % 6 = 2
-
-def is_reverse_arrow (n : ℕ) : Prop := n % 10 = 0
-
-def arrow_sequence (start end : ℕ) : list (ℕ × ℕ) :=
-  if is_reverse_arrow start then
-    [(2, 3).swap, (3, 4), (4, 5)]
-  else
-    match start % 6, end % 6 with
-    | 2, 5 => [(2, 3), (3, 4), (4, 5)]
-    | _, _ => []
-    end
-
--- Theorem statement
-theorem determine_arrow_sequence :
-  arrow_sequence 530 533 = [(3, 2), (3, 4), (4, 5)] :=
-  sorry
-
-end determine_arrow_sequence_l79_79809
-
-
-namespace compute_c_d_l79_79921
-
-theorem compute_c_d (c d : ℝ) 
-  (h1 : (x : ℝ) → (x + c) * (x + d) * (x + 8) / (x + 2)^2 = 0 → distinctRoots 3)
-  (h2 : (x : ℝ) → (x + 3 * c) * (x + 2) * (x + 4) / (x + d) / (x + 8) = 0 → distinctRoots 1) :
-  100 * c + d = 70.67 :=
-sorry
-
-end compute_c_d_l79_79921
-
-
-namespace count_5_in_range_1_to_1000_l79_79854
-
-def contains_digit (n : ℕ) (d : ℕ) : Prop :=
-  ∃ k: ℕ, k ≤ n ∧ (n / 10 ^ k) % 10 = d
-
-def count_contains_digit (d : ℕ) (range : Finset ℕ) : ℕ :=
-  range.count (λ n, contains_digit n d)
-
-theorem count_5_in_range_1_to_1000 : count_contains_digit 5 (Finset.range 1001) = 270 :=
-by 
-  sorry
-
-end count_5_in_range_1_to_1000_l79_79854
-
-
-namespace hyperbola_standard_equation_l79_79614
-
--- Define the hyperbola properties
-def focus1 : ℝ × ℝ := (-6, 0)
-def focus2 : ℝ × ℝ := (6, 0)
-def point_on_hyperbola : ℝ × ℝ := (-5, 2)
-
--- Define the standard hyperbola equation
-def hyperbola_equation (x y : ℝ) : Prop :=
-  (x^2 / 20) - (y^2 / 16) = 1
-
--- Theorem statement
-theorem hyperbola_standard_equation :
-  ∃ eq : ℝ → ℝ → Prop,
-    eq = hyperbola_equation ∧
-    (∃ x y : ℝ, eq x y) ∧
-    (∃ a b : ℝ, 2 * a = |real.sqrt ((point_on_hyperbola.1 + 6)^2 + point_on_hyperbola.2^2) - real.sqrt ((point_on_hyperbola.1 - 6)^2 + point_on_hyperbola.2^2)|) ∧
-    (∃ c : ℝ, c = 6) ∧
-    (∃ b2 : ℝ, b2 = 36 - (2 * real.sqrt 5)^2) ∧
-    (b2 = 16) :=
-sorry
-
-end hyperbola_standard_equation_l79_79614
-
-
-namespace solution_set_f_less_than_6_range_of_m_if_inequality_always_holds_l79_79448
-
-def f (x : ℝ) : ℝ := abs(x + 2) + abs(2 * x - 4)
-
-theorem solution_set_f_less_than_6 :
-  {x : ℝ | f x < 6} = {x : ℝ | 0 < x ∧ x < 8 / 3} := sorry
-
-theorem range_of_m_if_inequality_always_holds :
-  (∀ x : ℝ, f x ≥ m^2 - 3 * m) ↔ -1 ≤ m ∧ m ≤ 4 := sorry
-
-end solution_set_f_less_than_6_range_of_m_if_inequality_always_holds_l79_79448
-
-
-namespace inclination_zero_l79_79520
-
--- Define the line equation
-def line_eq (x y : ℝ) : Prop := y + 1 = 0
-
--- Define the angle of inclination for a given line
-def angle_of_inclination (line : ℝ → ℝ → Prop) : ℝ :=
-  if ∃ m : ℝ, ∀ x y : ℝ, line x y → y = m * x then
-    atan (m)
-  else
-    if ∀ x y : ℝ, line x y → y = -1 then
-      0 -- line parallel to x-axis
-    else
-      sorry -- Handle other cases
-
--- The theorem we need to prove
-theorem inclination_zero : angle_of_inclination line_eq = 0 := by
-  sorry
-
-end inclination_zero_l79_79520
-
-
-namespace sum_X_Y_l79_79785
-
--- Define the variables and assumptions
-variable (X Y : ℕ)
-
--- Hypotheses
-axiom h1 : Y + 2 = X
-axiom h2 : X + 5 = Y
-
--- Theorem statement
-theorem sum_X_Y : X + Y = 12 := by
-  sorry
-
-end sum_X_Y_l79_79785
-
-
-namespace valid_three_digit_numbers_l79_79856
-
-theorem valid_three_digit_numbers : 
-  ∀ (N : ℕ), 
-    N = 657 ↔
-    (∀ n ∈ (Set.Icc 100 999), ¬ ∃ (X Y : ℕ), X ≠ Y ∧ 
-      ((n / 100 = X ∧ (n % 100) / 10 = X ∧ n % 10 = Y) ∨ 
-      (n / 100 = Y ∧ (n % 100) / 10 = X ∧ n % 10 = X) ∨ 
-      ((n / 100) = X ∧ (n % 100) / 10 = Y ∧ n % 10 = X)) → 
-    N = Set.card {n ∈ Set.Icc 100 999 | ¬ ∃ (X Y : ℕ), X ≠ Y ∧ 
-      ((n / 100 = X ∧ (n % 100) / 10 = X ∧ n % 10 = Y) ∨ 
-      (n / 100 = Y ∧ (n % 100) / 10 = X ∧ n % 10 = X) ∨ 
-      ((n / 100) = X ∧ (n % 10) / 10 = Y ∧ n % 10 = X))})
-  :=
-by
-  sorry
-
-end valid_three_digit_numbers_l79_79856
-
-
-namespace geometric_series_common_ratio_l79_79209
-
-theorem geometric_series_common_ratio (a r S : ℝ) 
-  (hS : S = a / (1 - r)) 
-  (h64 : (a * r^4) / (1 - r) = S / 64) : 
-  r = 1 / 2 :=
-by
-  sorry
-
-end geometric_series_common_ratio_l79_79209
-
-
-namespace solve_absolute_value_inequality_l79_79371
-
-theorem solve_absolute_value_inequality (x : ℝ) :
-  3 ≤ |x + 3| ∧ |x + 3| ≤ 7 ↔ (-10 ≤ x ∧ x ≤ -6) ∨ (0 ≤ x ∧ x ≤ 4) :=
-by
-  sorry
-
-end solve_absolute_value_inequality_l79_79371
-
-
-namespace belfried_industries_tax_l79_79711
-
-noncomputable def payroll_tax (payroll : ℕ) : ℕ :=
-  if payroll <= 200000 then
-    0
-  else
-    ((payroll - 200000) * 2) / 1000
-
-theorem belfried_industries_tax : payroll_tax 300000 = 200 :=
-by
-  sorry
-
-end belfried_industries_tax_l79_79711
-
-
-namespace slower_time_is_Tara_l79_79556
-
-def time_to_top (stories : ℕ) (time_per_story : ℕ) : ℕ :=
-  stories * time_per_story
-
-def elevator_total_time (stories : ℕ) (time_per_story : ℕ) (stop_time : ℕ) : ℕ :=
-  stories * time_per_story + (stories - 1) * stop_time
-
-theorem slower_time_is_Tara :
-  let stories := 20
-  let lola_time_per_story := 10
-  let tara_elevator_time_per_story := 8
-  let tara_stop_time := 3 in
-  max (time_to_top stories lola_time_per_story) (elevator_total_time stories tara_elevator_time_per_story tara_stop_time) = elevator_total_time stories tara_elevator_time_per_story tara_stop_time :=
-by
-  sorry
-
-end slower_time_is_Tara_l79_79556
-
-
-namespace expression_S_max_value_S_l79_79839
-
-section
-variable (x t : ℝ)
-def f (x : ℝ) := -3 * x^2 + 6 * x
-
--- Define the integral expression for S(t)
-noncomputable def S (t : ℝ) := ∫ x in t..(t + 1), f x
-
--- Assert the expression for S(t)
-theorem expression_S (t : ℝ) (ht : 0 ≤ t ∧ t ≤ 2) :
-  S t = -3 * t^2 + 3 * t + 2 :=
-by
-  sorry
-
--- Assert the maximum value of S(t)
-theorem max_value_S :
-  ∀ t, (0 ≤ t ∧ t ≤ 2) → S t ≤ 5 / 4 :=
-by
-  sorry
-
-end
-
-end expression_S_max_value_S_l79_79839
-
-
-namespace cost_of_energy_drink_l79_79967
-
--- Definitions for given conditions as constants
-def cupcakes_sold : ℕ := 50
-def price_per_cupcake : ℝ := 2.0
-def cookies_sold : ℕ := 40
-def price_per_cookie : ℝ := 0.5
-def basketballs_bought : ℕ := 2
-def price_per_basketball : ℝ := 40.0
-def bottles_bought : ℕ := 20
-
--- Goal: prove the cost per bottle of energy drink
-theorem cost_of_energy_drink :
-  let total_money := (cupcakes_sold * price_per_cupcake) + (cookies_sold * price_per_cookie),
-      total_basketballs_cost := basketballs_bought * price_per_basketball,
-      remaining_money := total_money - total_basketballs_cost,
-      cost_per_bottle := remaining_money / bottles_bought
-  in cost_per_bottle = 2.0 :=
-sorry
-
-end cost_of_energy_drink_l79_79967
-
-
-namespace shop_original_price_l79_79675
-
-theorem shop_original_price (x : ℝ) (discount : ℝ) (final_price : ℝ) (h : discount = 0.30) (h2 : final_price = 560) :
-  (x ∈ ℝ) → (1 - discount) * x = final_price → x = 800 :=
-by
-  intro hx h3
-  sorry
-
-end shop_original_price_l79_79675
-
-
-namespace problem_l79_79100
-
-theorem problem (k : ℕ) (hk : 0 < k) (n : ℕ) : 
-  (∃ p : ℕ, n = 2 * 3 ^ (k - 1) * p ∧ 0 < p) ↔ 3^k ∣ (2^n - 1) := 
-by 
-  sorry
-
-end problem_l79_79100
-
-
-namespace coefficient_of_b_squared_term_l79_79865
-
-noncomputable theory
-open_locale classical
-
-variable {α : Type*}
-variables (a b : ℝ)
-
-theorem coefficient_of_b_squared_term :
-  (∃ a: ℝ, (∀ b: ℝ, 4 * b ^ 4 - a * b ^ 2 + 100 = 0) ∧
-  (∃ b1 b2: ℝ, b1 + b2 = 4.5 ∧ (4 * b1 ^ 4 - a * b1 ^ 2 + 100 = 0) ∧ (4 * b2 ^ 4 - a * b2 ^ 2 + 100 = 0))) →
-  a = -4.5 :=
-by sorry
-
-end coefficient_of_b_squared_term_l79_79865
-
-
-namespace ant_diagonal_probability_l79_79310
-
-theorem ant_diagonal_probability : 
-  ∃ p : ℚ, p = 1/3 ∧ (∀ (A B C D E : Type) (move : A → B ⊕ C ⊕ D), 
-  ∀ (from_adjacent : B → C ⊕ D ⊕ E) (from_adjacent' : C → B ⊕ D ⊕ E) 
-  (from_adjacent'' : D → B ⊕ C ⊕ E), 
-  let p1 := (1 : ℚ) / 3 in 
-  let total_prob := p1 * p1 + p1 * p1 + p1 * p1 in 
-  total_prob = p) :=
-sorry
-
-end ant_diagonal_probability_l79_79310
-
-
-namespace parabola_focus_dot_product_and_cos_sum_l79_79002
-
-noncomputable def parabola_eqn (p : ℝ) : Prop :=
-  ∃ (C : ℝ × ℝ → Prop), C = (λ (x y : ℝ), y^2 = 2 * p * x)
-
-theorem parabola_focus (p : ℝ) (h : p > 0) : parabola_eqn 4 :=
-begin
-  have parab_eq := (λ (x y : ℝ), y^2 = 8 * x),
-  use parab_eq,
-  sorry
-end
-
-noncomputable def line_through_focus (m : ℝ) (F : ℝ × ℝ) : ℝ × ℝ → Prop :=
-  λ (x y : ℝ), x = m * y + F.1
-
-theorem dot_product_and_cos_sum
-  (F : ℝ × ℝ) (hF : F = (2, 0))
-  (p : ℝ) (h_parab (x y : ℝ) : y^2 = 8 * x)
-  (circle : ℝ × ℝ → Prop := (λ (x y : ℝ), (x - 2)^2 + y^2 = 1))
-  (tangent_points : (ℝ × ℝ) × (ℝ × ℝ))
-  (A B : ℝ × ℝ)
-  (h_line_B : line_through_focus m F B)
-  (h_line_A : line_through_focus m F A) :
-  ((A.1 * B.1) + (A.2 * B.2) = -12) ∧ (cos_angle_sum A B F = 1/2) :=
-begin
-  sorry
-end
-
-noncomputable def cos_angle_sum (A B F : ℝ × ℝ) : ℝ :=
-  (λ (P Q : ℝ × ℝ), sorry ) sorry sorry
-
-end parabola_focus_dot_product_and_cos_sum_l79_79002
-
-
-namespace total_distance_traveled_l79_79699
-
-theorem total_distance_traveled :
-  let car_speed1 := 90
-  let car_time1 := 2
-  let car_speed2 := 60
-  let car_time2 := 1
-  let train_speed := 100
-  let train_time := 2.5
-  let distance_car1 := car_speed1 * car_time1
-  let distance_car2 := car_speed2 * car_time2
-  let distance_train := train_speed * train_time
-  distance_car1 + distance_car2 + distance_train = 490 := by
-  sorry
-
-end total_distance_traveled_l79_79699
-
-
-namespace sum_of_leading_digits_l79_79545
-
-def leading_digit (n : ℕ) : ℕ :=
-  -- This would be defined properly, skipping actual implementation for brevity
-  1 -- placeholder
-
-noncomputable def M : ℕ := 10^199 * 9 - 1  -- 10^199 gives 200 digits, subtracting 1 changes them to all 8s
-
-def g (r : ℕ) : ℕ := leading_digit (nat.root M r)
-
-theorem sum_of_leading_digits :
-  g 2 + g 4 + g 6 + g 8 + g 10 = 6 :=
-  sorry
-
-end sum_of_leading_digits_l79_79545
-
-
-namespace arithmetic_series_mod_20_l79_79013
-
-open Nat
-
-theorem arithmetic_series_mod_20 :
-  ∑ k in range 28, (4 + 5 * k) % 20 ≡ 2 [MOD 20] :=
-by
-  sorry
-
-end arithmetic_series_mod_20_l79_79013
-
-
-namespace solve_squares_and_circles_l79_79289
-
-theorem solve_squares_and_circles (x y : ℝ) :
-  (5 * x + 2 * y = 39) ∧ (3 * x + 3 * y = 27) → (x = 7) ∧ (y = 2) :=
-by
-  intro h
-  sorry
-
-end solve_squares_and_circles_l79_79289
-
-
-namespace round_1_804_to_hundredth_l79_79953
-
-noncomputable def round_to_hundredth (x : ℝ) : ℝ :=
-  Real.round (x * 100) / 100
-
-theorem round_1_804_to_hundredth :
-  round_to_hundredth 1.804 = 1.80 :=
-by
-  sorry
-
-end round_1_804_to_hundredth_l79_79953
-
-
-namespace sum_of_four_digit_even_numbers_l79_79413
-
-theorem sum_of_four_digit_even_numbers :
-  let digits := {0, 1, 2, 3, 4, 5}
-  let num_choices := (5 : ℕ) * (6 : ℕ) * (6 : ℕ) * (3 : ℕ)
-  let sum_digits := 1 + 2 + 3 + 4 + 5
-  num_choices * (1000 * sum_digits + 100 * sum_digits + 10 * sum_digits + 1 * (0 + 2 + 4)) = 1769580 :=
-by
-  sorry
-
-end sum_of_four_digit_even_numbers_l79_79413
-
-
-namespace equality_of_shaded_areas_l79_79893
-
-variable (θ : ℝ)
-variable (r : ℝ)
-variable (A B C : ℝ → Prop)
-variable (isCenter : Prop)
-variable (isLineSegmentBCD : Prop)
-variable (isLineSegmentACE : Prop)
-variable (isTangentToCircleAtA : Prop)
-
-theorem equality_of_shaded_areas (hθ : 0 < θ ∧ θ < π / 4) 
-    (h_isCenter : C = isCenter)
-    (h_isLineSegmentBCD : BCD = isLineSegmentBCD)
-    (h_isLineSegmentACE : ACE = isLineSegmentACE)
-    (h_isTangentToCircleAtA : AB = isTangentToCircleAtA) :
-    sin θ = 2 * θ := sorry
-
-end equality_of_shaded_areas_l79_79893
-
-
-namespace find_b_l79_79138
-
-theorem find_b (b : ℕ) (h1 : 0 ≤ b) (h2 : b ≤ 20) (h3 : (746392847 - b) % 17 = 0) : b = 16 :=
-sorry
-
-end find_b_l79_79138
-
-
-namespace geometric_series_ratio_half_l79_79203
-
-theorem geometric_series_ratio_half (a r S : ℝ) (hS : S = a / (1 - r)) 
-  (h_ratio : (ar^4) / (1 - r) = S / 64) : r = 1 / 2 :=
-by
-  sorry
-
-end geometric_series_ratio_half_l79_79203
-
-
-namespace sum_last_two_digits_l79_79645
-
-theorem sum_last_two_digits (a b : ℕ) (h₁ : a = 7) (h₂ : b = 13) : 
-  (a^25 + b^25) % 100 = 0 :=
-by
-  sorry
-
-end sum_last_two_digits_l79_79645
-
-
-namespace purely_imaginary_necessary_not_sufficient_l79_79682
-
--- Definition of a purely imaginary number
-def is_purely_imaginary (z : ℂ) : Prop :=
-  z.re = 0 ∧ z.im ≠ 0
-
--- Theorem statement
-theorem purely_imaginary_necessary_not_sufficient (a b : ℝ) :
-  a = 0 → (z : ℂ) = ⟨a, b⟩ → is_purely_imaginary z ↔ (a = 0 ∧ b ≠ 0) :=
-by
-  sorry
-
-end purely_imaginary_necessary_not_sufficient_l79_79682
-
-
-namespace b_interval_for_non_real_roots_l79_79018
-
--- Conditions
-def discriminant (a b c : ℝ) : ℝ := b^2 - 4 * a * c
-
-def has_non_real_roots (a b c : ℝ) : Prop := discriminant a b c < 0
-
--- Given the quadratic equation x^2 + bx + 9
-def specific_discriminant (b : ℝ) : ℝ := discriminant 1 b 9
-
-def specific_has_non_real_roots (b : ℝ) : Prop := has_non_real_roots 1 b 9
-
--- Prove that b is in the interval (-6, 6) if the quadratic equation has non-real roots
-theorem b_interval_for_non_real_roots (b : ℝ) : specific_has_non_real_roots b → b ∈ Ioo -6 6 := by
-  sorry
-
-end b_interval_for_non_real_roots_l79_79018
-
-
-namespace count_valid_7_digit_numbers_l79_79853
-
-theorem count_valid_7_digit_numbers : 
-  (∑ n in finset.univ.filter (λ n : fin 7, n = 0 ∨ n = 1), n) = 11 :=
-by
-  -- Formalize the problem statement in Lean
-  let valid_numbers := {n : ℕ | 
-    let digits := nat.digits 2 n in 
-    list.length digits = 7 ∧ 
-    digits.head = 1 ∧ 
-    digits.last = 0 ∧ 
-    ∃ (sum_digits_mod3 : ℕ), sum_digits_mod3 = list.sum digits ∧ sum_digits_mod3 % 3 = 0 
-  } in
-  have count_valid : #valid_numbers = 11 := sorry,
-  exact count_valid
-
-end count_valid_7_digit_numbers_l79_79853
-
-
-namespace last_two_digits_of_sum_l79_79390
-
-theorem last_two_digits_of_sum :
-  ((4! + 8! + 12! + ... + 96!) % 100) = 24 :=
-sorry
-
-end last_two_digits_of_sum_l79_79390
-
-
-namespace impossible_discount_rate_l79_79401
-
-variable (regularPriceFox : ℕ := 15) (regularPricePony : ℕ := 18)
-variable (pairsFox : ℕ := 3) (pairsPony : ℕ := 2)
-variable (totalDiscountSum : ℝ := 0.18) (discountRatePony : ℝ := 0.5667)
-
-/-- If the total discount sum is 18% and the discount rate on Pony jeans is 56.67%, then 
-the calculated discount rate for Fox jeans which turns out to be -38.67%. This implies an impossible scenario. -/
-theorem impossible_discount_rate (h : totalDiscountSum = discountRateFox + discountRatePony) 
-                                (h_discountRatePony : discountRatePony = 0.5667):
-  ¬ (0.18 - 0.5667 >= 0) :=
-by
-  have discountRateFox : ℝ := totalDiscountSum - discountRatePony
-  have : discountRateFox = -0.3867 := by linarith
-  have h2 : ¬ (discountRateFox >= 0) := by linarith
-  exact h2
-
-end impossible_discount_rate_l79_79401
-
-
-namespace radius_of_incircle_correct_l79_79095
-
--- Definitions and conditions
-variables (A B C : Type) [plane A B C]
-variables (A₀ B C : point)
-variables (β γ : ℝ) -- Angles at B and C
-variable BC : ℝ -- Length of side BC
-variable r_n : ℕ → ℝ -- Radius of the incircle at A_nBC
-
--- Incenter function (Details skipped)
-noncomputable def Incenter (A : point) (Aₘ B C : Type) : Type := sorry
-
--- Angle functions (Details skipped)
-noncomputable def angle_β_n (n : ℕ) : ℝ := β / 2^n
-noncomputable def angle_γ_n (n : ℕ) : ℝ := γ / 2^n
-noncomputable def angle_βγ_n (n : ℕ) : ℝ := (β + γ) / 2^n
-
--- Law of Sines function (Details skipped)
-noncomputable def Law_of_Sines (B C : Type) (β γ : ℝ) (n : ℕ) : ℝ :=
-  BC * (Math.sin (angle_γ_n C β γ n) * Math.sin (angle_β_n B β γ n)) /
-  (Math.sin (angle_βγ_n B C β γ n))
-
--- Proof of the radius of the incircle of the triangle AₙBC
-noncomputable def radius_of_incircle (BC : ℝ) (β γ : ℝ) (n : ℕ) : ℝ :=
-  Law_of_Sines B C β γ n
-
-theorem radius_of_incircle_correct (n : ℕ) :
-  r_n n = BC * (Math.sin (angle_γ_n C β γ n) * Math.sin (angle_β_n B β γ n)) /
-  (Math.sin (angle_βγ_n B C β γ n)) :=
-sorry
-
-end radius_of_incircle_correct_l79_79095
-
-
-namespace fraction_doubling_unchanged_l79_79043
-
-theorem fraction_doubling_unchanged (x y : ℝ) (h : x ≠ y) : 
-  (3 * (2 * x)) / (2 * x - 2 * y) = (3 * x) / (x - y) :=
-by
-  sorry
-
-end fraction_doubling_unchanged_l79_79043
-
-
-namespace sum_lucky_numbers_divisible_by_13_l79_79341
-
-def is_lucky (n : ℕ) : Prop :=
-  let d1 := (n / 100000) % 10
-  let d2 := (n / 10000) % 10
-  let d3 := (n / 1000) % 10
-  let d4 := (n / 100) % 10
-  let d5 := (n / 10) % 10
-  let d6 := n % 10
-  d1 + d2 + d3 = d4 + d5 + d6
-
-theorem sum_lucky_numbers_divisible_by_13 :
-  (∑ n in Finset.filter is_lucky (Finset.range 1000000), n) % 13 = 0 :=
-sorry
-
-end sum_lucky_numbers_divisible_by_13_l79_79341
-
-
-namespace cos_third_quadrant_l79_79019
-
-theorem cos_third_quadrant (B : ℝ) (hB: π < B ∧ B < 3 * π / 2) (hSinB : Real.sin B = -5 / 13) :
-  Real.cos B = -12 / 13 :=
-by
-  sorry
-
-end cos_third_quadrant_l79_79019
-
-
-namespace midpoints_on_circle_l79_79572
-
--- Given a triangle with each side containing two points such that the six segments
--- connecting each point to the opposite vertex are equal in length, prove that the midpoints
--- of these six segments lie on a single circle.
-
-theorem midpoints_on_circle {A B C D H K L M: Point}
-  (hBD: altitude A B D C)
-  (hH: orthocenter H A B C)
-  (hK: midpoint K B D)
-  (hL: midpoint L B D)
-  (hM: midpoint M B D)
-  (hEqualSegments: (distance B K = distance B L) ∧ (distance B K = distance A K) ∧ (distance A L = distance C L)):
-  ∃ (O: Point) (r: ℝ), on_circle O M r ∧ on_circle O K r ∧ on_circle O L r := 
-sorry
-
-end midpoints_on_circle_l79_79572
-
-
-namespace books_sold_wednesday_l79_79073
-
--- Define the conditions of the problem
-def total_books : Nat := 1200
-def sold_monday : Nat := 75
-def sold_tuesday : Nat := 50
-def sold_thursday : Nat := 78
-def sold_friday : Nat := 135
-def percentage_not_sold : Real := 66.5
-
--- Define the statement to be proved
-theorem books_sold_wednesday : 
-  let books_sold := total_books * (1 - percentage_not_sold / 100)
-  let known_sales := sold_monday + sold_tuesday + sold_thursday + sold_friday
-  books_sold - known_sales = 64 :=
-by
-  sorry
-
-end books_sold_wednesday_l79_79073
-
-
-namespace coplanar_vectors_has_lambda_eq_one_l79_79407
-
-open Real
-
-noncomputable def vec3 := (ℝ × ℝ × ℝ)
-
-def a : vec3 := (2, -1, 3)
-def b : vec3 := (-1, 4, -2)
-def c (λ : ℝ) : vec3 := (1, 3, λ)
-
--- Define the condition for coplanarity
-def coplanar (v1 v2 v3 : vec3) : Prop := 
-  ∃ m n : ℝ, v3 = (m * v1.1 + n * v2.1, m * v1.2 + n * v2.2, m * v1.3 + n * v2.3)
-
-theorem coplanar_vectors_has_lambda_eq_one (λ : ℝ) :
-  coplanar a b (c λ) ↔ λ = 1 :=
-by sorry  -- Proof omitted; main goal is to write the statement.
-
-end coplanar_vectors_has_lambda_eq_one_l79_79407
-
-
-namespace spherical_to_rectangular_correct_l79_79363
-
-noncomputable def sphericalToRectangular (ρ θ φ : ℝ) : ℝ × ℝ × ℝ :=
-  (ρ * Real.sin φ * Real.cos θ, ρ * Real.sin φ * Real.sin θ, ρ * Real.cos φ)
-
-theorem spherical_to_rectangular_correct :
-  let ρ := 5
-  let θ := Real.pi / 4
-  let φ := Real.pi / 3
-  sphericalToRectangular ρ θ φ = (5 * Real.sqrt 6 / 4, 5 * Real.sqrt 6 / 4, 5 / 2) :=
-by
-  sorry
-
-end spherical_to_rectangular_correct_l79_79363
-
-
-namespace max_consecutive_integers_sum_lt_1000_l79_79243
-
-theorem max_consecutive_integers_sum_lt_1000
-  (n : ℕ)
-  (h : (n * (n + 1)) / 2 < 1000) : n ≤ 44 :=
-by
-  sorry
-
-end max_consecutive_integers_sum_lt_1000_l79_79243
-
-
-namespace geometric_series_common_ratio_l79_79194
-
-theorem geometric_series_common_ratio (a r : ℝ) (h₁ : r ≠ 1)
-    (h₂ : a / (1 - r) = 64 * (a * r^4) / (1 - r)) : r = 1/2 :=
-by
-  have h₃ : 1 = 64 * r^4 := by
-    have : 1 - r ≠ 0 := by linarith
-    field_simp at h₂; assumption
-  sorry
-
-end geometric_series_common_ratio_l79_79194
-
-
-namespace no_solutions_if_AM_geq_A1M_or_perpendicular_AF_infinitely_many_solutions_if_A_eq_M_l79_79757
-
--- Define the conditions
-variables (A M F : Point)
-noncomputable def midpoint (B C : Point) : Point := sorry
-def orthocenter (ABC : Triangle) : Point := sorry
-def perpendicular (line1 line2 : Line) : Prop := sorry
-def distance (p1 p2 : Point) : Real := sorry
-def triangle (A B C : Point) := sorry
-def reflection (point line : Point) : Point := sorry
-def circle (center : Point) (radius : Real) : Set Point := sorry
-
--- Given conditions
-axiom A_exists : ∃ A : Point, True
-axiom M_is_orthocenter : ∃ (ABC : Triangle), M = orthocenter(ABC)
-axiom F_is_midpoint : ∃ (B C : Point), F = midpoint B C
-
--- Define the equivalent proof statements
-theorem no_solutions_if_AM_geq_A1M_or_perpendicular_AF 
-  (A1 M : Point) 
-  (h1 : distance A M ≥ distance A1 M) 
-  (h2 : perpendicular (line_through A M) (line_through A F)) : 
-  ¬ ∃ (ABC : Triangle), ABC.has_vertex A ∧ M = orthocenter(ABC) ∧ F = midpoint(ABC.B ABC.C) := 
-sorry
-
-theorem infinitely_many_solutions_if_A_eq_M 
-  (A_eq_M : A = M) : 
-  ∃ (ABC : Triangle), ABC.has_vertex A ∧ M = orthocenter(ABC) ∧ F = midpoint(ABC.B ABC.C) :=
-sorry
-
-end no_solutions_if_AM_geq_A1M_or_perpendicular_AF_infinitely_many_solutions_if_A_eq_M_l79_79757
-
-
-namespace tan_graph_shift_l79_79999
-
-theorem tan_graph_shift :
-  ∀ x : ℝ,  tan x = tan (2 * (x - (π / 2))) :=
-by
-  sorry
-
-end tan_graph_shift_l79_79999
-
-
-namespace combined_resistance_in_parallel_l79_79509
-
-theorem combined_resistance_in_parallel (x y r : ℝ) (hx : x = 4) (hy : y = 5) (h : 1 / r = 1 / x + 1 / y) : 
-  r = 20 / 9 :=
-by
-  rw [hx, hy] at h
-  calc
-    1 / r = 1 / 4 + 1 / 5 : h
-        ... = 5 / 20 + 4 / 20 : by norm_num
-        ... = 9 / 20 : by norm_num
-    r = 20 / 9 : by norm_num
-
-end combined_resistance_in_parallel_l79_79509
-
-
-namespace first_player_winning_strategy_l79_79135
-
-theorem first_player_winning_strategy :
-  (∃ card_pairs : list (ℕ × ℕ), (∀ (pair : ℕ × ℕ), pair ∈ card_pairs → (1 ≤ pair.1 ∧ pair.1 < pair.2 ∧ pair.2 ≤ 2003))
-    → (∃ strategy : list (ℕ × ℕ), 
-         player_has_winning_strategy strategy card_pairs)) :=
-begin
-  sorry
-end
-
-def player_has_winning_strategy (strategy : list (ℕ × ℕ)) (card_pairs : list (ℕ × ℕ)) : Prop :=
-∃ gcd_fall_to_one_game_state : list ℕ → Prop,
-  -- initial game state
-  gcd_fall_to_one_game_state [],
-  -- strategy ensures that the first player wins
-  ∀ (state : list ℕ),
-    gcd_fall_to_one_game_state state →
-    ∀ (card : ℕ × ℕ),
-      card ∈ card_pairs →
-      let new_state := (card.1 * card.2) :: state in
-      (forall gcd_fall_to_one_game_state new_state)
-
-end first_player_winning_strategy_l79_79135
-
-
-namespace sum_last_two_digits_l79_79646
-
-theorem sum_last_two_digits (a b : ℕ) (h₁ : a = 7) (h₂ : b = 13) : 
-  (a^25 + b^25) % 100 = 0 :=
-by
-  sorry
-
-end sum_last_two_digits_l79_79646
-
-
-namespace parametric_curve_coefficients_l79_79311
-
-theorem parametric_curve_coefficients :
-  ∃ a b c : ℚ,
-  (∀ t : ℝ,
-    (3 * (Real.cos t) + (Real.sin t))^2 * a +
-    (3 * (Real.cos t) + (Real.sin t)) * (3 * (Real.sin t)) * b +
-    (3 * (Real.sin t))^2 * c = 1) ∧
-  (a = 1/9) ∧ (b = -2/27) ∧ (c = 10/81) := 
-begin
-  use [1/9, -2/27, 10/81],
-  split, 
-  intro t,
-  calc _ : (3 * (Real.cos t) + (Real.sin t))^2 * (1/9) +
-            (3 * (Real.cos t) + (Real.sin t)) * (3 * (Real.sin t)) * (-2/27) +
-            (3 * (Real.sin t))^2 * (10/81) = _ := 
-    sorry, -- omitted steps to show it is identically 1 
-  exact ⟨rfl, rfl, rfl⟩,
-end
-
-end parametric_curve_coefficients_l79_79311
-
-
-namespace convert_spherical_to_rectangular_l79_79365
-
-def spherical_to_rectangular (ρ θ φ : ℝ) : ℝ × ℝ × ℝ :=
-  (ρ * Real.sin φ * Real.cos θ, ρ * Real.sin φ * Real.sin θ, ρ * Real.cos φ)
-
-theorem convert_spherical_to_rectangular :
-  spherical_to_rectangular 5 (Real.pi / 4) (Real.pi / 3) = (5 * (Real.sqrt 3 / 2) * (Real.sqrt 2 / 2), 5 * (Real.sqrt 3 / 2) * (Real.sqrt 2 / 2), 5 * (1 / 2)) :=
-by
-  sorry
-
-end convert_spherical_to_rectangular_l79_79365
-
-
-namespace minimize_power_line_distance_l79_79336
-
-open Real
-
-noncomputable def optimal_d {A B C D E : ℝ} (AB_dist Ac_Bc_dist Ae_Be_dist : ℝ) (AE EB : ℝ) :=
-  (AC = BC := 0.5)   -- Given conditions
-  (AB = 0.6)         -- Distance between A and B
-  (AE = EB := 0.3) -- Midpoint distances
-
-theorem minimize_power_line_distance : 
-  let L (x : ℝ) := (0.4 - x) + 2 * sqrt (0.09 + x^2) in
-  let critical_x := (sqrt 3) / 10 in
-  ∀ x, optimize L x = critical_x :=
-sorry
-
-end minimize_power_line_distance_l79_79336
-
-
-namespace standard_equation_of_ellipse_equation_of_line_l79_79423
-
--- Define the conditions first
-variables (a b c : ℝ) (h1 : a > b > 0)
-variables (eccentricity : ℝ) (h2 : eccentricity = 1/2)
-variables (focusX : ℝ) (h3 : focusX = 1)
-variables (P : ℝ → ℝ) (h4 : P 1 = t)
-variables (area : ℝ) (h5 : area = 9 * Real.sqrt 2 / 7)
-
--- The first problem: Finding the standard equation of the ellipse
-theorem standard_equation_of_ellipse
-  (h6 : c = 1)
-  (h7 : c / a = 1/2)
-  (h8 : a = 2)
-  : ∀ (x y : ℝ), x^2 / 4 + y^2 / 3 = 1 :=
-sorry
-
--- The second problem: Finding the equation of line l
-theorem equation_of_line
-  (h9 : ∃! (l : ℝ → ℝ), (∀ x y, (x - l y - 1 = 0 ∨ x - l y + 1 = 0) ∧ (l passes through focusX)))
-  : ∃! (l : ℝ → ℝ), (∀ x y, (x + y - 1 = 0 ∨ x - y - 1 = 0)) :=
-sorry
-
-end standard_equation_of_ellipse_equation_of_line_l79_79423
-
-
-namespace distinct_9_pointed_stars_l79_79141
-
--- Define a function to count the distinct n-pointed stars for a given n
-def count_distinct_stars (n : ℕ) : ℕ :=
-  -- Functionality to count distinct stars will be implemented here
-  sorry
-
--- Theorem stating the number of distinct 9-pointed stars
-theorem distinct_9_pointed_stars : count_distinct_stars 9 = 2 :=
-  sorry
-
-end distinct_9_pointed_stars_l79_79141
-
-
-namespace nth_equation_proof_l79_79113
-
-theorem nth_equation_proof (n : ℕ) (hn : n > 0) :
-  (1 : ℝ) + (1 / (n : ℝ)) - (2 / (2 * n - 1)) = (2 * n^2 + n + 1) / (n * (2 * n - 1)) :=
-by
-  sorry
-
-end nth_equation_proof_l79_79113
-
-
-namespace product_floor_cubic_roots_eq_rat_l79_79751
-
--- Define conditions related to cubed roots and flooring
-def floor_cubic_roots_product (n : ℕ) : ℚ :=
-  (∏ i in finset.range n, ⌊(i * 2 + 1 : ℚ)^(1/3)⌋) / (∏ i in finset.range n, ⌊((i + 1) * 2 : ℚ)^(1/3)⌋)
-
-theorem product_floor_cubic_roots_eq_rat :
-  floor_cubic_roots_product 62 = (2 / 5) :=
-by
-  -- Insert proof here
-  sorry
-
-end product_floor_cubic_roots_eq_rat_l79_79751
-
-
-namespace total_handshakes_l79_79741
-
-theorem total_handshakes (twins_num : ℕ) (triplets_num : ℕ) (twins_sets : ℕ) (triplets_sets : ℕ) (h_twins : twins_sets = 9) (h_triplets : triplets_sets = 6) (h_twins_num : twins_num = 2 * twins_sets) (h_triplets_num: triplets_num = 3 * triplets_sets) (h_handshakes : twins_num * (twins_num - 2) + triplets_num * (triplets_num - 3) + 2 * twins_num * (triplets_num / 2) = 882): 
-  (twins_num * (twins_num - 2) + triplets_num * (triplets_num - 3) + 2 * twins_num * (triplets_num / 2)) / 2 = 441 :=
-by
-  sorry
-
-end total_handshakes_l79_79741
-
-
-namespace number_of_functions_l79_79783
-
-noncomputable theory
-
-def f (a b c d x : ℝ) := a * x^3 + b * x^2 + c * x + d
-
-theorem number_of_functions (a b c d : ℝ) :
-    ((∀ x, f a b c d x * f a b c d (-x) = f a b c d (x^3)) ↔
-    (
-      (∃ a, a = 0) ∧ 
-      (∃ (b : ℝ), b = 0 ∨ b = 1) ∧ 
-      (∃ c, c = 0) ∧ 
-      (∃ (d : ℝ), d = 0 ∨ d = 1)
-    )) →
-    ∃ (n : ℕ), n = 4 := 
-by 
-  intros h 
-  sorry
-
-end number_of_functions_l79_79783
-
-
-namespace total_disks_in_bag_l79_79379
-
-theorem total_disks_in_bag :
-  ∃ (x : ℕ), let blue_disks := 3 * x
-             let yellow_disks := 7 * x
-             let green_disks := 8 * x in
-             green_disks - blue_disks = 20 ∧
-             blue_disks + yellow_disks + green_disks = 72 :=
-begin
-  -- Proof skipped
-  sorry
-end
-
-end total_disks_in_bag_l79_79379
-
-
-namespace selling_price_correct_l79_79312
-
-variable (CostPrice GainPercent : ℝ)
-variables (Profit SellingPrice : ℝ)
-
-noncomputable def calculateProfit : ℝ := (GainPercent / 100) * CostPrice
-
-noncomputable def calculateSellingPrice : ℝ := CostPrice + calculateProfit CostPrice GainPercent
-
-theorem selling_price_correct 
-  (h1 : CostPrice = 900) 
-  (h2 : GainPercent = 30)
-  : calculateSellingPrice CostPrice GainPercent = 1170 := by
-  sorry
-
-end selling_price_correct_l79_79312
-
-
-namespace max_consecutive_integers_lt_1000_l79_79256
-
-theorem max_consecutive_integers_lt_1000 : 
-  ∃ n : ℕ, (n * (n + 1)) / 2 < 1000 ∧ ∀ m : ℕ, m > n → (m * (m + 1)) / 2 ≥ 1000 :=
-sorry
-
-end max_consecutive_integers_lt_1000_l79_79256
-
-
-namespace geometric_series_ratio_half_l79_79205
-
-theorem geometric_series_ratio_half (a r S : ℝ) (hS : S = a / (1 - r)) 
-  (h_ratio : (ar^4) / (1 - r) = S / 64) : r = 1 / 2 :=
-by
-  sorry
-
-end geometric_series_ratio_half_l79_79205
-
-
-namespace max_clothing_sets_produced_l79_79772
-
-noncomputable def total_max_sets : ℕ :=
-  let sets_A := 2700 -- sets produced per month by Factory A
-  let sets_B := 3600 -- sets produced per month by Factory B
-  
-  let ratio_A := (2, 1) -- time ratio of producing jackets to trousers in Factory A
-  let ratio_B := (3, 2) -- time ratio of producing jackets to trousers in Factory B
-  
-  let max_jackets_B := sets_B * 5 / 3 -- Calculation based on given ratios
-  let max_trousers_A := (sets_A * 3 / 1 : ℕ) -- Calculation based on given ratios
-  let feasible_max := 6000 -- Recognizing that producing max trousers A isn't feasible timely wise
-  
-  max_jackets_B + feasible_max / 27 * (27 - 10)
-
-theorem max_clothing_sets_produced :
-  -- Given all the conditions
-  let factA_production := 2700
-  let factB_production := 3600
-  let ratioA := (2, 1)
-  let ratioB := (3, 2)
-  in
-  total_max_sets factA_production factB_production ratioA ratioB = 6700 :=
-by
-  sorry
-
-end max_clothing_sets_produced_l79_79772
-
-
-namespace gain_percentage_l79_79317
-
-theorem gain_percentage (cost_price : ℝ) (selling_price : ℝ) :
-  (selling_price / cost_price - 1) * 100 = 20 :=
-by
-  -- Given conditions
-  let cp_15pencils := 15 * cost_price
-  let sp_15pencils := 1
-  let loss_percentage := 0.20
-  
-  -- Calculation of cost price per pencil
-  let cp_1pencil := cp_15pencils / 15
-  let effective_cp_15pencils := sp_15pencils / (1 - loss_percentage)
-  have H1 : effective_cp_15pencils = cp_15pencils := by sorry
-  have H2 : cp_1pencil = effective_cp_15pencils / 15 := by sorry
-  
-  -- Given new selling price condition
-  let sp_10pencils := 1
-  let cp_10pencils := 10 * cp_1pencil
-  
-  -- Calculation of gain percentage
-  let gain_percentage := (sp_10pencils - cp_10pencils) / cp_10pencils * 100
-  
-  -- Required proof
-  have H3 : gain_percentage = 20 := by sorry
-  exact H3
-
-end gain_percentage_l79_79317
-
-
-namespace equilateral_triangle_BD_CD_plus_AE_l79_79077
-
-theorem equilateral_triangle_BD_CD_plus_AE (A B C D E : Point) (t : Line) 
-  (h₁ : is_equilateral_triangle A B C)
-  (h₂ : parallel t (line B C))
-  (h₃ : on_line A t)
-  (h₄ : on_line D (line A C))
-  (h₅ : bisector (angle A B D) (line B E))
-  (h₆ : on_line E t) :
-  dist B D = dist C D + dist A E :=
-sorry
-
-end equilateral_triangle_BD_CD_plus_AE_l79_79077
-
-
-namespace evaluate_f_i_l79_79099
-
-noncomputable def f (x : ℂ) : ℂ := (x^5 + 2*x^3 + x) / (x + 1)
-def i : ℂ := complex.I
-
-theorem evaluate_f_i : f i = -1 + i := by
-  sorry
-
-end evaluate_f_i_l79_79099
-
-
-namespace geometric_series_common_ratio_l79_79180
-
-theorem geometric_series_common_ratio (a r : ℝ) (h : a / (1 - r) = 64 * (a * r^4 / (1 - r))) : r = 1/2 :=
-by {
-  sorry
-}
-
-end geometric_series_common_ratio_l79_79180
-
-
-namespace trajectory_of_circle_center_l79_79439
-
-theorem trajectory_of_circle_center :
-  (∀ (P : Point) (r : ℝ), -- For any point P (center of circle) and radius r
-    (P ∈ set_of_points_tangent_to F1) ∧ -- Circle P is tangent to circle F1
-    (P ∈ set_of_points_internally_tangent_to F2)) -- Circle P is internally tangent to circle F2
-    →
-
-trivially_equivalent_curve : -- A helper def to store the equation of curve C
-  ∀ (P : Point),
-    (P ∈ curve_c_trajectory) ↔ -- Points P on curve C
-    (P ∈ {Point | (P.x^2)/16 + (P.y^2)/7 = 1}) -- Equation of the trajectory curve C
-    := 
-sorry -- Proof omitted
-
-end trajectory_of_circle_center_l79_79439
-
-
-namespace _l79_79533
-
--- Infinite graph as a structure
-structure Graph (V : Type) :=
-(adj : V → V → Prop)
-
-open Graph
-
--- Countable set as a typeclass to simplify things
-class Countable (α : Type) :=
-(encode : α → ℕ)
-(decode : ℕ → Option α)
-(decode_encode : ∀ a, decode (encode a) = some a)
-
--- Infinite type
-class Infinite (α : Type) :=
-(infinite : ∃ f : ℕ → α, ∀ n m, f n = f m → n = m → False)
-
-variables {V : Type} [Infinite V]
-
--- Main theorem statement
-lemma exists_uncountable_vertices {G : Graph V}
-  (hG : ∀ (A : Set V), Countable A → ∃ p, p ∉ A ∧ Infinite {x | x ∈ A ∧ G.adj p x}) :
-  ∃ (A : Set V), Countable A ∧ Infinite {p | p ∉ A ∧ Infinite {x | x ∈ A ∧ G.adj p x}} :=
-sorry
-
-end _l79_79533
-
-
-namespace AC_squared_minus_AE_squared_l79_79534
-
-variable (A B C D E : Type) [MetricSpace A] [MetricSpace B] [MetricSpace C] [MetricSpace D] [MetricSpace E]
-variables {ABC : Triangle} (angle_ABC : ∠ ABC = 90) (circle_with_diameter_AB : CircleDiameter A B)
-variables {D_on_AC : D ∈ AC} {tangent_at_D : Tangent D circle_with_diameter_AB} (E_on_BC : E ∈ BC)
-variables (EC_length : dist E C = 2)
-
-theorem AC_squared_minus_AE_squared : dist A C ^ 2 - dist A E ^ 2 = 12 :=
-by
-  sorry
-
-end AC_squared_minus_AE_squared_l79_79534
-
-
-namespace arithmetic_mean_probability_l79_79418
-
-theorem arithmetic_mean_probability
-  (a b c : ℝ)
-  (h1 : a + b + c = 1)
-  (h2 : b = (a + c) / 2) :
-  b = 1 / 3 :=
-by
-  sorry
-
-end arithmetic_mean_probability_l79_79418
-
-
-namespace polar_coords_intersection_l79_79519
-
-theorem polar_coords_intersection (ρ θ : ℝ) (l : ℝ → ℝ → Prop)
-  (h_line_parallel: ∀ θ, (l ρ θ ↔ ρ * cos θ = 1))
-  (h_line_center: l 1 0)
-  (h_center: ∀ θ, 2 * cos θ = 1) :
-  l 1 0 :=
-by
-  sorry
-
-end polar_coords_intersection_l79_79519
-
-
-namespace delivery_time_is_40_minutes_l79_79163
-
--- Define the conditions
-def total_pizzas : Nat := 12
-def two_pizza_stops : Nat := 2
-def pizzas_per_stop_with_two_pizzas : Nat := 2
-def time_per_stop_minutes : Nat := 4
-
--- Define the number of pizzas covered by stops with two pizzas
-def pizzas_covered_by_two_pizza_stops : Nat := two_pizza_stops * pizzas_per_stop_with_two_pizzas
-
--- Define the number of single pizza stops
-def single_pizza_stops : Nat := total_pizzas - pizzas_covered_by_two_pizza_stops
-
--- Define the total number of stops
-def total_stops : Nat := two_pizza_stops + single_pizza_stops
-
--- Total time to deliver all pizzas
-def total_delivery_time_minutes : Nat := total_stops * time_per_stop_minutes
-
-theorem delivery_time_is_40_minutes : total_delivery_time_minutes = 40 := by
-  sorry
-
-end delivery_time_is_40_minutes_l79_79163
-
-
-namespace right_triangle_area_l79_79051
-
-theorem right_triangle_area
-  (h : ∀ (AB AC CM KN : ℝ), 
-    (CM = 5) ∧ (KN = 4) ∧ (C = midpoint AB) ∧ (M = midpoint AB) 
-    ∧ (N = midpoint KN) ∧ (MN ⊥ AC) ∧ (NK ⊥ AB)
-    ∧ (angle ABC = 90) ∧ (angle CBA = 90)
-    → area (triangle ABC) = 200 / 3 
-  ) : sorry :=
-begin
-  sorry,
-end
-
-end right_triangle_area_l79_79051
-
-
-namespace cyclic_quad_theorem_l79_79078
-
-noncomputable theory
-open_locale classical
-
-variables (A B C D E : Point)
-variables (AB AC AD BC BD CD : Segment)
-variables (P : Segment)
-
--- Let ABCD be a cyclic quadrilateral
-def cyclic_quadrilateral (ABCD : Quadrilateral) : Prop :=
-  ∃ O : Point, O ∈ circumcircle ABCD
-
--- ∠ADC = ∠DBA
-def angle_equality1 (A B C D : Point) : Prop :=
-  ∠ADC = ∠DBA
-
--- E is the projection of A on BD
-def projection (A D E : Point) : Prop :=
-  is_perpendicular_to AD BD ∧ (∃ F : Point, E = midpointA B F)
-
-theorem cyclic_quad_theorem
-  (ABCD : Quadrilateral)
-  (h1 : cyclic_quadrilateral ABCD)
-  (h2 : angle_equality1 A B C D)
-  (h3 : projection A D E) :
-  BC = DE - BE := sorry
-
-end cyclic_quad_theorem_l79_79078
-
-
-namespace max_consecutive_integers_lt_1000_l79_79254
-
-theorem max_consecutive_integers_lt_1000 : 
-  ∃ n : ℕ, (n * (n + 1)) / 2 < 1000 ∧ ∀ m : ℕ, m > n → (m * (m + 1)) / 2 ≥ 1000 :=
-sorry
-
-end max_consecutive_integers_lt_1000_l79_79254
-
-
-namespace relationship_among_abc_l79_79370
-
-noncomputable def a : ℝ := 20.3
-noncomputable def b : ℝ := 0.32
-noncomputable def c : ℝ := Real.log 25 / Real.log 10
-
-theorem relationship_among_abc : b < a ∧ a < c :=
-by
-  -- Proof needs to be filled in here
-  sorry
-
-end relationship_among_abc_l79_79370
-
-
-namespace area_of_circle_diameter_7_5_l79_79265
-
-theorem area_of_circle_diameter_7_5 :
-  ∃ (A : ℝ), (A = 14.0625 * Real.pi) ↔ (∃ (d : ℝ), d = 7.5 ∧ A = Real.pi * (d / 2) ^ 2) :=
-by
-  sorry
-
-end area_of_circle_diameter_7_5_l79_79265
-
-
-namespace decimal_to_base_six_has_three_digits_l79_79518
-
-theorem decimal_to_base_six_has_three_digits :
-  ∃ (digits : ℕ), nat.to_digits 6 143 = digits ∧ (digits.to_string.length = 3) := by
-sorry
-
-end decimal_to_base_six_has_three_digits_l79_79518
-
-
-namespace coordinates_of_point_M_on_Z_axis_l79_79103
-
-notation "^" => pow
-
-theorem coordinates_of_point_M_on_Z_axis (z : ℝ) :
-  (∃z, (0, 0, z)) ∧ 
-  (real.sqrt ((0 - 1)^2 + (0 - 0)^2 + (z - 2)^2) = 
-   real.sqrt ((0 - 1)^2 + (0 - -3)^2 + (z - 1)^2)) → 
-  (0, 0, z) = (0, 0, -3) :=
-by
-  sorry
-
-end coordinates_of_point_M_on_Z_axis_l79_79103
-
-
-namespace average_viewer_watches_two_videos_daily_l79_79330
-
-variable (V : ℕ)
-variable (video_time : ℕ := 7)
-variable (ad_time : ℕ := 3)
-variable (total_time : ℕ := 17)
-
-theorem average_viewer_watches_two_videos_daily :
-  7 * V + 3 = 17 → V = 2 := 
-by
-  intro h
-  have h1 : 7 * V = 14 := by linarith
-  have h2 : V = 2 := by linarith
-  exact h2
-
-end average_viewer_watches_two_videos_daily_l79_79330
-
-
-namespace quadratic_maximum_or_minimum_l79_79500
-
-open Real
-
-noncomputable def quadratic_function (a b x : ℝ) : ℝ := a * x^2 + b * x - b^2 / (3 * a)
-
-theorem quadratic_maximum_or_minimum (a b : ℝ) (h : a ≠ 0) :
-  (a > 0 → ∃ x₀, ∀ x, quadratic_function a b x₀ ≤ quadratic_function a b x) ∧
-  (a < 0 → ∃ x₀, ∀ x, quadratic_function a b x₀ ≥ quadratic_function a b x) :=
-by
-  -- Proof will go here
-  sorry
-
-end quadratic_maximum_or_minimum_l79_79500
-
-
-namespace meaningful_fraction_condition_l79_79220
-
-theorem meaningful_fraction_condition (x : ℝ) : (4 - 2 * x ≠ 0) ↔ (x ≠ 2) :=
-by {
-  sorry
-}
-
-end meaningful_fraction_condition_l79_79220
-
-
-namespace f_eq_91_for_all_n_leq_100_l79_79101
-
-def f : ℤ → ℝ
-| n => if n > 100 then n - 10 else f (f (n + 11))
-
-theorem f_eq_91_for_all_n_leq_100 (n : ℤ) (h : n ≤ 100) : f n = 91 := by
-  sorry
-
-end f_eq_91_for_all_n_leq_100_l79_79101
-
-
-namespace scientific_notation_correct_l79_79567
-
-/-- Define the number 42.39 million as 42.39 * 10^6 and prove that it is equivalent to 4.239 * 10^7 -/
-def scientific_notation_of_42_39_million : Prop :=
-  (42.39 * 10^6 = 4.239 * 10^7)
-
-theorem scientific_notation_correct : scientific_notation_of_42_39_million :=
-by 
-  sorry
-
-end scientific_notation_correct_l79_79567
-
-
-namespace correct_options_l79_79274
-
-open Classical
-
-variable {A B : Prop} {P : Prop → ℝ}
-
-def mutually_exclusive (A B : Prop) : Prop :=
-  A ∧ B → False
-
-def independent (A B : Prop) : Prop :=
-  P (A ∧ B) = P A * P B
-
-def negation_correct (p : Prop) : Prop :=
-  ¬p
-
-def angle_sufficient (m n α : ℝ) : Prop :=
-  m = 60 ∧ n = 30 ∧ α = 120
-
-theorem correct_options :
-  (P(A ∧ B) = P A * P B) →
-  (∃ (m n α : ℝ), m = 60 ∧ n = 30 ∧ α = 120) → 
-  True :=
-by
-  intros _ _
-  trivial
-
-end correct_options_l79_79274
-
-
-namespace sum_of_ages_l79_79727
-
--- Define the variables
-variables (a b c : ℕ)
-
--- Define the conditions
-def condition1 := a = 16 + b + c
-def condition2 := a^2 = 1632 + (b + c)^2
-
--- Define the theorem to prove the question
-theorem sum_of_ages : condition1 a b c → condition2 a b c → a + b + c = 102 := 
-by 
-  intros h1 h2
-  sorry
-
-end sum_of_ages_l79_79727
-
-
-namespace distinct_real_roots_of_quadratic_l79_79471
-
-theorem distinct_real_roots_of_quadratic (m : ℝ) :
-  (∃ (x y : ℝ), x ≠ y ∧ x^2 + m * x + 9 = 0 ∧ y^2 + m * y + 9 = 0) ↔ m ∈ Ioo (-∞) (-6) ∪ Ioo 6 (∞) :=
-by
-  sorry
-
-end distinct_real_roots_of_quadratic_l79_79471
-
-
-namespace eval_expression_correct_l79_79767
-
-noncomputable def evaluate_expression : ℝ :=
-    3 + Real.sqrt 3 + (3 - Real.sqrt 3) / 6 + (1 / (Real.cos (Real.pi / 4) - 3))
-
-theorem eval_expression_correct : 
-  evaluate_expression = (3 * Real.sqrt 3 - 5 * Real.sqrt 2) / 34 :=
-by
-  -- Proof can be filled in later
-  sorry
-
-end eval_expression_correct_l79_79767
-
-
-namespace seventeenth_number_is_5724_l79_79628
-
-def is_permutation (l1 l2 : List ℕ) : Prop :=
-  l1.length = l2.length ∧ l1.perm l2
-
-def valid_4_digit_numbers : List (List ℕ) :=
-  ([2, 4, 5, 7]).permutations
-
-def sorted_4_digit_numbers : List (List ℕ) :=
-  valid_4_digit_numbers.qsort (λ l1 l2 => l1 < l2)
-
-theorem seventeenth_number_is_5724 :
-  (sorted_4_digit_numbers.get? 16 = some [5, 7, 2, 4]) :=
-sorry
-
-end seventeenth_number_is_5724_l79_79628
-
-
-namespace problem_ABCD_area_ratio_l79_79583
-
-theorem problem_ABCD_area_ratio 
-  (AB BC BD CE BE : ℝ)
-  (ABCD_right_BC : ∀ (B C: ℝ), ABCD_has_right_angles_at_B_and_C) 
-  (tri_sim_ABC_BCD : ∀ (A B C D : ℝ), TABC_sim_TBCD)
-  (AB_gt_BC : AB > BC)
-  (E_in_interior : ∀ (A B C D : ℝ), E_is_interior_of_ABCD)
-  (tri_sim_ABC_CEB : ∀ (A B C E : ℝ), TABC_sim_TCEB)
-  (area_AED_25_CEB : area_25_areas_of_triangles : ∀ (A B C D E : ℝ), area_of_tAED(ABCD) = 25 * area_of_tCEB(ABCD))
-  : (AB / BC) = (5 + 2 * Real.sqrt 5) :=
-sorry
-
-end problem_ABCD_area_ratio_l79_79583
-
-
-namespace least_number_to_subtract_l79_79269
-
-theorem least_number_to_subtract (n : ℕ) (h : n = 101054) : ∃ x : ℕ, x = 4 ∧ (n - x) % 10 = 0 :=
-by
-  use 4
-  have h1 : n % 10 = 4 := by rw [h]; norm_num
-  have h2 : (n - 4) % 10 = (n % 10 - 4 % 10) % 10 := (nat.sub_mod _ 4 _).symm
-  rw [h1] at h2
-  norm_num at h2
-  exact ⟨rfl, h2⟩
-
-end least_number_to_subtract_l79_79269
-
-
-namespace triangle_sequence_last_perimeter_l79_79918
-
-theorem triangle_sequence_last_perimeter (1001 1002 1003 : ℕ)
-  (h1 : 1001 + 1002 > 1003)
-  (h2 : 1001 + 1003 > 1002)
-  (h3 : 1002 + 1003 > 1001) :
-  ∃ n : ℕ, (forall m > n, 1001 + m + 1 + (1002 + m + 1) <= 1003 + m + 1) ∧
-  3 * (1003 + 5) = 3021 := 
-sorry
-
-end triangle_sequence_last_perimeter_l79_79918
-
-
-namespace min_value_of_reciprocal_sum_l79_79428
-
-theorem min_value_of_reciprocal_sum {a b : ℝ} (ha : a > 0) (hb : b > 0)
-  (hgeom : 3 = Real.sqrt (3^a * 3^b)) : (1 / a + 1 / b) = 2 :=
-sorry  -- Proof not required, only the statement is needed.
-
-end min_value_of_reciprocal_sum_l79_79428
-
-
-namespace range_of_m_l79_79881
-
-open EuclideanGeometry
-
--- Define the square ABCD with side length 8
-variable (A B C D M N : Point)
-variable (side_length : ℝ)
-axiom square_ABCD : side_length = 8 ∧
-  (dist A B = side_length) ∧
-  (dist B C = side_length) ∧
-  (dist C D = side_length) ∧
-  (dist D A = side_length) ∧
-  (angle A B C = π / 2) ∧
-  (angle B C D = π / 2) ∧
-  (angle C D A = π / 2) ∧
-  (angle D A B = π / 2)
-
--- Define M as the midpoint of BC
-axiom midpoint_M : M = midpoint B C
-
--- Define N on DA such that DN = 3 * NA
-axiom N_on_DA : ∃ x : ℝ, x > 0 ∧
-  (N = (x • D + (1 - x) • A)) ∧
-  (dist D N = 3 * dist N A)
-
--- Define the problem
-theorem range_of_m : 
-  ∀ (m : ℝ), 
-  (∃ P : Point, 
-    P ∈ [A, B, C, D] ∧ 
-    (vector PM • vector PN = m)) → 
-  -1 < m ∧ m < 8 :=
-sorry
-
-end range_of_m_l79_79881
-
-
-namespace min_unsociable_pairs_l79_79912
-
-open Nat
-
-def is_prime (p : ℕ) : Prop :=
-  p > 1 ∧ ∀ n, n > 1 → n < p → p % n ≠ 0
-
-def pi (x : ℕ) : ℕ := x.succ.count is_prime
-
-theorem min_unsociable_pairs (n : ℕ) :
-  let unsociable_pairs := ⌈(pi (2 * n) - pi n + 1 : ℝ) / 2⌉ in
-  ∀ (S : Finset (Fin (2 * n + 1))),
-  (∀ (a b : ℕ), a ∈ S → b ∈ S → gcd a b = 1 → 1 < a ∧ 1 < b) →
-  S.card = unsociable_pairs :=
-sorry
-
-end min_unsociable_pairs_l79_79912
-
-
-namespace coefficient_x3_l79_79761
-
-def P (x : ℝ) := -3 * x^3 - 8 * x^2 + 3 * x + 2
-def Q (x : ℝ) := -2 * x^2 - 7 * x - 4
-
-theorem coefficient_x3 (x : ℝ) : (P x * Q x).coeff 3 = 6 := 
-sorry
-
-end coefficient_x3_l79_79761
-
-
-namespace calculate_volume_proximity_cube_l79_79357
-
-theorem calculate_volume_proximity_cube (a b c : ℝ) (h_dim : a = 2 ∧ b = 3 ∧ c = 6) :
-  let V_total := (324 + 151 * Real.pi) / 3
-  in ∃ V, V = V_total :=
-by
-  use (324 + 151 * Real.pi) / 3
-  have hV : V_total = (324 + 151 * Real.pi) / 3 := by rfl
-  exact hV
-  sorry
-
-end calculate_volume_proximity_cube_l79_79357
-
-
-namespace product_evaluation_l79_79985
-
-noncomputable def product_term (n : ℕ) : ℚ :=
-  1 - (1 / (n * n))
-
-noncomputable def product_expression : ℚ :=
-  10 * 71 * (product_term 2) * (product_term 3) * (product_term 4) * (product_term 5) *
-  (product_term 6) * (product_term 7) * (product_term 8) * (product_term 9) * (product_term 10)
-
-theorem product_evaluation : product_expression = 71 := by
-  sorry
-
-end product_evaluation_l79_79985
-
-
-namespace math_problem_l79_79823
-
-open Complex
-
-def z := (1 : ℂ) + (1 : ℂ) * I
-
-lemma complex_conjugate (z : ℂ) : conj z = (1 : ℂ) - (1 : ℂ) * I := by
-  sorry
-
-lemma div_by_i (z : ℂ) : (conj z / I) = (-1 : ℂ) - (1 : ℂ) * I := by
-  sorry
-
-lemma multiply_by_i (z : ℂ) : (I * z) = (I : ℂ) - (1 : ℂ) := by
-  sorry
-
-theorem math_problem (z : ℂ) : (conj z / I) + (I * z) = -2 := by
-  rw [complex_conjugate, div_by_i, multiply_by_i]
-  sorry
-
-end math_problem_l79_79823
-
-
-namespace slope_tangent_line_at_pi_div_2_l79_79169
-
-noncomputable def f (x : ℝ) : ℝ := x * Real.sin x - Real.cos x
-
-theorem slope_tangent_line_at_pi_div_2 : 
-  (Real.deriv f) (Real.pi / 2) = 2 := 
-by 
-  sorry
-
-end slope_tangent_line_at_pi_div_2_l79_79169
-
-
-namespace distinct_real_roots_of_quadratic_l79_79478
-
--- Define the problem's condition: m is a real number and the discriminant of x^2 + mx + 9 > 0
-def discriminant_positive (m : ℝ) := m^2 - 36 > 0
-
-theorem distinct_real_roots_of_quadratic (m : ℝ) (h : discriminant_positive m) :
-  m ∈ Iio (-6) ∪ Ioi (6) :=
-sorry
-
-end distinct_real_roots_of_quadratic_l79_79478
-
-
-namespace probability_sequence_123456_l79_79660
-
-theorem probability_sequence_123456 :
-  let total_sequences := 66 * 45 * 28 * 15 * 6 * 1,
-      favorable_sequences := 1 * 3 * 5 * 7 * 9 * 11
-  in (favorable_sequences : ℚ) / total_sequences = 1 / 720 := 
-by 
-  sorry
-
-end probability_sequence_123456_l79_79660
-
-
-namespace h_comp_h_3_l79_79016
-
-def h (x : ℕ) : ℕ := 3 * x * x + 5 * x - 3
-
-theorem h_comp_h_3 : h (h 3) = 4755 := by
-  sorry
-
-end h_comp_h_3_l79_79016
-
-
-namespace find_a_l79_79150
-
--- The equation of the hyperbola
-def hyperbola (a : ℝ) (h : a > 0) : Prop := 
-  ∀ x y : ℝ, 
-  (x^2 / a^2 - y^2 / 9 = 1)
-
--- The equation of the asymptote
-def asymptote (y x : ℝ) : Prop :=
-  (y = (3 / 5) * x)
-
--- Prove that 'a' is equal to 5 given the hyperbola and asymptote equations
-theorem find_a (a : ℝ) (h : a > 0) (H : ∀ x y : ℝ, hyperbola a h x y) : a = 5 := sorry
-
-end find_a_l79_79150
-
-
-namespace find_smallest_angle_l79_79920
-
-open Real
-
-noncomputable def smallest_angle (m n p : ℝ^3) (alpha : ℝ) : Prop :=
-  ∥m∥ = 1 ∧ ∥n∥ = 1 ∧ ∥p∥ = 1 ∧
-  (angle_between m n = alpha) ∧
-  (angle_between p (cross m n) = alpha) ∧
-  (dot n (cross p m) = 1/8) →
-  alpha = 7.5 * (π / 180)
-
-theorem find_smallest_angle {m n p : ℝ^3} (alpha : ℝ) :
-  smallest_angle m n p alpha := 
-sorry
-
-end find_smallest_angle_l79_79920
-
-
-namespace solution_to_problem_l79_79455
-
-def sequence (a : ℕ → ℝ) : Prop :=
-  a 1 = 1 ∧ (∀ n : ℕ, n > 0 → (1 / a (n + 1)) = (1 / a n) + 3)
-
-theorem solution_to_problem (a : ℕ → ℝ) (h : sequence a) : a 10 = 1 / 28 :=
-by
-  sorry
-
-end solution_to_problem_l79_79455
-
-
-namespace geometric_product_formula_l79_79017
-
-noncomputable def P (n : ℕ) (a : ℝ) (r : ℝ) : ℝ :=
-  a ^ n * r ^ ((n - 1) * n / 2)
-
-noncomputable def S (n : ℕ) (a : ℝ) (r : ℝ) : ℝ :=
-  a * (1 - r^n) / (1 - r)
-
-noncomputable def S' (n : ℕ) (a : ℝ) (r : ℝ) : ℝ :=
-  (r ^ (-(n - 1))) / a * (1 - r^n) / (1 - r)
-
-theorem geometric_product_formula (n : ℕ) (a : ℝ) (r : ℝ) :
-  let S_n := S n a r in
-  let S'_n := S' n a r in
-  (S_n / S'_n) ^ (n / 2) = P n a r := 
-sorry
-
-end geometric_product_formula_l79_79017
-
-
-namespace sum_last_two_digits_l79_79648
-
--- Definition of the problem conditions
-def seven : ℕ := 10 - 3
-def thirteen : ℕ := 10 + 3
-
--- Main statement of the problem
-theorem sum_last_two_digits (x : ℕ) (y : ℕ) : x = seven → y = thirteen → (7^25 + 13^25) % 100 = 0 :=
-by
-  intros
-  rw [←h, ←h_1] -- Rewriting x and y in terms of seven and thirteen
-  sorry -- Proof omitted
-
-end sum_last_two_digits_l79_79648
-
-
-namespace shape_cross_section_circular_l79_79272
-
--- Definitions of the geometric shapes and their properties
-inductive Shape
-| cone
-| cylinder
-| sphere
-| pentagonal_prism
-
--- Predicate that states a shape can produce a circular cross-section when intersected by a plane
-def can_produce_circular_cross_section : Shape → Prop
-| Shape.cone := true
-| Shape.cylinder := true
-| Shape.sphere := true
-| Shape.pentagonal_prism := false
-
--- The theorem we want to prove
-theorem shape_cross_section_circular :
-  (can_produce_circular_cross_section Shape.cone) ∧
-  (can_produce_circular_cross_section Shape.cylinder) ∧
-  (can_produce_circular_cross_section Shape.sphere) ∧
-  ¬(can_produce_circular_cross_section Shape.pentagonal_prism) :=
-by sorry
-
-end shape_cross_section_circular_l79_79272
-
-
-namespace bows_purple_l79_79507
-
-theorem bows_purple (total_bows : ℕ)
-  (h1 : total_bows / 4 are red)
-  (h2 : total_bows / 3 are blue)
-  (h3 : total_bows / 6 are purple)
-  (yellow_bows : ℕ) (h4 : yellow_bows = 60)
-  (h5 : total_bows - (total_bows / 4 + total_bows / 3 + total_bows / 6) = yellow_bows) :
-  (total_bows / 6 = 40) :=
-  sorry
-
-end bows_purple_l79_79507
-
-
-namespace cos_B_third_quadrant_l79_79029
-
-theorem cos_B_third_quadrant (B : ℝ) (hB1 : π < B ∧ B < 3 * π / 2) (hB2 : sin B = -5 / 13) : cos B = -12 / 13 :=
-by
-  sorry
-
-end cos_B_third_quadrant_l79_79029
-
-
-namespace complex_fraction_simplification_l79_79588
-
-noncomputable def simplify_complex_fraction : ℂ :=
-let i : ℂ := complex.I in
-let z1 : ℂ := 2 - 2 * i in
-let z2 : ℂ := 1 + 4 * i in
-  z1 / z2
-
-theorem complex_fraction_simplification : simplify_complex_fraction = - (6 / 17) - (10 / 17) * complex.I :=
-by
-  sorry
-
-end complex_fraction_simplification_l79_79588
-
-
-namespace max_consecutive_sum_lt_1000_l79_79237
-
-theorem max_consecutive_sum_lt_1000 : ∃ (n : ℕ), (∀ (m : ℕ), m > n → (m * (m + 1)) / 2 ≥ 1000) ∧ (∀ (k : ℕ), k ≤ n → (k * (k + 1)) / 2 < 1000) :=
-begin
-  sorry,
-end
-
-end max_consecutive_sum_lt_1000_l79_79237
-
-
-namespace max_consecutive_integers_sum_lt_1000_l79_79260
-
-theorem max_consecutive_integers_sum_lt_1000 :
-  ∃ n : ℕ, (∀ m : ℕ, m ≤ n → m * (m + 1) / 2 < 1000) ∧ (n * (n + 1) / 2 < 1000) ∧ ¬((n + 1) * (n + 2) / 2 < 1000) :=
-sorry
-
-end max_consecutive_integers_sum_lt_1000_l79_79260
-
-
-namespace percentage_needed_to_pass_l79_79326
-
--- Define conditions
-def student_score : ℕ := 80
-def marks_shortfall : ℕ := 40
-def total_marks : ℕ := 400
-
--- Theorem statement: The percentage of marks required to pass the test.
-theorem percentage_needed_to_pass : (student_score + marks_shortfall) * 100 / total_marks = 30 := by
-  sorry
-
-end percentage_needed_to_pass_l79_79326
-
-
-namespace chosen_number_l79_79283
-
-theorem chosen_number (x: ℤ) (h: 2 * x - 152 = 102) : x = 127 :=
-by
-  sorry
-
-end chosen_number_l79_79283
-
-
-namespace constants_solution_l79_79798
-
-theorem constants_solution :
-  let a := 56 / 9
-  let c := 5 / 3
-  (∀ (v1 v2 : ℝ ^ 3),
-    v1 = ![a, -1, c]
-    ∧ v2 = ![8, 4, 6]
-    → (v1.cross_product v2 = ![-14, -24, 34]))
-    ↔ (a, c) = (56 / 9, 5 / 3) :=
-by
-  sorry
-
-end constants_solution_l79_79798
-
-
-namespace lambda_range_l79_79521
-
-def sequence (a : ℕ → ℕ) : Prop :=
-  a 1 = 1 ∧ ∀ n ≥ 2, a n = a (n - 1) + n
-
-def inequality (λ : ℝ) (a : ℕ → ℕ) : Prop :=
-  ∀ n : ℕ, n > 0 → (λ / n) > ((n + 1) / (a n + 1))
-
-theorem lambda_range (a : ℕ → ℕ) (λ : ℝ) (h1 : sequence a) (h2 : inequality λ a) : 
-  2 ≤ λ :=
-sorry
-
-end lambda_range_l79_79521
-
-
-namespace egg_production_difference_l79_79530
-
-def eggs_last_year : ℕ := 1416
-def eggs_this_year : ℕ := 4636
-def eggs_difference (a b : ℕ) : ℕ := a - b
-
-theorem egg_production_difference : eggs_difference eggs_this_year eggs_last_year = 3220 := 
-by
-  sorry
-
-end egg_production_difference_l79_79530
-
-
-namespace max_stamps_without_discount_theorem_l79_79040
-
-def total_money := 5000
-def price_per_stamp := 50
-def max_stamps_without_discount := 100
-
-theorem max_stamps_without_discount_theorem :
-  price_per_stamp * max_stamps_without_discount ≤ total_money ∧
-  ∀ n, n > max_stamps_without_discount → price_per_stamp * n > total_money := by
-  sorry
-
-end max_stamps_without_discount_theorem_l79_79040
-
-
-namespace candidate_D_votes_l79_79883
-
-theorem candidate_D_votes :
-  let total_votes := 10000
-  let invalid_votes_percentage := 0.25
-  let valid_votes := (1 - invalid_votes_percentage) * total_votes
-  let candidate_A_percentage := 0.40
-  let candidate_B_percentage := 0.30
-  let candidate_C_percentage := 0.20
-  let candidate_D_percentage := 1.0 - (candidate_A_percentage + candidate_B_percentage + candidate_C_percentage)
-  let candidate_D_votes := candidate_D_percentage * valid_votes
-  candidate_D_votes = 750 :=
-by
-  sorry
-
-end candidate_D_votes_l79_79883
-
-
-namespace find_magnitude_of_vector_l79_79436
-
-variables (a b : ℝ → ℝ → ℝ)
-variable (θ : ℝ)
-
-def angle_between_vectors (a b : ℝ → ℝ → ℝ) (θ : ℝ) : Prop :=
-  θ = π / 3
-
-def magnitude_vector_a (a : ℝ → ℝ → ℝ) : ℝ := 2
-
-def magnitude_vector_b (b : ℝ → ℝ → ℝ) : ℝ := 3
-
-def dot_product (a b : ℝ → ℝ → ℝ) : ℝ :=
-  magnitude_vector_a a * magnitude_vector_b b * Real.cos θ
-
-theorem find_magnitude_of_vector :
-  angle_between_vectors a b θ →
-  magnitude_vector_a a = 2 →
-  magnitude_vector_b b = 3 →
-  let d_ab := 2 * magnitude_vector_a a - 3 * magnitude_vector_b b in
-  Real.sqrt ((d_ab a a)^2 - 12 * dot_product a b + (d_ab b b)^2) = Real.sqrt 61 :=
-by
-  intros
-  -- proof goes here
-  sorry
-
-end find_magnitude_of_vector_l79_79436
-
-
-namespace prime_condition_holds_l79_79776
-
-theorem prime_condition_holds (n : ℕ) (h : n ≥ 2) : 
-  (∀ (a : Fin n → ℤ), (∃ i, ¬ ∀ k < n, (Fin.sumRange (λ j, a ((i + j) % n)) % n = 0))) ↔ Nat.Prime n :=
-sorry
-
-end prime_condition_holds_l79_79776
-
-
-namespace proof_problem_l79_79427
-
-noncomputable def a : ℝ := Real.log 2 / Real.log 10
-def b : ℝ := Real.log 5 / Real.log 10
-
-theorem proof_problem : a + b = 1 := by
-  sorry
-
-end proof_problem_l79_79427
-
-
-namespace distinct_real_roots_of_quadratic_l79_79474
-
--- Define the problem's condition: m is a real number and the discriminant of x^2 + mx + 9 > 0
-def discriminant_positive (m : ℝ) := m^2 - 36 > 0
-
-theorem distinct_real_roots_of_quadratic (m : ℝ) (h : discriminant_positive m) :
-  m ∈ Iio (-6) ∪ Ioi (6) :=
-sorry
-
-end distinct_real_roots_of_quadratic_l79_79474
-
-
-namespace sqrt_inequality_l79_79429
-
-theorem sqrt_inequality (a b : ℝ) (ha : 0 < a) (hb : 0 < b) (h : a + b = 1) :
-  sqrt (1 + 2 * a) + sqrt (1 + 2 * b) ≤ 2 * sqrt 2 :=
-sorry
-
-end sqrt_inequality_l79_79429
-
-
-namespace imaginary_unit_expression_l79_79374
-
-theorem imaginary_unit_expression :
-  ∀ (i : ℂ), i^2 = -1 → i^2 + i^4 = 0 := 
-by
-  intros i h
-  have h1 : i^4 = (i^2)^2, by ring
-  rw [h, neg_one_sq] at h1
-  have h2 : i^2 + i^4 = -1 + 1, by rw [h, h1]
-  rw [add_right_neg] at h2
-  exact h2
-
-end imaginary_unit_expression_l79_79374
-
-
-namespace units_digit_sum_sequence_l79_79348
-
-def factorial (n : ℕ) : ℕ := 
-  match n with
-  | 0 => 1
-  | _ => n * factorial (n - 1)
-
--- Define the sequence of terms n! + n
-def seq_term (n : ℕ) : ℕ := factorial n + n
-
--- Calculate the units digit of a number
-def units_digit (n : ℕ) : ℕ := n % 10
-
--- Prove that the units digit of the sum of the sequence is 8
-theorem units_digit_sum_sequence :
-  units_digit (∑ n in (1 : Finset ℕ).seq 10, seq_term n) = 8 :=
-by
-  sorry
-
-end units_digit_sum_sequence_l79_79348
-
-
-namespace odd_n_divides_2_pow_factorial_n_minus_1_l79_79941
-
-theorem odd_n_divides_2_pow_factorial_n_minus_1 (n : ℕ) (h_odd : n % 2 = 1) :
-  n ∣ (2^(factorial n) - 1) := 
-sorry
-
-end odd_n_divides_2_pow_factorial_n_minus_1_l79_79941
-
-
-namespace common_chord_eqn_l79_79611
-
-theorem common_chord_eqn (x y : ℝ) :
-  (x^2 + y^2 - 4 = 0) ∧ (x^2 + y^2 - 4x + 4y - 12 = 0) → (x - y + 2 = 0) :=
-by
-  sorry
-
-end common_chord_eqn_l79_79611
-
-
-namespace distinct_real_roots_of_quadratic_l79_79470
-
-theorem distinct_real_roots_of_quadratic (m : ℝ) :
-  (∃ (x y : ℝ), x ≠ y ∧ x^2 + m * x + 9 = 0 ∧ y^2 + m * y + 9 = 0) ↔ m ∈ Ioo (-∞) (-6) ∪ Ioo 6 (∞) :=
-by
-  sorry
-
-end distinct_real_roots_of_quadratic_l79_79470
-
-
-namespace volume_between_planes_l79_79147
-
-theorem volume_between_planes (A V A1 A2 : ℝ) (hA : A = 3) (hV : V = 3) (hA1 : A1 = 1) (hA2 : A2 = 2) :
-  let k1 := Real.sqrt (A1 / A) in
-  let k2 := Real.sqrt (A2 / A) in
-  let V1 := k1 ^ 3 * V in
-  let V2 := k2 ^ 3 * V in
-  let v  := V2 - V1 in
-  v = (2 * Real.sqrt 6 - Real.sqrt 3) / 3 :=
-by {
-  sorry
-}
-
-end volume_between_planes_l79_79147
-
-
-namespace max_expr_on_ellipse_l79_79417
-
--- Define the ellipse condition
-def is_on_ellipse (x y : ℝ) (b : ℝ) := x^2 / 4 + y^2 / b^2 = 1
-
--- Define a function representing the expression to be maximized
-def expr (x y : ℝ) := x^2 + 2 * y
-
--- Define the maximum value of the expression based on conditions
-def max_value (b : ℝ) :=
-  if 0 < b ∧ b <= 4 then
-    b^2 / 4 + 4
-  else if b > 4 then
-    2 * b
-  else
-    0  -- placeholder for non-valid b values (e.g., b <= 0)
-
--- The theorem to be proved
-theorem max_expr_on_ellipse (x y b : ℝ) (hb : 0 < b) (hxy : is_on_ellipse x y b) :
-  expr x y ≤ max_value b :=
-sorry
-
-end max_expr_on_ellipse_l79_79417
-
-
-namespace line_AB_fixed_point_tangents_intersection_y_l79_79914
-
-section
-
-variable {A B M : Type} -- Define general type variables for points
-variable (xA yA xB yB xM yM : ℝ) -- Define real-valued variables
-variable (k m : ℝ) -- Slope and intercept
-
--- Condition: A and B lie on the curve x^2 = y
-def on_curve (x y : ℝ) : Prop := x^2 = y
-
--- Condition: Product of the x-coordinates of A and B is -1
-def product_is_neg_one (xA xB : ℝ) : Prop := xA * xB = -1
-
--- Prove that the line AB always passes through (0, 1)
-theorem line_AB_fixed_point (h1 : on_curve xA yA) (h2 : on_curve xB yB) (h3 : product_is_neg_one xA xB) :
-    ∃ (k m : ℝ), m = 1 ∧ (∀ x y : ℝ, y = k * x + m → y = k * x + 1 → (0, 1) lies on the line) := by
-  sorry
-
--- Prove that the y-coordinate of the intersection point M of the tangents at A and B is -1
-theorem tangents_intersection_y (h1 : on_curve xA yA) (h2 : on_curve xB yB) (h3 : product_is_neg_one xA xB) :
-    ∃ yM : ℝ, yM = -1 := by
-  sorry
-
-end
-
-end line_AB_fixed_point_tangents_intersection_y_l79_79914
-
-
-namespace not_intersect_necessary_but_not_sufficient_for_skew_l79_79680
-
--- Define what it means for two lines to be skew
-def is_skew (l1 l2 : Line) : Prop :=
-  ¬ (∃ p, p ∈ l1 ∧ p ∈ l2) ∧ ¬ (parallel l1 l2)
-
--- Define conditions under which two lines do not intersect
-def do_not_intersect (l1 l2 : Line) : Prop :=
-  ¬ (∃ p, p ∈ l1 ∧ p ∈ l2)
-
--- Theorem: "Two lines do not intersect" is a necessary but not sufficient condition for "two lines are skew lines"
-theorem not_intersect_necessary_but_not_sufficient_for_skew:
-  ∀ (l1 l2 : Line), do_not_intersect l1 l2 ↔ is_skew l1 l2 ∨ parallel l1 l2 := 
-sorry
-
-end not_intersect_necessary_but_not_sufficient_for_skew_l79_79680
-
-
-namespace alcohol_solution_l79_79281
-
-/-- 
-A 40-liter solution of alcohol and water is 5 percent alcohol. If 3.5 liters of alcohol and 6.5 liters of water are added to this solution, 
-what percent of the solution produced is alcohol? 
--/
-theorem alcohol_solution (original_volume : ℝ) (original_percent_alcohol : ℝ)
-                        (added_alcohol : ℝ) (added_water : ℝ) :
-  original_volume = 40 →
-  original_percent_alcohol = 5 →
-  added_alcohol = 3.5 →
-  added_water = 6.5 →
-  (100 * (original_volume * original_percent_alcohol / 100 + added_alcohol) / (original_volume + added_alcohol + added_water)) = 11 := 
-by 
-  intros h1 h2 h3 h4
-  sorry
-
-end alcohol_solution_l79_79281
-
-
-namespace intersection_distance_l79_79444
-
-noncomputable def find_AB_distance 
-  (intersects : ∀ θ₁ θ₂ : ℝ, 
-                   θ₁ ≠ θ₂ ∧ 
-                   (1 + cos θ₁) * sqrt 3 + sin θ₁ = 2 * sqrt 3 ∧ 
-                   (1 + cos θ₂) * sqrt 3 + sin θ₂ = 2 * sqrt 3)
-  : ℝ := 
-  1
-
-theorem intersection_distance 
-  (θ₁ θ₂ : ℝ) 
-  (h₁ : 1 + cos θ₁ = 1 + cos θ₂ ∧ sin θ₁ = sin θ₂) 
-  : find_AB_distance (by simp [h₁, ne_of_gt (by norm_num)]) = 1 := 
-  sorry
-
-end intersection_distance_l79_79444
-
-
-namespace part1_solution_part2_solution_l79_79106
-
-noncomputable def f (x a : ℝ) := |x + a| + |x - a|
-
-theorem part1_solution : (∀ x : ℝ, f x 1 ≥ 4 ↔ x ∈ Set.Iic (-2) ∨ x ∈ Set.Ici 2) := by
-  sorry
-
-theorem part2_solution : (∀ x : ℝ, f x a ≥ 6 → a ∈ Set.Iic (-3) ∨ a ∈ Set.Ici 3) := by
-  sorry
-
-end part1_solution_part2_solution_l79_79106
-
-
-namespace range_of_a_if_p_is_false_l79_79812
-
-theorem range_of_a_if_p_is_false :
-  (∀ x : ℝ, x^2 + a * x + a ≥ 0) → (0 ≤ a ∧ a ≤ 4) := 
-sorry
-
-end range_of_a_if_p_is_false_l79_79812
-
-
-namespace max_consecutive_integers_sum_lt_1000_l79_79241
-
-theorem max_consecutive_integers_sum_lt_1000
-  (n : ℕ)
-  (h : (n * (n + 1)) / 2 < 1000) : n ≤ 44 :=
-by
-  sorry
-
-end max_consecutive_integers_sum_lt_1000_l79_79241
-
-
-namespace telepathic_connection_probability_l79_79119
-
-open ProbabilityTheory
-
-theorem telepathic_connection_probability :
-  let events := {ab | let a := ab.fst, b := ab.snd in a ∈ ({1,2,3,4,5,6} : set ℕ) ∧ b ∈ ({1,2,3,4,5,6} : set ℕ)},
-      successful_events := {ab | let a := ab.fst, b := ab.snd in |a - b| ≤ 1 ∧ a ∈ ({1,2,3,4,5,6} : set ℕ) ∧ b ∈ ({1,2,3,4,5,6} : set ℕ)},
-      total_possibilities := (6 * 6 : ℕ),
-      successful_possibilities := successful_events.to_finset.card in
-  successful_possibilities = 16 ∧ total_possibilities = 36 →
-  ENNReal.ofRational (successful_possibilities / total_possibilities) = 4 / 9 := by
-  sorry
-
-end telepathic_connection_probability_l79_79119
-
-
-namespace passes_through_P_l79_79038
-
-noncomputable def g (x : ℝ) : ℝ := sorry
-
-theorem passes_through_P : 
-  (∀ x, g(x) + g(-2 * x - 2) = -2) → g(-2/3) = -1 :=
-by 
-  intro h
-  have P := h (-2/3)
-  sorry
-
-end passes_through_P_l79_79038
-
-
-namespace rhombus_other_diagonal_length_l79_79939
-
-def length_other_diagonal (d1 area : ℝ) : ℝ :=
-  (2 * area) / d1
-
-theorem rhombus_other_diagonal_length (d1 area : ℝ) (h1 : d1 = 80) (h2 : area = 4800) :
-  length_other_diagonal d1 area = 120 :=
-by
-  -- Proof is omitted
-  sorry
-
-end rhombus_other_diagonal_length_l79_79939
-
-
-namespace numThreeDigitDivBy5_l79_79403
-
--- Define the set of digits to choose from
-def digits : Finset ℕ := {0, 1, 2, 3, 4, 5}
-
--- Define the conditions of forming a valid number
-def isThreeDigitDivBy5 (n : ℕ) : Prop :=
-  n >= 100 ∧ n < 1000 ∧ (∃ (a b c : ℕ), a ∈ digits ∧ b ∈ digits ∧ c ∈ digits ∧
-    a ≠ b ∧ b ≠ c ∧ a ≠ c ∧ 10 * a + b * 100 + c = n ∧ (n % 5 = 0))
-
--- State the theorem
-theorem numThreeDigitDivBy5 : (digits.filter (λ n, isThreeDigitDivBy5 n)).card = 36 :=
-  sorry
-
-end numThreeDigitDivBy5_l79_79403
-
-
-namespace absSumFirst15_eq_153_l79_79551
-
--- Define the sequence an and the absolute sum of the first 15 terms.
-def a_n (n : ℕ) : ℤ := 2 * (n + 1) - 7  -- Note: n starts from 0 in ℕ but n starts from 1 in math.
-
-def absSumFirst15 : ℕ := 
-  let abs_term (n : ℕ) := Int.natAbs (a_n n) in
-  (List.range 15).map abs_term |>.sum
-
--- The theorem to be proven.
-theorem absSumFirst15_eq_153 : absSumFirst15 = 153 :=
-  sorry
-
-end absSumFirst15_eq_153_l79_79551
-
-
-namespace question1_question2_l79_79803
-
--- Condition Definitions
-variable (f : ℕ+ → ℕ+)
-variable (k : ℕ+) (h_k_pos : 0 < k)
-variable (h_f_property : ∀ n : ℕ+, n > k → f n = n - k)
-
--- Question 1: Prove that f(1) = a where a is a positive integer when k = 1
-theorem question1 : ∃ (a : ℕ+), f 1 = a :=
-  sorry
-
--- Question 2: Prove that the number of different functions f is 32 when k = 5 and 1 ≤ f(n) ≤ 2 for n ≤ 5
-theorem question2 : 
-  let k' := 5 in
-  let f_prop : ∀ (n : ℕ+), n ≤ 5 → 1 ≤ f n ∧ f n ≤ 2 in
-  (∃ (f : ℕ+ → ℕ+), (∀ n : ℕ+, n > k' → f n = n - k') ∧ (∀ n : ℕ+, n ≤ 5 → 1 ≤ f n ∧ f n ≤ 2) ∧ (Π f' : ℕ+ → ℕ+, (∀ n : ℕ+, n > k' → f' n = n - k') → (∀ n : ℕ+, n ≤ 5 → 1 ≤ f' n ∧ f' n ≤ 2) → true)) :=
-  sorry
-
-end question1_question2_l79_79803
-
-
-namespace dislike_both_radio_and_music_l79_79579
-
-theorem dislike_both_radio_and_music :
-  ∀ (total_people : ℕ) 
-    (percent_dislike_radio percent_dislike_both : ℝ), 
-  total_people = 1500 →
-  percent_dislike_radio = 0.4 →
-  percent_dislike_both = 0.15 →
-  (percent_dislike_both * (percent_dislike_radio * total_people)).toNat = 90 :=
-by
-  intros total_people percent_dislike_radio percent_dislike_both 
-  assume h_total h_percent_radio h_percent_both
-  rw [h_total, h_percent_radio, h_percent_both]
-  have h1 : percent_dislike_radio * total_people = 600 := by norm_num
-  have h2 : percent_dislike_both * 600 = 90 := by norm_num
-  rw [h1] at h2
-  exact h2.symm.toNatEq.2 rfl
-  sorry
-
-end dislike_both_radio_and_music_l79_79579
-
-
-namespace side_length_of_S2_l79_79950
-
-variable (r s : ℝ)
-
-theorem side_length_of_S2 (h1 : 2 * r + s = 2100) (h2 : 2 * r + 3 * s = 3400) : s = 650 := by
-  sorry
-
-end side_length_of_S2_l79_79950
-
-
-namespace log_equation_solution_l79_79859
-
-theorem log_equation_solution (b x : ℝ) (h_b_pos : b > 0) (h_b_ne_one : b ≠ 1) (h_x_ne_one : x ≠ 1) 
-    (h_log_eq : log (x) / log (b^3) + log (b) / log (x^3) = 2) : 
-  x = b^(3 + 2 * Real.sqrt 2) ∨ x = b^(3 - 2 * Real.sqrt 2) :=
-by
-  sorry
-
-end log_equation_solution_l79_79859
-
-
-namespace range_of_m_for_roots_greater_than_2_l79_79167
-
-theorem range_of_m_for_roots_greater_than_2 :
-  ∀ m : ℝ, (∀ x : ℝ, x^2 + (m-2)*x + 5 - m = 0 → x > 2) ↔ (-5 < m ∧ m ≤ -4) :=
-  sorry
-
-end range_of_m_for_roots_greater_than_2_l79_79167
-
-
-namespace PQ_passes_through_fixed_point_l79_79807
-
-variable {A B C D P Q E F : Type}
-variable [convex_quadrilateral A B C D]
-variable [non_parallel (line_through A B) (line_through C D)]
-variable [point_on_line P (line_through A D)]
-variable [P ≠ A]
-variable [P ≠ D]
-variable [Q = circle_intersection (circumcircle A B P) (circumcircle C D P) ≠ P]
-
-theorem PQ_passes_through_fixed_point :
-  ∃ F, ∀ P, Q = circle_intersection (circumcircle A B P) (circumcircle C D P) → line_through P Q = line_through P F :=
-sorry
-
-end PQ_passes_through_fixed_point_l79_79807
-
-
-namespace meet_at_starting_line_l79_79852
-
-theorem meet_at_starting_line (henry_time margo_time : ℕ) (h_henry : henry_time = 7) (h_margo : margo_time = 12) : Nat.lcm henry_time margo_time = 84 :=
-by
-  rw [h_henry, h_margo]
-  sorry
-
-end meet_at_starting_line_l79_79852
-
-
-namespace polynomial_value_given_cond_l79_79441
-
-variable (x : ℝ)
-theorem polynomial_value_given_cond :
-  (x^2 - (5/2) * x = 6) →
-  2 * x^2 - 5 * x + 6 = 18 :=
-by
-  sorry
-
-end polynomial_value_given_cond_l79_79441
-
-
-namespace triangle_AB_value_l79_79503
-
-theorem triangle_AB_value (A C AB BC : ℝ)
-  (tan_A : ℝ := 1/3)
-  (angle_C : ℝ := 150)
-  (BC_val : ℝ := 1)
-  (h1 : tan A = tan_A)
-  (h2 : C = angle_C)
-  (h3 : BC = BC_val):
-  AB = sqrt 10 / 2 :=
-by
-  sorry
-
-end triangle_AB_value_l79_79503
-
-
-namespace parabola_c_value_l79_79619
-
-theorem parabola_c_value (a b c : ℝ) (h1 : 3 = a * (-1)^2 + b * (-1) + c)
-  (h2 : 1 = a * (-2)^2 + b * (-2) + c) : c = 1 :=
-sorry
-
-end parabola_c_value_l79_79619
-
-
-namespace john_money_l79_79910
-
-theorem john_money (cost_given : ℝ) : cost_given = 14 :=
-by
-  have gift_cost := 28
-  have half_cost := gift_cost / 2
-  exact sorry
-
-end john_money_l79_79910
-
-
-namespace find_x_l79_79862
-
-theorem find_x (x : ℕ) : (x % 9 = 0) ∧ (x^2 > 144) ∧ (x < 30) → (x = 18 ∨ x = 27) :=
-by 
-  sorry
-
-end find_x_l79_79862
-
-
-namespace olivia_dad_spent_l79_79566
-
-def cost_per_meal : ℕ := 7
-def number_of_meals : ℕ := 3
-def total_cost : ℕ := 21
-
-theorem olivia_dad_spent :
-  cost_per_meal * number_of_meals = total_cost :=
-by
-  sorry
-
-end olivia_dad_spent_l79_79566
-
-
-namespace solve_for_m_l79_79131
-
-theorem solve_for_m (m : ℤ) 
-  (h : (m - 3)^3 = (1 / 27)⁻¹) : 
-  m = 6 := by
-  sorry
-
-end solve_for_m_l79_79131
-
-
-namespace probability_at_most_one_even_is_3_div_4_l79_79632
-
-def fair_dice_events : Set (ℕ × ℕ) := 
-  { (r, b) | r ∈ {1, 2, 3, 4, 5, 6} ∧ b ∈ {1, 2, 3, 4, 5, 6}}
-
-def event_at_most_one_even : Set (ℕ × ℕ) :=
-  { (r, b) | (r % 2 = 1 ∧ b % 2 = 1) ∨ (r % 2 = 1 ∧ b % 2 = 0) ∨ (r % 2 = 0 ∧ b % 2 = 1)}
-
-noncomputable def probability_at_most_one_even : ℝ := 
-  ↑(event_at_most_one_even.to_finset.card) / ↑(fair_dice_events.to_finset.card)
-
-theorem probability_at_most_one_even_is_3_div_4 : 
-  probability_at_most_one_even = 3 / 4 := sorry
-
-end probability_at_most_one_even_is_3_div_4_l79_79632
-
-
-namespace trapezoid_problem_l79_79851
-
-variables {V : Type*} [inner_product_space ℝ V] [finite_dimensional ℝ V]
-variables (A B C D : V)
-
-noncomputable def vec_BD_eq : Prop :=
-  let AD := (D - A)
-  let BC := (C - B)
-  let BD := (D - B)
-  BD = 3 • AD - 2 • BC
-
-noncomputable def cos_angle_AC_BD_eq : Prop :=
-  let AC := (C - A)
-  let BD := (D - B)
-  let cos_theta := ⟪AC, BD⟫ / (‖AC‖ * ‖BD‖)
-  cos_theta = - (real.sqrt 26) / 26
-
-theorem trapezoid_problem
-  (H_parallel: parallel (A - B) (C - D))
-  (H_AB_AD_2: dist A B = 2 ∧ dist A D = 2)
-  (H_CD_3: dist C D = 3)
-  (H_AD_perp_AB: ⟪A - D, A - B⟫ = 0)
-: vec_BD_eq A B C D ∧ cos_angle_AC_BD_eq A B C D :=
-by
-  sorry
-
-end trapezoid_problem_l79_79851
-
-
-namespace part1_part2_l79_79446
-
-noncomputable def f (x : ℝ) : ℝ := (2 * x) / (Real.log x)
-
-theorem part1 : 
-  (∀ x, 0 < x → x < 1 → (f x) < f (1)) ∧ 
-  (∀ x, 1 < x → x < Real.exp 1 → (f x) < f (Real.exp 1)) :=
-sorry
-
-theorem part2 :
-  ∃ k, k = 2 ∧ ∀ x, 0 < x → (f x) > (k / (Real.log x)) + 2 * Real.sqrt x :=
-sorry
-
-end part1_part2_l79_79446
-
-
-namespace triangle_angle_relation_l79_79216
-
-/-- Given a triangle ABC with ∠C = 2 ∠B, and a point D inside the triangle such that D is equidistant from B and C, and A is equidistant from C and D, prove that ∠A = 3 ∠BAD. -/
-theorem triangle_angle_relation (A B C D : Type) 
-  (angle_A angle_B angle_C : ℝ)
-  (h_angle_C : angle_C = 2 * angle_B) 
-  (h_D_eq_BC : dist D B = dist D C)
-  (h_A_eq_CD : dist A C = dist A D) :
-  angle_A = 3 * ∠BAD := 
-sorry
-
-end triangle_angle_relation_l79_79216
-
-
-namespace possible_values_of_m_l79_79488
-
--- Define the conditions that m is a real number and the quadratic equation having two distinct real roots
-variable (m : ℝ)
-
--- Define the discriminant condition for having two distinct real roots
-def discriminant_condition (a b c : ℝ) := b^2 - 4 * a * c > 0
-
--- State the required theorem
-theorem possible_values_of_m (h : discriminant_condition 1 m 9) : m ∈ set.Ioo (-∞) (-6) ∪ set.Ioo 6 ∞ :=
-sorry
-
-end possible_values_of_m_l79_79488
-
-
-namespace t_shirts_left_yesterday_correct_l79_79971
-
--- Define the conditions
-def t_shirts_left_yesterday (x : ℕ) : Prop :=
-  let t_shirts_sold_morning := (3 / 5) * x
-  let t_shirts_sold_afternoon := 180
-  t_shirts_sold_morning = t_shirts_sold_afternoon
-
--- Prove that x = 300 given the above conditions
-theorem t_shirts_left_yesterday_correct (x : ℕ) (h : t_shirts_left_yesterday x) : x = 300 :=
-by
-  sorry
-
-end t_shirts_left_yesterday_correct_l79_79971
-
-
-namespace coloring_of_russia_with_odd_valid_colorings_l79_79935
-
-theorem coloring_of_russia_with_odd_valid_colorings :
-  let regions : ℕ := 85
-  let colors := {white, blue, red}
-  let valid_color (r : ℕ → colors) : Prop :=
-    ∀ i j, (i ≠ j ∧ adjacent i j) → ¬((r i = white ∧ r j = red) ∨ (r i = red ∧ r j = white))
-  let unused_colors_allowed : Prop :=
-    ∃ r : ℕ → colors, ∀ i ∈ 85, r i = blue ∨ r i = white ∨ r i = red
-  let total_colorings_odd : Prop :=
-    ∃ n, valid_color n ∧ unused_colors_allowed n ∧ n % 2 = 1
-  total_colorings_odd :=
-sorry
-
-end coloring_of_russia_with_odd_valid_colorings_l79_79935
-
-
-namespace total_curve_length_l79_79879
-
--- Define the properties of the right square prism
-structure RightSquarePrism :=
-  (side_edge_length : ℝ)
-  (base_edge_length : ℝ)
-
--- Define the length of the curves problem based on the given prism properties
-def prism : RightSquarePrism := 
-{ side_edge_length := 4, base_edge_length := 4 }
-
--- Define the required theorem
-theorem total_curve_length (prism : RightSquarePrism) (distance_from_P : ℝ) : 
-  prism.side_edge_length = 4 → 
-  prism.base_edge_length = 4 → 
-  distance_from_P = 3 → 
-  6 * Real.pi :=
-begin
-  -- side_edge_length = 4
-  -- base_edge_length = 4
-  -- distance_from_P = 3
-  -- Total curve length = 6π
-  sorry
-end
-
-end total_curve_length_l79_79879
-
-
-namespace crossing_time_indeterminate_l79_79637
-
--- Define the lengths of the two trains.
-def train_A_length : Nat := 120
-def train_B_length : Nat := 150
-
--- Define the crossing time of the two trains when moving in the same direction.
-def crossing_time_together : Nat := 135
-
--- Define a theorem to state that without additional information, the crossing time for a 150-meter train cannot be determined.
-theorem crossing_time_indeterminate 
-    (V120 V150 : Nat) 
-    (H : V150 - V120 = 2) : 
-    ∃ t, t > 0 -> t < 150 / V150 -> False :=
-by 
-    -- The proof is not provided.
-    sorry
-
-end crossing_time_indeterminate_l79_79637
-
-
-namespace acute_triangle_perpendiculars_sum_eq_circum_and_inradius_l79_79678
-
-noncomputable def circumcenter (O : Type) := sorry -- Definition of circumcenter
-noncomputable def inradius (r : Type) := sorry -- Definition of inradius
-noncomputable def circumradius (R : Type) := sorry -- Definition of circumradius
-noncomputable def perpendiculars (k_a k_b k_c : Type) := sorry -- Definition of perpendiculars dropped from the circumcenter
-
-theorem acute_triangle_perpendiculars_sum_eq_circum_and_inradius
-  (triangle : Type) (k_a k_b k_c R r : ℝ)
-  (h1: circumcenter(O)) (h2: circumradius(R)) (h3: inradius(r)) (h4: perpendiculars(k_a, k_b, k_c)) :
-  k_a + k_b + k_c = R + r :=
-sorry
-
-end acute_triangle_perpendiculars_sum_eq_circum_and_inradius_l79_79678
-
-
-namespace alcohol_concentration_solution_l79_79720
-
-noncomputable def alcohol_concentration_problem_statement : Prop :=
-  let alcohol_in_first := 0.30 * 5
-  let alcohol_in_second := 0.45 * 10
-  let alcohol_in_third := 0.60 * 7
-  let total_alcohol := alcohol_in_first + alcohol_in_second + alcohol_in_third
-  let total_volume := 25 -- Total mixture's volume in the new vessel
-  let concentration := (total_alcohol / total_volume) * 100
-  concentration = 40.8
-
-theorem alcohol_concentration_solution : alcohol_concentration_problem_statement :=
-by
-  let alcohol_in_first := 0.30 * 5
-  let alcohol_in_second := 0.45 * 10
-  let alcohol_in_third := 0.60 * 7
-  let total_alcohol := alcohol_in_first + alcohol_in_second + alcohol_in_third
-  let total_volume := 25 -- Total mixture's volume in the new vessel
-  let concentration := (total_alcohol / total_volume) * 100
-  show concentration = 40.8,
-  sorry -- Proof to be completed
-
-end alcohol_concentration_solution_l79_79720
-
-
-namespace find_manuscript_fee_l79_79940
-
-def manuscript_fee (x : ℝ) : ℝ := if x ≤ 4000 then (x - 800) * 0.2 * 0.7 else x * 0.8 * 0.2 * 0.7
-
-theorem find_manuscript_fee : manuscript_fee 2800 = 280 :=
-by {
-  -- proof would go here, but adding sorry to skip
-  sorry
-}
-
-end find_manuscript_fee_l79_79940
-
-
-namespace vertical_asymptote_l79_79399
-
-noncomputable def f (x : ℝ) (c : ℝ) : ℝ := (x^2 - x + c) / (x^2 - 6*x + 8)
-
-theorem vertical_asymptote (c : ℝ) :
-  (∀ x : ℝ, x ≠ 2 ∧ x ≠ 4 → ((x^2 - x + c) ≠ 0)) ∨
-  (∀ x : ℝ, ((x^2 - x + c) = 0) ↔ (x = 2) ∨ (x = 4)) →
-  c = -2 ∨ c = -12 :=
-sorry
-
-end vertical_asymptote_l79_79399
-
-
-namespace person_share_100_l79_79601
-
-theorem person_share_100 :
-  let total_cost := 30_000_000_000
-  let num_people := 300_000_000
-  total_cost / num_people = 100 := by
-  let total_cost := 30_000_000_000
-  let num_people := 300_000_000
-  exact quotient.eq.mpr (calc
-    30_000_000_000 / 300_000_000 = 100 : by norm_num)
-
-end person_share_100_l79_79601
-
-
-namespace group_distribution_l79_79510
-
-theorem group_distribution : 
-  ∃ (ways : ℕ), ways = 1440 ∧ 
-  ∃ (men women : ℕ), men = 4 ∧ women = 5 ∧ 
-  ∃ (group1 group2 group3 : ℕ), group1 = 3 ∧ group2 = 3 ∧ group3 = 3 ∧
-  ∀ (g1 g2 g3 : list (nat × nat)), 
-    (g1.length = 3 ∧ g2.length = 3 ∧ g3.length = 3) ∧ 
-    (∃ m1 w1 m2 w2 m3 w3, 
-      (1 ≤ m1 ∧ m1 ≤ men) ∧ (1 ≤ w1 ∧ w1 ≤ women) ∧
-      (1 ≤ m2 ∧ m2 ≤ men - m1) ∧ (1 ≤ w2 ∧ w2 ≤ women - w1) ∧
-      (1 ≤ m3 ∧ m3 ≤ men - m1 - m2) ∧ (1 ≤ w3 ∧ w3 ≤ women - w1 - w2) ∧ 
-      (m1 + w1 = 3 ∧ m2 + w2 = 3 ∧ m3 + w3 = 3)) :=
-begin
-  -- Insertion of proof goes here
-  sorry,
-end
-
-end group_distribution_l79_79510
-
-
-namespace solve_f_x_eq_1_ab_eq_1_a_b_half_greater_than_1_exists_b_0_l79_79922
-
--- Define the function f(x) = |ln x|
-def f (x : ℝ) : ℝ := abs (log x)
-
--- Definitions and conditions
-variables (a b : ℝ) (h1 : 0 < a) (h2 : a < b) (h3 : f a = f b)
-variables (h4 : f b = 2 * f ((a + b) / 2))
-
--- Proof statements
-theorem solve_f_x_eq_1 : f x = 1 → (x = real.exp(1) ∨ x = real.exp(-1)) := 
-    sorry
-
-theorem ab_eq_1 : f a = f b → a * b = 1 := 
-    sorry
-
-theorem a_b_half_greater_than_1 : f a = f b → (0 < a) → (a < b) → (a * b = 1) → (a + b) / 2 > 1 :=
-    sorry
-
-theorem exists_b_0 : (0 < a) → (a < b) → (a * b = 1) → (f b = 2 * f ((a + b) / 2)) → 
-  ∃ b0 ∈ Ioo 3 4, (1 / b0^2 + b0^2 + 2 - 4 * b0 = 0) := 
-    sorry
-
-end solve_f_x_eq_1_ab_eq_1_a_b_half_greater_than_1_exists_b_0_l79_79922
-
-
-namespace good_odd_numbers_l79_79332
-
-def is_good_odd (n : ℕ) : Prop :=
-  n % 2 = 1 ∧ n ≥ 3 ∧
-  ∃ (a : Fin n → ℕ), 
-  (∃ (perm : Fin n → Fin n), ∀ i, ∃ ai, i = perm ai) ∧
-  (∀ k, 0 ≤ k < n → 
-    let sum := List.sum (List.of_fn (λ i, if i % 2 = 0 then a ⟨(k + i) % n, sorry⟩ else -a ⟨(k + i) % n, sorry⟩)) 
-    in sum > 0)
-
-theorem good_odd_numbers (n : ℕ) : is_good_odd n ↔ ∃ k : ℕ, n = 4 * k + 1 :=
-sorry
-
-end good_odd_numbers_l79_79332
-
-
-namespace at_most_16_pies_without_ingredients_l79_79366
-
-theorem at_most_16_pies_without_ingredients:
-  ∀ (total number_of_pies: ℕ) (chocolate_fraction marsmallow_fraction cayenne_fraction soy_nut_fraction: ℚ), 
-  let chocolate_pies := chocolate_fraction * total,
-      marsmallow_pies := marsmallow_fraction * total,
-      cayenne_pies := cayenne_fraction * total,
-      soy_nut_pies := soy_nut_fraction * total in
-   total = 48 → chocolate_fraction = 5 / 8 → marsmallow_fraction = 3 / 4 → 
-   cayenne_fraction = 2 / 3 → soy_nut_fraction = 1 / 4 → soy_nut_fraction * total ≤ marsmallow_fraction * total → 
-   (48 - cayenne_fraction * 48) = 16 := 
-by
-  intros total number_of_pies chocolate_fraction marsmallow_fraction cayenne_fraction soy_nut_fraction,
-  let chocolate_pies := chocolate_fraction * total,
-      marsmallow_pies := marsmallow_fraction * total,
-      cayenne_pies := cayenne_fraction * total,
-      soy_nut_pies := soy_nut_fraction * total,
-  assume h1 : total = 48,
-  assume h2 : chocolate_fraction = 5 / 8,
-  assume h3 : marsmallow_fraction = 3 / 4,
-  assume h4 : cayenne_fraction = 2 / 3,
-  assume h5 : soy_nut_fraction = 1 / 4,
-  assume h6 : soy_nut_fraction * total ≤ marsmallow_fraction * total,
-  rw [h1, h4],
-  norm_num,
-  exact rfl,
-  sorry
-
-end at_most_16_pies_without_ingredients_l79_79366
-
-
-namespace x_coordinate_of_point_l79_79810
-
--- Definition of a parabola and the distance properties
-def on_parabola (M : ℝ × ℝ) : Prop := M.2^2 = 12 * M.1
-
-def distance_to_focus (M : ℝ × ℝ) : ℝ := 
-  real.sqrt ((M.1 - 3)^2 + M.2^2)
-
-theorem x_coordinate_of_point 
-  (M : ℝ × ℝ) 
-  (h_on_parabola : on_parabola M)
-  (h_distance_to_focus : distance_to_focus M = 8) : 
-  M.1 = 5 := by
-  sorry
-
-end x_coordinate_of_point_l79_79810
-
-
-namespace joe_speed_l79_79527
-
-theorem joe_speed (P : ℝ) (J : ℝ) (h1 : J = 2 * P) (h2 : 2 * P * (2 / 3) + P * (2 / 3) = 16) : J = 16 := 
-by
-  sorry
-
-end joe_speed_l79_79527
-
-
-namespace simplify_sqrt_of_square_l79_79590
-
--- The given condition
-def x : ℤ := -9
-
--- The theorem stating the simplified form
-theorem simplify_sqrt_of_square : (Real.sqrt ((x : ℝ) ^ 2) = 9) := by    
-    sorry
-
-end simplify_sqrt_of_square_l79_79590
-
-
-namespace wrapping_paper_area_l79_79307
-
-variable (a b h w : ℝ) (a_gt_b : a > b)
-
-theorem wrapping_paper_area : 
-  ∃ total_area, total_area = 4 * (a * b + a * w + b * w + w ^ 2) :=
-by
-  sorry
-
-end wrapping_paper_area_l79_79307
-
-
-namespace slower_time_to_reach_top_l79_79553
-
-def time_for_lola (stories : ℕ) (time_per_story : ℕ) : ℕ :=
-  stories * time_per_story
-
-def time_for_tara (stories : ℕ) (time_per_story : ℕ) (stopping_time : ℕ) (num_stops : ℕ) : ℕ :=
-  (stories * time_per_story) + (num_stops * stopping_time)
-
-theorem slower_time_to_reach_top (stories : ℕ) (lola_time_per_story : ℕ) (tara_time_per_story : ℕ) 
-  (tara_stop_time : ℕ) (tara_num_stops : ℕ) : 
-  stories = 20 
-  → lola_time_per_story = 10 
-  → tara_time_per_story = 8 
-  → tara_stop_time = 3
-  → tara_num_stops = 18
-  → max (time_for_lola stories lola_time_per_story) (time_for_tara stories tara_time_per_story tara_stop_time tara_num_stops) = 214 :=
-by sorry
-
-end slower_time_to_reach_top_l79_79553
-
-
-namespace area_of_triangle_l79_79965
-
-def curve (x : ℝ) : ℝ := (1 / 3) * x ^ 3 + x
-
-def point : ℝ × ℝ := (1, 4 / 3)
-
-theorem area_of_triangle :
-  let tangent_line (x : ℝ) := 2 * x - 2 / 3
-  let x_intercept : ℝ := (2 / 3) / 2
-  let y_intercept : ℝ := 2 / 3
-  let area : ℝ := (1 / 2) * x_intercept * y_intercept
-  area = 1 / 9 :=
-by
-  sorry
-
-end area_of_triangle_l79_79965
-
-
-namespace vector_lines_l79_79393
-
-variables {R : Type*} [Real R]
-
-def vector_field (c r : R^3) : R^3 := λ i, c (i+1 % 3) * r (i+2 % 3) - c (i+2 % 3) * r (i+1 % 3)
-
-theorem vector_lines
-  (c : R^3)
-  (h_c : ∃ c1 c2 c3, c = ![c1, c2, c3])
-  (r : R^3)
-  (h_r : ∃ x y z, r = ![x, y, z])
-  (a : R^3) :
-  (a = vector_field c r) →
-  (∃ A1 A2 : R, A1 > 0 ∧ x^2 + y^2 + z^2 = A1 ∧ c1 * x + c2 * y + c3 * z = A2) :=
-sorry
-
-end vector_lines_l79_79393
-
-
-namespace part1_part2_l79_79046
-
-theorem part1 (p : ℝ) (h : p = 2 / 5) : 
-  (p^2 + 2 * (3 / 5) * p^2) = 0.352 :=
-by 
-  rw [h]
-  sorry
-
-theorem part2 (p : ℝ) (h : p = 2 / 5) : 
-  (4 * (1 / (11.32 * p^4)) + 5 * (2.4 / (11.32 * p^4)) + 6 * (3.6 / (11.32 * p^4)) + 7 * (2.16 / (11.32 * p^4))) = 4.834 :=
-by 
-  rw [h]
-  sorry
-
-end part1_part2_l79_79046
-
-
-namespace fraction_1790s_l79_79071
-
-def total_states : ℕ := 30
-def states_1790s : ℕ := 16
-
-theorem fraction_1790s : (states_1790s / total_states : ℚ) = 8 / 15 :=
-by
-  -- We claim that the fraction of states admitted during the 1790s is exactly 8/15
-  sorry
-
-end fraction_1790s_l79_79071
-
-
-namespace range_of_a_l79_79041
-
-theorem range_of_a (a : ℝ) : (¬ ∃ x : ℝ, x^2 + (a+2)*x + 1 < 0) → a ∈ set.Icc (-4:ℝ) (0:ℝ) :=
-by
-  sorry
-
-end range_of_a_l79_79041
-
-
-namespace find_incircle_radius_l79_79938
-
-variables {param1 param3 r_KBC : ℝ}
-
-def radius_incircle_trapezoid (param1 param3 : ℝ) : ℝ :=
-  if param1 = 3.5 ∧ param3 = 4 then 6 else
-  if param1 = 4.33 ∧ param3 = 9 then 12 else
-  if param1 = 5 ∧ param3 = 2 then 4 else
-  if param1 = 3 ∧ param3 = 6 then 8 else 0
-
-theorem find_incircle_radius (param1 param3 : ℝ) :
-  radius_incircle_trapezoid param1 param3 = r_KBC := by
-  sorry
-
-end find_incircle_radius_l79_79938
-
-
-namespace sum_of_two_squares_l79_79836
-
-theorem sum_of_two_squares (n : ℕ) (k m : ℤ) : 2 * n = k^2 + m^2 → ∃ a b : ℤ, n = a^2 + b^2 := 
-by
-  sorry
-
-end sum_of_two_squares_l79_79836
-
-
-namespace find_tangent_line_perpendicular_to_given_line_l79_79388
-
-theorem find_tangent_line_perpendicular_to_given_line :
-  (∀ x ∈ Set.Icc (-1) (-1), 2*x - 6*((x^3 + 3*x^2 - 1)) + 1 = 0) →
-  (∃ l : ℝ, ∀ x : ℝ, 3*x + l + 2 = 0) :=
-by
-  sorry
-
-end find_tangent_line_perpendicular_to_given_line_l79_79388
-
-
-namespace value_of_expression_l79_79268
-
-theorem value_of_expression : (165^2 - 153^2) / 12 = 318 := by
-  sorry
-
-end value_of_expression_l79_79268
-
-
-namespace graphene_scientific_notation_l79_79459
-
-theorem graphene_scientific_notation :
-  ∃ (a : ℝ) (n : ℤ), 1 ≤ a ∧ a < 10 ∧ (0.00000000034 : ℝ) = a * 10^n ∧ a = 3.4 ∧ n = -10 :=
-sorry
-
-end graphene_scientific_notation_l79_79459
-
-
-namespace intersection_M_N_l79_79549
-
--- Definitions of the sets M and N
-def M : Set ℝ := { -1, 0, 1 }
-def N : Set ℝ := { x | x^2 ≤ x }
-
--- The theorem to be proven
-theorem intersection_M_N : M ∩ N = { 0, 1 } :=
-by
-  sorry
-
-end intersection_M_N_l79_79549
-
-
-namespace distinct_real_roots_of_quadratic_l79_79473
-
-theorem distinct_real_roots_of_quadratic (m : ℝ) :
-  (∃ (x y : ℝ), x ≠ y ∧ x^2 + m * x + 9 = 0 ∧ y^2 + m * y + 9 = 0) ↔ m ∈ Ioo (-∞) (-6) ∪ Ioo 6 (∞) :=
-by
-  sorry
-
-end distinct_real_roots_of_quadratic_l79_79473
-
-
-namespace geometric_series_common_ratio_l79_79172
-
-theorem geometric_series_common_ratio (a r S : ℝ) (h₁ : S = a / (1 - r)) (h₂ : ar^4 / (1 - r) = S / 64) : r = 1 / 2 :=
-  by
-  sorry
-
-end geometric_series_common_ratio_l79_79172
-
-
-namespace cos_third_quadrant_l79_79020
-
-theorem cos_third_quadrant (B : ℝ) (hB: π < B ∧ B < 3 * π / 2) (hSinB : Real.sin B = -5 / 13) :
-  Real.cos B = -12 / 13 :=
-by
-  sorry
-
-end cos_third_quadrant_l79_79020
-
-
-namespace intersection_eq_l79_79800
-
-def A : Set ℝ := {-1, 2}
-def B : Set ℝ := {x | -1 < x ∧ x ≤ 2}
-def C : Set ℝ := {2}
-
-theorem intersection_eq : A ∩ B = C := 
-by {
-  sorry
-}
-
-end intersection_eq_l79_79800
-
-
-namespace candy_given_away_l79_79111
-
--- Define the conditions
-def pieces_per_student := 2
-def number_of_students := 9
-
--- Define the problem statement as a theorem
-theorem candy_given_away : pieces_per_student * number_of_students = 18 := by
-  -- This is where the proof would go, but we omit it with sorry.
-  sorry
-
-end candy_given_away_l79_79111
-
-
-namespace token_position_after_final_move_l79_79626
-
-theorem token_position_after_final_move :
-  ∃ (m : ℕ), m > 0 ∧ token_position 1 (64 * m) = 32 ∧ lamp_count m = 1996 := sorry
-
-end token_position_after_final_move_l79_79626
-
-
-namespace sum_and_average_of_six_consecutive_integers_l79_79139
-
-/--
-Given six consecutive integers starting from n + 1,
-prove that their sum is 6n + 21 and their average is n + 3.5.
--/
-theorem sum_and_average_of_six_consecutive_integers (n : ℤ) :
-  let a := n + 1
-  let b := n + 2
-  let c := n + 3
-  let d := n + 4
-  let e := n + 5
-  let f := n + 6
-  (a + b + c + d + e + f = 6 * n + 21) ∧
-  ((a + b + c + d + e + f) / 6 = n + 3.5) := 
-by
-  sorry
-
-end sum_and_average_of_six_consecutive_integers_l79_79139
-
-
-namespace polynomial_has_integer_root_l79_79609
-
-noncomputable def f (x : ℤ) : ℤ := sorry
-
-theorem polynomial_has_integer_root (f: ℤ → ℤ)
-  (coeff_bound : ∀ n, abs (f n) ≤ 5000000)
-  (has_roots : ∀ i ∈ (finset.range 1 21), ∃ k : ℤ, f k = i * k) : f 0 = 0 :=
-begin
-  sorry
-end
-
-end polynomial_has_integer_root_l79_79609
-
-
-namespace simplify_and_evaluate_l79_79130
-
-theorem simplify_and_evaluate (a : ℝ) (h : a = 1/2) :
-  (a - 1) / (a - 2) * (a^2 - 4) / (a^2 - 2 * a + 1) - 2 / (a - 1) = -1 :=
-by
-  rw h
-  sorry
-
-end simplify_and_evaluate_l79_79130
-
-
-namespace max_gold_coins_l79_79278
-
-theorem max_gold_coins (k : ℤ) (n : ℤ) 
-  (h₁ : n = 11 * k + 2) 
-  (h₂ : n < 100) : 
-  n ≤ 90 :=
-begin
-  sorry
-end
-
-end max_gold_coins_l79_79278
-
-
-namespace a_range_l79_79140
-
-noncomputable def find_a_range (x y : ℝ) (e : ℝ) (ln : ℝ → ℝ) (a : ℝ) : Prop :=
-  2 * x + a * (y - 2 * e * x) * (ln y - ln x) = 0
-
-theorem a_range (x y : ℝ) (e ln : ℝ → ℝ) (a : ℝ) (hx : 0 < x) (hy : 0 < y) :
-  find_a_range x y e ln a ↔ (a < 0 ∨ a ≥ 2 / e) :=
-sorry
-
-end a_range_l79_79140
-
-
-namespace hyperbola_eccentricity_l79_79847
-
-theorem hyperbola_eccentricity (a b p : ℝ) (ha : a > 0) (hb : b > 0) (hp : p > 0) :
-  let c := p / 2 in
-  let e := c / a in
-  (e = sqrt 2 + 1) ↔ 
-  ∃ (x y : ℝ), (x^2 / a^2 - y^2 / b^2 = 1) ∧ (y^2 = 2 * p * x) ∧ (x = p / 2) :=
-by
-  sorry
-
-end hyperbola_eccentricity_l79_79847
-
-
-namespace theorem_AC_parallel_DEF_theorem_dihedral_angle_ABCP_theorem_exists_Q_on_EF_l79_79828
-
--- Definitions of the points and their properties
-def P := (0 : ℝ, 0 : ℝ, real.sqrt 2)
-def A := (1 : ℝ, 0 : ℝ, 0 : ℝ)
-def B := (1 : ℝ, 1 : ℝ, 0 : ℝ)
-def C := (0 : ℝ, 2 : ℝ, 0 : ℝ)
-def D := (0 : ℝ, 0 : ℝ, 0 : ℝ)
-def E := (0 : ℝ, 2 : ℝ, real.sqrt 2)
-def F := (1/2 : ℝ, 0 : ℝ, real.sqrt 2 / 2)
-
-noncomputable def N := ((P.1 + C.1) / 2, (P.2 + C.2) / 2, (P.3 + C.3) / 2)
-
--- 1. Theorem for AC parallel to plane DEF
-theorem theorem_AC_parallel_DEF : 
-  ∀ (A C E D F N : ℝ^3), 
-  (angle A D C = (π / 2)) ∧ (angle B A D = (π / 2)) ∧
-  (F = midpoint P A) ∧
-  (|P - D| = sqrt 2) ∧
-  (|A - B| = |A - D| = 1) ∧ (|C - D| = 2) ∧
-  (E = (0, 2, sqrt 2)) ∧ (N = midpoint P C) ∧
-  (is_rectangle P D C E) →
-  parallel (line AC) (plane DEF) :=
-sorry
-
--- 2. Theorem for dihedral angle A-BC-P
-theorem theorem_dihedral_angle_ABCP : 
-  ∀ (D P B C : ℝ^3),
-  (|P - D| = sqrt 2) ∧
-  (B = (1, 1, 0)) ∧
-  (C = (0, 2, 0)) →
-  dihedral_angle A B C P = (π / 4) :=
-sorry
-
--- 3. Theorem for the existence of point Q on EF
-theorem theorem_exists_Q_on_EF : 
-  ∀ (D P A E F B C : ℝ^3),
-  (F = midpoint P A) ∧
-  (E = (0, 2, sqrt 2)) ∧
-  (angle B Q plane B C P = (π / 6)) →
-  ∃ Q : ℝ^3, Q ∈ segment E F ∧ |F - Q| = (sqrt 19 / 2) :=
-sorry
-
-end theorem_AC_parallel_DEF_theorem_dihedral_angle_ABCP_theorem_exists_Q_on_EF_l79_79828
-
-
-namespace proof_part1_proof_part2_l79_79849
-
--- Definitions for conditions
-def line_parametric (t : ℝ) : ℝ × ℝ := (t, sqrt 3 * t + sqrt 2 / 2)
-def curve_polar (ρ θ : ℝ) : ℝ := ρ = 2 * cos (θ - π / 4)
-
--- Definitions of the solved parts
-def slope_angle_of_line : ℝ := π / 3
-def curve_rect_eq (x y : ℝ) : Prop := (x - sqrt 2 / 2)^2 + (y - sqrt 2 / 2)^2 = 1
-
--- Propositions to be proven
-theorem proof_part1 : slope_angle_of_line = π / 3 ∧ (∀ x y, curve_rect_eq x y ↔ curve_polar (sqrt (x^2 + y^2)) (atan2 y x))
-:= sorry
-
-theorem proof_part2 (A B P : ℝ × ℝ) (hA : A ∈ line_intersection_points) (hB : B ∈ line_intersection_points) (hP : P = (0, sqrt 2 / 2)) :
-  |distance P A| + |distance P B| = sqrt 10 / 2
-:= sorry
-
-end proof_part1_proof_part2_l79_79849
-
-
-namespace time_to_cross_first_platform_l79_79716
-
-noncomputable section
-
-def train_length : ℝ := 310
-def platform_1_length : ℝ := 110
-def platform_2_length : ℝ := 250
-def crossing_time_platform_2 : ℝ := 20
-
-def total_distance_2 (train_length platform_2_length : ℝ) : ℝ :=
-  train_length + platform_2_length
-
-def train_speed (total_distance_2 crossing_time_platform_2 : ℝ) : ℝ :=
-  total_distance_2 / crossing_time_platform_2
-
-def total_distance_1 (train_length platform_1_length : ℝ) : ℝ :=
-  train_length + platform_1_length
-
-def crossing_time_platform_1 (total_distance_1 train_speed : ℝ) : ℝ :=
-  total_distance_1 / train_speed
-
-theorem time_to_cross_first_platform :
-  crossing_time_platform_1 (total_distance_1 train_length platform_1_length)
-                           (train_speed (total_distance_2 train_length platform_2_length)
-                                        crossing_time_platform_2) 
-  = 15 :=
-by
-  -- We would prove this in a detailed proof which is omitted here.
-  sorry
-
-end time_to_cross_first_platform_l79_79716
-
-
-namespace marble_distribution_l79_79630
-
-theorem marble_distribution (a b c : ℚ) (h1 : a + b + c = 78) (h2 : a = 3 * b + 2) (h3 : b = c / 2) : 
-  a = 40 ∧ b = 38 / 3 ∧ c = 76 / 3 :=
-by
-  sorry
-
-end marble_distribution_l79_79630
-
-
-namespace geometric_series_ratio_half_l79_79201
-
-theorem geometric_series_ratio_half (a r S : ℝ) (hS : S = a / (1 - r)) 
-  (h_ratio : (ar^4) / (1 - r) = S / 64) : r = 1 / 2 :=
-by
-  sorry
-
-end geometric_series_ratio_half_l79_79201
-
-
-namespace inscribed_square_area_equilateral_triangle_l79_79690
-
-noncomputable def equilateral_triangle_side : ℝ := 6
-noncomputable def inradius_of_equilateral_triangle (a : ℝ) : ℝ := a / (2 * Real.sqrt 3)
-noncomputable def inscribed_circle_radius : ℝ := inradius_of_equilateral_triangle equilateral_triangle_side
-noncomputable def inscribed_square_area (r : ℝ) : ℝ := (r * Real.sqrt 2) ^ 2
-
-theorem inscribed_square_area_equilateral_triangle :
-  inscribed_square_area inscribed_circle_radius ≈ 5.997 :=
-by
-  -- proof omitted
-  sorry
-
-end inscribed_square_area_equilateral_triangle_l79_79690
-
-
-namespace range_a_if_monotonically_increasing_l79_79497
-
-variable (a : ℝ)
-
-def f (x : ℝ) : ℝ := a * sin x + cos x
-
-theorem range_a_if_monotonically_increasing :
-  (∀ x ∈ set.Icc (real.pi / 6) (real.pi / 4), (a * cos x - sin x) ≥ 0) →
-  a ≥ 1 :=
-begin
-  sorry
-end
-
-end range_a_if_monotonically_increasing_l79_79497
-
-
-namespace missing_fraction_is_correct_l79_79989
-
-def sum_of_fractions (x : ℚ) : Prop :=
-  (1/3 : ℚ) + (1/2) + (-5/6) + (1/5) + (1/4) + (-9/20) + x = (45/100 : ℚ)
-
-theorem missing_fraction_is_correct : sum_of_fractions (27/60 : ℚ) :=
-  by sorry
-
-end missing_fraction_is_correct_l79_79989
-
-
-namespace max_consecutive_integers_sum_l79_79247
-
-theorem max_consecutive_integers_sum (S_n : ℕ → ℕ) : (∀ n, S_n n = n * (n + 1) / 2) → ∀ n, (S_n n < 1000 ↔ n ≤ 44) :=
-by
-  intros H n
-  split
-  · intro H1
-    have H2 : n * (n + 1) < 2000 := by
-      rw [H n] at H1
-      exact H1
-    sorry
-  · intro H1
-    have H2 : n ≤ 44 := H1
-    have H3 : n * (n + 1) < 2000 := by
-      sorry
-    have H4 : S_n n < 1000 := by
-      rw [H n]
-      exact H3
-    exact H4
-
-end max_consecutive_integers_sum_l79_79247
-
-
-namespace rook_mod_n_l79_79928
-
-def rook_closed_loop_modulo (n : ℕ) (hn : n > 1) : Prop :=
-∀ {path : list (ℤ × ℤ)},  
-  (  -- Conditions of the problem
-    (path.nodup) ∧ 
-    (∀ i, (i < path.length - 1) → 
-      (let (x1, y1) := path.nth_le i (by linarith) in 
-      let (x2, y2) := path.nth_le (i+1) (by linarith) in 
-      ((abs (x2 - x1) = n ∧ y1 = y2) ∨ (abs (y2 - y1) = n ∧ x1 = x2)))) ∧
-    ((path.head = path.last))
-  ) 
-  → (let white_cells_inside := 
-        (list.range n.cross_with (λ x y, if (x, y) ∉ path then 1 else 0)).sum in 
-     white_cells_inside % n = 1)
-
-theorem rook_mod_n (n : ℕ) (hn : n > 1) : rook_closed_loop_modulo n hn := 
-sorry
-
-end rook_mod_n_l79_79928
-
-
-namespace distinct_real_roots_interval_l79_79480
-
-open Set Real
-
-theorem distinct_real_roots_interval (m : ℝ) : 
-  (∃ (r1 r2 : ℝ), r1 ≠ r2 ∧ IsRoot (λ x => x^2 + m * x + 9) r1 ∧ IsRoot (λ x => x^2 + m * x + 9) r2) ↔ 
-  m ∈ Iio (-6) ∪ Ioi 6 :=
-sorry
-
-end distinct_real_roots_interval_l79_79480
-
-
-namespace cos_third_quadrant_l79_79022
-
-theorem cos_third_quadrant (B : ℝ) (hB: π < B ∧ B < 3 * π / 2) (hSinB : Real.sin B = -5 / 13) :
-  Real.cos B = -12 / 13 :=
-by
-  sorry
-
-end cos_third_quadrant_l79_79022
-
-
-namespace measure_of_angle_B_l79_79899
-
--- Define the triangle with vertices A, B, C and its properties
-variables {A B C D : Type}
-variables (AB BC AC CD : ℝ)
-
--- Define the conditions
-variables (h0 : AB = BC) 
-          (h1 : CD = AC)
-          (h2 : ∀ (X : Type), X ∈ C → X ∈ D → isAngleBisector AB AC CD)
-
--- Define the statement to prove
-theorem measure_of_angle_B (h0 : AB = BC) 
-                           (h1 : CD = AC)
-                           (h2 : ∀ (X : Type), X ∈ C → X ∈ D → isAngleBisector AB AC CD) :
-                           ∠ABC = 45 :=
-begin
-  sorry
-end
-
-end measure_of_angle_B_l79_79899
-
-
-namespace part1_part2_l79_79915
-
-/-- Definition of set A as roots of the equation x^2 - 3x + 2 = 0 --/
-def set_A : Set ℝ := {x | x ^ 2 - 3 * x + 2 = 0}
-
-/-- Definition of set B as roots of the equation x^2 + (a - 1)x + a^2 - 5 = 0 --/
-def set_B (a : ℝ) : Set ℝ := {x | x ^ 2 + (a - 1) * x + a ^ 2 - 5 = 0}
-
-/-- Proof for intersection condition --/
-theorem part1 (a : ℝ) : (set_A ∩ set_B a = {2}) → (a = -3 ∨ a = 1) := by
-  sorry
-
-/-- Proof for union condition --/
-theorem part2 (a : ℝ) : (set_A ∪ set_B a = set_A) → (a ≤ -3 ∨ a > 7 / 3) := by
-  sorry
-
-end part1_part2_l79_79915
-
-
-namespace vector_b_correct_l79_79919
-
-open Matrix
-
-noncomputable def a : Fin 3 → ℝ :=
-  ![3, 2, 4]
-
-noncomputable def b : Fin 3 → ℝ :=
-  ![0, 5, 5 / 2]
-
-def dot_product (v1 v2 : Fin 3 → ℝ) := 
-  ∑ i, v1 i * v2 i
-
-def cross_product (v1 v2 : Fin 3 → ℝ) :=
-  ![(v1 1 * v2 2 - v1 2 * v2 1), 
-    (v1 2 * v2 0 - v1 0 * v2 2), 
-    (v1 0 * v2 1 - v1 1 * v2 0)]
-
-theorem vector_b_correct :
-  dot_product a b = 20 ∧ cross_product a b = ![-15, 5, 10] := 
-  sorry
-
-end vector_b_correct_l79_79919
-
-
-namespace num_solutions_to_inequality_l79_79463
-
-theorem num_solutions_to_inequality : 
-  let S := {x : ℕ | 12 < -2 * (x : ℤ) + 17} in
-  S.card = 2 := 
-by 
-  sorry
-
-end num_solutions_to_inequality_l79_79463
-
-
-namespace problem_statement_l79_79841
-
--- Definitions related to the given conditions
-noncomputable def f (x : ℝ) : ℝ := Real.sin (2 * x - (5 * Real.pi) / 6)
-
-theorem problem_statement :
-  (∀ x1 x2 : ℝ, (x1 ∈ Set.Ioo (Real.pi / 6) (2 * Real.pi / 3)) → (x2 ∈ Set.Ioo (Real.pi / 6) (2 * Real.pi / 3)) → x1 < x2 → f x1 < f x2) →
-  (f (Real.pi / 6) = f (2 * Real.pi / 3)) →
-  f (-((5 * Real.pi) / 12)) = (Real.sqrt 3) / 2 :=
-by
-  intros h_mono h_symm
-  sorry
-
-end problem_statement_l79_79841
-
-
-namespace water_leftover_l79_79993
-
-theorem water_leftover (players : ℕ) (total_water_l : ℕ) (water_per_player_ml : ℕ) (spill_water_ml : ℕ)
-  (h1 : players = 30) 
-  (h2 : total_water_l = 8) 
-  (h3 : water_per_player_ml = 200) 
-  (h4 : spill_water_ml = 250) : 
-  (total_water_l * 1000 - (players * water_per_player_ml + spill_water_ml) = 1750) :=
-by
-  -- conversion of total water to milliliters
-  let total_water_ml := total_water_l * 1000
-  -- calculation of total water used for players
-  let total_water_used_for_players := players * water_per_player_ml
-  -- calculation of total water including spill
-  let total_water_used := total_water_used_for_players + spill_water_ml
-  -- leftover water calculation
-  have calculation : total_water_l * 1000 - (players * water_per_player_ml + spill_water_ml) = total_water_ml - total_water_used, by
-    rw [total_water_ml, total_water_used, total_water_used_for_players]
-  rw calculation
-  -- conclusion by substituting known values
-  rw [h1, h2, h3, h4]
-  norm_num
-
-end water_leftover_l79_79993
-
-
-namespace alice_walk_distance_l79_79728
-
-theorem alice_walk_distance (m n : ℕ) (h_rel_prime : Nat.coprime m n) :
-  let total_gates := 15
-  let spacing := 150
-  let max_distance := 600
-  let valid_scenarios := 108
-  let total_scenarios := total_gates * (total_gates - 1)
-  let P := (Rat.mk valid_scenarios total_scenarios).reduce
-  let m := P.num.nat_abs
-  let n := P.denom in
-  m + n = 53 := by
-  let P_val : ℚ := Rat.mk 108 210
-  have h1 : (P_val.reduce.num.nat_abs, P_val.reduce.denom) = (18, 35) := by
-    -- This is a conceptual step where we count the scenarios and reduce the fraction correctly
-    sorry
-  have h2 : P = P_val.reduce := by sorry
-  exact congrArg Nat.add (Eq.trans h1 h2).symm
-
-end alice_walk_distance_l79_79728
-
-
-namespace sophie_saves_money_by_using_wool_balls_l79_79597
-
-def cost_of_dryer_sheets_per_year (loads_per_week : ℕ) (sheets_per_load : ℕ)
-                                  (weeks_per_year : ℕ) (sheets_per_box : ℕ)
-                                  (cost_per_box : ℝ) : ℝ :=
-  let sheets_per_year := loads_per_week * sheets_per_load * weeks_per_year
-  let boxes_per_year := sheets_per_year / sheets_per_box
-  boxes_per_year * cost_per_box
-
-theorem sophie_saves_money_by_using_wool_balls :
-  cost_of_dryer_sheets_per_year 4 1 52 104 5.50 = 11.00 :=
-by simp only [cost_of_dryer_sheets_per_year]; sorry
-
-end sophie_saves_money_by_using_wool_balls_l79_79597
-
-
-namespace lines_intersect_at_point_l79_79693
-
-noncomputable def line1 (s : ℚ) : ℚ × ℚ :=
-  (1 + 2 * s, 4 - 3 * s)
-
-noncomputable def line2 (v : ℚ) : ℚ × ℚ :=
-  (3 + 3 * v, 2 - v)
-
-theorem lines_intersect_at_point :
-  ∃ s v : ℚ,
-    line1 s = (15 / 7, 16 / 7) ∧
-    line2 v = (15 / 7, 16 / 7) ∧
-    s = 4 / 7 ∧
-    v = -2 / 7 := by
-  sorry
-
-end lines_intersect_at_point_l79_79693
-
-
-namespace right_triangle_width_l79_79219
-
-theorem right_triangle_width (height : ℝ) (side_square : ℝ) (width : ℝ) (n_triangles : ℕ) 
-  (triangle_right : height = 2)
-  (fit_inside_square : side_square = 2)
-  (number_triangles : n_triangles = 2) :
-  width = 2 :=
-sorry
-
-end right_triangle_width_l79_79219
-
-
-namespace trapezoid_AH_DH_l79_79120
-
-theorem trapezoid_AH_DH (AD BC AH DH: ℝ) (H_on_AD: H ∈ Icc (0 : ℝ) AD):
-  CH = height. ABCH
-  isosceles_trapezoid \(ABCD\)
-  AD = 35
-  BC = 15
-  DH = \frac{AD - BC}{2}
-  AH = AD - DH
-:
-  AH = 25 ∧ DH = 10 :=
-by
-  sorry
-
-end trapezoid_AH_DH_l79_79120
-
-
-namespace unique_or_infinite_solutions_l79_79813
-
-variables {α : Type*} [linear_ordered_field α] {A B C A1 B1 C1 : point α}
-
--- Definitions for the problem conditions
-def points_collinear (a b c : point α) : Prop :=
-vector α 2 (λ (p : point α), p.x * b.y + p.y * c.x + a.x * b.y * c.y = 0)
-
-def triangle (a b c : point α) : Prop :=
-a ≠ b ∧ b ≠ c ∧ a ≠ c
-
-def similar_triangles (a b c a1 b1 c1 : point α) : Prop :=
-let m := (c.y - b.y) / (a.y - a.x) in
-let n := (c1.y - b1.y) / (a1.y - a1.x) in
-(m = n ∧ angle a b c = angle a1 b1 c1)
-
--- Statement of the problem
-theorem unique_or_infinite_solutions
-  (h_triangle : triangle A B C)
-  (h_collinear_A1 : points_collinear A B C A1) :
-  (∃ B1 C1, on_line A C B1 ∧ on_line A B C1 ∧ similar_triangles A B C A1 B1 C1) ∧
-  (∃! B1 C1, on_line A C B1 ∧ on_line A B C1 ∧ similar_triangles A B C A1 B1 C1) :=
-sorry
-
-end unique_or_infinite_solutions_l79_79813
-
-
-namespace quadratic_sum_eq_504_l79_79763
-
-theorem quadratic_sum_eq_504 :
-  ∃ (a b c : ℝ), (∀ x : ℝ, 20 * x^2 + 160 * x + 800 = a * (x + b)^2 + c) ∧ a + b + c = 504 :=
-by sorry
-
-end quadratic_sum_eq_504_l79_79763
-
-
-namespace water_left_over_l79_79996
-
-theorem water_left_over (players : ℕ) (initial_liters : ℕ) (milliliters_per_player : ℕ) (water_spill_ml : ℕ) :
-  players = 30 → initial_liters = 8 → milliliters_per_player = 200 → water_spill_ml = 250 →
-  (initial_liters * 1000) - (players * milliliters_per_player + water_spill_ml) = 1750 :=
-by
-  intros h1 h2 h3 h4
-  rw [h1, h2, h3, h4]
-  change 8 * 1000 - (30 * 200 + 250) = 1750
-  norm_num
-  sorry
-
-end water_left_over_l79_79996
-
-
-namespace max_area_center_of_circle_l79_79037
-
-theorem max_area_center_of_circle (k : ℝ) :
-  (∃ x y : ℝ, x^2 + y^2 + k*x + 2*y + k^2 = 0) →
-  (∀ x y : ℝ, if k = 0 then (x, y) = (0, -1))
-:= by
-  sorry
-
-end max_area_center_of_circle_l79_79037
-
-
-namespace geometric_series_common_ratio_l79_79213
-
-theorem geometric_series_common_ratio (a r S : ℝ) 
-  (hS : S = a / (1 - r)) 
-  (h64 : (a * r^4) / (1 - r) = S / 64) : 
-  r = 1 / 2 :=
-by
-  sorry
-
-end geometric_series_common_ratio_l79_79213
-
-
-namespace vector_dot_product_example_l79_79873
+def frog_jumps_probability (n : ℕ) (radius : ℝ) (jump_length : ℝ) : ℝ :=
+  -- Here, we'd define the probability based on random walk theory
+  sorry -- actual implementation would go here
 
-def vector_dot_product {α : Type} [Field α] (u v : EuclideanSpace α (Fin 2)) : α :=
-  Fin 2 (λ i, u ⟨i, sorry⟩ * v ⟨i, sorry⟩).
+theorem frog_jumps_within_distance :
+  frog_jumps_probability 4 1.5 1 = 1 / 3 :=
+sorry -- proof would go here
 
-theorem vector_dot_product_example : vector_dot_product ![(1 : ℝ), 1] ![(-1 : ℝ), 2] = 1 := 
-by
-  sorry
-
-end vector_dot_product_example_l79_79873
-
-
-namespace bus_speed_excluding_stoppages_l79_79768
-
-theorem bus_speed_excluding_stoppages 
-  (v : ℝ) 
-  (speed_incl_stoppages : v * 54 / 60 = 45) : 
-  v = 50 := 
-  by 
-    sorry
-
-end bus_speed_excluding_stoppages_l79_79768
-
-
-namespace arithmetic_progression_infinite_kth_powers_l79_79358
-
-theorem arithmetic_progression_infinite_kth_powers {a d k : ℕ} (ha : a > 0) (hd : d > 0) (hk : k > 0) :
-  (∀ n : ℕ, ¬ ∃ b : ℕ, a + n * d = b ^ k) ∨ (∀ b : ℕ, ∃ n : ℕ, a + n * d = b ^ k) :=
-sorry
-
-end arithmetic_progression_infinite_kth_powers_l79_79358
-
-
-namespace simplify_t_l79_79494
-
-theorem simplify_t (t : ℝ) (cbrt3 : ℝ) (h : cbrt3 ^ 3 = 3) 
-  (ht : t = 1 / (1 - cbrt3)) : 
-  t = - (1 + cbrt3 + cbrt3 ^ 2) / 2 := 
-sorry
-
-end simplify_t_l79_79494
-
-
-namespace positive_root_approximation_l79_79066
-
-noncomputable def seq (x : ℕ → ℝ) := ∀ n, x (n + 1) = Real.sqrt (1 + (1 / x n))
-
-theorem positive_root_approximation : 
-  ∃ x : ℝ, (x > 0) ∧ (∃ (x : ℕ → ℝ), seq x ∧ x 1 = 1 ∧ ∀ n, tendsto x.2 at_top (𝓝 x )) := 
-sorry
-
-end positive_root_approximation_l79_79066
-
-
-namespace geometric_series_common_ratio_l79_79190
-
-theorem geometric_series_common_ratio :
-  ∀ (a r : ℝ), (r ≠ 1) → 
-  (∑' n, a * r^n = 64 * ∑' n, a * r^(n+4)) →
-  r = 1 / 2 :=
-by
-  intros a r hnr heq
-  have hsum1 : ∑' n, a * r^n = a / (1 - r) := sorry
-  have hsum2 : ∑' n, a * r^(n+4) = a * r^4 / (1 - r) := sorry
-  rw [hsum1, hsum2] at heq
-  -- Further steps to derive r = 1/2 are omitted
-  sorry
-
-end geometric_series_common_ratio_l79_79190
-
-
-namespace cosine_in_third_quadrant_l79_79024
-
-theorem cosine_in_third_quadrant (B : Real) 
-  (h1 : Real.sin B = -5/13) 
-  (h2 : π < B ∧ B < 3 * π / 2) : Real.cos B = -12/13 := 
-sorry
-
-end cosine_in_third_quadrant_l79_79024
-
-
-namespace count_7_primable_below_1000_is_8_l79_79703
-
-def is_one_digit_prime (d : ℕ) : Prop :=
-  d = 2 ∨ d = 3 ∨ d = 5 ∨ d = 7
-
-def is_n_primable (n : ℕ) (x : ℕ) : Prop :=
-  (x % n = 0) ∧ (∀ d ∈ (x.digits 10), is_one_digit_prime d)
-
-noncomputable def count_7_primable_below_1000 : ℕ :=
-  finset.card { x ∈ finset.range 1000 | is_n_primable 7 x }
-
-theorem count_7_primable_below_1000_is_8 : count_7_primable_below_1000 = 8 := by
-  sorry
-
-end count_7_primable_below_1000_is_8_l79_79703
-
-
-namespace greatest_number_of_quarters_l79_79765
-
-def eva_has_us_coins : ℝ := 4.80
-def quarters_and_dimes_have_same_count (q : ℕ) : Prop := (0.25 * q + 0.10 * q = eva_has_us_coins)
-
-theorem greatest_number_of_quarters : ∃ (q : ℕ), quarters_and_dimes_have_same_count q ∧ q = 13 :=
-sorry
-
-end greatest_number_of_quarters_l79_79765
-
-
-namespace solve_system_addition_l79_79792
-
-theorem solve_system_addition (a b : ℝ) (h1 : 3 * a + 7 * b = 1977) (h2 : 5 * a + b = 2007) : a + b = 498 :=
-by
-  sorry
-
-end solve_system_addition_l79_79792
-
-
-namespace number_of_ordered_triples_l79_79011
-
-def number_of_solutions (a b c : ℤ) : Bool :=
-  abs (a + b) + c = 19 ∧ a * b + abs c = 97
-
-theorem number_of_ordered_triples :
-  (∃ s : Finset _ × Finset _ × Finset _, 
-    s.1.card * s.2.card * s.3.card = 12 ∧
-    ∀ a ∈ s.1, ∀ b ∈ s.2, ∀ c ∈ s.3, number_of_solutions a b c) :=
-sorry
-
-end number_of_ordered_triples_l79_79011
-
-
-namespace cos_B_third_quadrant_l79_79027
-
-theorem cos_B_third_quadrant (B : ℝ) (hB1 : π < B ∧ B < 3 * π / 2) (hB2 : sin B = -5 / 13) : cos B = -12 / 13 :=
-by
-  sorry
-
-end cos_B_third_quadrant_l79_79027
-
-
-namespace triangle_integer_lengths_impossible_l79_79083
-
-theorem triangle_integer_lengths_impossible
-  (A B C D E I : Type)
-  [Triangle A B C]
-  [RightAngle (Angle A)]
-  [OnSegment D A C]
-  [OnSegment E A B]
-  [AngleEqual (Angle A B D) (Angle D B C)]
-  [AngleEqual (Angle A C E) (Angle E C B)]
-  [Intersection (Segment B D) (Segment C E) I] :
-  ¬ (IsIntegerLength (Segment A B) ∧ IsIntegerLength (Segment A C) ∧
-     IsIntegerLength (Segment B I) ∧ IsIntegerLength (Segment I D) ∧
-     IsIntegerLength (Segment C I) ∧ IsIntegerLength (Segment I E)) :=
-sorry
-
-end triangle_integer_lengths_impossible_l79_79083
+end frog_jumps_within_distance_l79_79225
 
 
-namespace area_of_triangle_PQR_l79_79515
+namespace no_divisor_30_to_40_of_2_pow_28_minus_1_l79_79983
 
-theorem area_of_triangle_PQR (A B C D P Q R : ℝ^2)
-  (h_rect : A.1 = D.1 ∧ D.2 = A.2 ∧ B.1 = A.1 ∧ D.1 = C.1 ∧ B.2 = C.2 ∧ C.2 = D.2)
-  (h_AB_eq_AP : dist A B = dist A P)
-  (h_AP_eq_PQ : dist A P = dist P Q)
-  (h_PQ_eq_QD : dist P Q = dist Q D)
-  (h_DR_eq_RC : dist D R = dist R C)
-  (h_BC_eq_24 : dist B C = 24)
-  (h_AD_eq_24 : dist A D = 24) :
-  let PQ := dist P Q
-  let DR := dist D R
-  have h_PQ_val : PQ = 8, from sorry,
-  have h_DR_val : DR = 4, from sorry,
-  (1 / 2) * PQ * DR = 16 := sorry
-
-end area_of_triangle_PQR_l79_79515
-
-
-namespace coefficient_of_x2_in_expansion_l79_79516
-
-noncomputable def binom_coeff (n k : ℕ) : ℚ :=
-  nat.choose n k
-
-theorem coefficient_of_x2_in_expansion:
-  ∃ (r : ℕ), (8 - 2 * r = 2 ∧ (binom_coeff 8 r : ℚ) * ((-2 : ℚ) ^ r) = -binom_coeff 8 3 * 2^3) :=
-by
-  use 3
-  split
-  { norm_num }
-  { sorry }
-
-end coefficient_of_x2_in_expansion_l79_79516
-
-
-namespace angle_at_half_past_eight_l79_79068
-
--- Define the principle of clock angles
-def hour_angle (hr : ℕ) (min : ℕ) : ℝ :=
-  (hr % 12 * 30) + (min * 0.5)
-
-def minute_angle (min : ℕ) : ℝ :=
-  min * 6
-
-noncomputable def angle_between_hands (hr : ℕ) (min : ℕ) : ℝ :=
-  let ha := hour_angle hr min in
-  let ma := minute_angle min in
-  |ha - ma|
-
-theorem angle_at_half_past_eight :
-  angle_between_hands 8 30 = 75 :=
-  sorry
-
-end angle_at_half_past_eight_l79_79068
-
-
-namespace roots_g_eq_4_max_value_g_min_value_g_l79_79843
-
-noncomputable def g (x : ℝ) : ℝ :=
-  (4 * (Real.sin x)^4 + 7 * (Real.cos x)^2) / (4 * (Real.cos x)^4 + (Real.sin x)^2)
-
-theorem roots_g_eq_4 :
-  {x : ℝ | g(x) = 4} = 
-  {x : ℝ | ∃ k : ℤ, x = (k : ℝ) * Real.pi + Real.pi / 2} ∪ 
-  {x : ℝ | ∃ k : ℤ, x = (k : ℝ) * Real.pi + Real.pi / 3} ∪
-  {x : ℝ | ∃ k : ℤ, x = (k : ℝ) * Real.pi - Real.pi / 3} :=
-by sorry
-
-theorem max_value_g : ∃ t ∈ (Set.Icc 0 1), g (Real.arccos (sqrt t)) = 21 / 5 :=
-by sorry
-
-theorem min_value_g : ∃ t ∈ (Set.Icc 0 1), g (Real.arccos (sqrt t)) = 7 / 4 :=
-by sorry
-
-end roots_g_eq_4_max_value_g_min_value_g_l79_79843
-
-
-namespace sum_first_2n_terms_l79_79845
-
--- Define the sequence
-def a_n (n : ℕ) : ℤ := (-1)^n * n + 2^n
-
--- Define the sum of the first 2n terms.
-def S_2n (n : ℕ) : ℤ := ∑ i in range (2*n+1), a_n i
-
--- Statement of the problem
-theorem sum_first_2n_terms (n : ℕ) : S_2n n = -n + 3 * 2^(2*n) - 6 :=
-by
-  sorry
-
-end sum_first_2n_terms_l79_79845
-
-
-namespace sum_of_solutions_of_equation_l79_79788
-
-theorem sum_of_solutions_of_equation :
-  let f := (fun x : ℝ => (x - 4) ^ 2)
-  ∃ S : Set ℝ, (S = {x | f x = 16}) ∧ (∑ s in S, s) = 8 := 
-by
-  sorry
-
-end sum_of_solutions_of_equation_l79_79788
-
-
-namespace fraction_eq_solution_l79_79171
-
-theorem fraction_eq_solution (x : ℝ) (h1 : x ≠ 0) (h2 : x ≠ 1) :
-  (3 / x = 1 / (x - 1)) ↔ x = 3 / 2 :=
-begin
-  sorry
-end
-
-end fraction_eq_solution_l79_79171
-
-
-namespace total_students_sampled_l79_79303
-
-theorem total_students_sampled :
-  ∀ (seniors juniors freshmen sampled_seniors sampled_juniors sampled_freshmen total_students : ℕ),
-    seniors = 1000 →
-    juniors = 1200 →
-    freshmen = 1500 →
-    sampled_freshmen = 75 →
-    sampled_seniors = seniors * (sampled_freshmen / freshmen) →
-    sampled_juniors = juniors * (sampled_freshmen / freshmen) →
-    total_students = sampled_seniors + sampled_juniors + sampled_freshmen →
-    total_students = 185 :=
-by
-sorry
-
-end total_students_sampled_l79_79303
-
-
-namespace primes_remain_prime_l79_79080
-
-theorem primes_remain_prime (n : ℕ) (hn : 2 ≤ n)
-  (h : ∀ k, 0 ≤ k → k ≤ (Int.floor (real.sqrt (n / 3 : ℝ))) → Prime (k^2 + k + n)) :
-  ∀ k, 0 ≤ k → k ≤ n - 2 → Prime (k^2 + k + n) :=
-begin
-  sorry
-end
-
-end primes_remain_prime_l79_79080
-
-
-namespace smallest_N_for_Bernardo_win_l79_79048
-
-noncomputable def sum_of_digits (n : ℕ) : ℕ :=
-  n.digits 10).sum
-
-theorem smallest_N_for_Bernardo_win :
-  let N := 63 in
-  (27 * N + 1200 < 3000) ∧ (sum_of_digits N = 9) :=
+theorem no_divisor_30_to_40_of_2_pow_28_minus_1 :
+  ¬ ∃ n : ℕ, (30 ≤ n ∧ n ≤ 40 ∧ n ∣ (2^28 - 1)) :=
 by
   sorry
 
-end smallest_N_for_Bernardo_win_l79_79048
+end no_divisor_30_to_40_of_2_pow_28_minus_1_l79_79983
 
 
-namespace two_digit_number_reversed_l79_79267
+namespace integer_count_of_sqrt_x_l79_79463
 
-theorem two_digit_number_reversed :
-  ∃ (x y : ℕ), (10 * x + y = 73) ∧ (10 * x + y = 2 * (10 * y + x) - 1) ∧ (x < 10) ∧ (y < 10) := 
+theorem integer_count_of_sqrt_x : ∃ (n : ℕ), n = 15 ∧ ∀ (x : ℤ), (9 < x ∧ x < 25) ↔ (10 ≤ x ∧ x ≤ 24) :=
 by
   sorry
-
-end two_digit_number_reversed_l79_79267
-
-
-namespace third_worker_operates_two_looms_l79_79715
-
-open Nat
-
-variable (n m : ℕ) (a : ℕ → ℕ → ℕ)
-
-def operates_loom (i j : ℕ) : Prop :=
-  a i j = 1
-
-theorem third_worker_operates_two_looms
-  (h_positive_n : 0 < n)
-  (h_positive_m : 0 < m)
-  (h_aij : ∀ i j, a i j = 1 ∨ a i j = 0)
-  (h_sum : ∑ j in range n, a 3 j = 2) :
-  ∃ looms : finset ℕ, looms.card = 2 ∧ ∀ j ∈ looms, operates_loom 3 j :=
-sorry
-
-end third_worker_operates_two_looms_l79_79715
-
-
-namespace D1E_perpendicular_plane_ADF_l79_79062
 
--- Definitions of the points and midpoints in the cube
-def Cube : Type := sorry
-def A (c : Cube) : Point := sorry
-def B (c : Cube) : Point := sorry
-def C (c : Cube) : Point := sorry
-def D (c : Cube) : Point := sorry
-def A1 (c : Cube) : Point := sorry
-def B1 (c : Cube) : Point := sorry
-def C1 (c : Cube) : Point := sorry
-def D1 (c : Cube) : Point := sorry
+end integer_count_of_sqrt_x_l79_79463
 
-def midpoint (p1 p2 : Point) : Point := sorry
 
-def E (c : Cube) : Point := midpoint (D c) (C c)
-def F (c : Cube) : Point := midpoint (C c) (C1 c)
+namespace probability_all_blue_jellybeans_removed_l79_79214
 
--- The proof statement
-theorem D1E_perpendicular_plane_ADF (c : Cube) :
-  Perpendicular (line_through (D1 c) (E c)) (plane A (D c) (F c)) :=
-sorry
+def num_red_jellybeans : ℕ := 10
+def num_blue_jellybeans : ℕ := 10
+def total_jellybeans : ℕ := num_red_jellybeans + num_blue_jellybeans
 
-end D1E_perpendicular_plane_ADF_l79_79062
+def prob_first_blue : ℚ := num_blue_jellybeans / total_jellybeans
+def prob_second_blue : ℚ := (num_blue_jellybeans - 1) / (total_jellybeans - 1)
+def prob_third_blue : ℚ := (num_blue_jellybeans - 2) / (total_jellybeans - 2)
 
+def prob_all_blue : ℚ := prob_first_blue * prob_second_blue * prob_third_blue
 
-namespace triangle_side_value_l79_79900
+theorem probability_all_blue_jellybeans_removed :
+  prob_all_blue = 1 / 9.5 := sorry
 
-theorem triangle_side_value
-  (A B C : ℝ) (a b c : ℝ)
-  (h1 : a = 1)
-  (h2 : b = 4)
-  (h3 : a * Real.cos B + b * Real.cos A = 2 * c * Real.cos C)
-  (h4 : a^2 + b^2 - 2 * a * b * Real.cos C = c^2) :
-  c = Real.sqrt 13 :=
-sorry
+end probability_all_blue_jellybeans_removed_l79_79214
 
-end triangle_side_value_l79_79900
 
+namespace margarets_mean_score_l79_79994
 
-namespace median_is_8_4_l79_79884
+noncomputable def mean (scores : List ℝ) : ℝ :=
+  scores.sum / scores.length
 
 open List
 
-def data_set : List ℝ := [8.4, 7.5, 8.4, 8.5, 7.5, 9]
-
-theorem median_is_8_4 : median data_set = 8.4 :=
+theorem margarets_mean_score :
+  let scores := [86, 88, 91, 93, 95, 97, 99, 100]
+  let cyprians_mean := 92
+  let num_scores := 8
+  let cyprians_scores := 4
+  let margarets_scores := num_scores - cyprians_scores
+  (scores.sum - cyprians_scores * cyprians_mean) / margarets_scores = 95.25 :=
 by
   sorry
 
-end median_is_8_4_l79_79884
+end margarets_mean_score_l79_79994
 
 
-namespace min_value_fraction_seq_l79_79422
+namespace moving_circle_trajectory_l79_79407
 
-noncomputable def a (n : ℕ) : ℕ :=
-  if h : n = 0 then 0
-  else
-    let m := n - 1 in
-    (2 * m * m + 98 * m + 102)
-
-theorem min_value_fraction_seq : 
-  ∀ (n : ℕ), n ≥ 1 → a n = 102 + (n - 2) * (2 * n + 2) → 
-  ∃ (n_min : ℕ), n_min ≥ 1 ∧ (∀ n ≥ 1, (a n / n : ℝ) ≥ 26) := sorry
-
-end min_value_fraction_seq_l79_79422
-
-
-namespace smallest_product_is_minus_120_l79_79911
-
-def smallest_product_of_triplet (l : List Int) : Int :=
-  l.product3.toList.map (λ t => t.fst * t.snd.1 * t.snd.2).minimum'.get!
-
-theorem smallest_product_is_minus_120 (l : List Int) (h : l = [-5, -3, -1, 2, 4, 6]) :
-  smallest_product_of_triplet l = -120 :=
-by
-  sorry
-
-end smallest_product_is_minus_120_l79_79911
-
-
-namespace mary_probability_at_least_three_correct_l79_79108
-
-noncomputable def probability_correct_guesses (n : ℕ) (k : ℕ) (p : ℚ) : ℚ :=
-Finset.sum (Finset.range (k + 1)) (λ i, (nat.choose n i : ℚ) * p^i * (1 - p)^(n - i))
-
-theorem mary_probability_at_least_three_correct :
-  probability_correct_guesses 5 2 (1/4) = 53/512 :=
-by
-  unfold probability_correct_guesses
-  norm_cast
-  sorry
-
-end mary_probability_at_least_three_correct_l79_79108
-
-
-namespace y1_gt_y3_gt_y2_l79_79804
-
-noncomputable def y1 : ℝ := 2 ^ 1.8
-noncomputable def y2 : ℝ := 8 ^ 0.48
-noncomputable def y3 : ℝ := (1 / 2) ^ -1.5
-
-theorem y1_gt_y3_gt_y2 : y1 > y3 ∧ y3 > y2 := by
-  have hy1 : y1 = 2 ^ 1.8 := by rfl
-  have hy2 : y2 = 2 ^ 1.44 := by 
-    calc 
-      8 ^ 0.48 = (2^3) ^ 0.48 : by rw [pow_mul]
-      ... = 2 ^ (3 * 0.48) : by rfl
-      ... = 2 ^ 1.44 : by norm_num
-  have hy3 : y3 = 2 ^ 1.5 := by
-    calc
-      (1 / 2) ^ -1.5 = (2 ^ -1) ^ -1.5 : by rw [one_div, pow_neg]
-      ... = 2 ^ (-(1 * -1.5)) : by rw [←pow_mul]
-      ... = 2 ^ 1.5 : by norm_num
-  rw [hy1, hy2, hy3]
-  exact sorry
-
-end y1_gt_y3_gt_y2_l79_79804
-
-
-namespace point_on_line_l79_79773
-
-theorem point_on_line (t : ℝ) : (∃ t : ℝ, (t, 6) lies_on_line_through (0, 4) (-6, 1)) → t = 4 :=
-by
-  sorry
-
-end point_on_line_l79_79773
-
-
-namespace cos_48_eq_sqrt2_over_2_l79_79354
-
-theorem cos_48_eq_sqrt2_over_2 : 
-  ∃ (y : ℝ), y = cos 48 ∧ y = sqrt 2 / 2 :=
-by
-  sorry
-
-end cos_48_eq_sqrt2_over_2_l79_79354
-
-
-namespace valid_combinations_count_l79_79721
-
--- Definitions of the roots, minerals, and incompatibilities
-def roots : Finset String := {"root1", "root2", "root3", "root4"}
-def minerals : Finset String := {"mineral1", "mineral2", "mineral3", "mineral4", "mineral5", "mineral6"}
-
--- Incompatibility definitions
-def incompatible_with_root1 : Finset String := {"mineral1", "mineral2"}
-def incompatible_with_root2_and_root3 : String := "mineral3"
-
--- We need to prove the number of valid combinations is 20
-theorem valid_combinations_count :
-  let total_combinations := Finset.card roots * Finset.card minerals in
-  let incompatible_combinations := Finset.card incompatible_with_root1 + 2 in
-  total_combinations - incompatible_combinations = 20 :=
-by
-  -- Add your proof here
-  sorry
-
-end valid_combinations_count_l79_79721
-
-
-namespace divisibility_criterion_l79_79945
-
-theorem divisibility_criterion :
-  (∃ x : ℕ, 10 ≤ x ∧ x < 100 ∧ (1207 % x = 0) ∧
-  (let a := x / 10 in let b := x % 10 in a^3 + b^3 = 344)) ↔
-  (1207 % 17 = 0 ∧ let a1 := 1 in let b1 := 7 in a1^3 + b1^3 = 344) ∨
-  (1207 % 71 = 0 ∧ let a2 := 7 in let b2 := 1 in a2^3 + b2^3 = 344) :=
-by sorry
-
-end divisibility_criterion_l79_79945
-
-
-namespace geometric_series_ratio_half_l79_79206
-
-theorem geometric_series_ratio_half (a r S : ℝ) (hS : S = a / (1 - r)) 
-  (h_ratio : (ar^4) / (1 - r) = S / 64) : r = 1 / 2 :=
-by
-  sorry
-
-end geometric_series_ratio_half_l79_79206
-
-
-namespace point_on_graph_l79_79683
-
-def f (a : ℝ) (x : ℝ) : ℝ := log a (2 * x + 3) + 2
-
-theorem point_on_graph (a : ℝ) (h₀ : 0 < a) (h₁ : a ≠ 1) :
-  f a (-1) = 2 :=
+theorem moving_circle_trajectory (x y : ℝ) 
+  (fixed_circle : x^2 + y^2 = 4): 
+  (x^2 + y^2 = 9) ∨ (x^2 + y^2 = 1) :=
 sorry
 
-end point_on_graph_l79_79683
+end moving_circle_trajectory_l79_79407
 
 
-namespace rectangle_perimeter_l79_79618
+namespace number_of_valid_n_l79_79094
 
-theorem rectangle_perimeter (AB BK : ℝ) 
-  (h_perimeter : 4 * (AB + BK + 17) = 180)
-  (h_division : BK = BK) : 
-  2 * (2 * AB + 2 * BK) = 112 :=
-by
-  have h_AB_BK_sum : AB + BK = 28, from sorry,
-  rw h_AB_BK_sum,
-  have h_2AB_2BK : 2 * (2 * AB + 2 * BK) = 2 * (2 * 28), from sorry,
-  rw h_2AB_2BK,
-  norm_num
+-- The definition for determining the number of positive integers n ≤ 2000 that can be represented as
+-- floor(x) + floor(4x) + floor(5x) = n for some real number x.
 
-end rectangle_perimeter_l79_79618
+noncomputable def count_valid_n : ℕ :=
+  (200 : ℕ) * 3 + (200 : ℕ) * 2 + 1 + 1
 
-
-namespace largest_interesting_number_is_correct_l79_79698
-
-def is_interesting (n : ℕ) : Prop :=
-  let digits := n.digits
-  (∀ i j, i ≠ j → digits.nth i ≠ digits.nth j) ∧
-  (∀ i, i < digits.length - 1 → is_square ((digits.nth i + digits.nth (i + 1)) : ℕ))
-
-def largest_interesting_number : ℕ :=
-6310972
-
-theorem largest_interesting_number_is_correct : ∀ n : ℕ, is_interesting n → n ≤ largest_interesting_number :=
-sorry
-
-end largest_interesting_number_is_correct_l79_79698
-
-
-namespace distance_of_canteen_from_each_camp_l79_79313
-
-noncomputable def distanceFromCanteen (distGtoRoad distBtoG : ℝ) : ℝ :=
-  let hypotenuse := Real.sqrt (distGtoRoad ^ 2 + distBtoG ^ 2)
-  hypotenuse / 2
-
-theorem distance_of_canteen_from_each_camp :
-  distanceFromCanteen 360 800 = 438.6 :=
-by
-  sorry -- The proof is omitted but must show that this statement is valid.
-
-end distance_of_canteen_from_each_camp_l79_79313
-
-
-namespace payment_for_400_payment_for_600_payment_for_x_200_to_500_payment_for_x_500_or_more_total_payment_for_a_l79_79689
-
-noncomputable section
-
--- Define the discount conditions
-def actual_payment (amount : ℕ) : ℕ :=
-  if amount < 200 then
-    amount
-  else if amount < 500 then
-    amount * 9 / 10
-  else
-    450 + (amount - 500) * 8 / 10
-
--- Prove the instances for specific purchases
-theorem payment_for_400 : actual_payment 400 = 360 := by sorry
-theorem payment_for_600 : actual_payment 600 = 530 := by sorry
-
--- Define the algebraic expressions for general purchases
-def actual_payment_algebra (x : ℕ) : ℕ :=
-  if x < 500 then
-    x * 9 / 10
-  else
-    450 + (x - 500) * 8 / 10
-
--- Prove for the algebraic expressions
-theorem payment_for_x_200_to_500 (x : ℕ) (h₁ : 200 ≤ x) (h₂ : x < 500) : actual_payment_algebra x = x * 9 / 10 := by sorry
-theorem payment_for_x_500_or_more (x : ℕ) (h : x ≥ 500) : actual_payment_algebra x = 450 + (x - 500) * 8 / 10 := by sorry
-
--- Define the conditions for two transactions
-def total_payment_for_two (a b : ℕ) (h₁ : 200 < a) (h₂ : a < 300) (h₃: a + b = 820): ℕ :=
-  actual_payment a + actual_payment b
-
--- Prove the total payment for a given 'a' and total sum 820
-theorem total_payment_for_a (a : ℕ) (h₁ : 200 < a) (h₂ : a < 300) (h₃ : a + (820 - a) = 820) : total_payment_for_two a (820 - a) h₁ h₂ h₃ = 0.1 * a + 706 := by sorry
-
-end payment_for_400_payment_for_600_payment_for_x_200_to_500_payment_for_x_500_or_more_total_payment_for_a_l79_79689
-
-
-namespace quadratic_completion_l79_79380
-
-theorem quadratic_completion (x : ℝ) : 
-  ∃ a h k : ℝ, a = 1 ∧ h = 4 ∧ k = -13 ∧ x^2 - 8x + 3 = a * (x - h)^2 + k :=
-by 
-  use 1, 4, -13
-  -- Proof steps will go here
+theorem number_of_valid_n : count_valid_n = 802 :=
   sorry
 
-end quadratic_completion_l79_79380
+end number_of_valid_n_l79_79094
 
 
-namespace log_computation_cannot_be_direct_l79_79501
+namespace daria_needs_to_earn_more_money_l79_79842
 
-theorem log_computation_cannot_be_direct (log7 log8 : ℝ)
-    (h1 : log7 ≈ 0.8451)
-    (h2 : log8 ≈ 0.9031) :
-    ¬ ( ∃ (log4 : ℝ), (log4 = 2 * (1 / 3 * log8)) ∧ (log28 = log7 + log4) ) :=
-by sorry
+noncomputable def moneyNeeded (ticket_cost : ℕ) (discount : ℕ) (gift_card : ℕ) 
+  (transport_cost : ℕ) (parking_cost : ℕ) (tshirt_cost : ℕ) (current_money : ℕ) (tickets : ℕ) : ℕ :=
+  let discounted_ticket_price := ticket_cost - (ticket_cost * discount / 100)
+  let total_ticket_cost := discounted_ticket_price * tickets
+  let ticket_cost_after_gift_card := total_ticket_cost - gift_card
+  let total_cost := ticket_cost_after_gift_card + transport_cost + parking_cost + tshirt_cost
+  total_cost - current_money
 
-end log_computation_cannot_be_direct_l79_79501
-
-
-namespace incorrect_proposition_B_l79_79151
-
--- Definition of the complex number z
-def z : ℂ := 1 + complex.i
-
--- Proposition A (correct)
-def prop_A := complex.abs z = real.sqrt 2
-
--- Proposition B (incorrect)
-def prop_B := complex.im z = complex.i
-
--- Proposition C (correct)
-def prop_C := (z.re > 0) ∧ (z.im > 0)
-
--- Proposition D (correct)
-def prop_D := complex.conj z = 1 - complex.i
-
--- Theorem: Proposition B is incorrect
-theorem incorrect_proposition_B : prop_B = false := 
-sorry
-
-end incorrect_proposition_B_l79_79151
-
-
-namespace fourth_side_of_cyclic_quadrilateral_l79_79158
-
-variable (A B C D : Type) [MetricSpace A] [MetricSpace B] [MetricSpace C] [MetricSpace D]
-
-def inscribed_cyclic_quadrilateral (circumradius : ℝ) (sides_length : ℝ) :=
-  (circumradius = 2 * Real.sqrt 2) ∧ 
-  ((dist A B = sides_length) ∧ (dist B C = sides_length) ∧ (dist C D = sides_length))
-
-theorem fourth_side_of_cyclic_quadrilateral {A B C D : Type} [MetricSpace A] [MetricSpace B] [MetricSpace C] [MetricSpace D]
-  (circumradius := 2 * Real.sqrt 2) (sides_length := 2) :
-  inscribed_cyclic_quadrilateral {circumradius} {sides_length} →
-  dist A D = 5 :=
+theorem daria_needs_to_earn_more_money :
+  moneyNeeded 90 10 50 20 10 25 189 6 = 302 :=
 by
   sorry
 
-end fourth_side_of_cyclic_quadrilateral_l79_79158
-
-
-namespace other_root_is_neg4_l79_79445
-
-theorem other_root_is_neg4 (m : ℝ) (h : (-1)^2 + 5 * (-1) + m = 0) : (-1 + -4 = -5) := by
-  have h1 : 1 - 5 + m = 0 := by rw [sq_neg_one, mul_neg_one]; exact h
-  have h2 : -4 = -5 + 1 := by mini_solver
-  rw neg_add_eq_sub
-  exact h2
-  sorry
-
-end other_root_is_neg4_l79_79445
-
-
-namespace number_of_pairs_l79_79461
-
-theorem number_of_pairs (n : ℕ) (h : n = 2835) :
-  ∃ (count : ℕ), count = 20 ∧
-  (∀ (x y : ℕ), (0 < x ∧ 0 < y ∧ x < y ∧ (x^2 + y^2) % (x + y) = 0 ∧ (x^2 + y^2) / (x + y) ∣ n) → count = 20) := 
-sorry
-
-end number_of_pairs_l79_79461
-
-
-namespace positive_real_solution_l79_79855
-
-def polynomial (x : ℝ) : ℝ := x^4 + 10*x^3 - 2*x^2 + 12*x - 9
-
-theorem positive_real_solution (h : polynomial 1 = 0) : polynomial 1 > 0 := sorry
-
-end positive_real_solution_l79_79855
-
-
-namespace max_consecutive_sum_lt_1000_l79_79238
-
-theorem max_consecutive_sum_lt_1000 : ∃ (n : ℕ), (∀ (m : ℕ), m > n → (m * (m + 1)) / 2 ≥ 1000) ∧ (∀ (k : ℕ), k ≤ n → (k * (k + 1)) / 2 < 1000) :=
-begin
-  sorry,
-end
-
-end max_consecutive_sum_lt_1000_l79_79238
-
-
-namespace area_of_triangle_l79_79886
-
-theorem area_of_triangle (BC : ℝ) (h1 : BC = 8 * Real.sqrt 2) (h2 : ∠B = 90) (h3 : ∠A = 45) (h4 : ∠C = 45) :
-  let AB := BC / (Real.sqrt 2)
-  let AC := AB
-  (1 / 2) * AB * AC = 32 := by
-  unfold let_def
-  sorry
-
-end area_of_triangle_l79_79886
-
-
-namespace water_leftover_l79_79992
-
-theorem water_leftover (players : ℕ) (total_water_l : ℕ) (water_per_player_ml : ℕ) (spill_water_ml : ℕ)
-  (h1 : players = 30) 
-  (h2 : total_water_l = 8) 
-  (h3 : water_per_player_ml = 200) 
-  (h4 : spill_water_ml = 250) : 
-  (total_water_l * 1000 - (players * water_per_player_ml + spill_water_ml) = 1750) :=
-by
-  -- conversion of total water to milliliters
-  let total_water_ml := total_water_l * 1000
-  -- calculation of total water used for players
-  let total_water_used_for_players := players * water_per_player_ml
-  -- calculation of total water including spill
-  let total_water_used := total_water_used_for_players + spill_water_ml
-  -- leftover water calculation
-  have calculation : total_water_l * 1000 - (players * water_per_player_ml + spill_water_ml) = total_water_ml - total_water_used, by
-    rw [total_water_ml, total_water_used, total_water_used_for_players]
-  rw calculation
-  -- conclusion by substituting known values
-  rw [h1, h2, h3, h4]
-  norm_num
-
-end water_leftover_l79_79992
-
-
-namespace water_left_over_l79_79994
-
-theorem water_left_over (players : ℕ) (initial_liters : ℕ) (milliliters_per_player : ℕ) (water_spill_ml : ℕ) :
-  players = 30 → initial_liters = 8 → milliliters_per_player = 200 → water_spill_ml = 250 →
-  (initial_liters * 1000) - (players * milliliters_per_player + water_spill_ml) = 1750 :=
-by
-  intros h1 h2 h3 h4
-  rw [h1, h2, h3, h4]
-  change 8 * 1000 - (30 * 200 + 250) = 1750
-  norm_num
-  sorry
-
-end water_left_over_l79_79994
-
-
-namespace max_consecutive_integers_sum_lt_1000_l79_79244
-
-theorem max_consecutive_integers_sum_lt_1000
-  (n : ℕ)
-  (h : (n * (n + 1)) / 2 < 1000) : n ≤ 44 :=
-by
-  sorry
-
-end max_consecutive_integers_sum_lt_1000_l79_79244
-
-
-namespace mrs_petersons_change_l79_79112
-
--- Define the conditions
-def num_tumblers : ℕ := 10
-def cost_per_tumbler : ℕ := 45
-def discount_rate : ℚ := 0.10
-def num_bills : ℕ := 5
-def value_per_bill : ℕ := 100
-
--- Formulate the proof statement
-theorem mrs_petersons_change :
-  let total_cost_before_discount := num_tumblers * cost_per_tumbler
-  let discount_amount := total_cost_before_discount * discount_rate
-  let total_cost_after_discount := total_cost_before_discount - discount_amount
-  let total_amount_paid := num_bills * value_per_bill
-  let change_received := total_amount_paid - total_cost_after_discount
-  change_received = 95 := by sorry
-
-end mrs_petersons_change_l79_79112
-
-
-namespace geometric_series_common_ratio_l79_79177
-
-theorem geometric_series_common_ratio (a r S : ℝ) (h₁ : S = a / (1 - r)) (h₂ : ar^4 / (1 - r) = S / 64) : r = 1 / 2 :=
-  by
-  sorry
-
-end geometric_series_common_ratio_l79_79177
-
-
-namespace coplanar_vectors_lambda_eq_one_l79_79405
-
-open Real
-
-def vector_a : Vector3 := ⟨2, -1, 3⟩
-def vector_b : Vector3 := ⟨-1, 4, -2⟩
-def vector_c (λ : Real) : Vector3 := ⟨1, 3, λ⟩
-
-theorem coplanar_vectors_lambda_eq_one (λ : Real) :
-  (λ : Real) → (⟨1, 3, λ⟩ ∈ span ℝ {⟨2, -1, 3⟩, ⟨-1, 4, -2⟩}) → λ = 1 :=
-by
-  sorry
-
-end coplanar_vectors_lambda_eq_one_l79_79405
-
-
-namespace distinct_real_roots_interval_l79_79483
-
-open Set Real
-
-theorem distinct_real_roots_interval (m : ℝ) : 
-  (∃ (r1 r2 : ℝ), r1 ≠ r2 ∧ IsRoot (λ x => x^2 + m * x + 9) r1 ∧ IsRoot (λ x => x^2 + m * x + 9) r2) ↔ 
-  m ∈ Iio (-6) ∪ Ioi 6 :=
-sorry
-
-end distinct_real_roots_interval_l79_79483
-
-
-namespace bounded_region_area_correct_l79_79779
-
-open Real
-
-def bounded_region_area : ℝ :=
-  let circle_radius := 3
-  let square_half_diagonal := 3 * sqrt 2 / 2
-  let sector_area := (π * circle_radius ^ 2) / 4
-  let triangle_area := (1/2) * square_half_diagonal ^ 2
-  in sector_area - triangle_area
-
-theorem bounded_region_area_correct :
-  bounded_region_area = 9 * (π - 1) / 4 :=
-by
-  sorry
-
-end bounded_region_area_correct_l79_79779
-
-
-namespace geometric_series_common_ratio_l79_79207
-
-theorem geometric_series_common_ratio (a r S : ℝ) 
-  (hS : S = a / (1 - r)) 
-  (h64 : (a * r^4) / (1 - r) = S / 64) : 
-  r = 1 / 2 :=
-by
-  sorry
-
-end geometric_series_common_ratio_l79_79207
-
-
-namespace find_a_l79_79835
-
-theorem find_a (a : ℝ) : (∀ x : ℝ, (x^2 - 4 * x + a) + |x - 3| ≤ 5) → (∃ x : ℝ, x = 3) → a = 8 :=
-by
-  sorry
-
-end find_a_l79_79835
-
-
-namespace hollow_circles_in_first_2003_circles_l79_79713
-
--- Define the sequence of circles as a list for simplicity
-def sequence : List Char := ['●', '○', '●', '●', '○', '●', '●', '●', '○', '●', '●', '●', '●', 
-                            '○', '●', '●', '●', '●', '●', '○', '●', '●', '●', '●', '●', '○']
-
--- Define the length of the repeating sequence
-def sequence_length : Nat := sequence.length
-
--- Define the number of hollow circles in the sequence
-def hollow_circles_in_sequence : Nat := sequence.filter (fun c => c = '○').length
-
--- Function to count hollow circles in the first n elements of the sequence
-def hollow_circles (n : Nat) : Nat :=
-  let full_sequences := n / sequence_length
-  let remainder := n % sequence_length
-  let full_hollow_circles := full_sequences * hollow_circles_in_sequence
-  let partial_sequence_hollow_circles := (sequence.take remainder).filter (fun c => c = '○').length
-  full_hollow_circles + partial_sequence_hollow_circles
-
--- Theorem stating the number of hollow circles in the first 2003 circles is 446
-theorem hollow_circles_in_first_2003_circles : hollow_circles 2003 = 446 :=
-  by sorry
-
-end hollow_circles_in_first_2003_circles_l79_79713
-
-
-namespace inverse_function_result_l79_79102
-
-open Function
-
-theorem inverse_function_result (f h : ℂ → ℂ) (hf_inv : ∀ x, f (f⁻¹ x) = x) (hhx : ∀ x, f⁻¹ (h x) = 2 * x^2 + 4) :
-  h⁻¹ (f 3) = ± (Complex.I / Real.sqrt 2) :=
-by
-  sorry
-
-end inverse_function_result_l79_79102
-
-
-namespace find_number_l79_79649
-
-theorem find_number :
-  ∃ (x : ℕ), (sqrt x / 2) = 2 :=
-by
-  use 16
-  have h1 : sqrt 16 = 4 := by sorry
-  have h2 : 4 / 2 = 2 := by sorry
-  rw [h1] at *
-  exact h2
-
-end find_number_l79_79649
-
-
-namespace cross_product_of_a_and_b_l79_79384
-
-def vector := ℝ × ℝ × ℝ 
-
-def a : vector := (4, 3, -7)
-def b : vector := (2, -1, 4)
-
-def cross_product (v₁ v₂ : vector) : vector :=
-  (v₁.2 * v₂.3 - v₁.3 * v₂.2,
-   v₁.3 * v₂.1 - v₁.1 * v₂.3,
-   v₁.1 * v₂.2 - v₁.2 * v₂.1)
-
-theorem cross_product_of_a_and_b :
-  cross_product a b = (5, -30, -10) :=
-by sorry
-
-end cross_product_of_a_and_b_l79_79384
-
-
-namespace pyramid_integer_volume_values_l79_79280
-
-open Real
-
-theorem pyramid_integer_volume_values :
-  let AE := 1024
-  let AB := 640
-  let height_diff := 12
-  let max_k := 1024 / height_diff
-  (∃ k : ℕ, 0 ≤ k ∧ k ≤ max_k ∧ 1024 - k * height_diff = some h) ∧
-      (volume_of_pyramid AE AB h) ∈ ℤ :=
-  sorry
-
-end pyramid_integer_volume_values_l79_79280
-
-
-namespace perpendicular_lines_m_l79_79869
-
-open Real
-
-theorem perpendicular_lines_m (m : ℝ) :
-  let l1 := λ x y : ℝ, x + 2 * m * y - 1 = 0
-  let l2 := λ x y : ℝ, (3 * m - 1) * x - m * y - 1 = 0
-  (∀ x y, l1 x y ∧ l2 x y → (3 * m - 1) * x - m * (-(1 / (2 * m)) * x + y) - 1 = 0) ↔ m = 1 ∨ m = 1 / 2 := by
-sorry
-
-end perpendicular_lines_m_l79_79869
-
-
-namespace number_sum_values_f4_l79_79089
-
-theorem number_sum_values_f4 (f : ℝ → ℝ)
-  (H : ∀ (x y z : ℝ), f (x^2 + y^2 + z * f z) = x * f x + y^2 + z * f y) :
-  let n := 2 in let s := 16 in n * s = 32 :=
-by
-  let n := 2
-  let s := 16
-  show n * s = 32
-  sorry
-
-end number_sum_values_f4_l79_79089
-
-
-namespace max_consecutive_sum_le_1000_l79_79233
-
-theorem max_consecutive_sum_le_1000 : 
-  ∃ (n : ℕ), (∀ m : ℕ, m > n → ∑ k in finset.range (m + 1), k > 1000) ∧
-             ∑ k in finset.range (n + 1), k ≤ 1000 :=
-by
-  sorry
-
-end max_consecutive_sum_le_1000_l79_79233
-
-
-namespace g_of_g_of_g_of_g_of_3_l79_79076
-
-def g (x : ℕ) : ℕ :=
-if x % 3 = 0 then x / 3 else x^2 + 2
-
-theorem g_of_g_of_g_of_g_of_3 : g (g (g (g 3))) = 3 :=
-by sorry
-
-end g_of_g_of_g_of_g_of_3_l79_79076
-
-
-namespace radius_of_circle_in_xy_plane_l79_79986
-
-theorem radius_of_circle_in_xy_plane (theta : ℝ) :
-  let x := 2 * Real.sin (Real.pi / 3) * Real.cos theta,
-      y := 2 * Real.sin (Real.pi / 3) * Real.sin theta,
-      radius := Real.sqrt (x^2 + y^2)
-  in radius = Real.sqrt 3 :=
-by
-  have x_def : x = 2 * Real.sin (Real.pi / 3) * Real.cos theta := rfl
-  have y_def : y = 2 * Real.sin (Real.pi / 3) * Real.sin theta := rfl
-  have radius_def : radius = Real.sqrt (x^2 + y^2) := rfl
-  sorry
-
-end radius_of_circle_in_xy_plane_l79_79986
-
-
-namespace cos_48_conjecture_l79_79355
-
-noncomputable def cos_24 := Real.cos (24 * Real.pi / 180)
-noncomputable def cos_6 := Real.cos (6 * Real.pi / 180)
-
-theorem cos_48_conjecture :
-  let c := cos_24,
-      d := Real.cos (48 * Real.pi / 180),
-      e := cos_6 in
-  d = 2 * c^2 - 1 ∧
-  -e = 2 * d^2 - 1 ∧
-  -e = 4 * c^3 - 3 * c →
-  d = Real.cos (48 * Real.pi / 180) :=
-by
-  intro h
-  sorry
-
-end cos_48_conjecture_l79_79355
-
-
-namespace x_y_divisible_by_3_l79_79134
-
-theorem x_y_divisible_by_3
-    (x y z t : ℤ)
-    (h : x^3 + y^3 = 3 * (z^3 + t^3)) :
-    (3 ∣ x) ∧ (3 ∣ y) :=
-by sorry
-
-end x_y_divisible_by_3_l79_79134
-
-
-namespace exists_non_negative_partial_sum_l79_79001
-
-theorem exists_non_negative_partial_sum (n : ℕ) (c : Fin (2 * n) → ℤ)
-  (h_sum : (Finset.univ.sum (λ i : Fin (2 * n), c i)) = 0)
-  (h_eq : ∀ j : Fin n, c j = c (⟨n + (j : ℕ), Nat.add_lt_add_right j.2 n⟩)) :
-  ∃ k : Fin n, ∀ j : Fin n, (Finset.univ.filter (λ i, i.val < k + j + 1)).sum (λ i, c ⟨i, by apply Nat.lt_of_lt_pred; exact i.2⟩) ≥ 0 := 
-sorry
-
-end exists_non_negative_partial_sum_l79_79001
-
-
-namespace find_m_l79_79850
-
-open Set
-
-theorem find_m (m : ℝ) : 
-  let A := {-1, 2, 2*m - 1}
-  let B := {2, m^2}
-  (B ⊆ A) -> (m = 1) :=
-by
-  intro h
-  have : m ∈ {x | x ^ 2 = 2 * x - 1}
-  sorry
-
-end find_m_l79_79850
-
-
-namespace maximum_value_of_M_l79_79796
-
-open Real
-
-def parabola_through_points (a b c P : ℝ) (hP : P ≠ 0) : Prop :=
-  (0 = a * 0 * 0 + b * 0 + c) ∧
-  (0 = a * 3 * P * 3 * P + b * 3 * P + c) ∧
-  (45 = a * (3 * P - 1) * (3 * P - 2) + b * (3 * P - 1) + c)
-
-def vertex_x (P : ℝ) : ℝ := 3 * P / 2
-
-def vertex_y (a P : ℝ) : ℝ := -a * (9 * P^2 / 4)
-
-def sum_of_vertex (a P : ℝ) : ℝ := vertex_x P + vertex_y a P
-
-def max_sum_vertex : ℝ := 138
-
-theorem maximum_value_of_M (a P : ℝ) (hP : P ≠ 0) (h1 : parabola_through_points a 0 0 P hP) :
-  ∃ (P : ℝ), sum_of_vertex a P = max_sum_vertex :=
-by
-  use 2
-  sorry
-
-end maximum_value_of_M_l79_79796
-
-
-namespace hyperbola_eccentricity_l79_79846
-
-theorem hyperbola_eccentricity (a b : ℝ) (h_a : a > 0) (h_b : b > 0)
-    (hyperbola : ∀ x y, x^2 / a^2 - y^2 / b^2 = 1 → True)
-    (focus : ∀ F : ℝ × ℝ, F = (- (sqrt 10) / 2, 0) → True)
-    (circle : ∀ x y, (x - (sqrt 10) / 2)^2 + y^2 = 1 → True) :
-  let c := (sqrt 10) / 2 in
-  let e := c / a in
-  e = (sqrt 10) / 2 := sorry
-
-end hyperbola_eccentricity_l79_79846
-
-
-namespace star_pentagon_angle_sum_l79_79612
-
-noncomputable def star_pentagon_sum_of_angles (A B C D E : Type*) [HasAngle A B C] [HasAngle B C D] [HasAngle C D E] [HasAngle D E A] [HasAngle E A B] : Prop :=
-  (angle A B C) + (angle B C D) + (angle C D E) + (angle D E A) + (angle E A B) = 180
-
-theorem star_pentagon_angle_sum (A B C D E : Type*) [HasAngle A B C] [HasAngle B C D] [HasAngle C D E] [HasAngle D E A] [HasAngle E A B] :
-  star_pentagon_sum_of_angles A B C D E := 
-sorry
-
-end star_pentagon_angle_sum_l79_79612
-
-
-namespace arithmetic_sequence_general_term_l79_79837
-
-variable {a : ℕ → ℤ}
-
-def arithmetic_sequence (a : ℕ → ℤ) := 
-  ∃ d a1, ∀ n, a n = a1 + d * (n - 1)
-
-def sum_n_terms (a : ℕ → ℤ) (n : ℕ) := 
-  n * (a 1 + a n) / 2
-
-theorem arithmetic_sequence_general_term 
-  (h₁ : a 1 + a 2 = 10)
-  (h₂ : a 5 = a 3 + 4)
-  {n : ℕ} :
-  ∃ d a1, (∀ n, a n = a1 + d * (n - 1)) ∧ 
-  (a n = 2 * n + 2) ∧ 
-  (∑ i in range (k + 1), a i < 2 * a k + a 2) → k = 1 := 
-sorry
-
-end arithmetic_sequence_general_term_l79_79837
-
-
-namespace integral_sqrt_expression_l79_79867
-
-theorem integral_sqrt_expression :
-  ∀ (n : ℕ), (∃ r : ℕ, n - (5 / 2) * r = 0) →
-  (∀ x, -(5 : ℝ) ≤ x ∧ x ≤ (5 : ℝ) → ∫ y in -5..5, real.sqrt ((25 : ℝ) - y^2) = (25 * (real.pi / 2))) := 
-sorry
-
-end integral_sqrt_expression_l79_79867
-
-
-namespace geometric_series_common_ratio_l79_79210
-
-theorem geometric_series_common_ratio (a r S : ℝ) 
-  (hS : S = a / (1 - r)) 
-  (h64 : (a * r^4) / (1 - r) = S / 64) : 
-  r = 1 / 2 :=
-by
-  sorry
-
-end geometric_series_common_ratio_l79_79210
-
-
-namespace simplify_expression_l79_79589
-
-variable (a : ℝ)
-
-theorem simplify_expression (h1 : 0 < a ∨ a < 0) : a * Real.sqrt (-(1 / a)) = -Real.sqrt (-a) :=
-sorry
-
-end simplify_expression_l79_79589
-
-
-namespace max_value_of_f_in_interval_l79_79391
-
-def f (x : ℝ) := -x^2 + 6*x - 10
-
-theorem max_value_of_f_in_interval : 
-  ∃ x ∈ set.Icc 0 4, (∀ y ∈ set.Icc 0 4, f y ≤ f x) ∧ f x = -1 :=
-sorry
-
-end max_value_of_f_in_interval_l79_79391
-
-
-namespace reciprocal_of_six_times_eq_twelve_l79_79493
-
-theorem reciprocal_of_six_times_eq_twelve :
-  (∃ x : ℝ, 6 * x = 12) → (150 * (1 / 2)) = 75 :=
-by
-  intro h,
-  cases h with x hx,
-  have hx_value : x = 2,
-  { linarith },
-  rw hx_value at *,
-  sorry
-
-end reciprocal_of_six_times_eq_twelve_l79_79493
-
-
-namespace min_value_of_g_min_value_at_1_l79_79396
-
-noncomputable def g (x : ℝ) : ℝ := (5 * x^2 - 10 * x + 24) / (7 * (1 + 2 * x))
-
-theorem min_value_of_g :
-  ∀ x : ℝ, x ≥ 1 → g x ≥ (29 / 21) :=
-begin
-  sorry
-end
-
-theorem min_value_at_1 :
-  g 1 = (29 / 21) :=
-begin
-  sorry
-end
-
-end min_value_of_g_min_value_at_1_l79_79396
-
-
-namespace geometric_series_common_ratio_l79_79193
-
-theorem geometric_series_common_ratio (a r : ℝ) (h₁ : r ≠ 1)
-    (h₂ : a / (1 - r) = 64 * (a * r^4) / (1 - r)) : r = 1/2 :=
-by
-  have h₃ : 1 = 64 * r^4 := by
-    have : 1 - r ≠ 0 := by linarith
-    field_simp at h₂; assumption
-  sorry
-
-end geometric_series_common_ratio_l79_79193
-
-
-namespace classical_mechanics_incorrect_is_misunderstood_l79_79988
-
-theorem classical_mechanics_incorrect_is_misunderstood
-  (cond1 : ¬ (∀ t, ClassicalMechanics t))
-  (cond2 : ∀ (v : ℝ) (m : ℝ), (v < const_high_speed ∧ m > const_macroscopic_mass) → applicable_classical_mechanics v m)
-  (cond3 : ∀ p, exploring_scientific_theories_endless p) :
-  misunderstood (ClassicalMechanics = incorrect_scientific_theory) :=
-sorry
-
-end classical_mechanics_incorrect_is_misunderstood_l79_79988
-
-
-namespace problem_statement_l79_79104
-
-noncomputable def function1 (x : ℝ) : ℝ := 2 * x
-noncomputable def function3 (x : ℝ) : ℝ := Real.log x / Real.log 2
-
-def associated_with_constant (f : ℝ → ℝ) (c : ℝ) (D : set ℝ) : Prop :=
-  ∀ x1 ∈ D, ∃! x2 ∈ D, f x1 + f x2 = c
-
-theorem problem_statement :
-  associated_with_constant function1 4 set.univ ∧
-  associated_with_constant function3 4 {x : ℝ | 0 < x} :=
-by
-  sorry
-
-end problem_statement_l79_79104
-
-
-namespace find_special_number_l79_79774
-
-def reverse_digits (n : ℕ) : ℕ := sorry -- Assume reversing digits is done here
-
-theorem find_special_number :
-    ∃ K F : ℕ, K = 9 * F ∧ F = reverse_digits K ∧ K = 9801 ∧ K < 100000 ∧ F < 10000 :=
-begin
-    sorry
-end
-
-end find_special_number_l79_79774
-
-
-namespace max_consecutive_integers_sum_lt_1000_l79_79258
-
-theorem max_consecutive_integers_sum_lt_1000 :
-  ∃ n : ℕ, (∀ m : ℕ, m ≤ n → m * (m + 1) / 2 < 1000) ∧ (n * (n + 1) / 2 < 1000) ∧ ¬((n + 1) * (n + 2) / 2 < 1000) :=
-sorry
-
-end max_consecutive_integers_sum_lt_1000_l79_79258
-
-
-namespace Rs_parallel_to_AB_l79_79144
-
-variables {A B C H M N P Q R S : Type*}
-variables [is_right_triangle C A B]
-variables [is_altitude C H (line_through A B)]
-variables [is_angle_bisector (angle_at_vertex A) A M]
-variables [is_angle_bisector (angle_at_vertex B) B N]
-variables [line_intersects_line (line_through C H) (line_through A M) P]
-variables [line_intersects_line (line_through C H) (line_through B N) Q]
-variables [is_midpoint P M R]
-variables [is_midpoint Q N S]
-
-theorem Rs_parallel_to_AB 
-  (h : is_right_triangle C A B)
-  (hCH : is_altitude C H (line_through A B))
-  (hAM : is_angle_bisector A M)
-  (hBN : is_angle_bisector B N)
-  (hP : line_intersects_line (line_through C H) (line_through A M) P)
-  (hQ : line_intersects_line (line_through C H) (line_through B N) Q)
-  (hR : is_midpoint P M R)
-  (hS : is_midpoint Q N S) : 
-  is_parallel (line_through R S) (line_through A B) :=
-begin
-  sorry
-end
-
-end Rs_parallel_to_AB_l79_79144
-
-
-namespace minimum_value_proof_l79_79541
-
-noncomputable def minimum_value (a b c : ℝ) (h : a + b + c = 6) : ℝ :=
-  9 / a + 4 / b + 1 / c
-
-theorem minimum_value_proof (a b c : ℝ) (h₀ : a > 0) (h₁ : b > 0) (h₂ : c > 0) (h₃ : a + b + c = 6) :
-  (minimum_value a b c h₃) = 6 :=
-sorry
-
-end minimum_value_proof_l79_79541
-
-
-namespace betty_sugar_amount_l79_79271
-
--- Define the ratios and the given amount of eggs
-variable (sugar_rat : ℚ) (vanilla_rat : ℚ) (egg_rat : ℚ) (eggs_used : ℕ)
-
--- The given conditions
-def conditions :=
-  sugar_rat = 1 / 4 ∧
-  vanilla_rat = 1 / 2 ∧
-  egg_rat = 1 / 2 ∧
-  eggs_used = 8
-
--- The resulting amount of sugar needed
-def amount_of_sugar (sugar_rat vanilla_rat egg_rat : ℚ) (eggs_used : ℕ) :=
-  (eggs_used * vanilla_rat) * (1 / vanilla_rat) * sugar_rat
-
--- The proof problem
-theorem betty_sugar_amount : conditions ∧ amount_of_sugar 1 / 4 1 / 2 1 / 2 8 = 2 :=
-by
-  sorry
-
-end betty_sugar_amount_l79_79271
-
-
-namespace question1_part1_question1_part2_question1_part3_question1_part4_question2_question3_l79_79742
-
--- Definitions for the data
-
-def classA_scores : List ℕ := [90, 90, 70, 90, 100, 80, 80, 90, 95, 65]
-def classB_scores : List ℕ := [95, 70, 80, 90, 70, 80, 95, 80, 100, 90]
-
--- Organized data
-def organized_data : (List ℕ × List ℕ) := ([2, 2, 4, 2], [2, 3, 2, 3]) -- format ([Class A], [Class B])
-
--- Definitions for the values to prove
-def a_value : ℕ := 2
-def b_value : ℕ := 85
-def c_value : ℕ := 85
-def d_value : ℕ := 90
-
--- Proof statements
-theorem question1_part1 : (organized_data.snd.nth 2).get_or_else 0 = a_value := by
-  sorry
-
-theorem question1_part2 : (List.sum classB_scores : ℚ) / (List.length classB_scores : ℚ) = b_value := by
-  sorry
-
-theorem question1_part3 : (let sortedB := List.sort (· ≤ ·) classB_scores; let middle := (sortedB.get 4 + sortedB.get 5) / 2; middle : ℚ) = c_value := by
-  sorry
-
-theorem question1_part4 : (classA_scores.mode, 90) = d_value := by
-  sorry
-
--- Class determination based on scores
-def is_above_average (scores : List ℕ) (score : ℕ) : Bool :=
-  score > (List.sort (· ≤ ·) scores).get (scores.length / 2)
-
-theorem question2 : is_above_average classB_scores 90 ∧ ¬is_above_average classA_scores 90 := by
-  sorry
-
--- Estimating number of students scoring above 90 in Class B
-theorem question3 (total_students : ℕ) : (total_students * (3 / 10) : ℚ) = 15 :=
-  by
+end daria_needs_to_earn_more_money_l79_79842
+
+
+namespace total_students_is_45_l79_79022
+
+def num_students_in_class 
+  (excellent_chinese : ℕ) 
+  (excellent_math : ℕ) 
+  (excellent_both : ℕ) 
+  (no_excellent : ℕ) : ℕ :=
+  excellent_chinese + excellent_math - excellent_both + no_excellent
+
+theorem total_students_is_45 
+  (h1 : excellent_chinese = 15)
+  (h2 : excellent_math = 18)
+  (h3 : excellent_both = 8)
+  (h4 : no_excellent = 20) : 
+  num_students_in_class excellent_chinese excellent_math excellent_both no_excellent = 45 := 
+  by 
     sorry
 
-end question1_part1_question1_part2_question1_part3_question1_part4_question2_question3_l79_79742
+end total_students_is_45_l79_79022
 
 
-namespace find_starting_number_l79_79217
+namespace jaewoong_ran_the_most_l79_79026
 
--- Define that there are 15 even integers between a starting number and 40
-def even_integers_range (n : ℕ) : Prop :=
-  ∃ k : ℕ, (1 ≤ k) ∧ (k = 15) ∧ (n + 2*(k-1) = 40)
+def distance_jaewoong : ℕ := 20000 -- Jaewoong's distance in meters
+def distance_seongmin : ℕ := 2600  -- Seongmin's distance in meters
+def distance_eunseong : ℕ := 5000  -- Eunseong's distance in meters
 
--- Proof statement
-theorem find_starting_number : ∃ n : ℕ, even_integers_range n ∧ n = 12 :=
+theorem jaewoong_ran_the_most : distance_jaewoong > distance_seongmin ∧ distance_jaewoong > distance_eunseong := by
+  sorry
+
+end jaewoong_ran_the_most_l79_79026
+
+
+namespace soccer_team_points_l79_79139
+
+theorem soccer_team_points
+  (x y : ℕ)
+  (h1 : x + y = 8)
+  (h2 : 3 * x - y = 12) : 
+  (x + y = 8 ∧ 3 * x - y = 12) :=
+by
+  exact ⟨h1, h2⟩
+
+end soccer_team_points_l79_79139
+
+
+namespace find_circle_center_l79_79065
+
+def circle_center_condition (x y : ℝ) : Prop :=
+  (3 * x - 4 * y = 24 ∨ 3 * x - 4 * y = -12) ∧ 3 * x + 2 * y = 0
+
+theorem find_circle_center :
+  ∃ (x y : ℝ), circle_center_condition x y ∧ (x, y) = (2/3, -1) :=
 by
   sorry
 
-end find_starting_number_l79_79217
+end find_circle_center_l79_79065
 
 
-namespace calculate_volume_of_tetrahedron_l79_79964
+namespace remainder_when_divided_by_x_minus_2_l79_79198
 
-noncomputable def volumeOfTetrahedron (PQ PR PS QR QS RS : ℝ) : ℝ :=
-  let a := PQ
-  let b := PR
-  let c := PS
-  let d := QR
-  let e := QS
-  let f := RS
-  -- Volume formula for a tetrahedron with sides a, b, c, d, e, f
-  have volume := 3*real.sqrt 2
-  volume
+def f (x : ℝ) : ℝ := x^5 - 4 * x^4 + 6 * x^3 + 25 * x^2 - 20 * x - 24
 
-theorem calculate_volume_of_tetrahedron :
-  volumeOfTetrahedron 6 4 5 5 4 (15 / 4 * real.sqrt 2) = 3 * real.sqrt 2 := 
-  sorry
-
-end calculate_volume_of_tetrahedron_l79_79964
-
-
-namespace circle_passing_through_F_O_P_l79_79888
-
-def parabola : set (ℝ × ℝ) := {p | p.2^2 = 4 * p.1}
-
-def focus := (1 : ℝ, 0 : ℝ)
-def origin := (0 : ℝ, 0 : ℝ)
-def P := (4 : ℝ, 4 : ℝ)
-
-theorem circle_passing_through_F_O_P :
-  (P ∈ parabola ∧ dist origin P = 4 * real.sqrt 2) →
-  ∃ D E F, ∀ (x y : ℝ), (x, y).fst = 0 ∧
-    x^2 + y^2 + D * x + E * y + F = 0  ∧ 
-    (1 + D + F = 0) ∧ 
-    (16 + 16 + 4 * D + 4 * E + F = 0) ∧
-    x^2 + y^2 - x - 7 * y = 0 := sorry
-
-end circle_passing_through_F_O_P_l79_79888
-
-
-namespace seventeenth_entry_in_ordered_list_l79_79397
-
-def r_11 (n : ℕ) : ℕ := n % 11
-
-theorem seventeenth_entry_in_ordered_list (n : ℕ) :
-  (n ≥ 0) → (r_11 (6 * n) ≤ 6) → 
-  ∃ m, m = 32 ∧ 
-  (list.filter (λ x, r_11 (6 * x) ≤ 6) (list.range(m))).nth 16 = some n :=
-sorry
-
-end seventeenth_entry_in_ordered_list_l79_79397
-
-
-namespace pie_slice_max_segment_squared_l79_79306
-
-theorem pie_slice_max_segment_squared (d : ℝ) (n : ℕ) (r : ℝ) (angle_deg : ℝ) (M_squared : ℝ) : 
-  d = 20 → 
-  n = 4 → 
-  r = d / 2 → 
-  angle_deg = 360 / n → 
-  M_squared = (r * real.sqrt(2))^2 → 
-  angle_deg = 90 → 
-  M_squared = 200 := by 
-  intros h1 h2 h3 h4 h5 h6
-  rw h1 at h3 
-  rw h2 at h4 
-  simp at h3 
-  rw h4 at h6 
-  simp at h4 
-  rw h6 at h5
-  rw h5
-  simp
-  sorry
-
-end pie_slice_max_segment_squared_l79_79306
-
-
-namespace range_of_a_l79_79430
-
-noncomputable def f : ℝ → ℝ := sorry
-
-def is_even (f : ℝ → ℝ) := ∀ x : ℝ, f x = f (-x)
-def is_monotone_on_nonneg (f : ℝ → ℝ) := ∀ ⦃x y : ℝ⦄, 0 ≤ x → 0 ≤ y → x < y → f x < f y
-
-axiom even_f : is_even f
-axiom monotone_f : is_monotone_on_nonneg f
-
-theorem range_of_a (a : ℝ) (h : f a ≥ f 3) : a ≤ -3 ∨ a ≥ 3 :=
+theorem remainder_when_divided_by_x_minus_2 : f 2 = 52 :=
 by
   sorry
 
-end range_of_a_l79_79430
+end remainder_when_divided_by_x_minus_2_l79_79198
 
 
-namespace max_consecutive_integers_lt_1000_l79_79252
+namespace Shekar_marks_in_English_l79_79299
 
-theorem max_consecutive_integers_lt_1000 : 
-  ∃ n : ℕ, (n * (n + 1)) / 2 < 1000 ∧ ∀ m : ℕ, m > n → (m * (m + 1)) / 2 ≥ 1000 :=
-sorry
-
-end max_consecutive_integers_lt_1000_l79_79252
-
-
-namespace exists_point_between_l79_79124
-
-noncomputable def F (z : ℝ) : ℝ := sorry
-
-theorem exists_point_between (h_strictly_increasing : ∀ {z1 z2 : ℝ}, z1 < z2 → F z1 < F z2)
-    (h_continuous : continuous F)
-    (h_F_at_1 : F 1 = 0)
-    (h_intermediate_value : intermediate_value F 2 3) :
-    ∃ e ∈ Ioo 2 3, F e = 1 :=
-begin
-  sorry
-end
-
-end exists_point_between_l79_79124
-
-
-namespace function_always_passes_through_fixed_point_l79_79154
-
-theorem function_always_passes_through_fixed_point (α : ℝ) : (2 - 1)^α = 1 := 
-by 
-  sorry
-
-end function_always_passes_through_fixed_point_l79_79154
-
-
-namespace lambda_range_l79_79291
-
-noncomputable def PA : ℝ := 1
-noncomputable def PB : ℝ := 1
-noncomputable def PO : ℝ := 2
-noncomputable def PM (λ : ℝ) : ℝ := 2 * λ * PA + (1 - λ) * PB
-
-theorem lambda_range (λ : ℝ) (h1 : λ > 0) (h2 : λ < 2 / 3) : 
-  PM(λ) < 2 := 
+theorem Shekar_marks_in_English 
+  (math_marks : ℕ) (science_marks : ℕ) (socialstudies_marks : ℕ) (biology_marks : ℕ) (average_marks : ℕ) (num_subjects : ℕ) 
+  (mathscore : math_marks = 76)
+  (sciencescore : science_marks = 65)
+  (socialstudiesscore : socialstudies_marks = 82)
+  (biologyscore : biology_marks = 85)
+  (averagescore : average_marks = 74)
+  (numsubjects : num_subjects = 5) :
+  ∃ (english_marks : ℕ), english_marks = 62 :=
 by
   sorry
 
-end lambda_range_l79_79291
+end Shekar_marks_in_English_l79_79299
 
 
-namespace max_difference_y_intersections_l79_79156
+namespace mean_goals_l79_79658
 
--- Define the given equations
-def y1 (x : ℝ) : ℝ := 4 - x^2 + x^4
-def y2 (x : ℝ) : ℝ := 2 + x^2 + x^4
-
--- Define the condition of the intersection points
-def x_values : set ℝ := { x | y1 x = y2 x }
-
--- Prove the maximum difference in the y-coordinates at intersection points is 0
-theorem max_difference_y_intersections : 
-  ∀ x ∈ x_values, |y1 x - y2 x| = 0 :=
+theorem mean_goals :
+  let goals := 2 * 3 + 4 * 2 + 5 * 1 + 6 * 1
+  let players := 3 + 2 + 1 + 1
+  goals / players = 25 / 7 :=
 by
   sorry
 
-end max_difference_y_intersections_l79_79156
+end mean_goals_l79_79658
 
 
-namespace probability_girls_same_color_l79_79687
+namespace distinct_arrangements_of_BANANA_l79_79556
 
-open Classical
-
-noncomputable def probability_same_color_marbles : ℚ :=
-(3/6) * (2/5) * (1/4) + (3/6) * (2/5) * (1/4)
-
-theorem probability_girls_same_color :
-  probability_same_color_marbles = 1/20 := by
-  sorry
-
-end probability_girls_same_color_l79_79687
-
-
-namespace total_students_l79_79110
-
-theorem total_students (S : ℕ) (H1 : S / 2 = S - 15) : S = 30 :=
-sorry
-
-end total_students_l79_79110
-
-
-namespace fraction_milk_in_cup1_l79_79729
-
--- Definitions of initial states and transfers
-def initial_tea_in_cup1 : ℝ := 6
-def initial_milk_in_cup2 : ℝ := 8
-def fraction_tea_transferred_cup2 : ℝ := 1 / 3
-def mixing_ratio_tea_in_cup2 : ℝ := (initial_tea_in_cup1 * fraction_tea_transferred_cup2) / (initial_milk_in_cup2 + initial_tea_in_cup1 * fraction_tea_transferred_cup2)
-def mixing_ratio_milk_in_cup2 : ℝ := initial_milk_in_cup2 / (initial_milk_in_cup2 + initial_tea_in_cup1 * fraction_tea_transferred_cup2)
-def fraction_mixed_content_transferred_back : ℝ := 1 / 4
-
--- Final amounts after all transfers
-def final_tea_in_cup1 : ℝ := (initial_tea_in_cup1 * (1 - fraction_tea_transferred_cup2) + (initial_milk_in_cup2 + initial_tea_in_cup1 * fraction_tea_transferred_cup2) * fraction_mixed_content_transferred_back * mixing_ratio_tea_in_cup2)
-def final_milk_in_cup1 : ℝ := (initial_milk_in_cup2 + initial_tea_in_cup1 * fraction_tea_transferred_cup2) * fraction_mixed_content_transferred_back * mixing_ratio_milk_in_cup2
-
--- Total liquid in Cup 1 after transfers
-def total_liquid_in_cup1 : ℝ := final_tea_in_cup1 + final_milk_in_cup1
-
--- Proving the fraction of milk in Cup 1 is 2 / 6.5
-theorem fraction_milk_in_cup1 : final_milk_in_cup1 / total_liquid_in_cup1 = 2 / 6.5 :=
-by 
-  sorry
-
-end fraction_milk_in_cup1_l79_79729
-
-
-namespace number_of_true_propositions_l79_79453
-
-variable (a b c : ℝ)
-
-def in_geometric_progression (a b c : ℝ) : Prop := b^2 = a * c
-
-def converse (a b c : ℝ) : Prop := a * c = b^2 → in_geometric_progression a b c
-def inverse (a b c : ℝ) : Prop := ¬ in_geometric_progression a b c → a * c ≠ b^2
-def contrapositive (a b c : ℝ) : Prop := a * c ≠ b^2 → ¬ in_geometric_progression a b c
-
-theorem number_of_true_propositions (a b c : ℝ) :
-  (if converse a b c then 1 else 0) + 
-  (if inverse a b c then 1 else 0) + 
-  (if contrapositive a b c then 1 else 0) = 1 := sorry
-
-end number_of_true_propositions_l79_79453
-
-
-namespace exactly_one_vertical_asymptote_l79_79375
-
-def g (x c : ℝ) : ℝ := (x^2 - 2 * x + c) / (x^2 - x - 42)
-
-theorem exactly_one_vertical_asymptote (c : ℝ) :  
-  ((∃ x : ℝ, (x - 7) ∣ (x^2 - 2 * x + c)) ∨ (∃ y : ℝ, (y + 6) ∣ (x^2 - 2 * x + c))) 
-  ∧ ¬((∃ x : ℝ, (x - 7) ∣ (x^2 - 2 * x + c)) ∧ (∃ y : ℝ, (y + 6) ∣ (x^2 - 2 * x + c))) 
-  ↔ (c = -35 ∨ c = -48) :=
-  sorry
-
-end exactly_one_vertical_asymptote_l79_79375
-
-
-namespace average_minutes_per_day_l79_79740
-
-theorem average_minutes_per_day (e : ℕ) (h_e_pos : 0 < e) : 
-  let sixth_grade_minutes := 20
-  let seventh_grade_minutes := 18
-  let eighth_grade_minutes := 12
-  
-  let sixth_graders := 3 * e
-  let seventh_graders := 4 * e
-  let eighth_graders := e
-  
-  let total_minutes := sixth_grade_minutes * sixth_graders + seventh_grade_minutes * seventh_graders + eighth_grade_minutes * eighth_graders
-  let total_students := sixth_graders + seventh_graders + eighth_graders
-  
-  (total_minutes / total_students) = 18 := by
-sorry
-
-end average_minutes_per_day_l79_79740
-
-
-namespace solve_equations_l79_79591
-
-theorem solve_equations (x y : ℝ) (h1 : (x + y) / x = y / (x + y)) (h2 : x = 2 * y) :
-  x = 0 ∧ y = 0 :=
+theorem distinct_arrangements_of_BANANA :
+  let total_letters := 6
+  let freq_A := 3
+  let freq_N := 2
+  let freq_B := 1
+  (nat.factorial total_letters) / (nat.factorial freq_A * nat.factorial freq_N * nat.factorial freq_B) = 60 :=
 by
   sorry
 
-end solve_equations_l79_79591
+end distinct_arrangements_of_BANANA_l79_79556
 
 
-namespace exactly_one_female_student_l79_79056
+namespace candy_remains_unclaimed_l79_79081
 
-noncomputable def binom : ℕ → ℕ → ℕ
-| n, k := if h : k ≤ n then nat.choose n k else 0
-
-theorem exactly_one_female_student (A_males A_females B_males B_females : ℕ) :
-  A_males = 5 → A_females = 3 → B_males = 6 → B_females = 2 →
-  let ways_A := binom A_females 1 * binom A_males 1 * binom B_males 2,
-      ways_B := binom B_females 1 * binom B_males 1 * binom A_males 2 in
-  (ways_A + ways_B) = 345 :=
-by
-  intros hA_males hA_females hB_males hB_females
-  simp [binom, hA_males, hA_females, hB_males, hB_females]
-  sorry
-
-end exactly_one_female_student_l79_79056
-
-
-namespace coloring_of_russia_with_odd_valid_colorings_l79_79934
-
-theorem coloring_of_russia_with_odd_valid_colorings :
-  let regions : ℕ := 85
-  let colors := {white, blue, red}
-  let valid_color (r : ℕ → colors) : Prop :=
-    ∀ i j, (i ≠ j ∧ adjacent i j) → ¬((r i = white ∧ r j = red) ∨ (r i = red ∧ r j = white))
-  let unused_colors_allowed : Prop :=
-    ∃ r : ℕ → colors, ∀ i ∈ 85, r i = blue ∨ r i = white ∨ r i = red
-  let total_colorings_odd : Prop :=
-    ∃ n, valid_color n ∧ unused_colors_allowed n ∧ n % 2 = 1
-  total_colorings_odd :=
-sorry
-
-end coloring_of_russia_with_odd_valid_colorings_l79_79934
-
-
-namespace triangle_condition_l79_79896
-
-variables {A B C D E F: Type}
-variables [metric_space D] [inner_product_space ℝ D]
-variables {a b c x: ℝ}
-
-noncomputable def closest_point_F_to_C (a b c : ℝ) (h : 0 < a ∧ 0 < b ∧ c = real.sqrt (a^2 + b^2)) : ℝ :=
-  (b * (c - b)) / a
-
-theorem triangle_condition {A B C D E F: Type} 
-  [metric_space D] [inner_product_space ℝ D] 
-  (a b c x : ℝ) 
-  (hA: right_triangle A B C)
-  (h1 : point_on_line B C D)
-  (h2 : perpendicular D AD E)
-  (h3 : perpendicular_projection E BC F)
-  : x = closest_point_F_to_C a b c (and.intro (by linarith) (by linarith) (by linarith)) :=
-sorry
-
-end triangle_condition_l79_79896
-
-
-namespace average_percent_score_l79_79564
-
-theorem average_percent_score :
-  let num_students : ℕ := 100
-  let scores : List (ℕ × ℕ) := [(95, 10), (85, 15), (75, 20), (65, 25), (55, 15), (45, 10), (35, 5)]
-  let weighted_score := scores.foldl (λ acc, λ pair, acc + pair.1 * pair.2) 0
-  let average_score := weighted_score / num_students
-  average_score = 68 :=
-by
-  -- Definitions for easier readability
-  let num_students := 100
-  let scores := [(95, 10), (85, 15), (75, 20), (65, 25), (55, 15), (45, 10), (35, 5)]
-  -- Calculating the weighted score
-  let weighted_score := scores.foldl (λ acc, λ pair, acc + pair.1 * pair.2) 0
-  -- Calculating the average score
-  let average_score := weighted_score / num_students
-  -- Summing up the products manually to avoid reliance on the foldl in the proof
-  have : weighted_score = 95 * 10 + 85 * 15 + 75 * 20 + 65 * 25 + 55 * 15 + 45 * 10 + 35 * 5 := sorry
-  -- Asserting the final average and its value
-  show average_score = 68 from sorry
-
-end average_percent_score_l79_79564
-
-
-namespace solution_set_for_f_ge_0_range_of_a_l79_79449
-
-def f (x : ℝ) : ℝ := |3 * x + 1| - |2 * x + 2|
-
-theorem solution_set_for_f_ge_0 : {x : ℝ | f x ≥ 0} = {x : ℝ | x ≤ -3/5} ∪ {x : ℝ | x ≥ 1} :=
-sorry
-
-theorem range_of_a (a : ℝ) : (∀ x : ℝ, f x - |x + 1| ≤ |a + 1|) ↔ (a ≤ -3 ∨ a ≥ 1) :=
-sorry
-
-end solution_set_for_f_ge_0_range_of_a_l79_79449
-
-
-namespace problem1_problem2_l79_79725
-
-theorem problem1 (P1 P2 : ℝ) (h₁ : P1 = 1/2) (h₂ : P2 = 1/2) :
-  (P1 * P2) + (P1 * P2) = 1 / 2 :=
-by simp [h₁, h₂]; norm_num; sorry
-
-theorem problem2 (p1 p2 : ℝ) (h₁ : p1 + p2 = 1) (h₂ : p1 + 2 * p2 = 2 * p1 ^ 2 + 2 * p1 * p2) :
-  p1 = 2 / 3 ∧ p2 = 1 / 3 :=
+theorem candy_remains_unclaimed
+  (x : ℚ) (h1 : x > 0) :
+  let al_claim := (4 / 9 : ℚ) * x,
+      bert_claim := (1 / 3 : ℚ) * x,
+      carl_claim := (2 / 9 : ℚ) * x,
+      bert_left := x - al_claim,
+      bert_take := bert_claim,
+      carl_left := bert_left - bert_take,
+      carl_take := carl_claim in
+  carl_left - carl_take = 0 :=
 by sorry
 
-end problem1_problem2_l79_79725
+end candy_remains_unclaimed_l79_79081
 
 
-namespace conclusion1_conclusion2_l79_79801
-
-def condition (a b α β : ℝ) : Prop :=
-  sin α + cos β = a ∧ cos α + sin β = b ∧ 0 < a^2 + b^2 ∧ a^2 + b^2 ≤ 4
-
-theorem conclusion1 (a α β : ℝ) :
-  ¬ ∀ b : ℝ, sin(α + β) = (a^2 + b^2 - 2) / 2 :=
-sorry
-
-theorem conclusion2 (b α β : ℝ) :
-  ∀ a : ℝ, cos(α - β) = 0 :=
-sorry
-
-end conclusion1_conclusion2_l79_79801
-
-
-namespace max_consecutive_integers_sum_lt_1000_l79_79263
-
-theorem max_consecutive_integers_sum_lt_1000 :
-  ∃ n : ℕ, (∀ m : ℕ, m ≤ n → m * (m + 1) / 2 < 1000) ∧ (n * (n + 1) / 2 < 1000) ∧ ¬((n + 1) * (n + 2) / 2 < 1000) :=
-sorry
-
-end max_consecutive_integers_sum_lt_1000_l79_79263
-
-
-namespace vector_dot_product_l79_79045
-
-variables {V : Type*} [inner_product_space ℝ V] 
-variables {A B C M P : V}
-
-noncomputable def midpoint (x y : V) : V := (x + y) / 2
-
--- Conditions
-axiom M_midpoint : M = midpoint B C
-axiom AM_length : dist A M = 3
-axiom AP_relation : P - A = 2 • (M - P)
-
--- Proof statement
-theorem vector_dot_product : 
-  (P - A) • ((P - B) + (P - C)) = -4 :=
-sorry
-
-end vector_dot_product_l79_79045
-
-
-namespace nat_solution_unique_l79_79593
-
-theorem nat_solution_unique (x y : ℕ) (h : x + y = x * y) : (x, y) = (2, 2) :=
-sorry
-
-end nat_solution_unique_l79_79593
-
-
-namespace log_expr_eq_seven_l79_79752
-
--- Define the problem in Lean 4
-theorem log_expr_eq_seven : logBase 3 27 + log 10 25 + log 10 4 + (7 ^ logBase 7 2) = 7 :=
-by
-  sorry
-
-end log_expr_eq_seven_l79_79752
-
-
-namespace goals_in_fifth_match_l79_79692
-
-/-- A football player scores some goals in his fifth match, thus increasing his average goals score by 0.2.
-    The total number of goals in his 5 matches is 11. Prove that the number of goals he scored in his fifth match is 3. -/
-theorem goals_in_fifth_match
-  (G : ℕ)
-  (A : ℕ)
-  (h1 : (5 * (A + 0.2)) = 11)
-  (h2 : (4 * A) + G = 11) :
-  G = 3 :=
-sorry
-
-end goals_in_fifth_match_l79_79692
-
-
-namespace cosine_in_third_quadrant_l79_79025
-
-theorem cosine_in_third_quadrant (B : Real) 
-  (h1 : Real.sin B = -5/13) 
-  (h2 : π < B ∧ B < 3 * π / 2) : Real.cos B = -12/13 := 
-sorry
-
-end cosine_in_third_quadrant_l79_79025
-
-
-namespace pentagon_area_l79_79346
-
-theorem pentagon_area :
-  let a := 18
-  let b := 25
-  let c := 30
-  let d := 28
-  let e := 25
-  let triangle_area := (1 / 2) * 18 * 25
-  let trapezoid_area := (1 / 2) * (28 + 30) * 25
-  triangle_area + trapezoid_area = 950 := 
-by
-  let a : ℕ := 18
-  let b : ℕ := 25
-  let c : ℕ := 30
-  let d : ℕ := 28
-  let e : ℕ := 25
-  let triangle_area : ℝ := (1 / 2) * a * b
-  let trapezoid_area : ℝ := (1 / 2) * (d + c) * e
-  have h1 : triangle_area + trapezoid_area = 950 := by sorry
-  exact h1
-  sorry
-
-end pentagon_area_l79_79346
-
-
-namespace volume_of_bounded_ellipsoid_l79_79747
-
-theorem volume_of_bounded_ellipsoid :
-  (∫ z in 0..7, (3 * Real.pi / 49) * (196 - z^2)) = 77 * Real.pi := by
-  -- Proof goes here
-  sorry
-
-end volume_of_bounded_ellipsoid_l79_79747
-
-
-namespace six_digit_even_numbers_l79_79369
-
-theorem six_digit_even_numbers :
-  (∃ L : List ℕ, L.perm [1, 2, 3, 4, 5, 6] ∧ 
-    L.length = 6 ∧ 
-    L.last = 2 ∨ L.last = 4 ∨ L.last = 6 ∧ 
-    ¬(1 :: 3 :: 5 :: List.nil ⊆ L.windowed 3 ∨ 
-      3 :: 1 :: 5 :: List.nil ⊆ L.windowed 3 ∨ 
-      5 :: 1 :: 3 :: List.nil ⊆ L.windowed 3 ∨ 
-      1 :: 5 :: 3 :: List.nil ⊆ L.windowed 3 ∨ 
-      3 :: 5 :: 1 :: List.nil ⊆ L.windowed 3 ∨ 
-      5 :: 3 :: 1 :: List.nil ⊆ L.windowed 3)) :=
-  ∃ L : List ℕ, L.perm [1, 2, 3, 4, 5, 6] ∧ L.length = 6 ∧ 
-  L.last ∈ [2, 4, 6] ∧
-  ¬(List.sublists' {1, 3, 5}).exists (fun l => L.windowed 3 l) := by sorry
-
-end six_digit_even_numbers_l79_79369
-
-
-namespace probability_sequence_123456_l79_79659
-
-theorem probability_sequence_123456 :
-  let total_sequences := 66 * 45 * 28 * 15 * 6 * 1,
-      favorable_sequences := 1 * 3 * 5 * 7 * 9 * 11
-  in (favorable_sequences : ℚ) / total_sequences = 1 / 720 := 
-by 
-  sorry
-
-end probability_sequence_123456_l79_79659
-
-
-namespace dislike_both_radio_and_music_l79_79578
-
-theorem dislike_both_radio_and_music :
-  ∀ (total_people : ℕ) 
-    (percent_dislike_radio percent_dislike_both : ℝ), 
-  total_people = 1500 →
-  percent_dislike_radio = 0.4 →
-  percent_dislike_both = 0.15 →
-  (percent_dislike_both * (percent_dislike_radio * total_people)).toNat = 90 :=
-by
-  intros total_people percent_dislike_radio percent_dislike_both 
-  assume h_total h_percent_radio h_percent_both
-  rw [h_total, h_percent_radio, h_percent_both]
-  have h1 : percent_dislike_radio * total_people = 600 := by norm_num
-  have h2 : percent_dislike_both * 600 = 90 := by norm_num
-  rw [h1] at h2
-  exact h2.symm.toNatEq.2 rfl
-  sorry
-
-end dislike_both_radio_and_music_l79_79578
-
-
-namespace max_value_frac_3t_minus_4t2_over_9t_l79_79264
-
-theorem max_value_frac_3t_minus_4t2_over_9t (t : ℝ) : 
-  ∃ (t : ℝ), (∀ (t : ℝ), (3^t - 4 * t^2) * t / 9^t ≤ (3^t - 4 * t^2) * t / 9^t) → 
-  ((3^t - 4 * t^2) * t / 9^t = √3 / 9) :=
-sorry
-
-end max_value_frac_3t_minus_4t2_over_9t_l79_79264
-
-
-namespace num_distinct_sums_of_three_distinct_elements_l79_79010
-
-noncomputable def arith_seq_sum_of_three_distinct : Nat :=
-  let a (i : Nat) : Nat := 3 * i + 1
-  let lower_bound := 21
-  let upper_bound := 129
-  (upper_bound - lower_bound) / 3 + 1
-
-theorem num_distinct_sums_of_three_distinct_elements : arith_seq_sum_of_three_distinct = 37 := by
-  -- We are skipping the proof by using sorry
-  sorry
-
-end num_distinct_sums_of_three_distinct_elements_l79_79010
-
-
-namespace sum_of_lucky_numbers_divisible_by_13_l79_79344
-
-def is_lucky_number (n : ℕ) : Prop :=
-  let digits := Nat.digits 10 n
-  ∃ a b c d e f : ℕ, digits = [f, e, d, c, b, a] ∧ (a + b + c = d + e + f)
-
-theorem sum_of_lucky_numbers_divisible_by_13 :
-  let lucky_numbers := {n : ℕ | n < 1000000 ∧ is_lucky_number n}
-  ∑ n in lucky_numbers, n % 13 = 0 :=
-by
-  sorry
-
-end sum_of_lucky_numbers_divisible_by_13_l79_79344
-
-
-namespace possible_values_of_m_l79_79491
-
--- Define the conditions that m is a real number and the quadratic equation having two distinct real roots
-variable (m : ℝ)
-
--- Define the discriminant condition for having two distinct real roots
-def discriminant_condition (a b c : ℝ) := b^2 - 4 * a * c > 0
-
--- State the required theorem
-theorem possible_values_of_m (h : discriminant_condition 1 m 9) : m ∈ set.Ioo (-∞) (-6) ∪ set.Ioo 6 ∞ :=
-sorry
-
-end possible_values_of_m_l79_79491
-
-
-namespace calculate_expression_l79_79923
-
-def h (x : ℝ) : ℝ := 2 * x - 3
-def h_inv (x : ℝ) : ℝ := (x + 3) / 2
-def j (x : ℝ) : ℝ := x / 4
-def j_inv (x : ℝ) : ℝ := 4 * x
-
-theorem calculate_expression : h (j_inv (h_inv (h_inv (j (h 12))))) = 25.5 :=
-by
-  sorry
-
-end calculate_expression_l79_79923
-
-
-namespace geometric_sequence_fifth_term_l79_79621
-
-theorem geometric_sequence_fifth_term (a r : ℝ) (h1 : a * r^2 = 9) (h2 : a * r^6 = 1) : a * r^4 = 3 :=
-by
-  sorry
-
-end geometric_sequence_fifth_term_l79_79621
-
-
-namespace altitude_from_orthocenter_incenter_triangle_l79_79575
-
-theorem altitude_from_orthocenter_incenter_triangle 
-(point_D_on_AC : ∃ D, D ∈ line_segment A C)
-(incenters_of_triangles : ∃ I1 I2 I, incenter_of ABD I1 ∧ incenter_of BCD I2 ∧ incenter_of ABC I)
-(I_is_orthocenter : is_orthocenter_of_triangle I I1 I2 B) :
-  altitude_of_triangle B D A C :=
-  sorry
-
-end altitude_from_orthocenter_incenter_triangle_l79_79575
-
-
-namespace sum_of_solutions_l79_79787
-
-theorem sum_of_solutions (x : ℝ) : (∃ x₁ x₂ : ℝ, (x - 4)^2 = 16 ∧ x = x₁ ∨ x = x₂ ∧ x₁ + x₂ = 8) :=
-by sorry
-
-end sum_of_solutions_l79_79787
-
-
-namespace distance_from_center_to_cross_section_l79_79419
-
-theorem distance_from_center_to_cross_section
-  (P A B C : Point)
-  (O : Point)
-  (r : ℝ)
-  (PA_perpendicular_PB : IsPerpendicular PA PB)
-  (PB_perpendicular_PC : IsPerpendicular PB PC)
-  (PC_perpendicular_PA : IsPerpendicular PC PA)
-  (O_distance_P : Distance O P = sqrt 3)
-  (O_distance_A : Distance O A = sqrt 3)
-  (O_distance_B : Distance O B = sqrt 3)
-  (O_distance_C : Distance O C = sqrt 3) :
-  DistanceFromCenterToCrossSection O (CrossSection P A B C) = sqrt 3 / 3 :=
-sorry
-
-end distance_from_center_to_cross_section_l79_79419
-
-
-namespace ratio_of_sold_phones_to_production_l79_79701
-
-def last_years_production : ℕ := 5000
-def this_years_production : ℕ := 2 * last_years_production
-def phones_left_in_factory : ℕ := 7500
-def sold_phones : ℕ := this_years_production - phones_left_in_factory
-
-theorem ratio_of_sold_phones_to_production : 
-  (sold_phones : ℚ) / this_years_production = 1 / 4 := 
-by
-  sorry
-
-end ratio_of_sold_phones_to_production_l79_79701
-
-
-namespace total_adjusted_income_is_1219_72_l79_79778
-
-def investment_amount := 6800
-def stock_allocation := 0.60
-def bond_allocation := 0.30
-def cash_allocation := 0.10
-
-def inflation_rate := 0.02
-
-def stock_returns := [0.08, 0.04, 0.10]
-def bond_returns := [0.05, 0.06, 0.04]
-def cash_returns := [0.01, 0.02, 0.03]
-
-def year_income (investment: Real) (allocations: (Real, Real, Real)) (returns: List Real):
-  Real :=
-  let (stock_alloc, bond_alloc, cash_alloc) := allocations
-  investment * stock_alloc * returns.head! +
-  investment * bond_alloc * returns.head! +
-  investment * cash_alloc * returns.head!
-
-def adjusted_income (income: Real) (inflation: Real): Real :=
-  income * (1 - inflation)
-
-theorem total_adjusted_income_is_1219_72 :
-  let y1_income := adjusted_income (year_income investment_amount (stock_allocation, bond_allocation, cash_allocation) [stock_returns.head!, bond_returns.head!, cash_returns.head!]) inflation_rate
-  let y2_income := adjusted_income (year_income investment_amount (stock_allocation, bond_allocation, cash_allocation) [stock_returns.tail!.head!, bond_returns.tail!.head!, cash_returns.tail!.head!]) inflation_rate
-  let y3_income := adjusted_income (year_income investment_amount (stock_allocation, bond_allocation, cash_allocation) [stock_returns.tail!.tail!.head!, bond_returns.tail!.tail!.head!, cash_returns.tail!.tail!.head!]) inflation_rate
-  y1_income + y2_income + y3_income = 1219.72 :=
-begin
-  -- Proof to be done
-  sorry
-end
-
-end total_adjusted_income_is_1219_72_l79_79778
-
-
-namespace degree_of_product_is_seven_l79_79755
-
--- noncomputable necessary for handling non-algebraic operations
-noncomputable def P1 : Polynomial ℝ := X^5
-noncomputable def P2 : Polynomial ℝ := X^2 + (1 / X^2)
-noncomputable def P3 : Polynomial ℝ := 1 + (2 / X) + (3 / X^2)
-
-theorem degree_of_product_is_seven : (P1 * P2 * P3).degree = 7 := 
-by 
-  sorry
-
-end degree_of_product_is_seven_l79_79755
-
-
-namespace cyclic_quadrilateral_l79_79885
-
--- Define the given problem in Lean 4
-
-theorem cyclic_quadrilateral (A B C D E F G : Type) 
-  (ABCD_quad : quadrilateral A B C D) 
-  (AD_not_parallel_BC : ¬ parallel (line_through A D) (line_through B C))
-  (diagonals_intersect_at_E : intersects (line_through A C) (line_through B D) E)
-  (F_on_AB : on_line_segment F A B) 
-  (G_on_DC : on_line_segment G D C) 
-  (ratios_equal : ∀ (k : ℝ), (AF_FB_ratio : (length (A F)) / (length (F B)) = k) 
-                             (DG_GC_ratio : (length (D G)) / (length (G C)) = k)
-                             (AD_BC_ratio : (length (A D)) / (length (B C)) = k))
-  (E_F_G_collinear : collinear {E, F, G}) 
-  : cyclic_quadrilateral A B C D := 
-sorry
-
-end cyclic_quadrilateral_l79_79885
-
-
-namespace quadratic_roots_diff_l79_79973
-
-noncomputable def quadratic_roots (k : ℝ) : (ℝ × ℝ) :=
-  let Δ : ℝ := 4 - 4 * k
-  if h : Δ ≥ 0 then
-    let root1 := (2 + sqrt Δ) / 2
-    let root2 := (2 - sqrt Δ) / 2
-    (root1, root2)
-  else
-    (0, 0) -- placeholder; in reality we would handle complex roots
-
-theorem quadratic_roots_diff (k : ℝ) : 
-    let (α, β) := quadratic_roots k in
-    abs (α - β) = 2 * sqrt 2 ↔ (k = -1 ∨ k = 3) := sorry
-
-end quadratic_roots_diff_l79_79973
-
-
-namespace geometric_series_common_ratio_l79_79175
-
-theorem geometric_series_common_ratio (a r S : ℝ) (h₁ : S = a / (1 - r)) (h₂ : ar^4 / (1 - r) = S / 64) : r = 1 / 2 :=
-  by
-  sorry
-
-end geometric_series_common_ratio_l79_79175
-
-
-namespace max_value_of_x_plus_y_l79_79831
-
-noncomputable def f : ℝ → ℝ := sorry  -- we assume f exists as a monotonic function satisfying given properties
-
-theorem max_value_of_x_plus_y :
-  (∀ x y : ℝ, f(x + y) = f(x) + f(y)) →
-  (∀ x y : ℝ, f(x^2 + 2*x + 2) + f(y^2 + 8*y + 3) = 0) →
-  ∀ x y : ℝ, (x^2 + y^2 + 2*x + 8*y + 5 = 0) → 
-  ∃ (α : ℝ), 
-  let x := -1 + 2*sqrt 3 * cos α,
-      y := -4 + 2*sqrt 3 * sin α 
-  in x + y ≤ 2*sqrt 6 - 5 :=
-sorry
-
-end max_value_of_x_plus_y_l79_79831
-
-
-namespace probability_root_in_interval_l79_79410
-
-def is_monotonically_increasing (f : ℝ → ℝ) :=
-  ∀ x y, x < y → f x < f y
-
-def has_root_in_interval (f : ℝ → ℝ) (a b : ℝ) :=
-  ∃ x, a ≤ x ∧ x ≤ b ∧ f x = 0
-
-theorem probability_root_in_interval : 
-  let m_set := {1, 2, 3, 4}
-  let n_set := {-12, -8, -4, -2}
-  let f := λ (m n : ℤ) (x : ℝ), x^3 + (m * x) + n
-  11 / 16 = 
-    (∑ m in m_set, ∑ n in n_set, 
-      if has_root_in_interval (f m n) 1 2 
-      then 1 else 0) / (|m_set| * |n_set|) :=
-by
-  sorry
-
-end probability_root_in_interval_l79_79410
-
-
-namespace distinct_real_roots_of_quadratic_l79_79477
-
--- Define the problem's condition: m is a real number and the discriminant of x^2 + mx + 9 > 0
-def discriminant_positive (m : ℝ) := m^2 - 36 > 0
-
-theorem distinct_real_roots_of_quadratic (m : ℝ) (h : discriminant_positive m) :
-  m ∈ Iio (-6) ∪ Ioi (6) :=
-sorry
-
-end distinct_real_roots_of_quadratic_l79_79477
-
-
-namespace volume_of_cone_correct_l79_79394
-
-noncomputable def volume_cone (S : ℝ) (r : ℝ) := 
-  let l := S / π / r
-  let h := Real.sqrt (l ^ 2 - r ^ 2) in
-  (1 / 3) * π * r ^ 2 * h
-
-theorem volume_of_cone_correct (S : ℝ) (r : ℝ) (h : ℝ)
-  (hS : S = 15 * Real.cbrt π) 
-  (hr : r = 21) :
-  volume_cone S r = 12 :=
-by
-  -- The proof will be placed here
-  sorry
-
-end volume_of_cone_correct_l79_79394
-
-
-namespace circle_and_tangent_line_l79_79416
-
-noncomputable def circle_equation : ℝ × ℝ → Prop :=
-λ p, p.1 ^ 2 + p.2 ^ 2 - 4 * p.2 + 2 = 0
-
-noncomputable def line : ℝ × ℝ → Prop :=
-λ p, p.1 - p.2 = 0
-
-theorem circle_and_tangent_line :
-  (∀ p : ℝ × ℝ, circle_equation p → p = (1, 1) → line p) ∧
-  (let r := sqrt 2 in
-  ∀ C : ℝ × ℝ → Prop, (∀ p : ℝ × ℝ, C p ↔ p.1 ^ 2 + (p.2 - 2)^2 = 2) →
-  r = sqrt 2) :=
-by
-  sorry
-
-end circle_and_tangent_line_l79_79416
-
-
-namespace probability_of_sequence_123456_l79_79654
-
-theorem probability_of_sequence_123456 :
-  let total_sequences := 66 * 45 * 28 * 15 * 6 * 1     -- Total number of sequences
-  let specific_sequences := 1 * 3 * 5 * 7 * 9 * 11        -- Sequences leading to 123456
-  specific_sequences / total_sequences = 1 / 720 := by
-  let total_sequences := 74919600
-  let specific_sequences := 10395
-  sorry
-
-end probability_of_sequence_123456_l79_79654
-
-
-namespace geometric_series_common_ratio_l79_79199
-
-theorem geometric_series_common_ratio (a r : ℝ) (h₁ : r ≠ 1)
-    (h₂ : a / (1 - r) = 64 * (a * r^4) / (1 - r)) : r = 1/2 :=
-by
-  have h₃ : 1 = 64 * r^4 := by
-    have : 1 - r ≠ 0 := by linarith
-    field_simp at h₂; assumption
-  sorry
-
-end geometric_series_common_ratio_l79_79199
-
-
-namespace find_AC_l79_79065
-
-variables (ABC : Type) [Triangle ABC]
-variables {A B C M : Point ABC} {a b : Real}
-variables {angle_C_obtuse : ∃ C, is_obtuse ∠BAC}
-variables {D : Point ABC} {AD_perpendicular_DB : is_perpendicular (D,B) (A,B)}
-variables {DC_perpendicular_AC : is_perpendicular (D,C) (A,C)}
-variables {M : Point ABC} {altitude_CM_intersects_AB : M ∈ intersection (altitude_of_triangle_from_vertex C (triangle ADC)) (A,B)}
-
-theorem find_AC
-  (AM_eq_a : distance A M = a)
-  (MB_eq_b : distance M B = b) :
-  distance A C = sqrt(a * (a + b)) :=
-sorry
-
-end find_AC_l79_79065
-
-
-namespace largest_binomial_term_remainder_of_binomial_power_l79_79434
-
--- Problem Part 1:
-theorem largest_binomial_term (a b : ℕ) {n : ℕ} 
-  (h1 : (nat.choose n 5) = largest (λ k, (nat.choose n k)))
-  : n = 10 :=
-sorry
-
--- Problem Part 2:
-theorem remainder_of_binomial_power (a b : ℕ) (h2 : a + b = 4) : 
-  ((a + b)^10 + 7) % 3 = 2 :=
-sorry
-
-end largest_binomial_term_remainder_of_binomial_power_l79_79434
-
-
-namespace count_consecutive_sets_sum_18_l79_79466
-
--- Define the concept of consecutive summing to a target value
-def consecutive_sum (start : ℕ) (len : ℕ) : ℕ :=
-  len * (2 * start + len - 1) / 2
-
--- Define the main problem as a theorem statement
-theorem count_consecutive_sets_sum_18 : 
-  (finset.range 18).filter (fun start => 
-    ∃ n >= 2, consecutive_sum start n = 18
-  ).card = 1 :=
-sorry
-
-end count_consecutive_sets_sum_18_l79_79466
-
-
-namespace correct_inequality_l79_79014
-
-variable {a α : ℝ}
-
-theorem correct_inequality (h : 0 < a ∧ a < 1 / 2) : 
-  cos (1 + α) < cos (1 - α) :=
-sorry
-
-end correct_inequality_l79_79014
-
-
-namespace quadratic_one_real_root_l79_79042
-
-theorem quadratic_one_real_root (m : ℝ) : 
-  (∃ x : ℝ, (x^2 - 6*m*x + 2*m = 0) ∧ 
-    (∀ y : ℝ, (y^2 - 6*m*y + 2*m = 0) → y = x)) → 
-  m = 2 / 9 :=
-by
-  sorry
-
-end quadratic_one_real_root_l79_79042
-
-
-namespace sum_of_solutions_l79_79786
-
-theorem sum_of_solutions (x : ℝ) : (∃ x₁ x₂ : ℝ, (x - 4)^2 = 16 ∧ x = x₁ ∨ x = x₂ ∧ x₁ + x₂ = 8) :=
-by sorry
-
-end sum_of_solutions_l79_79786
-
-
-namespace expression_divisible_by_10_l79_79944
-
-theorem expression_divisible_by_10 (n : ℕ) : 10 ∣ (3 ^ (n + 2) - 2 ^ (n + 2) + 3 ^ n - 2 ^ n) :=
-  sorry
-
-end expression_divisible_by_10_l79_79944
-
-
-namespace root_in_interval_l79_79145
-
-noncomputable def f (x : ℝ) := Real.log (x + 1) - 2 / x
-
-theorem root_in_interval :
-    ∃ (c : ℝ), 1 < c ∧ c < 2 ∧ f c = 0 :=
-by
-  have h1 : f 1 < 0 := by
-    sorry
-  have h2 : f 2 > 0 := by
-    sorry
-  have h_interval := IntermediateValueTheorem (-∞) ∞ f 1 2
-  exact ⟨h_interval h1 h2, sorry⟩
-
-end root_in_interval_l79_79145
-
-
-namespace necessary_but_not_sufficient_condition_l79_79822
-
-theorem necessary_but_not_sufficient_condition (a b : ℝ) :
-  (a + b > 2 ∧ ab > 1) → ¬ ((a > 1) ∧ (b > 1)) :=
-begin
-  intros h,
-  obtain ⟨h1, h2⟩ := h,
-  by_cases ha : a > 1,
-  { by_cases hb : b > 1,
-    { exfalso,
-      sorry }, -- This needs to handle contradiction case.
-    { exact ha }, wlog },
-end
-
-end necessary_but_not_sufficient_condition_l79_79822
-
-
-namespace animal_order_l79_79292
-
--- Define the behaviors of each animal
-def Jackal (responds : String -> String) : Prop :=
-  ∀ (q : String), responds q = "No"
-
-def Lion (responds : String -> String) : Prop :=
-  ∀ (q : String), responds q = "Yes"
-
-def Parrot (previous_response : String) (responds : String -> String) : Prop :=
-  ∀ (q : String), responds q = previous_response
-
-def Giraffe (previous_response : String) (responds : String -> String) : Prop :=
-  ∀ (q : String), responds q = previous_response
-
---conditions on different animals
-section
-variables (J L P G : String -> String)
-
--- Given behaviors
-axiom jackal_behavior : Jackal J
-axiom lion_behavior : Lion L
-axiom parrot_behavior : ∀ (pr : String), Parrot pr P
-axiom giraffe_behavior : ∀ (pr : String), Giraffe pr G
-
--- The animals' standing order satisfies the given responses for questions
-theorem animal_order : Parrot "" ∧ Lion ∧ Giraffe "" ∧ Jackal :=
-  sorry
-
-end animal_order_l79_79292
-
-
-namespace length_AD_in_quadrilateral_l79_79511
-
-variables (A B C D O : Type*) [MetricSpace A]
-variables (BO OD AO OC AB : ℝ)
-variables [fact (BO = 4)] [fact (OD = 5)] [fact (AO = 9)]
-variables [fact (OC = 2)] [fact (AB = 7)]
-
-theorem length_AD_in_quadrilateral
-    (quadrilateral : ∃ (A B C D O : A), true)
-    (intersect : ∃ (O : A), True ∧ True):
-    sqrt ((9^2) + (5^2) + (2 * 9 * 5 * (2/3))) = sqrt 166 :=
-by sorry
-
-end length_AD_in_quadrilateral_l79_79511
-
-
-namespace general_formula_a_n_sum_terms_T_n_l79_79710
-
--- Define the sequence and necessary conditions
-def seq_a (n : ℕ) : ℕ := 3^n
-def S_n (n : ℕ) : ℕ := (3 * (3^n - 1)) / 2 -- sum of the first n terms of the sequence
-
--- Prove the general form of the sequence a_n
-theorem general_formula_a_n (n : ℕ) : seq_a n = 3^n := sorry
-
--- Define the sequence b_n and the sum of its first n terms T_n
-def b_n (n : ℕ) : ℕ := seq_a (n+1) / (S_n n * S_n (n+1))
-def T_n (n : ℕ) : ℕ := (2/3) * ((1/2) - (1/(3^(n+1) - 1)))
-
--- Prove the sum of the first n terms T_n
-theorem sum_terms_T_n (n : ℕ) : ∑ i in range n, b_n i = T_n n := sorry
-
-end general_formula_a_n_sum_terms_T_n_l79_79710
-
-
-namespace ellipse_equation_slope_CD_l79_79826
-
-variables {A : Type*} [Field A] [Algebra ℚ A]
-
-def is_point_on_ellipse (p : A × A) (a b : A) : Prop :=
-  (p.1 ^ 2 / a ^ 2 + p.2 ^ 2 / b ^ 2 = 1)
-
-def foci_condition (A F1 F2 : A × A) : Prop :=
-  (A.1 - F1.1) ^ 2 + (A.2 - F1.2) ^ 2 + (A.1 - F2.1) ^ 2 + (A.2 - F2.2) ^ 2 = 4
-
-def inclination_angle_complementary (k : A) : Prop :=
-  ∀ x y, (y = k * (x - 1) + 1) ∧ (y = -k * (x - 1) + 1) → k ≠ 0
-
--- Given conditions
-variables (A : A × A) (F1 F2 : A × A) (a b k : A)
-variables (C D : A × A)
--- Assume A, F1, F2, C, and D are properly defined in this context
-
--- Point A is given as (1, 1)
-axiom hA1 : A = (1 : A, 1 : A)
-
--- Ellipse condition: |AF1| + |AF2| = 4
-axiom hfoci : foci_condition A F1 F2
-
--- The inclination of AC and AD are complementary
-axiom hInclination : inclination_angle_complementary k
-
--- Points C and D are on the ellipse
-axiom hC : is_point_on_ellipse C a b
-axiom hD : is_point_on_ellipse D a b
-
-theorem ellipse_equation :
-  is_point_on_ellipse A 2 (sqrt 4 / sqrt 3) := 
-sorry 
-
-theorem slope_CD :
-  ∃ k : A, inclination_angle_complementary k → k ≠ 0 → slope_CD = 1 / 3 := 
-sorry 
-
-end ellipse_equation_slope_CD_l79_79826
-
-
-namespace compare_neg_fractions_l79_79352
-
-theorem compare_neg_fractions : - (4 / 3 : ℚ) < - (5 / 4 : ℚ) := 
-by sorry
-
-end compare_neg_fractions_l79_79352
-
-
-namespace acute_angle_of_parallel_vectors_l79_79458
-open Real
-
-theorem acute_angle_of_parallel_vectors (α : ℝ) (h₁ : abs (α * π / 180) < π / 2) :
-  let a := (3 / 2, sin (α * π / 180))
-  let b := (sin (α * π / 180), 1 / 6) 
-  a.1 * b.2 = a.2 * b.1 → α = 30 :=
-by
-  sorry
-
-end acute_angle_of_parallel_vectors_l79_79458
-
-
-namespace probability_of_specific_sequence_l79_79665
-
--- We define a structure representing the problem conditions.
-structure problem_conditions :=
-  (cards : multiset ℕ)
-  (permutation : list ℕ)
-
--- Noncomputable definition for the correct answer.
-noncomputable def probability := (1 : ℚ) / 720
-
--- The main theorem statement.
-theorem probability_of_specific_sequence :
-  ∀ (conds : problem_conditions),
-  conds.cards = {1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6} ∧
-  (∃ (perm : list ℕ), perm.perm conds.permutation) →
-  (∃ (sequence : list ℕ), sequence = [1, 2, 3, 4, 5, 6]) →
-  let prob := calculate_probability conds.permutation [1, 2, 3, 4, 5, 6] in
-  prob = (1 : ℚ) / 720 :=
-sorry
-
-end probability_of_specific_sequence_l79_79665
-
-
-namespace maximal_value_l79_79927
-
-open Function
-
--- Definitions based on the given problem conditions
-variables {α β γ : ℝ}
-def is_incenter (M : Point) (A B C A' B' C' : Point) : Prop :=
-  MA' ⊥ BC ∧ MB' ⊥ CA ∧ MC' ⊥ AB ∧
-  A' ∈ line BC ∧ B' ∈ line CA ∧ C' ∈ line AB ∧
-  p(M) = (MA' * MB' * MC') / (MA * MB * MC)
-
--- Problem statement
-theorem maximal_value (ABC : Triangle) (M : Point) (A B C A' B' C' : Point) :
-  is_incenter M A B C A' B' C' →
-  p(M) = (MA' * MB' * MC') / (MA * MB * MC) →
-  ∃ M, p(M) = (1 / 8) :=
-sorry
-
-end maximal_value_l79_79927
-
-
-namespace sum_greater_l79_79426
-
-theorem sum_greater {a b c d : ℝ} (h1 : b + Real.sin a > d + Real.sin c) (h2 : a + Real.sin b > c + Real.sin d) : a + b > c + d := by
-  sorry
-
-end sum_greater_l79_79426
-
-
-namespace abc_ints_u_v_exist_l79_79098
-
-theorem abc_ints_u_v_exist {a b c : ℚ}
-  (h1 : ∃ t ∈ ℤ, a + b + c = t)
-  (h2 : ∃ t ∈ ℤ, a^2 + b^2 + c^2 = t) :
-  ∃ (u v : ℤ), a * b * c * v^3 = u^2 ∧ Int.gcd u v = 1 := 
-sorry
-
-end abc_ints_u_v_exist_l79_79098
-
-
-namespace valid_license_plates_count_l79_79719
-
-theorem valid_license_plates_count :
-  let letters_count := 26
-  let digits_count := 10
-  letters_count ^ 3 * digits_count ^ 4 = 175760000 :=
-by
-  let letters_count := 26
-  let digits_count := 10
-  calc
-    letters_count ^ 3 * digits_count ^ 4 = 26 ^ 3 * 10 ^ 4 : by rfl
-                              ... = 175760000 : by norm_num
-
-end valid_license_plates_count_l79_79719
-
-
-namespace possible_values_of_m_l79_79487
-
--- Define the conditions that m is a real number and the quadratic equation having two distinct real roots
-variable (m : ℝ)
-
--- Define the discriminant condition for having two distinct real roots
-def discriminant_condition (a b c : ℝ) := b^2 - 4 * a * c > 0
-
--- State the required theorem
-theorem possible_values_of_m (h : discriminant_condition 1 m 9) : m ∈ set.Ioo (-∞) (-6) ∪ set.Ioo 6 ∞ :=
-sorry
-
-end possible_values_of_m_l79_79487
-
-
-namespace intersection_M_N_l79_79495
-
-def M : Set ℝ := {x | x < 2}
-def N : Set ℝ := {x | -1 < x ∧ x < 3}
-
-theorem intersection_M_N :
-  M ∩ N = {x | -1 < x ∧ x <2} := by
-  sorry
-
-end intersection_M_N_l79_79495
-
-
-namespace solve_x_squared_eq_nine_l79_79594
-
-theorem solve_x_squared_eq_nine (x : ℝ) : x^2 = 9 → (x = 3 ∨ x = -3) :=
-by
-  -- Proof by sorry placeholder
-  sorry
-
-end solve_x_squared_eq_nine_l79_79594
-
-
-namespace distinct_real_roots_of_quadratic_l79_79476
-
--- Define the problem's condition: m is a real number and the discriminant of x^2 + mx + 9 > 0
-def discriminant_positive (m : ℝ) := m^2 - 36 > 0
-
-theorem distinct_real_roots_of_quadratic (m : ℝ) (h : discriminant_positive m) :
-  m ∈ Iio (-6) ∪ Ioi (6) :=
-sorry
-
-end distinct_real_roots_of_quadratic_l79_79476
-
-
-namespace locus_of_Y_l79_79806
-
-open EuclideanGeometry
-
-noncomputable def circle (O : Point) (r : Real) := {P : Point | dist O P = r}
-def midpoint (A B : Point) : Point := (A + B) / 2
-def perp_bisector (A B : Point) : Line := {P : Point | dist P A = dist P B}
-
-theorem locus_of_Y (O P X : Point) (r : Real) (hP : P ∉ circle O r) (hX : X ∈ circle O r) :
-  ∃ Z : Point, is_on_line Z (line O P) ∧ Z ∈ circle O r ∧
-  (locus_Y : Π Y : Point, Y ∈ bisector_line (angle P O X) ∧ Y ∈ perp_bisector P X → Y ∈ perp_bisector P Z) :=
-sorry
-
-end locus_of_Y_l79_79806
-
-
-namespace midpoint_I_of_AD_l79_79107
-
-variable {α : Type*} [LinearOrderedField α]
-
--- Assume the existence of a triangle ABC such that 2BC = AB + AC
-variables {A B C I D : α}
-variable {ω : Type*}
-
--- Definitions
-def triangle_satisfies_condition (A B C : α) : Prop := 2 * (dist B C) = (dist A B) + (dist A C)
-def incenter_of_triangle (I A B C : α) : Prop := is_incenter I A B C
-def circumcircle_of_triangle (ω A B C : α) : Prop := is_circumcircle ω A B C
-def intersection_of_AI_and_circumcircle (A I D : α) (ω : Type*) : Prop := intersects AI ω D ∧ A ≠ D
-
--- Goal to prove
-theorem midpoint_I_of_AD 
-    (h1 : triangle_satisfies_condition A B C)
-    (h2 : incenter_of_triangle I A B C)
-    (h3 : circumcircle_of_triangle ω A B C)
-    (h4 : intersection_of_AI_and_circumcircle A I D ω) : 
-    is_midpoint I A D :=
-sorry
-
-end midpoint_I_of_AD_l79_79107
-
-
-namespace max_consecutive_sum_le_1000_l79_79229
-
-theorem max_consecutive_sum_le_1000 : 
-  ∃ (n : ℕ), (∀ m : ℕ, m > n → ∑ k in finset.range (m + 1), k > 1000) ∧
-             ∑ k in finset.range (n + 1), k ≤ 1000 :=
-by
-  sorry
-
-end max_consecutive_sum_le_1000_l79_79229
-
-
-namespace tetrahedron_faces_acute_l79_79714
-
--- Definitions for vertices of the tetrahedron
-variables {A B C D M : Type} 
-
--- Condition: Tetrahedron has opposite sides equal
-variables (AB DC AD BC AC BD : ℝ)
-variables (h1 : AB = DC)
-variables (h2 : BC = AD)
-variables (h3 : AC = BD)
-
--- Goal: Prove all faces of the tetrahedron are acute-angled
-theorem tetrahedron_faces_acute (A B C D : Type) 
-  (AB DC AD BC AC BD : ℝ) 
-  (h1 : AB = DC) 
-  (h2 : BC = AD)
-  (h3 : AC = BD) : 
-  all_faces_acute A B C D :=
-sorry
-
-end tetrahedron_faces_acute_l79_79714
-
-
-namespace greatest_digits_product_4_digit_997_l79_79643
-
-theorem greatest_digits_product_4_digit_997 : 
-  ∀ n : ℕ, 1000 ≤ n ∧ n ≤ 9999 → ∀ m : ℕ, m = 997 → ∃ d : ℕ, d = Nat.number_of_digits (n * m) ∧ d = 7 :=
-by
-  sorry
-
-end greatest_digits_product_4_digit_997_l79_79643
-
-
-namespace range_a_local_max_l79_79802
-
-open Real
-
-theorem range_a_local_max (a : ℝ) :
-  (∃ x > 0, is_local_max (λ x => exp x + a * x) x) → a < -1 :=
-by
-  sorry
-
-end range_a_local_max_l79_79802
-
-
-namespace tetrahedron_intersect_and_circumsphere_center_l79_79050
-
--- Conditions
-variables {S A B C : Type} -- Points of the tetrahedron
-variable  [EuclideanGeometry S A B C]
-variable {M : EuclideanPoint}
-variable (M_is_centroid : centroid M A B C)
-variable {D : EuclideanPoint}
-variable (D_is_midpoint : midpoint D A B)
-variables {DP : EuclideanLine}
-variable (DP_parallel_SC : parallel DP SC)
-
--- Proof that DP intersects SM and the intersection point is the center of the circumsphere
-theorem tetrahedron_intersect_and_circumsphere_center 
-  (SM : EuclideanLine)
-  (SM_sub_W : in_plane S M DP) :
-  ∃ D' : EuclideanPoint, 
-  (on_line D' DP) ∧ (on_line D' SM) ∧ 
-  (equidistant D' S A B C) :=
-sorry
-
-end tetrahedron_intersect_and_circumsphere_center_l79_79050
-
-
-namespace triangle_integer_lengths_impossible_l79_79081
-
-noncomputable def isIntegerLength (x : Real) : Prop :=
-  ∃ n : ℤ, x = n
-
-theorem triangle_integer_lengths_impossible
-  {A B C D E I : Type}
-  [MetricSpace A] [MetricSpace B] [MetricSpace C]
-  [MetricSpace D] [MetricSpace E] [MetricSpace I]
-  (AB AC BI ID CI IE : ℝ)
-  (h0 : ∃ α : ℝ, α = ∠A B C ∧ α = π / 2)
-  (h1 : ∃ β : ℝ, β = ∠A B D ∧ β = ∠D B C)
-  (h2 : ∃ γ : ℝ, γ = ∠A C E ∧ γ = ∠E C B)
-  (h3 : BD meets CE at I)
-  (h4 : A B C form_right_triangle_at A) : 
-  ¬(isIntegerLength AB ∧ isIntegerLength AC ∧ isIntegerLength BI ∧ isIntegerLength ID ∧ isIntegerLength CI ∧ isIntegerLength IE) := 
-sorry
-
-end triangle_integer_lengths_impossible_l79_79081
-
-
-namespace width_of_g_domain_is_72_l79_79543
-
--- Define the function h and its domain condition
-def h (x : ℝ) : ℝ := sorry
-
--- Define the function g based on h
-def g (x : ℝ) : ℝ := h (x / 3)
-
--- State the domain condition for h
-axiom h_domain : ∀ x, x ∈ Set.Icc (-12 : ℝ) (12 : ℝ) → (h x = h x)
-
--- Proof statement about the width of the domain of g
-theorem width_of_g_domain_is_72 :
-  (∀ x, x ∈ Set.Icc (-12 : ℝ) (12 : ℝ) → (h x = h x)) →
-  (∀ x, x ∈ Set.Icc (-36 : ℝ) (36 : ℝ) → (g x = g x)) →
-  (36 - (-36) = 72) :=
-by
-  intros
-  calc
-    36 - (-36) = 36 + 36 : by linarith
-    ... = 72 : by linarith
-
-end width_of_g_domain_is_72_l79_79543
-
-
-namespace vertical_asymptote_at_x_eq_neg_2_l79_79863
-
-def f (x : ℝ) : ℝ := (2 * x^2 + 3 * x + 10) / (x + 2)
-
-theorem vertical_asymptote_at_x_eq_neg_2 : ∃ x : ℝ, x = -2 ∧ (x + 2 = 0) ∧ (2 * x^2 + 3 * x + 10 ≠ 0) :=
-by
-  use (-2)
-  split
-  · rfl
-  split
-  · norm_num
-  · norm_num
-    linarith
-
-end vertical_asymptote_at_x_eq_neg_2_l79_79863
-
-
-namespace probability_of_sequence_123456_l79_79655
-
-theorem probability_of_sequence_123456 :
-  let total_sequences := 66 * 45 * 28 * 15 * 6 * 1     -- Total number of sequences
-  let specific_sequences := 1 * 3 * 5 * 7 * 9 * 11        -- Sequences leading to 123456
-  specific_sequences / total_sequences = 1 / 720 := by
-  let total_sequences := 74919600
-  let specific_sequences := 10395
-  sorry
-
-end probability_of_sequence_123456_l79_79655
-
-
-namespace geometric_series_common_ratio_l79_79196
-
-theorem geometric_series_common_ratio (a r : ℝ) (h₁ : r ≠ 1)
-    (h₂ : a / (1 - r) = 64 * (a * r^4) / (1 - r)) : r = 1/2 :=
-by
-  have h₃ : 1 = 64 * r^4 := by
-    have : 1 - r ≠ 0 := by linarith
-    field_simp at h₂; assumption
-  sorry
-
-end geometric_series_common_ratio_l79_79196
-
-
-namespace seating_arrangements_l79_79603
-
-theorem seating_arrangements :
-  let boys := 6
-  let girls := 5
-  let chairs := 11
-  let total_arrangements := Nat.factorial chairs
-  let restricted_arrangements := Nat.factorial boys * Nat.factorial girls
-  total_arrangements - restricted_arrangements = 39830400 :=
-by
-  sorry
-
-end seating_arrangements_l79_79603
-
-
-namespace workshop_participants_problem_l79_79624
-
-variable (WorkshopSize : ℕ) 
-variable (LeftHanded : ℕ) 
-variable (RockMusicLovers : ℕ) 
-variable (RightHandedDislikeRock : ℕ) 
-variable (Under25 : ℕ)
-variable (RightHandedUnder25RockMusicLovers : ℕ)
-variable (y : ℕ)
-
-theorem workshop_participants_problem
-  (h1 : WorkshopSize = 30)
-  (h2 : LeftHanded = 12)
-  (h3 : RockMusicLovers = 18)
-  (h4 : RightHandedDislikeRock = 5)
-  (h5 : Under25 = 9)
-  (h6 : RightHandedUnder25RockMusicLovers = 3)
-  (h7 : WorkshopSize = LeftHanded + (WorkshopSize - LeftHanded))
-  (h8 : WorkshopSize - LeftHanded = RightHandedDislikeRock + RightHandedUnder25RockMusicLovers + (WorkshopSize - LeftHanded - RightHandedDislikeRock - RightHandedUnder25RockMusicLovers - y))
-  (h9 : WorkshopSize - (RightHandedDislikeRock + RightHandedUnder25RockMusicLovers + Under25 - y - (RockMusicLovers - y)) - (LeftHanded - y) = WorkshopSize) :
-  y = 5 := by
-  sorry
-
-end workshop_participants_problem_l79_79624
-
-
-namespace negation_sin_proposition_l79_79160
-
-theorem negation_sin_proposition : ¬ (∀ x : ℝ, x > 0 → sin x ≥ -1) ↔ ∃ x : ℝ, x > 0 ∧ sin x < -1 := 
-sorry
-
-end negation_sin_proposition_l79_79160
-
-
-namespace geometric_series_ratio_half_l79_79202
-
-theorem geometric_series_ratio_half (a r S : ℝ) (hS : S = a / (1 - r)) 
-  (h_ratio : (ar^4) / (1 - r) = S / 64) : r = 1 / 2 :=
-by
-  sorry
-
-end geometric_series_ratio_half_l79_79202
-
-
-namespace select_workers_l79_79734
-
-theorem select_workers :
-  ∃ (num_selections : ℕ),
-  (∀ (total workers for typesetting printing both : ℕ),
-    total = 11 ∧
-    typesetting = 7 ∧
-    printing = 6 ∧
-    both ≤ min typesetting printing →
-    num_selections = 185) :=
-begin
-  sorry
-end
-
-end select_workers_l79_79734
-
-
-namespace cosine_of_angle_in_third_quadrant_l79_79033
-
-theorem cosine_of_angle_in_third_quadrant (B : ℝ) (hB : B ∈ Set.Ioo (π : ℝ) (3 * π / 2)) (hSinB : Real.sin B = -5 / 13) :
-  Real.cos B = -12 / 13 :=
-sorry
-
-end cosine_of_angle_in_third_quadrant_l79_79033
-
-
-namespace roots_of_polynomial_l79_79166
-
--- Define the coefficients of the polynomial equation
-def a : ℂ := 1
-def b : ℂ := 2
-def c : ℂ := 3
-
--- Define the polynomial equation
-def polynomial (x : ℂ) : Prop := x^2 + b * x + c = 0
-
--- Define the expected roots
-def root1 : ℂ := -1 + complex.I * real.sqrt 2
-def root2 : ℂ := -1 - complex.I * real.sqrt 2
-
--- Prove that these are indeed the roots of the polynomial
-theorem roots_of_polynomial : ∀ x : ℂ, polynomial x ↔ (x = root1 ∨ x = root2) :=
-by
-  sorry
-
-end roots_of_polynomial_l79_79166
-
-
-namespace divides_expression_iff_l79_79279
-
-theorem divides_expression_iff (p : ℕ) [hpprime : Fact p.prime] (hpodd : p % 2 = 1) :
-  (∃ n : ℤ, p ∣ n * (n + 1) * (n + 2) * (n + 3) + 1) ↔ (∃ m : ℤ, p ∣ m^2 - 5) :=
-by sorry
-
-end divides_expression_iff_l79_79279
-
-
-namespace at_least_one_junior_selected_l79_79035
-
-noncomputable def probability_at_least_one_junior 
-  (seniors juniors: ℕ) (selected: ℕ) 
-  (total_people_seniors: seniors = 8) 
-  (total_people_juniors: juniors = 4): Prop :=
-  let total_people := seniors + juniors in
-  let prob_no_junior := (seniors / total_people) * 
-                        ((seniors - 1) / (total_people - 1)) *
-                        ((seniors - 2) / (total_people - 2)) *
-                        ((seniors - 3) / (total_people - 3)) in
-  1 - prob_no_junior = 85 / 99
-
--- Now we state the actual theorem
-theorem at_least_one_junior_selected :
-  probability_at_least_one_junior 8 4 4 rfl rfl :=
-  sorry
-
-end at_least_one_junior_selected_l79_79035
-
-
-namespace egg_pack_count_l79_79722
-
-theorem egg_pack_count (n : ℕ) (h : 6 / (n * (n - 1)) = 0.0047619047619047615) : n = 36 :=
-sorry
-
-end egg_pack_count_l79_79722
-
-
-namespace max_consecutive_sum_le_1000_l79_79230
-
-theorem max_consecutive_sum_le_1000 : 
-  ∃ (n : ℕ), (∀ m : ℕ, m > n → ∑ k in finset.range (m + 1), k > 1000) ∧
-             ∑ k in finset.range (n + 1), k ≤ 1000 :=
-by
-  sorry
-
-end max_consecutive_sum_le_1000_l79_79230
-
-
-namespace domain_F_l79_79438
-
--- Define the function f and specify its domain.
-def f (x : ℝ) : ℝ := sorry  -- Placeholder for the actual function definition.
-
--- Define the function F in terms of f and sqrt.
-def F (x : ℝ) : ℝ := f (x + 1) + Real.sqrt (3 - x)
-
-theorem domain_F (h : ∀ x : ℝ, 0 < x → ∃ y : ℝ, f x = y) : 
-  ∀ x : ℝ, (-1 < x ∧ x ≤ 3) ↔ ∃ y : ℝ, F x = y := 
-by
-  sorry
-
-end domain_F_l79_79438
-
-
-namespace y_intercept_of_tangent_line_2023rd_derivative_l79_79368
-
-def f (x : ℝ) : ℝ := x * Real.exp x
-
--- Define nth derivative recursively
-noncomputable def derivative : ℕ → (ℝ → ℝ)
-| 0 := f
-| (n+1) := λ x, (derivative n)' x
-
--- nth derivative of f
-noncomputable def f_n (n : ℕ) (x : ℝ) : ℝ :=
-(derivative n) x
-
-theorem y_intercept_of_tangent_line_2023rd_derivative :
-  let x := 0 in
-  let n := 2023 in
-  let f' := derivative (n+1) in
-  let tangent_line := λ x, (f' 0) * x + f_n n 0 in
-  tangent_line (Real.neg (2023/2024 : ℝ)) = 0 :=
-by
-  sorry
-
-end y_intercept_of_tangent_line_2023rd_derivative_l79_79368
-
-
-namespace greatest_int_less_equal_expr_l79_79762
-
-theorem greatest_int_less_equal_expr : 
-  let expr := (4^103 + 3^103) / (4^100 + 3^100) in
-  ∃ (k : ℤ), k = 63 ∧ (k : ℝ) ≤ expr ∧ expr < (k + 1 : ℝ) :=
-begin
-  sorry
-end
-
-end greatest_int_less_equal_expr_l79_79762
-
-
-namespace geometric_series_ratio_half_l79_79204
-
-theorem geometric_series_ratio_half (a r S : ℝ) (hS : S = a / (1 - r)) 
-  (h_ratio : (ar^4) / (1 - r) = S / 64) : r = 1 / 2 :=
-by
-  sorry
-
-end geometric_series_ratio_half_l79_79204
-
-
-namespace find_integer_solutions_of_equation_l79_79381
-
-def has_eight_divisors (n : ℕ) : Prop :=
-  ∃ (a b c : ℕ), (a.prime ∧ b.prime ∧ c.prime) ∧ (n = a^7 ∨ n = a^3 * b ∨ n = a * b * c)
-
-theorem find_integer_solutions_of_equation (p q r : ℕ) :
-  r + p^4 = q^4 →
-  has_eight_divisors r →
-  p.prime ∧ q.prime →
-  (p = 2 ∧ q = 5 ∧ r = 609) :=
-sorry
-
-end find_integer_solutions_of_equation_l79_79381
-
-
-namespace area_of_BEIH_is_3_over_4_l79_79704
-
--- Define the vertices of the rectangle
-def A : ℝ × ℝ := (0, 2)
-def B : ℝ × ℝ := (0, 0)
-def C : ℝ × ℝ := (3, 0)
-def D : ℝ × ℝ := (3, 2)
-
--- Define the midpoints of AB and CD
-def E : ℝ × ℝ := midpoint ℝ ℝ (0, 0) (0, 2)
-def F : ℝ × ℝ := midpoint ℝ ℝ (3, 0) (3, 2)
-
--- Assume the intersection points based on conditions
-def I : ℝ × ℝ := (3/2, 5/2)
-def H : ℝ × ℝ := (3/2, 3/2)
-
--- Define the area of quadrilateral BEIH
-def area_BEIH : ℝ :=
-  (1/2) * abs ((E.1 * I.2 + I.1 * H.2 + H.1 * B.2 + B.1 * E.2) - (E.2 * I.1 + I.2 * H.1 + H.2 * B.1 + B.2 * E.1))
-
--- The proof problem: prove that the area of quadrilateral BEIH is 3/4
-theorem area_of_BEIH_is_3_over_4 : area_BEIH = 3 / 4 :=
-by sorry
-
-end area_of_BEIH_is_3_over_4_l79_79704
-
-
-namespace infinite_pos_int_sum_three_cubes_l79_79122
-
-theorem infinite_pos_int_sum_three_cubes (i : ℕ) (h : i = 1 ∨ i = 2 ∨ i = 3) :
-  ∃ (n : ℕ), ∃ᶠ (n : ℕ) in at_top, 
-   (∃ (k : ℕ), k = (commodious_solution_based n i mod 9) = true if cubeable condition setup) :=
-    sorry
-
-end infinite_pos_int_sum_three_cubes_l79_79122
-
-
-namespace last_person_is_knight_l79_79529
-
--- Definitions for the conditions:
-def first_whispered_number := 7
-def last_announced_number_first_game := 3
-def last_whispered_number_second_game := 5
-def first_announced_number_second_game := 2
-
--- Definitions to represent the roles:
-inductive Role
-| knight
-| liar
-
--- Definition of the last person in the first game being a knight:
-def last_person_first_game_role := Role.knight
-
-theorem last_person_is_knight 
-  (h1 : Role.liar = Role.liar)
-  (h2 : last_announced_number_first_game = 3)
-  (h3 : first_whispered_number = 7)
-  (h4 : first_announced_number_second_game = 2)
-  (h5 : last_whispered_number_second_game = 5) :
-  last_person_first_game_role = Role.knight :=
-sorry
-
-end last_person_is_knight_l79_79529
-
-
-namespace geometric_series_common_ratio_l79_79183
-
-theorem geometric_series_common_ratio (a r : ℝ) (h : a / (1 - r) = 64 * (a * r^4 / (1 - r))) : r = 1/2 :=
-by {
-  sorry
-}
-
-end geometric_series_common_ratio_l79_79183
-
-
-namespace find_solutions_l79_79777
-
-theorem find_solutions (x y : ℤ) (hx : x ≥ 0) (hy : y ≥ 0) :
-  1 + 3^x = 2^y ↔ (x = 0 ∧ y = 1) ∨ (x = 1 ∧ y = 2) :=
-by
-  sorry
-
-end find_solutions_l79_79777
-
-
-namespace find_y_l79_79159
-
-theorem find_y 
-  (h : (5 + 8 + 17) / 3 = (12 + y) / 2) : y = 8 :=
-sorry
-
-end find_y_l79_79159
-
-
-namespace difference_in_change_is_40_percent_l79_79743
-
-theorem difference_in_change_is_40_percent :
-  let initial_yes_percent := 0.40
-  let initial_no_percent := 0.40
-  let initial_undecided_percent := 0.20
-  let final_yes_percent := 0.60
-  let final_no_percent := 0.30
-  let final_undecided_percent := 0.10
-  max_percent_change_minus_min_percent_change initial_yes_percent initial_no_percent initial_undecided_percent 
-                                              final_yes_percent final_no_percent final_undecided_percent = 0.40 :=
-by 
-  sorry
-
-def max_percent_change_minus_min_percent_change (initial_yes initial_no initial_undecided : Float) 
-                                                (final_yes final_no final_undecided : Float) : Float :=
-  -- Placeholder function to compute the difference between maximum and minimum possible values of changes.
-  sorry
-
-end difference_in_change_is_40_percent_l79_79743
-
-
-namespace cosine_of_angle_in_third_quadrant_l79_79032
-
-theorem cosine_of_angle_in_third_quadrant (B : ℝ) (hB : B ∈ Set.Ioo (π : ℝ) (3 * π / 2)) (hSinB : Real.sin B = -5 / 13) :
-  Real.cos B = -12 / 13 :=
-sorry
-
-end cosine_of_angle_in_third_quadrant_l79_79032
-
-
-namespace probability_sequence_123456_l79_79661
-
-theorem probability_sequence_123456 :
-  let total_sequences := 66 * 45 * 28 * 15 * 6 * 1,
-      favorable_sequences := 1 * 3 * 5 * 7 * 9 * 11
-  in (favorable_sequences : ℚ) / total_sequences = 1 / 720 := 
-by 
-  sorry
-
-end probability_sequence_123456_l79_79661
-
-
-namespace minimum_perimeter_Q_l79_79085
-
-noncomputable def Q (z : ℂ) : ℂ := z^8 + (2 * complex.sqrt 3 + 8) * z^4 - (2 * complex.sqrt 3 + 9)
-
-theorem minimum_perimeter_Q (z : ℂ) : 
-  (∀ v ∈ ({z : ℂ | Q z = 0}), 
-   ∑ (pair : ℂ × ℂ) in (v.zip_with_next), complex.dist (pair.1) (pair.2)) = 8 * complex.sqrt 2 :=
-sorry
-
-end minimum_perimeter_Q_l79_79085
-
-
-namespace minimum_chips_for_A10_l79_79227
-
-theorem minimum_chips_for_A10 (n : ℕ) (initial_chips : ∀ i : ℕ, i ≠ 1 → i < 11 → ℕ := 0) :
-  ∃ n ≥ 46, (initial_chips 1 = n) → ∃ m : ℕ, m ≥ 1 ∧ initial_chips 10 = m :=
-begin
-  sorry
-end
-
-end minimum_chips_for_A10_l79_79227
-
-
-namespace compare_fractions_l79_79351
-
-theorem compare_fractions :
-  (111110 / 111111) < (333331 / 333334) ∧ (333331 / 333334) < (222221 / 222223) :=
-by
-  sorry
-
-end compare_fractions_l79_79351
-
-
-namespace change_in_us_volume_correct_l79_79970
-
--- Definition: Change in the total import and export volume of goods in a given year
-def change_in_volume (country : String) : Float :=
-  if country = "China" then 7.5
-  else if country = "United States" then -6.4
-  else 0
-
--- Theorem: The change in the total import and export volume of goods in the United States is correctly represented.
-theorem change_in_us_volume_correct :
-  change_in_volume "United States" = -6.4 := by
-  sorry
-
-end change_in_us_volume_correct_l79_79970
-
-
-namespace lora_coins_l79_79295
-
-theorem lora_coins :
-  ∃ n : ℕ, (17 = (finset.filter (λ d, d > 2) (nat.divisors n)).card) ∧
-           (∀ m : ℕ, (17 = (finset.filter (λ d, d > 2) (nat.divisors m)).card) → n ≤ m) ∧
-           n = 2700 :=
-by
-  sorry
-
-end lora_coins_l79_79295
-
-
-namespace water_left_over_l79_79995
-
-theorem water_left_over (players : ℕ) (initial_liters : ℕ) (milliliters_per_player : ℕ) (water_spill_ml : ℕ) :
-  players = 30 → initial_liters = 8 → milliliters_per_player = 200 → water_spill_ml = 250 →
-  (initial_liters * 1000) - (players * milliliters_per_player + water_spill_ml) = 1750 :=
-by
-  intros h1 h2 h3 h4
-  rw [h1, h2, h3, h4]
-  change 8 * 1000 - (30 * 200 + 250) = 1750
-  norm_num
-  sorry
-
-end water_left_over_l79_79995
-
-
-namespace general_term_and_nonexistent_pair_l79_79517
+namespace max_subset_size_l79_79115
 
 open Nat
 
-def sequence (a : ℕ → ℕ) : Prop := 
-  (a 1 = 2) ∧ ∀ n, a (n+1) = a n + 2^n
-
-theorem general_term_and_nonexistent_pair (a : ℕ → ℕ) :
-  sequence a →
-  (∀ n, a n = 2^n) ∧ ¬ ∃ p q, p < q ∧ a p + a q = 2014 :=
-by
-  assume h1 : sequence a
-  sorry
-
-end general_term_and_nonexistent_pair_l79_79517
-
-
-namespace usual_time_to_cover_distance_l79_79224
-
-theorem usual_time_to_cover_distance
-  (S T : ℝ) :
-  ((S / (0.25 * S)) = ((T + 24) / T)) →
-  4 = (T + 24) / T →
-  T = 8 := 
-by
-  intros,
-  sorry
-
-end usual_time_to_cover_distance_l79_79224
-
-
-namespace symmetry_of_f_graph_symmetric_about_point_half_l79_79978
-
-def f (x : ℝ) : ℝ := |⌊x⌋| - |⌊1 - x⌋|
-
-theorem symmetry_of_f : ∀ x : ℝ, f(x) = f(1 - x) :=
-by
-  sorry
-
-theorem graph_symmetric_about_point_half : ∃ k, k = (1/2, 0) ∧ (∀ x, f(x) = f(1 - x)) :=
-by
-  use (1/2, 0)
-  split
-  · rfl
-  · apply symmetry_of_f
-  sorry
-
-end symmetry_of_f_graph_symmetric_about_point_half_l79_79978
-
-
-namespace find_a_l79_79833
-
-theorem find_a (a : ℝ) :
-  (∀ x : ℝ, ((x^2 - 4 * x + a) + |x - 3| ≤ 5) → x ≤ 3) →
-  (∃ x : ℝ, x = 3 ∧ ((x^2 - 4 * x + a) + |x - 3| ≤ 5)) →
-  a = 2 := 
-by
-  sorry
-
-end find_a_l79_79833
-
-
-namespace find_a_l79_79832
-
-theorem find_a (a : ℝ) :
-  (∀ x : ℝ, ((x^2 - 4 * x + a) + |x - 3| ≤ 5) → x ≤ 3) →
-  (∃ x : ℝ, x = 3 ∧ ((x^2 - 4 * x + a) + |x - 3| ≤ 5)) →
-  a = 2 := 
-by
-  sorry
-
-end find_a_l79_79832
-
-
-namespace polynomial_has_at_most_one_integer_root_l79_79079
-
-theorem polynomial_has_at_most_one_integer_root (k : ℝ) :
-  ∀ x y : ℤ, (x^3 - 24 * x + k = 0) ∧ (y^3 - 24 * y + k = 0) → x = y :=
-by
-  intros x y h
-  sorry
-
-end polynomial_has_at_most_one_integer_root_l79_79079
-
-
-namespace no_return_after_12_jumps_return_after_13_jumps_l79_79933
-
--- Define the number of points (12 points on a circle).
-def num_points : ℕ := 12
-
--- Define the initial positions of the grasshoppers on the circle.
-def initial_positions : Fin num_points → RealAngle := sorry  -- Assuming RealAngle is a type representing angles on the circle
-
--- Define the function representing a single jump to the nearest midpoint in a clockwise direction.
-def jump : RealAngle → RealAngle := sorry  -- Function to compute the new position after a jump
-
--- Proof statement (a): No grasshopper can return to its initial position after 12 jumps.
-theorem no_return_after_12_jumps : ∀ (i : Fin num_points), (jump^[12] (initial_positions i) ≠ initial_positions i) := sorry
-
--- Proof statement (b): Any grasshopper can return to its initial position after 13 jumps.
-theorem return_after_13_jumps : ∀ (i : Fin num_points), (jump^[13] (initial_positions i) = initial_positions i) := sorry
-
-end no_return_after_12_jumps_return_after_13_jumps_l79_79933
-
-
-namespace smallest_radius_squared_of_sphere_l79_79323
-
-theorem smallest_radius_squared_of_sphere :
-  ∃ (x y z : ℤ), 
-  (x - 2)^2 + y^2 + z^2 = (x^2 + (y - 4)^2 + z^2) ∧
-  (x - 2)^2 + y^2 + z^2 = (x^2 + y^2 + (z - 6)^2) ∧
-  (x ≠ 0 ∨ y ≠ 0 ∨ z ≠ 0) ∧
-  (∃ r, r^2 = (x - 2)^2 + (0 - y)^2 + (0 - z)^2) ∧
-  51 = r^2 :=
-sorry
-
-end smallest_radius_squared_of_sphere_l79_79323
-
-
-namespace log_base_3x_condition_l79_79858
-
-theorem log_base_3x_condition (x : ℝ) (h : log (3 * x) 729 = x) : 
-  x = 3 ∧ ¬(∃ n : ℤ, n^2 = x) ∧ ¬(∃ m : ℤ, m^3 = x) :=
-by
-  sorry
-
-end log_base_3x_condition_l79_79858
-
-
-namespace odd_n_non_integer_even_n_example_l79_79808
-
--- Define the sequence recurrence relation
-noncomputable def sequence (n : ℕ) : (ℕ → ℝ) → ℕ → ℕ → ℝ
-| x 0 := x
-| x (k + 1) i :=
-  if i = n then
-    1 / 2 * (sequence n x k i + sequence n x k 1)
-  else
-    1 / 2 * (sequence n x k i + sequence n x k (i + 1))
-
--- Main theorem for odd n
-theorem odd_n_non_integer {n : ℕ} (hn : n ≥ 2) (hn_odd : n % 2 = 1)
-  (x : ℕ → ℤ) (not_all_equal : ∃ i j, i < n ∧ j < n ∧ x i ≠ x j) :
-  ∃ k j, j < n ∧ ¬ (sequence n (λ i, (x i : ℝ)) k j).isInt :=
-sorry
-
--- Counterexample for even n
-theorem even_n_example {n : ℕ} (hn : n ≥ 2) (hn_even : n % 2 = 0) :
-  ∃ x : ℕ → ℤ, (∀ j < n, ∀ k, (sequence n (λ i, (x i : ℝ)) k j).isInt) :=
-begin
-  use λ i, if i % 2 = 0 then 1 else -1,
-  intros j hj k,
-  induction k with k ih,
-  { simp [sequence] },
-  { simp [sequence, ih, if_pos] },
-end
-
-end odd_n_non_integer_even_n_example_l79_79808
-
-
-namespace problem_statement_l79_79036
-
-def A := {x : ℝ | x * (x - 1) < 0}
-def B := {y : ℝ | ∃ x : ℝ, y = x^2}
-
-theorem problem_statement : A ⊆ {y : ℝ | y ≥ 0} :=
-sorry
-
-end problem_statement_l79_79036
-
-
-namespace length_of_AC_l79_79117
-
--- Defining the isosceles triangle ABC with AB = BC
-variables {A B C M : Type}
-variable [triangle : ∀ A B C, Prop (isosceles A B C)] -- Assuming triangle ABC is isosceles with AB = BC
-variable (point_M_on_AC : ∀ A C M, Prop (on_line A C M)) -- Point M on line AC
-variable (AM_val : distance (A, M) = 7) -- AM = 7
-variable (MB_val : distance (M, B) = 3) -- MB = 3
-variable (angle_BMC_60 : ∠(B, M, C) = 60) -- ∠BMC = 60°
-
--- Define the proof problem: the length of AC
-theorem length_of_AC (ABC_isosceles : isosceles A B C)
-  (M_on_AC : on_line A C M)
-  (H_AM : distance (A, M) = 7)
-  (H_MB : distance (M, B) = 3)
-  (H_angle_BMC : ∠(B, M, C) = 60) :
-  distance (A, C) = 17 :=
-sorry
-
-end length_of_AC_l79_79117
-
-
-namespace sum_of_altitudes_is_less_than_perimeter_l79_79942
-
-theorem sum_of_altitudes_is_less_than_perimeter 
-  (a b c h_a h_b h_c : ℝ) 
-  (h_a_le_b : h_a ≤ b) 
-  (h_b_le_c : h_b ≤ c) 
-  (h_c_le_a : h_c ≤ a) 
-  (strict_inequality : h_a < b ∨ h_b < c ∨ h_c < a) : h_a + h_b + h_c < a + b + c := 
+theorem max_subset_size (a b n : ℕ) (hpos_a : 0 < a) (hpos_b : 0 < b) (hpos_n : 0 < n)
+  (h_gcd : a.gcd b = 1) (h_div : (a + b) ∣ n) :
+  ∃ S : Finset ℕ, S ⊆ Finset.range (n + 1) ∧ (∀ x y ∈ S, x ≠ y → (x - y).abs ≠ a ∧ (x - y).abs ≠ b) ∧
+  S.card = (n / (a + b)) * ((a + b) / 2) :=
 by 
   sorry
 
-end sum_of_altitudes_is_less_than_perimeter_l79_79942
+end max_subset_size_l79_79115
 
 
-namespace find_constants_sum_of_squares_l79_79629
+namespace area_comparison_l79_79937
 
-noncomputable def cos_expansion_constants (a₁ a₂ a₃ a₄ a₅ : ℝ) : Prop :=
-  ∀ θ : ℝ, real.cos θ ^ 5 = 
-            a₁ * real.cos θ + 
-            a₂ * real.cos (2 * θ) + 
-            a₃ * real.cos (3 * θ) + 
-            a₄ * real.cos (4 * θ) + 
-            a₅ * real.cos (5 * θ)
+def point := (ℝ × ℝ)
 
-theorem find_constants_sum_of_squares :
-  ∃ (a₁ a₂ a₃ a₄ a₅ : ℝ), 
-    cos_expansion_constants a₁ a₂ a₃ a₄ a₅ ∧ 
-    a₁^2 + a₂^2 + a₃^2 + a₄^2 + a₅^2 = 63 / 128 :=
-sorry
+def quadrilateral_I_vertices : List point := [(0, 0), (2, 0), (2, 2), (0, 2)]
 
-end find_constants_sum_of_squares_l79_79629
+def quadrilateral_I_area : ℝ := 4
 
+def quadrilateral_II_vertices : List point := [(1, 0), (4, 0), (4, 4), (1, 3)]
 
-namespace sum_G_div_5_pow_inf_l79_79916
+noncomputable def quadrilateral_II_area : ℝ := 10.5
 
-def fibonacci : ℕ → ℕ 
-| 0       := 0
-| 1       := 1
-| (n + 2) := fibonacci (n + 1) + fibonacci n
-
-def G (n : ℕ) : ℕ := 2 * fibonacci n
-
-noncomputable def sum_G_div_5_pow (N : ℕ) : ℝ := ∑ n in finset.range N, (G n : ℝ) / (5 ^ n)
-
-noncomputable def inf_sum_G_div_5_pow : ℝ := ∑' n, (G n : ℝ) / (5 ^ n)
-
-theorem sum_G_div_5_pow_inf : inf_sum_G_div_5_pow = 10 / 19 := 
-by sorry
-
-end sum_G_div_5_pow_inf_l79_79916
-
-
-namespace represent_in_scientific_notation_l79_79569
-
-def million : ℕ := 10^6
-def rural_residents : ℝ := 42.39 * million
-
-theorem represent_in_scientific_notation :
-  42.39 * 10^6 = 4.239 * 10^7 :=
-by
-  -- The proof is omitted.
-  sorry
-
-end represent_in_scientific_notation_l79_79569
-
-
-namespace max_consecutive_integers_sum_l79_79250
-
-theorem max_consecutive_integers_sum (S_n : ℕ → ℕ) : (∀ n, S_n n = n * (n + 1) / 2) → ∀ n, (S_n n < 1000 ↔ n ≤ 44) :=
-by
-  intros H n
-  split
-  · intro H1
-    have H2 : n * (n + 1) < 2000 := by
-      rw [H n] at H1
-      exact H1
+theorem area_comparison :
+  quadrilateral_I_area < quadrilateral_II_area :=
+  by
     sorry
-  · intro H1
-    have H2 : n ≤ 44 := H1
-    have H3 : n * (n + 1) < 2000 := by
-      sorry
-    have H4 : S_n n < 1000 := by
-      rw [H n]
-      exact H3
-    exact H4
 
-end max_consecutive_integers_sum_l79_79250
+end area_comparison_l79_79937
 
 
-namespace markers_difference_l79_79531
+namespace domain_of_f_2x_minus_1_l79_79274
 
-theorem markers_difference (leo_cost maya_cost : ℝ) (h_leo : leo_cost = 3.51) (h_maya : maya_cost = 4.25) : ∃ m : ℕ, m = 4 :=
-by
-  use 4
-  sorry
-
-end markers_difference_l79_79531
-
-
-namespace functions_symmetric_about_y_axis_l79_79897
-
--- Define the functions f and g
-def f (x : ℝ) : ℝ := 2^(x + 1)
-def g (x : ℝ) : ℝ := 2^(1 - x)
-
--- Statement to prove the symmetry about y-axis
-theorem functions_symmetric_about_y_axis :
-  ∀ (x : ℝ), f(-x) = g(x) :=
+theorem domain_of_f_2x_minus_1 (f : ℝ → ℝ) :
+  (∀ x, -1 ≤ x ∧ x ≤ 1 → (f x ≠ 0)) →
+  (∀ y, 0 ≤ y ∧ y ≤ 1 ↔ exists x, (2 * x - 1 = y) ∧ (0 ≤ x ∧ x ≤ 1)) :=
 by
   sorry
 
-end functions_symmetric_about_y_axis_l79_79897
+end domain_of_f_2x_minus_1_l79_79274
 
 
-namespace parallelogram_is_centrally_symmetric_l79_79277
+namespace train_length_l79_79966
 
--- Definition of a parallelogram
-structure Parallelogram (P Q R S : Type) :=
-(e1 : segment P Q)
-(e2 : segment Q R)
-(e3 : segment R S)
-(e4 : segment S P)
-(parallel : ∀ {e1 e3 : Prop}, e1 ∥ e3)
-(parallel : ∀ {e2 e4 : Prop}, e2 ∥ e4)
-
--- Definition of central symmetry
-def centrally_symmetric (fig : Type) :=
-∃ (center : Type), ∀ x ∈ fig, ∃ y ∈ fig, (center + x = y + center)
-
--- Theorem to prove the property
-theorem parallelogram_is_centrally_symmetric (P Q R S : Type) (p : Parallelogram P Q R S) :
-    centrally_symmetric (p.e1, p.e2, p.e3, p.e4) :=
-by
-  sorry
-
-end parallelogram_is_centrally_symmetric_l79_79277
-
-
-namespace intersection_A_B_l79_79005
-
-def A : set ℝ := { x | -1 < 2^x ∧ 2^x < 2 }
-def B : set ℝ := { x | -1 < log 2 x ∧ log 2 x < 2 }
-
-theorem intersection_A_B : (A ∩ B) = { x | 0.5 < x ∧ x < 1 } :=
-  by sorry
-
-end intersection_A_B_l79_79005
-
-
-namespace weight_of_person_being_replaced_l79_79606
-
-variable (W_old : ℝ)
-
-theorem weight_of_person_being_replaced :
-  (W_old : ℝ) = 35 :=
-by
-  -- Given: The average weight of 8 persons increases by 5 kg.
-  -- The weight of the new person is 75 kg.
-  -- The total weight increase is 40 kg.
-  -- Prove that W_old = 35 kg.
-  sorry
-
-end weight_of_person_being_replaced_l79_79606
-
-
-namespace smallest_three_digit_n_l79_79744
-
-theorem smallest_three_digit_n (n : ℕ) (h_pos : 100 ≤ n) (h_below : n ≤ 999) 
-  (cond1 : n % 9 = 2) (cond2 : n % 6 = 4) : n = 118 :=
-by {
-  sorry
-}
-
-end smallest_three_digit_n_l79_79744
-
-
-namespace range_of_f_positive_l79_79550
-
-noncomputable def f (x : ℝ) : ℝ := sorry
-def f' (x : ℝ) : ℝ := sorry -- Define the derivative of f
-
-theorem range_of_f_positive :
-  (∀ x : ℝ, f (-x) = -f x) ∧ f (-1) = 0 ∧ (∀ x > 0, x * f' x - f x > 0) →
-  (∀ x, (f x > 0 ↔ (x ∈ Set.Ioo (-1 : ℝ) 0 ∨ x ∈ Set.Ioi 1))) :=
-begin
-  sorry
-end
-
-end range_of_f_positive_l79_79550
-
-
-namespace sum_of_repeating_decimals_l79_79769
-
-theorem sum_of_repeating_decimals :
-  (0.1.replicate_repeat + 0.02.replicate_repeat + 0.0003.replicate_repeat) = (13151314 / 99999999 : ℚ) := by
-  sorry
-
-end sum_of_repeating_decimals_l79_79769
-
-
-namespace possible_values_of_n_l79_79929
-
-theorem possible_values_of_n (n : ℕ) (h1 : n > 1) 
-  (d : ℕ → ℕ) (h2 : ∀ i, 1 ≤ i ∧ i ≤ n → ∃ m, d m = i) -- d is the function that gives positive divisors
-  (h_diff : ∀ (i : ℕ), 2 ≤ i → ∃ k, ∀ j, 1 ≤ j ∧ j < i → d (n / 2) + 1 = n) -- positive divisors of another integer
-: ∃ s : ℕ, s > 0 ∧ n = 2^s :=
-sorry
-
-end possible_values_of_n_l79_79929
-
-
-namespace eight_sided_die_probability_l79_79667
-
-/-- When rolling a fair 8-sided die (with faces numbered from 1 through 8),
-    the probability of rolling a number less than 5 is 1/2. -/
-theorem eight_sided_die_probability :
-  let total_outcomes := 8
-  let favorable_outcomes := 4
-  let probability := (favorable_outcomes : ℝ) / (total_outcomes : ℝ)
-  in probability = 1 / 2 :=
-by
-  let total_outcomes := 8
-  let favorable_outcomes := 4
-  let probability := (favorable_outcomes : ℝ) / (total_outcomes : ℝ)
-  show probability = 1 / 2
-  sorry
-
-end eight_sided_die_probability_l79_79667
-
-
-namespace count_integers_satisfying_conditions_l79_79009
-
-theorem count_integers_satisfying_conditions :
-  (finset.filter (λ n : ℤ, -11 ≤ n ∧ n ≤ 11 ∧ (n-3)*(n+3)*(n+8) < 0)
-     (finset.Icc (-11) (11))).card = 7 := 
-sorry
-
-end count_integers_satisfying_conditions_l79_79009
-
-
-namespace quadrilateral_diagonals_l79_79620
-
-theorem quadrilateral_diagonals (a b c d e f : ℝ) 
-  (hac : a > c) 
-  (hbd : b ≥ d) 
-  (hapc : a = c) 
-  (hdiag1 : e^2 = (a - b)^2 + b^2) 
-  (hdiag2 : f^2 = (c + b)^2 + b^2) :
-  e^4 - f^4 = (a + c) / (a - c) * (d^2 * (2 * a * c + d^2) - b^2 * (2 * a * c + b^2)) :=
-by
-  sorry
-
-end quadrilateral_diagonals_l79_79620
-
-
-namespace suitcase_combinations_l79_79750
-
-def count_odd_numbers (n : Nat) : Nat := n / 2
-
-def count_multiples_of_4 (n : Nat) : Nat := n / 4
-
-def count_multiples_of_5 (n : Nat) : Nat := n / 5
-
-theorem suitcase_combinations : count_odd_numbers 40 * count_multiples_of_4 40 * count_multiples_of_5 40 = 1600 :=
-by
-  sorry
-
-end suitcase_combinations_l79_79750
-
-
-namespace correct_factorization_l79_79275
-
-theorem correct_factorization (a x m : ℝ) :
-  (ax^2 - a = a * (x^2 - 1)) ∨
-  (m^3 + m = m * (m^2 + 1)) ∨
-  (x^2 + 2*x - 3 = x*(x+2) - 3) ∨
-  (x^2 + 2*x - 3 = (x-3)*(x+1)) :=
+theorem train_length (speed_km_hr : ℝ) (time_sec : ℝ) (h_speed : speed_km_hr = 60) (h_time : time_sec = 6) :
+  let speed_ms := (speed_km_hr * 1000) / 3600
+  let length_m := speed_ms * time_sec
+  length_m ≈ 100.02 :=
 by sorry
 
-end correct_factorization_l79_79275
+end train_length_l79_79966
 
 
-namespace solution_l79_79382
+namespace transform_roots_to_quadratic_l79_79319
 
-noncomputable def f (x : ℝ) := 
-  10 / (Real.sqrt (x - 5) - 10) + 
-  2 / (Real.sqrt (x - 5) - 5) + 
-  9 / (Real.sqrt (x - 5) + 5) + 
-  18 / (Real.sqrt (x - 5) + 10)
+noncomputable def quadratic_formula (p q : ℝ) (x : ℝ) : ℝ :=
+  x^2 + p * x + q
 
-theorem solution : 
-  f (1230 / 121) = 0 := sorry
-
-end solution_l79_79382
-
-
-namespace cost_of_energy_drink_l79_79968
-
-/-- 
-The conditions stated in the problem 
--/
-variables (cupcakes_sold : ℕ) (cupcake_price : ℝ)
-variables (cookies_sold : ℕ) (cookie_price : ℝ)
-variables (basketballs_bought : ℕ) (basketball_price : ℝ)
-variables (energy_drinks_bought : ℕ)
-
-/--
-The proof statement: Given the number of items sold and their respective prices, 
-and the cost of basketballs, prove the cost of one energy drink.
--/
-theorem cost_of_energy_drink (h: cupcakes_sold = 50)
-                              (h1: cupcake_price = 2)
-                              (h2: cookies_sold = 40)
-                              (h3: cookie_price = 0.5)
-                              (h4: basketballs_bought = 2)
-                              (h5: basketball_price = 40)
-                              (h6: energy_drinks_bought = 20) :
-  (120 - 2 * 40 : ℝ) / 20 = 2 :=
-by
-  sorry
-
-end cost_of_energy_drink_l79_79968
-
-
-namespace roots_of_polynomial_l79_79069
-
-noncomputable def cos_degree (d : ℝ) : ℝ := Real.cos (d * Real.pi / 180)
-
-theorem roots_of_polynomial :
-  let t := cos_degree 6 in
-  t^5 * 32 - t^3 * 40 + t * 10 - Real.sqrt 3 = 0 →
-  ∃ t1 t2 t3 t4 : ℝ, t1 = cos_degree 78 ∧
-                     t2 = cos_degree 150 ∧
-                     t3 = cos_degree 222 ∧
-                     t4 = cos_degree 294 ∧
-                     32 * t1^5 - 40 * t1^3 + 10 * t1 - Real.sqrt 3 = 0 ∧
-                     32 * t2^5 - 40 * t2^3 + 10 * t2 - Real.sqrt 3 = 0 ∧
-                     32 * t3^5 - 40 * t3^3 + 10 * t3 - Real.sqrt 3 = 0 ∧
-                     32 * t4^5 - 40 * t4^3 + 10 * t4 - Real.sqrt 3 = 0 :=
-by
-  sorry
-
-end roots_of_polynomial_l79_79069
-
-
-namespace problem1_problem2_problem3_l79_79294
-
--- Problem 1
-theorem problem1 (x : ℝ) (h : 0 < x ∧ x < 1/2) : 
-  (1/2 * x * (1 - 2 * x) ≤ 1/16) := sorry
-
--- Problem 2
-theorem problem2 (x : ℝ) (h : 0 < x) : 
-  (2 - x - 4 / x ≤ -2) := sorry
-
--- Problem 3
-theorem problem3 (x y : ℝ) (hx : 0 < x) (hy : 0 < y) (h : x + y = 4) : 
-  (1 / x + 3 / y ≥ 1 + Real.sqrt 3 / 2) := sorry
-
-end problem1_problem2_problem3_l79_79294
-
-
-namespace find_x_find_height_diff_l79_79571
-
--- Define the conversion scales for each region
-def conversion_A := 35 / 7  -- km per cm for region A
-def conversion_B := 45 / 9  -- km per cm for region B
-def conversion_C := 30 / 10 -- km per cm for region C
-
--- Define the map distances between cities
-def distance_map_A := 15 -- cm
-def distance_map_B := 10 -- cm
-noncomputable def x := 76.67 -- cm (value that we need to prove)
-
--- Define the total perimeter
-def total_perimeter := 355 -- km
-
--- Define the height difference between region A and B
-def height_diff_map_A_B := 2 -- cm
-def height_diff_real_A_B := 500 -- meters
-
--- Define the height difference between region B and C on the map
-def height_diff_map_B_C := 3 -- cm
-
--- Theorem to prove the value of x in cm
-theorem find_x : 
-  (distance_map_A * conversion_A + distance_map_B * conversion_B + x * conversion_C) = total_perimeter :=
+theorem transform_roots_to_quadratic (x₁ x₂ y₁ y₂ p q : ℝ)
+  (h₁ : quadratic_formula p q x₁ = 0)
+  (h₂ : quadratic_formula p q x₂ = 0)
+  (h₃ : x₁ ≠ 1)
+  (h₄ : x₂ ≠ 1)
+  (hy₁ : y₁ = (x₁ + 1) / (x₁ - 1))
+  (hy₂ : y₂ = (x₂ + 1) / (x₂ - 1)) :
+  (1 + p + q) * y₁^2 + 2 * (1 - q) * y₁ + (1 - p + q) = 0 ∧
+  (1 + p + q) * y₂^2 + 2 * (1 - q) * y₂ + (1 - p + q) = 0 := 
 sorry
 
--- Define the height conversion scale
-def height_conversion := height_diff_real_A_B / height_diff_map_A_B  -- meters per cm
+end transform_roots_to_quadratic_l79_79319
 
--- Theorem to prove the height difference between B and C in meters
-theorem find_height_diff : 
-  (height_diff_map_B_C * height_conversion) = 750 :=
-sorry
 
-end find_x_find_height_diff_l79_79571
+namespace total_skips_correct_l79_79572
 
+def S (n : ℕ) : ℕ := n^2 + n
 
-namespace correctly_calculated_value_l79_79963
+def TotalSkips5 : ℕ :=
+  S 1 + S 2 + S 3 + S 4 + S 5
 
-theorem correctly_calculated_value (n : ℕ) (h : 5 * n = 30) : n / 6 = 1 :=
-sorry
+def Skips6 : ℕ :=
+  2 * S 6
 
-end correctly_calculated_value_l79_79963
-
-
-namespace find_lambda_range_l79_79817
-
-open Real
-
-theorem find_lambda_range {a b : ℝ} (θ λ : ℝ) (non_zero_a : a ≠ 0) (non_zero_b : b ≠ 0) 
-    (magnitude_a : abs a = 2 * abs b) 
-    (inequality : ∀ θ, abs (2 * a + b) ≥ abs (a + λ * b)) : 
-    -1 ≤ λ ∧ λ ≤ 3 :=
-by
-  sorry
-
-end find_lambda_range_l79_79817
-
-
-namespace olivia_spent_38_l79_79565
-
-def initial_amount : ℕ := 128
-def amount_left : ℕ := 90
-def money_spent (initial amount_left : ℕ) : ℕ := initial - amount_left
-
-theorem olivia_spent_38 :
-  money_spent initial_amount amount_left = 38 :=
-by 
-  sorry
-
-end olivia_spent_38_l79_79565
-
-
-namespace molecular_weight_BaBr2_l79_79644
-
-theorem molecular_weight_BaBr2 (w: ℝ) (h: w = 2376) : w / 8 = 297 :=
-by
-  sorry
-
-end molecular_weight_BaBr2_l79_79644
-
-
-namespace shopkeeper_gain_percentage_l79_79672
-
--- Define the conditions
-def cost_price (kg: ℝ) : ℝ := kg
-def false_weight : ℝ := 950
-def true_weight : ℝ := 1000
-
--- Define the gain percentage calculation
-def gain_percentage (error true_value: ℝ) : ℝ :=
-  (error / true_value) * 100
-
--- Define the problem statement
-theorem shopkeeper_gain_percentage : gain_percentage (true_weight - false_weight) true_weight = 5 :=
-by 
-  -- Proof will be implemented here
-  sorry
-
-end shopkeeper_gain_percentage_l79_79672
-
-
-namespace probability_of_sequence_123456_l79_79656
-
-theorem probability_of_sequence_123456 :
-  let total_sequences := 66 * 45 * 28 * 15 * 6 * 1     -- Total number of sequences
-  let specific_sequences := 1 * 3 * 5 * 7 * 9 * 11        -- Sequences leading to 123456
-  specific_sequences / total_sequences = 1 / 720 := by
-  let total_sequences := 74919600
-  let specific_sequences := 10395
-  sorry
-
-end probability_of_sequence_123456_l79_79656
-
-
-namespace possible_values_of_m_l79_79489
-
--- Define the conditions that m is a real number and the quadratic equation having two distinct real roots
-variable (m : ℝ)
-
--- Define the discriminant condition for having two distinct real roots
-def discriminant_condition (a b c : ℝ) := b^2 - 4 * a * c > 0
-
--- State the required theorem
-theorem possible_values_of_m (h : discriminant_condition 1 m 9) : m ∈ set.Ioo (-∞) (-6) ∪ set.Ioo 6 ∞ :=
-sorry
-
-end possible_values_of_m_l79_79489
-
-
-namespace arithmetic_sequence_general_term_and_sum_max_l79_79061
-
--- Definitions and conditions
-def a1 : ℤ := 4
-def d : ℤ := -2
-def a (n : ℕ) : ℤ := a1 + (n - 1) * d
-def Sn (n : ℕ) : ℤ := n * (a1 + (a n)) / 2
-
--- Prove the general term formula and maximum value
-theorem arithmetic_sequence_general_term_and_sum_max :
-  (∀ n, a n = -2 * n + 6) ∧ (∃ n, Sn n = 6) :=
-by
-  sorry
-
-end arithmetic_sequence_general_term_and_sum_max_l79_79061
-
-
-namespace rankings_count_l79_79136
-
-def rankings_count_condition (A_first : Prop) (A_fifth : Prop) (B_fifth : Prop) : ℕ :=
-  if ¬A_first ∧ ¬A_fifth ∧ ¬B_fifth then 54 else 0
-
-theorem rankings_count :
-  rankings_count_condition false false false = 54 :=
-by
-  -- Intentionally left unproven
-  sorry
-
-end rankings_count_l79_79136
-
-
-namespace line_tangent_to_circle_l79_79125
-
-theorem line_tangent_to_circle (x y : ℝ) :
-  (3 * x - 4 * y + 25 = 0) ∧ (x^2 + y^2 = 25) → (x = -3 ∧ y = 4) :=
-by sorry
-
-end line_tangent_to_circle_l79_79125
-
-
-namespace orthocenters_collinear_l79_79605
-
--- Define the vertices of the acute-angled triangle
-variables {A B C : Type} [IsTriangle A B C] 
-
--- Define the altitudes from vertices to the opposite sides
-variables {alt_A : Altitude A B C} {alt_B : Altitude B A C} {alt_C : Altitude C A B}
-
--- Define the internal angle bisectors intersection points
-variables {P : Point} {D : Point} {F : Point} 
--- Define the external angle bisectors intersection points
-variables {Q : Point} {E : Point} {G : Point}
-
--- Define orthocenters of the triangles formed
-variables {H_A : Orthocenter (Triangle A P Q)} 
-variables {H_B : Orthocenter (Triangle B D E)} 
-variables {H_C : Orthocenter (Triangle C F G)}
-
--- Define the main triangle's orthocenter
-variables {H : Orthocenter (Triangle A B C)}
-
-theorem orthocenters_collinear (A B C : Type) [IsTriangle A B C] 
-    (alt_A : Altitude A B C) (alt_B : Altitude B A C) (alt_C : Altitude C A B)
-    (P Q D E F G : Type) -- Points of intersection as types
-    (H_A : Orthocenter (Triangle A P Q)) 
-    (H_B : Orthocenter (Triangle B D E)) 
-    (H_C : Orthocenter (Triangle C F G)) 
-    (H : Orthocenter (Triangle A B C)) : 
-  Collinear H_A H_B H_C ∧ Collinear H A H :=
-sorry
-
-end orthocenters_collinear_l79_79605
-
-
-namespace num_solutions_to_inequality_l79_79462
-
-theorem num_solutions_to_inequality : 
-  let S := {x : ℕ | 12 < -2 * (x : ℤ) + 17} in
-  S.card = 2 := 
-by 
-  sorry
-
-end num_solutions_to_inequality_l79_79462
-
-
-namespace max_value_x_plus_inv_x_l79_79990
-
-theorem max_value_x_plus_inv_x (f : Fin 2023 → ℝ) (hpos : ∀ i, 0 < f i)
-  (hsum : ∑ i, f i = 2024) (hrecip_sum : ∑ i, (f i)⁻¹ = 2024) :
-  ∃ x, x ∈ (Set.range f) ∧ x + 1 / x = 4096094 / 2024 :=
-by
-  sorry
-
-end max_value_x_plus_inv_x_l79_79990
-
-
-namespace lcm_of_consecutive_correct_l79_79641
-
-noncomputable def lcm_of_consecutive (n : ℕ) : ℕ :=
-if even (n + 1)
-then n * (n + 1) * (n + 2)
-else (n * (n + 1) * (n + 2)) / 2
-
-theorem lcm_of_consecutive_correct (n : ℕ) :
-  lcm (n, n + 1, n + 2) = lcm_of_consecutive n :=
-sorry
-
-end lcm_of_consecutive_correct_l79_79641
-
-
-namespace solve_for_x_l79_79592
-
-theorem solve_for_x:
-    ∀ x : ℝ, 
-      (x ≠ 6) → (4 * x - 3 ≠ 0) → (x^2 - 10 * x + 24) / (x - 6) + (4 * x^2 + 20 * x - 24) / (4 * x - 3) + 2 * x = 5 → 
-      x = 1 / 4 :=
-begin
-  intros,
-  sorry
-end
-
-end solve_for_x_l79_79592
-
-
-namespace domain_g_3_single_point_l79_79092
-
-noncomputable def g₁ (x : ℝ) : ℝ := real.sqrt (1 - x^2)
-
-noncomputable def g : ℕ → ℝ → ℝ
-| 1 := g₁
-| n + 1 := λ x, g n (real.sqrt ((n + 1) ^ 2 - x^2))
-
-theorem domain_g_3_single_point
-  (M : ℕ) (hM : ∀ n : ℕ, n ≤ M → ∃ x : ℝ, g n x = g n x)
-  (hMax : ∀ n : ℕ, M < n → ¬(∃ x : ℝ, g n x = g n x))
-  : ∃ d : ℝ, {d} = {x : ℝ | ∃ y : ℝ, g M y = x} :=
-by
-  let M := 3
-  let d := 3
-  sorry
-
-end domain_g_3_single_point_l79_79092
-
-
-namespace geometric_series_common_ratio_l79_79208
-
-theorem geometric_series_common_ratio (a r S : ℝ) 
-  (hS : S = a / (1 - r)) 
-  (h64 : (a * r^4) / (1 - r) = S / 64) : 
-  r = 1 / 2 :=
-by
-  sorry
-
-end geometric_series_common_ratio_l79_79208
-
-
-namespace intersection_point_on_y_eq_neg_x_l79_79805
-
-theorem intersection_point_on_y_eq_neg_x 
-  (α β : ℝ)
-  (h1 : ∃ x y : ℝ, (x / (Real.sin α + Real.sin β) + y / (Real.sin α + Real.cos β) = 1) ∧ 
-                   (x / (Real.cos α + Real.sin β) + y / (Real.cos α + Real.cos β) = 1) ∧ 
-                   (y = -x)) :
-  Real.sin α + Real.cos α + Real.sin β + Real.cos β = 0 :=
-sorry
-
-end intersection_point_on_y_eq_neg_x_l79_79805
-
-
-namespace divisibility_criterion_l79_79948
-
-theorem divisibility_criterion (x y : ℕ) (h_two_digit : 10 ≤ x ∧ x < 100) :
-  (1207 % x = 0) ↔ (x = 10 * (x / 10) + (x % 10) ∧ (x / 10)^3 + (x % 10)^3 = 344) :=
-by
-  sorry
-
-end divisibility_criterion_l79_79948
-
-
-namespace cosine_in_third_quadrant_l79_79026
-
-theorem cosine_in_third_quadrant (B : Real) 
-  (h1 : Real.sin B = -5/13) 
-  (h2 : π < B ∧ B < 3 * π / 2) : Real.cos B = -12/13 := 
-sorry
-
-end cosine_in_third_quadrant_l79_79026
-
-
-namespace angelina_speed_l79_79333
-
-variable (v : ℝ) (t₁ t₂ : ℝ) 
-
-def time_home_to_grocery (v : ℝ) : ℝ :=
-  100 / v
-
-def time_grocery_to_gym (v : ℝ) : ℝ :=
-  180 / (2*v)
-
-theorem angelina_speed (h1 : 100 / v - 180 / (2*v) = 40) :  2 * (v = 1/4) := by 
-  -- solution omitted
-  sorry
-
-end angelina_speed_l79_79333
-
-
-namespace binom_identity_l79_79538
-
-def binom (n k : ℕ) : ℕ := Nat.choose n k
-
-theorem binom_identity (n k : ℕ) : k * binom n k = n * binom (n - 1) (k - 1) := by
-  sorry
-
-end binom_identity_l79_79538
-
-
-namespace sophie_saves_money_by_using_wool_balls_l79_79598
-
-def cost_of_dryer_sheets_per_year (loads_per_week : ℕ) (sheets_per_load : ℕ)
-                                  (weeks_per_year : ℕ) (sheets_per_box : ℕ)
-                                  (cost_per_box : ℝ) : ℝ :=
-  let sheets_per_year := loads_per_week * sheets_per_load * weeks_per_year
-  let boxes_per_year := sheets_per_year / sheets_per_box
-  boxes_per_year * cost_per_box
-
-theorem sophie_saves_money_by_using_wool_balls :
-  cost_of_dryer_sheets_per_year 4 1 52 104 5.50 = 11.00 :=
-by simp only [cost_of_dryer_sheets_per_year]; sorry
-
-end sophie_saves_money_by_using_wool_balls_l79_79598
-
-
-namespace cross_product_correct_l79_79386
-
-def a : ℝ × ℝ × ℝ := (4, 3, -7)
-def b : ℝ × ℝ × ℝ := (2, -1, 4)
-
-def cross_product (u v : ℝ × ℝ × ℝ) : ℝ × ℝ × ℝ :=
-  (u.2 * v.3 - u.3 * v.2, u.3 * v.1 - u.1 * v.3, u.1 * v.2 - u.2 * v.1)
-
-theorem cross_product_correct : cross_product a b = (5, -30, -10) := sorry
-
-end cross_product_correct_l79_79386
-
-
-namespace det_M_mod_1000_l79_79795
-
-def α(m n : ℕ) : ℕ :=
-  (List.range (nat.log2 $ Nat.succ (m + n)))
-    .filter (λ k, ((m / 2^k) % 2 = 1) ∧ ((n / 2^k) % 2 = 1)).length
-
-def M : Matrix (Fin 65) (Fin 65) ℤ :=
-  λ i j, (-1) ^ (α (i : ℕ) (j : ℕ))
-
-theorem det_M_mod_1000 : (M.det % 1000) = 792 := by
-  sorry
-
-end det_M_mod_1000_l79_79795
-
-
-namespace guide_is_aborginal_l79_79937
-
--- Define types for the tribes
-inductive Tribe
-| Aboriginal : Tribe -- Truth-teller
-| Alien : Tribe -- Liar
-
-open Tribe
-
--- Given conditions in Lean definitions
-def tellsTruth : Tribe → Prop
-| Aboriginal := True
-| Alien := False
-
-def lies : Tribe → Prop
-| Aboriginal := False
-| Alien := True
-
-def statementIsTrue (speaker : Tribe) (claim : Prop) : Prop :=
-  (speaker = Aboriginal ∧ claim) ∨ (speaker = Alien ∧ ¬claim)
-
--- The guide's report's condition in Lean
-def guideReport (guide : Tribe) (islanderClaims : Prop) : Prop :=
-  statementIsTrue guide islanderClaims
-
--- Proposition to prove: The guide is Aboriginal
-theorem guide_is_aborginal (guide : Tribe) (islander : Tribe) :
-  guideReport guide (statementIsTrue islander (islander = Aboriginal)) → guide = Aboriginal :=
-sorry
-
-end guide_is_aborginal_l79_79937
-
-
-namespace english_score_l79_79733
-
-theorem english_score (s1 s2 s3 e : ℕ) :
-  (s1 + s2 + s3) = 276 → (s1 + s2 + s3 + e) = 376 → e = 100 :=
-by
-  intros h1 h2
-  sorry
-
-end english_score_l79_79733
-
-
-namespace die_opposite_face_l79_79574
-
-theorem die_opposite_face (numbers : Fin 6 → ℕ) (h : Multiset.ofFinset {6, 7, 8, 9, 10, 11} = Multiset.map numbers Finset.univ) (sum_v1 sum_v2 : ℕ)
-  (h_sum_v1 : sum_v1 = 33) (h_sum_v2 : sum_v2 = 35) :
-  (numbers 7 = 9 ∨ numbers 7 = 11) := sorry
-
-end die_opposite_face_l79_79574
-
-
-namespace shoe_cost_l79_79880
-
-theorem shoe_cost 
-    (T_shirt_cost : ℕ := 20) 
-    (pants_cost : ℕ := 80) 
-    (discount : ℝ := 0.9) 
-    (num_T_shirts : ℕ := 4) 
-    (num_pants : ℕ := 3) 
-    (num_shoes : ℕ := 2) 
-    (total_cost_after_discount : ℝ := 558) : 
-    (shoe_cost : ℝ) :=
-    by 
-    let total_pre_discount := 
-        (num_T_shirts * T_shirt_cost) + 
-        (num_pants * pants_cost) + 
-        (num_shoes * shoe_cost)
-    let total_after_discount := discount * total_pre_discount
-    have h : total_after_discount = total_cost_after_discount
-    sorry
-    exact shoe_cost = 150
-
-end shoe_cost_l79_79880
-
-
-namespace count_non_negative_numbers_l79_79732
-
-theorem count_non_negative_numbers :
-  ∃ non_neg_count : ℕ, 
-  non_neg_count = 5 ∧ 
-  (∀ x ∈ {-15, 5 + 1/3, -0.23, 0, 7.6, 2, -3/5, 3.14}, x ≥ 0 → non_neg_count = 5) := 
-by
-  -- We state the elements in the set
-  let s := {-15, 5 + 1/3, -0.23, 0, 7.6, 2, -3/5, 3.14}
-  -- Check that 5 of these elements are non-negative
-  let non_neg_elements := [5 + 1/3, 0, 7.6, 2, 3.14]
-  have h : non_neg_elements.length = 5,
-  { sorry }
-  use 5,
-  split,
-  { exact h },
-  { intros x hx h_non_neg,
-    have : x ∈ non_neg_elements,
-    { sorry },
-    exact h },
-
-end count_non_negative_numbers_l79_79732
-
-
-namespace stratified_sampling_total_students_sampled_l79_79304
-
-theorem stratified_sampling_total_students_sampled 
-  (seniors juniors freshmen : ℕ)
-  (sampled_freshmen : ℕ)
-  (ratio : ℚ)
-  (h_freshmen : freshmen = 1500)
-  (h_sampled_freshmen_ratio : sampled_freshmen = 75)
-  (h_seniors : seniors = 1000)
-  (h_juniors : juniors = 1200)
-  (h_ratio : ratio = (sampled_freshmen : ℚ) / (freshmen : ℚ))
-  (h_freshmen_ratio : ratio * (freshmen : ℚ) = sampled_freshmen) :
-  let sampled_juniors := ratio * (juniors : ℚ)
-  let sampled_seniors := ratio * (seniors : ℚ)
-  sampled_freshmen + sampled_juniors + sampled_seniors = 185 := sorry
-
-end stratified_sampling_total_students_sampled_l79_79304
-
-
-namespace probability_sequence_123456_l79_79658
-
-theorem probability_sequence_123456 :
-  let total_sequences := 66 * 45 * 28 * 15 * 6 * 1,
-      favorable_sequences := 1 * 3 * 5 * 7 * 9 * 11
-  in (favorable_sequences : ℚ) / total_sequences = 1 / 720 := 
-by 
-  sorry
-
-end probability_sequence_123456_l79_79658
-
-
-namespace correct_ticket_status_l79_79666
-
-def ticket_status (h : ℝ) : String :=
-  if h ≤ 1.1 then "Free of charge"
-  else if h ≤ 1.4 then "Buy a half-price ticket"
-  else "Buy a full-price ticket"
-
-theorem correct_ticket_status (h : ℝ) : 
-  (h ≤ 1.1 → ticket_status h = "Free of charge") ∧
-  (1.1 < h ∧ h ≤ 1.4 → ticket_status h = "Buy a half-price ticket") ∧
-  (h > 1.4 → ticket_status h = "Buy a full-price ticket") :=
-sorry
-
-end correct_ticket_status_l79_79666
-
-
-namespace part_a_part_b_l79_79284
-
--- Part (a)
-theorem part_a (x : ℝ) (h : x > 0) : x^3 - 3*x ≥ -2 :=
-sorry
-
--- Part (b)
-theorem part_b (x y z : ℝ) (hx : x > 0) (hy : y > 0) (hz : z > 0) :
-  (x^2 * y / z) + (y^2 * z / x) + (z^2 * x / y) + 2 * ((y / (x * z)) + (z / (x * y)) + (x / (y * z))) ≥ 9 :=
-sorry
-
-end part_a_part_b_l79_79284
-
-
-namespace total_votes_is_2400_l79_79053
-
--- Definitions for the conditions
-def total_votes (V : ℕ) : Prop :=
-  let second_candidate_votes := 480
-  let second_candidate_percentage := 0.20
-  second_candidate_votes = second_candidate_percentage * V
-
--- The theorem to prove the total number of votes is 2400
-theorem total_votes_is_2400 : ∃ V : ℕ, total_votes V ∧ V = 2400 :=
-by
-  existsi 2400
-  sorry
-
-end total_votes_is_2400_l79_79053
-
-
-namespace limit_sqrt_area_sum_l79_79168
-
-noncomputable def f (n : ℕ) (x : ℝ) : ℝ := 1 + x ^ (n^2 - 1) + x ^ (n^2 + 2 * n)
-
-noncomputable def S (n : ℕ) : ℝ := ∫ x in 0..1, f n x
-
-noncomputable def L : ℝ := 
-  lim (λ n, (1 / n * ∑ k in finset.range n, sqrt (S (k + 1)))^n) at_top
-
-theorem limit_sqrt_area_sum :
-  L = exp (1 / 2) :=
-sorry
-
-end limit_sqrt_area_sum_l79_79168
-
-
-namespace jerome_family_members_l79_79526
-
--- Define the conditions of the problem
-variables (C F M T : ℕ)
-variables (hC : C = 20) (hF : F = C / 2) (hT : T = 33)
-
--- Formulate the theorem to prove
-theorem jerome_family_members :
-  M = T - (C + F) :=
-sorry
-
-end jerome_family_members_l79_79526
-
-
-namespace proof_problem_l79_79094
-
-noncomputable def z (a b : ℝ) (h : b ≠ 0) : ℂ := a + b * complex.I
-
-noncomputable def ω (z : ℂ) : ℂ := z + 1 / z
-
-noncomputable def u (z : ℂ) : ℂ := (1 - z) / (1 + z)
-
-theorem proof_problem (a b : ℝ) (h : b ≠ 0) (hω : -1 < ω (z a b h) ∧ ω (z a b h) < 2) : 
-  abs (z a b h) = 1 ∧ a ∈ Ioo (-1/2 : ℝ) 1 ∧ ∃ ci : ℂ, u (z a b h) = ci * complex.I ∧ ci.im ≠ 0 :=
-begin
-  sorry
-end
-
-end proof_problem_l79_79094
-
-
-namespace sum_fraction_simplified_l79_79745
-
-theorem sum_fraction_simplified :
-  (\sum k in Finset.range 6, (1 / ((k + 3) * (k + 4)))) = 2 / 9 :=
-by
-  sorry
-
-end sum_fraction_simplified_l79_79745
-
-
-namespace min_dot_product_pf1_pf2_l79_79827
-
-namespace EllipseProblem
-
-def Ellipse (a b : ℝ) := ∀ x y : ℝ, (x^2 / a^2) + (y^2 / b^2) = 1
-
-def Foci (a b : ℝ) := 
-  let c := Real.sqrt (a^2 - b^2)
-  (c, 0), (-c, 0)
-
-def Vertices (a b : ℝ) := 
-  let v₁ := (-a, 0)
-  let v₂ := (0, b)
-  v₁, v₂
-
-def PointOnLineSegment (A B : ℝ × ℝ) (t : ℝ) := 
-  (1-t) * A.1 + t * B.1, (1-t) * A.2 + t * B.2
-
-def DotProduct (u v : ℝ × ℝ) := u.1 * v.1 + u.2 * v.2
-
-theorem min_dot_product_pf1_pf2 :
-  ∀ (P : ℝ × ℝ),
-  ∃ t : ℝ, 0 ≤ t ∧ t ≤ 1 ∧
-  P = PointOnLineSegment (-2, 0) (0, 1) t →
-  let F1 := Foci 2 1 in
-  let F2 := (Foci 2 1).snd in
-  ∃ min_value : ℝ,
-    min_value = 1/5 ∧
-    ∀ t : ℝ, 0 ≤ t ∧ t ≤ 1 →
-    DotProduct (P.1 - F1.1, P.2 - F1.2) (P.1 - F2.1, P.2 - F2.2) = min_value :=
-begin
-  sorry
-end
-
-end EllipseProblem
-
-end min_dot_product_pf1_pf2_l79_79827
-
-
-namespace cos_double_angle_l79_79857
-
-theorem cos_double_angle (α : ℝ) (hα1 : sin α = 4 / 5) (hα2 : 0 < α ∧ α < π / 2) : cos (2 * α) = -7 / 25 := 
-by
-  sorry
-
-end cos_double_angle_l79_79857
-
-
-namespace first_train_speed_l79_79636
-
-noncomputable def speed_first_train (length1 length2 : ℝ) (speed2 time : ℝ) : ℝ :=
-  let distance := (length1 + length2) / 1000
-  let time_hours := time / 3600
-  (distance / time_hours) - speed2
-
-theorem first_train_speed :
-  speed_first_train 100 280 30 18.998480121590273 = 42 :=
-by
-  sorry
-
-end first_train_speed_l79_79636
-
-
-namespace main_problem_solve_l79_79090
-
-def f (n : ℕ) : ℕ :=
-  let m := (Float.floor (Nat.lift (\(\sqrt[6]{n})))).toNat
-  -- Ensure m is the closest integer to the 6th root of n
-  if Float.abs((m + 1) ^ 6 - n) < Float.abs(m ^ 6 - n) then m + 1 else m
-
-noncomputable def main_problem : ℕ :=
-  ∑ k in Finset.range 4095, 1 / f k
-
-theorem main_problem_solve : main_problem = 134008 :=
-by
-  sorry
-
-end main_problem_solve_l79_79090
-
-
-namespace function_zero_if_sum_zero_on_unit_square_l79_79759
-
-theorem function_zero_if_sum_zero_on_unit_square 
-  (f : ℝ × ℝ → ℝ) 
-  (H : ∀ (A B C D : ℝ × ℝ), 
-         dist A B = 1 ∧
-         dist B C = 1 ∧
-         dist C D = 1 ∧
-         dist D A = 1 ∧
-         dist A C = dist B D ∧
-         dist A C = √2 ∧
-         dist B D = √2 → 
-         f A + f B + f C + f D = 0) : 
-  ∀ (x y : ℝ), f (x, y) = 0 :=
-by
-  sorry
-
-end function_zero_if_sum_zero_on_unit_square_l79_79759
-
-
-namespace external_tangent_y_intercept_l79_79222
-
-theorem external_tangent_y_intercept 
-  (center1 : ℝ × ℝ) (radius1 : ℝ)
-  (center2 : ℝ × ℝ) (radius2 : ℝ)
-  (positive_slope : ∀ x₁ y₁ x₂ y₂ : ℝ, ((y₂ - y₁) / (x₂ - x₁)) > 0)
-  (slope : ℝ) (y_intercept : ℝ)
-  (tangent_line : ∀ x : ℝ, ℝ, tangent_line x = slope * x + y_intercept) :
-  center1 = (3, 7) ∧ radius1 = 3 ∧ center2 = (10, 12) ∧ radius2 = 7 ∧ slope = 35 / 12 →
-  y_intercept = 912 / 119 :=
-begin
-  sorry
-end
-
-end external_tangent_y_intercept_l79_79222
-
-
-namespace area_convex_quadrilateral_l79_79943
-
-variable {A B C D O : Type} -- Points in the quadrilateral
-variable {AC BD : ℝ} -- Lengths of the diagonals
-variable {φ : ℝ} -- Angle between the diagonals
-
-theorem area_convex_quadrilateral (hAC : AC = d1) (hBD : BD = d2) (hφ : φ = angle_AOB) 
-  (h_convex : convex_quadrilateral A B C D):
-  area_quadrilateral A B C D = (1/2) * d1 * d2 * sin φ := 
-sorry
-
-end area_convex_quadrilateral_l79_79943
-
-
-namespace overall_average_marks_l79_79709
-
-theorem overall_average_marks :
-  let students := [50, 35, 45, 42]
-  let mean_marks := [50, 60, 55, 45]
-  let total_students := students.sum
-  let total_marks := List.map2 (λ n m => n * m) students mean_marks |>.sum
-  real.to_rat (total_marks / total_students) ≈ 52.12 :=
-by
-  -- Defining the given problem conditions
-  let students := [50, 35, 45, 42]
-  let mean_marks := [50, 60, 55, 45]
-  -- Calculating total number of students
-  let total_students := students.sum
-  -- Computing total marks obtained
-  let total_marks := List.map2 (λ n m => n * m) students mean_marks |>.sum
-  -- Converting the average marks to a rational number and checking approximation
-  have h: real.to_rat (total_marks / total_students) ≈ 52.12 := sorry
-  exact h
-
-end overall_average_marks_l79_79709
-
-
-namespace distance_between_A_and_B_l79_79700
-
-theorem distance_between_A_and_B (speed : ℝ) (time : ℝ) (h_speed : speed = 60) (h_time: time = 4) : 
-  let total_distance := speed * time in 
-  let distance_A_B := total_distance / 2 in 
-  distance_A_B = 120 :=
-by 
-  -- Placeholder for proof; the actual proof is omitted
-  sorry
-
-end distance_between_A_and_B_l79_79700
-
-
-namespace jude_matchbox_trade_l79_79528
-
-theorem jude_matchbox_trade :
-  (∃ (C T H : ℕ), 
-    C = 4 ∧ T = 4 ∧ H = 4 ∧
-    10 * C + 15 * T + 20 * H ≤ 250 ∧
-    C ≤ 8 ∧ T ≤ 5 ∧ H ≤ 4) :=
-by
-  exist 4, 4, 4
-  split
-  - refl
-  - split
-    - refl
-    - split
-      - refl
-      - split
-        - norm_num
-        - split
-          - norm_num
-          - split
-            - norm_num
-            - sorry
-
-end jude_matchbox_trade_l79_79528
-
-
-namespace integral_sqrt_sub_linear_l79_79345
-
-variable (x : ℝ)
-
-theorem integral_sqrt_sub_linear :
-  ∫ x in 0..2, (Real.sqrt (4 - x^2) - 2 * x) = Real.pi - 4 :=
-by
-  sorry
-
-end integral_sqrt_sub_linear_l79_79345
-
-
-namespace line_AB_cartesian_eq_circle_O_cartesian_eq_l79_79063
-
-noncomputable def A_polar := (2, Real.pi / 2)
-noncomputable def B_polar := (1, -Real.pi / 3)
-noncomputable def O_polar_eq := λ θ : ℝ, 4 * Real.sin θ
-
-def A_cartesian := (0, 2)
-def B_cartesian := (1 / 2, -Real.sqrt 3 / 2)
-
-theorem line_AB_cartesian_eq :
-  line_through_cartesian A_cartesian B_cartesian = {y = -(4 + Real.sqrt 3) * x + 2} :=
-sorry
-
-theorem circle_O_cartesian_eq :
-  cartesian_eq_of_polar_eq O_polar_eq = {x^2 + (y - 2)^2 = 4} :=
-sorry
-
-end line_AB_cartesian_eq_circle_O_cartesian_eq_l79_79063
-
-
-namespace cistern_fill_time_l79_79282
-
-theorem cistern_fill_time (t1 t2 : ℝ) (h1 : t1 = 2) (h2 : t2 = 9) :
-  let F := 1 / t1,
-      E := 1 / t2,
-      net_rate := F - E,
-      time_to_fill := 1 / net_rate
-  in time_to_fill ≈ 2.5714 :=
-by
-  rw [h1, h2]
-  let F := 1 / 2
-  let E := 1 / 9
-  let net_rate := F - E
-  let time_to_fill := 1 / net_rate
-  have : F = 0.5 := by norm_num
-  have : E ≈ 0.1111 := by norm_num
-  have : net_rate ≈ 0.3889 := by norm_num
-  have : time_to_fill ≈ 2.5714 := by norm_num
-  exact approximately_equal.symm
-
-end cistern_fill_time_l79_79282
-
-
-namespace natural_numbers_without_repeating_digits_l79_79638
-
-theorem natural_numbers_without_repeating_digits :
-  let digits := {0, 1, 2}
-  ∃ n : ℕ, 
-    n = 3 + (2 * 2) + (2 * 2) ∧
-    n = 11 := by
-sorry
-
-end natural_numbers_without_repeating_digits_l79_79638
-
-
-namespace min_value_a_plus_b_l79_79467
-
-theorem min_value_a_plus_b (a b : ℝ) (h : log 4 (3 * a + 4 * b) = log 2 (sqrt (a * b))) : a + b ≥ 11 :=
-sorry
-
-end min_value_a_plus_b_l79_79467
-
-
-namespace trouser_sale_price_l79_79909
-
-theorem trouser_sale_price 
-  (original_price : ℝ) 
-  (percent_decrease : ℝ) 
-  (sale_price : ℝ) 
-  (h : original_price = 100) 
-  (p : percent_decrease = 0.25) 
-  (s : sale_price = original_price * (1 - percent_decrease)) : 
-  sale_price = 75 :=
-by 
-  sorry
-
-end trouser_sale_price_l79_79909
-
-
-namespace smallest_k_l79_79097
-
-def S : set ℕ := { x | 1 ≤ x ∧ x ≤ 50 }
-
-def satisfies_condition (a b : ℕ) : Prop := (a + b) ∣ (a * b)
-
-theorem smallest_k (k : ℕ) (h : k = 39) :
-  ∀ A, A ⊆ S → A.card = k → ∃ a b, a ∈ A ∧ b ∈ A ∧ a ≠ b ∧ satisfies_condition a b :=
-by sorry
-
-end smallest_k_l79_79097
-
-
-namespace probability_of_specific_sequence_l79_79664
-
--- We define a structure representing the problem conditions.
-structure problem_conditions :=
-  (cards : multiset ℕ)
-  (permutation : list ℕ)
-
--- Noncomputable definition for the correct answer.
-noncomputable def probability := (1 : ℚ) / 720
-
--- The main theorem statement.
-theorem probability_of_specific_sequence :
-  ∀ (conds : problem_conditions),
-  conds.cards = {1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6} ∧
-  (∃ (perm : list ℕ), perm.perm conds.permutation) →
-  (∃ (sequence : list ℕ), sequence = [1, 2, 3, 4, 5, 6]) →
-  let prob := calculate_probability conds.permutation [1, 2, 3, 4, 5, 6] in
-  prob = (1 : ℚ) / 720 :=
-sorry
-
-end probability_of_specific_sequence_l79_79664
-
-
-namespace ratio_of_areas_l79_79400
-
-noncomputable def area_of_equilateral_triangle (s : ℝ) : ℝ :=
-  (sqrt 3 / 4) * s^2
-
-theorem ratio_of_areas (s : ℝ) (n : ℕ) (side_len : ℝ) (number_of_triangles : ℕ) (fencing : ℝ) 
-  (fencing_eq : n * s = fencing) (num_triangles_eq : number_of_triangles = 4) 
-  (small_triangle_side_len_eq : side_len = 10) (fencing_large_triangle_eq : fencing = 3 * s) :
-  let large_triangle_side_len := fencing / 3 in
-  let area_small_triangle := area_of_equilateral_triangle side_len in
-  let total_area_small_triangles := number_of_triangles * area_small_triangle in
-  let area_large_triangle := area_of_equilateral_triangle large_triangle_side_len in
-  (total_area_small_triangles / area_large_triangle) = 1 / 4 :=
-by
-  sorry
-
-end ratio_of_areas_l79_79400
-
-
-namespace cross_product_of_a_and_b_l79_79385
-
-def vector := ℝ × ℝ × ℝ 
-
-def a : vector := (4, 3, -7)
-def b : vector := (2, -1, 4)
-
-def cross_product (v₁ v₂ : vector) : vector :=
-  (v₁.2 * v₂.3 - v₁.3 * v₂.2,
-   v₁.3 * v₂.1 - v₁.1 * v₂.3,
-   v₁.1 * v₂.2 - v₁.2 * v₂.1)
-
-theorem cross_product_of_a_and_b :
-  cross_product a b = (5, -30, -10) :=
-by sorry
-
-end cross_product_of_a_and_b_l79_79385
-
-
-namespace mn_min_l79_79702
-
-noncomputable def min_mn_value (m n : ℝ) : ℝ := m * n
-
-theorem mn_min : 
-  (∃ m n, m = Real.sin (2 * (π / 12)) ∧ n > 0 ∧ 
-            Real.cos (2 * (π / 12 + n) - π / 4) = m ∧ 
-            min_mn_value m n = π * 5 / 48) := by
-  sorry
-
-end mn_min_l79_79702
-
-
-namespace f_even_l79_79542
-
--- Let g(x) = x^3 - x
-def g (x : ℝ) : ℝ := x^3 - x
-
--- Let f(x) = |g(x^2)|
-def f (x : ℝ) : ℝ := abs (g (x^2))
-
--- Prove that f(x) is even, i.e., f(-x) = f(x) for all x
-theorem f_even : ∀ x : ℝ, f (-x) = f x := by
-  sorry
-
-end f_even_l79_79542
-
-
-namespace arrangement_possible_l79_79067
-
-theorem arrangement_possible : 
-  ∃ (f : Fin 50 → Fin 50), 
-    (∀ i : Fin 25, f i + f (i+25) + f ((i+1) % 25 + 25) = k) := 
-by 
-sory
-
-end arrangement_possible_l79_79067
-
-
-namespace max_consecutive_integers_sum_l79_79249
-
-theorem max_consecutive_integers_sum (S_n : ℕ → ℕ) : (∀ n, S_n n = n * (n + 1) / 2) → ∀ n, (S_n n < 1000 ↔ n ≤ 44) :=
-by
-  intros H n
-  split
-  · intro H1
-    have H2 : n * (n + 1) < 2000 := by
-      rw [H n] at H1
-      exact H1
-    sorry
-  · intro H1
-    have H2 : n ≤ 44 := H1
-    have H3 : n * (n + 1) < 2000 := by
-      sorry
-    have H4 : S_n n < 1000 := by
-      rw [H n]
-      exact H3
-    exact H4
-
-end max_consecutive_integers_sum_l79_79249
-
-
-namespace circumcircle_BMC_bisects_BP_l79_79514
-
-open EuclideanGeometry
-
-variables (A B C P Q M : Point)
-variables [hABC : acute_triangle A B C] (hAB_gt_BC : AB > BC)
-variables (hP_mid : is_midpoint_arc P (small_arc A C))
-variables (hQ_mid : is_midpoint_arc Q (large_arc A C))
-variables (hM_foot : is_foot M Q (line_segment A B))
-
-theorem circumcircle_BMC_bisects_BP :
-  circumcircle B M C bisects (line_segment B P) := sorry
-
-end circumcircle_BMC_bisects_BP_l79_79514
-
-
-namespace scientific_notation_correct_l79_79568
-
-/-- Define the number 42.39 million as 42.39 * 10^6 and prove that it is equivalent to 4.239 * 10^7 -/
-def scientific_notation_of_42_39_million : Prop :=
-  (42.39 * 10^6 = 4.239 * 10^7)
-
-theorem scientific_notation_correct : scientific_notation_of_42_39_million :=
-by 
-  sorry
-
-end scientific_notation_correct_l79_79568
-
-
-namespace sum_of_wsum_over_all_subsets_of_S_l79_79535
-
-noncomputable def S : Set ℕ := {x | 1 ≤ x ∧ x ≤ 10}
-
-def wsum (A : Finset ℕ) : ℕ := 
-List.sum (List.map (λ (p : ℕ × ℕ), if p.1 % 2 = 1 then 3 * p.2 else 2 * p.2) (A.toList.enum))
-
-def sumOfWSUMs (S : Set ℕ) : ℕ := 
-Finset.sum (Finset.powerset (Finset.univ : Finset ℕ)) wsum
-
-theorem sum_of_wsum_over_all_subsets_of_S :
-  sumOfWSUMs S = 2^7 * (5 * 10^2 + 5 * 10 + 2) :=
-sorry
-
-end sum_of_wsum_over_all_subsets_of_S_l79_79535
-
-
-namespace number_of_elements_in_A_l79_79981
-
-def N_star := { n : ℕ // n > 0 }
-
-def A := { p : N_star × N_star // p.1.val + p.2.val = 10 }
-
-theorem number_of_elements_in_A : (set.finite A) ∧ (finset.card (set.finite.to_finset (set.finite A)) = 9) :=
-by
-  sorry
-
-end number_of_elements_in_A_l79_79981
-
-
-namespace arithmetic_sequence_sets_l79_79012
-
-theorem arithmetic_sequence_sets (S : Finset ℕ) (hS : S = {0, 2, 4, 6, 8}) :
-  (∃ (count : ℕ), 
-    count = (Finset.filter (λ s : Finset ℕ, s.card = 3 ∧ 
-    ∃ (d : ℕ),
-      (∀ {a b c : ℕ}, a ∈ s ∧ b ∈ s ∧ c ∈ s ∧ a < b ∧ b < c → b - a = c - b ∧ d = c - a))) 
-    ((Finset.powersetLen 3 S))).card ∧ count = 4) :=
-by
-  sorry
-
-end arithmetic_sequence_sets_l79_79012
-
-
-namespace cards_not_in_box_correct_l79_79952
-
--- Total number of cards Robie had at the beginning.
-def total_cards : ℕ := 75
-
--- Number of cards in each box.
-def cards_per_box : ℕ := 10
-
--- Number of boxes Robie gave away.
-def boxes_given_away : ℕ := 2
-
--- Number of boxes Robie has with him.
-def boxes_with_rob : ℕ := 5
-
--- The number of cards not placed in a box.
-def cards_not_in_box : ℕ :=
-  total_cards - (boxes_given_away * cards_per_box + boxes_with_rob * cards_per_box)
-
-theorem cards_not_in_box_correct : cards_not_in_box = 5 :=
-by
-  unfold cards_not_in_box
-  unfold total_cards
-  unfold boxes_given_away
-  unfold cards_per_box
-  unfold boxes_with_rob
-  sorry
-
-end cards_not_in_box_correct_l79_79952
-
-
-namespace area_of_P_l79_79957
-
--- Definitions for the problem conditions
-def side1_length : ℝ := 7
-def side2_length : ℝ := 8
-def side3_length : ℝ := 9
-def side4_length : ℝ := 10
-def area_PQRS : ℝ := 15
-
--- The proof statement
-theorem area_of_P'Q'R'S' :
-  let area_ext : ℝ := 2 * area_PQRS in
-  let total_area : ℝ := area_ext + area_PQRS in
-  total_area = 45 :=
-by
-  sorry
-
-end area_of_P_l79_79957
-
-
-namespace bug_reaches_point_73_with_conditions_l79_79299
-
--- Define the conditions and the problem.
-def bug_path_count : ℕ :=
-  let total_paths := (Nat.choose 10 3)
-  let paths_via_11 := (Nat.choose 8 2)
-  
-  let paths_via_22 := (Nat.choose 6 1)
-
-   let paths_via_33 := (Nat.choose 4 0) := 0 subtract_paths  :=  total_paths - 28 -6 -24) }= 
-
-  total_paths - paths_via_11 - paths_via_22 + paths_via_33 end 
-
-theorem bug_reaches_point_73_with_conditions :
-  (bug_path_count (7, 3)) 
-        
-:= by sorryocaustic 지역사무소 34) sum
-
-end bug_reaches_point_73_with_conditions_l79_79299
-
-
-namespace initial_average_quiz_score_l79_79877
-
-theorem initial_average_quiz_score 
-  (n : ℕ) (A : ℝ) (dropped_avg : ℝ) (drop_score : ℝ)
-  (students_before : n = 16)
-  (students_after : n - 1 = 15)
-  (dropped_avg_eq : dropped_avg = 64.0)
-  (drop_score_eq : drop_score = 8) 
-  (total_sum_before_eq : n * A = 16 * A)
-  (total_sum_after_eq : (n - 1) * dropped_avg = 15 * 64):
-  A = 60.5 := 
-by
-  sorry
-
-end initial_average_quiz_score_l79_79877
-
-
-namespace bleach_to_detergent_ratio_changed_factor_l79_79165
-
-theorem bleach_to_detergent_ratio_changed_factor :
-  let original_bleach : ℝ := 4
-  let original_detergent : ℝ := 40
-  let original_water : ℝ := 100
-  let altered_detergent : ℝ := 60
-  let altered_water : ℝ := 300
-
-  -- Calculate the factor by which the volume increased
-  let original_total_volume := original_detergent + original_water
-  let altered_total_volume := altered_detergent + altered_water
-  let volume_increase_factor := altered_total_volume / original_total_volume
-
-  -- The calculated factor of the ratio change
-  let original_ratio_bleach_to_detergent := original_bleach / original_detergent
-
-  altered_detergent > 0 → altered_water > 0 →
-  volume_increase_factor * original_ratio_bleach_to_detergent = 2.5714 :=
-by
-  -- Insert proof here
-  sorry
-
-end bleach_to_detergent_ratio_changed_factor_l79_79165
-
-
-namespace solve_equation_in_integers_l79_79959
--- Import the necessary library for Lean
-
--- Define the main theorem to solve the equation in integers
-theorem solve_equation_in_integers :
-  ∃ (xs : List (ℕ × ℕ)), (∀ x y, (3^x - 2^y = 1 → (x, y) ∈ xs)) ∧ xs = [(1, 1), (2, 3)] :=
-by
-  sorry
-
-end solve_equation_in_integers_l79_79959
-
-
-namespace cone_to_sphere_surface_area_ratio_l79_79498
-
-noncomputable def sphere_radius (r : ℝ) : ℝ := r
-noncomputable def cone_height (r : ℝ) : ℝ := 3 * r
-noncomputable def lateral_surface_area_cone (r : ℝ) : ℝ := 6 * real.pi * r * r
-noncomputable def surface_area_sphere (r : ℝ) : ℝ := 4 * real.pi * r * r
-
-theorem cone_to_sphere_surface_area_ratio (r : ℝ) :
-  (lateral_surface_area_cone r) / (surface_area_sphere r) = 3 / 2 :=
-by {
-  sorry
-}
-
-end cone_to_sphere_surface_area_ratio_l79_79498
-
-
-namespace midpoint_limit_l79_79006
-
-noncomputable def midpoint (P Q : ℝ × ℝ) : ℝ × ℝ :=
-  ((P.1 + Q.1) / 2, (P.2 + Q.2) / 2)
-
-noncomputable def limit_position (a b : ℝ) : ℝ × ℝ :=
-  (2 * a / 3, 2 * b / 3)
-
-theorem midpoint_limit (a b : ℝ) :
-  let O := (0, 0) in
-  let Q := (a, b) in
-  let sequence : ℕ → ℝ × ℝ :=
-    λ n, nat.rec_on n Q (λ n Pn, midpoint Pn O)
-  in
-  (sequence ∘ nat.succ) ∘ nat.succ 0 → limit_position a b :=
-sorry
-
-end midpoint_limit_l79_79006
-
-
-namespace max_distance_from_circle_to_line_l79_79811
-
-theorem max_distance_from_circle_to_line :
-  let P := (x, y)
-      center := (5, 3)
-      radius := 3
-      circle := (x - 5) ^ 2 + (y - 3) ^ 2 = 9
-      line := 3 * x + 4 * y - 2 = 0 in
-    ∀ (P : ℝ × ℝ), circle → (∃ (d : ℝ), d = 8) :=
-by
-  sorry
-
-end max_distance_from_circle_to_line_l79_79811
-
-
-namespace true_proposition_is_D_l79_79735
-
--- Definitions of the propositions
-def PropA (L₁ L₂ : Line) (π : Plane) : Prop :=
-  ∀ (L1_parallel_L2 : parallel L₁ L₂), (parallel L₁ π)
-
-def PropB (L : Line) (π : Plane) : Prop :=
-  ∀ (L_perpendicular_to_L₁ L_perpendicular_to_L₂ : Line), 
-  (π.contains L₁) -> (π.contains L₂) -> (perpendicular L L₁) -> (perpendicular L L₂) -> (perpendicular L π)
-
-def PropC (L : Line) (π : Plane) : Prop :=
-  (parallel L π) -> (∀ (L₁ : Line), (π.contains L₁) -> (parallel L L₁))
-
-def PropD (L : Line) (π : Plane) : Prop :=
-  (perpendicular L π) -> (∀ (L₁ : Line), (π.contains L₁) -> (perpendicular L L₁))
-
--- Main theorem stating the correct proposition
-theorem true_proposition_is_D (L₁ L₂ : Line) (π : Plane) : 
-  (PropA L₁ L₂ π ∨ PropB L₁ π ∨ PropC L₁ π ∨ PropD L₁ π) := 
-  sorry
-
-end true_proposition_is_D_l79_79735
-
-
-namespace garden_sparrows_l79_79506
-
-theorem garden_sparrows (ratio_b_s : ℕ) (bluebirds sparrows : ℕ)
-  (h1 : ratio_b_s = 4 / 5) (h2 : bluebirds = 28) :
-  sparrows = 35 :=
-  sorry
-
-end garden_sparrows_l79_79506
-
-
-namespace find_rate_compounded_annually_l79_79337
-
--- Definition of the variables based on the conditions
-def P : ℝ := 50000
-def A : ℝ := 80000
-def n : ℝ := 1
-def t : ℝ := 4
-
--- Define the compounded interest formula
-def compound_interest (P A r : ℝ) : Prop :=
-  A = P * (1 + r / n) ^ (n * t)
-
--- The proof statement we need to show
-theorem find_rate_compounded_annually (r : ℝ) : compound_interest 50000 80000 r → r ≈ 0.12468265 := by
-  -- Sorry placeholder for the actual proof
-  sorry
-
-end find_rate_compounded_annually_l79_79337
-
-
-namespace solve_z_l79_79132
-
-variable (z : ℂ) -- Define the variable z in the complex number system
-variable (i : ℂ) -- Define the variable i in the complex number system
-
--- State the conditions: 2 - 3i * z = 4 + 5i * z and i^2 = -1
-axiom cond1 : 2 - 3 * i * z = 4 + 5 * i * z
-axiom cond2 : i^2 = -1
-
--- The theorem to prove: z = i / 4
-theorem solve_z : z = i / 4 :=
-by
-  sorry
-
-end solve_z_l79_79132
-
-
-namespace victor_additional_candies_needed_l79_79640
-
-variable (friends : ℝ) (initial_candies : ℕ) (candies_needed : ℕ)
-
--- Defining the conditions
-def conditions := friends = 7.5 ∧ initial_candies = 4692
-
--- Definition of the additional candies needed
-def additional_candies_needed (candies_needed additive_needed : ℕ): Prop :=
-  candies_needed = nat_ceil (friends * 626) ∧ additive_needed = candies_needed - initial_candies
-
--- The theorem statement
-theorem victor_additional_candies_needed : conditions friends initial_candies → ∃ n, additional_candies_needed 4695 n := by
-  sorry
-
-end victor_additional_candies_needed_l79_79640
-
-
-namespace pure_imaginary_solution_l79_79443
-
-theorem pure_imaginary_solution (m : ℝ) :
-  (m^2 + m - 2 = 0) ∧ (m^2 + 4m - 5 ≠ 0) → m = -2 :=
-by
-  sorry
-
-end pure_imaginary_solution_l79_79443
-
-
-namespace scientific_notation_of_45_million_l79_79770
-
-theorem scientific_notation_of_45_million :
-  ∃ a n, (45_000_000 : ℝ) = a * 10^n ∧ 1 ≤ a ∧ a < 10 ∧ a = 4.5 ∧ n = 7 :=
-by
-  use 4.5
-  use 7
-  split
-  · norm_num [pow]
-  · split
-  · norm_num
-  · split
-  · norm_num
-  · rfl
-  · rfl
-
-end scientific_notation_of_45_million_l79_79770
-
-
-namespace problem_1_problem_2_l79_79456
-
-noncomputable def a (n : ℕ) : ℚ :=
-  if n = 1 then 2 else if n = 2 then 2 / 3 else
-    sorry /-
-      The exact recursive definition and proof of the recurrence relation
-      is omitted for brevity. It would be established in a full proof.
-    -/ 
-
-open Real
-
-theorem problem_1 (n : ℕ) (h : n ≥ 1) : 
-  is_arithmetic_sequence (λ n, 1 / a n) := sorry
-
-theorem problem_2 (n : ℕ) : 
-  (∑ i in range n, a i / (2 * i + 1)) = (2 * n) / (2 * n + 1) := sorry
-
-end problem_1_problem_2_l79_79456
-
-
-namespace discount_percentage_shirt_l79_79906
-
--- Define the constants based on the conditions
-def original_price_jacket : ℝ := 100
-def original_price_shirt : ℝ := 60
-def total_paid : ℝ := 110
-def discount_jacket : ℝ := 0.30
-
--- Define the goal to prove the discount percentage on the shirt
-theorem discount_percentage_shirt :
-  let sale_price_jacket := original_price_jacket * (1 - discount_jacket) in
-  let amount_paid_for_shirt := total_paid - sale_price_jacket in
-  let discount_shirt := (original_price_shirt - amount_paid_for_shirt) / original_price_shirt in
-  discount_shirt * 100 = 33 + 1 / 3 :=
-by
-  sorry
-
-end discount_percentage_shirt_l79_79906
-
-
-namespace distinct_real_roots_of_quadratic_l79_79468
-
-theorem distinct_real_roots_of_quadratic (m : ℝ) :
-  (∃ (x y : ℝ), x ≠ y ∧ x^2 + m * x + 9 = 0 ∧ y^2 + m * y + 9 = 0) ↔ m ∈ Ioo (-∞) (-6) ∪ Ioo 6 (∞) :=
-by
-  sorry
-
-end distinct_real_roots_of_quadratic_l79_79468
-
-
-namespace triangle_inequality_l79_79830
-
-theorem triangle_inequality (a b c : ℝ) (h1 : a + b > c) (h2 : b + c > a) (h3 : c + a > b) :
-  a^2 * (b + c - a) + b^2 * (c + a - b) + c^2 * (a + b - c) ≤ 3 * a * b * c :=
-sorry
-
-end triangle_inequality_l79_79830
-
-
-namespace user_level_1000_l79_79602
-
-noncomputable def user_level (points : ℕ) : ℕ :=
-if points >= 1210 then 18
-else if points >= 1000 then 17
-else if points >= 810 then 16
-else if points >= 640 then 15
-else if points >= 490 then 14
-else if points >= 360 then 13
-else if points >= 250 then 12
-else if points >= 160 then 11
-else if points >= 90 then 10
-else 0
-
-theorem user_level_1000 : user_level 1000 = 17 :=
-by {
-  -- proof will be written here
-  sorry
-}
-
-end user_level_1000_l79_79602
-
-
-namespace probability_after_2019_rings_l79_79878
-
-noncomputable def players_start_with_one : ℕ := 1
-noncomputable def bell_ring_interval : ℕ := 15
-noncomputable def num_rings : ℕ := 2019
-
--- Assuming a function that simulates the game results based on the conditions
-def game_simulation (num_rings : ℕ) : ℚ := sorry
-
-theorem probability_after_2019_rings :
-  game_simulation num_rings = 1 / 4 := sorry
-
-end probability_after_2019_rings_l79_79878
-
-
-namespace wire_cut_l79_79686
-
-theorem wire_cut (total_length : ℝ) (ratio : ℝ) (shorter longer : ℝ) (h_total : total_length = 21) (h_ratio : ratio = 2/5)
-  (h_shorter : longer = (5/2) * shorter) (h_sum : total_length = shorter + longer) : shorter = 6 := 
-by
-  -- total_length = 21, ratio = 2/5, longer = (5/2) * shorter, total_length = shorter + longer, prove shorter = 6
-  sorry
-
-end wire_cut_l79_79686
-
-
-namespace monthly_installment_amount_l79_79142
-
-theorem monthly_installment_amount (total_cost : ℝ) (down_payment_percentage : ℝ) (additional_down_payment : ℝ) 
-  (balance_after_months : ℝ) (months : ℕ) (monthly_installment : ℝ) : 
-    total_cost = 1000 → 
-    down_payment_percentage = 0.20 → 
-    additional_down_payment = 20 → 
-    balance_after_months = 520 → 
-    months = 4 → 
-    monthly_installment = 65 :=
-by
-  intros
-  sorry
-
-end monthly_installment_amount_l79_79142
-
-
-namespace sum_lucky_numbers_divisible_by_13_l79_79342
-
-def is_lucky (n : ℕ) : Prop :=
-  let d1 := (n / 100000) % 10
-  let d2 := (n / 10000) % 10
-  let d3 := (n / 1000) % 10
-  let d4 := (n / 100) % 10
-  let d5 := (n / 10) % 10
-  let d6 := n % 10
-  d1 + d2 + d3 = d4 + d5 + d6
-
-theorem sum_lucky_numbers_divisible_by_13 :
-  (∑ n in Finset.filter is_lucky (Finset.range 1000000), n) % 13 = 0 :=
-sorry
-
-end sum_lucky_numbers_divisible_by_13_l79_79342
-
-
-namespace histogram_approximates_density_curve_l79_79951
-
-theorem histogram_approximates_density_curve 
-  (sample_size : ℕ) (group_interval : ℝ) 
-  (histogram : ℕ → ℝ) (density_curve : ℝ → ℝ) 
-  (h1 : ∀ n, monotone (histogram n))
-  (h2 : ∀ x, continuous (density_curve x)) :
-  (filter.at_top (λ n => histogram n)) = (filter.at_top (λ x => density_curve x)) :=
-sorry
-
-end histogram_approximates_density_curve_l79_79951
-
-
-namespace distinct_real_roots_interval_l79_79481
-
-open Set Real
-
-theorem distinct_real_roots_interval (m : ℝ) : 
-  (∃ (r1 r2 : ℝ), r1 ≠ r2 ∧ IsRoot (λ x => x^2 + m * x + 9) r1 ∧ IsRoot (λ x => x^2 + m * x + 9) r2) ↔ 
-  m ∈ Iio (-6) ∪ Ioi 6 :=
-sorry
-
-end distinct_real_roots_interval_l79_79481
-
-
-namespace range_of_m_l79_79105
-
-noncomputable def f (x : ℝ) : ℝ := x^3 + x
-
-theorem range_of_m (m : ℝ) :
-  (∀ θ, 0 < θ ∧ θ < (real.pi / 2) → f (m * real.sin θ) + f (1 - m) > 0) → m ≤ 1 :=
-by
-  sorry
-
-end range_of_m_l79_79105
-
-
-namespace simplify_division_l79_79129
-
-noncomputable def a := 5 * 10 ^ 10
-noncomputable def b := 2 * 10 ^ 4 * 10 ^ 2
-
-theorem simplify_division : a / b = 25000 := by
-  sorry
-
-end simplify_division_l79_79129
-
-
-namespace sophie_saves_money_l79_79596
-
--- Definitions based on the conditions
-def loads_per_week : ℕ := 4
-def sheets_per_load : ℕ := 1
-def cost_per_box : ℝ := 5.50
-def sheets_per_box : ℕ := 104
-def weeks_per_year : ℕ := 52
-
--- Main theorem statement
-theorem sophie_saves_money :
-  let sheets_per_week := loads_per_week * sheets_per_load
-  let total_sheets_per_year := sheets_per_week * weeks_per_year
-  let boxes_per_year := total_sheets_per_year / sheets_per_box
-  let annual_saving := boxes_per_year * cost_per_box
-  annual_saving = 11.00 := 
-by {
-  -- Calculation steps
-  let sheets_per_week := loads_per_week * sheets_per_load
-  let total_sheets_per_year := sheets_per_week * weeks_per_year
-  let boxes_per_year := total_sheets_per_year / sheets_per_box
-  let annual_saving := boxes_per_year * cost_per_box
-  -- Proving the final statement
-  sorry
-}
-
-end sophie_saves_money_l79_79596
-
-
-namespace gcd_612_468_l79_79639
-
-theorem gcd_612_468 : gcd 612 468 = 36 :=
-by
-  sorry
-
-end gcd_612_468_l79_79639
-
-
-namespace num_boys_in_circle_l79_79731
-
-theorem num_boys_in_circle (n : ℕ) 
-  (h : ∃ k, n = 2 * k ∧ k = 40 - 10) : n = 60 :=
-by
-  sorry
-
-end num_boys_in_circle_l79_79731
-
-
-namespace decreasing_interval_of_f_l79_79980
-
-noncomputable def f (x : ℝ) : ℝ := x - Real.log x
-
-theorem decreasing_interval_of_f :
-  ∀ x : ℝ, 0 < x ∧ x < 1 → ∃ ε > 0, ∀ y : ℝ, abs(y - x) < ε → f(y) < f(x) :=
-by
-  intros x hx
-  sorry
-
-end decreasing_interval_of_f_l79_79980
-
-
-namespace log_expression_equals_six_l79_79373
-
--- Define the necessary logarithm properties
-theorem log_expression_equals_six :
-    log 10 9 + 3 * log 10 4 + 2 * log 10 3 + 4 * log 10 8 + log 10 27 = 6 :=
-by
-  sorry
-
-end log_expression_equals_six_l79_79373
-
-
-namespace sam_distance_traveled_l79_79559
-
--- Define the conditions given in the problem
-def marguerite_distance : ℕ := 150
-def marguerite_time : ℕ := 3
-def sam_speed_increase_factor : ℚ := 1.2
-def sam_time : ℕ := 4
-
--- The statement we need to prove
-theorem sam_distance_traveled :
-  let marguerite_speed := marguerite_distance / marguerite_time in
-  let sam_speed := marguerite_speed * sam_speed_increase_factor in
-  let sam_distance := sam_speed * sam_time in
-  sam_distance = 240 :=
-by
-  -- Proof is omitted
-  sorry
-
-end sam_distance_traveled_l79_79559
-
-
-namespace distinct_sequences_count_l79_79838
-
-noncomputable def number_of_distinct_sequences (n : ℕ) : ℕ :=
-  if n = 6 then 12 else sorry
-
-theorem distinct_sequences_count : number_of_distinct_sequences 6 = 12 := 
-by 
-  sorry
-
-end distinct_sequences_count_l79_79838
-
-
-namespace ellipse_properties_value_of_m_l79_79440
-
-noncomputable def ellipse_equation (a b c : ℝ) := sorry
-
-theorem ellipse_properties :
-  let c := sqrt 3 in
-  let e := sqrt 3 / 2 in
-  let a := 2 in
-  let b := 1 in
-  ellipse_equation a b c = "x^2 / 4 + y^2 = 1" := sorry
-
-theorem value_of_m (m : ℝ) :
-  let ellipse_eq := "x^2 / 4 + y^2 = 1" in
-  ∀ P Q : ℝ × ℝ,
-    line_eq := (λ x, x / 2 + m) →
-    points_on_ellipse P Q ellipse_eq →
-    |PQ| = 2 →
-    m = sqrt 30 / 5 ∨ m = -sqrt 30 / 5 := sorry
-
-end ellipse_properties_value_of_m_l79_79440
-
-
-namespace loc_of_P_l79_79931
-
-noncomputable def parabola (p : ℝ) : set (ℝ × ℝ) :=
-  { pt | pt.2 ^ 2 = 2 * p * pt.1 }
-
-theorem loc_of_P (p a : ℝ) (h_a : 0 ≤ a) (M1 M2 P : ℝ × ℝ) (k l : ℝ) :
-  M1.2 ^ 2 = 2 * p * M1.1 ∧ M2.2 ^ 2 = 2 * p * M2.1 ∧
-  M1.2 - M2.2 = k * (M1.1 - M2.1) ∧
-  2 * (P.1 - M1.1) ^ 2 + 2 * (P.2 - M1.2) ^ 2 + 2 * (P.1 - M2.1) ^ 2 + 2 * (P.2 - M2.2) ^ 2 - (M1.1 - M2.1) ^ 2 - (M1.2 - M2.2) ^ 2 = a :=
-  sorry
-  
-#print loc_of_P
-
-end loc_of_P_l79_79931
-
-
-namespace sin_C_in_right_triangle_l79_79522
-
--- Triangle ABC with angle B = 90 degrees and tan A = 3/4
-theorem sin_C_in_right_triangle (A C : ℝ) (h1 : A + C = π / 2) (h2 : Real.tan A = 3 / 4) : Real.sin C = 4 / 5 := by
-  sorry
-
-end sin_C_in_right_triangle_l79_79522
-
-
-namespace cos_48_eq_sqrt2_over_2_l79_79353
-
-theorem cos_48_eq_sqrt2_over_2 : 
-  ∃ (y : ℝ), y = cos 48 ∧ y = sqrt 2 / 2 :=
-by
-  sorry
-
-end cos_48_eq_sqrt2_over_2_l79_79353
-
-
-namespace geometric_series_common_ratio_l79_79182
-
-theorem geometric_series_common_ratio (a r : ℝ) (h : a / (1 - r) = 64 * (a * r^4 / (1 - r))) : r = 1/2 :=
-by {
-  sorry
-}
-
-end geometric_series_common_ratio_l79_79182
-
-
-namespace find_m_l79_79824
-
-def hyperbola_focus (x y : ℝ) (m : ℝ) : Prop :=
-  ∃ (a b : ℝ), a^2 = 9 ∧ b^2 = -m ∧ (x - 0)^2 / a^2 - (y - 0)^2 / b^2 = 1
-
-theorem find_m (m : ℝ) (H : hyperbola_focus 5 0 m) : m = -16 :=
-by
-  sorry
-
-end find_m_l79_79824
-
-
-namespace distance_A_A₁_l79_79882
-
--- Define a point in 3D Cartesian coordinate system
-structure Point :=
-  (x : ℝ)
-  (y : ℝ)
-  (z : ℝ)
-
--- Given point A and its symmetrical point A₁ about the y-axis
-def A : Point := { x := -4, y := 3, z := 1 }
-def A₁ : Point := { x := 4, y := 3, z := -1 }
-
--- Distance between two points in 3D space
-def distance (p q : Point) : ℝ :=
-  Real.sqrt ((q.x - p.x)^2 + (q.y - p.y)^2 + (q.z - p.z)^2)
-
--- Proof problem statement
-theorem distance_A_A₁ : distance A A₁ = 2 * Real.sqrt 17 := by
-  sorry
-
-end distance_A_A₁_l79_79882
-
-
-namespace range_of_a_l79_79425
-
-theorem range_of_a (a : ℝ) 
-  (h₁ : ∀ x ∈ set.Icc (1:ℝ) 2, x^2 - a ≥ 0)
-  (h₂ : ∃ x : ℝ, x^2 + 2 * a * x + 2 - a = 0) :
-  a ≤ -2 ∨ a = 1 :=
-by
-  sorry
-
-end range_of_a_l79_79425
-
-
-namespace total_legs_correct_l79_79581
-
-def num_horses : ℕ := 2
-def num_dogs : ℕ := 5
-def num_cats : ℕ := 7
-def num_turtles : ℕ := 3
-def num_goats : ℕ := 1
-def legs_per_animal : ℕ := 4
-
-theorem total_legs_correct :
-  num_horses * legs_per_animal +
-  num_dogs * legs_per_animal +
-  num_cats * legs_per_animal +
-  num_turtles * legs_per_animal +
-  num_goats * legs_per_animal = 72 :=
-by
-  sorry
-
-end total_legs_correct_l79_79581
-
-
-namespace minimize_avg_cost_maximize_profit_l79_79604
-
--- Define the cost function y
-def cost_function (x : ℝ) : ℝ := (1/2) * x^2 - 200 * x + 45000
-
--- Define the average cost function
-def avg_cost_function (x : ℝ) : ℝ := (cost_function x) / x
-
--- Define the profit function S
-def profit_function (x : ℝ) : ℝ := 200 * x - (cost_function x)
-
--- Define the conditions
-def min_volume := 300
-def max_volume := 600
-def min_avg_cost := 100
-def max_profit := 35000
-
--- Lean theorem statement for problem part (1)
-theorem minimize_avg_cost :
-  ∀ x : ℝ, (300 ≤ x ∧ x ≤ 600) → avg_cost_function x ≥ min_avg_cost :=
-begin
-  assume x,
-  assume h : 300 ≤ x ∧ x ≤ 600,
-  sorry,
-end
-
--- Lean theorem statement for problem part (2)
-theorem maximize_profit :
-  ∀ x : ℝ, (300 ≤ x ∧ x ≤ 600) → profit_function x ≤ max_profit :=
-begin
-  assume x,
-  assume h : 300 ≤ x ∧ x ≤ 600,
-  sorry,
-end
-
-end minimize_avg_cost_maximize_profit_l79_79604
-
-
-namespace perimeter_of_equilateral_triangle_l79_79316
-
-noncomputable def equilateral_triangle_perimeter : ℝ :=
-  let L1 := {x : ℝ | x = 2}
-  let L2 := {p : ℝ × ℝ | p.snd = 2 + 1 / Real.sqrt 3 * p.fst}
-  let L3 := {p : ℝ × ℝ | p.snd = -Real.sqrt 3 * p.fst}
-  let vertex1 := (2, -2 * Real.sqrt 3)
-  let vertex2 := (2, 2 + 2 / Real.sqrt 3)
-  let side_length := Real.abs (vertex2.snd - vertex1.snd)
-  3 * side_length
-
-theorem perimeter_of_equilateral_triangle :
-  equilateral_triangle_perimeter = 6 + 8 * Real.sqrt 3 :=
-sorry
-
-end perimeter_of_equilateral_triangle_l79_79316
-
-
-namespace non_degenerate_ellipse_condition_l79_79153
-
-theorem non_degenerate_ellipse_condition (k : ℝ) :
-  (∃ x y : ℝ, 3 * x^2 + 6 * y^2 - 12 * x + 18 * y = k) ↔ k > -51 / 2 :=
-sorry
-
-end non_degenerate_ellipse_condition_l79_79153
-
-
-namespace rick_gave_to_miguel_l79_79127
-
-theorem rick_gave_to_miguel (total_cards : ℕ) 
-  (kept_cards : ℕ) (friends : ℕ) (friends_cards : ℕ) 
-  (sisters : ℕ) (sisters_cards_each : ℕ) :
-  total_cards = 130 → kept_cards = 15 → 
-  friends = 8 → friends_cards = 12 →
-  sisters = 2 → sisters_cards_each = 3 → 
-  total_cards - kept_cards - (friends * friends_cards) - (sisters * sisters_cards_each) = 13 :=
-by
-  intros h1 h2 h3 h4 h5 h6
-  have h7 : total_cards - kept_cards = 115 := by 
-    conv in (total_cards - kept_cards) {rw [h1, h2]}
-    simp
-  have h8 : friends * friends_cards = 96 := by 
-    conv in (friends * friends_cards) {rw [h3, h4]}
-    simp
-  have h9 : 115 - 96 = 19 := by
-    simp
-  have h10 : sisters * sisters_cards_each = 6 := by 
-    conv in (sisters * sisters_cards_each) {rw [h5, h6]}
-    simp
-  have h11 : 19 - 6 = 13 := by
-    simp
-  rw [h7, h8, h9, h10, h11]
-  simp
-  sorry
-
-end rick_gave_to_miguel_l79_79127
-
-
-namespace solve_for_x_l79_79958
-
-theorem solve_for_x : ∃ (x : ℝ), (x - 5) ^ 2 = (1 / 16)⁻¹ ∧ (x = 9 ∨ x = 1) :=
-by
-  sorry
-
-end solve_for_x_l79_79958
-
-
-namespace max_consecutive_integers_lt_1000_l79_79257
-
-theorem max_consecutive_integers_lt_1000 : 
-  ∃ n : ℕ, (n * (n + 1)) / 2 < 1000 ∧ ∀ m : ℕ, m > n → (m * (m + 1)) / 2 ≥ 1000 :=
-sorry
-
-end max_consecutive_integers_lt_1000_l79_79257
-
-
-namespace max_consecutive_integers_sum_lt_1000_l79_79245
-
-theorem max_consecutive_integers_sum_lt_1000
-  (n : ℕ)
-  (h : (n * (n + 1)) / 2 < 1000) : n ≤ 44 :=
-by
-  sorry
-
-end max_consecutive_integers_sum_lt_1000_l79_79245
-
-
-namespace problem_statement_l79_79753
-
-theorem problem_statement (a b c x : ℤ) 
-  (ha : a ≠ 0) (hb : b ≠ 0) (hc : c ≠ 0) (hx : x ≠ 0)
-  (eq1 : (a * x^4 / b * c)^3 = x^3)
-  (sum_eq : a + b + c = 9) :
-  (x = 1 ∨ x = -1) ∧ a = 1 ∧ b = 4 ∧ c = 4 :=
-by
-  sorry
-
-end problem_statement_l79_79753
-
-
-namespace min_tiles_placement_l79_79536
-
-theorem min_tiles_placement (k n : ℕ) (h1 : k ≥ 2) (h2 : k ≤ n) (h3 : n ≤ 2 * k - 1) :
-  if n = k then 
-    min_tiles n k = k 
-  else if (k < n ∧ n < 2 * k - 1) then 
-    min_tiles n k = 2 * (n - k + 1)
-  else if n = 2 * k - 1 then
-    min_tiles n k = 2 * k - 1
-  else 
-    False :=
-sorry
-
-end min_tiles_placement_l79_79536
-
-
-namespace total_balloons_l79_79585
-
-theorem total_balloons (sam_balloons_initial mary_balloons fred_balloons : ℕ) (h1 : sam_balloons_initial = 6)
-    (h2 : mary_balloons = 7) (h3 : fred_balloons = 5) : sam_balloons_initial - fred_balloons + mary_balloons = 8 :=
-by
-  sorry
-
-end total_balloons_l79_79585
-
-
-namespace polynomial_root_problem_l79_79091
-
-theorem polynomial_root_problem (a b c d : ℤ) (r1 r2 r3 r4 : ℕ)
-  (h_roots : ∀ x, x^4 + a * x^3 + b * x^2 + c * x + d = (x + r1) * (x + r2) * (x + r3) * (x + r4))
-  (h_sum : a + b + c + d = 2009) :
-  d = 528 := 
-by
-  sorry
-
-end polynomial_root_problem_l79_79091
-
-
-namespace model_tower_height_l79_79552
-
-theorem model_tower_height (real_height : ℝ) (real_volume : ℝ) (model_volume : ℝ) (h_cond : real_height = 80) (vol_cond : real_volume = 200000) (model_vol_cond : model_volume = 0.2) : 
-  ∃ h : ℝ, h = 0.8 :=
-by sorry
-
-end model_tower_height_l79_79552
-
-
-namespace fourth_vertex_of_square_l79_79892
-
-def forms_square (a b c d : Complex) : Prop :=
-  let sides := [a - b, b - c, c - d, d - a]
-  let diagonals := [a - c, b - d]
-  (sides.all (λ s, Complex.normSq s = Complex.normSq (a - b))) ∧
-  (diagonals.all (λ d, Complex.normSq d = Complex.normSq (a - c))) ∧
-  (Complex.normSq (a - c) = 2 * Complex.normSq (a - b))
-
-theorem fourth_vertex_of_square :
-  let a := (1 : ℂ) + 2 * Complex.i
-  let b := (-2 : ℂ) + Complex.i
-  let c := (-1 : ℂ) - 2 * Complex.i
-  ∃ d : ℂ, forms_square a b c d ∧ d = (2 : ℂ) - Complex.i := by
-  let a := (1 : ℂ) + 2 * Complex.i
-  let b := (-2 : ℂ) + Complex.i
-  let c := (-1 : ℂ) - 2 * Complex.i
-  exact ⟨(2 : ℂ) - Complex.i, sorry⟩
-
-end fourth_vertex_of_square_l79_79892
-
-
-namespace solution_value_l79_79861
-
-theorem solution_value (a : ℝ) (h : a^2 + a - 5 = 0) : a^2 + a + 1 = 6 :=
-by {
-    have h2 : a^2 + a = 5,
-    {
-        sorry,  -- Proof deriving a^2 + a = 5
-    },
-    rw h2,
-    calc
-    5 + 1 = 6 : by norm_num,
-}
-
-end solution_value_l79_79861
-
-
-namespace evaluate_expression_l79_79766
-
-theorem evaluate_expression : (3^2)^4 * 2^3 = 52488 := by
-  sorry
-
-end evaluate_expression_l79_79766
-
-
-namespace max_t_for_60_degrees_l79_79116
-
-def f (t : ℝ) : ℝ := -t^2 + 10*t + 40
-
-theorem max_t_for_60_degrees : ∃ t : ℝ, f t = 60 ∧ ∀ t' : ℝ, f t' = 60 → t ≤ t' → t = 5 + real.sqrt 5 :=
-by
-  sorry
-
-end max_t_for_60_degrees_l79_79116
-
-
-namespace logarithms_form_harmonic_progression_l79_79925
-
-noncomputable def in_geometric_progression (x y z q : ℝ) := 
-  x = y / q ∧ z = y * q ∧ q > 1
-
-noncomputable def is_harmonic_progression (a b c : ℝ) := 
-  2 / b = 1 / a + 1 / c
-
-theorem logarithms_form_harmonic_progression {x y z m q : ℝ} 
-  (h_geom : in_geometric_progression x y z q) (h_order : x < y ∧ y < z) 
-  (h_m : m > 1) : 
-  is_harmonic_progression (log x m) (log y m) (log z m) := 
-sorry
-
-end logarithms_form_harmonic_progression_l79_79925
-
-
-namespace evaluate_expression_l79_79378
-
-theorem evaluate_expression :
-    | 5 - 8 * (3 - 12)^2 | - | 5 - 11 | + real.sqrt 16 + real.sin (real.pi / 2) = 642 :=
-by
-  have h1 : 3 - 12 = -9 := by sorry
-  have h2 : (-9)^2 = 81 := by sorry
-  have h3 : 8 * 81 = 648 := by sorry
-  have h4 : 5 - 648 = -643 := by sorry
-  have h5 : | -643 | = 643 := by sorry
-  have h6 : 5 - 11 = -6 := by sorry
-  have h7 : | -6 | = 6 := by sorry
-  have h8 : real.sqrt 16 = 4 := by sorry
-  have h9 : real.sin (real.pi / 2) = 1 := by sorry
-  calc 
-    | 5 - 8 * (3 - 12)^2 | - | 5 - 11 | + real.sqrt 16 + real.sin (real.pi / 2)
-        = | -643 | - 6 + 4 + 1 : by sorry
-    ... = 643 - 6 + 4 + 1 : by sorry
-    ... = 642 : by sorry
-
-end evaluate_expression_l79_79378
-
-
-namespace smallest_n_value_l79_79960
-
--- Definitions for conditions
-def is_multiple_of (a b : ℕ) : Prop := ∃ k, a = b * k
-
-def count_factors_of_5 (n : ℕ) : ℕ :=
-  (Finset.range n.succ).sum (λ k, if (5 ^ k ≤ n) then n / (5 ^ k) else 0)
-
-noncomputable def min_possible_n (a b c : ℕ) : ℕ :=
-  count_factors_of_5 a + count_factors_of_5 b + count_factors_of_5 c
-
-theorem smallest_n_value (a b c : ℕ) (hpos1 : a > 0) (hpos2 : b > 0) (hpos3 : c > 0)
-  (hsum : a + b + c = 2023) (hmult : is_multiple_of a 11) (hmn : ∃ m n, a! * b! * c! = m * 10 ^ n ∧ ¬ (10 ∣ m)) :
-  min_possible_n a b c = 497 :=
-sorry
-
-end smallest_n_value_l79_79960
-
-
-namespace problem_statement_l79_79924
-
-open Nat
-
-theorem problem_statement (p : ℕ) (h_prime : Prime p) (h_gt3 : p > 3) 
-  (n : ℕ) (h_n : n = (2 ^ (2 * p) - 1) / 3) : 
-  2 ^ n - 2 ≡ 0 [MOD n] := 
-sorry
-
-end problem_statement_l79_79924
-
-
-namespace maximum_vertices_pyramid_l79_79293
-
-theorem maximum_vertices_pyramid (cube_faces : ℕ) (face_vertices : ℕ) (no_edge_vertices : Prop) (at_least_one_per_face : Prop) : 
-  ∀ pyramid_vertices, pyramid_vertices ≤ 13 :=
-by {
-  -- Assuming the necessary conditions
-  assume h1 : no_edge_vertices,
-  assume h2 : at_least_one_per_face,
-  -- Here, you would normally carry out the proof steps.
-  sorry
-}
-
-end maximum_vertices_pyramid_l79_79293
-
-
-namespace range_of_a_l79_79170
-
-theorem range_of_a (a : ℝ) :
-  (∀ x : ℝ, (2 * a * x + 3 * x > 2 * a + 3) ↔ (x < 1)) → (a < -3 / 2) :=
-by
-  intro h
-  sorry
-
-end range_of_a_l79_79170
-
-
-namespace tiffany_initial_lives_l79_79633
-
-theorem tiffany_initial_lives : 
-  ∃ x : ℝ, (x - 14) + 27 = 56 ∧ x = 43 :=
-begin
-  use 43,
-  split,
-  { linarith, },
-  { refl, },
-end
-
-end tiffany_initial_lives_l79_79633
-
-
-namespace calvin_weight_after_one_year_l79_79748
-
-def initial_weight : ℕ := 250
-def gym_training_loss : ℕ := 8 + 5 + 7 + 6 + 8 + 7 + 5 + 7 + 4 + 6 + 5 + 7
-def diet_loss : ℕ := 3 * 12
-def exercise_loss : ℕ := 2 + 3 + 4 + 3 + 2 + 4 + 3 + 2 + 1 + 3 + 2 + 4
-def total_loss : ℕ := gym_training_loss + diet_loss + exercise_loss
-def final_weight : ℕ := initial_weight - total_loss
-
-theorem calvin_weight_after_one_year : final_weight = 106 :=
-by
-  unfold initial_weight gym_training_loss diet_loss exercise_loss total_loss final_weight
-  exact rfl
-
-end calvin_weight_after_one_year_l79_79748
-
-
-namespace problem_statement_l79_79412
-
-variable {x y : ℝ}
-
-theorem problem_statement (h1 : x * y = -3) (h2 : x + y = -4) : x^2 + 3 * x * y + y^2 = 13 := sorry
-
-end problem_statement_l79_79412
-
-
-namespace find_v_l79_79794
-
-variable (v : ℝ)
-
-def operation (v : ℝ) : ℝ := v - (v / 3)
-def double_operation (v : ℝ) : ℝ := operation (operation v)
-
-theorem find_v (hv : double_operation v = 20) : v = 45 := by
-  sorry
-
-end find_v_l79_79794
-
-
-namespace trigonometric_value_existence_l79_79814
-
-noncomputable def can_be_value_of_tan (n : ℝ) : Prop :=
-∃ θ : ℝ, Real.tan θ = n
-
-noncomputable def can_be_value_of_cot (n : ℝ) : Prop :=
-∃ θ : ℝ, 1 / Real.tan θ = n
-
-def can_be_value_of_sin (n : ℝ) : Prop :=
-|n| ≤ 1 ∧ ∃ θ : ℝ, Real.sin θ = n
-
-def can_be_value_of_cos (n : ℝ) : Prop :=
-|n| ≤ 1 ∧ ∃ θ : ℝ, Real.cos θ = n
-
-def can_be_value_of_sec (n : ℝ) : Prop :=
-|n| ≥ 1 ∧ ∃ θ : ℝ, 1 / Real.cos θ = n
-
-def can_be_value_of_csc (n : ℝ) : Prop :=
-|n| ≥ 1 ∧ ∃ θ : ℝ, 1 / Real.sin θ = n
-
-theorem trigonometric_value_existence (n : ℝ) : 
-  can_be_value_of_tan n ∧ 
-  can_be_value_of_cot n ∧ 
-  can_be_value_of_sin n ∧ 
-  can_be_value_of_cos n ∧ 
-  can_be_value_of_sec n ∧ 
-  can_be_value_of_csc n := 
-sorry
-
-end trigonometric_value_existence_l79_79814
-
-
-namespace equal_distances_of_circumcenters_l79_79335
-
--- Define points and circumcenters
-variables {A B C D O O₁ O₂: Type}
-noncomputable def is_circumcenter (O : Type) (A B C : Type) : Prop := sorry
-noncomputable def is_angle_bisector (D : Type) (A : Type) (B C : Type) : Prop := sorry
-
--- Assumptions
-variable (h_angle_bisector : is_angle_bisector D A B C)
-variable (h_circumcenter_O : is_circumcenter O A B C)
-variable (h_circumcenter_O₁ : is_circumcenter O₁ A B D)
-variable (h_circumcenter_O₂ : is_circumcenter O₂ A C D)
-
--- Theorem to prove that OO₁ = OO₂
-theorem equal_distances_of_circumcenters :
-  dist O O₁ = dist O O₂ :=
-by sorry
-
-end equal_distances_of_circumcenters_l79_79335
-
-
-namespace shorter_side_ratio_l79_79525
-
-variable {x y : ℝ}
-variables (h1 : x < y)
-variables (h2 : x + y - Real.sqrt (x^2 + y^2) = 1/2 * y)
-
-theorem shorter_side_ratio (h1 : x < y) (h2 : x + y - Real.sqrt (x^2 + y^2) = 1 / 2 * y) : x / y = 3 / 4 := 
-sorry
-
-end shorter_side_ratio_l79_79525
-
-
-namespace cosine_of_angle_in_third_quadrant_l79_79034
-
-theorem cosine_of_angle_in_third_quadrant (B : ℝ) (hB : B ∈ Set.Ioo (π : ℝ) (3 * π / 2)) (hSinB : Real.sin B = -5 / 13) :
-  Real.cos B = -12 / 13 :=
-sorry
-
-end cosine_of_angle_in_third_quadrant_l79_79034
-
-
-namespace solve_investment_problem_l79_79723
-
-def remaining_rate_proof (A I A1 R1 A2 R2 x : ℚ) : Prop :=
-  let income1 := A1 * (R1 / 100)
-  let income2 := A2 * (R2 / 100)
-  let remaining := A - A1 - A2
-  let required_income := I - (income1 + income2)
-  let expected_rate_in_float := (required_income / remaining) * 100
-  expected_rate_in_float = x
-
-theorem solve_investment_problem :
-  remaining_rate_proof 15000 800 5000 3 6000 4.5 9.5 :=
+theorem total_skips_correct : TotalSkips5 + Skips6 = 154 :=
 by
   -- proof goes here
   sorry
 
-end solve_investment_problem_l79_79723
+end total_skips_correct_l79_79572
 
 
-namespace necessary_but_not_sufficient_condition_l79_79409
+namespace find_n_constant_term_l79_79120
 
-theorem necessary_but_not_sufficient_condition (a : ℝ) :
-  (0 < a ∧ a < 1) → ((a + 1) * (a - 2) < 0) ∧ ((∃ b : ℝ, (b + 1) * (b - 2) < 0 ∧ ¬(0 < b ∧ b < 1))) :=
+-- Given condition as a Lean term
+def eq1 (n : ℕ) : ℕ := 2^(2*n) - (2^n + 992)
+
+-- Prove that n = 5 fulfills the condition
+theorem find_n : eq1 5 = 0 := by
+  sorry
+
+-- Given n = 5, find the constant term in the given expansion
+def general_term (n r : ℕ) : ℤ := (-1)^r * (Nat.choose (2*n) r) * (n - 5*r/2)
+
+-- Prove the constant term is 45 when n = 5
+theorem constant_term : general_term 5 2 = 45 := by
+  sorry
+
+end find_n_constant_term_l79_79120
+
+
+namespace banana_arrangements_l79_79531
+
+theorem banana_arrangements : 
+  let letters := "BANANA".toList
+  let n := letters.length
+  let countA := letters.count (fun c => c = 'A')
+  let countN := letters.count (fun c => c = 'N')
+  let countB := letters.count (fun c => c = 'B')
+  n = 6 ∧ countA = 3 ∧ countN = 2 ∧ countB = 1 → (Nat.factorial n) / ((Nat.factorial countA) * (Nat.factorial countN) * (Nat.factorial countB)) = 60 := 
+by
+  intros letters n countA countN countB h
+  sorry
+
+end banana_arrangements_l79_79531
+
+
+namespace veranda_width_l79_79043
+
+theorem veranda_width (w : ℝ) (h_room : 18 * 12 = 216) (h_veranda : 136 = 136) : 
+  (18 + 2*w) * (12 + 2*w) = 352 → w = 2 :=
 by
   sorry
 
-end necessary_but_not_sufficient_condition_l79_79409
+end veranda_width_l79_79043
 
 
-namespace david_english_marks_l79_79367
+namespace permutations_of_banana_l79_79564
 
-theorem david_english_marks :
-  let Mathematics := 45
-  let Physics := 72
-  let Chemistry := 77
-  let Biology := 75
-  let AverageMarks := 68.2
-  let TotalSubjects := 5
-  let TotalMarks := AverageMarks * TotalSubjects
-  let MarksInEnglish := TotalMarks - (Mathematics + Physics + Chemistry + Biology)
-  MarksInEnglish = 72 :=
+theorem permutations_of_banana : (Nat.fac 6) / ((Nat.fac 3) * (Nat.fac 2)) = 60 := 
 by
   sorry
 
-end david_english_marks_l79_79367
+end permutations_of_banana_l79_79564
 
 
-namespace probability_of_sequence_123456_l79_79657
+namespace ratio_of_numbers_l79_79797
 
-theorem probability_of_sequence_123456 :
-  let total_sequences := 66 * 45 * 28 * 15 * 6 * 1     -- Total number of sequences
-  let specific_sequences := 1 * 3 * 5 * 7 * 9 * 11        -- Sequences leading to 123456
-  specific_sequences / total_sequences = 1 / 720 := by
-  let total_sequences := 74919600
-  let specific_sequences := 10395
-  sorry
-
-end probability_of_sequence_123456_l79_79657
-
-
-namespace solution_set_of_f_lt_3x_plus_9_l79_79149
-
-variable (f : ℝ → ℝ)
-
--- Condition: The domain of f(x) is ℝ
--- Condition: f(-2) = 3
-axiom f_neg_two_eq_three : f (-2) = 3
-
--- Condition: For any x ∈ ℝ, f''(x) < 3
-axiom f_double_prim_lt_three (x : ℝ) : f'' x < 3
-
--- We need to prove that the solution set of f(x) < 3x + 9 is x > -2
-theorem solution_set_of_f_lt_3x_plus_9 :
-  {x : ℝ | f x < 3 * x + 9} = {x : ℝ | x > -2} :=
-begin
-  sorry
-end
-
-end solution_set_of_f_lt_3x_plus_9_l79_79149
-
-
-namespace find_f_2017_l79_79431
-
-noncomputable def f (x : ℝ) : ℝ := sorry
-
-theorem find_f_2017 (h_odd : ∀ x : ℝ, f (-x) = -f x)
-  (h_func_eq : ∀ x : ℝ, f (x + 3) * f x = -1)
-  (h_val : f (-1) = 2) :
-  f 2017 = -2 := sorry
-
-end find_f_2017_l79_79431
-
-
-namespace subtract_gcd_from_lcm_l79_79266
-
-def gcd_24_54 : Nat := Nat.gcd 24 54
-def lcm_40_8 : Nat := Nat.lcm 40 8
-
-theorem subtract_gcd_from_lcm : lcm_40_8 - gcd_24_54 = 34 := by
-  -- Definitions and calculations have been moved to conditions
-  have h_gcd: gcd_24_54 = 6 := by sorry
-  have h_lcm: lcm_40_8 = 40 := by sorry
-  rw [h_gcd, h_lcm]
-  norm_num
-
-end subtract_gcd_from_lcm_l79_79266
-
-
-namespace student_ratio_difference_l79_79164
-
-theorem student_ratio_difference (s6 s7 : Nat) (h : 3 * s7 = 4 * s6) :
-  s7 - s6 = 1 → s6 < s7 → s6 has fewer students than s7 by (s7 - s6) * 3 :=
-sorry
-
-end student_ratio_difference_l79_79164
-
-
-namespace part1_part2_l79_79411
-
--- Define the conditions
-def p (x : ℝ) : Prop := -x^2 + 7 * x + 8 ≥ 0
-def q (x m : ℝ) : Prop := x^2 - 2 * x + 1 - 4 * m^2 ≤ 0
-
--- Define the intervals
-def interval_p : set ℝ := {x | -1 ≤ x ∧ x ≤ 8}
-def interval_q (m : ℝ) : set ℝ := {x | 1 - 2 * m ≤ x ∧ x ≤ 1 + 2 * m}
-
--- Part 1: m ≥ 7/2 if p is necessary but not sufficient for q
-theorem part1 (m : ℝ) (h : m > 0) (h_subset : interval_p ⊂ interval_q m) : m ≥ 7 / 2 := sorry
-
--- Part 2: 1 ≤ m ≤ 7/2 if "not p" is necessary but not sufficient for "not q"
-theorem part2 (m : ℝ) (h : 0 < m) (h_subset : interval_q m ⊂ interval_p) : 1 ≤ m ∧ m ≤ 7 / 2 := sorry
-
-end part1_part2_l79_79411
-
-
-namespace triangle_integer_lengths_impossible_l79_79082
-
-noncomputable def isIntegerLength (x : Real) : Prop :=
-  ∃ n : ℤ, x = n
-
-theorem triangle_integer_lengths_impossible
-  {A B C D E I : Type}
-  [MetricSpace A] [MetricSpace B] [MetricSpace C]
-  [MetricSpace D] [MetricSpace E] [MetricSpace I]
-  (AB AC BI ID CI IE : ℝ)
-  (h0 : ∃ α : ℝ, α = ∠A B C ∧ α = π / 2)
-  (h1 : ∃ β : ℝ, β = ∠A B D ∧ β = ∠D B C)
-  (h2 : ∃ γ : ℝ, γ = ∠A C E ∧ γ = ∠E C B)
-  (h3 : BD meets CE at I)
-  (h4 : A B C form_right_triangle_at A) : 
-  ¬(isIntegerLength AB ∧ isIntegerLength AC ∧ isIntegerLength BI ∧ isIntegerLength ID ∧ isIntegerLength CI ∧ isIntegerLength IE) := 
-sorry
-
-end triangle_integer_lengths_impossible_l79_79082
-
-
-namespace find_locus_of_tangent_intersection_l79_79451
-
-noncomputable def locus_of_tangent_intersection (k : ℝ) (h : 3/4 < k ∧ k < 1) : set (ℝ × ℝ) :=
-  {p | ∃ y, p = (2, y) ∧ 2 < y ∧ y < 5/2}
-
-theorem find_locus_of_tangent_intersection :
-  ∀ (k : ℝ), (3/4 < k ∧ k < 1) → (locus_of_tangent_intersection k) = {p : ℝ × ℝ | p.1 = 2 ∧ 2 < p.2 ∧ p.2 < 5/2} :=
-by
-  intros k hk
-  sorry
-
-end find_locus_of_tangent_intersection_l79_79451
-
-
-namespace unique_norm_b_if_angle_is_determined_l79_79547
-
-noncomputable def vector_norm (v : ℝ × ℝ × ℝ) : ℝ :=
-  real.sqrt (v.1 ^ 2 + v.2 ^ 2 + v.3 ^ 2)
-
-noncomputable def vector_dot (v₁ v₂ : ℝ × ℝ × ℝ) : ℝ :=
-  v₁.1 * v₂.1 + v₁.2 * v₂.2 + v₁.3 * v₂.3
-
-def angle_between_vectors (a b : ℝ × ℝ × ℝ) (θ : ℝ) : Prop :=
-  cos θ = vector_dot a b / (vector_norm a * vector_norm b)
-
-theorem unique_norm_b_if_angle_is_determined {a b : ℝ × ℝ × ℝ} (θ : ℝ)
-  (h : ∀ t : ℝ, vector_norm (t • a + b) ≥ 1)
-  (h_angle: angle_between_vectors a b θ) :
-  ∃! b_norm : ℝ, b_norm = vector_norm b :=
-sorry
-
-end unique_norm_b_if_angle_is_determined_l79_79547
-
-
-namespace sequence_formula_l79_79376
-
-def computational_program (m n : ℕ) : ℕ :=
-if m = 1 ∧ n = 1 then 2
-else if m = 1 ∧ n > 1 then (computational_program m (n-1)) + 2
-else 0 -- for the purpose of the statement, this does not need to be exhaustive
-
-def a (n : ℕ) : ℕ := computational_program 1 n
-
-theorem sequence_formula (n : ℕ) (hn : n > 0) : a n = 2 * n :=
-by {
-  -- concise proof: proof will be provided here.
-  intro,
-  sorry
-}
-
-end sequence_formula_l79_79376
-
-
-namespace minimize_transportation_cost_l79_79691
-
--- Define given conditions
-def max_speed : ℝ := 60
-def distance : ℝ := 600
-def proportionality_constant : ℝ := 0.5
-def other_costs_per_hour : ℝ := 1250
-
--- Define the cost function y
-def cost_function (x : ℝ) : ℝ := (750000 / x) + (300 * x)
-
--- Prove that the cost function is minimized at x = 50
-theorem minimize_transportation_cost :
-  ∃ x : ℝ, (0 < x ∧ x ≤ max_speed) ∧ (∀ y : ℝ, (0 < y ∧ y ≤ max_speed) → cost_function x ≤ cost_function y) ∧ x = 50 :=
-sorry
-
-end minimize_transportation_cost_l79_79691
-
-
-namespace distinct_real_roots_of_quadratic_l79_79472
-
-theorem distinct_real_roots_of_quadratic (m : ℝ) :
-  (∃ (x y : ℝ), x ≠ y ∧ x^2 + m * x + 9 = 0 ∧ y^2 + m * y + 9 = 0) ↔ m ∈ Ioo (-∞) (-6) ∪ Ioo 6 (∞) :=
+theorem ratio_of_numbers (x y : ℝ) (h₁ : 0 < y) (h₂ : y < x) (h₃ : x + y = 7 * (x - y)) : x / y = 4 / 3 :=
 by
   sorry
 
-end distinct_real_roots_of_quadratic_l79_79472
+end ratio_of_numbers_l79_79797
 
 
-namespace anna_strawberry_lemonade_earning_l79_79738
+namespace find_prime_pair_l79_79850
+open Int
 
-theorem anna_strawberry_lemonade_earning:
-  (plain_lemonade_price : ℝ) (plain_lemonade_count : ℕ) (extra_earned : ℝ) (strawberry_lemonade_earning : ℝ) 
-  (plain_lemonade_earning := plain_lemonade_price * plain_lemonade_count)
-  (earning_equation : plain_lemonade_earning = strawberry_lemonade_earning + extra_earned)
-  (h1 : plain_lemonade_price = 0.75) 
-  (h2 : plain_lemonade_count = 36)
-  (h3 : extra_earned = 11) :
-  strawberry_lemonade_earning = 16 := 
+theorem find_prime_pair :
+  ∃ (a b : ℕ), a > 0 ∧ b > 0 ∧ a ≠ b ∧ ∃ (p : ℕ), Prime p ∧ p = a * b^2 / (a + b) ∧ (a, b) = (6, 2) := by
+  sorry
+
+end find_prime_pair_l79_79850
+
+
+namespace jason_bought_correct_dozens_l79_79892
+
+-- Given conditions
+def cupcakes_per_cousin : Nat := 3
+def cousins : Nat := 16
+def cupcakes_per_dozen : Nat := 12
+
+-- Calculated value
+def total_cupcakes : Nat := cupcakes_per_cousin * cousins
+def dozens_of_cupcakes_bought : Nat := total_cupcakes / cupcakes_per_dozen
+
+-- Theorem statement
+theorem jason_bought_correct_dozens : dozens_of_cupcakes_bought = 4 := by
+  -- Proof omitted
+  sorry
+
+end jason_bought_correct_dozens_l79_79892
+
+
+namespace exist_points_C_and_D_l79_79110
+
+-- Lean 4 statement of the problem
+theorem exist_points_C_and_D 
+  (S : set (ℝ × ℝ)) -- The circle S
+  (A B : ℝ × ℝ) -- Points A and B on the circle S
+  (α : ℝ) -- The given angle α
+  (hA : A ∈ S) (hB : B ∈ S) -- Conditions: A and B are on the circle S
+  (arc_CD : ℝ) -- The arc length CD equal to given α
+  (hα : 0 < α ∧ α < 2 * π) -- Angle α is within valid range for a circle
+  (hS : ∃ O r, ∀ P, P ∈ S ↔ dist P O = r) : -- Definition of circle S with center O and radius r
+  ∃ C D : ℝ × ℝ, C ∈ S ∧ D ∈ S ∧ -- Points C and D are on the circle S
+    arc_CD = α ∧ -- The arc length CD is α
+    (C.1 = D.1 ∧ A.2 = B.2) := -- CA is parallel to DB (evaluated here simply with Cartesian coordinates)
+
+sorry -- Proof to be filled in
+
+end exist_points_C_and_D_l79_79110
+
+
+namespace Sam_memorized_more_digits_l79_79783
+
+variable (MinaDigits SamDigits CarlosDigits : ℕ)
+variable (h1 : MinaDigits = 6 * CarlosDigits)
+variable (h2 : MinaDigits = 24)
+variable (h3 : SamDigits = 10)
+ 
+theorem Sam_memorized_more_digits :
+  SamDigits - CarlosDigits = 6 :=
+by
+  -- Let's unfold the statements and perform basic arithmetic.
+  sorry
+
+end Sam_memorized_more_digits_l79_79783
+
+
+namespace prove_sum_eq_9_l79_79258
+
+theorem prove_sum_eq_9 (a b : ℝ) (h : i * (a - i) = b - (2 * i) ^ 3) : a + b = 9 :=
 by
   sorry
 
-end anna_strawberry_lemonade_earning_l79_79738
+end prove_sum_eq_9_l79_79258
 
 
-namespace radius_ratio_l79_79315
+namespace new_total_lifting_capacity_is_correct_l79_79146
 
-noncomputable def volume_large_sphere (r_L : ℝ) : ℝ := (4 / 3) * π * r_L^3
-noncomputable def volume_small_sphere (V_L : ℝ) : ℝ := 0.20 * V_L
+-- Define the initial lifting capacities and improvements
+def initial_clean_and_jerk : ℕ := 80
+def initial_snatch : ℕ := 50
+def clean_and_jerk_multiplier : ℕ := 2
+def snatch_increment_percentage : ℕ := 80
 
-theorem radius_ratio (r_L r_S V_L V_S : ℝ) (h1 : volume_large_sphere r_L = 675 * π)
-  (h2 : V_S = volume_small_sphere 675 * π):
-  r_S / r_L = 1 / (5)^(1/3) :=
+-- Calculated values
+def new_clean_and_jerk := initial_clean_and_jerk * clean_and_jerk_multiplier
+def snatch_increment := initial_snatch * snatch_increment_percentage / 100
+def new_snatch := initial_snatch + snatch_increment
+def new_total_lifting_capacity := new_clean_and_jerk + new_snatch
+
+-- Theorem statement to be proven
+theorem new_total_lifting_capacity_is_correct :
+  new_total_lifting_capacity = 250 := 
 sorry
 
-end radius_ratio_l79_79315
+end new_total_lifting_capacity_is_correct_l79_79146
 
 
-namespace verification_l79_79424
+namespace hyperbola_eccentricity_l79_79581
 
-noncomputable def z1 : ℂ := 2 + I
-noncomputable def z2 : ℂ := 1 - 2 * I
-
-theorem verification : (conj z2 ≠ z1) ∧ (abs z1 = abs z2) ∧ (z1 * z2 = 4 - 3 * I) ∧ (im (z2 / z1) ≠ 0 ∧ re (z2 / z1) = 0) :=
+theorem hyperbola_eccentricity
+  (a b : ℝ) (ha : 0 < a) (hb : 0 < b)
+  (h_hyperbola : ∀ x y, x^2 / a^2 - y^2 / b^2 = 1)
+  (h_asymptotes_intersect : ∃ A B : ℝ × ℝ, A ≠ B ∧ A.1 = -1 ∧ B.1 = -1 ∧
+    ∀ (A B : ℝ × ℝ), ∃ x y : ℝ, (A.2 = y ∧ B.2 = y ∧ x^2 / a^2 - y^2 / b^2 = 1))
+  (triangle_area : ∃ A B : ℝ × ℝ, 1 / 2 * abs (A.1 * B.2 - A.2 * B.1) = 2 * Real.sqrt 3) :
+  ∃ e : ℝ, e = Real.sqrt 13 :=
 by {
   sorry
 }
 
-end verification_l79_79424
+end hyperbola_eccentricity_l79_79581
 
 
-namespace polygon_coloring_10_vertices_l79_79226
+namespace smallest_number_l79_79694
 
--- Define the initial conditions and recurrence relations as part of the setup
-def a_1 := 2
-def a_2 := 3
-
-noncomputable def a : ℕ → ℕ :=
-  λ n,
-    if n = 1 then a_1
-    else if n = 2 then a_2
-    else a (n - 1) + a (n - 3) + a (n - 4)
-
--- Main theorem statement
-theorem polygon_coloring_10_vertices : a 10 = 123 :=
-by
-  sorry
-
-end polygon_coloring_10_vertices_l79_79226
-
-
-namespace total_pages_book_l79_79070
-
--- Define the conditions
-def reading_speed1 : ℕ := 10 -- pages per day for first half
-def reading_speed2 : ℕ := 5 -- pages per day for second half
-def total_days : ℕ := 75 -- total days spent reading
-
--- This is the main theorem we seek to prove:
-theorem total_pages_book (P : ℕ) 
-  (h1 : ∃ D1 D2 : ℕ, D1 + D2 = total_days ∧ D1 * reading_speed1 = P / 2 ∧ D2 * reading_speed2 = P / 2) : 
-  P = 500 :=
-by
-  sorry
-
-end total_pages_book_l79_79070
-
-
-namespace speed_of_man_in_still_water_l79_79318
-
-theorem speed_of_man_in_still_water (V_m V_c : ℝ) :
-  (72 / 4 = V_m + V_c) → (36 / 6 = V_m - V_c) → V_m = 12 :=
-by
-  intro h1 h2
-  have h3 : 18 = V_m + V_c := h1
-  have h4 : 6 = V_m - V_c := h2
-  have h5 : (V_m + V_c) + (V_m - V_c) = 24 := by linarith
-  have h6 : 2 * V_m = 24 := by linarith
-  have h7 : V_m = 12 := by linarith
-  exact h7
-
-end speed_of_man_in_still_water_l79_79318
-
-
-namespace find_m_l79_79064
-
-theorem find_m
-  (m : ℝ)
-  (A B : ℝ × ℝ × ℝ)
-  (hA : A = (m, 2, 3))
-  (hB : B = (1, -1, 1))
-  (h_dist : (Real.sqrt ((m - 1) ^ 2 + (2 - (-1)) ^ 2 + (3 - 1) ^ 2) = Real.sqrt 13)) :
-  m = 1 := 
+theorem smallest_number (n : ℕ) :
+  (n % 3 = 1) ∧
+  (n % 5 = 3) ∧
+  (n % 6 = 4) →
+  n = 28 :=
 sorry
 
-end find_m_l79_79064
+end smallest_number_l79_79694
 
 
-namespace length_of_plot_l79_79157
+namespace tangent_line_at_e_range_of_a_l79_79266
 
--- Definitions of the given conditions, along with the question.
-def breadth (b : ℝ) : Prop := 2 * (b + 32) + 2 * b = 5300 / 26.50
-def length (b : ℝ) := b + 32
+noncomputable def f (a x : ℝ) : ℝ := (a - 1) * x^2 + 2 * Real.log x
+noncomputable def g (a x : ℝ) : ℝ := f a x - 2 * a * x
 
-theorem length_of_plot (b : ℝ) (h : breadth b) : length b = 66 := by 
-  sorry
-
-end length_of_plot_l79_79157
-
-
-namespace distinct_real_roots_interval_l79_79484
-
-open Set Real
-
-theorem distinct_real_roots_interval (m : ℝ) : 
-  (∃ (r1 r2 : ℝ), r1 ≠ r2 ∧ IsRoot (λ x => x^2 + m * x + 9) r1 ∧ IsRoot (λ x => x^2 + m * x + 9) r2) ↔ 
-  m ∈ Iio (-6) ∪ Ioi 6 :=
+theorem tangent_line_at_e (a : ℝ) :
+  a = 0 →
+  ∃ m b : ℝ, (∀ x, y = m * x + b) ∧ 
+             y = (2 / Real.exp 1 - 2 * Real.exp 1) * x + (Real.exp 1)^2 := 
 sorry
-
-end distinct_real_roots_interval_l79_79484
-
-
-namespace inscribed_rectangle_area_l79_79148
-
-variables (b h x : ℝ)
-
-theorem inscribed_rectangle_area (hb : 0 < b) (hh : 0 < h) (hx : 0 < x) (hx_lt_h : x < h) :
-  let area := (b * x * (h - x)) / h in
-  area = (b * x * (h - x)) / h := 
-sorry
-
-end inscribed_rectangle_area_l79_79148
-
-
-namespace angles_of_smaller_triangles_l79_79508
-
-/-- 
-In a triangle, the angles A, B, and C are known. Prove that the angles of the six smaller triangles 
-formed by the bisectors of the angles of the original triangle are as follows:
-- the angles are 1/2 * A, 1/2 * A + 1/2 * C, B + 1/2 * C, and others derived similarly.
--/
-theorem angles_of_smaller_triangles (A B C : ℝ) (triangle : triangle_property A B C) :
-  (angles_of_smaller_triangles A B C) = { (1/2 * A), (1/2 * A + 1/2 * C), (B + 1/2 * C), ... } :=
-sorry
-
-end angles_of_smaller_triangles_l79_79508
-
-
-namespace find_b_in_terms_of_y_l79_79408
-
-variables {a b y : ℝ}
-
-theorem find_b_in_terms_of_y
-  (h1 : a ≠ b)
-  (h2 : a^3 - b^3 = 25 * y^3)
-  (h3 : a - b = y) :
-  b = -((1 - real.sqrt 33) / 2) * y ∨ b = -((1 + real.sqrt 33) / 2) * y :=
-sorry
-
-end find_b_in_terms_of_y_l79_79408
-
-
-namespace trig_function_value_l79_79433
-
-theorem trig_function_value
-  (x y : ℝ) (r : ℝ) (α : ℝ)
-  (hx : x = -4 / 5)
-  (hy : y = 3 / 5)
-  (hr : r = 1)
-  (cos_α : cos α = x / r)
-  (sin_α : sin α = y / r) :
-  2 * sin α + cos α = 2 / 5 :=
-by sorry
-
-end trig_function_value_l79_79433
-
-
-namespace max_consecutive_integers_sum_l79_79251
-
-theorem max_consecutive_integers_sum (S_n : ℕ → ℕ) : (∀ n, S_n n = n * (n + 1) / 2) → ∀ n, (S_n n < 1000 ↔ n ≤ 44) :=
-by
-  intros H n
-  split
-  · intro H1
-    have H2 : n * (n + 1) < 2000 := by
-      rw [H n] at H1
-      exact H1
-    sorry
-  · intro H1
-    have H2 : n ≤ 44 := H1
-    have H3 : n * (n + 1) < 2000 := by
-      sorry
-    have H4 : S_n n < 1000 := by
-      rw [H n]
-      exact H3
-    exact H4
-
-end max_consecutive_integers_sum_l79_79251
-
-
-namespace alicia_masks_collection_l79_79328
-
-theorem alicia_masks_collection
-  (initial_masks : ℕ)
-  (donated_guggenheim : ℕ)
-  (donated_metropolitan : ℕ)
-  (damaged_sets : ℕ)
-  (donated_louvre : ℕ)
-  (donated_british : ℕ)
-  (remaining_masks_after_all_visits : ℕ)
-  (h1 : initial_masks = 500)
-  (h2 : donated_guggenheim = 51)
-  (h3 : donated_metropolitan = 2 * donated_guggenheim)
-  (h4 : damaged_sets = 20)
-  (h5 : donated_louvre = (initial_masks - donated_guggenheim - donated_metropolitan - damaged_sets) / 2)
-  (h6 : donated_british = 2 * (initial_masks - donated_guggenheim - donated_metropolitan - damaged_sets - donated_louvre) / 3)
-  : remaining_masks_after_all_visits = 55 :=
-begin
-  -- Definitions based on given conditions
-  let initial := 500,
-  let guggenheim_donation := 51,
-  let met_donation := 2 * guggenheim_donation,
-  let damaged := 20,
-  let louvre_donation := (initial - guggenheim_donation - met_donation - damaged) / 2,
-  let british_donation := 2 * (initial - guggenheim_donation - met_donation - damaged - louvre_donation) / 3,
-  let remaining_masks := initial - guggenheim_donation - met_donation - damaged - louvre_donation - british_donation,
-  
-  -- Using the provided conditions
-  have h_initial : initial = initial_masks, from h1,
-  have h_guggenheim : guggenheim_donation = donated_guggenheim, from h2,
-  have h_met : met_donation = donated_metropolitan, from h3,
-  have h_damaged : damaged = damaged_sets, from h4,
-  have h_louvre : louvre_donation = donated_louvre, from h5,
-  have h_british : british_donation = donated_british, from h6,
-  
-  -- Conclusion based on given conditions
-  show remaining_masks_after_all_visits = remaining_masks,
-  from calc remaining_masks_after_all_visits = 55 : sorry
-end
-
-end alicia_masks_collection_l79_79328
-
-
-namespace rectangle_PS_greatest_integer_lt_173_l79_79512
-
-theorem rectangle_PS_greatest_integer_lt_173
-  (PQRS : Type)
-  [rectangle PQRS]
-  (P Q R S T : PQRS)
-  (h1 : PQ = 150)
-  (h2 : midpoint T P S)
-  (h3 : PT ⊥ QR) :
-  ∃ PS : ℝ, PS = sqrt 30000 ∧ greatest_integer_lt PS = 173 :=
-sorry
-
-end rectangle_PS_greatest_integer_lt_173_l79_79512
-
-
-namespace fixed_point_of_line_l79_79000
-
-theorem fixed_point_of_line (m : ℝ) : ∃ x y : ℝ, (y - 2 = m * x + m) ∧ (x = -1) ∧ (y = 2) :=
-by {
-  existsi -1,
-  existsi 2,
-  split, apply eq.refl, split; sorry
-}
-
-end fixed_point_of_line_l79_79000
-
-
-namespace geometric_series_common_ratio_l79_79184
-
-theorem geometric_series_common_ratio (a r : ℝ) (h : a / (1 - r) = 64 * (a * r^4 / (1 - r))) : r = 1/2 :=
-by {
-  sorry
-}
-
-end geometric_series_common_ratio_l79_79184
-
-
-namespace range_of_a_l79_79039
 
 theorem range_of_a (a : ℝ) :
-  (∀ x : ℕ, 0 < x ∧ 3*x + a ≤ 2 → x = 1 ∨ x = 2) ↔ (-7 < a ∧ a ≤ -4) :=
+  (∀ x, x ∈ Set.Ioi 1 → g a x < 0) →
+  a ∈ Set.Icc (-1) 1 :=
 sorry
 
-end range_of_a_l79_79039
+end tangent_line_at_e_range_of_a_l79_79266
 
 
-namespace cosine_of_angle_in_third_quadrant_l79_79031
+namespace string_length_l79_79069
 
-theorem cosine_of_angle_in_third_quadrant (B : ℝ) (hB : B ∈ Set.Ioo (π : ℝ) (3 * π / 2)) (hSinB : Real.sin B = -5 / 13) :
-  Real.cos B = -12 / 13 :=
-sorry
-
-end cosine_of_angle_in_third_quadrant_l79_79031
-
-
-namespace geometric_series_common_ratio_l79_79173
-
-theorem geometric_series_common_ratio (a r S : ℝ) (h₁ : S = a / (1 - r)) (h₂ : ar^4 / (1 - r) = S / 64) : r = 1 / 2 :=
-  by
+theorem string_length (cylinder_circumference : ℝ)
+  (total_loops : ℕ) (post_height : ℝ)
+  (height_per_loop : ℝ := post_height / total_loops)
+  (hypotenuse_per_loop : ℝ := Real.sqrt (height_per_loop ^ 2 + cylinder_circumference ^ 2))
+  : total_loops = 5 → cylinder_circumference = 4 → post_height = 15 → hypotenuse_per_loop * total_loops = 25 :=
+by 
+  intros h1 h2 h3
   sorry
 
-end geometric_series_common_ratio_l79_79173
+end string_length_l79_79069
 
 
-namespace number_of_integer_pairs_satisfying_conditions_l79_79359
+namespace equation_solutions_l79_79187
 
-noncomputable def count_integer_pairs (n m : ℕ) : ℕ := Nat.choose (n-1) (m-1)
+theorem equation_solutions (x : ℝ) : x * (2 * x + 1) = 2 * x + 1 ↔ x = -1 / 2 ∨ x = 1 :=
+by
+  sorry
 
-theorem number_of_integer_pairs_satisfying_conditions :
-  ∃ (a b c x y : ℕ), a + b + c = 55 ∧ a + b + c + x + y = 71 ∧ x + y > a + b + c → count_integer_pairs 55 3 * count_integer_pairs 16 2 = 21465 := sorry
-
-end number_of_integer_pairs_satisfying_conditions_l79_79359
+end equation_solutions_l79_79187
 
 
-namespace total_price_of_books_l79_79298
+namespace permutations_of_banana_l79_79566
+
+theorem permutations_of_banana : (Nat.fac 6) / ((Nat.fac 3) * (Nat.fac 2)) = 60 := 
+by
+  sorry
+
+end permutations_of_banana_l79_79566
+
+
+namespace det_A_eq_l79_79840
+
+open Matrix
+
+def A (x : ℝ) : Matrix (Fin 3) (Fin 3) ℝ :=
+  ![![1, -3, 3],
+    ![x, 5, -1],
+    ![4, -2, 1]]
+
+theorem det_A_eq (x : ℝ) : det (A x) = -3 * x - 45 :=
+by sorry
+
+end det_A_eq_l79_79840
+
+
+namespace Gina_tip_is_5_percent_l79_79722
+
+noncomputable def Gina_tip_percentage : ℝ := 5
+
+theorem Gina_tip_is_5_percent (bill_amount : ℝ) (good_tipper_percentage : ℝ)
+    (good_tipper_extra_tip_cents : ℝ) (good_tipper_tip : ℝ) 
+    (Gina_tip_extra_cents : ℝ):
+    bill_amount = 26 ∧
+    good_tipper_percentage = 20 ∧
+    Gina_tip_extra_cents = 390 ∧
+    good_tipper_tip = (20 / 100) * 26 ∧
+    Gina_tip_extra_cents = 390 ∧
+    (Gina_tip_percentage / 100) * bill_amount + (Gina_tip_extra_cents / 100) = good_tipper_tip
+    → Gina_tip_percentage = 5 :=
+by
+  sorry
+
+end Gina_tip_is_5_percent_l79_79722
+
+
+namespace BANANA_arrangements_l79_79520
+
+theorem BANANA_arrangements : 
+  (Nat.factorial 6) / ((Nat.factorial 3) * (Nat.factorial 2)) = 60 := by 
+  sorry
+
+end BANANA_arrangements_l79_79520
+
+
+namespace find_values_l79_79711
+
+theorem find_values (h t u : ℕ) 
+  (h0 : u = h - 5) 
+  (h1 : (h * 100 + t * 10 + u) - (h * 100 + u * 10 + t) = 96)
+  (hu : h < 10 ∧ t < 10 ∧ u < 10) :
+  h = 5 ∧ t = 9 ∧ u = 0 :=
+by 
+  sorry
+
+end find_values_l79_79711
+
+
+namespace base_conversion_l79_79841
+
+def baseThreeToBaseTen (n : List ℕ) : ℕ :=
+  n.reverse.enumFrom 0 |>.map (λ ⟨i, d⟩ => d * 3^i) |>.sum
+
+def baseTenToBaseFive (n : ℕ) : List ℕ :=
+  let rec aux (n : ℕ) (acc : List ℕ) : List ℕ :=
+    if n = 0 then acc else aux (n / 5) ((n % 5) :: acc)
+  aux n []
+
+theorem base_conversion (baseThreeNum : List ℕ) (baseTenNum : ℕ) (baseFiveNum : List ℕ) :
+  baseThreeNum = [2, 0, 1, 2, 1] →
+  baseTenNum = 178 →
+  baseFiveNum = [1, 2, 0, 3] →
+  baseThreeToBaseTen baseThreeNum = baseTenNum ∧ baseTenToBaseFive baseTenNum = baseFiveNum :=
+by
+  intros h1 h2 h3
+  unfold baseThreeToBaseTen
+  unfold baseTenToBaseFive
+  sorry
+
+end base_conversion_l79_79841
+
+
+namespace hexagon_diagonal_length_is_twice_side_l79_79980
+
+noncomputable def regular_hexagon_side_length : ℝ := 12
+
+def diagonal_length_in_regular_hexagon (s : ℝ) : ℝ :=
+2 * s
+
+theorem hexagon_diagonal_length_is_twice_side :
+  diagonal_length_in_regular_hexagon regular_hexagon_side_length = 2 * regular_hexagon_side_length :=
+by 
+  -- Simplify and check the computation according to the understanding of the properties of the hexagon
+  sorry
+
+end hexagon_diagonal_length_is_twice_side_l79_79980
+
+
+namespace find_real_solutions_l79_79100
+
+theorem find_real_solutions (x : ℝ) : 
+  x^4 + (3 - x)^4 = 130 ↔ x = 1.5 + Real.sqrt 1.5 ∨ x = 1.5 - Real.sqrt 1.5 :=
+sorry
+
+end find_real_solutions_l79_79100
+
+
+namespace books_at_end_l79_79814
 
 -- Define the conditions
-variables (x : ℝ)
+def initialBooks : ℕ := 98
+def checkoutsWednesday : ℕ := 43
+def returnsThursday : ℕ := 23
+def checkoutsThursday : ℕ := 5
+def returnsFriday : ℕ := 7
 
--- The given conditions
-def price_of_discount_card := 20
-def discount_rate := 0.2
-def saved_amount := 12
+-- Define the final number of books and the theorem to prove
+def finalBooks : ℕ := initialBooks - checkoutsWednesday + returnsThursday - checkoutsThursday + returnsFriday
 
--- The equation derived from the conditions
-def equation := price_of_discount_card + (1 - discount_rate) * x = x - saved_amount
-
--- Statement to prove
-theorem total_price_of_books (h : equation x) : x = 160 := 
-sorry
-
-end total_price_of_books_l79_79298
-
-
-namespace Kiera_envelopes_total_l79_79075
-
--- Define variables for different colored envelopes
-def E_b : ℕ := 120
-def E_y : ℕ := E_b - 25
-def E_g : ℕ := 5 * E_y
-def E_r : ℕ := (E_b + E_y) / 2  -- integer division in lean automatically rounds down
-def E_p : ℕ := E_r + 71
-def E_total : ℕ := E_b + E_y + E_g + E_r + E_p
-
--- The statement to be proven
-theorem Kiera_envelopes_total : E_total = 975 := by
-  -- intentionally put the sorry to mark the proof as unfinished
+-- Prove that the final number of books is 80
+theorem books_at_end : finalBooks = 80 := by
   sorry
 
-end Kiera_envelopes_total_l79_79075
+end books_at_end_l79_79814
 
 
-namespace geometric_series_common_ratio_l79_79186
+namespace right_triangle_sides_l79_79569
 
-theorem geometric_series_common_ratio :
-  ∀ (a r : ℝ), (r ≠ 1) → 
-  (∑' n, a * r^n = 64 * ∑' n, a * r^(n+4)) →
-  r = 1 / 2 :=
+theorem right_triangle_sides (p m : ℝ)
+  (hp : 0 < p)
+  (hm : 0 < m) :
+  ∃ a b c : ℝ, 
+    a + b + c = 2 * p ∧
+    a^2 + b^2 = c^2 ∧
+    (1 / 2) * a * b = m^2 ∧
+    c = (p^2 - m^2) / p ∧
+    a = (p^2 + m^2 + Real.sqrt ((p^2 + m^2)^2 - 8 * p^2 * m^2)) / (2 * p) ∧
+    b = (p^2 + m^2 - Real.sqrt ((p^2 + m^2)^2 - 8 * p^2 * m^2)) / (2 * p) := 
 by
-  intros a r hnr heq
-  have hsum1 : ∑' n, a * r^n = a / (1 - r) := sorry
-  have hsum2 : ∑' n, a * r^(n+4) = a * r^4 / (1 - r) := sorry
-  rw [hsum1, hsum2] at heq
-  -- Further steps to derive r = 1/2 are omitted
   sorry
 
-end geometric_series_common_ratio_l79_79186
+end right_triangle_sides_l79_79569
 
 
-namespace max_consecutive_integers_sum_l79_79246
+namespace sin_mul_cos_eq_quarter_l79_79262
 
-theorem max_consecutive_integers_sum (S_n : ℕ → ℕ) : (∀ n, S_n n = n * (n + 1) / 2) → ∀ n, (S_n n < 1000 ↔ n ≤ 44) :=
+open Real
+
+theorem sin_mul_cos_eq_quarter (α : ℝ) (h : sin α - cos α = sqrt 2 / 2) : sin α * cos α = 1 / 4 :=
 by
-  intros H n
-  split
-  · intro H1
-    have H2 : n * (n + 1) < 2000 := by
-      rw [H n] at H1
-      exact H1
-    sorry
-  · intro H1
-    have H2 : n ≤ 44 := H1
-    have H3 : n * (n + 1) < 2000 := by
-      sorry
-    have H4 : S_n n < 1000 := by
-      rw [H n]
-      exact H3
-    exact H4
+  sorry
 
-end max_consecutive_integers_sum_l79_79246
+end sin_mul_cos_eq_quarter_l79_79262
 
 
-namespace rooks_diagonal_move_l79_79936
+namespace number_of_arrangements_of_BANANA_l79_79537
 
-def rook (x y : ℕ) : Prop := x = y
+theorem number_of_arrangements_of_BANANA :
+  let total_letters := 6
+  let count_A := 3
+  let count_N := 2
+  let count_B := 1
+  let factorial := (n : ℕ) => if n = 0 then 1 else n * factorial (n - 1)
+  (factorial total_letters) / ((factorial count_A) * (factorial count_N) * (factorial count_B)) = 60 :=
+by
+  let total_letters := 6
+  let count_A := 3
+  let count_N := 2
+  let count_B := 1
+  let factorial := (n : ℕ) => if n = 0 then 1 else n * factorial (n - 1)
+  have h : (factorial total_letters) / ((factorial count_A) * (factorial count_N) * (factorial count_B)) = 60 := sorry
+  exact h
 
-theorem rooks_diagonal_move (board : fin 8 → fin 8 → Prop)
-        (h : ∀ i j, board i j → ¬ ∃ k, k ≠ j ∧ board i k ∨ k ≠ i ∧ board k j) :
-        ∃ new_board : fin 8 → fin 8 → Prop, 
-        (∀ i j, new_board i j → ¬ ∃ k, k ≠ j ∧ new_board i k ∨ k ≠ i ∧ new_board k j)
-        ∧ (∀ i j, board i j → ∃ di dj, (di = 1 ∨ di = -1) ∧ (dj = 1 ∨ dj = -1) ∧ new_board (i + di) (j + dj)) :=
+end number_of_arrangements_of_BANANA_l79_79537
+
+
+namespace arithmetic_sequence_third_term_l79_79663
+
+theorem arithmetic_sequence_third_term (a d : ℤ) 
+  (h20 : a + 19 * d = 17) (h21 : a + 20 * d = 20) : a + 2 * d = -34 := 
 sorry
 
-end rooks_diagonal_move_l79_79936
+end arithmetic_sequence_third_term_l79_79663
 
 
-namespace total_amount_spent_l79_79309
+namespace exists_n_such_that_an_is_cube_and_bn_is_fifth_power_l79_79381
 
-theorem total_amount_spent {price_food : ℝ} (h1 : price_food = 120)
-                           {tax_rate : ℝ} (h2 : tax_rate = 0.10)
-                           {tip_rate : ℝ} (h3 : tip_rate = 0.20) :
-  let price_tax := price_food * tax_rate,
-      price_incl_tax := price_food + price_tax,
-      tip := price_incl_tax * tip_rate,
-      total := price_incl_tax + tip
-  in total = 158.40 :=
+theorem exists_n_such_that_an_is_cube_and_bn_is_fifth_power
+  (a b : ℕ) (ha : a > 0) (hb : b > 0) :
+  ∃ (n : ℕ), n ≥ 1 ∧ (∃ k : ℤ, a * n = k^3) ∧ (∃ l : ℤ, b * n = l^5) := 
+by
+  sorry
+
+end exists_n_such_that_an_is_cube_and_bn_is_fifth_power_l79_79381
+
+
+namespace union_of_A_B_l79_79583
+
+def A : Set ℝ := {x | |x - 3| < 2}
+def B : Set ℝ := {x | (x + 1) / (x - 2) ≤ 0}
+
+theorem union_of_A_B : A ∪ B = {x | -1 ≤ x ∧ x < 5} :=
+by
+  sorry
+
+end union_of_A_B_l79_79583
+
+
+namespace discount_problem_l79_79316
+
+variable (x : ℝ)
+
+theorem discount_problem :
+  (400 * (1 - x)^2 = 225) :=
+sorry
+
+end discount_problem_l79_79316
+
+
+namespace percentage_x_equals_y_l79_79127
+
+theorem percentage_x_equals_y (x y z : ℝ) (p : ℝ)
+    (h1 : 0.45 * z = 0.39 * y)
+    (h2 : z = 0.65 * x)
+    (h3 : y = (p / 100) * x) : 
+    p = 75 := 
+sorry
+
+end percentage_x_equals_y_l79_79127
+
+
+namespace permutations_of_banana_l79_79568
+
+theorem permutations_of_banana : (Nat.fac 6) / ((Nat.fac 3) * (Nat.fac 2)) = 60 := 
+by
+  sorry
+
+end permutations_of_banana_l79_79568
+
+
+namespace cubed_difference_l79_79603
+
+theorem cubed_difference (x : ℝ) (h : x - 1/x = 3) : (x^3 - 1/x^3 = 36) := 
+by
+  sorry
+
+end cubed_difference_l79_79603
+
+
+namespace excircle_identity_l79_79019
+
+variables (a b c r_a r_b r_c : ℝ)
+
+-- Conditions: r_a, r_b, r_c are the radii of the excircles opposite vertices A, B, and C respectively.
+-- In the triangle ABC, a, b, c are the sides opposite vertices A, B, and C respectively.
+
+theorem excircle_identity:
+  (a^2 / (r_a * (r_b + r_c)) + b^2 / (r_b * (r_c + r_a)) + c^2 / (r_c * (r_a + r_b))) = 2 :=
+by
+  sorry
+
+end excircle_identity_l79_79019
+
+
+namespace total_hike_time_l79_79625
+
+-- Define the conditions
+def distance_to_mount_overlook : ℝ := 12
+def pace_to_mount_overlook : ℝ := 4
+def pace_return : ℝ := 6
+
+-- Prove the total time for the hike
+theorem total_hike_time :
+  (distance_to_mount_overlook / pace_to_mount_overlook) +
+  (distance_to_mount_overlook / pace_return) = 5 := 
+sorry
+
+end total_hike_time_l79_79625
+
+
+namespace number_of_arrangements_of_BANANA_l79_79536
+
+theorem number_of_arrangements_of_BANANA :
+  let total_letters := 6
+  let count_A := 3
+  let count_N := 2
+  let count_B := 1
+  let factorial := (n : ℕ) => if n = 0 then 1 else n * factorial (n - 1)
+  (factorial total_letters) / ((factorial count_A) * (factorial count_N) * (factorial count_B)) = 60 :=
+by
+  let total_letters := 6
+  let count_A := 3
+  let count_N := 2
+  let count_B := 1
+  let factorial := (n : ℕ) => if n = 0 then 1 else n * factorial (n - 1)
+  have h : (factorial total_letters) / ((factorial count_A) * (factorial count_N) * (factorial count_B)) = 60 := sorry
+  exact h
+
+end number_of_arrangements_of_BANANA_l79_79536
+
+
+namespace simplify_expression_l79_79643
+
+theorem simplify_expression :
+  ((45 * 2^10) / (15 * 2^5) * 5) = 480 := by
+  sorry
+
+end simplify_expression_l79_79643
+
+
+namespace total_rainfall_2010_to_2012_l79_79995
+
+noncomputable def average_rainfall (year : ℕ) : ℕ :=
+  if year = 2010 then 35
+  else if year = 2011 then 38
+  else if year = 2012 then 41
+  else 0
+
+theorem total_rainfall_2010_to_2012 :
+  (12 * average_rainfall 2010) + 
+  (12 * average_rainfall 2011) + 
+  (12 * average_rainfall 2012) = 1368 :=
+by
+  sorry
+
+end total_rainfall_2010_to_2012_l79_79995
+
+
+namespace rectangle_vertex_x_coordinate_l79_79050
+
+theorem rectangle_vertex_x_coordinate
+  (x : ℝ)
+  (y1 y2 : ℝ)
+  (slope : ℝ)
+  (h1 : x = 1)
+  (h2 : 9 = 9)
+  (h3 : slope = 0.2)
+  (h4 : y1 = 0)
+  (h5 : y2 = 2)
+  (h6 : ∀ (x : ℝ), (0.2 * x : ℝ) = 1 → x = 1) :
+  x = 1 := 
+by sorry
+
+end rectangle_vertex_x_coordinate_l79_79050
+
+
+namespace amy_work_hours_per_week_l79_79972
+
+/-- Amy works for 40 hours per week for 8 weeks in the summer, making $3200. If she works for 32 weeks during 
+the school year at the same rate of pay and needs to make another $4000, we need to prove that she must 
+work 12.5 hours per week during the school year. -/
+theorem amy_work_hours_per_week
+  (summer_hours_per_week : ℕ)
+  (summer_weeks : ℕ)
+  (summer_money : ℕ)
+  (school_year_weeks : ℕ)
+  (school_year_money_needed : ℕ) :
+  (let hourly_wage := summer_money / (summer_hours_per_week * summer_weeks : ℕ) in
+   let hours_needed := school_year_money_needed / hourly_wage in
+   hours_needed / school_year_weeks = 12.5) :=
+by
+  -- Definitions
+  let summer_hours_per_week := 40
+  let summer_weeks := 8
+  let summer_money := 3200
+  let school_year_weeks := 32
+  let school_year_money_needed := 4000
+  
+  -- Calculations
+  let hourly_wage := summer_money / (summer_hours_per_week * summer_weeks : ℕ)
+  let hours_needed := school_year_money_needed / hourly_wage
+  let hours_per_week := hours_needed / school_year_weeks
+
+  -- Goal
+  show hours_per_week = 12.5
+
+  -- This proof is omitted.
+  sorry
+
+end amy_work_hours_per_week_l79_79972
+
+
+namespace find_x_l79_79605
+
+theorem find_x (x y : ℝ) (hx : 0 < x) (hy : 0 < y) (h : 6 * x^2 + 12 * x * y + 6 * y^2 = x^3 + 3 * x^2 * y + 3 * x * y^2) : x = 24 / 7 :=
+by
+  sorry
+
+end find_x_l79_79605
+
+
+namespace base_8_to_base_10_2671_to_1465_l79_79345
+
+theorem base_8_to_base_10_2671_to_1465 :
+  (2 * 8^3 + 6 * 8^2 + 7 * 8^1 + 1 * 8^0) = 1465 := by
+  sorry
+
+end base_8_to_base_10_2671_to_1465_l79_79345
+
+
+namespace probability_blue_then_yellow_l79_79411
+
+variable (total_chips : ℕ := 15)
+variable (blue_chips : ℕ := 10)
+variable (yellow_chips : ℕ := 5)
+variable (initial_blue_prob : ℚ := blue_chips / total_chips)
+variable (remaining_chips : ℕ := total_chips - 1)
+variable (next_yellow_prob : ℚ := yellow_chips / remaining_chips)
+variable (final_prob : ℚ := initial_blue_prob * next_yellow_prob)
+
+theorem probability_blue_then_yellow :
+  final_prob = 5 / 21 :=
+sorry
+
+end probability_blue_then_yellow_l79_79411
+
+
+namespace determine_b_l79_79845
+
+theorem determine_b (b : ℝ) : (∀ x1 x2 : ℝ, x1^2 - x2^2 = 7 → x1 * x2 = 12 → x1 + x2 = b) → (b = 7 ∨ b = -7) := 
 by {
-  rw [h1, h2, h3],
-  let price_tax := 120 * 0.10,
-  have h4 : price_tax = 12 := by norm_num,
-  let price_incl_tax := 120 + price_tax,
-  have h5 : price_incl_tax = 132 := by {rw h4, norm_num},
-  let tip := price_incl_tax * 0.20,
-  have h6 : tip = 26.40 := by {rw h5, norm_num},
-  let total := price_incl_tax + tip,
-  have h7 : total = 158.40 := by {rw [h5, h6], norm_num},
-  exact h7,
-}
-
-end total_amount_spent_l79_79309
-
-
-namespace total_cost_rental_l79_79563
-
-theorem total_cost_rental :
-  let rental_fee := 20.99
-  let charge_per_mile := 0.25
-  let miles_driven := 299
-  let total_cost := rental_fee + charge_per_mile * miles_driven
-  total_cost = 95.74 := by
-{
+  -- Proof needs to be provided
   sorry
 }
 
-end total_cost_rental_l79_79563
+end determine_b_l79_79845
 
 
-namespace A_3_eq_14_A_n_eq_general_l79_79225
+namespace gcd_m_n_l79_79195
 
-open Finset
-open BigOperators
+def m := 122^2 + 234^2 + 346^2 + 458^2
+def n := 121^2 + 233^2 + 345^2 + 457^2
 
-def norm {n : ℕ} (a : Fin n → ℤ) : ℤ := ∑ i, |a i|
+theorem gcd_m_n : Int.gcd m n = 1 := 
+by sorry
 
-def odd_norm_vectors (n : ℕ) : ℕ :=
-  if n % 2 = 1 then
-    (3^n + 1) / 2
-  else
-    (3^n - 1) / 2
+end gcd_m_n_l79_79195
 
-theorem A_3_eq_14 : odd_norm_vectors 3 = 14 := by
+
+namespace part_time_employees_l79_79074
+
+theorem part_time_employees (total_employees : ℕ) (full_time_employees : ℕ) (part_time_employees : ℕ) 
+  (h1 : total_employees = 65134) 
+  (h2 : full_time_employees = 63093) 
+  (h3 : total_employees = full_time_employees + part_time_employees) : 
+  part_time_employees = 2041 :=
+by 
   sorry
 
-theorem A_n_eq_general (n : ℕ) : odd_norm_vectors n = (3^n - (-1)^n) / 2 := by
-  sorry
-
-end A_3_eq_14_A_n_eq_general_l79_79225
+end part_time_employees_l79_79074
 
 
-namespace union_of_sets_l79_79819
+namespace new_total_lifting_capacity_is_correct_l79_79145
 
-open Set
+-- Define the initial lifting capacities and improvements
+def initial_clean_and_jerk : ℕ := 80
+def initial_snatch : ℕ := 50
+def clean_and_jerk_multiplier : ℕ := 2
+def snatch_increment_percentage : ℕ := 80
 
-theorem union_of_sets (A B : Set ℝ) :
-  (A = { x | x^2 - 4x - 5 = 0 }) → 
-  (B = { x | x^2 - 1 = 0 }) → 
-  A ∪ B = { -1, 1, 5 } :=
+-- Calculated values
+def new_clean_and_jerk := initial_clean_and_jerk * clean_and_jerk_multiplier
+def snatch_increment := initial_snatch * snatch_increment_percentage / 100
+def new_snatch := initial_snatch + snatch_increment
+def new_total_lifting_capacity := new_clean_and_jerk + new_snatch
+
+-- Theorem statement to be proven
+theorem new_total_lifting_capacity_is_correct :
+  new_total_lifting_capacity = 250 := 
+sorry
+
+end new_total_lifting_capacity_is_correct_l79_79145
+
+
+namespace geom_seq_arith_seq_l79_79730
+
+variable (a : ℕ → ℝ) (q : ℝ)
+
+noncomputable def isGeomSeq (a : ℕ → ℝ) (q : ℝ) : Prop :=
+∀ n : ℕ, a (n + 1) = q * a n
+
+theorem geom_seq_arith_seq (h1 : ∀ n, 0 < a n) 
+  (h2 : isGeomSeq a q)
+  (h3 : 2 * (1 / 2 * a 5) = a 3 + a 4)
+  : (a 3 + a 5) / (a 4 + a 6) = (Real.sqrt 5 - 1) / 2 := 
+sorry
+
+end geom_seq_arith_seq_l79_79730
+
+
+namespace prod_quality_related_prob_at_least_one_from_A_l79_79488
+
+noncomputable def chi_square_value (a b c d n : ℝ) : ℝ :=
+  (n * (a * d - b * c) ^ 2) / ( (a + b) * (c + d) * (a + c) * (b + d) )
+
+theorem prod_quality_related (a b c d n k0 : ℝ) (h_k0 : k0 = 2.706)
+  (h_a : a = 40) (h_b : b = 80) (h_c : c = 80) (h_d : d = 100) (h_n : n = 300) :
+  chi_square_value a b c d n ≥ k0 :=
 by
-  intros hA hB
   sorry
 
-end union_of_sets_l79_79819
+theorem prob_at_least_one_from_A :
+  ∃ (A B : ℕ), A = 2 ∧ B = 4 ∧ (choose 6 2) = 15 ∧
+  ((A * B + choose A 2 + choose B 2) : ℝ) / (choose 6 2) = (3 : ℝ) / 5 :=
+by
+  sorry
+
+end prod_quality_related_prob_at_least_one_from_A_l79_79488
 
 
-namespace vitya_probability_l79_79651
+namespace truth_values_l79_79513
 
-theorem vitya_probability :
-  let total_sequences := (finset.range 6).card * 
-                         (finset.range 5).card * 
-                         (finset.range 4).card * 
-                         (finset.range 3).card * 
-                         (finset.range 2).card * 
-                         (finset.range 1).card,
-      favorable_sequences := 1 * 3 * 5 * 7 * 9 * 11,
-      total_possibilities := nat.choose 12 2 * nat.choose 10 2 * 
-                             nat.choose 8 2 * nat.choose 6 2 * 
-                             nat.choose 4 2 * nat.choose 2 2,
-      P := (favorable_sequences : ℚ) / (total_possibilities : ℚ)
-  in P = 1 / 720 := 
+-- Define the region D as a set
+def D (x y : ℝ) : Prop := (x - 1)^2 + (y - 2)^2 ≤ 4
+
+-- Define propositions p and q
+def p : Prop := ∀ x y, D x y → 2 * x + y ≤ 8
+def q : Prop := ∃ x y, D x y ∧ 2 * x + y ≤ -1
+
+-- State the propositions to be proven
+def prop1 : Prop := p ∨ q
+def prop2 : Prop := ¬p ∨ q
+def prop3 : Prop := p ∧ ¬q
+def prop4 : Prop := ¬p ∧ ¬q
+
+-- State the main theorem asserting the truth values of the propositions
+theorem truth_values : ¬prop1 ∧ prop2 ∧ ¬prop3 ∧ prop4 :=
+by
+  sorry
+
+end truth_values_l79_79513
+
+
+namespace twelve_edge_cubes_painted_faces_l79_79962
+
+theorem twelve_edge_cubes_painted_faces :
+  let painted_faces_per_edge_cube := 2
+  let num_edge_cubes := 12
+  painted_faces_per_edge_cube * num_edge_cubes = 24 :=
+by
+  sorry
+
+end twelve_edge_cubes_painted_faces_l79_79962
+
+
+namespace part_a_part_b_part_c_l79_79152
+
+/-
+  Define conditions and property \mathcal{S} in Lean 4
+-/
+def has_property_S (X : Finset ℕ) (p q : ℕ) : Prop :=
+  ∀ (B : Finset (Finset ℕ)), 
+    B.card = p ∧ (∀ b ∈ B, b.card = q) → 
+    ∃ (Y : Finset ℕ),
+    Y.card = p ∧ (∀ b ∈ B, (Y ∩ b).card ≤ 1)
+
+/-
+  Part (a):  
+  Prove that if p = 4 and q = 3, any set X with 9 elements does not satisfy \mathcal{S}
+-/
+theorem part_a : ¬ (has_property_S (Finset.range 9) 4 3) :=
 sorry
 
-end vitya_probability_l79_79651
-
-
-namespace max_consecutive_sum_lt_1000_l79_79239
-
-theorem max_consecutive_sum_lt_1000 : ∃ (n : ℕ), (∀ (m : ℕ), m > n → (m * (m + 1)) / 2 ≥ 1000) ∧ (∀ (k : ℕ), k ≤ n → (k * (k + 1)) / 2 < 1000) :=
-begin
-  sorry,
-end
-
-end max_consecutive_sum_lt_1000_l79_79239
-
-
-namespace find_coefficient_B_l79_79383
-
-theorem find_coefficient_B (A B C D : ℤ) (roots : Fin 6 → ℕ) :
-  (∏ i, (z - ↑(roots i))) = z^6 - 10 * z^5 + A * z^4 + B * z^3 + C * z^2 + D * z + 36 →
-  (∀ i, 0 < roots i) →
-  B = -66 := 
+/-
+  Part (b):  
+  Prove that if p, q ≥ 2, any set X with pq - q elements does not satisfy \mathcal{S}
+-/
+theorem part_b (p q : ℕ) (hp : p ≥ 2) (hq : q ≥ 2) : 
+  ¬ (has_property_S (Finset.range (p * q - q)) p q) :=
 sorry
 
-end find_coefficient_B_l79_79383
+/-
+  Part (c): 
+  Prove that if p, q ≥ 2, any set X with pq - q + 1 elements does satisfy \mathcal{S}
+-/
+theorem part_c (p q : ℕ) (hp : p ≥ 2) (hq : q ≥ 2) : 
+  has_property_S (Finset.range (p * q - q + 1)) p q :=
+sorry
+
+end part_a_part_b_part_c_l79_79152
 
 
-namespace bridge_crossing_time_correct_l79_79627
+namespace third_side_length_is_six_l79_79045
 
-def A_time : ℕ := 2
-def B_time : ℕ := 3
-def C_time : ℕ := 8
-def D_time : ℕ := 10
+-- Defining the lengths of the sides of the triangle
+def side1 : ℕ := 2
+def side2 : ℕ := 6
 
-def total_crossing_time : ℕ :=
-  let AB_cross := max A_time B_time in
-  let A_return := A_time in
-  let CD_cross := max C_time D_time in
-  let B_return := B_time in
-  let AB_cross_again := max A_time B_time in
-  AB_cross + A_return + CD_cross + B_return + AB_cross_again
+-- Defining that the third side is an even number between 4 and 8
+def is_even (x : ℕ) : Prop := x % 2 = 0
+def valid_range (x : ℕ) : Prop := 4 < x ∧ x < 8
 
-theorem bridge_crossing_time_correct : total_crossing_time = 21 :=
-  by
-    unfold total_crossing_time
-    have AB_cross_eq : max A_time B_time = 3 := by rfl
-    have A_return_eq : A_time = 2 := by rfl
-    have CD_cross_eq : max C_time D_time = 10 := by rfl
-    have B_return_eq : B_time = 3 := by rfl
-    have AB_cross_again_eq : max A_time B_time = 3 := by rfl
-    rw [AB_cross_eq, A_return_eq, CD_cross_eq, B_return_eq, AB_cross_again_eq]
-    rfl
+-- Stating the theorem
+theorem third_side_length_is_six (x : ℕ) (h1 : is_even x) (h2 : valid_range x) : x = 6 :=
+by
+  sorry
 
-end bridge_crossing_time_correct_l79_79627
+end third_side_length_is_six_l79_79045
 
 
-namespace cos_48_conjecture_l79_79356
+namespace cistern_length_is_correct_l79_79960
 
-noncomputable def cos_24 := Real.cos (24 * Real.pi / 180)
-noncomputable def cos_6 := Real.cos (6 * Real.pi / 180)
+-- Definitions for the conditions mentioned in the problem
+def cistern_width : ℝ := 6
+def water_depth : ℝ := 1.25
+def wet_surface_area : ℝ := 83
 
-theorem cos_48_conjecture :
-  let c := cos_24,
-      d := Real.cos (48 * Real.pi / 180),
-      e := cos_6 in
-  d = 2 * c^2 - 1 ∧
-  -e = 2 * d^2 - 1 ∧
-  -e = 4 * c^3 - 3 * c →
-  d = Real.cos (48 * Real.pi / 180) :=
+-- The length of the cistern to be proven
+def cistern_length : ℝ := 8
+
+-- Theorem statement that length of the cistern must be 8 meters given the conditions
+theorem cistern_length_is_correct :
+  ∃ (L : ℝ), (wet_surface_area = (L * cistern_width) + (2 * L * water_depth) + (2 * cistern_width * water_depth)) ∧ L = cistern_length :=
+  sorry
+
+end cistern_length_is_correct_l79_79960
+
+
+namespace sphere_surface_area_l79_79889
+
+variable (x y z : ℝ)
+
+theorem sphere_surface_area :
+  (x^2 + y^2 + z^2 = 1) → (4 * Real.pi) = 4 * Real.pi :=
+by
+  intro h
+  -- The proof will be inserted here
+  sorry
+
+end sphere_surface_area_l79_79889
+
+
+namespace distance_between_stations_is_correct_l79_79474
+
+noncomputable def distance_between_stations : ℕ := 200
+
+theorem distance_between_stations_is_correct 
+  (start_hour_p : ℕ := 7) 
+  (speed_p : ℕ := 20) 
+  (start_hour_q : ℕ := 8) 
+  (speed_q : ℕ := 25) 
+  (meeting_hour : ℕ := 12)
+  (time_travel_p := meeting_hour - start_hour_p) -- Time traveled by train from P
+  (time_travel_q := meeting_hour - start_hour_q) -- Time traveled by train from Q 
+  (distance_travel_p := speed_p * time_travel_p) 
+  (distance_travel_q := speed_q * time_travel_q) : 
+  distance_travel_p + distance_travel_q = distance_between_stations :=
+by 
+  sorry
+
+end distance_between_stations_is_correct_l79_79474
+
+
+namespace chromium_atoms_in_compound_l79_79066
+
+-- Definitions of given conditions
+def hydrogen_atoms : Nat := 2
+def oxygen_atoms : Nat := 4
+def compound_molecular_weight : ℝ := 118
+def hydrogen_atomic_weight : ℝ := 1
+def chromium_atomic_weight : ℝ := 52
+def oxygen_atomic_weight : ℝ := 16
+
+-- Problem statement to find the number of Chromium atoms
+theorem chromium_atoms_in_compound (hydrogen_atoms : Nat) (oxygen_atoms : Nat) (compound_molecular_weight : ℝ)
+    (hydrogen_atomic_weight : ℝ) (chromium_atomic_weight : ℝ) (oxygen_atomic_weight : ℝ) :
+  hydrogen_atoms * hydrogen_atomic_weight + 
+  oxygen_atoms * oxygen_atomic_weight + 
+  chromium_atomic_weight = compound_molecular_weight → 
+  chromium_atomic_weight = 52 :=
+by
+  sorry
+
+end chromium_atoms_in_compound_l79_79066
+
+
+namespace average_salary_proof_l79_79446
+
+noncomputable def average_salary_of_all_workers (tech_workers : ℕ) (tech_avg_sal : ℕ) (total_workers : ℕ) (non_tech_avg_sal : ℕ) : ℕ :=
+  let non_tech_workers := total_workers - tech_workers
+  let total_tech_salary := tech_workers * tech_avg_sal
+  let total_non_tech_salary := non_tech_workers * non_tech_avg_sal
+  let total_salary := total_tech_salary + total_non_tech_salary
+  total_salary / total_workers
+
+theorem average_salary_proof : average_salary_of_all_workers 7 14000 28 6000 = 8000 := by
+  sorry
+
+end average_salary_proof_l79_79446
+
+
+namespace tangent_line_at_P_minimized_distance_point_Q_l79_79596
+
+noncomputable def f (x : ℝ) : ℝ := Real.log x - 2
+
+def P : ℝ × ℝ := (1, -2)
+
+def line_l (x y : ℝ) : Prop := x - 2 * y + 3 = 0
+
+theorem tangent_line_at_P :
+  let f' := deriv f 1 in
+  f' = 1 → (∀ x y : ℝ, y + 2 = x - 1 → x - y - 3 = 0) :=
+by
+  intros f' hf' x y h_tangent
+  sorry
+
+theorem minimized_distance_point_Q :
+  ∃ x : ℝ, x = 2 ∧ (∀ y : ℝ, y = Real.log 2 - 2 → let Q := (x, y) in 
+  ∀ d : ℝ, d = (abs (Q.1 - 2 * Real.log Q.1 + 7)) / (Real.sqrt 5) → 
+  (∀ h : ℝ, h ≠ d → h > d)) :=
+by
+  intros
+  use [2, Real.log 2 - 2]
+  sorry
+
+end tangent_line_at_P_minimized_distance_point_Q_l79_79596
+
+
+namespace initial_fee_l79_79142
+
+theorem initial_fee (initial_fee : ℝ) : 
+  (∀ (distance_charge_per_segment travel_total_charge : ℝ), 
+    distance_charge_per_segment = 0.35 → 
+    3.6 / 0.4 * distance_charge_per_segment + initial_fee = travel_total_charge → 
+    travel_total_charge = 5.20)
+    → initial_fee = 2.05 :=
+by
+  intro h
+  specialize h 0.35 5.20
+  sorry
+
+end initial_fee_l79_79142
+
+
+namespace common_factor_of_polynomial_l79_79927
+
+variables (x y m n : ℝ)
+
+theorem common_factor_of_polynomial :
+  ∃ (k : ℝ), (2 * (m - n)) = k ∧ (4 * x * (m - n) + 2 * y * (m - n)^2) = k * (2 * x * (m - n)) :=
+sorry
+
+end common_factor_of_polynomial_l79_79927
+
+
+namespace pencils_cost_l79_79062
+
+theorem pencils_cost (A B : ℕ) (C D : ℕ) (r : ℚ) : 
+    A * 20 = 3200 → B * 20 = 960 → (A / B = 3200 / 960) → (A = 160) → (B = 48) → (C = 3200) → (D = 960) → 160 * 960 / 48 = 3200 :=
+by
+sorry
+
+end pencils_cost_l79_79062
+
+
+namespace sum_of_numbers_eq_answer_l79_79318
+
+open Real
+
+noncomputable def sum_of_numbers (x y : ℝ) : ℝ := x + y
+
+theorem sum_of_numbers_eq_answer (x y : ℝ) (h1 : x > 0) (h2 : y > 0) (h3 : x * y = 16) (h4 : (1 / x) = 3 * (1 / y)) :
+  sum_of_numbers x y = 16 * Real.sqrt 3 / 3 := 
+sorry
+
+end sum_of_numbers_eq_answer_l79_79318
+
+
+namespace total_snakes_in_park_l79_79468
+
+theorem total_snakes_in_park :
+  ∀ (pythons boa_constrictors rattlesnakes total_snakes : ℕ),
+    boa_constrictors = 40 →
+    pythons = 3 * boa_constrictors →
+    rattlesnakes = 40 →
+    total_snakes = boa_constrictors + pythons + rattlesnakes →
+    total_snakes = 200 :=
+by
+  intros pythons boa_constrictors rattlesnakes total_snakes h1 h2 h3 h4
+  rw [h1, h3] at h4
+  rw [h2] at h4
+  sorry
+
+end total_snakes_in_park_l79_79468
+
+
+namespace solve_for_x_l79_79877
+
+theorem solve_for_x (x : ℝ) (h : 144 / 0.144 = x / 0.0144) : x = 14.4 :=
+by
+  sorry
+
+end solve_for_x_l79_79877
+
+
+namespace integer_triangle_600_integer_triangle_144_l79_79574
+
+-- Problem Part I
+theorem integer_triangle_600 :
+  ∃ (a b c : ℕ), a * b * c = 600 ∧ a + b > c ∧ b + c > a ∧ c + a > b ∧ a + b + c = 26 :=
+by {
+  sorry
+}
+
+-- Problem Part II
+theorem integer_triangle_144 :
+  ∃ (a b c : ℕ), a * b * c = 144 ∧ a + b > c ∧ b + c > a ∧ c + a > b ∧ a + b + c = 16 :=
+by {
+  sorry
+}
+
+end integer_triangle_600_integer_triangle_144_l79_79574
+
+
+namespace Mary_chewing_gums_count_l79_79314
+
+variable (Mary_gums Sam_gums Sue_gums : ℕ)
+
+-- Define the given conditions
+axiom Sam_chewing_gums : Sam_gums = 10
+axiom Sue_chewing_gums : Sue_gums = 15
+axiom Total_chewing_gums : Mary_gums + Sam_gums + Sue_gums = 30
+
+theorem Mary_chewing_gums_count : Mary_gums = 5 := by
+  sorry
+
+end Mary_chewing_gums_count_l79_79314
+
+
+namespace correct_relative_pronoun_used_l79_79124
+
+theorem correct_relative_pronoun_used (option : String) :
+  (option = "where") ↔
+  "Giving is a universal opportunity " ++ option ++ " regardless of your age, profession, religion, and background, you have the capacity to create change." =
+  "Giving is a universal opportunity where regardless of your age, profession, religion, and background, you have the capacity to create change." :=
+by
+  sorry
+
+end correct_relative_pronoun_used_l79_79124
+
+
+namespace ratio_of_solving_linear_equations_to_algebra_problems_l79_79166
+
+theorem ratio_of_solving_linear_equations_to_algebra_problems:
+  let total_problems := 140
+  let algebra_percentage := 0.40
+  let solving_linear_equations := 28
+  let total_algebra_problems := algebra_percentage * total_problems
+  let ratio := solving_linear_equations / total_algebra_problems
+  ratio = 1 / 2 := by
+  sorry
+
+end ratio_of_solving_linear_equations_to_algebra_problems_l79_79166
+
+
+namespace least_whole_number_clock_equiv_l79_79163
+
+theorem least_whole_number_clock_equiv (h : ℕ) (h_gt_10 : h > 10) : 
+  ∃ k, k = 12 ∧ (h^2 - h) % 12 = 0 ∧ h = 12 :=
+by 
+  sorry
+
+end least_whole_number_clock_equiv_l79_79163
+
+
+namespace ratio_of_numbers_l79_79798
+
+theorem ratio_of_numbers (x y : ℝ) (h₁ : 0 < y) (h₂ : y < x) (h₃ : x + y = 7 * (x - y)) : x / y = 4 / 3 :=
+by
+  sorry
+
+end ratio_of_numbers_l79_79798
+
+
+namespace function_f_not_all_less_than_half_l79_79640
+
+theorem function_f_not_all_less_than_half (p q : ℝ) (f : ℝ → ℝ) (h1 : ∀ x : ℝ, f x = x^2 + p*x + q) :
+  ¬ (|f 1| < 1 / 2 ∧ |f 2| < 1 / 2 ∧ |f 3| < 1 / 2) :=
+sorry
+
+end function_f_not_all_less_than_half_l79_79640
+
+
+namespace gcd_of_1230_and_920_is_10_l79_79046
+
+theorem gcd_of_1230_and_920_is_10 : Int.gcd 1230 920 = 10 :=
+sorry
+
+end gcd_of_1230_and_920_is_10_l79_79046
+
+
+namespace range_of_m_l79_79880
+
+theorem range_of_m (m : ℝ) : 
+  (∀ x : ℤ, (x > 3 - m) ∧ (x ≤ 5) ↔ (1 ≤ x ∧ x ≤ 5)) →
+  (2 < m ∧ m ≤ 3) := 
+by
+  sorry
+
+end range_of_m_l79_79880
+
+
+namespace fire_alarms_and_passengers_discrete_l79_79211
+
+-- Definitions of the random variables
+def xi₁ : ℕ := sorry  -- number of fire alarms in a city within one day
+def xi₂ : ℝ := sorry  -- temperature in a city within one day
+def xi₃ : ℕ := sorry  -- number of passengers at a train station in a city within a month
+
+-- Defining the concept of discrete random variable
+def is_discrete (X : Type) : Prop := 
+  ∃ f : X → ℕ, ∀ x : X, ∃ n : ℕ, f x = n
+
+-- Statement of the proof problem
+theorem fire_alarms_and_passengers_discrete :
+  is_discrete ℕ ∧ is_discrete ℕ ∧ ¬ is_discrete ℝ :=
+by
+  have xi₁_discrete : is_discrete ℕ := sorry
+  have xi₃_discrete : is_discrete ℕ := sorry
+  have xi₂_not_discrete : ¬ is_discrete ℝ := sorry
+  exact ⟨xi₁_discrete, xi₃_discrete, xi₂_not_discrete⟩
+
+end fire_alarms_and_passengers_discrete_l79_79211
+
+
+namespace find_angle_FYD_l79_79619
+
+variable {Point : Type}
+variables (A B C D X Y : Point)
+variables (E F G : Point)
+variables [Euclidean ⟨_,⟨A, B, C, by sorry⟩⟩]
+
+-- Conditions
+variable (h_parallel : parallel (line_through A B) (line_through C D))
+variable (h_angle_AXF : angle A X F = 130)
+variable (h_isosceles_XFG : is_isosceles_triangle X F G)
+variable (h_angle_FXG : angle F X G = 36)
+
+-- Question to prove
+theorem find_angle_FYD : angle F Y D = 50 :=
+by
+  sorry
+
+end find_angle_FYD_l79_79619
+
+
+namespace initial_volume_of_mixture_l79_79073
+
+theorem initial_volume_of_mixture (V : ℝ) :
+  let V_new := V + 8
+  let initial_water := 0.20 * V
+  let new_water := initial_water + 8
+  let new_mixture := V_new
+  new_water = 0.25 * new_mixture →
+  V = 120 :=
 by
   intro h
   sorry
 
-end cos_48_conjecture_l79_79356
+end initial_volume_of_mixture_l79_79073
 
 
-namespace cosine_of_F_in_right_triangle_l79_79887
+namespace find_sum_of_extrema_l79_79160
 
-noncomputable def DE := 8
-noncomputable def EF := 17
-noncomputable def DF := Real.sqrt (EF^2 - DE^2)
-noncomputable def cosF := DF / EF
+open Real
 
-theorem cosine_of_F_in_right_triangle :
-  ∠ D = 90 → DF = 15 → cosF = 15 / 17 :=
-by 
+noncomputable def f (x : ℝ) : ℝ := (x - 2)^2 * sin (x - 2) + 3
+
+def f_max (f : ℝ → ℝ) (a b : ℝ) : ℝ := Sup (set.image f (set.Icc a b))
+def f_min (f : ℝ → ℝ) (a b : ℝ) : ℝ := Inf (set.image f (set.Icc a b))
+
+theorem find_sum_of_extrema : 
+  let M := f_max f (-1) 5 in
+  let m := f_min f (-1) 5 in
+  M + m = 6 :=
+begin
+  sorry
+end
+
+end find_sum_of_extrema_l79_79160
+
+
+namespace largest_fraction_proof_l79_79729
+
+theorem largest_fraction_proof 
+  (w x y z : ℕ)
+  (hw : 0 < w)
+  (hx : w < x)
+  (hy : x < y)
+  (hz : y < z)
+  (w_eq : w = 1)
+  (x_eq : x = y - 1)
+  (z_eq : z = y + 1)
+  (y_eq : y = x!) : 
+  (max (max (w + z) (w + x)) (max (x + z) (max (x + y) (y + z))) = 5 / 3) := 
+sorry
+
+end largest_fraction_proof_l79_79729
+
+
+namespace required_points_exist_l79_79768
+
+noncomputable def S := {p : ℝ × ℝ | (0 ≤ p.1 ∧ p.1 ≤ 100) ∧ (0 ≤ p.2 ∧ p.2 ≤ 100)}
+
+structure point_line {n : ℕ} :=
+  (points : Fin n → ℝ × ℝ)
+  (non_self_intersecting : ∀ i j : Fin n, i ≠ j → points i ≠ points j)
+  (inside_square : ∀ i : Fin n, points i ∈ S)
+
+def dist (p q : ℝ × ℝ) : ℝ := Real.sqrt ((p.1 - q.1) ^ 2 + (p.2 - q.2) ^ 2)
+
+def path_length {n : ℕ} (L : point_line {n}) (i j : Fin n) : ℝ :=
+  if h : i < j then
+    (Finset.Ico i j).val.map ((dist_on_curve L.points) ∘ (λ k, (k, Nat.succ k))).sum
+  else
+    (Finset.Ico j i).val.map ((dist_on_curve L.points) ∘ (λ k, (k, Nat.succ k))).sum
+
+theorem required_points_exist (L : point_line {n})
+  (boundary_cond : ∀ P ∈ @boundary_points ℝ 2 S, ∃ Q ∈ L.points, dist P Q ≤ 1/2) :
+  ∃ (X Y : Fin n), dist (L.points X) (L.points Y) ≤ 1 ∧ path_length L X Y ≥ 198 :=
+begin
+  sorry
+end
+
+end required_points_exist_l79_79768
+
+
+namespace value_of_expression_l79_79673
+
+theorem value_of_expression : (180^2 - 150^2) / 30 = 330 := by
   sorry
 
-end cosine_of_F_in_right_triangle_l79_79887
+end value_of_expression_l79_79673
 
 
-namespace geom_series_converges_arith_geom_series_converges_telescoping_series_one_telescoping_series_one_fourth_harmonic_series_diverges_l79_79791
+namespace elena_total_pens_l79_79985
 
-noncomputable def geom_series_sum (a : ℝ) (ha : |a| < 1) : ℝ :=
-  1 / (1 - a)
+theorem elena_total_pens 
+  (cost_X : ℝ) (cost_Y : ℝ) (total_spent : ℝ) (num_brand_X : ℕ) (num_brand_Y : ℕ) (total_pens : ℕ)
+  (h1 : cost_X = 4.0) 
+  (h2 : cost_Y = 2.8) 
+  (h3 : total_spent = 40.0) 
+  (h4 : num_brand_X = 8) 
+  (h5 : total_pens = num_brand_X + num_brand_Y) 
+  (h6 : total_spent = num_brand_X * cost_X + num_brand_Y * cost_Y) :
+  total_pens = 10 :=
+sorry
 
-theorem geom_series_converges (a : ℝ) (ha : |a| < 1) :
-  ∑' n : ℕ, a^n = geom_series_sum a ha := sorry
-
-noncomputable def arith_geom_series_sum (a : ℝ) (ha : |a| < 1) : ℝ :=
-  a / (1 - a)^2
-
-theorem arith_geom_series_converges (a : ℝ) (ha : |a| < 1) :
-  ∑' n : ℕ, (n + 1) * a^(n + 1) = arith_geom_series_sum a ha := sorry
-
-theorem telescoping_series_one :
-  ∑' n : ℕ, 1 / ((n + 1) * (n + 2)) = 1 := sorry
-
-theorem telescoping_series_one_fourth :
-  ∑' n : ℕ, 1 / ((n + 1) * (n + 2) * (n + 3)) = 1 / 4 := sorry
-
-theorem harmonic_series_diverges :
-  ¬ summable (λ n : ℕ, 1 / (n + 1)) := sorry
-
-end geom_series_converges_arith_geom_series_converges_telescoping_series_one_telescoping_series_one_fourth_harmonic_series_diverges_l79_79791
+end elena_total_pens_l79_79985
 
 
-namespace xy_value_l79_79961
+namespace average_salary_l79_79448
 
-theorem xy_value (x y : ℝ) (h : x ≠ y) (h_eq : x^2 + 2 / x^2 = y^2 + 2 / y^2) : 
-  x * y = Real.sqrt 2 ∨ x * y = -Real.sqrt 2 :=
+theorem average_salary
+  (num_technicians : ℕ) (avg_salary_technicians : ℝ)
+  (num_other_workers : ℕ) (avg_salary_other_workers : ℝ)
+  (total_num_workers : ℕ) (avg_salary_all_workers : ℝ) :
+  num_technicians = 7 →
+  avg_salary_technicians = 14000 →
+  num_other_workers = total_num_workers - num_technicians →
+  avg_salary_other_workers = 6000 →
+  total_num_workers = 28 →
+  avg_salary_all_workers = (num_technicians * avg_salary_technicians + num_other_workers * avg_salary_other_workers) / total_num_workers →
+  avg_salary_all_workers = 8000 :=
+by
+  intros h1 h2 h3 h4 h5 h6
+  sorry
+
+end average_salary_l79_79448
+
+
+namespace find_angle_l79_79358
+
+-- Given definitions:
+def complement (α : ℝ) : ℝ := 90 - α
+def supplement (α : ℝ) : ℝ := 180 - α
+
+-- Condition:
+def condition (α : ℝ) : Prop :=
+  supplement α = 3 * complement α + 10
+
+-- Statement to prove:
+theorem find_angle (α : ℝ) (h : condition α) : α = 50 :=
+sorry
+
+end find_angle_l79_79358
+
+
+namespace number_of_men_in_third_group_l79_79821
+
+theorem number_of_men_in_third_group (m w : ℝ) (x : ℕ) :
+  3 * m + 8 * w = 6 * m + 2 * w →
+  x * m + 5 * w = 0.9285714285714286 * (6 * m + 2 * w) →
+  x = 4 :=
+by
+  intros h₁ h₂
+  sorry
+
+end number_of_men_in_third_group_l79_79821
+
+
+namespace percentage_of_l_equals_150_percent_k_l79_79742
+
+section
+
+variables (j k l m : ℝ) (x : ℝ)
+
+-- Given conditions
+axiom cond1 : 1.25 * j = 0.25 * k
+axiom cond2 : 1.50 * k = x / 100 * l
+axiom cond3 : 1.75 * l = 0.75 * m
+axiom cond4 : 0.20 * m = 7.00 * j
+
+-- Proof statement
+theorem percentage_of_l_equals_150_percent_k : x = 50 :=
+sorry
+
+end
+
+end percentage_of_l_equals_150_percent_k_l79_79742
+
+
+namespace union_of_A_and_B_l79_79586
+
+def setA : Set ℝ := { x : ℝ | abs (x - 3) < 2 }
+def setB : Set ℝ := { x : ℝ | (x + 1) / (x - 2) ≤ 0 }
+
+theorem union_of_A_and_B : setA ∪ setB = { x : ℝ | -1 ≤ x ∧ x < 5 } :=
 by
   sorry
 
-end xy_value_l79_79961
+end union_of_A_and_B_l79_79586
 
 
-namespace distinct_real_roots_of_quadratic_l79_79479
+namespace find_some_number_l79_79805
 
--- Define the problem's condition: m is a real number and the discriminant of x^2 + mx + 9 > 0
-def discriminant_positive (m : ℝ) := m^2 - 36 > 0
+def simplify_expr (x : ℚ) : Prop :=
+  1 / 2 + ((2 / 3 * (3 / 8)) + x) - (8 / 16) = 4.25
 
-theorem distinct_real_roots_of_quadratic (m : ℝ) (h : discriminant_positive m) :
-  m ∈ Iio (-6) ∪ Ioi (6) :=
-sorry
-
-end distinct_real_roots_of_quadratic_l79_79479
-
-
-namespace square_diagonal_l79_79712
-
-theorem square_diagonal (P : ℝ) (d : ℝ) (hP : P = 200 * Real.sqrt 2) :
-  d = 100 :=
+theorem find_some_number :
+  ∃ x : ℚ, simplify_expr x ∧ x = 4 :=
 by
   sorry
 
-end square_diagonal_l79_79712
+end find_some_number_l79_79805
 
 
-namespace problem1_problem2_problem3_l79_79932
+namespace average_height_l79_79654
 
-variable {A : Type*} [Fintype A]
+theorem average_height (avg1 avg2 : ℕ) (n1 n2 : ℕ) (total_students : ℕ)
+  (h1 : avg1 = 20) (h2 : avg2 = 20) (h3 : n1 = 20) (h4 : n2 = 11) (h5 : total_students = 31) :
+  (n1 * avg1 + n2 * avg2) / total_students = 20 :=
+by
+  -- Placeholder for the proof
+  sorry
 
-def binary_subset (A : Finset A) (M : Finset A) : Prop :=
-  M ⊆ A ∧ M.card = 2
-  
-def P (A : Finset A) (m : ℕ) : Prop :=
-  ∀ (A1 A2 ... Am : Finset A), P_if (A1 ⊆ A) (A2 ⊆ A) ... (Am ⊆ A) ∧
-  (∀ i j, i ≠ j → A1 ≠ A2) → 
-  (∃ B, B ⊆ A ∧ B.card = m ∧ ∀ i, 1 ≤ i ∧ i ≤ m → (B ∩ A_i).card ≤ 1)
-  
--- For n = 3, at least one possible value of m is 2
-theorem problem1 (A : Finset ℕ) (hA : A = {1, 2, 3}) : P A 2 := 
+end average_height_l79_79654
+
+
+namespace difference_is_correct_l79_79325
+
+-- Definition of the given numbers
+def numbers : List ℕ := [44, 16, 2, 77, 241]
+
+-- Define the sum of the numbers
+def sum_numbers := numbers.sum
+
+-- Define the average of the numbers
+def average := sum_numbers / numbers.length
+
+-- Define the difference between sum and average
+def difference := sum_numbers - average
+
+-- The theorem we need to prove
+theorem difference_is_correct : difference = 304 := by
+  sorry
+
+end difference_is_correct_l79_79325
+
+
+namespace bianca_total_drawing_time_l79_79975
+
+def total_drawing_time (a b : ℕ) : ℕ := a + b
+
+theorem bianca_total_drawing_time :
+  let a := 22
+  let b := 19
+  total_drawing_time a b = 41 :=
+by
+  sorry
+
+end bianca_total_drawing_time_l79_79975
+
+
+namespace find_M_l79_79321
+
+theorem find_M (a b c M : ℚ) 
+  (h1 : a + b + c = 100)
+  (h2 : a - 10 = M)
+  (h3 : b + 10 = M)
+  (h4 : 10 * c = M) : 
+  M = 1000 / 21 :=
 sorry
 
--- For n = 6, A does not have the property P(4)
-theorem problem2 (A : Finset ℕ) (hA : A = {1, 2, 3, 4, 5, 6}) : ¬ P A 4 :=
-sorry
-
--- If A has the property P(2023), then the minimum value of n is 4045
-theorem problem3 (A : Finset ℕ) (hP : P A 2023) : A.card ≥ 4045 :=
-sorry
-
-end problem1_problem2_problem3_l79_79932
+end find_M_l79_79321
 
 
-namespace magnitude_add_three_b_l79_79820
+namespace range_of_x_minus_cos_y_l79_79132
 
-noncomputable def vec_mag_add_to_be_proven (a b : ℝ × ℝ) (ha : a.1 ^ 2 + a.2 ^ 2 = 1) (hb : b.1 ^ 2 + b.2 ^ 2 = 1) 
-(θ : ℝ) (hθ : θ = real.pi / 3) : real :=
-real.sqrt ((a.1 + 3 * b.1) ^ 2 + (a.2 + 3 * b.2) ^ 2)
+theorem range_of_x_minus_cos_y {x y : ℝ} (h : x^2 + 2 * Real.cos y = 1) :
+  ∃ (a b : ℝ), ∀ z, z = x - Real.cos y → a ≤ z ∧ z ≤ b ∧ a = -1 ∧ b = 1 + Real.sqrt 3 :=
+by
+  sorry
 
-theorem magnitude_add_three_b (a b : ℝ × ℝ) (ha : a.1 ^ 2 + a.2 ^ 2 = 1) (hb : b.1 ^ 2 + b.2 ^ 2 = 1) 
-(θ : ℝ) (hθ : θ = real.pi / 3) :
-  vec_mag_add_to_be_proven a b ha hb θ hθ = 13 :=
-sorry
-
-end magnitude_add_three_b_l79_79820
+end range_of_x_minus_cos_y_l79_79132
 
 
-namespace general_solution_differential_inequality_l79_79613
+namespace triangle_side_length_difference_l79_79613
 
-variable (p q g : ℝ → ℝ)
-variable (eintp : ℝ → ℝ) -- represents e^(∫ p(x) dx)
+theorem triangle_side_length_difference (a b c : ℕ) (hb : b = 8) (hc : c = 3)
+  (h1 : a + b > c) (h2 : a + c > b) (h3 : b + c > a) :
+  let min_a := 6
+  let max_a := 10
+  max_a - min_a = 4 :=
+by {
+  sorry
+}
 
-axiom eintp_def : ∀ x, eintp x = exp (∫ t in 0..x, p t)
-axiom zero_le_g : ∀ x, 0 ≤ g x
+end triangle_side_length_difference_l79_79613
 
-theorem general_solution_differential_inequality :
-  (∀ x, (differential (λ y : ℝ → ℝ, y x) x + p x * (λ y : ℝ → ℝ, y x) x) ≥ q x) →
-  (∀ x, ∃ c : ℝ → ℝ, (λ y : ℝ → ℝ, y x) = eintp x * (∫ t in 0..x, q t * eintp t dx + ∫ t in 0..x, g t dx)) :=
+
+namespace find_c1_minus_c2_l79_79129
+
+theorem find_c1_minus_c2 (c1 c2 : ℝ) (h1 : 2 * 3 + 3 * 5 = c1) (h2 : 5 = c2) : c1 - c2 = 16 := by
+  sorry
+
+end find_c1_minus_c2_l79_79129
+
+
+namespace painters_work_days_l79_79282
+
+theorem painters_work_days 
+  (six_painters_days : ℝ) (number_six_painters : ℝ) (total_work_units : ℝ)
+  (number_four_painters : ℝ) 
+  (h1 : number_six_painters = 6)
+  (h2 : six_painters_days = 1.4)
+  (h3 : total_work_units = number_six_painters * six_painters_days) 
+  (h4 : number_four_painters = 4) :
+  2 + 1 / 10 = total_work_units / number_four_painters :=
+by
+  rw [h3, h1, h2, h4]
+  sorry
+
+end painters_work_days_l79_79282
+
+
+namespace theresa_needs_15_hours_l79_79192
+
+theorem theresa_needs_15_hours 
+  (h1 : ℕ) (h2 : ℕ) (h3 : ℕ) (h4 : ℕ) (h5 : ℕ) (average : ℕ) (weeks : ℕ) (total_hours_first_5 : ℕ) :
+  h1 = 10 → h2 = 13 → h3 = 9 → h4 = 14 → h5 = 11 → average = 12 → weeks = 6 → 
+  total_hours_first_5 = h1 + h2 + h3 + h4 + h5 → 
+  (total_hours_first_5 + x) / weeks = average → x = 15 :=
+by
+  intros h1_eq h2_eq h3_eq h4_eq h5_eq avg_eq weeks_eq sum_eq avg_eqn
+  sorry
+
+end theresa_needs_15_hours_l79_79192
+
+
+namespace distance_center_to_line_circle_l79_79279
+
+noncomputable def circle_center : ℝ × ℝ := (2, Real.pi / 2)
+
+noncomputable def distance_from_center_to_line (radius : ℝ) (center : ℝ × ℝ) : ℝ :=
+  radius * Real.sin (center.snd - Real.pi / 3)
+
+theorem distance_center_to_line_circle : distance_from_center_to_line 2 circle_center = 1 := by
+  sorry
+
+end distance_center_to_line_circle_l79_79279
+
+
+namespace arrangement_with_one_ball_per_box_arrangement_with_one_empty_box_l79_79106
+
+-- Definition of the first proof problem
+theorem arrangement_with_one_ball_per_box:
+  ∃ n : ℕ, n = 24 ∧ 
+    -- Number of ways to arrange 4 different balls in 4 boxes such that each box has exactly one ball
+    n = Nat.factorial 4 :=
+by sorry
+
+-- Definition of the second proof problem
+theorem arrangement_with_one_empty_box:
+  ∃ n : ℕ, n = 144 ∧ 
+    -- Number of ways to arrange 4 different balls in 4 boxes such that exactly one box is empty
+    n = Nat.choose 4 2 * Nat.factorial 3 :=
+by sorry
+
+end arrangement_with_one_ball_per_box_arrangement_with_one_empty_box_l79_79106
+
+
+namespace compression_strength_value_l79_79135
+
+def compression_strength (T H : ℕ) : ℚ :=
+  (15 * T^5) / (H^3)
+
+theorem compression_strength_value : 
+  compression_strength 3 6 = 55 / 13 := by
+  sorry
+
+end compression_strength_value_l79_79135
+
+
+namespace fraction_is_five_over_nine_l79_79606
+
+theorem fraction_is_five_over_nine (f k t : ℝ) (h1 : t = f * (k - 32)) (h2 : t = 50) (h3 : k = 122) : f = 5 / 9 :=
+by
+  sorry
+
+end fraction_is_five_over_nine_l79_79606
+
+
+namespace find_x_in_sequence_l79_79756
+
+theorem find_x_in_sequence :
+  ∃ x : ℕ, x = 32 ∧
+    2 + 3 = 5 ∧
+    5 + 6 = 11 ∧
+    11 + 9 = 20 ∧
+    20 + (9 + 3) = x ∧
+    x + (9 + 3 + 3) = 47 :=
+by
+  sorry
+
+end find_x_in_sequence_l79_79756
+
+
+namespace cody_tickets_l79_79234
+
+theorem cody_tickets (initial_tickets : ℕ) (spent_tickets : ℕ) (won_tickets : ℕ) : 
+  initial_tickets = 49 ∧ spent_tickets = 25 ∧ won_tickets = 6 → 
+  initial_tickets - spent_tickets + won_tickets = 30 :=
+by sorry
+
+end cody_tickets_l79_79234
+
+
+namespace fraction_decomposition_l79_79311
+
+theorem fraction_decomposition :
+  ∀ (A B : ℚ), (∀ x : ℚ, x ≠ -2 → x ≠ 4/3 → 
+  (7 * x - 15) / ((3 * x - 4) * (x + 2)) = A / (x + 2) + B / (3 * x - 4)) →
+  A = 29 / 10 ∧ B = -17 / 10 :=
+by
+  sorry
+
+end fraction_decomposition_l79_79311
+
+
+namespace fraction_a_over_b_l79_79710
+
+theorem fraction_a_over_b (x y a b : ℝ) (hb : b ≠ 0) (h1 : 4 * x - 2 * y = a) (h2 : 9 * y - 18 * x = b) :
+  a / b = -2 / 9 :=
+by
+  sorry
+
+end fraction_a_over_b_l79_79710
+
+
+namespace mountain_bike_cost_l79_79148
+
+theorem mountain_bike_cost (savings : ℕ) (lawns : ℕ) (lawn_rate : ℕ) (newspapers : ℕ) (paper_rate : ℕ) (dogs : ℕ) (dog_rate : ℕ) (remaining : ℕ) (total_earned : ℕ) (total_before_purchase : ℕ) (cost : ℕ) : 
+  savings = 1500 ∧ lawns = 20 ∧ lawn_rate = 20 ∧ newspapers = 600 ∧ paper_rate = 40 ∧ dogs = 24 ∧ dog_rate = 15 ∧ remaining = 155 ∧ 
+  total_earned = (lawns * lawn_rate) + (newspapers * paper_rate / 100) + (dogs * dog_rate) ∧
+  total_before_purchase = savings + total_earned ∧
+  cost = total_before_purchase - remaining →
+  cost = 2345 := by
+  sorry
+
+end mountain_bike_cost_l79_79148
+
+
+namespace planted_fraction_l79_79718
+
+theorem planted_fraction (length width radius : ℝ) (h_field : length * width = 24)
+  (h_circle : π * radius^2 = π) : (24 - π) / 24 = (24 - π) / 24 :=
+by
+  -- all proofs are skipped
+  sorry
+
+end planted_fraction_l79_79718
+
+
+namespace glycerin_percentage_proof_l79_79226
+
+-- Conditions given in problem
+def original_percentage : ℝ := 0.90
+def original_volume : ℝ := 4
+def added_volume : ℝ := 0.8
+
+-- Total glycerin in original solution
+def glycerin_amount : ℝ := original_percentage * original_volume
+
+-- Total volume after adding water
+def new_volume : ℝ := original_volume + added_volume
+
+-- Desired percentage proof statement
+theorem glycerin_percentage_proof : 
+  (glycerin_amount / new_volume) * 100 = 75 := 
+by
+  sorry
+
+end glycerin_percentage_proof_l79_79226
+
+
+namespace desktops_to_sell_l79_79746
+
+theorem desktops_to_sell (laptops desktops : ℕ) (ratio_laptops desktops_sold laptops_expected : ℕ) :
+  ratio_laptops = 5 → desktops_sold = 3 → laptops_expected = 40 → 
+  desktops = (desktops_sold * laptops_expected) / ratio_laptops :=
+by
+  intros h1 h2 h3
+  rw [h1, h2, h3]
+  simp
+  sorry -- This is where the proof would go, but it's not needed for this task
+
+end desktops_to_sell_l79_79746
+
+
+namespace three_exp_eq_l79_79592
+
+theorem three_exp_eq (y : ℕ) (h : 3^y + 3^y + 3^y = 2187) : y = 6 :=
+by
+  sorry
+
+end three_exp_eq_l79_79592
+
+
+namespace sheilas_family_contribution_l79_79913
+
+theorem sheilas_family_contribution :
+  let initial_amount := 3000
+  let monthly_savings := 276
+  let duration_years := 4
+  let total_after_duration := 23248
+  let months_in_year := 12
+  let total_months := duration_years * months_in_year
+  let savings_over_duration := monthly_savings * total_months
+  let sheilas_total_savings := initial_amount + savings_over_duration
+  let family_contribution := total_after_duration - sheilas_total_savings
+  family_contribution = 7000 :=
+by
+  sorry
+
+end sheilas_family_contribution_l79_79913
+
+
+namespace number_of_educated_employees_l79_79749
+
+-- Define the context and input values
+variable (T: ℕ) (I: ℕ := 20) (decrease_illiterate: ℕ := 15) (total_decrease_illiterate: ℕ := I * decrease_illiterate) (average_salary_decrease: ℕ := 10)
+
+-- The theorem statement
+theorem number_of_educated_employees (h1: total_decrease_illiterate / T = average_salary_decrease) (h2: T = I + 10): L = 10 := by
+  sorry
+
+end number_of_educated_employees_l79_79749
+
+
+namespace num_integers_between_sqrt_range_l79_79460
+
+theorem num_integers_between_sqrt_range :
+  {x : ℕ | 5 > Real.sqrt x ∧ Real.sqrt x > 3}.card = 15 :=
+by sorry
+
+end num_integers_between_sqrt_range_l79_79460
+
+
+namespace sequence_sum_l79_79726
+
+theorem sequence_sum (a : ℕ → ℕ) (S : ℕ → ℕ) (n : ℕ) 
+  (H_n_def : H_n = (a 1 + (2:ℕ) * a 2 + (2:ℕ) ^ (n - 1) * a n) / n)
+  (H_n_val : H_n = 2^n) :
+  S n = n * (n + 3) / 2 :=
+by
+  sorry
+
+end sequence_sum_l79_79726
+
+
+namespace ralph_squares_count_l79_79573
+
+def total_matchsticks := 50
+def elvis_square_sticks := 4
+def ralph_square_sticks := 8
+def elvis_squares := 5
+def leftover_sticks := 6
+
+theorem ralph_squares_count : 
+  ∃ R : ℕ, 
+  (elvis_squares * elvis_square_sticks) + (R * ralph_square_sticks) + leftover_sticks = total_matchsticks ∧ R = 3 :=
 by 
   sorry
 
-end general_solution_differential_inequality_l79_79613
+end ralph_squares_count_l79_79573
 
 
-namespace ratio_of_hexagon_areas_l79_79537
+namespace total_hike_time_l79_79624
 
--- Introduce definitions for regular hexagons and centers of equilateral triangles
-structure RegularHexagon (P : Type*) :=
-  (vertices : Fin 6 → P)
-  (side_length : ℝ)
-  (side_lengths_eq : ∀ i j, dist (vertices i) (vertices (i + 1) % 6) = dist (vertices j) (vertices (j + 1) % 6))
+-- Define the conditions
+def distance_to_mount_overlook : ℝ := 12
+def pace_to_mount_overlook : ℝ := 4
+def pace_return : ℝ := 6
 
-structure EquilateralTriangleCenters (P : Type*) :=
-  (centers : Fin 6 → P)
-
--- Assume we have a regular hexagon ABCD with vertices A B C D E F
-variables {P : Type*} [MetricSpace P]
-
-def is_centers_of_equilateral_triangles_constructed (hex : RegularHexagon P) (centers : EquilateralTriangleCenters P) : Prop :=
-  ∀ i, dist (hex.vertices i) (centers.centers i) = dist (hex.vertices (i + 1) % 6) (centers.centers i)
-  
-theorem ratio_of_hexagon_areas (hex : RegularHexagon P)
-  (centers : EquilateralTriangleCenters P)
-  (h : is_centers_of_equilateral_triangles_constructed hex centers) :
-  ∃ ratio : ℝ, ratio = (4 / 3) ∧
-    (3 * sqrt 3 / 2) * (hex.side_length ^ 2) * (6 * (sqrt 3 / 6 / (hex.side_length / 2))^2) = 
-    (3 * sqrt 3 / 2) * ( hex.side_length ^ 2 * 4 / 3) :=
+-- Prove the total time for the hike
+theorem total_hike_time :
+  (distance_to_mount_overlook / pace_to_mount_overlook) +
+  (distance_to_mount_overlook / pace_return) = 5 := 
 sorry
 
-end ratio_of_hexagon_areas_l79_79537
+end total_hike_time_l79_79624
 
 
-namespace max_consecutive_integers_lt_1000_l79_79253
+namespace xy_value_l79_79276
 
-theorem max_consecutive_integers_lt_1000 : 
-  ∃ n : ℕ, (n * (n + 1)) / 2 < 1000 ∧ ∀ m : ℕ, m > n → (m * (m + 1)) / 2 ≥ 1000 :=
+noncomputable def x (y : ℝ) : ℝ := 36 * y
+
+theorem xy_value (y : ℝ) (h1 : y = 0.16666666666666666) : x y * y = 1 :=
+by
+  rw [h1, x]
+  sorry
+
+end xy_value_l79_79276
+
+
+namespace suzy_final_books_l79_79808
+
+def initial_books : ℕ := 98
+def wednesday_checkouts : ℕ := 43
+def thursday_returns : ℕ := 23
+def thursday_checkouts : ℕ := 5
+def friday_returns : ℕ := 7
+
+theorem suzy_final_books :
+  initial_books - wednesday_checkouts
+  + thursday_returns - thursday_checkouts
+  + friday_returns = 80 := by
 sorry
 
-end max_consecutive_integers_lt_1000_l79_79253
+end suzy_final_books_l79_79808
 
 
-namespace diagonal_length_proof_l79_79983
+namespace GregsAgeIs16_l79_79978
 
-noncomputable def rectangle_diagonal_length
-    (P : ℝ) (ratio : (ℝ × ℝ)) (hP : P = 60) (hRatio : ratio = (5, 4)) : ℝ :=
-    let l := 5 * (P / 18)
-    let w := 4 * (P / 18)
-    real.sqrt (l ^ 2 + w ^ 2)
+def CindyAge := 5
+def JanAge := CindyAge + 2
+def MarciaAge := 2 * JanAge
+def GregAge := MarciaAge + 2
 
-theorem diagonal_length_proof :
-    rectangle_diagonal_length 60 (5, 4) (by norm_num) (by norm_num) = 10 * real.sqrt 41 / 3 :=
+theorem GregsAgeIs16 : GregAge = 16 := by
+  sorry
+
+end GregsAgeIs16_l79_79978
+
+
+namespace intersection_M_N_eq_l79_79158
+
+def M : Set ℝ := {x | (x + 3) * (x - 2) < 0}
+def N : Set ℝ := {x | 1 ≤ x ∧ x ≤ 3}
+
+theorem intersection_M_N_eq : M ∩ N = {x | 1 ≤ x ∧ x < 2} := by
+  sorry
+
+end intersection_M_N_eq_l79_79158
+
+
+namespace work_days_together_l79_79684
+
+theorem work_days_together (A_rate B_rate : ℚ) (h1 : A_rate = 1 / 12) (h2 : B_rate = 5 / 36) : 
+  1 / (A_rate + B_rate) = 4.5 := by
+  sorry
+
+end work_days_together_l79_79684
+
+
+namespace find_angle_B_find_max_k_l79_79277
+
+theorem find_angle_B
+(A B C a b c : ℝ)
+(h_angles : A + B + C = Real.pi)
+(h_sides : (2 * a - c) * Real.cos B = b * Real.cos C)
+(h_A_pos : 0 < A) (h_B_pos : 0 < B) (h_C_pos : 0 < C) 
+(h_Alt_pos : A < Real.pi) (h_Blt_pos : B < Real.pi) 
+(h_Clt_pos : C < Real.pi) :
+B = Real.pi / 3 := 
+sorry
+
+theorem find_max_k
+(A : ℝ)
+(k : ℝ)
+(m : ℝ × ℝ := (Real.sin A, Real.cos (2 * A)))
+(n : ℝ × ℝ := (4 * k, 1))
+(h_k_cond : 1 < k)
+(h_max_dot : (m.1) * (n.1) + (m.2) * (n.2) = 5) :
+k = 3 / 2 :=
+sorry
+
+end find_angle_B_find_max_k_l79_79277
+
+
+namespace speed_of_truck_l79_79222
+
+theorem speed_of_truck
+  (v : ℝ)                         -- Let \( v \) be the speed of the truck.
+  (car_speed : ℝ := 55)           -- Car speed is 55 mph.
+  (start_delay : ℝ := 1)          -- Truck starts 1 hour later.
+  (catchup_time : ℝ := 6.5)       -- Truck takes 6.5 hours to pass the car.
+  (additional_distance_car : ℝ := car_speed * catchup_time)  -- Additional distance covered by the car in 6.5 hours.
+  (total_distance_truck : ℝ := car_speed * start_delay + additional_distance_car)  -- Total distance truck must cover to pass the car.
+  (truck_distance_eq : v * catchup_time = total_distance_truck)  -- Distance equation for the truck.
+  : v = 63.46 :=                -- Prove the truck's speed is 63.46 mph.
+by
+  -- Original problem solution confirms truck's speed as 63.46 mph. 
+  sorry
+
+end speed_of_truck_l79_79222
+
+
+namespace BANANA_arrangements_l79_79521
+
+theorem BANANA_arrangements : 
+  (Nat.factorial 6) / ((Nat.factorial 3) * (Nat.factorial 2)) = 60 := by 
+  sorry
+
+end BANANA_arrangements_l79_79521
+
+
+namespace arith_seq_sum_signs_l79_79414
+
+variable {α : Type*} [LinearOrderedField α]
+variable {a : ℕ → α} {S : ℕ → α} {d : α}
+
+noncomputable def is_arith_seq (a : ℕ → α) : Prop :=
+  ∃ d, ∀ n, a (n + 1) = a n + d
+
+noncomputable def sum_first_n_terms (a : ℕ → α) (n : ℕ) : α :=
+  n * (a 1 + a n) / 2
+
+-- Given conditions
+variable (a_8_neg : a 8 < 0)
+variable (a_9_pos : a 9 > 0)
+variable (a_9_greater_abs_a_8 : a 9 > abs (a 8))
+
+-- The theorem to prove
+theorem arith_seq_sum_signs (h : is_arith_seq a) :
+  (∀ n, n ≤ 15 → sum_first_n_terms a n < 0) ∧ (∀ n, n ≥ 16 → sum_first_n_terms a n > 0) :=
+sorry
+
+end arith_seq_sum_signs_l79_79414
+
+
+namespace radius_of_cone_is_8_l79_79678
+
+noncomputable def r_cylinder := 8 -- cm
+noncomputable def h_cylinder := 2 -- cm
+noncomputable def h_cone := 6 -- cm
+
+theorem radius_of_cone_is_8 :
+  exists (r_cone : ℝ), r_cone = 8 ∧ π * r_cylinder^2 * h_cylinder = (1 / 3) * π * r_cone^2 * h_cone :=
+by
+  let r_cone := 8
+  have eq_volumes : π * r_cylinder^2 * h_cylinder = (1 / 3) * π * r_cone^2 * h_cone := 
     sorry
+  exact ⟨r_cone, by simp, eq_volumes⟩
 
-end diagonal_length_proof_l79_79983
+end radius_of_cone_is_8_l79_79678
 
 
-namespace intersection_of_A_and_B_l79_79548
+namespace probability_john_david_chosen_l79_79425
 
-open Set
+noncomputable def factorial (n : ℕ) : ℕ :=
+  if n = 0 then 1 else n * factorial (n - 1)
 
-variable (A : Set ℕ) (B : Set ℕ)
+noncomputable def choose (n k : ℕ) : ℕ :=
+  factorial n / (factorial k * factorial (n - k))
 
-theorem intersection_of_A_and_B (hA : A = {0, 1, 2}) (hB : B = {0, 2, 4}) :
-  A ∩ B = {0, 2} := by
+theorem probability_john_david_chosen :
+  let total_workers := 6
+  let choose_two := choose total_workers 2
+  let favorable_outcomes := 1
+  choose_two = 15 → (favorable_outcomes / choose_two : ℝ) = 1 / 15 :=
+by
+  intros
   sorry
 
-end intersection_of_A_and_B_l79_79548
+end probability_john_david_chosen_l79_79425
 
 
-namespace area_of_rectangle_PQRS_l79_79420
+namespace pears_morning_sales_l79_79829
 
-def origin : ℝ × ℝ := (0, 0)
-def Q : ℝ × ℝ := (2, 0)
-def R : ℝ × ℝ := (2, 1)
-def S : ℝ × ℝ := (0, 1)
-def triangle_PQR (P Q R : ℝ × ℝ) : Prop := 
-  (P = origin ∧ Q = (2, 0) ∧ R = (2, 1) ∧ (Q.2 = R.2 ∨ P.1 = R.1)) -- ensuring the right triangle condition
-
-theorem area_of_rectangle_PQRS : 
-  triangle_PQR origin Q R → 
-  let PQ := (Q.1 - origin.1)  in
-  let PS := (S.2 - origin.2)  in
-  PQ * PS = 2 := 
-by 
-  intro h;
-  let PQ := (Q.1 - origin.1);
-  let PS := (S.2 - origin.2);
-  exact sorry
-
-end area_of_rectangle_PQRS_l79_79420
-
-
-namespace distinct_real_roots_interval_l79_79485
-
-open Set Real
-
-theorem distinct_real_roots_interval (m : ℝ) : 
-  (∃ (r1 r2 : ℝ), r1 ≠ r2 ∧ IsRoot (λ x => x^2 + m * x + 9) r1 ∧ IsRoot (λ x => x^2 + m * x + 9) r2) ↔ 
-  m ∈ Iio (-6) ∪ Ioi 6 :=
+theorem pears_morning_sales (morning afternoon : ℕ) 
+  (h1 : afternoon = 2 * morning)
+  (h2 : morning + afternoon = 360) : 
+  morning = 120 := 
 sorry
 
-end distinct_real_roots_interval_l79_79485
+end pears_morning_sales_l79_79829
 
 
-namespace cos_sin_eq_one_solutions_l79_79133
+namespace clock_in_probability_l79_79230
 
-theorem cos_sin_eq_one_solutions (n : ℤ) (hn : n > 0) :
-  (∃ k : ℤ, cos (n * k * Real.pi) ^ n - sin (n * k * Real.pi) ^ n = 1) ∨
-  (∃ k : ℤ, cos (n * (2 * k * Real.pi) + (3 * Real.pi / 2)) ^ n - 
-              sin (n * (2 * k * Real.pi) + (3 * Real.pi / 2)) ^ n = 1) :=
+-- Definitions
+def start_time := 510 -- 8:30 in minutes from 00:00 (510 minutes)
+def valid_clock_in_start := 495 -- 8:15 in minutes from 00:00 (495 minutes)
+def arrival_start := 470 -- 7:50 in minutes from 00:00 (470 minutes)
+def arrival_end := 510 -- 8:30 in minutes from 00:00 (510 minutes)
+def valid_clock_in_end := 510 -- 8:30 in minutes from 00:00 (510 minutes)
+
+-- Conditions
+def arrival_window := arrival_end - arrival_start -- 40 minutes window
+def valid_clock_in_window := valid_clock_in_end - valid_clock_in_start -- 15 minutes window
+
+-- Required proof statement
+theorem clock_in_probability :
+  (valid_clock_in_window : ℚ) / (arrival_window : ℚ) = 3 / 8 :=
 by
   sorry
 
-end cos_sin_eq_one_solutions_l79_79133
+end clock_in_probability_l79_79230
 
 
-namespace prob_both_even_correct_l79_79288
+namespace prob_three_blue_is_correct_l79_79216
 
--- Define the dice and verify their properties
-def die1 := {n : ℕ // n ≥ 1 ∧ n ≤ 6}
-def die2 := {n : ℕ // n ≥ 1 ∧ n ≤ 7}
+-- Definitions corresponding to the problem conditions
+def total_jellybeans : ℕ := 20
+def blue_jellybeans_start : ℕ := 10
+def red_jellybeans : ℕ := 10
 
--- Define the sets of even numbers for both dice
-def even_die1 (n : die1) : Prop := n.1 % 2 = 0
-def even_die2 (n : die2) : Prop := n.1 % 2 = 0
+-- Probabilities calculation steps as definitions
+def prob_first_blue : ℚ := blue_jellybeans_start / total_jellybeans
+def prob_second_blue_given_first_blue : ℚ := (blue_jellybeans_start - 1) / (total_jellybeans - 1)
+def prob_third_blue_given_first_two_blue : ℚ := (blue_jellybeans_start - 2) / (total_jellybeans - 2)
 
--- Define the probabilities of rolling an even number on each die
-def prob_even_die1 := 3 / 6
-def prob_even_die2 := 3 / 7
+-- Total probability of drawing three blue jellybeans
+def prob_three_blue : ℚ := 
+  prob_first_blue *
+  prob_second_blue_given_first_blue *
+  prob_third_blue_given_first_two_blue
 
--- Calculate the combined probability
-def prob_both_even := prob_even_die1 * prob_even_die2
-
--- The theorem stating the probability of both dice rolling even is 3/14
-theorem prob_both_even_correct : prob_both_even = 3 / 14 :=
+-- Formal statement of the proof problem
+theorem prob_three_blue_is_correct : prob_three_blue = 2 / 19 :=
 by
-  -- Proof is omitted
+  -- Fill the proof here
   sorry
 
-end prob_both_even_correct_l79_79288
+end prob_three_blue_is_correct_l79_79216
 
 
-namespace quadratic_roots_conjugate_and_product_l79_79437
+namespace red_ball_probability_l79_79886
 
-open Complex
+theorem red_ball_probability : 
+  let red_A := 2
+  let white_A := 3
+  let red_B := 4
+  let white_B := 1
+  let total_A := red_A + white_A
+  let total_B := red_B + white_B
+  let prob_red_A := red_A / total_A
+  let prob_white_A := white_A / total_A
+  let prob_red_B_after_red_A := (red_B + 1) / (total_B + 1)
+  let prob_red_B_after_white_A := red_B / (total_B + 1)
+  (prob_red_A * prob_red_B_after_red_A + prob_white_A * prob_red_B_after_white_A) = 11 / 15 :=
+by {
+  sorry
+}
 
-theorem quadratic_roots_conjugate_and_product (x1 x2 : ℂ) :
-  (∀ x : ℂ, x^2 + (3 : ℂ) * x + 4 = 0 → ∃ x1 x2 : ℂ, x = x1 ∨ x = x2) →
-  (x1 = Complex.conj x2) ∧ (x1 * x2 = 4) :=
+end red_ball_probability_l79_79886
+
+
+namespace prime_count_of_first_10_sums_is_2_l79_79303
+
+open Nat
+
+def consecutivePrimes := [3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37]
+
+def consecutivePrimeSums (n : Nat) : List Nat :=
+  (List.range n).scanl (λ sum i => sum + consecutivePrimes.getD i 0) 0
+
+theorem prime_count_of_first_10_sums_is_2 :
+  let sums := consecutivePrimeSums 10;
+  (sums.count isPrime) = 2 :=
 by
   sorry
 
-end quadratic_roots_conjugate_and_product_l79_79437
+end prime_count_of_first_10_sums_is_2_l79_79303
 
 
-namespace water_leftover_l79_79991
+namespace max_bench_weight_support_l79_79427
 
-theorem water_leftover (players : ℕ) (total_water_l : ℕ) (water_per_player_ml : ℕ) (spill_water_ml : ℕ)
-  (h1 : players = 30) 
-  (h2 : total_water_l = 8) 
-  (h3 : water_per_player_ml = 200) 
-  (h4 : spill_water_ml = 250) : 
-  (total_water_l * 1000 - (players * water_per_player_ml + spill_water_ml) = 1750) :=
+/-- Definitions for the given problem conditions -/
+def john_weight : ℝ := 250
+def bar_weight : ℝ := 550
+def total_weight : ℝ := john_weight + bar_weight
+def safety_percentage : ℝ := 0.80
+
+/-- Theorem stating the maximum weight the bench can support given the conditions -/
+theorem max_bench_weight_support :
+  ∀ (W : ℝ), safety_percentage * W = total_weight → W = 1000 :=
 by
-  -- conversion of total water to milliliters
-  let total_water_ml := total_water_l * 1000
-  -- calculation of total water used for players
-  let total_water_used_for_players := players * water_per_player_ml
-  -- calculation of total water including spill
-  let total_water_used := total_water_used_for_players + spill_water_ml
-  -- leftover water calculation
-  have calculation : total_water_l * 1000 - (players * water_per_player_ml + spill_water_ml) = total_water_ml - total_water_used, by
-    rw [total_water_ml, total_water_used, total_water_used_for_players]
-  rw calculation
-  -- conclusion by substituting known values
-  rw [h1, h2, h3, h4]
-  norm_num
+  sorry
 
-end water_leftover_l79_79991
+end max_bench_weight_support_l79_79427
 
 
-namespace pyramid_volume_l79_79513
+namespace correct_calculation_l79_79005
 
-theorem pyramid_volume (side_S : ℝ) (side_S' : ℝ) (mid_S_to_S_center : ℝ) (S_center_to_S'_side : ℝ) :
-  side_S = 40 → 
-  side_S' = 15 → 
-  mid_S_to_S_center = side_S / 2 →
-  S_center_to_S'_side = side_S' / 2 →
-  let h' := mid_S_to_S_center - S_center_to_S'_side,
-      h := Real.sqrt (h' ^ 2 - (side_S' / 2) ^ 2),
-      b := side_S' ^ 2,
-      V := (1 / 3) * b * h in
-  V = 750 :=
+theorem correct_calculation (x : ℕ) (h1 : 21 * x = 63) : x + 40 = 43 :=
+by
+  -- proof steps would go here, but we skip them with 'sorry'
+  sorry
+
+end correct_calculation_l79_79005
+
+
+namespace count_integers_satisfying_sqrt_condition_l79_79465
+
+theorem count_integers_satisfying_sqrt_condition :
+  ∃ (n : ℕ), n = 15 ∧ ∀ (x : ℕ), (3 < Real.sqrt x ∧ Real.sqrt x < 5) → (9 < x ∧ x < 25) :=
+by
+  sorry
+
+end count_integers_satisfying_sqrt_condition_l79_79465
+
+
+namespace initial_average_mark_l79_79173
+
+theorem initial_average_mark (A : ℝ) (n : ℕ) (excluded_avg remaining_avg : ℝ) :
+  n = 25 →
+  excluded_avg = 40 →
+  remaining_avg = 90 →
+  (A * n = (n - 5) * remaining_avg + 5 * excluded_avg) →
+  A = 80 :=
+by
+  intros hn_hexcluded_avg hremaining_avg htotal_correct
+  sorry
+
+end initial_average_mark_l79_79173
+
+
+namespace binom_12_11_eq_12_l79_79509
+
+theorem binom_12_11_eq_12 : nat.choose 12 11 = 12 := 
+by {
+  sorry
+}
+
+end binom_12_11_eq_12_l79_79509
+
+
+namespace recommendation_plans_count_l79_79934
+
+theorem recommendation_plans_count :
+  let total_students := 7
+  let sports_talents := 2
+  let artistic_talents := 2
+  let other_talents := 3
+  let recommend_count := 4
+  let condition_sports := recommend_count >= 1
+  let condition_artistic := recommend_count >= 1
+  (condition_sports ∧ condition_artistic) → 
+  ∃ (n : ℕ), n = 25 := sorry
+
+end recommendation_plans_count_l79_79934
+
+
+namespace backup_settings_required_l79_79772
+
+-- Definitions for the given conditions
+def weight_of_silverware_piece : ℕ := 4
+def pieces_of_silverware_per_setting : ℕ := 3
+def weight_of_plate : ℕ := 12
+def plates_per_setting : ℕ := 2
+def tables : ℕ := 15
+def settings_per_table : ℕ := 8
+def total_weight_ounces : ℕ := 5040
+
+-- Statement to prove
+theorem backup_settings_required :
+  (total_weight_ounces - 
+     (tables * settings_per_table) * 
+       (pieces_of_silverware_per_setting * weight_of_silverware_piece + 
+        plates_per_setting * weight_of_plate)) /
+  (pieces_of_silverware_per_setting * weight_of_silverware_piece + 
+   plates_per_setting * weight_of_plate) = 20 := 
+by sorry
+
+end backup_settings_required_l79_79772
+
+
+namespace a_b_c_at_least_one_not_less_than_one_third_l79_79054
+
+theorem a_b_c_at_least_one_not_less_than_one_third (a b c : ℝ) (h : a + b + c = 1) :
+  ¬ (a < 1/3 ∧ b < 1/3 ∧ c < 1/3) :=
+by
+  sorry
+
+end a_b_c_at_least_one_not_less_than_one_third_l79_79054
+
+
+namespace inequality_proof_l79_79287
+
+variable (a b c : ℝ)
+variable (h1 : a > 0)
+variable (h2 : b > 0)
+variable (h3 : c > 0)
+variable (h4 : a + b + c = 1)
+
+theorem inequality_proof : 
+  (a + 1/a)^3 + (b + 1/b)^3 + (c + 1/c)^3 ≥ 1000/9 := 
+by 
+  sorry
+
+end inequality_proof_l79_79287
+
+
+namespace suzy_final_books_l79_79807
+
+def initial_books : ℕ := 98
+def wednesday_checkouts : ℕ := 43
+def thursday_returns : ℕ := 23
+def thursday_checkouts : ℕ := 5
+def friday_returns : ℕ := 7
+
+theorem suzy_final_books :
+  initial_books - wednesday_checkouts
+  + thursday_returns - thursday_checkouts
+  + friday_returns = 80 := by
+sorry
+
+end suzy_final_books_l79_79807
+
+
+namespace profit_per_metre_l79_79078
+
+/-- 
+Given:
+1. A trader sells 85 meters of cloth for Rs. 8925.
+2. The cost price of one metre of cloth is Rs. 95.
+
+Prove:
+The profit per metre of cloth is Rs. 10.
+-/
+theorem profit_per_metre 
+  (SP : ℕ) (CP : ℕ)
+  (total_SP : SP = 8925)
+  (total_meters : ℕ := 85)
+  (cost_per_meter : CP = 95) :
+  (SP - total_meters * CP) / total_meters = 10 :=
+by
+  sorry
+
+end profit_per_metre_l79_79078
+
+
+namespace quadratic_polynomials_perfect_square_l79_79851
+
+variables {x y p q a b c : ℝ}
+
+theorem quadratic_polynomials_perfect_square (h1 : ∃ a, x^2 + p * x + q = (x + a) * (x + a))
+  (h2 : ∃ a b, a^2 * x^2 + 2 * b^2 * x * y + c^2 * y^2 = (a * x + b * y) * (a * x + b * y)) :
+  q = (p^2 / 4) ∧ b^2 = a * c :=
+by
+  sorry
+
+end quadratic_polynomials_perfect_square_l79_79851
+
+
+namespace proof_expression_value_l79_79010
+
+theorem proof_expression_value (x y : ℝ) (h : x + 2 * y = 30) : 
+  (x / 5 + 2 * y / 3 + 2 * y / 5 + x / 3) = 16 := 
+by 
+  sorry
+
+end proof_expression_value_l79_79010
+
+
+namespace solution_of_two_quadratics_l79_79897
+
+theorem solution_of_two_quadratics (x : ℝ) (h1 : 8 * x^2 + 7 * x - 1 = 0) (h2 : 24 * x^2 + 53 * x - 7 = 0) : x = 1 / 8 := 
+by 
+  sorry
+
+end solution_of_two_quadratics_l79_79897
+
+
+namespace complex_imaginary_condition_l79_79016
+
+theorem complex_imaginary_condition (m : ℝ) : (∀ m : ℝ, (m^2 - 3*m - 4 = 0) → (m^2 - 5*m - 6) ≠ 0) ↔ (m ≠ -1 ∧ m ≠ 6) :=
+by
+  sorry
+
+end complex_imaginary_condition_l79_79016
+
+
+namespace real_solutions_infinite_l79_79720
+
+theorem real_solutions_infinite : 
+  ∃ (S : Set ℝ), (∀ x ∈ S, - (x^2 - 4) ≥ 0) ∧ S.Infinite :=
+sorry
+
+end real_solutions_infinite_l79_79720
+
+
+namespace rides_first_day_l79_79501
+
+variable (total_rides : ℕ) (second_day_rides : ℕ)
+
+theorem rides_first_day (h1 : total_rides = 7) (h2 : second_day_rides = 3) : total_rides - second_day_rides = 4 :=
+by
+  sorry
+
+end rides_first_day_l79_79501
+
+
+namespace BANANA_arrangements_l79_79514
+
+theorem BANANA_arrangements : 
+  let total_letters := 6
+  let A_count := 3
+  let N_count := 2
+  (Nat.factorial total_letters) / (Nat.factorial A_count * Nat.factorial N_count) = 60 := 
+by 
+  let total_letters := 6
+  let A_count := 3
+  let N_count := 2
+  sorry
+
+end BANANA_arrangements_l79_79514
+
+
+namespace find_number_of_small_gardens_l79_79953
+
+-- Define the conditions
+def seeds_total : Nat := 52
+def seeds_big_garden : Nat := 28
+def seeds_per_small_garden : Nat := 4
+
+-- Define the target value
+def num_small_gardens : Nat := 6
+
+-- The statement of the proof problem
+theorem find_number_of_small_gardens 
+  (H1 : seeds_total = 52) 
+  (H2 : seeds_big_garden = 28) 
+  (H3 : seeds_per_small_garden = 4) 
+  : seeds_total - seeds_big_garden = 24 ∧ (seeds_total - seeds_big_garden) / seeds_per_small_garden = num_small_gardens := 
+sorry
+
+end find_number_of_small_gardens_l79_79953
+
+
+namespace prob_AB_diff_homes_l79_79360
+
+-- Define the volunteers
+inductive Volunteer : Type
+| A | B | C | D | E
+
+open Volunteer
+
+-- Define the homes
+inductive Home : Type
+| home1 | home2
+
+open Home
+
+-- Total number of ways to distribute the volunteers
+def total_ways : ℕ := 2^5  -- Each volunteer has independently 2 choices
+
+-- Number of ways in which A and B are in different homes
+def diff_ways : ℕ := 2 * 4 * 2^3  -- Split the problem down by cases for simplicity
+
+-- Calculate the probability
+def probability : ℚ := diff_ways / total_ways
+
+-- The final statement to prove
+theorem prob_AB_diff_homes : probability = 8 / 15 := sorry
+
+end prob_AB_diff_homes_l79_79360
+
+
+namespace cricket_run_rate_l79_79067
+
+theorem cricket_run_rate (run_rate_first_10_overs : ℝ) (total_target : ℝ) (overs_first_period : ℕ) (overs_remaining_period : ℕ)
+  (h1 : run_rate_first_10_overs = 3.2)
+  (h2 : total_target = 252)
+  (h3 : overs_first_period = 10)
+  (h4 : overs_remaining_period = 40) :
+  (total_target - (run_rate_first_10_overs * overs_first_period)) / overs_remaining_period = 5.5 := 
+by
+  sorry
+
+end cricket_run_rate_l79_79067
+
+
+namespace mutually_exclusive_not_opposite_l79_79418
+
+-- Define the given conditions
+def boys := 6
+def girls := 5
+def total_students := boys + girls
+def selection := 3
+
+-- Define the mutually exclusive and not opposite events
+def event_at_least_2_boys := ∃ (b: ℕ), ∃ (g: ℕ), (b + g = selection) ∧ (b ≥ 2) ∧ (g ≤ (selection - b))
+def event_at_least_2_girls := ∃ (b: ℕ), ∃ (g: ℕ), (b + g = selection) ∧ (g ≥ 2) ∧ (b ≤ (selection - g))
+
+-- Statement that these events are mutually exclusive but not opposite
+theorem mutually_exclusive_not_opposite :
+  (event_at_least_2_boys ∧ event_at_least_2_girls) → 
+  (¬ ((∃ (b: ℕ) (g: ℕ), b + g = selection ∧ b ≥ 2 ∧ g ≥ 2) ∧ ¬(event_at_least_2_boys))) :=
+sorry
+
+end mutually_exclusive_not_opposite_l79_79418
+
+
+namespace perm_banana_l79_79562
+
+theorem perm_banana : 
+  let total_letters := 6
+  let A_letters := 3
+  let N_letters := 2
+  (fact total_letters) / ((fact A_letters) * (fact N_letters) * fact (total_letters - A_letters - N_letters)) = 60 :=
+by
+  let total_letters := 6
+  let A_letters := 3
+  let N_letters := 2
+  have h1 : fact total_letters = 720 := by decide
+  have h2 : fact A_letters = 6 := by decide
+  have h3 : fact N_letters = 2 := by decide
+  have h4 : fact (total_letters - A_letters - N_letters) = fact (6 - 3 - 2) := by decide
+  have h5 : fact (total_letters - A_letters - N_letters) = 1 := by decide
+  calc
+    (720 / (6 * 2 * 1) : ℝ)
+    _ = 60 := by norm_num
+
+end perm_banana_l79_79562
+
+
+namespace permutations_of_BANANA_l79_79527
+
+/-- The number of distinct permutations of the word "BANANA" is 60. -/
+theorem permutations_of_BANANA : (Nat.factorial 6 / (Nat.factorial 3 * Nat.factorial 2 * Nat.factorial 1)) = 60 := by
+  sorry
+
+end permutations_of_BANANA_l79_79527
+
+
+namespace evaluate_expression_l79_79800
+
+def f (x : ℕ) : ℕ :=
+  match x with
+  | 3 => 10
+  | 4 => 17
+  | 5 => 26
+  | 6 => 37
+  | 7 => 50
+  | _ => 0  -- for any x not in the table, f(x) is undefined and defaults to 0
+
+def f_inv (y : ℕ) : ℕ :=
+  match y with
+  | 10 => 3
+  | 17 => 4
+  | 26 => 5
+  | 37 => 6
+  | 50 => 7
+  | _ => 0  -- for any y not in the table, f_inv(y) is undefined and defaults to 0
+
+theorem evaluate_expression :
+  f_inv (f_inv 50 * f_inv 10 + f_inv 26) = 5 :=
+by
+  sorry
+
+end evaluate_expression_l79_79800
+
+
+namespace chinaman_change_possible_l79_79648
+
+def pence (x : ℕ) := x -- defining the value of pence as a natural number
+
+def ching_chang_by_value (d : ℕ) := 
+  (2 * pence d) + (4 * (2 * pence d) / 15)
+
+def equivalent_value_of_half_crown (d : ℕ) := 30 * pence d
+
+def coin_value_with_holes (holes_value : ℕ) (value_per_eleven : ℕ) := 
+  (value_per_eleven * ching_chang_by_value 1) / 11
+
+theorem chinaman_change_possible :
+  ∃ (x y z : ℕ), 
+  (7 * coin_value_with_holes 15 11) + (1 * coin_value_with_holes 16 11) + (0 * coin_value_with_holes 17 11) = 
+  equivalent_value_of_half_crown 1 :=
+sorry
+
+end chinaman_change_possible_l79_79648
+
+
+namespace hannah_remaining_money_l79_79125
+
+-- Define the conditions of the problem
+def initial_amount : Nat := 120
+def rides_cost : Nat := initial_amount * 40 / 100
+def games_cost : Nat := initial_amount * 15 / 100
+def remaining_after_rides_games : Nat := initial_amount - rides_cost - games_cost
+
+def dessert_cost : Nat := 8
+def cotton_candy_cost : Nat := 5
+def hotdog_cost : Nat := 6
+def keychain_cost : Nat := 7
+def poster_cost : Nat := 10
+def additional_attraction_cost : Nat := 15
+def total_food_souvenirs_cost : Nat := dessert_cost + cotton_candy_cost + hotdog_cost + keychain_cost + poster_cost + additional_attraction_cost
+
+def final_remaining_amount : Nat := remaining_after_rides_games - total_food_souvenirs_cost
+
+-- Formulate the theorem to prove
+theorem hannah_remaining_money : final_remaining_amount = 3 := by
+  sorry
+
+end hannah_remaining_money_l79_79125
+
+
+namespace number_of_k_for_lcm_l79_79853
+
+theorem number_of_k_for_lcm (a b : ℕ) :
+  (∀ a b, k = 2^a * 3^b) → 
+  (∀ (a : ℕ), 0 ≤ a ∧ a ≤ 24) →
+  (∃ b, b = 12) →
+  (∀ k, k = 2^a * 3^b) →
+  (Nat.lcm (Nat.lcm (6^6) (8^8)) k = 12^12) :=
+sorry
+
+end number_of_k_for_lcm_l79_79853
+
+
+namespace sum_of_A_and_B_l79_79326
+
+theorem sum_of_A_and_B (A B : ℕ) (h1 : 7 - B = 3) (h2 : A - 5 = 4) (h_diff : A ≠ B) : A + B = 13 :=
+sorry
+
+end sum_of_A_and_B_l79_79326
+
+
+namespace percentage_music_l79_79664
+
+variable (students_total : ℕ)
+variable (percent_dance percent_art percent_drama percent_sports percent_photography percent_music : ℝ)
+
+-- Define the problem conditions
+def school_conditions : Prop :=
+  students_total = 3000 ∧
+  percent_dance = 0.125 ∧
+  percent_art = 0.22 ∧
+  percent_drama = 0.135 ∧
+  percent_sports = 0.15 ∧
+  percent_photography = 0.08 ∧
+  percent_music = 1 - (percent_dance + percent_art + percent_drama + percent_sports + percent_photography)
+
+-- Define the proof statement
+theorem percentage_music : school_conditions students_total percent_dance percent_art percent_drama percent_sports percent_photography percent_music → percent_music = 0.29 :=
+by
+  intros h
+  rw [school_conditions] at h
+  sorry
+
+end percentage_music_l79_79664
+
+
+namespace first_term_of_arithmetic_progression_l79_79852
+
+theorem first_term_of_arithmetic_progression 
+  (a : ℕ) (d : ℕ) (n : ℕ) 
+  (nth_term_eq : a + (n - 1) * d = 26)
+  (common_diff : d = 2)
+  (term_num : n = 10) : 
+  a = 8 := 
+by 
+  sorry
+
+end first_term_of_arithmetic_progression_l79_79852
+
+
+namespace total_servings_of_vegetables_l79_79758
+
+def carrot_plant_serving : ℕ := 4
+def num_green_bean_plants : ℕ := 10
+def num_carrot_plants : ℕ := 8
+def num_corn_plants : ℕ := 12
+def num_tomato_plants : ℕ := 15
+def corn_plant_serving : ℕ := 5 * carrot_plant_serving
+def green_bean_plant_serving : ℕ := corn_plant_serving / 2
+def tomato_plant_serving : ℕ := carrot_plant_serving + 3
+
+theorem total_servings_of_vegetables :
+  (num_carrot_plants * carrot_plant_serving) +
+  (num_corn_plants * corn_plant_serving) +
+  (num_green_bean_plants * green_bean_plant_serving) +
+  (num_tomato_plants * tomato_plant_serving) = 477 := by
+  sorry
+
+end total_servings_of_vegetables_l79_79758
+
+
+namespace no_k_such_that_a_divides_2k_plus_1_and_b_divides_2k_minus_1_l79_79027
+
+theorem no_k_such_that_a_divides_2k_plus_1_and_b_divides_2k_minus_1 :
+  ∀ (a b n : ℕ), (a > 1) → (b > 1) → (a ∣ 2^n - 1) → (b ∣ 2^n + 1) → ∀ (k : ℕ), ¬ (a ∣ 2^k + 1 ∧ b ∣ 2^k - 1) :=
+by
+  intros a b n a_gt_1 b_gt_1 a_div_2n_minus_1 b_div_2n_plus_1 k
+  sorry
+
+end no_k_such_that_a_divides_2k_plus_1_and_b_divides_2k_minus_1_l79_79027
+
+
+namespace initial_strawberry_plants_l79_79435
+
+theorem initial_strawberry_plants (P : ℕ) (h1 : 24 * P - 4 = 500) : P = 21 := 
+by
+  sorry
+
+end initial_strawberry_plants_l79_79435
+
+
+namespace lucy_apples_per_week_l79_79708
+
+-- Define the conditions
+def chandler_apples_per_week := 23
+def total_apples_per_month := 168
+def weeks_per_month := 4
+def chandler_apples_per_month := chandler_apples_per_week * weeks_per_month
+def lucy_apples_per_month := total_apples_per_month - chandler_apples_per_month
+
+-- Define the proof problem statement
+theorem lucy_apples_per_week :
+  lucy_apples_per_month / weeks_per_month = 19 :=
+  by sorry
+
+end lucy_apples_per_week_l79_79708
+
+
+namespace time_after_seconds_l79_79025
+
+def initial_time : Nat := 8 * 60 * 60 -- 8:00:00 a.m. in seconds
+def seconds_passed : Nat := 8035
+def target_time : Nat := (10 * 60 * 60 + 13 * 60 + 35) -- 10:13:35 in seconds
+
+theorem time_after_seconds : initial_time + seconds_passed = target_time := by
+  -- proof skipped
+  sorry
+
+end time_after_seconds_l79_79025
+
+
+namespace scientific_notation_correct_l79_79986
+
+theorem scientific_notation_correct :
+  0.00000164 = 1.64 * 10^(-6) :=
+sorry
+
+end scientific_notation_correct_l79_79986
+
+
+namespace sum_of_three_smallest_positive_solutions_l79_79102
+
+theorem sum_of_three_smallest_positive_solutions :
+  let sol1 := 2
+  let sol2 := 8 / 3
+  let sol3 := 7 / 2
+  sol1 + sol2 + sol3 = 8 + 1 / 6 :=
+by
+  sorry
+
+end sum_of_three_smallest_positive_solutions_l79_79102
+
+
+namespace wall_print_costs_are_15_l79_79242
+
+-- Define the cost of curtains, installation, total cost, and number of wall prints.
+variable (cost_curtain : ℕ := 30)
+variable (num_curtains : ℕ := 2)
+variable (cost_installation : ℕ := 50)
+variable (num_wall_prints : ℕ := 9)
+variable (total_cost : ℕ := 245)
+
+-- Define the total cost of curtains
+def total_cost_curtains : ℕ := num_curtains * cost_curtain
+
+-- Define the total fixed costs
+def total_fixed_costs : ℕ := total_cost_curtains + cost_installation
+
+-- Define the total cost of wall prints
+def total_cost_wall_prints : ℕ := total_cost - total_fixed_costs
+
+-- Define the cost per wall print
+def cost_per_wall_print : ℕ := total_cost_wall_prints / num_wall_prints
+
+-- Prove the cost per wall print is $15.00
+theorem wall_print_costs_are_15 : cost_per_wall_print = 15 := by
+  -- This is a placeholder for the proof
+  sorry
+
+end wall_print_costs_are_15_l79_79242
+
+
+namespace cost_of_toys_l79_79436
+
+theorem cost_of_toys (x y : ℝ) (h1 : x + y = 40) (h2 : 90 / x = 150 / y) :
+  x = 15 ∧ y = 25 :=
+sorry
+
+end cost_of_toys_l79_79436
+
+
+namespace exists_infinite_n_for_multiple_of_prime_l79_79915
+
+theorem exists_infinite_n_for_multiple_of_prime (p : ℕ) (hp : Nat.Prime p) :
+  ∃ᶠ n in at_top, 2 ^ n - n ≡ 0 [MOD p] :=
+by
+  sorry
+
+end exists_infinite_n_for_multiple_of_prime_l79_79915
+
+
+namespace peter_total_miles_l79_79295
+
+-- Definitions based on the conditions
+def minutes_per_mile : ℝ := 20
+def miles_walked_already : ℝ := 1
+def additional_minutes : ℝ := 30
+
+-- The value we want to prove
+def total_miles_to_walk : ℝ := 2.5
+
+-- Theorem statement corresponding to the proof problem
+theorem peter_total_miles :
+  (additional_minutes / minutes_per_mile) + miles_walked_already = total_miles_to_walk :=
+sorry
+
+end peter_total_miles_l79_79295
+
+
+namespace total_books_is_177_l79_79771
+
+-- Define the number of books read (x), books yet to read (y), and the total number of books (T)
+def x : Nat := 13
+def y : Nat := 8
+def T : Nat := x^2 + y
+
+-- Prove that the total number of books in the series is 177
+theorem total_books_is_177 : T = 177 :=
+  sorry
+
+end total_books_is_177_l79_79771
+
+
+namespace percentage_of_girl_scouts_with_slips_l79_79056
+
+-- Define the proposition that captures the problem
+theorem percentage_of_girl_scouts_with_slips 
+    (total_scouts : ℕ)
+    (scouts_with_slips : ℕ := total_scouts * 60 / 100)
+    (boy_scouts : ℕ := total_scouts * 45 / 100)
+    (boy_scouts_with_slips : ℕ := boy_scouts * 50 / 100)
+    (girl_scouts : ℕ := total_scouts - boy_scouts)
+    (girl_scouts_with_slips : ℕ := scouts_with_slips - boy_scouts_with_slips) :
+  (girl_scouts_with_slips * 100 / girl_scouts) = 68 :=
+by 
+  -- The proof goes here
+  sorry
+
+end percentage_of_girl_scouts_with_slips_l79_79056
+
+
+namespace total_selling_price_l79_79495
+
+theorem total_selling_price (cost_per_meter profit_per_meter : ℕ) (total_meters : ℕ) :
+  cost_per_meter = 90 → 
+  profit_per_meter = 15 → 
+  total_meters = 85 → 
+  (cost_per_meter + profit_per_meter) * total_meters = 8925 :=
+by
+  intros
+  sorry
+
+end total_selling_price_l79_79495
+
+
+namespace apples_per_pie_l79_79922
+
+theorem apples_per_pie (total_apples : ℕ) (apples_given : ℕ) (pies : ℕ) : 
+  total_apples = 47 ∧ apples_given = 27 ∧ pies = 5 →
+  (total_apples - apples_given) / pies = 4 :=
 by
   intros h
   sorry
 
-end pyramid_volume_l79_79513
+end apples_per_pie_l79_79922
 
 
-namespace integral_equals_expected_l79_79780
+namespace freddy_call_duration_l79_79107
 
-noncomputable def integral_expression : ℝ → ℝ :=
-  λ x, (x^3 + x^2 + 2) / (x * (x^2 - 1)^2)
-
-noncomputable def expected_integral : ℝ → ℝ :=
-  λ x, 2 * Real.log (Real.abs x)
-        - (3 / 4) * Real.log (Real.abs (x - 1))
-        - 1 / (x - 1)
-        - (5 / 4) * Real.log (Real.abs (x + 1))
-        + 1 / (2 * (x + 1))
-
-theorem integral_equals_expected (x : ℝ) (h : x ≠ 0 ∧ x ≠ 1 ∧ x ≠ -1) :
-  ∫ c in 0..x, integral_expression c = expected_integral x + C :=
+theorem freddy_call_duration (total_cost : ℕ) (local_cost_per_minute : ℕ) (international_cost_per_minute : ℕ) (local_duration : ℕ)
+  (total_cost_eq : total_cost = 1000) -- cost in cents
+  (local_cost_eq : local_cost_per_minute = 5)
+  (international_cost_eq : international_cost_per_minute = 25)
+  (local_duration_eq : local_duration = 45) :
+  (total_cost - local_duration * local_cost_per_minute) / international_cost_per_minute = 31 :=
 by
   sorry
 
-end integral_equals_expected_l79_79780
+end freddy_call_duration_l79_79107
 
 
-namespace train_length_correct_l79_79717
+namespace cost_price_computer_table_l79_79208
 
-noncomputable def train_length (speed_kmh : ℝ) (time_sec : ℝ) (bridge_length_m : ℝ) : ℝ :=
-  let speed_ms := speed_kmh * (1000 / 3600)
-  let total_distance := speed_ms * time_sec
-  total_distance - bridge_length_m
+-- Define the variables
+def cost_price : ℝ := 3840
+def selling_price (CP : ℝ) := CP * 1.25
 
-theorem train_length_correct :
-  train_length 45 30 255.03 = 119.97 :=
+-- State the conditions and the proof problem
+theorem cost_price_computer_table 
+  (SP : ℝ) 
+  (h1 : SP = 4800)
+  (h2 : ∀ CP : ℝ, SP = selling_price CP) :
+  cost_price = 3840 :=
 by 
-  -- Using the given values, prove that the length of the train is 119.97 meters.
-  let speed_ms := 45 * (1000 / 3600) in
-  let total_distance := speed_ms * 30 in
-  let train_length := total_distance - 255.03 in
-  have h1 : speed_ms = 12.5 := by norm_num,
-  have h2 : total_distance = 375 := by norm_num [h1],
-  have h3 : train_length = 119.97 := by norm_num [h2],
-  exact h3
+  sorry
 
-end train_length_correct_l79_79717
+end cost_price_computer_table_l79_79208
 
 
-namespace geom_location_y_axis_l79_79679
+namespace rainfall_second_week_l79_79715
 
-noncomputable def geom_location (z : ℂ) (hz : |z| = 1) (hz_ne : z^2 ≠ 1) : Prop :=
-  ∃ r : ℝ, 0 < r ∧ z = r * exp(I * real.arg z)
+theorem rainfall_second_week (r1 r2 : ℝ) (h1 : r1 + r2 = 35) (h2 : r2 = 1.5 * r1) : r2 = 21 := 
+  sorry
 
-theorem geom_location_y_axis (z : ℂ) (hz : |z| = 1) (hz_ne : z^2 ≠ 1) :
-  ∃ k : ℝ, (z / (1 - z^2)).im = k :=
+end rainfall_second_week_l79_79715
+
+
+namespace coefficient_of_expression_l79_79923
+
+theorem coefficient_of_expression :
+  ∀ (a b : ℝ), (∃ (c : ℝ), - (2/3) * (a * b) = c * (a * b)) :=
+by
+  intros a b
+  use (-2/3)
+  sorry
+
+end coefficient_of_expression_l79_79923
+
+
+namespace initial_group_size_l79_79306
+
+theorem initial_group_size (W : ℝ) : 
+  (∃ n : ℝ, (W + 15) / n = W / n + 2.5) → n = 6 :=
+by
+  sorry
+
+end initial_group_size_l79_79306
+
+
+namespace binom_1300_2_l79_79365
+
+theorem binom_1300_2 : Nat.choose 1300 2 = 844350 := by
+  sorry
+
+end binom_1300_2_l79_79365
+
+
+namespace equations_neither_directly_nor_inversely_proportional_l79_79371
+
+-- Definitions for equations
+def equation1 (x y : ℝ) : Prop := 2 * x + 3 * y = 6
+def equation2 (x y : ℝ) : Prop := 4 * x * y = 12
+def equation3 (x y : ℝ) : Prop := y = 1/2 * x
+def equation4 (x y : ℝ) : Prop := 5 * x - 2 * y = 20
+def equation5 (x y : ℝ) : Prop := x / y = 5
+
+-- Theorem stating that y is neither directly nor inversely proportional to x for the given equations
+theorem equations_neither_directly_nor_inversely_proportional (x y : ℝ) :
+  (¬∃ k : ℝ, x = k * y) ∧ (¬∃ k : ℝ, x * y = k) ↔ 
+  (equation1 x y ∨ equation4 x y) :=
 sorry
 
-end geom_location_y_axis_l79_79679
+end equations_neither_directly_nor_inversely_proportional_l79_79371
 
 
-namespace ball_properties_from_spherical_cap_l79_79296
+namespace sum_of_numbers_l79_79894
 
-theorem ball_properties_from_spherical_cap :
-  ∃ (r : ℝ), (r = 10) ∧ (4 * Real.pi * r^2 = 400 * Real.pi) :=
-begin
-  -- Given conditions
-  let diameter : ℝ := 12,
-  let depth : ℝ := 2,
-  
-  -- Translated conditions
-  have r_condition : ∀ (r : ℝ), (r - depth)^2 + (diameter / 2)^2 = r^2,
-  { intros r, sorry }, -- The full proof is omitted here
-
-  have r_result : 10 - depth = r,
-  { sorry },
-
-  use 10,
-  split,
-  { refl }, -- The radius is 10 cm.
-  { sorry }  -- The surface area is 400π cm².
-end
-
-end ball_properties_from_spherical_cap_l79_79296
-
-
-namespace malingerers_exposed_l79_79684
-
-theorem malingerers_exposed (a b c : Nat) (ha : a > b) (hc : c = b + 9) :
-  let aabbb := 10000 * a + 1000 * a + 100 * b + 10 * b + b
-  let abccc := 10000 * a + 1000 * b + 100 * c + 10 * c + c
-  (aabbb - 1 = abccc) -> abccc = 10999 :=
+theorem sum_of_numbers :
+  36 + 17 + 32 + 54 + 28 + 3 = 170 :=
 by
   sorry
 
-end malingerers_exposed_l79_79684
+end sum_of_numbers_l79_79894
 
 
-namespace purple_chip_count_l79_79287
+namespace intersection_x_value_l79_79323
 
-theorem purple_chip_count :
-  ∃ (x : ℕ), (x > 5) ∧ (x < 11) ∧
-  (∃ (blue green purple red : ℕ),
-    (2^6) * (5^2) * 11 * 7 = (blue * 1) * (green * 5) * (purple * x) * (red * 11) ∧ purple = 1) :=
+theorem intersection_x_value : ∃ x y : ℝ, y = 3 * x + 7 ∧ 3 * x - 2 * y = -4 ∧ x = -10 / 3 :=
+by
+  sorry
+
+end intersection_x_value_l79_79323
+
+
+namespace xyz_zero_if_equation_zero_l79_79428
+
+theorem xyz_zero_if_equation_zero (x y z : ℚ) 
+  (h : x^3 + 3 * y^3 + 9 * z^3 - 9 * x * y * z = 0) : 
+  x = 0 ∧ y = 0 ∧ z = 0 := 
+by 
+  sorry
+
+end xyz_zero_if_equation_zero_l79_79428
+
+
+namespace unique_solution_for_2_3_6_eq_7_l79_79246
+
+theorem unique_solution_for_2_3_6_eq_7 (x : ℝ) : 2^x + 3^x + 6^x = 7^x → x = 2 :=
+by
+  intro h
+  -- Add the relevant proof tactic steps here
+  sorry
+
+end unique_solution_for_2_3_6_eq_7_l79_79246
+
+
+namespace number_of_rectangles_in_5x5_grid_l79_79003
+
+theorem number_of_rectangles_in_5x5_grid : 
+  let n := 5 in (n.choose 2) * (n.choose 2) = 100 :=
+by
+  sorry
+
+end number_of_rectangles_in_5x5_grid_l79_79003
+
+
+namespace right_triangle_345_l79_79971
+
+theorem right_triangle_345 :
+  ∃ (a b c : ℝ), a = 3 ∧ b = 4 ∧ c = 5 ∧ a^2 + b^2 = c^2 :=
+by {
+  -- Here, we should construct the proof later
+  sorry
+}
+
+end right_triangle_345_l79_79971
+
+
+namespace simplify_and_evaluate_l79_79039
+
+noncomputable def simplified_expression (x : ℝ) : ℝ :=
+  ((1 / (x - 1)) + (1 / (x + 1))) / (x^2 / (3 * x^2 - 3))
+
+theorem simplify_and_evaluate : simplified_expression (Real.sqrt 2) = 3 * Real.sqrt 2 :=
+by 
+  sorry
+
+end simplify_and_evaluate_l79_79039
+
+
+namespace arrangement_of_BANANA_l79_79548
+
+theorem arrangement_of_BANANA : 
+  (Nat.factorial 6) / ((Nat.factorial 3) * (Nat.factorial 2)) = 60 :=
+by
+  sorry
+
+end arrangement_of_BANANA_l79_79548
+
+
+namespace joan_football_games_l79_79760
+
+theorem joan_football_games (G_total G_last G_this : ℕ) (h1 : G_total = 13) (h2 : G_last = 9) (h3 : G_this = G_total - G_last) : G_this = 4 :=
+by
+  sorry
+
+end joan_football_games_l79_79760
+
+
+namespace books_at_end_l79_79813
+
+-- Define the conditions
+def initialBooks : ℕ := 98
+def checkoutsWednesday : ℕ := 43
+def returnsThursday : ℕ := 23
+def checkoutsThursday : ℕ := 5
+def returnsFriday : ℕ := 7
+
+-- Define the final number of books and the theorem to prove
+def finalBooks : ℕ := initialBooks - checkoutsWednesday + returnsThursday - checkoutsThursday + returnsFriday
+
+-- Prove that the final number of books is 80
+theorem books_at_end : finalBooks = 80 := by
+  sorry
+
+end books_at_end_l79_79813
+
+
+namespace chorus_group_membership_l79_79175
+
+theorem chorus_group_membership (n : ℕ) : 
+  100 < n ∧ n < 200 →
+  n % 3 = 1 ∧ 
+  n % 4 = 2 ∧ 
+  n % 6 = 4 ∧ 
+  n % 8 = 6 →
+  n = 118 ∨ n = 142 ∨ n = 166 ∨ n = 190 :=
+by
+  sorry
+
+end chorus_group_membership_l79_79175
+
+
+namespace ratio_greater_than_one_ratio_greater_than_one_neg_l79_79931
+
+theorem ratio_greater_than_one (a b : ℝ) (h1 : a > 0) (h2 : b > 0) (h3 : a / b > 1) : a > b :=
+by
+  sorry
+
+theorem ratio_greater_than_one_neg (a b : ℝ) (h1 : a < 0) (h2 : b < 0) (h3 : a / b > 1) : a < b :=
+by
+  sorry
+
+end ratio_greater_than_one_ratio_greater_than_one_neg_l79_79931
+
+
+namespace men_in_first_scenario_l79_79408
+
+theorem men_in_first_scenario 
+  (M : ℕ) 
+  (daily_hours_first weekly_earning_first daily_hours_second weekly_earning_second : ℝ) 
+  (number_of_men_second : ℕ)
+  (days_per_week : ℕ := 7) 
+  (h1 : M * daily_hours_first * days_per_week = weekly_earning_first)
+  (h2 : number_of_men_second * daily_hours_second * days_per_week = weekly_earning_second) 
+  (h1_value : daily_hours_first = 10) 
+  (w1_value : weekly_earning_first = 1400) 
+  (h2_value : daily_hours_second = 6) 
+  (w2_value : weekly_earning_second = 1890)
+  (second_scenario_men : number_of_men_second = 9) : 
+  M = 4 :=
+by
+  sorry
+
+end men_in_first_scenario_l79_79408
+
+
+namespace sqrt_12_times_sqrt_27_div_sqrt_3_eq_6_sqrt_3_l79_79705
+
+noncomputable def calculation (x y z : ℝ) : ℝ :=
+  (Real.sqrt x * Real.sqrt y) / Real.sqrt z
+
+theorem sqrt_12_times_sqrt_27_div_sqrt_3_eq_6_sqrt_3 :
+  calculation 12 27 3 = 6 * Real.sqrt 3 :=
+by
+  sorry
+
+end sqrt_12_times_sqrt_27_div_sqrt_3_eq_6_sqrt_3_l79_79705
+
+
+namespace largest_consecutive_odd_sum_l79_79932
+
+theorem largest_consecutive_odd_sum (x : ℤ) (h : 20 * (x + 19) = 8000) : x + 38 = 419 := 
+by
+  sorry
+
+end largest_consecutive_odd_sum_l79_79932
+
+
+namespace fractional_shaded_area_l79_79228
+
+noncomputable def geometric_series_sum (a r : ℚ) : ℚ := a / (1 - r)
+
+theorem fractional_shaded_area :
+  let a := (7 : ℚ) / 16
+  let r := (1 : ℚ) / 16
+  geometric_series_sum a r = 7 / 15 :=
+by
+  sorry
+
+end fractional_shaded_area_l79_79228
+
+
+namespace train_passes_jogger_in_approx_36_seconds_l79_79824
+
+noncomputable def jogger_speed_kmph : ℝ := 8
+noncomputable def train_speed_kmph : ℝ := 55
+noncomputable def distance_ahead_m : ℝ := 340
+noncomputable def train_length_m : ℝ := 130
+
+noncomputable def kmph_to_mps (speed_kmph : ℝ) : ℝ :=
+  (speed_kmph * 1000) / 3600
+
+noncomputable def jogger_speed_mps : ℝ :=
+  kmph_to_mps jogger_speed_kmph
+
+noncomputable def train_speed_mps : ℝ :=
+  kmph_to_mps train_speed_kmph
+
+noncomputable def relative_speed_mps : ℝ :=
+  train_speed_mps - jogger_speed_mps
+
+noncomputable def total_distance_m : ℝ :=
+  distance_ahead_m + train_length_m
+
+noncomputable def time_to_pass_jogger_s : ℝ :=
+  total_distance_m / relative_speed_mps
+
+theorem train_passes_jogger_in_approx_36_seconds : 
+  abs (time_to_pass_jogger_s - 36) < 1 := 
 sorry
 
-end purple_chip_count_l79_79287
+end train_passes_jogger_in_approx_36_seconds_l79_79824
 
 
-namespace angle_between_vectors_l79_79008
+namespace blue_die_prime_yellow_die_power_2_probability_l79_79329
 
-variables (a b : ℝ → ℝ → ℝ)
-variables (θ : ℝ)
+def prime_numbers : Finset ℕ := {2, 3, 5, 7}
 
--- Conditions
-def norm_a : ℝ := 1
-def norm_b : ℝ := 4
-def dot_ab : ℝ := 2
+def powers_of_2 : Finset ℕ := {1, 2, 4, 8}
 
--- Question
-theorem angle_between_vectors : 
-  norm a = norm_a → 
-  norm b = norm_b → 
-  dot_product a b = dot_ab → 
-  θ = arccos (dot_ab / (norm_a * norm_b)) → 
-  θ = real.pi / 3 :=
+def total_outcomes : ℕ := 8 * 8
+
+def successful_outcomes : ℕ := prime_numbers.card * powers_of_2.card
+
+def probability (x y : Finset ℕ) : ℚ := (x.card * y.card) / (total_outcomes : ℚ)
+
+theorem blue_die_prime_yellow_die_power_2_probability :
+  probability prime_numbers powers_of_2 = 1 / 4 :=
 by
   sorry
 
-end angle_between_vectors_l79_79008
+end blue_die_prime_yellow_die_power_2_probability_l79_79329
 
 
-namespace arithmetic_seq_sum_thirteen_terms_l79_79890
+namespace ratio_values_l79_79770
 
-theorem arithmetic_seq_sum_thirteen_terms 
-  (a : ℕ → ℝ) (d : ℝ)
-  (h_arith : ∀ n : ℕ, a (n + 1) = a n + d)
-  (h_condition : 2 * (a 1 + a 4 + a 7) + 3 * (a 9 + a 11) = 24) :
-  (finset.range 13).sum a = 26 :=
-by
-  sorry
+theorem ratio_values (x y z : ℝ) (h₁ : x ≠ 0) (h₂ : y ≠ 0) (h₃ : z ≠ 0) 
+  (h₀ : (x + y) / z = (y + z) / x) (h₀' : (y + z) / x = (z + x) / y) :
+  ∃ a : ℝ, a = -1 ∨ a = 8 :=
+sorry
 
-end arithmetic_seq_sum_thirteen_terms_l79_79890
+end ratio_values_l79_79770
 
 
-namespace A2B2_eq_2AB_l79_79926
+namespace clothing_probability_l79_79006
 
-theorem A2B2_eq_2AB (A B C A₁ B₁ A₂ B₂ : Point) (hABC : Triangle A B C) :
-  is_isosceles_triangle hABC → 
-  (angle C > 60) → 
-  (angle A₁ C B₁ = angle ABC) → 
-  externally_tangent_circle (circumcircle (triangle A₁ B₁ C)) C A B A₂ B₂
-  → (distance A₂ B₂ = 2 * distance A B)
-:= by
-  sorry
-
-end A2B2_eq_2AB_l79_79926
-
-
-namespace find_number_l79_79285
-
-theorem find_number (N : ℝ) (h : 0.6 * (3 / 5) * N = 36) : N = 100 :=
+theorem clothing_probability :
+  let total_clothing := 6 + 8 + 9 + 4,
+      ways_to_choose_four := Nat.choose total_clothing 4,
+      specific_ways := 6 * 8 * 9 * 4 in
+  (6 + 8 + 9 + 4 = 27)
+  -> (ways_to_choose_four = 17550)
+  -> (specific_ways = 1728)
+  -> (specific_ways / ways_to_choose_four = 96 / 975) :=
 by sorry
 
-end find_number_l79_79285
+end clothing_probability_l79_79006
 
 
-namespace cos_B_third_quadrant_l79_79030
+namespace find_width_l79_79333
 
-theorem cos_B_third_quadrant (B : ℝ) (hB1 : π < B ∧ B < 3 * π / 2) (hB2 : sin B = -5 / 13) : cos B = -12 / 13 :=
+-- Definitions and Conditions
+def length : ℝ := 6
+def depth : ℝ := 2
+def total_surface_area : ℝ := 104
+
+-- Statement to prove the width
+theorem find_width (width : ℝ) (h : 12 * width + 4 * width + 24 = total_surface_area) : width = 5 := 
+by { 
+  -- lean 4 statement only, proof omitted
+  sorry 
+}
+
+end find_width_l79_79333
+
+
+namespace sqrt_product_simplification_l79_79918
+
+-- Define the main problem
+theorem sqrt_product_simplification : Real.sqrt 18 * Real.sqrt 72 = 36 := 
 by
   sorry
 
-end cos_B_third_quadrant_l79_79030
+end sqrt_product_simplification_l79_79918
 
 
-namespace cosine_in_third_quadrant_l79_79023
+namespace principal_amount_l79_79317
 
-theorem cosine_in_third_quadrant (B : Real) 
-  (h1 : Real.sin B = -5/13) 
-  (h2 : π < B ∧ B < 3 * π / 2) : Real.cos B = -12/13 := 
+theorem principal_amount (SI : ℝ) (T : ℝ) (R : ℝ) (P : ℝ) (h1 : SI = 140) (h2 : T = 2) (h3 : R = 17.5) :
+  P = 400 :=
+by
+  -- Formal proof would go here
+  sorry
+
+end principal_amount_l79_79317
+
+
+namespace train_pass_platform_time_l79_79203
+
+-- Define the conditions given in the problem.
+def train_length : ℕ := 1200
+def platform_length : ℕ := 1100
+def time_to_cross_tree : ℕ := 120
+
+-- Define the calculation for speed.
+def speed := train_length / time_to_cross_tree
+
+-- Define the combined length of train and platform.
+def combined_length := train_length + platform_length
+
+-- Define the expected time to pass the platform.
+def expected_time_to_pass_platform := combined_length / speed
+
+-- The theorem to prove.
+theorem train_pass_platform_time :
+  expected_time_to_pass_platform = 230 :=
+by {
+  -- Placeholder for the proof.
+  sorry
+}
+
+end train_pass_platform_time_l79_79203
+
+
+namespace lines_intersection_l79_79803
+
+theorem lines_intersection (n c : ℝ) : 
+    (∀ x y : ℝ, y = n * x + 5 → y = 4 * x + c → (x, y) = (8, 9)) → 
+    n + c = -22.5 := 
+by
+    intro h
+    sorry
+
+end lines_intersection_l79_79803
+
+
+namespace housewife_oil_expense_l79_79827
+
+theorem housewife_oil_expense:
+  ∃ M P R: ℝ, (R = 30) ∧ (0.8 * P = R) ∧ ((M / R) - (M / P) = 10) ∧ (M = 1500) :=
+by
+  sorry
+
+end housewife_oil_expense_l79_79827
+
+
+namespace percentage_heavier_l79_79426
+
+variables (J M : ℝ)
+
+theorem percentage_heavier (hM : M ≠ 0) : 
+  100 * ((J + 3) - M) / M = 100 * ((J + 3) - M) / M := 
 sorry
 
-end cosine_in_third_quadrant_l79_79023
+end percentage_heavier_l79_79426
 
 
-namespace position_of_ten_sqrt_three_l79_79334
+namespace find_P_and_Q_l79_79401
 
-theorem position_of_ten_sqrt_three : 
-  let pattern (n : ℕ) := sqrt (2 * ↑n) in 
-  numberAtPosition (10 * sqrt 3) = (38, 2) :=
+variables {x P Q b c : ℝ}
+
+theorem find_P_and_Q :
+  (∃ b c : ℝ, (x^2 + 3 * x + 7) * (x^2 + b * x + c) = x^4 + P * x^2 + Q) →
+  (b + 3 = 0) →
+  (3 * b + c + 7 = P) →
+  (7 * b + 3 * c = 0) →
+  (7 * c = Q) →
+  P + Q = 54 :=
+by
+  intros h1 h2 h3 h4 h5
+  sorry
+
+end find_P_and_Q_l79_79401
+
+
+namespace find_b_neg_l79_79154
+
+noncomputable def h (x : ℝ) : ℝ := if x ≤ 0 then -x else 3 * x - 50
+
+theorem find_b_neg (b : ℝ) (h_neg_b : b < 0) : 
+  h (h (h 15)) = h (h (h b)) → b = - (55 / 3) :=
+by
+  sorry
+
+end find_b_neg_l79_79154
+
+
+namespace find_x_l79_79356
+
+theorem find_x :
+  ∃ X : ℝ, 0.25 * X + 0.20 * 40 = 23 ∧ X = 60 :=
+by
+  sorry
+
+end find_x_l79_79356
+
+
+namespace geometric_sequence_properties_l79_79416
+
+noncomputable def geometric_sequence (a2 a5 : ℕ) (n : ℕ) : ℕ :=
+  3 ^ (n - 1)
+
+noncomputable def sum_first_n_terms (n : ℕ) : ℕ :=
+  (3^n - 1) / 2
+
+def T10_sum_of_sequence : ℚ := 10/11
+
+theorem geometric_sequence_properties :
+  (geometric_sequence 3 81 2 = 3) ∧
+  (geometric_sequence 3 81 5 = 81) ∧
+  (sum_first_n_terms 2 = (geometric_sequence 3 81 1 + geometric_sequence 3 81 2)) ∧
+  (sum_first_n_terms 5 = (geometric_sequence 3 81 1 + geometric_sequence 3 81 2 + geometric_sequence 3 81 3 + geometric_sequence 3 81 4 + geometric_sequence 3 81 5)) ∧
+  T10_sum_of_sequence = 10/11 :=
+by
+  sorry
+
+end geometric_sequence_properties_l79_79416
+
+
+namespace sqrt_sixteen_l79_79651
+
+theorem sqrt_sixteen : ∃ x : ℝ, x^2 = 16 ∧ x = 4 :=
+by
+  sorry
+
+end sqrt_sixteen_l79_79651
+
+
+namespace seventeenth_replacement_month_l79_79632
+
+def months_after_january (n : Nat) : Nat :=
+  n % 12
+
+theorem seventeenth_replacement_month :
+  months_after_january (7 * 16) = 4 :=
+by
+  sorry
+
+end seventeenth_replacement_month_l79_79632
+
+
+namespace modulus_of_complex_number_l79_79121
+
+/-- Definition of the imaginary unit i defined as the square root of -1 --/
+def i : ℂ := Complex.I
+
+/-- Statement that the modulus of z = i (1 - i) equals sqrt(2) --/
+theorem modulus_of_complex_number : Complex.abs (i * (1 - i)) = Real.sqrt 2 :=
 sorry
 
-end position_of_ten_sqrt_three_l79_79334
+end modulus_of_complex_number_l79_79121
 
 
-namespace rationalize_denominator_min_sum_l79_79126
+namespace slower_train_speed_l79_79051
 
-theorem rationalize_denominator_min_sum :
-  ∃ (A B C D : ℤ), (D > 0) ∧ (∀ p : ℤ, Prime p → ¬ (p * p ∣ B)) ∧
-    (Ratio (A * √ B + C) D = Ratio (5 * √ 2) ((√ 25) - (√ 5))) ∧
-    (A + B + C + D = 15) :=
-begin
+noncomputable def speed_of_slower_train (v_f : ℕ) (l1 l2 : ℚ) (t : ℚ) : ℚ :=
+  let total_distance := l1 + l2
+  let time_in_hours := t / 3600
+  let relative_speed := total_distance / time_in_hours
+  relative_speed - v_f
+
+theorem slower_train_speed :
+  speed_of_slower_train 210 (11 / 10) (9 / 10) 24 = 90 := by
   sorry
-end
 
-end rationalize_denominator_min_sum_l79_79126
+end slower_train_speed_l79_79051
 
 
-namespace max_consecutive_integers_sum_lt_1000_l79_79240
+namespace decrease_percent_revenue_l79_79467
 
-theorem max_consecutive_integers_sum_lt_1000
-  (n : ℕ)
-  (h : (n * (n + 1)) / 2 < 1000) : n ≤ 44 :=
+theorem decrease_percent_revenue (T C : ℝ) (hT : T > 0) (hC : C > 0) :
+  let original_revenue := T * C
+  let new_tax := 0.68 * T
+  let new_consumption := 1.12 * C
+  let new_revenue := new_tax * new_consumption
+  let decrease_in_revenue := original_revenue - new_revenue
+  let decrease_percent := (decrease_in_revenue / original_revenue) * 100
+  decrease_percent = 23.84 := by {
+    sorry
+  }
+
+end decrease_percent_revenue_l79_79467
+
+
+namespace fred_initial_dimes_l79_79379
+
+theorem fred_initial_dimes (current_dimes borrowed_dimes initial_dimes : ℕ)
+  (hc : current_dimes = 4)
+  (hb : borrowed_dimes = 3)
+  (hi : current_dimes + borrowed_dimes = initial_dimes) :
+  initial_dimes = 7 := 
 by
   sorry
 
-end max_consecutive_integers_sum_lt_1000_l79_79240
+end fred_initial_dimes_l79_79379
 
 
-namespace tangent_sum_of_angles_l79_79221
+namespace find_salary_of_january_l79_79681
 
--- Given conditions and context
-variables (K M A B : Point)
-variable (circle1 : Circle K M)
-variable (circle2 : Circle K M)
-variable (tangent : Line)
-variable (is_tangent1 : tangent.is_tangent circle1 A)
-variable (is_tangent2 : tangent.is_tangent circle2 B)
+variables (J F M A May : ℝ)
 
--- Prove that the sum of the angles ∠AMB and ∠AKB is 180°
-theorem tangent_sum_of_angles (K M A B : Point) (circle1 circle2 : Circle K M) (tangent : Line)
-  (is_tangent1 : tangent.is_tangent circle1 A) (is_tangent2 : tangent.is_tangent circle2 B) :
-  angle A M B + angle A K B = 180 :=
-  sorry
-
-end tangent_sum_of_angles_l79_79221
-
-
-namespace sum_a_sequence_sum_b_sequence_l79_79421
-
--- Define the sequence a_n such that a_1 = 4 and a_(n+1) = 2 * a_n
-def a (n : ℕ) : ℕ :=
-  if n = 1 then 4 else 2 * a (n - 1)
-
--- Define the sum S_n of the first n terms of the sequence a_n
-def S (n : ℕ) : ℕ :=
-  finset.sum (finset.range n) (λ i, a (i + 1))
-
--- Define the sequence b_n such that b_7 = a_3 and b_15 = a_4
-def b (n : ℕ) : ℕ := 2 * n + 2
-
--- Define the sum T_n of the first n terms of the sequence b_n
-def T (n : ℕ) : ℕ :=
-  finset.sum (finset.range n) (λ i, b (i + 1))
-
--- Define the theorems for the problems
-theorem sum_a_sequence (n : ℕ) : S n = 2 ^ (n + 2) - 4 :=
-  sorry
-
-theorem sum_b_sequence (n : ℕ) : T n = n ^ 2 + 3 * n :=
-  sorry
-
-end sum_a_sequence_sum_b_sequence_l79_79421
-
-
-namespace total_sum_of_money_in_rupees_l79_79625
-
-theorem total_sum_of_money_in_rupees (total_coins : ℕ) (coins_20_paise : ℕ) (coins_25_paise : ℕ) :
-  total_coins = 342 → coins_20_paise = 290 → coins_25_paise = total_coins - coins_20_paise → 
-  (coins_20_paise * 20 + coins_25_paise * 25) / 100 = 71 :=
-by
-  intros h_total h_20 h_25
-  have h_paise_total : coins_20_paise * 20 + coins_25_paise * 25 = 7100 :=
-    sorry -- This would be filled with the calculations if proof was required
-  rw div_eq_of_eq_mul_right _ _ (by norm_num : 100 ≠ 0)
-  rw ←h_paise_total
-  assumption
-
-end total_sum_of_money_in_rupees_l79_79625
-
-
-namespace number_of_factors_l79_79270
-
-theorem number_of_factors (x : ℤ) : 
-  (x^11 - x^3).factor_count_with_integral_coefficients = 6 := 
+theorem find_salary_of_january
+  (h1 : (J + F + M + A) / 4 = 8000)
+  (h2 : (F + M + A + May) / 4 = 8600)
+  (h3 : May = 6500) :
+  J = 4100 := 
 sorry
 
-end number_of_factors_l79_79270
+end find_salary_of_january_l79_79681
 
 
-namespace sin_B_value_l79_79874
+namespace banana_permutations_l79_79542
 
-theorem sin_B_value (A B C : ℝ) (h : sin A / sin B / sin C = 6 / 5 / 4): sin B = 5 * sqrt 7 / 16 :=
-sorry
-
-end sin_B_value_l79_79874
-
-
-namespace meal_cost_before_tax_and_tip_l79_79049
-
-theorem meal_cost_before_tax_and_tip (total_expenditure : ℝ) (tax_rate : ℝ) (tip_rate : ℝ) (base_meal_cost : ℝ):
-  total_expenditure = 35.20 →
-  tax_rate = 0.08 →
-  tip_rate = 0.18 →
-  base_meal_cost * (1 + tax_rate + tip_rate) = total_expenditure →
-  base_meal_cost = 28 :=
-by
-  intros h_total h_tax h_tip h_eq
+theorem banana_permutations : (Nat.factorial 6) / ((Nat.factorial 3) * (Nat.factorial 2)) = 60 := by
   sorry
 
-end meal_cost_before_tax_and_tip_l79_79049
+end banana_permutations_l79_79542
 
 
-namespace monotone_increasing_interval_l79_79617
+namespace field_trip_count_l79_79822
 
-noncomputable def f (x : ℝ) : ℝ := real.logb (1/2) (x^2 - 4)
-
-theorem monotone_increasing_interval :
-  ∀ x y : ℝ, x < -2 → y < -2 → x < y → f x < f y :=
-by
-  intros x y hx hy hxy
-  dsimp [f]
+theorem field_trip_count (vans: ℕ) (buses: ℕ) (people_per_van: ℕ) (people_per_bus: ℕ)
+  (hv: vans = 9) (hb: buses = 10) (hpv: people_per_van = 8) (hpb: people_per_bus = 27):
+  vans * people_per_van + buses * people_per_bus = 342 := by
   sorry
 
-end monotone_increasing_interval_l79_79617
+end field_trip_count_l79_79822
 
 
-namespace pentagon_areas_l79_79118
+namespace comparison_abc_l79_79635
 
-noncomputable def find_areas (x A_total : ℝ) : (ℝ × ℝ) :=
-  let y := (A_total - x) / 10 in
-  (y, y)
+noncomputable def a : ℝ := 0.98 + Real.sin 0.01
+noncomputable def b : ℝ := Real.exp (-0.01)
+noncomputable def c : ℝ := 0.5 * (Real.log 2023 / Real.log 2022 + Real.log 2022 / Real.log 2023)
 
-theorem pentagon_areas (x y z A_total : ℝ) (hx : x > 0) (hy : y = z) (hz : A_total = x + 10 * y) :
-  y = z ∧ y = (A_total - x) / 10 :=
-by
+theorem comparison_abc : c > b ∧ b > a := by
   sorry
 
-end pentagon_areas_l79_79118
+end comparison_abc_l79_79635
 
 
-namespace triangle_obtuse_l79_79044
+namespace men_in_first_group_l79_79015
 
-noncomputable def triangle_is_obtuse (A B C : ℝ) (a b c : ℝ) : Prop :=
-  a.sin * A.sin + b.sin * B.sin < c.sin * C.sin → ∃ (θ : ℝ), A + B + C = π ∧ θ = C ∧ π / 2 < θ ∧ θ < π
+variable (M : ℕ) (daily_wage : ℝ)
+variable (h1 : M * 10 * daily_wage = 1200)
+variable (h2 : 9 * 6 * daily_wage = 1620)
+variable (dw_eq : daily_wage = 30)
 
-theorem triangle_obtuse (A B C a b c : ℝ) (h1 : a.sin * A.sin + b.sin * B.sin < c.sin * C.sin)
-(h2 : A + B + C = π) : triangle_is_obtuse A B C a b c :=
-begin
-  sorry
-end
-
-end triangle_obtuse_l79_79044
-
-
-namespace m_range_for_circle_l79_79496
-
-def is_circle (x y m : ℝ) : Prop :=
-  x^2 + y^2 - 2 * (m - 3) * x + 2 * y + 5 = 0
-
-theorem m_range_for_circle (m : ℝ) :
-  (∀ x y : ℝ, is_circle x y m) → ((m > 5) ∨ (m < 1)) :=
-by 
-  sorry -- Proof not required
-
-end m_range_for_circle_l79_79496
-
-
-namespace max_consecutive_sum_le_1000_l79_79231
-
-theorem max_consecutive_sum_le_1000 : 
-  ∃ (n : ℕ), (∀ m : ℕ, m > n → ∑ k in finset.range (m + 1), k > 1000) ∧
-             ∑ k in finset.range (n + 1), k ≤ 1000 :=
-by
-  sorry
-
-end max_consecutive_sum_le_1000_l79_79231
-
-
-namespace determine_triangle_type_l79_79372
-
-noncomputable def triangle_type (A B C a b c : ℝ) (h1 : A + B + C = 180)
-  (h2 : (sin A) / a = (cos B) / b) (h3 : (cos B) / b = (cos C) / c) : Prop :=
-  (A = 90 ∧ B = 45 ∧ C = 45)
-
-theorem determine_triangle_type (A B C a b c : ℝ) 
-  (h1 : A + B + C = 180) 
-  (h2 : (sin A) / a = (cos B) / b) 
-  (h3 : (cos B) / b = (cos C) / c) :
-  triangle_type A B C a b c h1 h2 h3 :=
-begin
-  sorry
-end
-
-end determine_triangle_type_l79_79372
-
-
-namespace max_consecutive_integers_sum_lt_1000_l79_79261
-
-theorem max_consecutive_integers_sum_lt_1000 :
-  ∃ n : ℕ, (∀ m : ℕ, m ≤ n → m * (m + 1) / 2 < 1000) ∧ (n * (n + 1) / 2 < 1000) ∧ ¬((n + 1) * (n + 2) / 2 < 1000) :=
-sorry
-
-end max_consecutive_integers_sum_lt_1000_l79_79261
-
-
-namespace son_age_l79_79695
-
-theorem son_age (S F : ℕ) (h1 : F = S + 30) (h2 : F + 2 = 2 * (S + 2)) : S = 28 :=
-by
-  sorry
-
-end son_age_l79_79695
-
-
-namespace vitya_probability_l79_79650
-
-theorem vitya_probability :
-  let total_sequences := (finset.range 6).card * 
-                         (finset.range 5).card * 
-                         (finset.range 4).card * 
-                         (finset.range 3).card * 
-                         (finset.range 2).card * 
-                         (finset.range 1).card,
-      favorable_sequences := 1 * 3 * 5 * 7 * 9 * 11,
-      total_possibilities := nat.choose 12 2 * nat.choose 10 2 * 
-                             nat.choose 8 2 * nat.choose 6 2 * 
-                             nat.choose 4 2 * nat.choose 2 2,
-      P := (favorable_sequences : ℚ) / (total_possibilities : ℚ)
-  in P = 1 / 720 := 
-sorry
-
-end vitya_probability_l79_79650
-
-
-namespace minimum_value_of_absolute_difference_l79_79844
-
-theorem minimum_value_of_absolute_difference (x₁ x₂ : ℝ) (h : |Real.sin (2 * x₁) - Real.sin (2 * x₂)| = 2) :
-  |x₁ - x₂| = Real.pi / 2 :=
-sorry
-
-end minimum_value_of_absolute_difference_l79_79844
-
-
-namespace time_away_l79_79724
-
-theorem time_away : 
-  ∃ (n : ℝ), let h := 150 + n / 2,
-                 m := 6 * n,
-                 diff1 := |150 - 11 * n / 2| = 120,
-                 diff2 := |150 - 11 * n / 2| = -120,
-                 n1 := 60 / 11,
-                 n2 := 540 / 11
-             in 
-             0 < n1 ∧ n1 < 60 ∧
-             0 < n2 ∧ n2 < 60 ∧
-             (n2 - n1 = 480 / 11) :=
+theorem men_in_first_group : M = 4 :=
 by sorry
 
-end time_away_l79_79724
+end men_in_first_group_l79_79015
 
 
-namespace expected_value_of_N_l79_79340
+namespace number_of_ordered_pairs_l79_79250
 
-noncomputable def expected_value_N : ℝ :=
-  30
+-- Formal statement of the problem in Lean 4
+theorem number_of_ordered_pairs : 
+  ∃ (n : ℕ), n = 128 ∧ 
+  ∀ (a b : ℝ), (∃ (x y : ℤ), (a * x + b * y = 1) ∧ (x^2 + y^2 = 65)) ↔ n = 128 :=
+sorry
 
-theorem expected_value_of_N :
-  -- Suppose Bob chooses a 4-digit binary string uniformly at random,
-  -- and examines an infinite sequence of independent random binary bits.
-  -- Let N be the least number of bits Bob has to examine to find his chosen string.
-  -- Then the expected value of N is 30.
-  expected_value_N = 30 :=
+end number_of_ordered_pairs_l79_79250
+
+
+namespace student_count_l79_79450
+
+noncomputable def numberOfStudents (decreaseInAverageWeight totalWeightDecrease : ℕ) : ℕ :=
+  totalWeightDecrease / decreaseInAverageWeight
+
+theorem student_count 
+  (decreaseInAverageWeight : ℕ)
+  (totalWeightDecrease : ℕ)
+  (condition_avg_weight_decrease : decreaseInAverageWeight = 4)
+  (condition_weight_difference : totalWeightDecrease = 92 - 72) :
+  numberOfStudents decreaseInAverageWeight totalWeightDecrease = 5 := by 
+  -- We are not providing the proof details as per the instruction
+  sorry
+
+end student_count_l79_79450
+
+
+namespace fraction_is_percent_l79_79059
+
+theorem fraction_is_percent (y : ℝ) (hy : y > 0) : (6 * y / 20 + 3 * y / 10) = (60 / 100) * y :=
 by
   sorry
 
-end expected_value_of_N_l79_79340
+end fraction_is_percent_l79_79059
 
 
-namespace max_ratio_point_l79_79573
+namespace speed_of_stream_l79_79682
 
-theorem max_ratio_point (a : ℝ) (M : ℝ) (x := 2 * a / (1 + Real.sqrt 5)) : 
-  is_square ABCD a → M ∈ line_extended CD → 
-  ( ∀ y : ℝ, y = (distance M A / distance M B) → 
-    ∃ y_max : ℝ, y_max = (distance M A / distance M B) ∧ y_max = x^2 ) :=
+-- Define the speed of the boat in still water
+def speed_of_boat_in_still_water : ℝ := 39
+
+-- Define the effective speed upstream and downstream
+def effective_speed_upstream (v : ℝ) : ℝ := speed_of_boat_in_still_water - v
+def effective_speed_downstream (v : ℝ) : ℝ := speed_of_boat_in_still_water + v
+
+-- Define the condition that time upstream is twice the time downstream
+def time_condition (D v : ℝ) : Prop := 
+  (D / effective_speed_upstream v = 2 * (D / effective_speed_downstream v))
+
+-- The main theorem stating the speed of the stream
+theorem speed_of_stream (D : ℝ) (h : D > 0) : (v : ℝ) → time_condition D v → v = 13 :=
+by
+  sorry
+
+end speed_of_stream_l79_79682
+
+
+namespace probability_blue_prime_and_yellow_power_of_two_l79_79328
+
+-- Definitions
+def blue_die_outcomes := { n : ℕ | 1 ≤ n ∧ n ≤ 8 }
+def yellow_die_outcomes := { n : ℕ | 1 ≤ n ∧ n ≤ 8 }
+def prime_numbers := {2, 3, 5, 7}
+def powers_of_two := {1, 2, 4, 8}
+
+-- Theorem statement
+theorem probability_blue_prime_and_yellow_power_of_two :
+  (finset.card (prime_numbers ×ˢ powers_of_two) : ℚ) / (finset.card (blue_die_outcomes ×ˢ yellow_die_outcomes) : ℚ) = 1 / 4 :=
+by
+  sorry
+
+end probability_blue_prime_and_yellow_power_of_two_l79_79328
+
+
+namespace lines_do_not_intersect_l79_79713
+
+theorem lines_do_not_intersect (b : ℝ) :
+  ∀ s v : ℝ,
+    (2 + 3 * s = 5 + 6 * v) →
+    (1 + 4 * s = 3 + 3 * v) →
+    (b + 5 * s = 1 + 2 * v) →
+    b ≠ -4/5 :=
+by
+  intros s v h1 h2 h3
+  sorry
+
+end lines_do_not_intersect_l79_79713
+
+
+namespace parabola_directrix_distance_l79_79017
+
+theorem parabola_directrix_distance (a : ℝ) : 
+  (abs (a / 4 + 1) = 2) → (a = -12 ∨ a = 4) := 
+by
+  sorry
+
+end parabola_directrix_distance_l79_79017
+
+
+namespace max_r1_minus_r2_l79_79089
+
+noncomputable def ellipse (x y : ℝ) : Prop :=
+  (x^2) / 2 + y^2 = 1
+
+def F1 : ℝ × ℝ := (-1, 0)
+def F2 : ℝ × ℝ := (1, 0)
+
+def P (x y : ℝ) : Prop :=
+  ellipse x y ∧ x > 0 ∧ y > 0
+
+def r1 (x y : ℝ) (Q2 : ℝ × ℝ) : ℝ := 
+  -- Assume a function that calculates the inradius of triangle ΔPF1Q2
+  sorry
+
+def r2 (x y : ℝ) (Q1 : ℝ × ℝ) : ℝ :=
+  -- Assume a function that calculates the inradius of triangle ΔPF2Q1
+  sorry
+
+theorem max_r1_minus_r2 :
+  ∃ (x y : ℝ) (Q1 Q2 : ℝ × ℝ), P x y →
+    r1 x y Q2 - r2 x y Q1 = 1/3 := 
+sorry
+
+end max_r1_minus_r2_l79_79089
+
+
+namespace number_of_packages_needed_l79_79873
+
+-- Define the problem constants and constraints
+def students_per_class := 30
+def number_of_classes := 4
+def buns_per_student := 2
+def buns_per_package := 8
+
+-- Calculate the total number of students
+def total_students := number_of_classes * students_per_class
+
+-- Calculate the total number of buns needed
+def total_buns := total_students * buns_per_student
+
+-- Calculate the required number of packages
+def required_packages := total_buns / buns_per_package
+
+-- Prove that the required number of packages is 30
+theorem number_of_packages_needed : required_packages = 30 := by
+  -- The proof would be here, but for now we assume it is correct
+  sorry
+
+end number_of_packages_needed_l79_79873
+
+
+namespace calculate_expression_l79_79091
+
+theorem calculate_expression :
+  (2 + 3) * (2^2 + 3^2) * (2^4 + 3^4) * (2^8 + 3^8) * (2^16 + 3^16) * (2^32 + 3^32) * (2^64 + 3^64) * (3 + 2) = X :=
+by
+  sorry
+
+end calculate_expression_l79_79091
+
+
+namespace floor_of_ten_times_expected_value_of_fourth_largest_l79_79938
+
+theorem floor_of_ten_times_expected_value_of_fourth_largest : 
+  let n := 90
+  let m := 5
+  let k := 4
+  let E := (k * (n + 1)) / (m + 1)
+  ∀ (X : Fin m → Fin n) (h : ∀ i j : Fin m, i ≠ j → X i ≠ X j), 
+  Nat.floor (10 * E) = 606 := 
+by
+  sorry
+
+end floor_of_ten_times_expected_value_of_fourth_largest_l79_79938
+
+
+namespace root_situation_l79_79186
+
+theorem root_situation (a b : ℝ) : 
+  ∃ (m n : ℝ), 
+    (x - a) * (x - (a + b)) = 1 → 
+    (m < a ∧ a < n) ∨ (n < a ∧ a < m) :=
+sorry
+
+end root_situation_l79_79186
+
+
+namespace solve_inequality_l79_79191
+
+-- Define the domain and inequality conditions
+def inequality_condition (x : ℝ) : Prop := (1 / (x - 1)) > 1
+def domain_condition (x : ℝ) : Prop := x ≠ 1
+
+-- State the theorem to be proved.
+theorem solve_inequality (x : ℝ) : domain_condition x → inequality_condition x → 1 < x ∧ x < 2 :=
+by
+  intros h_domain h_ineq
+  sorry
+
+end solve_inequality_l79_79191
+
+
+namespace books_left_on_Fri_l79_79810
+
+-- Define the conditions as constants or values
+def books_at_beginning : ℕ := 98
+def books_checked_out_Wed : ℕ := 43
+def books_returned_Thu : ℕ := 23
+def books_checked_out_Thu : ℕ := 5
+def books_returned_Fri : ℕ := 7
+
+-- The proof statement to verify the final number of books
+theorem books_left_on_Fri (b : ℕ) :
+  b = (books_at_beginning - books_checked_out_Wed) + books_returned_Thu - books_checked_out_Thu + books_returned_Fri := 
+  sorry
+
+end books_left_on_Fri_l79_79810
+
+
+namespace student_community_arrangements_l79_79254
+
+theorem student_community_arrangements :
+  (3 ^ 4) = 81 :=
+by
+  sorry
+
+end student_community_arrangements_l79_79254
+
+
+namespace permutations_of_BANANA_l79_79526
+
+/-- The number of distinct permutations of the word "BANANA" is 60. -/
+theorem permutations_of_BANANA : (Nat.factorial 6 / (Nat.factorial 3 * Nat.factorial 2 * Nat.factorial 1)) = 60 := by
+  sorry
+
+end permutations_of_BANANA_l79_79526
+
+
+namespace additional_interest_due_to_higher_rate_l79_79064
+
+def principal : ℝ := 2500
+def rate1 : ℝ := 0.18
+def rate2 : ℝ := 0.12
+def time : ℝ := 2
+
+def simple_interest (P : ℝ) (r : ℝ) (t : ℝ) : ℝ :=
+  P * r * t
+
+theorem additional_interest_due_to_higher_rate :
+  simple_interest principal rate1 time - simple_interest principal rate2 time = 300 :=
+by
+  sorry
+
+end additional_interest_due_to_higher_rate_l79_79064
+
+
+namespace infinite_primes_l79_79179
+
+theorem infinite_primes : ∀ (p : ℕ), Prime p → ¬ (∃ q : ℕ, Prime q ∧ q > p) := sorry
+
+end infinite_primes_l79_79179
+
+
+namespace ratio_of_rectangle_sides_l79_79757
+
+theorem ratio_of_rectangle_sides (x y : ℝ) (h : x < y) 
+  (hs : x + y - Real.sqrt (x^2 + y^2) = (1 / 3) * y) : 
+  x / y = 5 / 12 :=
+by
+  sorry
+
+end ratio_of_rectangle_sides_l79_79757
+
+
+namespace stephanie_quarters_fraction_l79_79445
+
+/-- Stephanie has a collection containing exactly one of the first 25 U.S. state quarters. 
+    The quarters are in the order the states joined the union.
+    Suppose 8 states joined the union between 1800 and 1809. -/
+theorem stephanie_quarters_fraction :
+  (8 / 25 : ℚ) = (8 / 25) :=
+by
+  sorry
+
+end stephanie_quarters_fraction_l79_79445
+
+
+namespace solveTheaterProblem_l79_79699
+
+open Nat
+
+def theaterProblem : Prop :=
+  ∃ (A C : ℕ), (A + C = 80) ∧ (12 * A + 5 * C = 519) ∧ (C = 63)
+
+theorem solveTheaterProblem : theaterProblem :=
+  by
+  sorry
+
+end solveTheaterProblem_l79_79699
+
+
+namespace john_new_total_lifting_capacity_is_correct_l79_79143
+
+def initial_clean_and_jerk : ℕ := 80
+def initial_snatch : ℕ := 50
+
+def new_clean_and_jerk : ℕ := 2 * initial_clean_and_jerk
+def new_snatch : ℕ := initial_snatch + (initial_snatch * 8 / 10)
+
+def new_combined_total_capacity : ℕ := new_clean_and_jerk + new_snatch
+
+theorem john_new_total_lifting_capacity_is_correct : 
+  new_combined_total_capacity = 250 := by
+  sorry
+
+end john_new_total_lifting_capacity_is_correct_l79_79143
+
+
+namespace unique_solution_for_2_3_6_eq_7_l79_79245
+
+theorem unique_solution_for_2_3_6_eq_7 (x : ℝ) : 2^x + 3^x + 6^x = 7^x → x = 2 :=
+by
+  intro h
+  -- Add the relevant proof tactic steps here
+  sorry
+
+end unique_solution_for_2_3_6_eq_7_l79_79245
+
+
+namespace find_m_l79_79745
+
+open Complex
+
+theorem find_m (m : ℝ) : (re ((1 + I) / (1 - I) + m * (1 - I) / (1 + I)) = ((1 + I) / (1 - I) + m * (1 - I) / (1 + I))) → m = 1 :=
+by
+  sorry
+
+end find_m_l79_79745
+
+
+namespace mileage_per_gallon_l79_79221
+
+noncomputable def car_mileage (distance: ℝ) (gasoline: ℝ) : ℝ :=
+  distance / gasoline
+
+theorem mileage_per_gallon :
+  car_mileage 190 4.75 = 40 :=
+by
+  -- proof omitted
+  sorry
+
+end mileage_per_gallon_l79_79221
+
+
+namespace problem1_problem2_l79_79837
+
+-- Problem 1
+theorem problem1 : ((- (1/2) - (1/3) + (3/4)) * -60) = 5 :=
+by
+  -- The proof steps would go here
+  sorry
+
+-- Problem 2
+theorem problem2 : ((-1)^4 - (1/6) * (3 - (-3)^2)) = 2 :=
+by
+  -- The proof steps would go here
+  sorry
+
+end problem1_problem2_l79_79837
+
+
+namespace root_conditions_l79_79390
+
+-- Given conditions and definitions:
+def quadratic_eq (m x : ℝ) : ℝ := x^2 + (m - 3) * x + m
+
+-- The proof problem statement
+theorem root_conditions (m : ℝ) (h1 : ∃ x y : ℝ, quadratic_eq m x = 0 ∧ quadratic_eq m y = 0 ∧ x > 1 ∧ y < 1) : m < 1 :=
+sorry
+
+end root_conditions_l79_79390
+
+
+namespace total_area_of_field_l79_79072
+
+theorem total_area_of_field (A1 A2 : ℝ) (h1 : A1 = 225)
+    (h2 : A2 - A1 = (1 / 5) * ((A1 + A2) / 2)) :
+  A1 + A2 = 500 := by
+  sorry
+
+end total_area_of_field_l79_79072
+
+
+namespace projectiles_initial_distance_l79_79193
+
+theorem projectiles_initial_distance (Projectile1_speed Projectile2_speed Time_to_meet : ℕ) 
+  (h1 : Projectile1_speed = 444)
+  (h2 : Projectile2_speed = 555)
+  (h3 : Time_to_meet = 2) : 
+  (Projectile1_speed + Projectile2_speed) * Time_to_meet = 1998 := by
+  sorry
+
+end projectiles_initial_distance_l79_79193
+
+
+namespace female_students_count_l79_79653
+
+variable (F : ℕ)
+
+theorem female_students_count
+    (avg_all_students : ℕ)
+    (avg_male_students : ℕ)
+    (avg_female_students : ℕ)
+    (num_male_students : ℕ)
+    (condition1 : avg_all_students = 90)
+    (condition2 : avg_male_students = 82)
+    (condition3 : avg_female_students = 92)
+    (condition4 : num_male_students = 8)
+    (condition5 : 8 * 82 + F * 92 = (8 + F) * 90) : 
+    F = 32 := 
 by 
   sorry
 
-end max_ratio_point_l79_79573
+end female_students_count_l79_79653
 
 
-namespace power_decomposition_l79_79797
+namespace remaining_sum_avg_l79_79951
 
-theorem power_decomposition (n m : ℕ) (h1 : n ≥ 2) 
-  (h2 : n * n = 1 + 3 + 5 + 7 + 9 + 11 + 13 + 15 + 17 + 19) 
-  (h3 : Nat.succ 19 = 21) 
-  : m + n = 15 := sorry
+variable (a b : ℕ → ℝ)
+variable (h1 : 1 / 6 * (a 1 + a 2 + a 3 + a 4 + a 5 + a 6) = 2.5)
+variable (h2 : 1 / 2 * (a 1 + a 2) = 1.1)
+variable (h3 : 1 / 2 * (a 3 + a 4) = 1.4)
 
-end power_decomposition_l79_79797
-
-
-namespace find_a_and_b_l79_79415
-
-variable (a b : ℝ) (z : ℂ)
-
-def z_def := z = a + b * Complex.I
-def conj_z_def := Complex.conj z = a - b * Complex.I
-def equation := z * Complex.I + 2 * Complex.conj z = 3
-
-theorem find_a_and_b (h1 : z_def a b z) (h2 : conj_z_def a b z) (h3 : equation a b z) :
-  a = 2 ∧ b = 1 :=
+theorem remaining_sum_avg :
+  1 / 2 * (a 5 + a 6) = 5 :=
 by
   sorry
 
-end find_a_and_b_l79_79415
+end remaining_sum_avg_l79_79951
 
 
-namespace max_consecutive_sum_lt_1000_l79_79236
+namespace set_difference_example_l79_79028
 
-theorem max_consecutive_sum_lt_1000 : ∃ (n : ℕ), (∀ (m : ℕ), m > n → (m * (m + 1)) / 2 ≥ 1000) ∧ (∀ (k : ℕ), k ≤ n → (k * (k + 1)) / 2 < 1000) :=
-begin
-  sorry,
-end
+-- Define P and Q based on the given conditions
+def P : Set ℝ := {x | 0 < x ∧ x < 2}
+def Q : Set ℝ := {x | 1 < x ∧ x < 3}
 
-end max_consecutive_sum_lt_1000_l79_79236
-
-
-namespace product_of_numbers_l79_79972
-
-theorem product_of_numbers (x y : ℝ) (h1 : x - y = 7) (h2 : x^2 + y^2 = 85) : x * y = 18 := by
+-- State the theorem: P - Q equals to the set {x | 0 < x ≤ 1}
+theorem set_difference_example : P \ Q = {x | 0 < x ∧ x ≤ 1} := 
+  by
   sorry
 
-end product_of_numbers_l79_79972
+end set_difference_example_l79_79028
 
 
-namespace train_crossing_time_l79_79902
+namespace lagrange_mean_value_problem_l79_79020
 
-noncomputable def convert_speed (km_hr : ℕ) : ℕ :=
-  km_hr * 1000 / 3600
+noncomputable def g (x : ℝ) : ℝ := (Real.log x) + x
 
-theorem train_crossing_time 
-  (distance : ℕ) 
-  (speed_km_hr : ℕ) 
-  (speed_m_s : ℕ) 
-  (time : ℕ) :
-  distance = 750 ∧ speed_km_hr = 180 ∧ speed_m_s = convert_speed speed_km_hr ∧ time = distance / speed_m_s
-  → time = 15 :=
+theorem lagrange_mean_value_problem :
+  ∃ c : ℝ, c ∈ set.Ioo 1 2 ∧ 
+           deriv g c = Real.log 2 + 1 :=
+by
+  have h1 : continuous_on g (set.Icc 1 2),
+  { sorry }
+  have h2 : ∀ x ∈ set.Ioo 1 2, differentiable_at ℝ g x,
+  { sorry }
+  have h3 : ∀ x ∈ set.Ioo 1 2, deriv g x = (1 / x) + 1,
+  { sorry }
+  use 1 / Real.log 2
+  split
+  { sorry }
+  { sorry }
+  sorry
+
+
+end lagrange_mean_value_problem_l79_79020
+
+
+namespace optometrist_sales_l79_79833
+
+noncomputable def total_pairs_optometrist_sold (H S : ℕ) (total_sales: ℝ) : Prop :=
+  (S = H + 7) ∧ 
+  (total_sales = 0.9 * (95 * ↑H + 175 * ↑S)) ∧ 
+  (total_sales = 2469)
+
+theorem optometrist_sales :
+  ∃ H S : ℕ, total_pairs_optometrist_sold H S 2469 ∧ H + S = 17 :=
 by 
-  intros h,
-  cases h with h_distance h_rest, 
-  cases h_rest with h_speed_km_hr h_rest,
-  cases h_rest with h_speed_m_s h_time, 
   sorry
 
-end train_crossing_time_l79_79902
+end optometrist_sales_l79_79833
 
 
-namespace local_minimum_interval_l79_79977
+namespace problem1_problem2_l79_79976
 
-noncomputable def f (x : ℝ) (b : ℝ) : ℝ :=
-  (1/3 : ℝ) * x^3 - (1/2 : ℝ) * (2 * b + 1) * x^2 + b * (b + 1) * x
-
-theorem local_minimum_interval (b : ℝ) :
-  (∃ x : ℝ, 0 < x ∧ x < 2 ∧ (∃ ε > 0, ∀ y, abs(y - x) < ε → f y b ≥ f x b)) →
-  -1 < b ∧ b < 1 :=
-by
+theorem problem1 : 2 * Real.sqrt 3 - Real.sqrt 12 + Real.sqrt 27 = 3 * Real.sqrt 3 := by
   sorry
 
-end local_minimum_interval_l79_79977
+theorem problem2 : (Real.sqrt 18 - Real.sqrt 3) * Real.sqrt 12 = 6 * Real.sqrt 6 - 6 := by
+  sorry
+
+end problem1_problem2_l79_79976
 
 
-namespace max_min_of_f_l79_79782
+namespace cos_value_l79_79724
 
-noncomputable def f (x : ℝ) : ℝ := real.sqrt (100 - x^2)
+theorem cos_value (α : ℝ) (h : Real.sin (α + π / 6) = 1 / 3) : Real.cos (π / 3 - α) = 1 / 3 :=
+  sorry
 
-theorem max_min_of_f :
-  (∀ x ∈ set.Icc (-6:ℝ) 8, f x ≤ 10) ∧
-  (∃ x ∈ set.Icc (-6:ℝ) 8, f x = 10) ∧
-  (∀ x ∈ set.Icc (-6:ℝ) 8, f x ≥ 6) ∧
-  (∃ x ∈ set.Icc (-6:ℝ) 8, f x = 6) :=
+end cos_value_l79_79724
+
+
+namespace cistern_water_depth_l79_79959
+
+theorem cistern_water_depth:
+  ∀ h: ℝ,
+  (4 * 4 + 4 * h * 4 + 4 * h * 4 = 36) → h = 1.25 := by
+    sorry
+
+end cistern_water_depth_l79_79959
+
+
+namespace no_solution_exists_l79_79034
+
+theorem no_solution_exists :
+  ¬ ∃ (x1 x2 x3 x4 : ℝ), 
+    (x1 + x2 = 1) ∧
+    (x2 + x3 - x4 = 1) ∧
+    (0 ≤ x1) ∧
+    (0 ≤ x2) ∧
+    (0 ≤ x3) ∧
+    (0 ≤ x4) ∧
+    ∀ (F : ℝ), F = x1 - x2 + 2 * x3 - x4 → 
+    ∀ (b : ℝ), F ≤ b :=
+by sorry
+
+end no_solution_exists_l79_79034
+
+
+namespace minimize_circumscribed_sphere_radius_l79_79639
+
+noncomputable def cylinder_surface_area (r h : ℝ) : ℝ :=
+  2 * Real.pi * r^2 + 2 * Real.pi * r * h
+
+noncomputable def circumscribed_sphere_radius (r h : ℝ) : ℝ :=
+  (r^2 + (1 / 2 * h)^2).sqrt
+
+theorem minimize_circumscribed_sphere_radius (r : ℝ) (h : ℝ) (hr : cylinder_surface_area r h = 16 * Real.pi) : 
+  r^2 = 8 * Real.sqrt 5 / 5 :=
 sorry
 
-end max_min_of_f_l79_79782
+end minimize_circumscribed_sphere_radius_l79_79639
 
 
-namespace probability_of_specific_sequence_l79_79663
+namespace probability_single_shot_l79_79793
 
--- We define a structure representing the problem conditions.
-structure problem_conditions :=
-  (cards : multiset ℕ)
-  (permutation : list ℕ)
+-- Define the event and probability given
+def event_A := "shooter hits the target at least once out of three shots"
+def probability_event_A : ℝ := 0.875
 
--- Noncomputable definition for the correct answer.
-noncomputable def probability := (1 : ℚ) / 720
+-- The probability of missing in one shot is q, and missing all three is q^3, 
+-- which leads to hitting at least once being 1 - q^3
+theorem probability_single_shot (q : ℝ) (h : 1 - q^3 = 0.875) : 1 - q = 0.5 :=
+by
+  sorry
 
--- The main theorem statement.
-theorem probability_of_specific_sequence :
-  ∀ (conds : problem_conditions),
-  conds.cards = {1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6} ∧
-  (∃ (perm : list ℕ), perm.perm conds.permutation) →
-  (∃ (sequence : list ℕ), sequence = [1, 2, 3, 4, 5, 6]) →
-  let prob := calculate_probability conds.permutation [1, 2, 3, 4, 5, 6] in
-  prob = (1 : ℚ) / 720 :=
+end probability_single_shot_l79_79793
+
+
+namespace geometric_progression_arcsin_sin_l79_79511
+
+noncomputable def least_positive_t : ℝ :=
+  9 + 4 * Real.sqrt 5
+
+theorem geometric_progression_arcsin_sin 
+  (α : ℝ) 
+  (hα1: 0 < α) 
+  (hα2: α < Real.pi / 2) 
+  (t : ℝ) 
+  (h : ∀ (a b c d : ℝ), 
+    a = Real.arcsin (Real.sin α) ∧ 
+    b = Real.arcsin (Real.sin (3 * α)) ∧ 
+    c = Real.arcsin (Real.sin (5 * α)) ∧ 
+    d = Real.arcsin (Real.sin (t * α)) → 
+    b / a = c / b ∧ c / b = d / c) : 
+  t = least_positive_t :=
 sorry
 
-end probability_of_specific_sequence_l79_79663
+end geometric_progression_arcsin_sin_l79_79511
 
 
-namespace painted_cube_cubes_l79_79320
+namespace arrangement_count_l79_79825
 
-theorem painted_cube_cubes
-  (edge_large_cube : ℕ) (edge_small_cube : ℕ)
-  (h1 : edge_large_cube = 10)
-  (h2 : edge_small_cube = 1) :
-  let num_one_face_painted := 6 * (edge_large_cube - 2)^2
-      num_two_faces_painted := 12 * (edge_large_cube - 2)
-  in
-  num_one_face_painted = 384 ∧ num_two_faces_painted = 96 :=
+-- Definitions
+def volunteers := 4
+def elderly := 2
+def total_people := volunteers + elderly
+def criteria := "The 2 elderly people must be adjacent but not at the ends of the row."
+
+-- Theorem: The number of different valid arrangements is 144
+theorem arrangement_count : 
+  ∃ (arrangements : Nat), arrangements = (volunteers.factorial * 3 * elderly.factorial) ∧ arrangements = 144 := 
+  by 
+    sorry
+
+end arrangement_count_l79_79825
+
+
+namespace total_hike_time_l79_79630
+
+/-!
+# Problem Statement
+Jeannie hikes the 12 miles to Mount Overlook at a pace of 4 miles per hour, 
+and then returns at a pace of 6 miles per hour. Prove that the total time 
+Jeannie spent on her hike is 5 hours.
+-/
+
+def distance_to_mountain : ℝ := 12
+def pace_up : ℝ := 4
+def pace_down : ℝ := 6
+
+theorem total_hike_time :
+  (distance_to_mountain / pace_up) + (distance_to_mountain / pace_down) = 5 := 
+by 
+  sorry
+
+end total_hike_time_l79_79630
+
+
+namespace train_length_l79_79968
+
+theorem train_length (speed_km_hr : ℝ) (time_seconds : ℝ) (speed_conversion_factor : ℝ) (approx_length : ℝ) :
+  speed_km_hr = 60 → time_seconds = 6 → speed_conversion_factor = (1000 / 3600) → approx_length = 100.02 →
+  speed_km_hr * speed_conversion_factor * time_seconds = approx_length :=
+by
+  intros h1 h2 h3 h4
+  rw [h1, h2, h3]
+  sorry
+
+end train_length_l79_79968
+
+
+namespace amy_initial_money_l79_79676
+
+-- Define the conditions
+variable (left_fair : ℕ) (spent : ℕ)
+
+-- Define the proof problem statement
+theorem amy_initial_money (h1 : left_fair = 11) (h2 : spent = 4) : left_fair + spent = 15 := 
+by sorry
+
+end amy_initial_money_l79_79676
+
+
+namespace percentage_difference_l79_79174
+
+theorem percentage_difference (G P R : ℝ) (h1 : P = 0.9 * G) (h2 : R = 1.125 * G) :
+  ((1 - P / R) * 100) = 20 :=
 by
   sorry
 
-end painted_cube_cubes_l79_79320
+end percentage_difference_l79_79174
 
 
-namespace geometric_series_common_ratio_l79_79192
+namespace linear_function_quadrants_l79_79313
 
-theorem geometric_series_common_ratio :
-  ∀ (a r : ℝ), (r ≠ 1) → 
-  (∑' n, a * r^n = 64 * ∑' n, a * r^(n+4)) →
-  r = 1 / 2 :=
+theorem linear_function_quadrants (k : ℝ) :
+  (k - 3 > 0) ∧ (-k + 2 < 0) → k > 3 :=
 by
-  intros a r hnr heq
-  have hsum1 : ∑' n, a * r^n = a / (1 - r) := sorry
-  have hsum2 : ∑' n, a * r^(n+4) = a * r^4 / (1 - r) := sorry
-  rw [hsum1, hsum2] at heq
-  -- Further steps to derive r = 1/2 are omitted
+  intro h
   sorry
 
-end geometric_series_common_ratio_l79_79192
+end linear_function_quadrants_l79_79313
 
 
-namespace parabola_transformation_l79_79059
+namespace quadratic_inequality_l79_79378
 
-theorem parabola_transformation 
-  (x : ℝ) :
-  (shift_left : ℝ → ℝ := λ x, x + 1)
-  (shift_down : ℝ → ℝ := λ y, y - 2):
-  let initial_parabola := -(x + 1) ^ 2 + 2 in
-  let parabola_after_shift := -(shift_left x + 1) ^ 2 + shift_down 2 in
-  parabola_after_shift = -(x + 2) ^ 2 :=
+noncomputable def quadratic_inequality_solution : Set ℝ :=
+  {x | x < 2} ∪ {x | x > 4}
+
+theorem quadratic_inequality (x : ℝ) : (x^2 - 6 * x + 8 > 0) ↔ (x ∈ quadratic_inequality_solution) :=
 by
   sorry
 
-end parabola_transformation_l79_79059
+end quadratic_inequality_l79_79378
 
 
-namespace distinct_four_digit_integers_using_2_3_3_9_l79_79460
+namespace average_of_remaining_two_numbers_l79_79952
 
--- Define the set of digits.
-def digits := {2, 3, 3, 9}
+theorem average_of_remaining_two_numbers 
+  (a b c d e f : ℝ)
+  (h1 : (a + b + c + d + e + f) / 6 = 4.60)
+  (h2 : (a + b) / 2 = 3.4)
+  (h3 : (c + d) / 2 = 3.8) :
+  ((e + f) / 2) = 6.6 :=
+sorry
 
--- Define a function to calculate the number of distinct permutations of the given digits.
-def num_distinct_permutations : Nat :=
-  Nat.factorial 4 / Nat.factorial 2
+end average_of_remaining_two_numbers_l79_79952
 
--- Theorem statement: The number of distinct positive four-digit integers that can be formed is 12.
-theorem distinct_four_digit_integers_using_2_3_3_9 : num_distinct_permutations = 12 :=
+
+namespace sqrt_sixteen_l79_79652
+
+theorem sqrt_sixteen : ∃ x : ℝ, x^2 = 16 ∧ x = 4 :=
 by
-  -- Proof is intentionally omitted as specified.
   sorry
 
-end distinct_four_digit_integers_using_2_3_3_9_l79_79460
+end sqrt_sixteen_l79_79652
 
 
-namespace phi_value_for_symmetric_translation_l79_79155
+namespace solution_l79_79251
 
-theorem phi_value_for_symmetric_translation (φ : ℝ) : 
-  let f := λ x : ℝ, Real.sin (2 * x + φ) 
-  let g := λ x : ℝ, Real.sin (2 * x - Real.pi / 3 + φ)
-  (∀ x : ℝ, g (-x) = -g(x)) → φ = Real.pi / 3 :=
+noncomputable def g (a : ℝ) : Polynomials ℝ := X^3 + a * X^2 + 2 * X + 15
+noncomputable def f (a b c : ℝ) : Polynomials ℝ := X^4 + 2 * X^3 + b * X^2 + 150 * X + c
+
+theorem solution (a b c : ℝ) (h1 : (g a).roots.nodup) (h2 : ∀ r ∈ (g a).roots, f a b c).is_root r) :
+  (f a b c).eval 1 = -15640 :=
+by 
+  sorry
+
+end solution_l79_79251
+
+
+namespace number_of_rectangles_in_5x5_grid_l79_79001
+
+theorem number_of_rectangles_in_5x5_grid : 
+  let n := 5 in (n.choose 2) * (n.choose 2) = 100 :=
+by
+  sorry
+
+end number_of_rectangles_in_5x5_grid_l79_79001
+
+
+namespace problem_xyz_l79_79270
+
+theorem problem_xyz (x y : ℝ) (h1 : (x + y)^2 = 16) (h2 : x * y = -8) :
+  x^2 + y^2 = 32 :=
+by
+  sorry
+
+end problem_xyz_l79_79270
+
+
+namespace find_a_b_l79_79766
+
+def f (x : ℝ) : ℝ := x^2
+def g (x : ℝ) (a b : ℝ) : ℝ := a * x + b
+
+theorem find_a_b : 
+  (∀ x : ℝ, f (g x a b) = 9 * x^2 + 6 * x + 1) ↔ ((a = 3 ∧ b = 1) ∨ (a = -3 ∧ b = -1)) :=
+by
+  sorry
+
+end find_a_b_l79_79766
+
+
+namespace cherry_sodas_l79_79688
+
+theorem cherry_sodas (C O : ℕ) (h1 : O = 2 * C) (h2 : C + O = 24) : C = 8 :=
+by sorry
+
+end cherry_sodas_l79_79688
+
+
+namespace profit_increase_l79_79053
+
+theorem profit_increase (x y : ℝ) (a : ℝ)
+  (h1 : x = (57 / 20) * y)
+  (h2 : (x - y) / y = a / 100)
+  (h3 : (x - 0.95 * y) / (0.95 * y) = (a + 15) / 100) :
+  a = 185 := sorry
+
+end profit_increase_l79_79053
+
+
+namespace cistern_fill_time_l79_79677
+
+-- Define the filling rate and emptying rate as given conditions.
+def R_fill : ℚ := 1 / 5
+def R_empty : ℚ := 1 / 9
+
+-- Define the net rate when both taps are opened simultaneously.
+def R_net : ℚ := R_fill - R_empty
+
+-- The total time to fill the cistern when both taps are opened.
+def fill_time := 1 / R_net
+
+-- Prove that the total time to fill the cistern is 11.25 hours.
+theorem cistern_fill_time : fill_time = 11.25 := 
+by 
+    -- We include sorry to bypass the actual proof. This will allow the code to compile.
+    sorry
+
+end cistern_fill_time_l79_79677
+
+
+namespace f_satisfies_condition_l79_79397
+
+noncomputable def f (x : ℝ) : ℝ := 2^x
+
+-- Prove that f(x + 1) = 2 * f(x) for the defined function f.
+theorem f_satisfies_condition (x : ℝ) : f (x + 1) = 2 * f x := by
+  show 2^(x + 1) = 2 * 2^x
+  sorry
+
+end f_satisfies_condition_l79_79397
+
+
+namespace find_q_l79_79429
+
+open Polynomial
+
+-- Define the conditions for the roots of the first polynomial
+def roots_of_first_eq (a b m : ℝ) (h : a * b = 3) : Prop := 
+  ∀ x, (x^2 - m*x + 3) = (x - a) * (x - b)
+
+-- Define the problem statement
+theorem find_q (a b m p q : ℝ) 
+  (h1 : a * b = 3) 
+  (h2 : ∀ x, (x^2 - m*x + 3) = (x - a) * (x - b)) 
+  (h3 : ∀ x, (x^2 - p*x + q) = (x - (a + 2/b)) * (x - (b + 2/a))) :
+  q = 25 / 3 :=
+sorry
+
+end find_q_l79_79429
+
+
+namespace total_tourists_proof_l79_79789
+
+noncomputable def calculate_total_tourists : ℕ :=
+  let start_time := 8  
+  let end_time := 17   -- 5 PM in 24-hour format
+  let initial_tourists := 120
+  let increment := 2
+  let number_of_trips := end_time - start_time  -- total number of trips including both start and end
+  let first_term := initial_tourists
+  let last_term := initial_tourists + increment * (number_of_trips - 1)
+  (number_of_trips * (first_term + last_term)) / 2
+
+theorem total_tourists_proof : calculate_total_tourists = 1290 := by
+  sorry
+
+end total_tourists_proof_l79_79789
+
+
+namespace Dawn_sold_glasses_l79_79502
+
+variable (x : ℕ)
+
+def Bea_price_per_glass : ℝ := 0.25
+def Dawn_price_per_glass : ℝ := 0.28
+def Bea_glasses_sold : ℕ := 10
+def Bea_extra_earnings : ℝ := 0.26
+def Bea_total_earnings : ℝ := Bea_glasses_sold * Bea_price_per_glass
+def Dawn_total_earnings (x : ℕ) : ℝ := x * Dawn_price_per_glass
+
+theorem Dawn_sold_glasses :
+  Bea_total_earnings - Bea_extra_earnings = Dawn_total_earnings x → x = 8 :=
+by
+  sorry
+
+end Dawn_sold_glasses_l79_79502
+
+
+namespace binom_12_11_l79_79508
+
+theorem binom_12_11 : Nat.choose 12 11 = 12 := by
+  sorry
+
+end binom_12_11_l79_79508
+
+
+namespace households_with_at_least_one_appliance_l79_79077
+
+theorem households_with_at_least_one_appliance (total: ℕ) (color_tvs: ℕ) (refrigerators: ℕ) (both: ℕ) :
+  total = 100 → color_tvs = 65 → refrigerators = 84 → both = 53 →
+  (color_tvs + refrigerators - both) = 96 :=
 by
   intros
   sorry
 
-end phi_value_for_symmetric_translation_l79_79155
+end households_with_at_least_one_appliance_l79_79077
 
 
-namespace parabola_focus_l79_79389
+namespace binom_1300_2_eq_844350_l79_79364
 
-theorem parabola_focus (x y : ℝ) :
-  (∃ x, y = 4 * x^2 + 8 * x - 5) →
-  (x, y) = (-1, -8.9375) :=
+theorem binom_1300_2_eq_844350 : (Nat.choose 1300 2) = 844350 := by
+  sorry
+
+end binom_1300_2_eq_844350_l79_79364
+
+
+namespace smallest_lcm_value_l79_79273
+
+def is_five_digit (x : ℕ) : Prop :=
+  10000 ≤ x ∧ x < 100000
+
+theorem smallest_lcm_value :
+  ∃ (m n : ℕ), is_five_digit m ∧ is_five_digit n ∧ Nat.gcd m n = 5 ∧ Nat.lcm m n = 20030010 :=
 by
   sorry
 
-end parabola_focus_l79_79389
+end smallest_lcm_value_l79_79273
+
+
+namespace condition_sufficient_not_necessary_monotonicity_l79_79384
+
+theorem condition_sufficient_not_necessary_monotonicity
+  (f : ℝ → ℝ) (a : ℝ) (h_def : ∀ x, f x = 2^(abs (x - a))) :
+  (∀ x > 1, x - a ≥ 0) → (∀ x y, (x > 1) ∧ (y > 1) ∧ (x ≤ y) → f x ≤ f y) ∧
+  (∃ a, a ≤ 1 ∧ (∀ x > 1, x - a ≥ 0) ∧ (∀ x y, (x > 1) ∧ (y > 1) ∧ (x ≤ y) → f x ≤ f y)) :=
+by
+  sorry
+
+end condition_sufficient_not_necessary_monotonicity_l79_79384
+
+
+namespace geometric_sequence_value_l79_79023
+
+noncomputable def geometric_sequence (a : ℕ → ℝ) (r : ℝ) : Prop :=
+  ∀ n, a (n + 1) = a n * r
+
+theorem geometric_sequence_value
+  (a : ℕ → ℝ)
+  (r : ℝ)
+  (h_geo : geometric_sequence a r)
+  (h_pos : ∀ n, a n > 0)
+  (h_roots : ∀ (a1 a19 : ℝ), a1 = a 1 → a19 = a 19 → a1 * a19 = 16 ∧ a1 + a19 = 10) :
+  a 8 * a 10 * a 12 = 64 := 
+sorry
+
+end geometric_sequence_value_l79_79023
+
+
+namespace jordan_meets_emily_after_total_time_l79_79241
+
+noncomputable def meet_time
+  (initial_distance : ℝ)
+  (speed_ratio : ℝ)
+  (decrease_rate : ℝ)
+  (time_until_break : ℝ)
+  (break_duration : ℝ)
+  (total_meet_time : ℝ) : Prop :=
+  initial_distance = 30 ∧
+  speed_ratio = 2 ∧
+  decrease_rate = 2 ∧
+  time_until_break = 10 ∧
+  break_duration = 5 ∧
+  total_meet_time = 17
+
+theorem jordan_meets_emily_after_total_time :
+  meet_time 30 2 2 10 5 17 := 
+by {
+  -- The conditions directly state the requirements needed for the proof.
+  exact ⟨rfl, rfl, rfl, rfl, rfl, rfl⟩ -- This line confirms that all inputs match the given conditions.
+}
+
+end jordan_meets_emily_after_total_time_l79_79241
+
+
+namespace multiple_of_6_and_factor_of_72_l79_79347
+
+open Nat
+
+theorem multiple_of_6_and_factor_of_72 (n : ℕ) :
+  (∃ k₁ : ℕ, n = 6 * k₁) ∧ (∃ k₂ : ℕ, 72 = n * k₂) ↔ n ∈ {6, 12, 18, 24, 36, 72} :=
+by
+  sorry
+
+end multiple_of_6_and_factor_of_72_l79_79347
+
+
+namespace truck_speed_on_dirt_road_l79_79830
+
+theorem truck_speed_on_dirt_road 
+  (total_distance: ℝ) (time_on_dirt: ℝ) (time_on_paved: ℝ) (speed_difference: ℝ)
+  (h1: total_distance = 200) (h2: time_on_dirt = 3) (h3: time_on_paved = 2) (h4: speed_difference = 20) : 
+  ∃ v: ℝ, (time_on_dirt * v + time_on_paved * (v + speed_difference) = total_distance) ∧ v = 32 := 
+sorry
+
+end truck_speed_on_dirt_road_l79_79830
+
+
+namespace john_new_total_lifting_capacity_is_correct_l79_79144
+
+def initial_clean_and_jerk : ℕ := 80
+def initial_snatch : ℕ := 50
+
+def new_clean_and_jerk : ℕ := 2 * initial_clean_and_jerk
+def new_snatch : ℕ := initial_snatch + (initial_snatch * 8 / 10)
+
+def new_combined_total_capacity : ℕ := new_clean_and_jerk + new_snatch
+
+theorem john_new_total_lifting_capacity_is_correct : 
+  new_combined_total_capacity = 250 := by
+  sorry
+
+end john_new_total_lifting_capacity_is_correct_l79_79144
+
+
+namespace find_m_probability_l79_79040
+
+theorem find_m_probability (m : ℝ) (ξ : ℕ → ℝ) :
+  (ξ 1 = m * (2/3)) ∧ (ξ 2 = m * (2/3)^2) ∧ (ξ 3 = m * (2/3)^3) ∧ 
+  (ξ 1 + ξ 2 + ξ 3 = 1) → 
+  m = 27 / 38 := 
+sorry
+
+end find_m_probability_l79_79040
+
+
+namespace set_operation_result_l79_79432
+
+def M : Set ℕ := {2, 3}
+
+def bin_op (A : Set ℕ) : Set ℕ :=
+  {x | ∃ (a b : ℕ), a ∈ A ∧ b ∈ A ∧ x = a + b}
+
+theorem set_operation_result : bin_op M = {4, 5, 6} :=
+by
+  sorry
+
+end set_operation_result_l79_79432
+
+
+namespace solve_x_l79_79899
+
+theorem solve_x (x : ℝ) (h1 : 8 * x^2 + 7 * x - 1 = 0) (h2 : 24 * x^2 + 53 * x - 7 = 0) : x = 1 / 8 :=
+by
+  sorry
+
+end solve_x_l79_79899
+
+
+namespace complex_square_sum_eq_five_l79_79868
+
+theorem complex_square_sum_eq_five (a b : ℝ) (h : (a + b * I) ^ 2 = 3 + 4 * I) : a^2 + b^2 = 5 := 
+by sorry
+
+end complex_square_sum_eq_five_l79_79868
+
+
+namespace race_prob_l79_79950
+
+theorem race_prob :
+  let pX := (1 : ℝ) / 8
+  let pY := (1 : ℝ) / 12
+  let pZ := (1 : ℝ) / 6
+  pX + pY + pZ = (3 : ℝ) / 8 :=
+by
+  sorry
+
+end race_prob_l79_79950
+
+
+namespace find_4digit_number_l79_79575
+
+theorem find_4digit_number (a b c d n n' : ℕ) :
+  n = 1000 * a + 100 * b + 10 * c + d →
+  n' = 1000 * d + 100 * c + 10 * b + a →
+  n = n' - 7182 →
+  n = 1909 :=
+by
+  intros h1 h2 h3
+  sorry
+
+end find_4digit_number_l79_79575
+
+
+namespace men_l79_79956
+
+-- Given conditions
+variable (W M : ℕ)
+variable (B : ℕ) [DecidableEq ℕ] -- number of boys
+variable (total_earnings : ℕ)
+
+def earnings : ℕ := 5 * M + W * M + 8 * W
+
+-- Total earnings of men, women, and boys is Rs. 150.
+def conditions : Prop := 
+  5 * M = W * M ∧ 
+  W * M = 8 * W ∧ 
+  earnings = total_earnings
+
+-- Prove men's wages (total wages for 5 men) is Rs. 50.
+theorem men's_wages (hm : total_earnings = 150) (hb : W = 8) : 
+  5 * M = 50 :=
+by
+  sorry
+
+end men_l79_79956
+
+
+namespace arithmetic_sequence_sum_l79_79614
+
+/-
+In an arithmetic sequence, if the sum of terms \( a_2 + a_3 + a_4 + a_5 + a_6 = 90 \), 
+prove that \( a_1 + a_7 = 36 \).
+-/
+
+theorem arithmetic_sequence_sum (a : ℕ → ℤ) (d : ℤ)
+  (h_arith : ∀ n, a (n + 1) = a n + d) 
+  (h_sum : a 2 + a 3 + a 4 + a 5 + a 6 = 90) :
+  a 1 + a 7 = 36 := by
+  sorry
+
+end arithmetic_sequence_sum_l79_79614
+
+
+namespace hyperbola_eccentricity_l79_79014
+
+theorem hyperbola_eccentricity (a b c : ℝ) (h : (c^2 - a^2 = 5 * a^2)) (hb : a / b = 2) :
+  (c / a = Real.sqrt 5) :=
+by
+  sorry
+
+end hyperbola_eccentricity_l79_79014
+
+
+namespace problem_l79_79608
+
+theorem problem (x : ℝ) (h : x + 1/x = 3) : x^2 + 1/x^2 = 7 :=
+by
+  sorry
+
+end problem_l79_79608
+
+
+namespace tickets_difference_l79_79906
+
+-- Define the conditions
+def tickets_friday : ℕ := 181
+def tickets_sunday : ℕ := 78
+def tickets_saturday : ℕ := 2 * tickets_friday
+
+-- The theorem to prove
+theorem tickets_difference : tickets_saturday - tickets_sunday = 284 := by
+  sorry
+
+end tickets_difference_l79_79906
+
+
+namespace average_age_of_team_l79_79307
+
+theorem average_age_of_team :
+  ∃ A : ℝ,
+    (∀ (ages : Fin 11 → ℝ),
+      (ages ⟨0, by norm_num⟩ = 26) ∧
+      (ages ⟨1, by norm_num⟩ = 29) ∧
+      (∀ i (hi : 2 ≤ i ∧ i < 11), ages i = 32)  ∧ 
+      (11 * A = sum (range 11) (λ i, ages ⟨i, by norm_num⟩)) ∧
+      (9 * (A - 1) = sum (range 2 11) (λ i, ages ⟨i, by norm_num⟩))
+    ) →
+  A = 32 :=
+sorry
+
+end average_age_of_team_l79_79307
+
+
+namespace total_attendance_l79_79775
+
+theorem total_attendance (first_concert : ℕ) (second_concert : ℕ) (third_concert : ℕ) :
+  first_concert = 65899 →
+  second_concert = first_concert + 119 →
+  third_concert = 2 * second_concert →
+  first_concert + second_concert + third_concert = 263953 :=
+by
+  intros h_first h_second h_third
+  rw [h_first, h_second, h_third]
+  sorry
+
+end total_attendance_l79_79775
+
+
+namespace rectangle_area_same_width_l79_79227
+
+theorem rectangle_area_same_width
+  (square_area : ℝ) (area_eq : square_area = 36)
+  (rect_width_eq_side : ℝ → ℝ → Prop) (width_eq : ∀ s, rect_width_eq_side s s)
+  (rect_length_eq_3_times_width : ℝ → ℝ → Prop) (length_eq : ∀ w, rect_length_eq_3_times_width w (3 * w)) :
+  (∃ s l w, s = 6 ∧ w = s ∧ l = 3 * w ∧ square_area = s * s ∧ rect_width_eq_side w s ∧ rect_length_eq_3_times_width w l ∧ w * l = 108) :=
+by {
+  sorry
+}
+
+end rectangle_area_same_width_l79_79227
+
+
+namespace lin_reg_proof_l79_79352
+
+variable (x y : List ℝ)
+variable (n : ℝ := 10)
+variable (sum_x : ℝ := 80)
+variable (sum_y : ℝ := 20)
+variable (sum_xy : ℝ := 184)
+variable (sum_x2 : ℝ := 720)
+
+noncomputable def mean (lst: List ℝ) (n: ℝ) : ℝ := (List.sum lst) / n
+
+noncomputable def lin_reg_slope (n sum_x sum_y sum_xy sum_x2 : ℝ) : ℝ :=
+  (sum_xy - n * (sum_x / n) * (sum_y / n)) / (sum_x2 - n * (sum_x / n) ^ 2)
+
+noncomputable def lin_reg_intercept (sum_x sum_y : ℝ) (slope : ℝ) (n : ℝ) : ℝ :=
+  (sum_y / n) - slope * (sum_x / n)
+
+theorem lin_reg_proof :
+  lin_reg_slope n sum_x sum_y sum_xy sum_x2 = 0.3 ∧ 
+  lin_reg_intercept sum_x sum_y 0.3 n = -0.4 ∧ 
+  (0.3 * 7 - 0.4 = 1.7) :=
+by
+  sorry
+
+end lin_reg_proof_l79_79352
+
+
+namespace infinite_values_prime_divisor_l79_79297
+
+noncomputable def largestPrimeDivisor (n : ℕ) : ℕ :=
+  sorry
+
+theorem infinite_values_prime_divisor :
+  ∃ᶠ n in at_top, largestPrimeDivisor (n^2 + n + 1) = largestPrimeDivisor ((n+1)^2 + (n+1) + 1) :=
+sorry
+
+end infinite_values_prime_divisor_l79_79297
+
+
+namespace union_of_A_B_l79_79585
+
+def A : Set ℝ := {x | |x - 3| < 2}
+def B : Set ℝ := {x | (x + 1) / (x - 2) ≤ 0}
+
+theorem union_of_A_B : A ∪ B = {x | -1 ≤ x ∧ x < 5} :=
+by
+  sorry
+
+end union_of_A_B_l79_79585
+
+
+namespace quadratic_to_vertex_properties_of_quadratic_quadratic_decreasing_interval_quadratic_range_in_interval_l79_79735
+
+-- Define the quadratic function.
+def quadratic_function (x : ℝ) : ℝ := x^2 - 4 * x + 3
+
+-- Define the vertex form of the quadratic function.
+def vertex_form (x : ℝ) : ℝ := (x - 2)^2 - 1
+
+-- Prove that the quadratic function is equal to its vertex form.
+theorem quadratic_to_vertex :
+  ∀ x : ℝ, quadratic_function(x) = vertex_form(x) :=
+by
+  sorry
+
+-- Define the axis of symmetry.
+def axis_of_symmetry : ℝ := 2
+
+-- Define the vertex coordinates.
+def vertex : ℝ × ℝ := (2, -1)
+
+-- Define the minimum value of the quadratic function.
+def minimum_value : ℝ := -1
+
+-- Define the interval where the quadratic function decreases.
+def decreasing_interval : Set ℝ := {x : ℝ | -1 ≤ x ∧ x < 2}
+
+-- Define the range of the quadratic function in the given interval.
+def range_in_interval : Set ℝ := {y : ℝ | -1 ≤ y ∧ y ≤ 8}
+
+-- Prove that the axis of symmetry, vertex coordinates, and minimum value are correct.
+theorem properties_of_quadratic :
+  axios_of_symmetry = 2 ∧ vertex = (2, -1) ∧ minimum_value = -1 :=
+by
+  sorry
+
+-- Prove the interval where the function decreases.
+theorem quadratic_decreasing_interval :
+  ∀ x : ℝ, -1 ≤ x ∧ x < 2 → ∃ y : ℝ, quadratic_function(x) = y :=
+by
+  sorry
+
+-- Prove the range of the function in the given interval.
+theorem quadratic_range_in_interval :
+  ∀ y : ℝ, -1 ≤ y ∧ y ≤ 8 → ∃ x : ℝ, -1 ≤ x ∧ x < 3 ∧ quadratic_function(x) = y :=
+by
+  sorry
+
+end quadratic_to_vertex_properties_of_quadratic_quadratic_decreasing_interval_quadratic_range_in_interval_l79_79735
+
+
+namespace range_of_m_l79_79387
+
+-- Define the conditions:
+
+/-- Proposition p: the equation represents an ellipse with foci on y-axis -/
+def proposition_p (m : ℝ) : Prop :=
+  0 < m ∧ m < 9 ∧ 9 - m > 2 * m ∧ 2 * m > 0
+
+/-- Proposition q: the eccentricity of the hyperbola is in the interval (\sqrt(3)/2, \sqrt(2)) -/
+def proposition_q (m : ℝ) : Prop :=
+  0 < m ∧ (5 / 2 < m ∧ m < 5)
+
+def p_or_q (m : ℝ) : Prop := proposition_p m ∨ proposition_q m
+def p_and_q (m : ℝ) : Prop := proposition_p m ∧ proposition_q m
+
+-- Mathematically equivalent proof problem in Lean 4:
+
+theorem range_of_m (m : ℝ) : (p_or_q m ∧ ¬p_and_q m) ↔ (m ∈ Set.Ioc 0 (5 / 2) ∪ Set.Icc 3 5) := sorry
+
+end range_of_m_l79_79387
+
+
+namespace sum_of_remainders_eq_3_l79_79945
+
+theorem sum_of_remainders_eq_3 (a b c : ℕ) (h1 : a % 59 = 28) (h2 : b % 59 = 15) (h3 : c % 59 = 19) (h4 : a = b + d ∨ b = c + d ∨ c = a + d) : 
+  (a + b + c) % 59 = 3 :=
+by {
+  sorry -- Proof to be constructed
+}
+
+end sum_of_remainders_eq_3_l79_79945
+
+
+namespace unique_solution_l79_79244
+
+noncomputable def equation_satisfied (x : ℝ) : Prop :=
+  2^x + 3^x + 6^x = 7^x
+
+theorem unique_solution : ∀ x : ℝ, equation_satisfied x ↔ x = 2 := by
+  sorry
+
+end unique_solution_l79_79244
+
+
+namespace arrangement_of_BANANA_l79_79547
+
+theorem arrangement_of_BANANA : 
+  (Nat.factorial 6) / ((Nat.factorial 3) * (Nat.factorial 2)) = 60 :=
+by
+  sorry
+
+end arrangement_of_BANANA_l79_79547
+
+
+namespace gcd_of_44_54_74_l79_79848
+
+theorem gcd_of_44_54_74 : gcd (gcd 44 54) 74 = 2 :=
+by
+    sorry
+
+end gcd_of_44_54_74_l79_79848
+
+
+namespace david_initial_money_l79_79843
+
+-- Given conditions as definitions
+def spent (S : ℝ) : Prop := S - 800 = 500
+def has_left (H : ℝ) : Prop := H = 500
+
+-- The main theorem to prove
+theorem david_initial_money (S : ℝ) (X : ℝ) (H : ℝ)
+  (h1 : spent S) 
+  (h2 : has_left H) 
+  : X = S + H → X = 1800 :=
+by
+  sorry
+
+end david_initial_money_l79_79843
+
+
+namespace find_digits_of_six_two_digit_sum_equals_528_l79_79947
+
+theorem find_digits_of_six_two_digit_sum_equals_528
+  (a b c : ℕ) (h_distinct : a ≠ b ∧ b ≠ c ∧ a ≠ c) (h_digits : a < 10 ∧ b < 10 ∧ c < 10)
+  (h_sum_six_numbers : (10 * a + b) + (10 * a + c) + (10 * b + c) + (10 * b + a) + (10 * c + a) + (10 * c + b) = 528) :
+  (a = 7 ∧ b = 8 ∧ c = 9) := 
+sorry
+
+end find_digits_of_six_two_digit_sum_equals_528_l79_79947
+
+
+namespace frac_y_over_x_plus_y_eq_one_third_l79_79396
+
+theorem frac_y_over_x_plus_y_eq_one_third (x y : ℝ) (h : y / x = 1 / 2) : y / (x + y) = 1 / 3 := by
+  sorry
+
+end frac_y_over_x_plus_y_eq_one_third_l79_79396
+
+
+namespace minimum_value_inequality_l79_79901
+
+variable {x y z : ℝ}
+
+theorem minimum_value_inequality (h₁ : x > 0) (h₂ : y > 0) (h₃ : z > 0) (h₄ : x + y + z = 4) :
+  (1 / x + 4 / y + 9 / z) ≥ 9 :=
+sorry
+
+end minimum_value_inequality_l79_79901
+
+
+namespace initial_men_count_l79_79171
+
+variable (M : ℕ)
+
+theorem initial_men_count
+  (work_completion_time : ℕ)
+  (men_leaving : ℕ)
+  (remaining_work_time : ℕ)
+  (completion_days : ℕ) :
+  work_completion_time = 40 →
+  men_leaving = 20 →
+  remaining_work_time = 40 →
+  completion_days = 10 →
+  M = 80 :=
+by
+  intros h1 h2 h3 h4
+  sorry
+
+end initial_men_count_l79_79171
+
+
+namespace find_radii_of_circles_l79_79177
+
+theorem find_radii_of_circles (d : ℝ) (ext_tangent : ℝ) (int_tangent : ℝ)
+  (hd : d = 65) (hext : ext_tangent = 63) (hint : int_tangent = 25) :
+  ∃ (R r : ℝ), R = 38 ∧ r = 22 :=
+by 
+  sorry
+
+end find_radii_of_circles_l79_79177
+
+
+namespace count_pairs_A_B_l79_79190
+
+open Finset
+
+theorem count_pairs_A_B (A B : Finset ℕ) : 
+  A ∪ B = {0, 1, 2} ∧ A ≠ B → 
+  (({0, 1, 2}.powerset.filter (λ A, A ≠ B)).card = 27) := by
+  sorry
+
+end count_pairs_A_B_l79_79190
+
+
+namespace suzy_final_books_l79_79806
+
+def initial_books : ℕ := 98
+def wednesday_checkouts : ℕ := 43
+def thursday_returns : ℕ := 23
+def thursday_checkouts : ℕ := 5
+def friday_returns : ℕ := 7
+
+theorem suzy_final_books :
+  initial_books - wednesday_checkouts
+  + thursday_returns - thursday_checkouts
+  + friday_returns = 80 := by
+sorry
+
+end suzy_final_books_l79_79806
+
+
+namespace simplify_expression_l79_79849
+
+open Real
+
+theorem simplify_expression (x : ℝ) (h1 : x ≠ -2) (h2 : x ≠ 2) :
+  (( (x + 2) ^ 2 * (x ^ 2 - 2 * x + 2) ^ 2 / (x ^ 3 + 8) ^ 2 ) ^ 2 *
+   ( (x - 2) ^ 2 * (x ^ 2 + 2 * x + 2) ^ 2 / (x ^ 3 - 8) ^ 2 ) ^ 2 = 1) :=
+by
+  sorry
+
+end simplify_expression_l79_79849
+
+
+namespace system_of_equations_property_l79_79733
+
+theorem system_of_equations_property (a x y : ℝ)
+  (h1 : x + y = 1 - a)
+  (h2 : x - y = 3 * a + 5)
+  (h3 : 0 < x)
+  (h4 : 0 ≤ y) :
+  (a = -5 / 3 → x = y) ∧ 
+  (a = -2 → x + y = 5 + a) ∧ 
+  (0 < x ∧ x ≤ 1 → 2 ≤ y ∧ y < 4) := 
+by
+  sorry
+
+end system_of_equations_property_l79_79733
+
+
+namespace count_integers_satisfying_sqrt_condition_l79_79464
+
+theorem count_integers_satisfying_sqrt_condition :
+  ∃ (n : ℕ), n = 15 ∧ ∀ (x : ℕ), (3 < Real.sqrt x ∧ Real.sqrt x < 5) → (9 < x ∧ x < 25) :=
+by
+  sorry
+
+end count_integers_satisfying_sqrt_condition_l79_79464
+
+
+namespace g_42_value_l79_79029
+
+noncomputable def g : ℕ → ℕ := sorry
+
+axiom g_increasing (n : ℕ) (hn : n > 0) : g (n + 1) > g n
+axiom g_multiplicative (m n : ℕ) (hm : m > 0) (hn : n > 0) : g (m * n) = g m * g n
+axiom g_property_iii (m n : ℕ) (hm : m > 0) (hn : n > 0) : (m ≠ n ∧ m^n = n^m) → (g m = n ∨ g n = m)
+
+theorem g_42_value : g 42 = 4410 :=
+by
+  sorry
+
+end g_42_value_l79_79029
+
+
+namespace chocolate_bar_pieces_l79_79957
+
+theorem chocolate_bar_pieces (X : ℕ) (h1 : X / 2 + X / 4 + 15 = X) : X = 60 :=
+by
+  sorry
+
+end chocolate_bar_pieces_l79_79957
+
+
+namespace train_length_l79_79353
+
+noncomputable def length_of_train (speed_kmph : ℝ) (time_sec : ℝ) (length_platform_m : ℝ) : ℝ :=
+  let speed_ms := (speed_kmph * 1000) / 3600
+  let distance_covered := speed_ms * time_sec
+  distance_covered - length_platform_m
+
+theorem train_length :
+  length_of_train 72 25 340.04 = 159.96 := by
+  sorry
+
+end train_length_l79_79353
+
+
+namespace arithmetic_progression_12th_term_l79_79949
+
+theorem arithmetic_progression_12th_term (a d n : ℤ) (h_a : a = 2) (h_d : d = 8) (h_n : n = 12) :
+  a + (n - 1) * d = 90 :=
+by
+  -- sorry is a placeholder for the actual proof
+  sorry
+
+end arithmetic_progression_12th_term_l79_79949
+
+
+namespace solution_of_two_quadratics_l79_79898
+
+theorem solution_of_two_quadratics (x : ℝ) (h1 : 8 * x^2 + 7 * x - 1 = 0) (h2 : 24 * x^2 + 53 * x - 7 = 0) : x = 1 / 8 := 
+by 
+  sorry
+
+end solution_of_two_quadratics_l79_79898
+
+
+namespace max_a_b_l79_79879
+
+theorem max_a_b (a b : ℝ) (h_a_pos : a > 0) (h_b_pos : b > 0) (h_eq : a^2 + b^2 = 1) : a + b ≤ Real.sqrt 2 := sorry
+
+end max_a_b_l79_79879
+
+
+namespace mabel_petals_remaining_l79_79161
+
+/-- Mabel has 5 daisies, each with 8 petals. If she gives 2 daisies to her teacher,
+how many petals does she have on the remaining daisies in her garden? -/
+theorem mabel_petals_remaining :
+  (5 - 2) * 8 = 24 :=
+by
+  sorry
+
+end mabel_petals_remaining_l79_79161
+
+
+namespace votes_cast_l79_79335
+
+-- Define the conditions as given in the problem.
+def total_votes (V : ℕ) := 35 * V / 100 + (35 * V / 100 + 2400) = V
+
+-- The goal is to prove that the number of total votes V equals 8000.
+theorem votes_cast : ∃ V : ℕ, total_votes V ∧ V = 8000 :=
+by
+  sorry -- The proof is not required, only the statement.
+
+end votes_cast_l79_79335
+
+
+namespace mean_of_smallest_and_largest_is_12_l79_79181
+
+-- Definition of the condition: the mean of five consecutive even numbers is 12.
+def mean_of_five_consecutive_even_numbers_is_12 (n : ℤ) : Prop :=
+  ((n - 4) + (n - 2) + n + (n + 2) + (n + 4)) / 5 = 12
+
+-- Theorem stating that the mean of the smallest and largest of these numbers is 12.
+theorem mean_of_smallest_and_largest_is_12 (n : ℤ) 
+  (h : mean_of_five_consecutive_even_numbers_is_12 n) : 
+  (8 + (16 : ℤ)) / (2 : ℤ) = 12 := 
+by
+  sorry
+
+end mean_of_smallest_and_largest_is_12_l79_79181
+
+
+namespace jamal_bought_4_half_dozens_l79_79421
+
+/-- Given that each crayon costs $2, the total cost is $48, and a half dozen is 6 crayons,
+    prove that Jamal bought 4 half dozens of crayons. -/
+theorem jamal_bought_4_half_dozens (cost_per_crayon : ℕ) (total_cost : ℕ) (half_dozen : ℕ) 
+  (h1 : cost_per_crayon = 2) (h2 : total_cost = 48) (h3 : half_dozen = 6) : 
+  (total_cost / cost_per_crayon) / half_dozen = 4 := 
+by 
+  sorry
+
+end jamal_bought_4_half_dozens_l79_79421
+
+
+namespace quadrilateral_property_indeterminate_l79_79141
+
+variable {α : Type*}
+variable (Q A : α → Prop)
+
+theorem quadrilateral_property_indeterminate :
+  (¬ ∀ x, Q x → A x) → ¬ ((∃ x, Q x ∧ A x) ↔ False) :=
+by
+  intro h
+  sorry
+
+end quadrilateral_property_indeterminate_l79_79141
+
+
+namespace sum_of_squares_diagonals_cyclic_quadrilateral_l79_79443
+
+theorem sum_of_squares_diagonals_cyclic_quadrilateral 
+(a b c d : ℝ) (α : ℝ) 
+(hc : c^2 = a^2 + b^2 + 2 * a * b * Real.cos α)
+(hd : d^2 = a^2 + b^2 - 2 * a * b * Real.cos α) :
+  c^2 + d^2 = 2 * a^2 + 2 * b^2 :=
+by
+  sorry
+
+end sum_of_squares_diagonals_cyclic_quadrilateral_l79_79443
+
+
+namespace quadratic_roots_relation_l79_79661
+
+theorem quadratic_roots_relation (a b c d : ℝ) (h : ∀ x : ℝ, (c * x^2 + d * x + a = 0) → 
+  (a * (2007 * x)^2 + b * (2007 * x) + c = 0)) : b^2 = d^2 := 
+sorry
+
+end quadratic_roots_relation_l79_79661
+
+
+namespace number_of_extreme_points_l79_79047
+
+noncomputable def f (x : ℝ) (a : ℝ) : ℝ := x^3 + 3 * x^2 + 4 * x - a
+
+theorem number_of_extreme_points (a : ℝ) : 
+  (∀ x : ℝ, (3 * x^2 + 6 * x + 4) > 0) →
+  0 = 0 :=
+by
+  intro h
+  sorry
+
+end number_of_extreme_points_l79_79047
+
+
+namespace guilt_proof_l79_79786
+
+theorem guilt_proof (X Y : Prop) (h1 : X ∨ Y) (h2 : ¬X) : Y :=
+by
+  sorry
+
+end guilt_proof_l79_79786
+
+
+namespace ben_paints_150_square_feet_l79_79496
+
+-- Define the given conditions
+def ratio_allen_ben : ℕ := 3
+def ratio_ben_allen : ℕ := 5
+def total_work : ℕ := 240
+
+-- Define the total amount of parts
+def total_parts : ℕ := ratio_allen_ben + ratio_ben_allen
+
+-- Define the work per part
+def work_per_part : ℕ := total_work / total_parts
+
+-- Define the work done by Ben
+def ben_parts : ℕ := ratio_ben_allen
+def ben_work : ℕ := work_per_part * ben_parts
+
+-- The statement to be proved
+theorem ben_paints_150_square_feet : ben_work = 150 :=
+by
+  sorry
+
+end ben_paints_150_square_feet_l79_79496
+
+
+namespace investment_C_l79_79080
+
+-- Definitions of the given conditions
+def investment_A : ℝ := 6300
+def investment_B : ℝ := 4200
+def total_profit : ℝ := 12700
+def profit_A : ℝ := 3810
+
+-- Defining the total investment, including C's investment
+noncomputable def investment_total_including_C (C : ℝ) : ℝ := investment_A + investment_B + C
+
+-- Proving the correct investment for C under the given conditions
+theorem investment_C (C : ℝ) :
+  (investment_A / investment_total_including_C C) = (profit_A / total_profit) → 
+  C = 10500 :=
+by
+  -- Placeholder for the actual proof
+  sorry
+
+end investment_C_l79_79080
+
+
+namespace max_value_of_quadratic_l79_79944
+
+theorem max_value_of_quadratic :
+  ∃ x_max : ℝ, x_max = 1.5 ∧
+  ∀ x : ℝ, -3 * x^2 + 9 * x + 24 ≤ -3 * (1.5)^2 + 9 * 1.5 + 24 := by
+  sorry
+
+end max_value_of_quadratic_l79_79944
+
+
+namespace find_f_neg_two_l79_79869
+
+noncomputable def f (x : ℝ) : ℝ :=
+if h : x > 0 then x^2 - 1 else sorry
+
+def is_odd_function (f : ℝ → ℝ) : Prop :=
+∀ x, f (-x) = -f x
+
+variable (f : ℝ → ℝ)
+
+axiom f_odd : is_odd_function f
+axiom f_pos : ∀ x, x > 0 → f x = x^2 - 1
+
+theorem find_f_neg_two : f (-2) = -3 :=
+by
+  sorry
+
+end find_f_neg_two_l79_79869
+
+
+namespace find_y_l79_79041
+
+theorem find_y (n x y : ℕ) 
+    (h1 : (n + 200 + 300 + x) / 4 = 250)
+    (h2 : (300 + 150 + n + x + y) / 5 = 200) :
+    y = 50 := 
+by
+  -- Placeholder for the proof
+  sorry
+
+end find_y_l79_79041
+
+
+namespace sin_double_angle_ineq_l79_79876
+
+theorem sin_double_angle_ineq (α : ℝ) (h1 : Real.sin (π - α) = 1 / 3) (h2 : π / 2 ≤ α) (h3 : α ≤ π) :
+  Real.sin (2 * α) = - (4 * Real.sqrt 2) / 9 := 
+by
+  sorry
+
+end sin_double_angle_ineq_l79_79876
+
+
+namespace banana_permutations_l79_79540
+
+theorem banana_permutations : (Nat.factorial 6) / ((Nat.factorial 3) * (Nat.factorial 2)) = 60 := by
+  sorry
+
+end banana_permutations_l79_79540
+
+
+namespace number_of_members_l79_79336
+
+theorem number_of_members (n : ℕ) (h1 : n * n = 5929) : n = 77 :=
+sorry
+
+end number_of_members_l79_79336
+
+
+namespace camp_cedar_counselors_l79_79235
+
+theorem camp_cedar_counselors (boys : ℕ) (girls : ℕ) 
+(counselors_for_boys : ℕ) (counselors_for_girls : ℕ) 
+(total_counselors : ℕ) 
+(h1 : boys = 80)
+(h2 : girls = 6 * boys - 40)
+(h3 : counselors_for_boys = boys / 5)
+(h4 : counselors_for_girls = (girls + 11) / 12)  -- +11 to account for rounding up
+(h5 : total_counselors = counselors_for_boys + counselors_for_girls) : 
+total_counselors = 53 :=
+by
+  sorry
+
+end camp_cedar_counselors_l79_79235
+
+
+namespace banana_permutations_l79_79541
+
+theorem banana_permutations : (Nat.factorial 6) / ((Nat.factorial 3) * (Nat.factorial 2)) = 60 := by
+  sorry
+
+end banana_permutations_l79_79541
+
+
+namespace binary_operation_correct_l79_79988
+
+-- Define the binary numbers involved
+def bin1 := 0b110110 -- 110110_2
+def bin2 := 0b101010 -- 101010_2
+def bin3 := 0b100    -- 100_2
+
+-- Define the operation in binary
+def result := 0b111001101100 -- 111001101100_2
+
+-- Lean statement to verify the operation result
+theorem binary_operation_correct : (bin1 * bin2) / bin3 = result :=
+by sorry
+
+end binary_operation_correct_l79_79988
+
+
+namespace inverse_proportion_quadrant_l79_79492
+
+theorem inverse_proportion_quadrant (k : ℝ) (h : k < 0) : 
+  ∀ x : ℝ, (0 < x → y = k / x → y < 0) ∧ (x < 0 → y = k / x → 0 < y) :=
+by
+  sorry
+
+end inverse_proportion_quadrant_l79_79492
+
+
+namespace initial_books_l79_79872
+
+-- Definitions for the conditions.
+
+def boxes (b : ℕ) : ℕ := 3 * b -- Box count
+def booksInRoom : ℕ := 21 -- Books in the room
+def booksOnTable : ℕ := 4 -- Books on the coffee table
+def cookbooks : ℕ := 18 -- Cookbooks in the kitchen
+def booksGrabbed : ℕ := 12 -- Books grabbed from the donation center
+def booksNow : ℕ := 23 -- Books Henry has now
+
+-- Define total number of books donated
+def totalBooksDonated (inBoxes : ℕ) (additionalBooks : ℕ) : ℕ :=
+  inBoxes + additionalBooks - booksGrabbed
+
+-- Define number of books Henry initially had
+def initialBooks (netDonated : ℕ) (booksCurrently : ℕ) : ℕ :=
+  netDonated + booksCurrently
+
+-- Proof goal
+theorem initial_books (b : ℕ) (inBox : ℕ) (additionalBooks : ℕ) : 
+  let totalBooks := booksInRoom + booksOnTable + cookbooks
+  let inBoxes := boxes b
+  let totalDonated := totalBooksDonated inBoxes totalBooks
+  initialBooks totalDonated booksNow = 99 :=
+by 
+  simp [initialBooks, totalBooksDonated, boxes, booksInRoom, booksOnTable, cookbooks, booksGrabbed, booksNow]
+  sorry
+
+end initial_books_l79_79872
+
+
+namespace problem_a4_inv_a4_eq_seven_l79_79011
+
+theorem problem_a4_inv_a4_eq_seven (a : ℝ) (h : (a + 1/a)^2 = 5) :
+  a^4 + (1/a)^4 = 7 :=
+sorry
+
+end problem_a4_inv_a4_eq_seven_l79_79011
+
+
+namespace find_x_l79_79269
+
+theorem find_x (x : ℝ) (a b : ℝ × ℝ) (h : a = (Real.cos (3 * x / 2), Real.sin (3 * x / 2)) ∧ b = (Real.cos (x / 2), -Real.sin (x / 2)) ∧ (a.1 + b.1) ^ 2 + (a.2 + b.2) ^ 2 = 1 ∧ 0 ≤ x ∧ x ≤ Real.pi)  :
+  x = Real.pi / 3 ∨ x = 2 * Real.pi / 3 :=
+by
+  sorry
+
+end find_x_l79_79269
+
+
+namespace gcd_eq_gcd_of_eq_add_mul_l79_79439
+
+theorem gcd_eq_gcd_of_eq_add_mul (a b q r : Int) (h_q : b > 0) (h_r : 0 ≤ r) (h_ar : a = b * q + r) : Int.gcd a b = Int.gcd b r :=
+by
+  -- Conditions: constraints and assertion
+  exact sorry
+
+end gcd_eq_gcd_of_eq_add_mul_l79_79439
+
+
+namespace oranges_difference_l79_79736
+
+-- Defining the number of sacks of ripe and unripe oranges
+def sacks_ripe_oranges := 44
+def sacks_unripe_oranges := 25
+
+-- The statement to be proven
+theorem oranges_difference : sacks_ripe_oranges - sacks_unripe_oranges = 19 :=
+by
+  -- Provide the exact calculation and result expected
+  sorry
+
+end oranges_difference_l79_79736
+
+
+namespace number_of_letters_l79_79747
+
+-- Definitions and Conditions, based on the given problem
+variables (n : ℕ) -- n is the number of different letters in the local language
+
+-- Given: The people have lost 129 words due to the prohibition of the seventh letter
+def words_lost_due_to_prohibition (n : ℕ) : ℕ := 2 * n
+
+-- The main theorem to prove
+theorem number_of_letters (h : 129 = words_lost_due_to_prohibition n) : n = 65 :=
+by sorry
+
+end number_of_letters_l79_79747
+
+
+namespace find_m_l79_79031
+
+-- Definition of the constraints and the values of x and y that satisfy them
+def constraint1 (x y : ℝ) : Prop := x + y - 2 ≥ 0
+def constraint2 (x y : ℝ) : Prop := x - y + 1 ≥ 0
+def constraint3 (x : ℝ) : Prop := x ≤ 3
+
+-- Given conditions
+def satisfies_constraints (x y : ℝ) : Prop := 
+  constraint1 x y ∧ constraint2 x y ∧ constraint3 x
+
+-- The objective to prove
+theorem find_m (x y m : ℝ) (h : satisfies_constraints x y) : 
+  (∀ x y, satisfies_constraints x y → (- 3 = m * x + y)) → m = -2 / 3 :=
+by
+  sorry
+
+end find_m_l79_79031
+
+
+namespace sum_of_odd_base4_digits_of_152_and_345_l79_79990
+
+def base_4_digit_count (n : ℕ) : ℕ :=
+    n.digits 4 |>.filter (λ x => x % 2 = 1) |>.length
+
+theorem sum_of_odd_base4_digits_of_152_and_345 :
+    base_4_digit_count 152 + base_4_digit_count 345 = 6 :=
+by
+    sorry
+
+end sum_of_odd_base4_digits_of_152_and_345_l79_79990
+
+
+namespace polynomial_strictly_monotonic_l79_79048
+
+variable {P : ℝ → ℝ}
+
+/-- The polynomial P(x) is such that the polynomials P(P(x)) and P(P(P(x))) are strictly monotonic 
+on the entire real axis. Prove that P(x) is also strictly monotonic on the entire real axis. -/
+theorem polynomial_strictly_monotonic
+  (h1 : StrictMono (P ∘ P))
+  (h2 : StrictMono (P ∘ P ∘ P)) :
+  StrictMono P :=
+sorry
+
+end polynomial_strictly_monotonic_l79_79048
+
+
+namespace problem_proof_l79_79763
+
+def is_multiple_of (a b : ℕ) : Prop := ∃ k : ℕ, b = k * a
+
+def y := 80 + 120 + 160 + 200 + 360 + 440 + 4040
+
+theorem problem_proof :
+  is_multiple_of 5 y ∧
+  is_multiple_of 10 y ∧
+  is_multiple_of 20 y ∧
+  is_multiple_of 40 y := 
+by
+  sorry
+
+end problem_proof_l79_79763
+
+
+namespace minimum_people_l79_79136
+
+def num_photos : ℕ := 10
+def num_center_men : ℕ := 10
+def num_people_per_photo : ℕ := 3
+
+theorem minimum_people (n : ℕ) (h : n = num_photos) :
+  (∃ total_people, total_people = 16) :=
+sorry
+
+end minimum_people_l79_79136
+
+
+namespace profit_percentage_is_25_l79_79498
+
+theorem profit_percentage_is_25 
+  (selling_price : ℝ) (cost_price : ℝ) 
+  (sp_val : selling_price = 600) 
+  (cp_val : cost_price = 480) : 
+  (selling_price - cost_price) / cost_price * 100 = 25 := by
+  sorry
+
+end profit_percentage_is_25_l79_79498
+
+
+namespace trip_time_difference_l79_79229
+
+-- Definitions of the given conditions
+def speed_AB := 160 -- speed from A to B in km/h
+def speed_BA := 120 -- speed from B to A in km/h
+def distance_AB := 480 -- distance between A and B in km
+
+-- Calculation of the time for each trip
+def time_AB := distance_AB / speed_AB
+def time_BA := distance_AB / speed_BA
+
+-- The statement we need to prove
+theorem trip_time_difference :
+  (time_BA - time_AB) = 1 :=
+by
+  sorry
+
+end trip_time_difference_l79_79229
+
+
+namespace minimum_a_l79_79013
+
+def f (x a : ℝ) : ℝ := x^2 - 2*x - abs (x-1-a) - abs (x-2) + 4
+
+theorem minimum_a (a : ℝ) : (∀ x : ℝ, f x a ≥ 0) ↔ a = -2 :=
+sorry
+
+end minimum_a_l79_79013
+
+
+namespace not_right_triangle_D_l79_79084
+
+theorem not_right_triangle_D : 
+  ¬ (Real.sqrt 3)^2 + 4^2 = 5^2 ∧
+  (1^2 + (Real.sqrt 2)^2 = (Real.sqrt 3)^2) ∧
+  (7^2 + 24^2 = 25^2) ∧
+  (5^2 + 12^2 = 13^2) := 
+by 
+  have hA : 1^2 + (Real.sqrt 2)^2 = (Real.sqrt 3)^2 := by norm_num
+  have hB : 7^2 + 24^2 = 25^2 := by norm_num
+  have hC : 5^2 + 12^2 = 13^2 := by norm_num
+  have hD : ¬ (Real.sqrt 3)^2 + 4^2 = 5^2 := by norm_num
+  exact ⟨hD, hA, hB, hC⟩
+
+#print axioms not_right_triangle_D
+
+end not_right_triangle_D_l79_79084
+
+
+namespace number_of_rectangles_in_5x5_grid_l79_79002
+
+theorem number_of_rectangles_in_5x5_grid : 
+  let n := 5 in (n.choose 2) * (n.choose 2) = 100 :=
+by
+  sorry
+
+end number_of_rectangles_in_5x5_grid_l79_79002
+
+
+namespace cube_sphere_volume_relation_l79_79354
+
+theorem cube_sphere_volume_relation (n : ℕ) (h : 2 < n)
+  (h_volume : n^3 - (n^3 * pi / 6) = (n^3 * pi / 3)) : n = 8 :=
+sorry
+
+end cube_sphere_volume_relation_l79_79354
+
+
+namespace prob_three_blue_is_correct_l79_79217
+
+-- Definitions corresponding to the problem conditions
+def total_jellybeans : ℕ := 20
+def blue_jellybeans_start : ℕ := 10
+def red_jellybeans : ℕ := 10
+
+-- Probabilities calculation steps as definitions
+def prob_first_blue : ℚ := blue_jellybeans_start / total_jellybeans
+def prob_second_blue_given_first_blue : ℚ := (blue_jellybeans_start - 1) / (total_jellybeans - 1)
+def prob_third_blue_given_first_two_blue : ℚ := (blue_jellybeans_start - 2) / (total_jellybeans - 2)
+
+-- Total probability of drawing three blue jellybeans
+def prob_three_blue : ℚ := 
+  prob_first_blue *
+  prob_second_blue_given_first_blue *
+  prob_third_blue_given_first_two_blue
+
+-- Formal statement of the proof problem
+theorem prob_three_blue_is_correct : prob_three_blue = 2 / 19 :=
+by
+  -- Fill the proof here
+  sorry
+
+end prob_three_blue_is_correct_l79_79217
+
+
+namespace fixed_point_translation_l79_79725
+
+variable {R : Type*} [LinearOrderedField R]
+
+def passes_through (f : R → R) (p : R × R) : Prop := f p.1 = p.2
+
+theorem fixed_point_translation (f : R → R) (h : f 1 = 1) :
+  passes_through (fun x => f (x + 2)) (-1, 1) :=
+by
+  sorry
+
+end fixed_point_translation_l79_79725
+
+
+namespace unique_solution_l79_79243
+
+noncomputable def equation_satisfied (x : ℝ) : Prop :=
+  2^x + 3^x + 6^x = 7^x
+
+theorem unique_solution : ∀ x : ℝ, equation_satisfied x ↔ x = 2 := by
+  sorry
+
+end unique_solution_l79_79243
+
+
+namespace arcsin_cos_eq_neg_pi_div_six_l79_79505
+
+theorem arcsin_cos_eq_neg_pi_div_six :
+  Real.arcsin (Real.cos (2 * Real.pi / 3)) = -Real.pi / 6 :=
+by
+  sorry
+
+end arcsin_cos_eq_neg_pi_div_six_l79_79505
+
+
+namespace remainder_when_6n_divided_by_4_l79_79202
+
+theorem remainder_when_6n_divided_by_4 (n : ℤ) (h : n % 4 = 1) : 6 * n % 4 = 2 := by
+  sorry
+
+end remainder_when_6n_divided_by_4_l79_79202
+
+
+namespace ratio_of_edges_l79_79607
+
+theorem ratio_of_edges
+  (V₁ V₂ : ℝ)
+  (a b : ℝ)
+  (hV : V₁ / V₂ = 8 / 1)
+  (hV₁ : V₁ = a^3)
+  (hV₂ : V₂ = b^3) :
+  a / b = 2 / 1 := 
+by 
+  sorry
+
+end ratio_of_edges_l79_79607
+
+
+namespace find_number_l79_79881
+
+-- Definitions used in the given problem conditions
+def condition (x : ℝ) : Prop := (3.242 * x) / 100 = 0.04863
+
+-- Statement of the problem
+theorem find_number (x : ℝ) (h : condition x) : x = 1.5 :=
+by
+  sorry
+ 
+end find_number_l79_79881
+
+
+namespace scale_reading_l79_79309
+
+theorem scale_reading (a b c : ℝ) (h₁ : 10.15 < a ∧ a < 10.4) (h₂ : 10.275 = (10.15 + 10.4) / 2) : a = 10.3 := 
+by 
+  sorry
+
+end scale_reading_l79_79309
+
+
+namespace trigonometric_identity_l79_79484
+
+theorem trigonometric_identity 
+  (α β : ℝ) 
+  (h : α + β = π / 3)  -- Note: 60 degrees is π/3 radians
+  (tan_add : ∀ x y, Real.tan (x + y) = (Real.tan x + Real.tan y) / (1 - Real.tan x * Real.tan y)) 
+  (tan_60 : Real.tan (π / 3) = Real.sqrt 3) :
+  Real.tan α + Real.tan β + Real.sqrt 3 * Real.tan α * Real.tan β = Real.sqrt 3 :=
+sorry
+
+end trigonometric_identity_l79_79484
+
+
+namespace calculate_dividend_l79_79204
+
+def faceValue : ℕ := 100
+def premiumPercent : ℕ := 20
+def dividendPercent : ℕ := 5
+def investment : ℕ := 14400
+def costPerShare : ℕ := faceValue + (premiumPercent * faceValue / 100)
+def numberOfShares : ℕ := investment / costPerShare
+def dividendPerShare : ℕ := faceValue * dividendPercent / 100
+def totalDividend : ℕ := numberOfShares * dividendPerShare
+
+theorem calculate_dividend :
+  totalDividend = 600 := 
+by
+  sorry
+
+end calculate_dividend_l79_79204
+
+
+namespace shortest_distance_between_circles_l79_79672
+
+theorem shortest_distance_between_circles :
+  let circle1 := (x^2 - 12*x + y^2 - 6*y + 9 = 0)
+  let circle2 := (x^2 + 10*x + y^2 + 8*y + 34 = 0)
+  -- Centers and radii from conditions above:
+  let center1 := (6, 3)
+  let radius1 := 3
+  let center2 := (-5, -4)
+  let radius2 := Real.sqrt 7
+  let distance_centers := Real.sqrt ((6 - (-5))^2 + (3 - (-4))^2)
+  -- Calculate shortest distance
+  distance_centers - (radius1 + radius2) = Real.sqrt 170 - 3 - Real.sqrt 7 := sorry
+
+end shortest_distance_between_circles_l79_79672
+
+
+namespace banana_permutations_l79_79539
+
+theorem banana_permutations : (Nat.factorial 6) / ((Nat.factorial 3) * (Nat.factorial 2)) = 60 := by
+  sorry
+
+end banana_permutations_l79_79539
+
+
+namespace CH4_reaction_with_Cl2_l79_79737
+
+def balanced_chemical_equation (CH4 Cl2 CH3Cl HCl : ℕ) : Prop :=
+  CH4 + Cl2 = CH3Cl + HCl
+
+theorem CH4_reaction_with_Cl2
+  (CH4 Cl2 CH3Cl HCl : ℕ)
+  (balanced_eq : balanced_chemical_equation 1 1 1 1)
+  (reaction_cl2 : Cl2 = 2) :
+  CH4 = 2 :=
+by
+  sorry
+
+end CH4_reaction_with_Cl2_l79_79737
+
+
+namespace find_element_atomic_mass_l79_79361
+
+-- Define the atomic mass of bromine
+def atomic_mass_br : ℝ := 79.904
+
+-- Define the molecular weight of the compound
+def molecular_weight : ℝ := 267
+
+-- Define the number of bromine atoms in the compound (assuming n = 1)
+def n : ℕ := 1
+
+-- Define the atomic mass of the unknown element X
+def atomic_mass_x : ℝ := molecular_weight - n * atomic_mass_br
+
+-- State the theorem to prove
+theorem find_element_atomic_mass : atomic_mass_x = 187.096 :=
+by
+  -- placeholder for the proof
+  sorry
+
+end find_element_atomic_mass_l79_79361
+
+
+namespace banana_arrangement_count_l79_79551
+
+theorem banana_arrangement_count :
+  let word := "BANANA"
+  let length_word := 6
+  let a_count := 3
+  let n_count := 2
+  (length_word)! / (a_count! * n_count!) = 60 := by
+  sorry
+
+end banana_arrangement_count_l79_79551
+
+
+namespace remainder_of_sum_l79_79671
+
+theorem remainder_of_sum : 
+  let a := 21160
+  let b := 21162
+  let c := 21164
+  let d := 21166
+  let e := 21168
+  let f := 21170
+  (a + b + c + d + e + f) % 12 = 6 :=
+by
+  sorry
+
+end remainder_of_sum_l79_79671
+
+
+namespace reciprocal_of_neg_three_l79_79184
+
+theorem reciprocal_of_neg_three : (1 / (-3 : ℝ)) = (-1 / 3) := by
+  sorry
+
+end reciprocal_of_neg_three_l79_79184
+
+
+namespace probability_all_blue_jellybeans_removed_l79_79215
+
+def num_red_jellybeans : ℕ := 10
+def num_blue_jellybeans : ℕ := 10
+def total_jellybeans : ℕ := num_red_jellybeans + num_blue_jellybeans
+
+def prob_first_blue : ℚ := num_blue_jellybeans / total_jellybeans
+def prob_second_blue : ℚ := (num_blue_jellybeans - 1) / (total_jellybeans - 1)
+def prob_third_blue : ℚ := (num_blue_jellybeans - 2) / (total_jellybeans - 2)
+
+def prob_all_blue : ℚ := prob_first_blue * prob_second_blue * prob_third_blue
+
+theorem probability_all_blue_jellybeans_removed :
+  prob_all_blue = 1 / 9.5 := sorry
+
+end probability_all_blue_jellybeans_removed_l79_79215
+
+
+namespace trucks_on_lot_l79_79702
+
+-- We'll state the conditions as hypotheses and then conclude the total number of trucks.
+theorem trucks_on_lot (T : ℕ)
+  (h₁ : ∀ N : ℕ, 50 ≤ N ∧ N ≤ 20 → N / 2 = 10)
+  (h₂ : T ≥ 20 + 10): T = 30 :=
+sorry
+
+end trucks_on_lot_l79_79702
+
+
+namespace seating_arrangement_l79_79061
+
+def factorial (n : ℕ) : ℕ := if n = 0 then 1 else n * factorial (n - 1)
+
+def binom (n k : ℕ) : ℕ := factorial n / (factorial k * factorial (n - k))
+
+theorem seating_arrangement : 
+  let republicans := 6
+  let democrats := 4
+  (factorial (republicans - 1)) * (binom republicans democrats) * (factorial democrats) = 43200 :=
+by
+  sorry
+
+end seating_arrangement_l79_79061
+
+
+namespace average_salary_l79_79449
+
+theorem average_salary
+  (num_technicians : ℕ) (avg_salary_technicians : ℝ)
+  (num_other_workers : ℕ) (avg_salary_other_workers : ℝ)
+  (total_num_workers : ℕ) (avg_salary_all_workers : ℝ) :
+  num_technicians = 7 →
+  avg_salary_technicians = 14000 →
+  num_other_workers = total_num_workers - num_technicians →
+  avg_salary_other_workers = 6000 →
+  total_num_workers = 28 →
+  avg_salary_all_workers = (num_technicians * avg_salary_technicians + num_other_workers * avg_salary_other_workers) / total_num_workers →
+  avg_salary_all_workers = 8000 :=
+by
+  intros h1 h2 h3 h4 h5 h6
+  sorry
+
+end average_salary_l79_79449
+
+
+namespace percentage_of_boys_l79_79609
+
+theorem percentage_of_boys (total_students : ℕ) (ratio_boys_to_girls : ℕ) (ratio_girls_to_boys : ℕ) 
+  (h_ratio : ratio_boys_to_girls = 3 ∧ ratio_girls_to_boys = 4 ∧ total_students = 42) : 
+  (18 / 42) * 100 = 42.857 := 
+by 
+  sorry
+
+end percentage_of_boys_l79_79609
+
+
+namespace range_of_fraction_l79_79123
+
+-- Definition of the quadratic equation with roots within specified intervals
+variables (a b : ℝ)
+variables (x1 x2 : ℝ)
+variables (h_distinct_roots : x1 ≠ x2)
+variables (h_interval_x1 : 0 < x1 ∧ x1 < 1)
+variables (h_interval_x2 : 1 < x2 ∧ x2 < 2)
+variables (h_quadratic : ∀ x : ℝ, x^2 + a * x + 2 * b - 2 = 0)
+
+-- Prove range of expression
+theorem range_of_fraction (a b : ℝ)
+  (x1 x2 h_distinct_roots : ℝ) (h_interval_x1 : 0 < x1 ∧ x1 < 1)
+  (h_interval_x2 : 1 < x2 ∧ x2 < 2)
+  (h_quadratic : ∀ x, x^2 + a * x + 2 * b - 2 = 0) :
+  (1/2 < (b - 4) / (a - 1)) ∧ ((b - 4) / (a - 1) < 3/2) :=
+by
+  -- proof placeholder
+  sorry
+
+end range_of_fraction_l79_79123
+
+
+namespace problem_solution_l79_79865
+
+theorem problem_solution (a b c : ℝ) (h : (a / (36 - a)) + (b / (45 - b)) + (c / (54 - c)) = 8) :
+    (4 / (36 - a)) + (5 / (45 - b)) + (6 / (54 - c)) = 11 / 9 := 
+by
+  sorry
+
+end problem_solution_l79_79865
+
+
+namespace ball_hits_ground_approx_time_l79_79451
+
+noncomputable def ball_hits_ground_time (t : ℝ) : ℝ :=
+-6 * t^2 - 12 * t + 60
+
+theorem ball_hits_ground_approx_time :
+  ∃ t : ℝ, |t - 2.32| < 0.01 ∧ ball_hits_ground_time t = 0 :=
+sorry
+
+end ball_hits_ground_approx_time_l79_79451
+
+
+namespace range_of_f_l79_79101
+
+noncomputable def f (t : ℝ) : ℝ := (t^2 + 2 * t) / (t^2 + 2)
+
+theorem range_of_f : Set.range f = Set.Icc (-1 : ℝ) 2 :=
+sorry
+
+end range_of_f_l79_79101
+
+
+namespace fraction_absent_l79_79885
+
+theorem fraction_absent (p : ℕ) (x : ℝ) (h1 : 0 ≤ x ∧ x ≤ 1) (h2 : p * 1 = (1 - x) * p * 1.5) : x = 1 / 3 :=
+by
+  sorry
+
+end fraction_absent_l79_79885
+
+
+namespace meaningful_iff_gt_3_l79_79201
+
+section meaningful_expression
+
+variable (a : ℝ)
+
+def is_meaningful (a : ℝ) : Prop :=
+  (a > 3)
+
+theorem meaningful_iff_gt_3 : (∃ b, b = (a + 3) / Real.sqrt (a - 3)) ↔ is_meaningful a :=
+by
+  sorry
+
+end meaningful_expression
+
+end meaningful_iff_gt_3_l79_79201
+
+
+namespace alex_score_l79_79776
+
+theorem alex_score 
+    (n : ℕ) -- number of students
+    (avg_19 : ℕ) -- average score of first 19 students
+    (avg_20 : ℕ) -- average score of all 20 students
+    (h_n : n = 20) -- number of students is 20
+    (h_avg_19 : avg_19 = 75) -- average score of first 19 students is 75
+    (h_avg_20 : avg_20 = 76) -- average score of all 20 students is 76
+  : ∃ alex_score : ℕ, alex_score = 95 := 
+by
+    sorry
+
+end alex_score_l79_79776
+
+
+namespace kittens_given_away_l79_79231
+
+-- Conditions
+def initial_kittens : ℕ := 8
+def remaining_kittens : ℕ := 4
+
+-- Statement to prove
+theorem kittens_given_away : initial_kittens - remaining_kittens = 4 :=
+by
+  sorry
+
+end kittens_given_away_l79_79231
+
+
+namespace find_literate_employees_l79_79750
+
+-- Definitions based on conditions
+def illiterate_employees : ℕ := 20
+def initial_daily_wage : ℝ := 25
+def decreased_daily_wage : ℝ := 10
+def decrease_per_employee := initial_daily_wage - decreased_daily_wage
+def total_decrease_illiterate := illiterate_employees * decrease_per_employee
+def decrease_in_avg_salary : ℝ := 10
+
+-- Question to be proven
+def total_employees (literate_employees : ℕ) := literate_employees + illiterate_employees
+def total_decrease_all_employees (literate_employees : ℕ) := (total_employees literate_employees) * decrease_in_avg_salary
+
+theorem find_literate_employees : 
+  ∃ L : ℕ, total_decrease_all_employees L = total_decrease_illiterate ∧ L = 10 :=
+begin
+  use 10,
+  split,
+  {
+    change (10 + 20) * 10 = 300,
+    norm_num
+  },
+  refl
+end
+
+end find_literate_employees_l79_79750
+
+
+namespace find_second_number_l79_79342
+
+theorem find_second_number
+  (first_number : ℕ)
+  (second_number : ℕ)
+  (h1 : first_number = 45)
+  (h2 : first_number / second_number = 5) : second_number = 9 :=
+by
+  -- Proof goes here
+  sorry
+
+end find_second_number_l79_79342
+
+
+namespace greatest_integer_value_x_l79_79940
+
+theorem greatest_integer_value_x :
+  ∃ x : ℤ, (8 - 3 * (2 * x + 1) > 26) ∧ ∀ y : ℤ, (8 - 3 * (2 * y + 1) > 26) → y ≤ x :=
+sorry
+
+end greatest_integer_value_x_l79_79940
+
+
+namespace find_correct_speed_l79_79293
+
+-- Definitions for given conditions
+def distance_traveled (speed : ℝ) (time : ℝ) : ℝ := speed * time
+
+-- Given conditions as definitions
+def condition1 (d t : ℝ) : Prop := distance_traveled 35 (t + (5 / 60)) = d
+def condition2 (d t : ℝ) : Prop := distance_traveled 55 (t - (5 / 60)) = d
+
+-- Statement to prove
+theorem find_correct_speed (d t r : ℝ) (h1 : condition1 d t) (h2 : condition2 d t) :
+  r = (d / t) ∧ r = 42.78 :=
+by sorry
+
+end find_correct_speed_l79_79293
+
+
+namespace fixed_point_line_l79_79777
+
+theorem fixed_point_line (m x y : ℝ) (h : (2 * m + 1) * x + (m + 1) * y - 7 * m - 4 = 0) :
+  x = 3 ∧ y = 1 :=
+sorry
+
+end fixed_point_line_l79_79777
+
+
+namespace perm_banana_l79_79563
+
+theorem perm_banana : 
+  let total_letters := 6
+  let A_letters := 3
+  let N_letters := 2
+  (fact total_letters) / ((fact A_letters) * (fact N_letters) * fact (total_letters - A_letters - N_letters)) = 60 :=
+by
+  let total_letters := 6
+  let A_letters := 3
+  let N_letters := 2
+  have h1 : fact total_letters = 720 := by decide
+  have h2 : fact A_letters = 6 := by decide
+  have h3 : fact N_letters = 2 := by decide
+  have h4 : fact (total_letters - A_letters - N_letters) = fact (6 - 3 - 2) := by decide
+  have h5 : fact (total_letters - A_letters - N_letters) = 1 := by decide
+  calc
+    (720 / (6 * 2 * 1) : ℝ)
+    _ = 60 := by norm_num
+
+end perm_banana_l79_79563
+
+
+namespace find_probability_l79_79140
+
+variable {σ : ℝ} (ξ : ℝ)
+def is_normal_distribution : Prop := ξ ~ ℕ(0, σ^2)
+
+theorem find_probability (h1 : is_normal_distribution ξ) (h2 : P(-2 ≤ ξ ∧ ξ ≤ 0) = 0.4) : 
+  P(ξ > 2) = 0.1 :=
+by
+  sorry
+
+end find_probability_l79_79140
+
+
+namespace simple_random_sampling_correct_statements_l79_79085
+
+theorem simple_random_sampling_correct_statements :
+  let N : ℕ := 10
+  -- Conditions for simple random sampling
+  let is_finite (N : ℕ) := N > 0
+  let is_non_sequential (N : ℕ) := N > 0 -- represents sampling does not require sequential order
+  let without_replacement := true
+  let equal_probability := true
+  -- Verification
+  (is_finite N) ∧ 
+  (¬ is_non_sequential N) ∧ 
+  without_replacement ∧ 
+  equal_probability = true :=
+by
+  sorry
+
+end simple_random_sampling_correct_statements_l79_79085
+
+
+namespace jogged_time_l79_79714
+
+theorem jogged_time (J : ℕ) (W : ℕ) (r : ℚ) (h1 : r = 5 / 3) (h2 : W = 9) (h3 : r = J / W) : J = 15 := 
+by
+  sorry
+
+end jogged_time_l79_79714
+
+
+namespace jill_sales_goal_l79_79423
+
+def first_customer : ℕ := 5
+def second_customer : ℕ := 4 * first_customer
+def third_customer : ℕ := second_customer / 2
+def fourth_customer : ℕ := 3 * third_customer
+def fifth_customer : ℕ := 10
+def boxes_sold : ℕ := first_customer + second_customer + third_customer + fourth_customer + fifth_customer
+def boxes_left : ℕ := 75
+def sales_goal : ℕ := boxes_sold + boxes_left
+
+theorem jill_sales_goal : sales_goal = 150 := by
+  sorry
+
+end jill_sales_goal_l79_79423
+
+
+namespace no_integer_y_such_that_abs_g_y_is_prime_l79_79196
+
+def is_prime (n : ℤ) : Prop := n > 1 ∧ ∀ m : ℤ, m > 0 → m ≤ n → m ∣ n → m = 1 ∨ m = n
+
+def g (y : ℤ) : ℤ := 8 * y^2 - 55 * y + 21
+
+theorem no_integer_y_such_that_abs_g_y_is_prime : 
+  ∀ y : ℤ, ¬ is_prime (|g y|) :=
+by sorry
+
+end no_integer_y_such_that_abs_g_y_is_prime_l79_79196
+
+
+namespace apples_per_basket_holds_15_l79_79086
+
+-- Conditions as Definitions
+def trees := 10
+def total_apples := 3000
+def baskets_per_tree := 20
+
+-- Definition for apples per tree (from the given total apples and number of trees)
+def apples_per_tree : ℕ := total_apples / trees
+
+-- Definition for apples per basket (from apples per tree and baskets per tree)
+def apples_per_basket : ℕ := apples_per_tree / baskets_per_tree
+
+-- The statement to prove the equivalent mathematical problem
+theorem apples_per_basket_holds_15 
+  (H1 : trees = 10)
+  (H2 : total_apples = 3000)
+  (H3 : baskets_per_tree = 20) :
+  apples_per_basket = 15 :=
+by 
+  sorry
+
+end apples_per_basket_holds_15_l79_79086
+
+
+namespace italian_clock_hand_coincidence_l79_79021
+
+theorem italian_clock_hand_coincidence :
+  let hour_hand_rotation := 1 / 24
+  let minute_hand_rotation := 1
+  ∃ (t : ℕ), 0 ≤ t ∧ t < 24 ∧ (t * hour_hand_rotation) % 1 = (t * minute_hand_rotation) % 1
+:= sorry
+
+end italian_clock_hand_coincidence_l79_79021
+
+
+namespace oranges_equiv_frac_bananas_l79_79304
+
+theorem oranges_equiv_frac_bananas :
+  (3 / 4) * 16 * (1 / 3) * 9 = (3 / 2) * 6 :=
+by
+  sorry
+
+end oranges_equiv_frac_bananas_l79_79304
+
+
+namespace quadratic_roots_ratio_l79_79930
+
+theorem quadratic_roots_ratio (m n p : ℝ) (h₁ : m ≠ 0) (h₂ : n ≠ 0) (h₃ : p ≠ 0)
+    (h₄ : ∀ (s₁ s₂ : ℝ), s₁ + s₂ = -p ∧ s₁ * s₂ = m ∧ 3 * s₁ + 3 * s₂ = -m ∧ 9 * s₁ * s₂ = n) :
+    n / p = 27 :=
+sorry
+
+end quadratic_roots_ratio_l79_79930
+
+
+namespace k_inequality_l79_79199
+
+noncomputable def k_value : ℝ :=
+  5
+
+theorem k_inequality (x : ℝ) :
+  (x * (2 * x + 3) < k_value) ↔ (x > -5 / 2 ∧ x < 1) :=
+sorry
+
+end k_inequality_l79_79199
+
+
+namespace valid_paths_l79_79512
+
+def paths (n m : ℕ) : ℕ := Nat.choose (n + m) m
+
+def total_paths : ℕ := paths 8 4
+def blocked_paths_through_C_or_D : ℕ := 4 * 56
+
+theorem valid_paths : total_paths - blocked_paths_through_C_or_D = 271 := by
+  sorry
+
+end valid_paths_l79_79512
+
+
+namespace largest_two_digit_number_l79_79946
+
+-- Define the conditions and the theorem to be proven
+theorem largest_two_digit_number (n : ℕ) : 
+  (n % 3 = 0) ∧ (n % 4 = 0) ∧ (n % 5 = 4) ∧ (10 ≤ n) ∧ (n < 100) → n = 84 := by
+  sorry
+
+end largest_two_digit_number_l79_79946
+
+
+namespace heartsuit_ratio_l79_79007
+
+-- Define the operation \heartsuit
+def heartsuit (n m : ℕ) : ℕ := n^3 * m^2
+
+-- The proposition we want to prove
+theorem heartsuit_ratio :
+  heartsuit 2 4 / heartsuit 4 2 = 1 / 2 := by
+  sorry
+
+end heartsuit_ratio_l79_79007
+
+
+namespace particle_speed_correct_l79_79348
+
+noncomputable def particle_position (t : ℝ) : ℝ × ℝ :=
+  (3 * t + 5, 5 * t - 9)
+
+noncomputable def particle_speed : ℝ :=
+  Real.sqrt (3 ^ 2 + 5 ^ 2)
+
+theorem particle_speed_correct : particle_speed = Real.sqrt 34 := by
+  sorry
+
+end particle_speed_correct_l79_79348
+
+
+namespace estimate_yellow_balls_l79_79278
+
+theorem estimate_yellow_balls (m : ℕ) (h1: (5 : ℝ) / (5 + m) = 0.2) : m = 20 :=
+  sorry
+
+end estimate_yellow_balls_l79_79278
+
+
+namespace union_of_A_and_B_l79_79589
+
+-- Condition definitions
+def A : Set ℝ := {x : ℝ | abs (x - 3) < 2}
+def B : Set ℝ := {x : ℝ | (x + 1) / (x - 2) ≤ 0}
+
+-- The theorem we need to prove
+theorem union_of_A_and_B : A ∪ B = {x : ℝ | -1 ≤ x ∧ x < 5} :=
+by
+  -- This is where the proof would go if it were required
+  sorry
+
+end union_of_A_and_B_l79_79589
+
+
+namespace boy_present_age_l79_79255
+
+theorem boy_present_age : ∃ x : ℕ, (x + 4 = 2 * (x - 6)) ∧ x = 16 := by
+  sorry
+
+end boy_present_age_l79_79255
+
+
+namespace p_is_necessary_but_not_sufficient_for_q_l79_79858
+
+def p (x : ℝ) : Prop := |2 * x - 3| < 1
+def q (x : ℝ) : Prop := x * (x - 3) < 0
+
+theorem p_is_necessary_but_not_sufficient_for_q :
+  (∀ x : ℝ, q x → p x) ∧ ¬(∀ x : ℝ, p x → q x) :=
+by sorry
+
+end p_is_necessary_but_not_sufficient_for_q_l79_79858
+
+
+namespace range_of_a_if_in_first_quadrant_l79_79866
+
+noncomputable def is_first_quadrant (z : ℂ) : Prop :=
+  z.re > 0 ∧ z.im > 0
+
+theorem range_of_a_if_in_first_quadrant (a : ℝ) :
+  is_first_quadrant ((1 + a * Complex.I) / (2 - Complex.I)) ↔ (-1/2 : ℝ) < a ∧ a < 2 := 
+sorry
+
+end range_of_a_if_in_first_quadrant_l79_79866
+
+
+namespace largest_integer_divides_expression_l79_79272
+
+theorem largest_integer_divides_expression (x : ℤ) (h : Even x) :
+  3 ∣ (10 * x + 1) * (10 * x + 5) * (5 * x + 3) :=
+sorry
+
+end largest_integer_divides_expression_l79_79272
+
+
+namespace right_triangle_condition_l79_79176
+
+theorem right_triangle_condition (A B C : ℝ) (a b c : ℝ) :
+  (A + B = 90) → (A + B + C = 180) → (C = 90) := 
+by
+  sorry
+
+end right_triangle_condition_l79_79176
+
+
+namespace binom_1300_2_l79_79366
+
+theorem binom_1300_2 : Nat.choose 1300 2 = 844350 := by
+  sorry
+
+end binom_1300_2_l79_79366
+
+
+namespace exists_ij_aij_gt_ij_l79_79116
+
+theorem exists_ij_aij_gt_ij (a : ℕ → ℕ → ℕ) 
+  (h_a_positive : ∀ i j, 0 < a i j)
+  (h_a_distribution : ∀ k, (∃ S : Finset (ℕ × ℕ), S.card = 8 ∧ ∀ ij : ℕ × ℕ, ij ∈ S ↔ a ij.1 ij.2 = k)) :
+  ∃ i j, a i j > i * j :=
+by
+  sorry
+
+end exists_ij_aij_gt_ij_l79_79116
+
+
+namespace probability_of_female_selection_probability_of_male_host_selection_l79_79611
+
+/-!
+In a competition, there are eight contestants consisting of five females and three males.
+If three contestants are chosen randomly to progress to the next round, what is the 
+probability that all selected contestants are female? Additionally, from those who 
+do not proceed, one is selected as a host. What is the probability that this host is male?
+-/
+
+noncomputable def number_of_ways_select_3_from_8 : ℕ := Nat.choose 8 3
+
+noncomputable def number_of_ways_select_3_females_from_5 : ℕ := Nat.choose 5 3
+
+noncomputable def probability_all_3_females : ℚ := number_of_ways_select_3_females_from_5 / number_of_ways_select_3_from_8
+
+noncomputable def number_of_remaining_contestants : ℕ := 8 - 3
+
+noncomputable def number_of_males_remaining : ℕ := 3 - 1
+
+noncomputable def number_of_ways_select_1_male_from_2 : ℕ := Nat.choose 2 1
+
+noncomputable def number_of_ways_select_1_from_5 : ℕ := Nat.choose 5 1
+
+noncomputable def probability_host_is_male : ℚ := number_of_ways_select_1_male_from_2 / number_of_ways_select_1_from_5
+
+theorem probability_of_female_selection : probability_all_3_females = 5 / 28 := by
+  sorry
+
+theorem probability_of_male_host_selection : probability_host_is_male = 2 / 5 := by
+  sorry
+
+end probability_of_female_selection_probability_of_male_host_selection_l79_79611
+
+
+namespace solve_system_l79_79647
+
+open Classical
+
+theorem solve_system : ∃ t : ℝ, ∀ (x y z : ℝ), 
+  (x^2 - 9 * y^2 = 0 ∧ x + y + z = 0) ↔ 
+  (x = 3 * t ∧ y = t ∧ z = -4 * t) 
+  ∨ (x = -3 * t ∧ y = t ∧ z = 2 * t) := 
+by 
+  sorry
+
+end solve_system_l79_79647
+
+
+namespace determine_phi_l79_79862
+
+variable (ω : ℝ) (varphi : ℝ)
+
+noncomputable def f (ω varphi x: ℝ) : ℝ := Real.sin (ω * x + varphi)
+
+theorem determine_phi
+  (hω : ω > 0)
+  (hvarphi : 0 < varphi ∧ varphi < π)
+  (hx1 : f ω varphi (π/4) = Real.sin (ω * (π / 4) + varphi))
+  (hx2 : f ω varphi (5 * π / 4) = Real.sin (ω * (5 * π / 4) + varphi))
+  (hsym : ∀ x, f ω varphi x = f ω varphi (π - x))
+  : varphi = π / 4 :=
+sorry
+
+end determine_phi_l79_79862
+
+
+namespace points_lie_on_hyperbola_l79_79104
+
+def point_on_hyperbola (t : ℝ) : Prop :=
+  let x := 2 * Real.exp t - 2 * Real.exp (-t)
+  let y := 4 * (Real.exp t + Real.exp (-t))
+  (y^2) / 16 - (x^2) / 4 = 1
+
+theorem points_lie_on_hyperbola : ∀ t : ℝ, point_on_hyperbola t :=
+by
+  intro t
+  sorry
+
+end points_lie_on_hyperbola_l79_79104
+
+
+namespace convert_to_polar_l79_79368
+
+noncomputable def polar_coordinates (x y : ℝ) : ℝ × ℝ :=
+  let r := Real.sqrt (x^2 + y^2)
+  let θ := Real.arctan (y / x)
+  (r, θ)
+
+theorem convert_to_polar (x y : ℝ) (hx : x = 8) (hy : y = 3 * Real.sqrt 3) :
+  polar_coordinates x y = (Real.sqrt 91, Real.arctan (3 * Real.sqrt 3 / 8)) :=
+by
+  rw [hx, hy]
+  simp [polar_coordinates]
+  -- place to handle conversions and simplifications if necessary
+  sorry
+
+end convert_to_polar_l79_79368
+
+
+namespace mb_range_l79_79659
+
+theorem mb_range (m b : ℝ) (hm : m = 3 / 4) (hb : b = -2 / 3) :
+  -1 < m * b ∧ m * b < 0 :=
+by
+  rw [hm, hb]
+  sorry
+
+end mb_range_l79_79659
+
+
+namespace extra_sweets_l79_79294
+
+theorem extra_sweets (S : ℕ) (h1 : ∀ n: ℕ, S = 120 * 38) : 
+    (38 - (S / 190) = 14) :=
+by
+  -- Here we will provide the proof 
+  sorry
+
+end extra_sweets_l79_79294
+
+
+namespace polygon_triangle_division_l79_79780
+
+theorem polygon_triangle_division (n k : ℕ) (h₁ : n ≥ 3) (h₂ : k ≥ 1):
+  k ≥ n - 2 :=
+sorry
+
+end polygon_triangle_division_l79_79780
+
+
+namespace BANANA_arrangements_l79_79516
+
+theorem BANANA_arrangements : 
+  let total_letters := 6
+  let A_count := 3
+  let N_count := 2
+  (Nat.factorial total_letters) / (Nat.factorial A_count * Nat.factorial N_count) = 60 := 
+by 
+  let total_letters := 6
+  let A_count := 3
+  let N_count := 2
+  sorry
+
+end BANANA_arrangements_l79_79516
+
+
+namespace syllogism_sequence_correct_l79_79870
+
+-- Definitions based on conditions
+def square_interior_angles_equal : Prop := ∀ (A B C D : ℝ), A = B ∧ B = C ∧ C = D
+def rectangle_interior_angles_equal : Prop := ∀ (A B C D : ℝ), A = B ∧ B = C ∧ C = D
+def square_is_rectangle : Prop := ∀ (S : Type), S = S
+
+-- Final Goal
+theorem syllogism_sequence_correct : (rectangle_interior_angles_equal → square_is_rectangle → square_interior_angles_equal) :=
+by
+  sorry
+
+end syllogism_sequence_correct_l79_79870
+
+
+namespace quadratic_equation_root_form_l79_79984
+
+theorem quadratic_equation_root_form
+  (a b c : ℤ) (m n p : ℤ)
+  (ha : a = 3)
+  (hb : b = -4)
+  (hc : c = -7)
+  (h_discriminant : b^2 - 4 * a * c = n)
+  (hgcd_mn : Int.gcd m n = 1)
+  (hgcd_mp : Int.gcd m p = 1)
+  (hgcd_np : Int.gcd n p = 1) :
+  n = 100 :=
+by
+  sorry
+
+end quadratic_equation_root_form_l79_79984
+
+
+namespace variance_of_data_set_l79_79385
+
+theorem variance_of_data_set (a : ℝ) (ha : (1 + a + 3 + 6 + 7) / 5 = 4) : 
+  (1 / 5) * ((1 - 4)^2 + (a - 4)^2 + (3 - 4)^2 + (6 - 4)^2 + (7 - 4)^2) = 24 / 5 :=
+by
+  sorry
+
+end variance_of_data_set_l79_79385
+
+
+namespace probability_perpendicular_lines_l79_79580
+
+open Finset
+
+theorem probability_perpendicular_lines (a b : ℕ) :
+  a ∈ (range 6).map (λ x, x + 1) → b ∈ (range 6).map (λ x, x + 1) →
+  (filter (λ (p : ℕ × ℕ), let (a, b) := p in a - 2 * b = 0) ((range 6).map (λ x, x + 1)).product ((range 6).map (λ x, x + 1))).card.toRat / 36 = (1 : ℚ) / 12 :=
+by
+  intros ha hb
+  sorry
+
+end probability_perpendicular_lines_l79_79580
+
+
+namespace value_of_g_at_2_l79_79602
+
+def g (x : ℝ) : ℝ := x^2 - 4 * x + 4
+
+theorem value_of_g_at_2 : g 2 = 0 :=
+by
+  sorry
+
+end value_of_g_at_2_l79_79602
+
+
+namespace constant_term_in_modified_equation_l79_79620
+
+theorem constant_term_in_modified_equation :
+  ∃ (c : ℝ), ∀ (q : ℝ), (3 * (3 * 5 - 3) - 3 + c = 132) → c = 99 := 
+by
+  sorry
+
+end constant_term_in_modified_equation_l79_79620
+
+
+namespace percentage_of_girls_after_change_l79_79616
+
+variables (initial_total_children initial_boys initial_girls additional_boys : ℕ)
+variables (percentage_boys : ℚ)
+
+-- Initial conditions
+def initial_conditions : Prop :=
+  initial_total_children = 50 ∧
+  percentage_boys = 90 / 100 ∧
+  initial_boys = initial_total_children * percentage_boys ∧
+  initial_girls = initial_total_children - initial_boys ∧
+  additional_boys = 50
+
+-- Statement to prove
+theorem percentage_of_girls_after_change :
+  initial_conditions initial_total_children initial_boys initial_girls additional_boys percentage_boys →
+  (initial_girls / (initial_total_children + additional_boys) * 100 = 5) :=
+by
+  sorry
+
+end percentage_of_girls_after_change_l79_79616
+
+
+namespace ed_initial_money_l79_79240
+
+-- Define initial conditions
+def cost_per_hour_night : ℝ := 1.50
+def hours_at_night : ℕ := 6
+def cost_per_hour_morning : ℝ := 2
+def hours_in_morning : ℕ := 4
+def money_left : ℝ := 63
+
+-- Total cost calculation
+def total_cost : ℝ :=
+  (cost_per_hour_night * hours_at_night) + (cost_per_hour_morning * hours_in_morning)
+
+-- Problem statement to prove
+theorem ed_initial_money : money_left + total_cost = 80 :=
+by sorry
+
+end ed_initial_money_l79_79240
+
+
+namespace banana_arrangement_count_l79_79553
+
+theorem banana_arrangement_count :
+  let word := "BANANA"
+  let length_word := 6
+  let a_count := 3
+  let n_count := 2
+  (length_word)! / (a_count! * n_count!) = 60 := by
+  sorry
+
+end banana_arrangement_count_l79_79553
+
+
+namespace age_difference_l79_79380
+
+def JobAge := 5
+def StephanieAge := 4 * JobAge
+def FreddyAge := 18
+
+theorem age_difference : StephanieAge - FreddyAge = 2 := by
+  sorry
+
+end age_difference_l79_79380
+
+
+namespace total_distance_l79_79642
+
+def morning_distance : ℕ := 2
+def evening_multiplier : ℕ := 5
+
+theorem total_distance : morning_distance + (evening_multiplier * morning_distance) = 12 :=
+by
+  sorry
+
+end total_distance_l79_79642
+
+
+namespace distinct_arrangements_of_BANANA_l79_79555
+
+theorem distinct_arrangements_of_BANANA :
+  let total_letters := 6
+  let freq_A := 3
+  let freq_N := 2
+  let freq_B := 1
+  (nat.factorial total_letters) / (nat.factorial freq_A * nat.factorial freq_N * nat.factorial freq_B) = 60 :=
+by
+  sorry
+
+end distinct_arrangements_of_BANANA_l79_79555
+
+
+namespace LCM_of_8_and_12_l79_79921
+
+-- Definitions based on the provided conditions
+def a : ℕ := 8
+def x : ℕ := 12
+
+def HCF (a b : ℕ) : ℕ := Nat.gcd a b
+def LCM (a b : ℕ) : ℕ := Nat.lcm a b
+
+-- Conditions
+def hcf_condition : HCF a x = 4 := by sorry
+def x_condition : x = 12 := rfl
+
+-- The proof statement
+theorem LCM_of_8_and_12 : LCM a x = 24 :=
+by
+  have h1 : HCF a x = 4 := hcf_condition
+  have h2 : x = 12 := x_condition
+  rw [h2] at h1
+  sorry
+
+end LCM_of_8_and_12_l79_79921
+
+
+namespace solve_sqrt_equation_l79_79377
+
+theorem solve_sqrt_equation :
+  ∀ (x : ℝ), (3 * Real.sqrt x + 3 * x⁻¹/2 = 7) →
+  (x = (49 + 14 * Real.sqrt 13 + 13) / 36 ∨ x = (49 - 14 * Real.sqrt 13 + 13) / 36) :=
+by
+  intro x hx
+  sorry
+
+end solve_sqrt_equation_l79_79377
+
+
+namespace total_valid_arrangements_l79_79644
+
+-- Define the students and schools
+inductive Student
+| G1 | G2 | B1 | B2 | B3 | BA
+deriving DecidableEq
+
+inductive School
+| A | B | C
+deriving DecidableEq
+
+-- Define the condition that any two students cannot be in the same school
+def is_valid_arrangement (arr : School → Student → Bool) : Bool :=
+  (arr School.A Student.G1 ≠ arr School.A Student.G2) ∧ 
+  (arr School.B Student.G1 ≠ arr School.B Student.G2) ∧
+  (arr School.C Student.G1 ≠ arr School.C Student.G2) ∧
+  ¬ arr School.C Student.G1 ∧
+  ¬ arr School.C Student.G2 ∧
+  ¬ arr School.A Student.BA
+
+-- The theorem to prove the total number of different valid arrangements
+theorem total_valid_arrangements : 
+  ∃ n : ℕ, n = 18 ∧ ∃ arr : (School → Student → Bool), is_valid_arrangement arr := 
+sorry
+
+end total_valid_arrangements_l79_79644
+
+
+namespace find_possible_values_l79_79896
+
+theorem find_possible_values (a b c k : ℝ) 
+  (ha : a ≠ 0) (hb : b ≠ 0) (hc : c ≠ 0) 
+  (sum_zero : a + b + c = 0) :
+  (k * a^2 * b^2 + k * a^2 * c^2 + k * b^2 * c^2) / 
+  ((a^2 - b * c) * (b^2 - a * c) + 
+   (a^2 - b * c) * (c^2 - a * b) + 
+   (b^2 - a * c) * (c^2 - a * b)) 
+  = k / 3 :=
+by 
+  sorry
+
+end find_possible_values_l79_79896
+
+
+namespace intersection_of_A_and_B_l79_79582
+
+noncomputable def A : Set ℝ := { x | -1 < x - 3 ∧ x - 3 ≤ 2 }
+noncomputable def B : Set ℝ := { x | 3 ≤ x ∧ x < 6 }
+
+theorem intersection_of_A_and_B : A ∩ B = { x | 3 ≤ x ∧ x ≤ 5 } :=
+by
+  sorry
+
+end intersection_of_A_and_B_l79_79582
+
+
+namespace integer_count_of_sqrt_x_l79_79462
+
+theorem integer_count_of_sqrt_x : ∃ (n : ℕ), n = 15 ∧ ∀ (x : ℤ), (9 < x ∧ x < 25) ↔ (10 ≤ x ∧ x ≤ 24) :=
+by
+  sorry
+
+end integer_count_of_sqrt_x_l79_79462
+
+
+namespace volume_of_blue_tetrahedron_l79_79068
+
+theorem volume_of_blue_tetrahedron (side_length : ℝ) (H : side_length = 8) : 
+  volume_of_tetrahedron_formed_by_blue_vertices side_length = 512 / 3 :=
+by
+  sorry
+
+end volume_of_blue_tetrahedron_l79_79068
+
+
+namespace quadratic_properties_l79_79734
+
+open Real
+
+noncomputable section
+
+-- Define the quadratic function
+def quadratic (x : ℝ) : ℝ := x^2 - 4 * x + 3
+
+-- Vertex form of the quadratic
+def vertexForm (x : ℝ) : ℝ := (x - 2)^2 - 1
+
+-- Axis of symmetry
+def axisOfSymmetry : ℝ := 2
+
+-- Vertex of the quadratic
+def vertex : ℝ × ℝ := (2, -1)
+
+-- Minimum value of the quadratic
+def minimumValue : ℝ := -1
+
+-- Interval where the function decreases
+def decreasingInterval (x : ℝ) : Prop := -1 ≤ x ∧ x < 2
+
+-- Range of y in the interval -1 <= x < 3
+def rangeOfY (y : ℝ) : Prop := -1 ≤ y ∧ y ≤ 8
+
+-- Main statement
+theorem quadratic_properties :
+  (∀ x, quadratic x = vertexForm x) ∧
+  (∃ x, axisOfSymmetry = x) ∧
+  (∃ v, vertex = v) ∧
+  (minimumValue = -1) ∧
+  (∀ x, -1 ≤ x ∧ x < 2 → quadratic x > quadratic (x + 1)) ∧
+  (∀ y, (∃ x, -1 ≤ x ∧ x < 3 ∧ y = quadratic x) → rangeOfY y) :=
+sorry
+
+end quadratic_properties_l79_79734
+
+
+namespace baseball_team_games_l79_79340
+
+theorem baseball_team_games (P Q : ℕ) (hP : P > 3 * Q) (hQ : Q > 3) (hTotal : 2 * P + 6 * Q = 78) :
+  2 * P = 54 :=
+by
+  -- placeholder for the actual proof
+  sorry
+
+end baseball_team_games_l79_79340
+
+
+namespace tank_capacity_l79_79344
+
+theorem tank_capacity
+  (w c : ℝ)
+  (h1 : w / c = 1 / 3)
+  (h2 : (w + 5) / c = 2 / 5) :
+  c = 75 :=
+by
+  sorry
+
+end tank_capacity_l79_79344
+
+
+namespace cherry_sodas_l79_79687
+
+theorem cherry_sodas (C O : ℕ) (h1 : O = 2 * C) (h2 : C + O = 24) : C = 8 :=
+by sorry
+
+end cherry_sodas_l79_79687
+
+
+namespace common_chord_through_vertex_l79_79597
+
+-- Define the structure for the problem
+def parabola (y x p : ℝ) : Prop := y^2 = 2 * p * x
+
+def passes_through (x y x_f y_f : ℝ) : Prop := (x - x_f) * (x - x_f) + y * y = 0
+
+noncomputable def focus (p : ℝ) : ℝ × ℝ := (p / 2, 0)
+
+-- The main statement to prove
+theorem common_chord_through_vertex (p : ℝ)
+  (A B C D : ℝ × ℝ)
+  (hA : parabola A.snd A.fst p)
+  (hB : parabola B.snd B.fst p)
+  (hC : parabola C.snd C.fst p)
+  (hD : parabola D.snd D.fst p)
+  (hAB_f : passes_through A.fst A.snd (focus p).fst (focus p).snd)
+  (hCD_f : passes_through C.fst C.snd (focus p).fst (focus p).snd) :
+  ∃ k : ℝ, ∀ x y : ℝ, (x + k = 0) → (y + k = 0) :=
+by sorry
+
+end common_chord_through_vertex_l79_79597
+
+
+namespace range_of_m_l79_79109
+
+variable {x m : ℝ}
+
+def p (m : ℝ) : Prop := ∃ x : ℝ, m * x^2 + 1 ≤ 0
+def q (m : ℝ) : Prop := ∀ x : ℝ, x^2 + m * x + 1 > 0
+
+theorem range_of_m (m : ℝ) : (¬ p m ∨ ¬ q m) → m ≥ 2 := 
+sorry
+
+end range_of_m_l79_79109
+
+
+namespace cubic_expression_value_l79_79271
+
+theorem cubic_expression_value (a b c : ℝ) 
+  (h1 : a + b + c = 13) 
+  (h2 : ab + ac + bc = 32) : 
+  a^3 + b^3 + c^3 - 3 * a * b * c = 949 := 
+by
+  sorry
+
+end cubic_expression_value_l79_79271
+
+
+namespace coeff_x3_in_binom_expansion_l79_79753
+
+-- Define the binomial coefficient function
+def binom (n k : ℕ) : ℕ := Nat.choose n k
+
+-- Define the coefficient function for x^k in the binomial expansion of (x + 1)^n
+def binom_coeff (n k : ℕ) : ℕ := binom n k
+
+-- The theorem to prove that the coefficient of x^3 in the expansion of (x + 1)^36 is 7140
+theorem coeff_x3_in_binom_expansion : binom_coeff 36 3 = 7140 :=
+by
+  sorry
+
+end coeff_x3_in_binom_expansion_l79_79753
+
+
+namespace find_QS_l79_79785
+
+theorem find_QS (RS QR QS : ℕ) (h1 : RS = 13) (h2 : QR = 5) (h3 : QR * 13 = 5 * 13) :
+  QS = 12 :=
+by
+  sorry
+
+end find_QS_l79_79785
+
+
+namespace max_sin_a_given_sin_a_plus_b_l79_79093
+
+theorem max_sin_a_given_sin_a_plus_b (a b : ℝ) (sin_add : Real.sin (a + b) = Real.sin a + Real.sin b) : 
+  Real.sin a ≤ 1 := 
+sorry
+
+end max_sin_a_given_sin_a_plus_b_l79_79093
+
+
+namespace permutations_of_BANANA_l79_79524
+
+/-- The number of distinct permutations of the word "BANANA" is 60. -/
+theorem permutations_of_BANANA : (Nat.factorial 6 / (Nat.factorial 3 * Nat.factorial 2 * Nat.factorial 1)) = 60 := by
+  sorry
+
+end permutations_of_BANANA_l79_79524
+
+
+namespace construct_points_PQ_l79_79712
+
+-- Given Conditions
+variable (a b c : ℝ)
+def triangle_ABC_conditions : Prop := 
+  let s := (a + b + c) / 2
+  s^2 ≥ 2 * a * b
+
+-- Main Statement
+theorem construct_points_PQ (a b c : ℝ) (P Q : ℝ) 
+(h1 : triangle_ABC_conditions a b c) :
+  let s := (a + b + c) / 2
+  let x := (s + Real.sqrt (s^2 - 2 * a * b)) / 2
+  let y := (s - Real.sqrt (s^2 - 2 * a * b)) / 2
+  x + y = s ∧ x * y = (a * b) / 2 :=
+by
+  sorry
+
+end construct_points_PQ_l79_79712
+
+
+namespace find_multiplier_l79_79009
+
+theorem find_multiplier (x y n : ℤ) (h1 : 3 * x + y = 40) (h2 : 2 * x - y = 20) (h3 : y^2 = 16) :
+  n * y^2 = 48 :=
+by 
+  -- proof goes here
+  sorry
+
+end find_multiplier_l79_79009
+
+
+namespace expansion_coefficient_a2_l79_79875
+
+theorem expansion_coefficient_a2 : 
+  (∃ (a a_1 a_2 a_3 a_4 a_5 a_6 a_7 : ℝ), 
+    (1 - 2*x)^7 = a + a_1*x + a_2*x^2 + a_3*x^3 + a_4*x^4 + a_5*x^5 + a_6*x^6 + a_7*x^7 -> 
+    a_2 = 84) :=
+sorry
+
+end expansion_coefficient_a2_l79_79875
+
+
+namespace measure_angle_CAB_in_hexagon_l79_79413
+
+-- Define the problem conditions and goal.
+theorem measure_angle_CAB_in_hexagon 
+  (ABCDEF_regular: ∀ (AB BC CD DE EF FA: ℝ), AB = BC ∧ BC = CD ∧ CD = DE ∧ DE = EF ∧ EF = FA ∧ FA = AB)
+  (interior_angle_120: ∀ (x y z w v u: ℝ), x+y+z+w+v+u = 720)
+  (interior_angle_A: ∀ (angle: ℝ), angle = 120 )
+  : ∃ (CAB:ℝ), CAB = 30 := 
+sorry
+
+end measure_angle_CAB_in_hexagon_l79_79413
+
+
+namespace lateral_surface_area_cone_l79_79458
+
+theorem lateral_surface_area_cone (r l : ℝ) (h₀ : r = 6) (h₁ : l = 10) : π * r * l = 60 * π := by 
+  sorry
+
+end lateral_surface_area_cone_l79_79458
+
+
+namespace part1_l79_79060
+
+variables {a b c : ℝ}
+theorem part1 (ha : 0 < a) (hb : 0 < b) (hc : 0 < c)
+    (h : a / (b + c) = b / (c + a) - c / (a + b)) : 
+    b / (c + a) ≥ (Real.sqrt 17 - 1) / 4 :=
+sorry
+
+end part1_l79_79060
+
+
+namespace tickets_difference_l79_79907
+
+-- Define the conditions
+def tickets_friday : ℕ := 181
+def tickets_sunday : ℕ := 78
+def tickets_saturday : ℕ := 2 * tickets_friday
+
+-- The theorem to prove
+theorem tickets_difference : tickets_saturday - tickets_sunday = 284 := by
+  sorry
+
+end tickets_difference_l79_79907
+
+
+namespace eq_has_unique_solution_l79_79370
+
+theorem eq_has_unique_solution : 
+  ∃! x : ℝ, (x ≠ 0)
+    ∧ ((x < 0 → false) ∧ 
+      (x > 0 → (x^18 + 1) * (x^16 + x^14 + x^12 + x^10 + x^8 + x^6 + x^4 + x^2 + 1) = 18 * x^9)) :=
+by sorry
+
+end eq_has_unique_solution_l79_79370
+
+
+namespace cone_volume_l79_79836
+
+theorem cone_volume (R h : ℝ) (hR : 0 ≤ R) (hh : 0 ≤ h) : 
+  (∫ x in (0 : ℝ)..h, π * (R / h * x)^2) = (1 / 3) * π * R^2 * h :=
+by
+  sorry
+
+end cone_volume_l79_79836
+
+
+namespace solve_for_x_l79_79170
+
+theorem solve_for_x (x : ℝ) : (|2 * x + 8| = 4 - 3 * x) → x = -4 / 5 :=
+  sorry
+
+end solve_for_x_l79_79170
+
+
+namespace math_proof_problem_l79_79637
+
+variable {a_n : ℕ → ℝ} -- sequence a_n
+variable {b_n : ℕ → ℝ} -- sequence b_n
+
+-- Given that a_n is an arithmetic sequence with common difference d
+def isArithmeticSequence (a_n : ℕ → ℝ) (d : ℝ) : Prop := ∀ n, a_n (n + 1) = a_n n + d
+
+-- Given condition for sequence b_n
+def b_n_def (a_n b_n : ℕ → ℝ) : Prop := ∀ n, b_n n = a_n (n + 1) * a_n (n + 2) - a_n n ^ 2
+
+-- Both sequences have common difference d ≠ 0
+def common_difference_ne_zero (a_n b_n : ℕ → ℝ) (d : ℝ) : Prop :=
+  isArithmeticSequence a_n d ∧ isArithmeticSequence b_n d ∧ d ≠ 0
+
+-- Condition involving positive integers s and t
+def integer_condition (a_n b_n : ℕ → ℝ) (s t : ℕ) : Prop :=
+  1 ≤ s ∧ 1 ≤ t ∧ ∃ (x : ℤ), a_n s + b_n t = x
+
+-- Theorem to prove that the sequence {b_n} is arithmetic and find minimum value of |a_1|
+theorem math_proof_problem
+  (a_n b_n : ℕ → ℝ) (d : ℝ) (s t : ℕ)
+  (arithmetic_a : isArithmeticSequence a_n d)
+  (defined_b : b_n_def a_n b_n)
+  (common_diff : common_difference_ne_zero a_n b_n d)
+  (int_condition : integer_condition a_n b_n s t) :
+  (isArithmeticSequence b_n (3 * d ^ 2)) ∧ (∃ m : ℝ, m = |a_n 1| ∧ m = 1 / 36) :=
+  by sorry
+
+end math_proof_problem_l79_79637
+
+
+namespace factor_polynomial_l79_79367
+
+-- Statement of the proof problem
+theorem factor_polynomial (x y z : ℝ) :
+    x * (y - z)^4 + y * (z - x)^4 + z * (x - y)^4 =
+    (x - y) * (y - z) * (z - x) * (-(x - y)^2 - (y - z)^2 - (z - x)^2) :=
+by
+  sorry
+
+end factor_polynomial_l79_79367
+
+
+namespace problem_solution_l79_79764
+
+noncomputable def ellipse_properties (F1 F2 : ℝ × ℝ) (sum_dists : ℝ) : ℝ × ℝ × ℝ × ℝ := 
+  let a := sum_dists / 2 
+  let c := (Real.sqrt ((F1.1 - F2.1)^2 + (F1.2 - F2.2)^2)) / 2
+  let b := Real.sqrt (a^2 - c^2)
+  let h := (F1.1 + F2.1) / 2
+  let k := (F1.2 + F2.2) / 2
+  (h, k, a, b)
+
+theorem problem_solution :
+  let F1 := (0, 1)
+  let F2 := (6, 1)
+  let sum_dists := 10
+  let (h, k, a, b) := ellipse_properties F1 F2 sum_dists
+  h + k + a + b = 13 :=
+by
+  -- assuming the proof here
+  sorry
+
+end problem_solution_l79_79764
+
+
+namespace solve_for_a_l79_79133
+
+theorem solve_for_a (a : ℝ) (y : ℝ) (h1 : 4 * 2 + y = a) (h2 : 2 * 2 + 5 * y = 3 * a) : a = 18 :=
+  sorry
+
+end solve_for_a_l79_79133
+
+
+namespace union_of_A_B_l79_79584
+
+def A : Set ℝ := {x | |x - 3| < 2}
+def B : Set ℝ := {x | (x + 1) / (x - 2) ≤ 0}
+
+theorem union_of_A_B : A ∪ B = {x | -1 ≤ x ∧ x < 5} :=
+by
+  sorry
+
+end union_of_A_B_l79_79584
+
+
+namespace gcd_of_polynomial_and_multiple_of_12600_l79_79593
+
+theorem gcd_of_polynomial_and_multiple_of_12600 (x : ℕ) (h : 12600 ∣ x) : gcd ((5 * x + 7) * (11 * x + 3) * (17 * x + 8) * (4 * x + 5)) x = 840 := by
+  sorry
+
+end gcd_of_polynomial_and_multiple_of_12600_l79_79593
+
+
+namespace problem1_problem2_l79_79929
+
+open Real
+
+-- Define the line y = 2x + b
+def line (x : ℝ) (b : ℝ) : ℝ := 2 * x + b
+
+-- Define the parabola y = (1/2)x^2
+def parabola (x : ℝ) : ℝ := (1 / 2) * x^2
+
+-- Define the directrix of the parabola y = (1/2)x^2
+def directrix : ℝ := -1 / 2
+
+-- Define the equation of the circle centered at (2, 2) with radius 2.5
+def circle (x y : ℝ) : ℝ :=
+  (x - 2) ^ 2 + (y - 2) ^ 2
+
+-- Problem 1: Prove that the line y = 2x - 2 is tangent to the parabola y = (1/2)x^2 at (2, 2)
+theorem problem1 : 
+  ∀ x : ℝ, 
+  (∃ b : ℝ, b = -2 → line x b = parabola x) →
+  (2 * 2 + -2 = (1 / 2) * 2 ^ 2) :=
+by
+  sorry
+
+-- Problem 2: Prove that the equation of the circle with center at (2, 2) and tangent to the directrix is (x - 2)^2 + (y - 2)^2 = (5/2)^2
+theorem problem2 : 
+  ∀ x y : ℝ, 
+  (circle x y = (5 / 2) ^ 2) :=
+by
+  sorry
+
+end problem1_problem2_l79_79929
+
+
+namespace correct_word_is_any_l79_79622
+
+def words : List String := ["other", "any", "none", "some"]
+
+def is_correct_word (word : String) : Prop :=
+  "Jane was asked a lot of questions, but she didn’t answer " ++ word ++ " of them." = 
+    "Jane was asked a lot of questions, but she didn’t answer any of them."
+
+theorem correct_word_is_any : is_correct_word "any" :=
+by
+  sorry
+
+end correct_word_is_any_l79_79622
+
+
+namespace garden_width_l79_79180
+
+theorem garden_width (w l : ℝ) (h_length : l = 3 * w) (h_area : l * w = 675) : w = 15 :=
+by
+  sorry
+
+end garden_width_l79_79180
+
+
+namespace number_of_arrangements_of_BANANA_l79_79534
+
+theorem number_of_arrangements_of_BANANA :
+  let total_letters := 6
+  let count_A := 3
+  let count_N := 2
+  let count_B := 1
+  let factorial := (n : ℕ) => if n = 0 then 1 else n * factorial (n - 1)
+  (factorial total_letters) / ((factorial count_A) * (factorial count_N) * (factorial count_B)) = 60 :=
+by
+  let total_letters := 6
+  let count_A := 3
+  let count_N := 2
+  let count_B := 1
+  let factorial := (n : ℕ) => if n = 0 then 1 else n * factorial (n - 1)
+  have h : (factorial total_letters) / ((factorial count_A) * (factorial count_N) * (factorial count_B)) = 60 := sorry
+  exact h
+
+end number_of_arrangements_of_BANANA_l79_79534
+
+
+namespace find_omitted_angle_l79_79298
+
+-- Definitions and conditions
+def sum_of_interior_angles (n : ℕ) : ℝ := (n - 2) * 180
+
+def omitted_angle (calculated_sum actual_sum : ℝ) : ℝ :=
+  actual_sum - calculated_sum
+
+-- The theorem to be proven
+theorem find_omitted_angle (n : ℕ) (h₁ : 1958 + 22 = sum_of_interior_angles n) :
+  omitted_angle 1958 (sum_of_interior_angles n) = 22 :=
+by
+  sorry
+
+end find_omitted_angle_l79_79298
+
+
+namespace minimum_g_exists_x_minimum_g_l79_79375
+
+noncomputable def g (x : ℝ) : ℝ := 
+  x + x / (x^2 + 1) + x * (x + 5) / (x^2 + 3) + 3 * (x + 3) / (x * (x^2 + 3))
+
+theorem minimum_g (x : ℝ) (hx : x > 0) : g x ≥ 6 :=
+by
+  sorry
+
+theorem exists_x_minimum_g : ∃ x > 0, g x = 6 :=
+by
+  sorry
+
+end minimum_g_exists_x_minimum_g_l79_79375
+
+
+namespace geometric_fraction_l79_79259
+
+noncomputable def a_n : ℕ → ℝ := sorry
+axiom a1_a5_condition : a_n 1 + a_n 5 = a_n 1 * a_n 5
+axiom geometric_sequence : ∀ n, a_n (n + 1) = a_n n * a_n (n + 1) / a_n (n - 1) 
+
+theorem geometric_fraction (a_n : ℕ → ℝ) (a1_a5_condition : a_n 1 + a_n 5 = a_n 1 * a_n 5) :
+  (a_n 13) / (a_n 9) = 9 :=
+sorry
+
+end geometric_fraction_l79_79259
+
+
+namespace angle_conversion_l79_79332
+
+-- Define the known conditions
+def full_circle_vens : ℕ := 800
+def full_circle_degrees : ℕ := 360
+def given_angle_degrees : ℕ := 135
+def expected_vens : ℕ := 300
+
+-- Prove that an angle of 135 degrees corresponds to 300 vens.
+theorem angle_conversion :
+  (given_angle_degrees * full_circle_vens) / full_circle_degrees = expected_vens := by
+  sorry
+
+end angle_conversion_l79_79332
+
+
+namespace total_lemonade_poured_l79_79096
+
+-- Define the amounts of lemonade served during each intermission.
+def first_intermission : ℝ := 0.25
+def second_intermission : ℝ := 0.42
+def third_intermission : ℝ := 0.25
+
+-- State the theorem that the total amount of lemonade poured is 0.92 pitchers.
+theorem total_lemonade_poured : first_intermission + second_intermission + third_intermission = 0.92 :=
+by
+  -- Placeholders to skip the proof.
+  sorry
+
+end total_lemonade_poured_l79_79096
+
+
+namespace number_of_arrangements_of_BANANA_l79_79535
+
+theorem number_of_arrangements_of_BANANA :
+  let total_letters := 6
+  let count_A := 3
+  let count_N := 2
+  let count_B := 1
+  let factorial := (n : ℕ) => if n = 0 then 1 else n * factorial (n - 1)
+  (factorial total_letters) / ((factorial count_A) * (factorial count_N) * (factorial count_B)) = 60 :=
+by
+  let total_letters := 6
+  let count_A := 3
+  let count_N := 2
+  let count_B := 1
+  let factorial := (n : ℕ) => if n = 0 then 1 else n * factorial (n - 1)
+  have h : (factorial total_letters) / ((factorial count_A) * (factorial count_N) * (factorial count_B)) = 60 := sorry
+  exact h
+
+end number_of_arrangements_of_BANANA_l79_79535
+
+
+namespace find_number_l79_79478
+
+theorem find_number (x : ℤ) (h : x - 7 = 9) : x * 3 = 48 :=
+by sorry
+
+end find_number_l79_79478
+
+
+namespace inequality_proof_l79_79153
+
+theorem inequality_proof (x y z : ℝ) (h1 : x > 0) (h2 : y > 0) (h3 : z > 0) (h4 : x + y + z = 1) : 
+  (x + y)^3 / z + (y + z)^3 / x + (z + x)^3 / y + 9 * x * y * z ≥ 9 * (x * y + y * z + z * x) :=
+by 
+  sorry
+
+end inequality_proof_l79_79153
+
+
+namespace complement_of_P_with_respect_to_U_l79_79728
+
+universe u
+
+def U : Set ℤ := {-1, 0, 1, 2}
+
+def P : Set ℤ := {x | x * x < 2}
+
+theorem complement_of_P_with_respect_to_U : U \ P = {2} :=
+by
+  sorry
+
+end complement_of_P_with_respect_to_U_l79_79728
+
+
+namespace problem_part_one_problem_part_two_l79_79118
+
+noncomputable def a := 1
+noncomputable def b := Real.log 2 - 1
+noncomputable def b_min := -1 / 2
+
+theorem problem_part_one (a : ℝ) (b : ℝ) 
+(h1 : ∃ x : ℝ, x = 1 ∧ deriv (λ x, a * Real.log x) x = 1 / 2)
+(h2 : ∃ x : ℝ, x = 1 ∧ (λ x, (1 / 2) * x + b) x = 0) : 
+a = 1 ∧ b = Real.log 2 - 1 := 
+sorry
+
+theorem problem_part_two (a : ℝ) (b : ℝ) 
+(h : a > 0) 
+(h1 : ∃ x₀ : ℝ, 2 * a = x₀ ∧ (λ x₀, (1 / 2) * x₀ + b = a * Real.log x₀)) (h2 : ∃ x₀ : ℝ, g a x₀ = b) :
+b = -1 / 2 :=
+sorry
+
+-- Define general function g used in the statement
+noncomputable def g (a : ℝ) (x : ℝ) := x * Real.log x + x * (Real.log 2 - 1)
+
+end problem_part_one_problem_part_two_l79_79118
+
+
+namespace tan_420_eq_sqrt3_l79_79476
+
+theorem tan_420_eq_sqrt3 : Real.tan (420 * Real.pi / 180) = Real.sqrt 3 := 
+by 
+  -- Additional mathematical justification can go here.
+  sorry
+
+end tan_420_eq_sqrt3_l79_79476
+
+
+namespace permutations_of_BANANA_l79_79528
+
+/-- The number of distinct permutations of the word "BANANA" is 60. -/
+theorem permutations_of_BANANA : (Nat.factorial 6 / (Nat.factorial 3 * Nat.factorial 2 * Nat.factorial 1)) = 60 := by
+  sorry
+
+end permutations_of_BANANA_l79_79528
+
+
+namespace intersection_necessary_but_not_sufficient_l79_79030
+
+variables {M N P : Set α}
+
+theorem intersection_necessary_but_not_sufficient : 
+  (M ∩ P = N ∩ P) → (M ≠ N) :=
+sorry
+
+end intersection_necessary_but_not_sufficient_l79_79030
+
+
+namespace union_of_A_and_B_l79_79587
+
+def setA : Set ℝ := { x : ℝ | abs (x - 3) < 2 }
+def setB : Set ℝ := { x : ℝ | (x + 1) / (x - 2) ≤ 0 }
+
+theorem union_of_A_and_B : setA ∪ setB = { x : ℝ | -1 ≤ x ∧ x < 5 } :=
+by
+  sorry
+
+end union_of_A_and_B_l79_79587
+
+
+namespace permutations_of_banana_l79_79567
+
+theorem permutations_of_banana : (Nat.fac 6) / ((Nat.fac 3) * (Nat.fac 2)) = 60 := 
+by
+  sorry
+
+end permutations_of_banana_l79_79567
+
+
+namespace speed_of_first_boy_l79_79330
+
+theorem speed_of_first_boy (x : ℝ) (h1 : 7.5 > 0) (h2 : 16 > 0) (h3 : 32 > 0) (h4 : 32 = 16 * (x - 7.5)) : x = 9.5 :=
+by
+  sorry
+
+end speed_of_first_boy_l79_79330
+
+
+namespace city_mpg_l79_79832
+
+-- Definitions
+def total_distance := 256.2 -- total distance in miles
+def total_gallons := 21.0 -- total gallons of gasoline
+
+-- Theorem statement
+theorem city_mpg : total_distance / total_gallons = 12.2 :=
+by sorry
+
+end city_mpg_l79_79832
+
+
+namespace minimum_for_specific_values_proof_minimum_for_arbitrary_values_proof_l79_79762
+
+noncomputable def minimum_for_specific_values : ℝ :=
+  let m := 2 
+  let n := 2 
+  let p := 2 
+  let xyz := 8 
+  let x := 2
+  let y := 2
+  let z := 2
+  x^2 + y^2 + z^2 + m * x * y + n * x * z + p * y * z
+
+theorem minimum_for_specific_values_proof : minimum_for_specific_values = 36 := by
+  sorry
+
+noncomputable def minimum_for_arbitrary_values (m n p : ℝ) (h : m * n * p = 8) : ℝ :=
+  let x := 2
+  let y := 2
+  let z := 2
+  x^2 + y^2 + z^2 + m * x * y + n * x * z + p * y * z
+
+theorem minimum_for_arbitrary_values_proof (m n p : ℝ) (h : m * n * p = 8) : minimum_for_arbitrary_values m n p h = 12 + 4 * (m + n + p) := by
+  sorry
+
+end minimum_for_specific_values_proof_minimum_for_arbitrary_values_proof_l79_79762
+
+
+namespace maximum_xy_l79_79860
+
+variable {a b c x y : ℝ}
+
+theorem maximum_xy 
+  (h1 : a * x + b * y + 2 * c = 0)
+  (h2 : c ≠ 0)
+  (h3 : a * b - c^2 ≥ 0) :
+  ∃ (m : ℝ), m = x * y ∧ m ≤ 1 :=
+sorry
+
+end maximum_xy_l79_79860
+
+
+namespace f_not_surjective_l79_79636
+
+def f : ℝ → ℕ → Prop := sorry
+
+theorem f_not_surjective (f : ℝ → ℕ) 
+  (h : ∀ x y : ℝ, f (x + (1 / f y)) = f (y + (1 / f x))) : 
+  ¬ (∀ n : ℕ, ∃ x : ℝ, f x = n) :=
+sorry
+
+end f_not_surjective_l79_79636
+
+
+namespace calc_expression_l79_79706
+
+theorem calc_expression : abs (real.sqrt 3 - 2) - (1 / 2)⁻¹ - 2 * real.sin (real.pi / 3) = -2 * real.sqrt 3 := 
+by
+  sorry
+
+end calc_expression_l79_79706
+
+
+namespace original_employees_229_l79_79480
+
+noncomputable def original_number_of_employees (reduced_employees : ℕ) (reduction_percentage : ℝ) : ℝ := 
+  reduced_employees / (1 - reduction_percentage)
+
+theorem original_employees_229 : original_number_of_employees 195 0.15 = 229 := 
+by
+  sorry
+
+end original_employees_229_l79_79480
+
+
+namespace howard_groups_l79_79874
+
+theorem howard_groups :
+  (18 : ℕ) / (24 / 4) = 3 := sorry
+
+end howard_groups_l79_79874
+
+
+namespace vectorBC_computation_l79_79257
+
+open Vector
+
+def vectorAB : ℝ × ℝ := (2, 4)
+
+def vectorAC : ℝ × ℝ := (1, 3)
+
+theorem vectorBC_computation :
+  (vectorAC.1 - vectorAB.1, vectorAC.2 - vectorAB.2) = (-1, -1) :=
+sorry
+
+end vectorBC_computation_l79_79257
+
+
+namespace sum_of_even_factors_900_l79_79238
+
+theorem sum_of_even_factors_900 : 
+  ∃ (S : ℕ), 
+  (∀ a b c : ℕ, 900 = 2^a * 3^b * 5^c → 0 ≤ a ∧ a ≤ 2 → 0 ≤ b ∧ b ≤ 2 → 0 ≤ c ∧ c ≤ 2) → 
+  (∀ a : ℕ, 1 ≤ a ∧ a ≤ 2 → ∃ b c : ℕ, 0 ≤ b ∧ b ≤ 2 ∧ 0 ≤ c ∧ c ≤ 2 ∧ (2^a * 3^b * 5^c = 900 ∧ a ≠ 0)) → 
+  S = 2418 := 
+sorry
+
+end sum_of_even_factors_900_l79_79238
+
+
+namespace work_in_one_day_l79_79479
+
+theorem work_in_one_day (A_days B_days : ℕ) (hA : A_days = 18) (hB : B_days = A_days / 2) :
+  (1 / A_days + 1 / B_days) = 1 / 6 := 
+by
+  sorry
+
+end work_in_one_day_l79_79479
+
+
+namespace find_a_l79_79981
+
+def diamond (a b : ℝ) : ℝ := 3 * a - b^2
+
+theorem find_a (a : ℝ) (h : diamond a 6 = 15) : a = 17 :=
+by
+  sorry
+
+end find_a_l79_79981
+
+
+namespace percent_increase_surface_area_l79_79847
+
+theorem percent_increase_surface_area (a b c : ℝ) :
+  let S := 2 * (a * b + b * c + a * c)
+  let S' := 2 * (1.8 * a * 1.8 * b + 1.8 * b * 1.8 * c + 1.8 * c * 1.8 * a)
+  (S' - S) / S * 100 = 224 := by
+  sorry
+
+end percent_increase_surface_area_l79_79847
+
+
+namespace problem_statement_l79_79155
+
+noncomputable def alpha := 3 + Real.sqrt 8
+noncomputable def beta := 3 - Real.sqrt 8
+noncomputable def x := alpha ^ 1000
+noncomputable def n := Int.floor x
+noncomputable def f := x - n
+
+theorem problem_statement : x * (1 - f) = 1 :=
+by sorry
+
+end problem_statement_l79_79155
+
+
+namespace banana_arrangements_l79_79532
+
+theorem banana_arrangements : 
+  let letters := "BANANA".toList
+  let n := letters.length
+  let countA := letters.count (fun c => c = 'A')
+  let countN := letters.count (fun c => c = 'N')
+  let countB := letters.count (fun c => c = 'B')
+  n = 6 ∧ countA = 3 ∧ countN = 2 ∧ countB = 1 → (Nat.factorial n) / ((Nat.factorial countA) * (Nat.factorial countN) * (Nat.factorial countB)) = 60 := 
+by
+  intros letters n countA countN countB h
+  sorry
+
+end banana_arrangements_l79_79532
+
+
+namespace eqn_of_trajectory_max_area_triangle_l79_79119
+
+open Real
+
+def dist (p q : ℝ × ℝ) : ℝ :=
+  sqrt ((p.1 - q.1) ^ 2 + (p.2 - q.2) ^ 2)
+
+-- Given conditions
+variables (P : ℝ × ℝ) (O A M : ℝ × ℝ)
+variable (r : ℝ)
+
+axiom dist_ratio : dist P O = 2 * dist P A
+axiom fixed_points : O = (0,0) ∧ A = (3,0) ∧ M = (4,0)
+axiom curve_eq : ∀ x y : ℝ, P = (x, y) → dist P (4, 0) = 2
+
+-- To Prove
+theorem eqn_of_trajectory :
+  (∀ P : ℝ × ℝ, dist P O = 2 * dist P A → (P.1 - 4)^2 + P.2^2 = 4) :=
+by
+  sorry
+
+theorem max_area_triangle :
+  (∀ A B : ℝ × ℝ, A ≠ B →
+    A.1 ≠ M.1 → (∃ k : ℝ, k ≠ 0 ∧ A = (-1, 0) ∧ A.2 = k * (A.1 + 1)) →
+    let Δ := (A.1, A.2 - B.2) → Δ = M →
+    1/2 * dist A B * dist M (1/2 * (A + B)) ≤ 2) :=
+by
+  sorry
+
+end eqn_of_trajectory_max_area_triangle_l79_79119
+
+
+namespace barrels_oil_difference_l79_79469
+
+/--
+There are two barrels of oil, A and B.
+1. $\frac{1}{3}$ of the oil is poured from barrel A into barrel B.
+2. $\frac{1}{5}$ of the oil is poured from barrel B back into barrel A.
+3. Each barrel contains 24kg of oil after the transfers.
+
+Prove that originally, barrel A had 6 kg more oil than barrel B.
+-/
+theorem barrels_oil_difference :
+  ∃ (x y : ℝ), (y = 48 - x) ∧
+  (24 = (2 / 3) * x + (1 / 5) * (48 - x + (1 / 3) * x)) ∧
+  (24 = (48 - x + (1 / 3) * x) * (4 / 5)) ∧
+  (x - y = 6) :=
+by
+  sorry
+
+end barrels_oil_difference_l79_79469
+
+
+namespace monotonically_decreasing_interval_l79_79265
+
+-- Given conditions
+def f (x : ℝ) : ℝ := x^2 * (x - 3)
+
+-- The proof problem statement
+theorem monotonically_decreasing_interval :
+  ∃ a b : ℝ, (0 ≤ a) ∧ (b ≤ 2) ∧ (∀ x : ℝ, a ≤ x ∧ x ≤ b → (deriv f x ≤ 0)) :=
+sorry
+
+end monotonically_decreasing_interval_l79_79265
+
+
+namespace num_subsets_div_by_three_l79_79239
+
+open Finset
+
+def set : Finset ℕ := {101, 106, 111, 146, 154, 159}
+
+def sums_to_three (s : Finset ℕ) : Prop :=
+  s.card = 4 ∧ (s.sum % 3 = 0)
+
+theorem num_subsets_div_by_three :
+  (set.powerset.filter sums_to_three).card = 5 := 
+sorry
+
+end num_subsets_div_by_three_l79_79239
+
+
+namespace number_of_arrangements_of_BANANA_l79_79538
+
+theorem number_of_arrangements_of_BANANA :
+  let total_letters := 6
+  let count_A := 3
+  let count_N := 2
+  let count_B := 1
+  let factorial := (n : ℕ) => if n = 0 then 1 else n * factorial (n - 1)
+  (factorial total_letters) / ((factorial count_A) * (factorial count_N) * (factorial count_B)) = 60 :=
+by
+  let total_letters := 6
+  let count_A := 3
+  let count_N := 2
+  let count_B := 1
+  let factorial := (n : ℕ) => if n = 0 then 1 else n * factorial (n - 1)
+  have h : (factorial total_letters) / ((factorial count_A) * (factorial count_N) * (factorial count_B)) = 60 := sorry
+  exact h
+
+end number_of_arrangements_of_BANANA_l79_79538
+
+
+namespace range_of_a_l79_79388
+
+theorem range_of_a (f : ℝ → ℝ) (a : ℝ)
+  (h_even : ∀ x, f x = f (-x))
+  (h_mono_inc : ∀ x y, 0 ≤ x → x ≤ y → f x ≤ f y)
+  (h_ineq : f (a - 3) < f 4) : -1 < a ∧ a < 7 :=
+by
+  sorry
+
+end range_of_a_l79_79388
+
+
+namespace smaller_of_x_and_y_is_15_l79_79668
+
+variable {x y : ℕ}
+
+/-- Given two positive numbers x and y are in the ratio 3:5, 
+and the sum of x and y plus 10 equals 50,
+prove that the smaller of x and y is 15. -/
+theorem smaller_of_x_and_y_is_15 (h1 : x * 5 = y * 3) (h2 : x + y + 10 = 50) (h3 : 0 < x) (h4 : 0 < y) : x = 15 :=
+by
+  sorry
+
+end smaller_of_x_and_y_is_15_l79_79668
+
+
+namespace time_for_train_to_pass_pole_l79_79817
+
+-- Definitions based on conditions
+def train_length_meters : ℕ := 160
+def train_speed_kmph : ℕ := 72
+
+-- The calculated speed in m/s
+def train_speed_mps : ℕ := train_speed_kmph * 1000 / 3600
+
+-- The calculation of time taken to pass the pole
+def time_to_pass_pole : ℕ := train_length_meters / train_speed_mps
+
+-- The theorem statement
+theorem time_for_train_to_pass_pole : time_to_pass_pole = 8 := sorry
+
+end time_for_train_to_pass_pole_l79_79817
+
+
+namespace length_of_first_train_l79_79052
+
+noncomputable def first_train_length 
+  (speed_first_train_km_h : ℕ) 
+  (speed_second_train_km_h : ℕ) 
+  (length_second_train_m : ℕ) 
+  (time_seconds : ℝ) 
+  (relative_speed_m_s : ℝ) : ℝ :=
+  let relative_speed_mps := (speed_first_train_km_h + speed_second_train_km_h) * (5 / 18)
+  let distance_covered := relative_speed_mps * time_seconds
+  let length_first_train := distance_covered - length_second_train_m
+  length_first_train
+
+theorem length_of_first_train : 
+  first_train_length 40 50 165 11.039116870650348 25 = 110.9779217662587 :=
+by 
+  rw [first_train_length]
+  sorry
+
+end length_of_first_train_l79_79052
+
+
+namespace union_of_A_and_B_l79_79591
+
+-- Condition definitions
+def A : Set ℝ := {x : ℝ | abs (x - 3) < 2}
+def B : Set ℝ := {x : ℝ | (x + 1) / (x - 2) ≤ 0}
+
+-- The theorem we need to prove
+theorem union_of_A_and_B : A ∪ B = {x : ℝ | -1 ≤ x ∧ x < 5} :=
+by
+  -- This is where the proof would go if it were required
+  sorry
+
+end union_of_A_and_B_l79_79591
+
+
+namespace add_to_make_divisible_l79_79475
+
+theorem add_to_make_divisible :
+  ∃ n, n = 34 ∧ ∃ k : ℕ, 758492136547 + n = 51 * k := by
+  sorry
+
+end add_to_make_divisible_l79_79475
+
+
+namespace Mitch_needs_to_keep_500_for_license_and_registration_l79_79904
+
+-- Define the constants and variables
+def total_savings : ℕ := 20000
+def cost_per_foot : ℕ := 1500
+def longest_boat_length : ℕ := 12
+def docking_fee_factor : ℕ := 3
+
+-- Define the price of the longest boat
+def cost_longest_boat : ℕ := longest_boat_length * cost_per_foot
+
+-- Define the amount for license and registration
+def license_and_registration (L : ℕ) : Prop :=
+  total_savings - cost_longest_boat = L * (docking_fee_factor + 1)
+
+-- The statement to be proved
+theorem Mitch_needs_to_keep_500_for_license_and_registration :
+  ∃ L : ℕ, license_and_registration L ∧ L = 500 :=
+by
+  -- Conditions and setup have already been defined, we now state the proof goal.
+  sorry
+
+end Mitch_needs_to_keep_500_for_license_and_registration_l79_79904
+
+
+namespace ratio_of_perimeters_is_one_l79_79695
+
+-- Definitions based on the given conditions
+def original_rectangle : ℝ × ℝ := (6, 8)
+def folded_rectangle : ℝ × ℝ := (3, 8)
+def small_rectangle : ℝ × ℝ := (3, 4)
+def large_rectangle : ℝ × ℝ := (3, 4)
+
+-- The perimeter function for a rectangle given its dimensions (length, width)
+def perimeter (r : ℝ × ℝ) : ℝ := 2 * (r.1 + r.2)
+
+-- The main theorem to prove
+theorem ratio_of_perimeters_is_one : 
+  perimeter small_rectangle / perimeter large_rectangle = 1 :=
+by
+  sorry
+
+end ratio_of_perimeters_is_one_l79_79695
+
+
+namespace certain_number_l79_79878
+
+theorem certain_number (n w : ℕ) (h1 : w = 132)
+  (h2 : ∃ m1 m2 m3, 32 = 2^5 * 3^3 * 11^2 * m1 * m2 * m3)
+  (h3 : n * w = 132 * 2^3 * 3^2 * 11)
+  (h4 : m1 = 1) (h5 : m2 = 1) (h6 : m3 = 1): 
+  n = 792 :=
+by sorry
+
+end certain_number_l79_79878
+
+
+namespace local_minimum_at_1_1_l79_79281
+
+noncomputable def function (x y : ℝ) : ℝ :=
+  x^3 + y^3 - 3 * x * y
+
+theorem local_minimum_at_1_1 : 
+  ∃ (x y : ℝ), x = 1 ∧ y = 1 ∧ (∀ (z : ℝ), z = function x y → z = -1) :=
+sorry
+
+end local_minimum_at_1_1_l79_79281
+
+
+namespace abs_sum_less_abs_diff_l79_79600
+
+theorem abs_sum_less_abs_diff {a b : ℝ} (hab : a * b < 0) : |a + b| < |a - b| :=
+sorry
+
+end abs_sum_less_abs_diff_l79_79600
+
+
+namespace distinct_arrangements_of_BANANA_l79_79554
+
+theorem distinct_arrangements_of_BANANA :
+  let total_letters := 6
+  let freq_A := 3
+  let freq_N := 2
+  let freq_B := 1
+  (nat.factorial total_letters) / (nat.factorial freq_A * nat.factorial freq_N * nat.factorial freq_B) = 60 :=
+by
+  sorry
+
+end distinct_arrangements_of_BANANA_l79_79554
+
+
+namespace gold_bars_per_row_l79_79167
+
+theorem gold_bars_per_row 
+  (total_worth : ℝ)
+  (total_rows : ℕ)
+  (value_per_bar : ℝ)
+  (h_total_worth : total_worth = 1600000)
+  (h_total_rows : total_rows = 4)
+  (h_value_per_bar : value_per_bar = 40000) :
+  total_worth / value_per_bar / total_rows = 10 :=
+by
+  sorry
+
+end gold_bars_per_row_l79_79167
+
+
+namespace calc_tan_fraction_l79_79504
+
+theorem calc_tan_fraction :
+  (1 - Real.tan (15 * Real.pi / 180)) / (1 + Real.tan (15 * Real.pi / 180)) = Real.tan (30 * Real.pi / 180) :=
+by
+  have h_tan_45 : Real.tan (45 * Real.pi / 180) = 1 := by sorry
+  have h_tan_30 : Real.tan (30 * Real.pi / 180) = Real.sqrt 3 / 3 := by sorry
+  sorry
+
+end calc_tan_fraction_l79_79504
+
+
+namespace rhombus_diagonal_l79_79656
+
+/-- Given a rhombus with one diagonal being 11 cm and the area of the rhombus being 88 cm²,
+prove that the length of the other diagonal is 16 cm. -/
+theorem rhombus_diagonal 
+  (d1 : ℝ) (d2 : ℝ) (area : ℝ)
+  (h_d1 : d1 = 11)
+  (h_area : area = 88)
+  (h_area_eq : area = (d1 * d2) / 2) : d2 = 16 :=
+sorry
+
+end rhombus_diagonal_l79_79656
+
+
+namespace total_assignment_schemes_l79_79991
+
+def num_ways_to_assign_teams : ℕ :=
+  let ways_A := choose 4 1  -- C^1_4
+  let ways_rest := factorial 4  -- 4!
+  ways_A * ways_rest
+
+theorem total_assignment_schemes :
+    num_ways_to_assign_teams = 96 :=
+by
+  -- We can define each component individually in Lean 4 if needed, but this compact form achieves the same:
+  have h1: choose 4 1 = 4 := by simp [choose]
+  have h2: factorial 4 = 24 := by norm_num
+  have h3: num_ways_to_assign_teams = 4 * 24 := by simp [num_ways_to_assign_teams, h1, h2]
+  rw [h3]
+  norm_num -- This computes the final result 4 * 24 = 96
+
+end total_assignment_schemes_l79_79991
+
+
+namespace tank_capacity_l79_79339
+
+theorem tank_capacity (liters_cost : ℕ) (liters_amount : ℕ) (full_tank_cost : ℕ) (h₁ : liters_cost = 18) (h₂ : liters_amount = 36) (h₃ : full_tank_cost = 32) : 
+  (full_tank_cost * liters_amount / liters_cost) = 64 :=
+by 
+  sorry
+
+end tank_capacity_l79_79339
+
+
+namespace alloy_price_per_kg_l79_79890
+
+theorem alloy_price_per_kg (cost_A cost_B ratio_A_B total_cost total_weight price_per_kg : ℤ)
+  (hA : cost_A = 68) 
+  (hB : cost_B = 96) 
+  (hRatio : ratio_A_B = 3) 
+  (hTotalCost : total_cost = 3 * cost_A + cost_B) 
+  (hTotalWeight : total_weight = 3 + 1)
+  (hPricePerKg : price_per_kg = total_cost / total_weight) : 
+  price_per_kg = 75 := 
+by
+  sorry
+
+end alloy_price_per_kg_l79_79890
+
+
+namespace pineapple_cost_l79_79350
+
+variables (P W : ℕ)
+
+theorem pineapple_cost (h1 : 2 * P + 5 * W = 38) : P = 14 :=
+sorry
+
+end pineapple_cost_l79_79350
+
+
+namespace pencil_length_l79_79349
+
+theorem pencil_length (L : ℝ) 
+  (h1 : 1 / 8 * L = b) 
+  (h2 : 1 / 2 * (L - 1 / 8 * L) = w) 
+  (h3 : (L - 1 / 8 * L - 1 / 2 * (L - 1 / 8 * L)) = 7 / 2) :
+  L = 8 :=
+sorry
+
+end pencil_length_l79_79349
+
+
+namespace simplify_expression_d_l79_79083
+
+variable (a b c : ℝ)
+
+theorem simplify_expression_d : a - (b - c) = a - b + c :=
+  sorry
+
+end simplify_expression_d_l79_79083
+
+
+namespace bob_initial_cats_l79_79787
+
+theorem bob_initial_cats (B : ℕ) (h : 21 - 4 = B + 14) : B = 3 := 
+by
+  -- Placeholder for the proof
+  sorry
+
+end bob_initial_cats_l79_79787
+
+
+namespace normal_distribution_prob_l79_79863
+
+open Probability
+
+noncomputable def normal_distribution (μ σ : ℝ) : ℝ → ℝ := 
+λ x, exp (-(x - μ) ^ 2 / (2 * σ ^ 2)) / (σ * sqrt (2 * π))
+
+theorem normal_distribution_prob {a : ℝ} {σ : ℝ} (hσ : σ > 0)
+  (X : ℝ → ℝ) (hX : ∀ x, X x = normal_distribution 2 σ x)
+  (h_prob : ∫ x in -∞ .. a, X x = 0.32) :
+  ∫ x in a..4-a, X x = 0.36 :=
+sorry
+
+end normal_distribution_prob_l79_79863
+
+
+namespace number_20_l79_79759
+
+def Jo (n : ℕ) : ℕ :=
+  1 + 5 * (n - 1)
+
+def Blair (n : ℕ) : ℕ :=
+  3 + 5 * (n - 1)
+
+def number_at_turn (k : ℕ) : ℕ :=
+  if k % 2 = 1 then Jo ((k + 1) / 2) else Blair (k / 2)
+
+theorem number_20 : number_at_turn 20 = 48 :=
+by
+  sorry
+
+end number_20_l79_79759
+
+
+namespace total_hike_time_l79_79623
+
+-- Define the conditions
+def distance_to_mount_overlook : ℝ := 12
+def pace_to_mount_overlook : ℝ := 4
+def pace_return : ℝ := 6
+
+-- Prove the total time for the hike
+theorem total_hike_time :
+  (distance_to_mount_overlook / pace_to_mount_overlook) +
+  (distance_to_mount_overlook / pace_return) = 5 := 
+sorry
+
+end total_hike_time_l79_79623
+
+
+namespace negation_proposition_l79_79454
+
+open Classical
+
+theorem negation_proposition :
+  ¬ (∃ x : ℝ, x^2 - 2*x + 1 ≤ 0) ↔ ∀ x : ℝ, x^2 - 2*x + 1 > 0 :=
+by
+  sorry
+
+end negation_proposition_l79_79454
+
+
+namespace permutations_of_banana_l79_79565
+
+theorem permutations_of_banana : (Nat.fac 6) / ((Nat.fac 3) * (Nat.fac 2)) = 60 := 
+by
+  sorry
+
+end permutations_of_banana_l79_79565
+
+
+namespace sodium_bicarbonate_moles_l79_79249
+
+theorem sodium_bicarbonate_moles (HCl NaHCO3 CO2 : ℕ) (h1 : HCl = 1) (h2 : CO2 = 1) :
+  NaHCO3 = 1 :=
+by sorry
+
+end sodium_bicarbonate_moles_l79_79249
+
+
+namespace smallest_w_l79_79434
+
+theorem smallest_w (x y w : ℕ) (h1 : x > 0) (h2 : y > 0)
+  (h3 : (2 ^ x) ∣ (3125 * w)) (h4 : (3 ^ y) ∣ (3125 * w)) 
+  (h5 : (5 ^ (x + y)) ∣ (3125 * w)) (h6 : (7 ^ (x - y)) ∣ (3125 * w))
+  (h7 : (13 ^ 4) ∣ (3125 * w))
+  (h8 : x + y ≤ 10) (h9 : x - y ≥ 2) :
+  w = 33592336 :=
+by
+  sorry
+
+end smallest_w_l79_79434
+
+
+namespace original_profit_margin_theorem_l79_79958
+
+noncomputable def original_profit_margin (a : ℝ) (x : ℝ) (h : a > 0) : Prop := 
+  (a * (1 + x) - a * (1 - 0.064)) / (a * (1 - 0.064)) = x + 0.08
+
+theorem original_profit_margin_theorem (a : ℝ) (x : ℝ) (h : a > 0) :
+  original_profit_margin a x h → x = 0.17 :=
+sorry
+
+end original_profit_margin_theorem_l79_79958
+
+
+namespace perm_banana_l79_79559
+
+theorem perm_banana : 
+  let total_letters := 6
+  let A_letters := 3
+  let N_letters := 2
+  (fact total_letters) / ((fact A_letters) * (fact N_letters) * fact (total_letters - A_letters - N_letters)) = 60 :=
+by
+  let total_letters := 6
+  let A_letters := 3
+  let N_letters := 2
+  have h1 : fact total_letters = 720 := by decide
+  have h2 : fact A_letters = 6 := by decide
+  have h3 : fact N_letters = 2 := by decide
+  have h4 : fact (total_letters - A_letters - N_letters) = fact (6 - 3 - 2) := by decide
+  have h5 : fact (total_letters - A_letters - N_letters) = 1 := by decide
+  calc
+    (720 / (6 * 2 * 1) : ℝ)
+    _ = 60 := by norm_num
+
+end perm_banana_l79_79559
+
+
+namespace solution_set_of_inverse_inequality_l79_79383
+
+open Function
+
+variable {f : ℝ → ℝ}
+
+theorem solution_set_of_inverse_inequality 
+  (h_decreasing : ∀ x y, x < y → f y < f x)
+  (h_A : f (-2) = 2)
+  (h_B : f 2 = -2)
+  : { x : ℝ | |(invFun f (x + 1))| ≤ 2 } = { x : ℝ | -3 ≤ x ∧ x ≤ 1 } :=
+sorry
+
+end solution_set_of_inverse_inequality_l79_79383
+
+
+namespace common_factor_l79_79924
+
+-- Definition of the polynomial
+def polynomial (x y m n : ℝ) : ℝ := 4 * x * (m - n) + 2 * y * (m - n) ^ 2
+
+-- The theorem statement
+theorem common_factor (x y m n : ℝ) : ∃ k : ℝ, k * (m - n) = polynomial x y m n :=
+sorry
+
+end common_factor_l79_79924
+
+
+namespace football_field_area_l79_79691
+
+theorem football_field_area (total_fertilizer : ℝ) (partial_fertilizer : ℝ) (partial_area : ℝ) (fertilizer_rate : ℝ) (total_area : ℝ) 
+  (h1 : total_fertilizer = 800)
+  (h2: partial_fertilizer = 300)
+  (h3: partial_area = 3600)
+  (h4: fertilizer_rate = partial_fertilizer / partial_area)
+  (h5: total_area = total_fertilizer / fertilizer_rate) 
+  : total_area = 9600 := 
+sorry
+
+end football_field_area_l79_79691
+
+
+namespace area_of_rectangle_at_stage_4_l79_79275
+
+def area_at_stage (n : ℕ) : ℕ :=
+  let square_area := 16
+  let initial_squares := 2
+  let common_difference := 2
+  let total_squares := initial_squares + common_difference * (n - 1)
+  total_squares * square_area
+
+theorem area_of_rectangle_at_stage_4 :
+  area_at_stage 4 = 128 :=
+by
+  -- computation and transformations are omitted
+  sorry
+
+end area_of_rectangle_at_stage_4_l79_79275
+
+
+namespace solve_inequality_l79_79820
+
+theorem solve_inequality (x : ℝ) (h : 0 < x ∧ x < 2) : abs (2 * x - 1) < abs x + 1 :=
+by
+  sorry
+
+end solve_inequality_l79_79820
+
+
+namespace ball_hits_ground_at_two_seconds_l79_79178
+
+theorem ball_hits_ground_at_two_seconds :
+  (∃ t : ℝ, (-6.1) * t^2 + 2.8 * t + 7 = 0 ∧ t = 2) :=
+sorry
+
+end ball_hits_ground_at_two_seconds_l79_79178
+
+
+namespace percent_deficit_in_width_l79_79751
+
+theorem percent_deficit_in_width (L W : ℝ) (h : 1.08 * (1 - (d : ℝ) / W) = 1.0044) : d = 0.07 * W :=
+by sorry
+
+end percent_deficit_in_width_l79_79751
+
+
+namespace evaluate_F_2_f_3_l79_79740
+
+def f (a : ℤ) : ℤ := a^2 - 2
+def F (a b : ℤ) : ℤ := b^3 - a
+
+theorem evaluate_F_2_f_3 : F 2 (f 3) = 341 := by
+  sorry
+
+end evaluate_F_2_f_3_l79_79740
+
+
+namespace percent_of_rs_600_l79_79816
+
+theorem percent_of_rs_600 : (600 * 0.25 = 150) :=
+by
+  sorry
+
+end percent_of_rs_600_l79_79816
+
+
+namespace coin_ratio_l79_79685
+
+theorem coin_ratio (n₁ n₅ n₂₅ : ℕ) (total_value : ℕ) 
+  (h₁ : n₁ = 40) 
+  (h₅ : n₅ = 40) 
+  (h₂₅ : n₂₅ = 40) 
+  (hv : total_value = 70) 
+  (hv_calc : n₁ * 1 + n₅ * (50 / 100) + n₂₅ * (25 / 100) = total_value) : 
+  n₁ = n₅ ∧ n₁ = n₂₅ :=
+by
+  sorry
+
+end coin_ratio_l79_79685
+
+
+namespace fraction_meaningful_range_l79_79666
+
+-- Define the condition
+def meaningful_fraction_condition (x : ℝ) : Prop := (x - 2023) ≠ 0
+
+-- Define the conclusion that we need to prove
+def meaningful_fraction_range (x : ℝ) : Prop := x ≠ 2023
+
+theorem fraction_meaningful_range (x : ℝ) : meaningful_fraction_condition x → meaningful_fraction_range x :=
+by
+  intro h
+  -- Proof steps would go here
+  sorry
+
+end fraction_meaningful_range_l79_79666
+
+
+namespace prove_tirzah_handbags_l79_79327
+noncomputable def tirzah_has_24_handbags (H : ℕ) : Prop :=
+  let P := 26 -- number of purses
+  let fakeP := P / 2 -- half of the purses are fake
+  let authP := P - fakeP -- number of authentic purses
+  let fakeH := H / 4 -- one quarter of the handbags are fake
+  let authH := H - fakeH -- number of authentic handbags
+  authP + authH = 31 -- total number of authentic items
+  → H = 24 -- prove the number of handbags is 24
+
+theorem prove_tirzah_handbags : ∃ H : ℕ, tirzah_has_24_handbags H :=
+  by
+    use 24
+    -- Proof goes here
+    sorry
+
+end prove_tirzah_handbags_l79_79327
+
+
+namespace rows_of_seats_l79_79185
+
+theorem rows_of_seats (r : ℕ) (h : r * 4 = 80) : r = 20 :=
+sorry
+
+end rows_of_seats_l79_79185
+
+
+namespace shifted_parabola_is_correct_l79_79267
+
+-- Define the initial parabola
+def initial_parabola (x : ℝ) : ℝ :=
+  -((x - 1) ^ 2) + 2
+
+-- Define the shifted parabola
+def shifted_parabola (x : ℝ) : ℝ :=
+  -((x + 1 - 1) ^ 2) + 4
+
+-- State the theorem
+theorem shifted_parabola_is_correct :
+  ∀ x : ℝ, shifted_parabola x = -x^2 + 4 :=
+by
+  -- Proof would go here
+  sorry
+
+end shifted_parabola_is_correct_l79_79267
+
+
+namespace largest_value_l79_79477
+
+noncomputable def a : ℕ := 2 ^ 6
+noncomputable def b : ℕ := 3 ^ 5
+noncomputable def c : ℕ := 4 ^ 4
+noncomputable def d : ℕ := 5 ^ 3
+noncomputable def e : ℕ := 6 ^ 2
+
+theorem largest_value : c > a ∧ c > b ∧ c > d ∧ c > e := by
+  sorry
+
+end largest_value_l79_79477
+
+
+namespace largest_of_three_numbers_l79_79471
+
+noncomputable def largest_root (p q r : ℝ) (h1 : p + q + r = 3) (h2 : p * q + p * r + q * r = -8) (h3 : p * q * r = -20) : ℝ :=
+  max p (max q r)
+
+theorem largest_of_three_numbers (p q r : ℝ) 
+  (h1 : p + q + r = 3) 
+  (h2 : p * q + p * r + q * r = -8) 
+  (h3 : p * q * r = -20) :
+  largest_root p q r h1 h2 h3 = ( -1 + Real.sqrt 21 ) / 2 :=
+by
+  sorry
+
+end largest_of_three_numbers_l79_79471
+
+
+namespace correct_answer_l79_79864
+
+def M : Set ℕ := {1}
+def N : Set ℕ := {1, 2, 3}
+
+theorem correct_answer : M ⊆ N := by
+  sorry
+
+end correct_answer_l79_79864
+
+
+namespace find_P_and_Q_l79_79402
+
+variables {x P Q b c : ℝ}
+
+theorem find_P_and_Q :
+  (∃ b c : ℝ, (x^2 + 3 * x + 7) * (x^2 + b * x + c) = x^4 + P * x^2 + Q) →
+  (b + 3 = 0) →
+  (3 * b + c + 7 = P) →
+  (7 * b + 3 * c = 0) →
+  (7 * c = Q) →
+  P + Q = 54 :=
+by
+  intros h1 h2 h3 h4 h5
+  sorry
+
+end find_P_and_Q_l79_79402
+
+
+namespace remainder_83_pow_89_times_5_mod_11_l79_79943
+
+theorem remainder_83_pow_89_times_5_mod_11 : 
+  (83^89 * 5) % 11 = 10 := 
+by
+  have h1 : 83 % 11 = 6 := by sorry
+  have h2 : 6^10 % 11 = 1 := by sorry
+  have h3 : 89 = 8 * 10 + 9 := by sorry
+  sorry
+
+end remainder_83_pow_89_times_5_mod_11_l79_79943
+
+
+namespace sum_of_coeffs_eq_92_l79_79987
+
+noncomputable def sum_of_integer_coeffs_in_factorization (x y : ℝ) : ℝ :=
+  let f := 27 * (x ^ 6) - 512 * (y ^ 6)
+  3 - 8 + 9 + 24 + 64  -- Sum of integer coefficients
+
+theorem sum_of_coeffs_eq_92 (x y : ℝ) : sum_of_integer_coeffs_in_factorization x y = 92 :=
+by
+  -- proof steps go here
+  sorry
+
+end sum_of_coeffs_eq_92_l79_79987
+
+
+namespace concyclic_A_D_E_N_l79_79261
+
+open EuclideanGeometry
+
+variables {A B C D E N : Point}
+
+-- Given conditions
+axiom triangleABC : Triangle A B C
+axiom Gamma : Circle A B C -- Circumcircle of triangle ABC
+axiom D_on_AB : D ∈ Segment A B
+axiom E_on_AC : E ∈ Segment A C
+axiom BD_CE : Distance B D = Distance C E
+axiom N_midpoint_arc : N = midpointArc A B C Gamma
+
+theorem concyclic_A_D_E_N :
+  Concyclic {A, D, E, N} :=
+by
+  sorry
+
+end concyclic_A_D_E_N_l79_79261
+
+
+namespace find_n_l79_79210
+
+theorem find_n 
+  (n : ℕ) 
+  (h_lcm : Nat.lcm n 16 = 48) 
+  (h_gcf : Nat.gcd n 16 = 18) : 
+  n = 54 := 
+sorry
+
+end find_n_l79_79210
+
+
+namespace min_value_of_a_l79_79395
+
+theorem min_value_of_a (x y : ℝ) (hx : x ≠ 0) (hy : y ≠ 0) 
+  (h : (x + y) * (1/x + a/y) ≥ 16) : a ≥ 9 :=
+sorry
+
+end min_value_of_a_l79_79395
+
+
+namespace banana_arrangement_count_l79_79550
+
+theorem banana_arrangement_count :
+  let word := "BANANA"
+  let length_word := 6
+  let a_count := 3
+  let n_count := 2
+  (length_word)! / (a_count! * n_count!) = 60 := by
+  sorry
+
+end banana_arrangement_count_l79_79550
+
+
+namespace inequality_proof_l79_79769
+
+theorem inequality_proof {a b c : ℝ} (ha : a > 0) (hb : b > 0) (hc : c > 0) :
+  (1 + 4 * a / (b + c)) * (1 + 4 * b / (c + a)) * (1 + 4 * c / (a + b)) > 25 :=
+by
+  -- Proof goes here
+  sorry
+
+end inequality_proof_l79_79769
+
+
+namespace red_knights_fraction_magic_l79_79612
+
+theorem red_knights_fraction_magic (total_knights red_knights blue_knights magical_knights : ℕ)
+  (h1 : red_knights = (3 / 8 : ℚ) * total_knights)
+  (h2 : blue_knights = total_knights - red_knights)
+  (h3 : magical_knights = (1 / 4 : ℚ) * total_knights)
+  (fraction_red_magic fraction_blue_magic : ℚ) 
+  (h4 : fraction_red_magic = 3 * fraction_blue_magic)
+  (h5 : magical_knights = red_knights * fraction_red_magic + blue_knights * fraction_blue_magic) :
+  fraction_red_magic = 3 / 7 := 
+by
+  sorry
+
+end red_knights_fraction_magic_l79_79612
+
+
+namespace total_hike_time_l79_79631
+
+/-!
+# Problem Statement
+Jeannie hikes the 12 miles to Mount Overlook at a pace of 4 miles per hour, 
+and then returns at a pace of 6 miles per hour. Prove that the total time 
+Jeannie spent on her hike is 5 hours.
+-/
+
+def distance_to_mountain : ℝ := 12
+def pace_up : ℝ := 4
+def pace_down : ℝ := 6
+
+theorem total_hike_time :
+  (distance_to_mountain / pace_up) + (distance_to_mountain / pace_down) = 5 := 
+by 
+  sorry
+
+end total_hike_time_l79_79631
+
+
+namespace complaint_online_prob_l79_79964
+
+/-- Define the various probability conditions -/
+def prob_online := 4 / 5
+def prob_store := 1 / 5
+def qual_rate_online := 17 / 20
+def qual_rate_store := 9 / 10
+def non_qual_rate_online := 1 - qual_rate_online
+def non_qual_rate_store := 1 - qual_rate_store
+def prob_complaint_online := prob_online * non_qual_rate_online
+def prob_complaint_store := prob_store * non_qual_rate_store
+def total_prob_complaint := prob_complaint_online + prob_complaint_store
+
+/-- The theorem states that given the conditions, the probability of an online purchase given a complaint is 6/7 -/
+theorem complaint_online_prob : 
+    (prob_complaint_online / total_prob_complaint) = 6 / 7 := 
+by
+    sorry
+
+end complaint_online_prob_l79_79964
+
+
+namespace wire_length_l79_79079
+
+theorem wire_length (S L W : ℝ) (h1 : S = 20) (h2 : S = (2 / 7) * L) (h3 : W = S + L) : W = 90 :=
+by sorry
+
+end wire_length_l79_79079
+
+
+namespace store_revenue_is_1210_l79_79223
+
+noncomputable def shirt_price : ℕ := 10
+noncomputable def jeans_price : ℕ := 2 * shirt_price
+noncomputable def jacket_price : ℕ := 3 * jeans_price
+noncomputable def discounted_jacket_price : ℕ := jacket_price - (jacket_price / 10)
+
+noncomputable def total_revenue : ℕ :=
+  20 * shirt_price + 10 * jeans_price + 15 * discounted_jacket_price
+
+theorem store_revenue_is_1210 :
+  total_revenue = 1210 :=
+by
+  sorry
+
+end store_revenue_is_1210_l79_79223
+
+
+namespace find_amount_with_R_l79_79483
+
+variable (P_amount Q_amount R_amount : ℝ)
+variable (total_amount : ℝ) (r_has_twothirds : Prop)
+
+noncomputable def amount_with_R (total_amount : ℝ) : ℝ :=
+  let R_amount := 2 / 3 * (total_amount - R_amount)
+  R_amount
+
+theorem find_amount_with_R (P_amount Q_amount R_amount : ℝ) (total_amount : ℝ)
+  (h_total : total_amount = 5000)
+  (h_two_thirds : R_amount = 2 / 3 * (P_amount + Q_amount)) :
+  R_amount = 2000 := by sorry
+
+end find_amount_with_R_l79_79483
+
+
+namespace card_arrangement_probability_l79_79088
+
+/-- 
+This problem considers the probability of arranging four distinct cards,
+each labeled with a unique character, in such a way that they form one of two specific
+sequences. Specifically, the sequences are "我爱数学" (I love mathematics) and "数学爱我" (mathematics loves me).
+-/
+theorem card_arrangement_probability :
+  let cards := ["我", "爱", "数", "学"]
+  let total_permutations := 24
+  let favorable_outcomes := 2
+  let probability := favorable_outcomes / total_permutations
+  probability = 1 / 12 :=
+by
+  sorry
+
+end card_arrangement_probability_l79_79088
+
+
+namespace coefficient_x5y3_in_expansion_l79_79466
+
+theorem coefficient_x5y3_in_expansion :
+  let f (x y : ℤ) (n : ℕ) := (x^2 - x + 2 * y)^n
+  f 1 1 6 = 64 →
+  (binom 6 3) * (2^3) * (6 - 3) * (-3) = -480 :=
+by
+  intros f h
+  have h1 : (1^2 - 1 + 2 * 1)^6 = 64 := h
+  have h2 := binom 6 3 * 2^3 * (6 - 3) * (-3)
+  sorry
+
+end coefficient_x5y3_in_expansion_l79_79466
+
+
+namespace shaded_region_equality_l79_79618
+
+-- Define the necessary context and variables
+variable {r : ℝ} -- radius of the circle
+variable {θ : ℝ} -- angle measured in degrees
+
+-- Define the relevant trigonometric functions
+noncomputable def tan_degrees (x : ℝ) : ℝ := Real.tan (x * Real.pi / 180)
+noncomputable def tan_half_degrees (x : ℝ) : ℝ := Real.tan ((x / 2) * Real.pi / 180)
+
+-- State the theorem we need to prove given the conditions
+theorem shaded_region_equality (hθ1 : θ / 2 = 90 - θ) :
+  tan_degrees θ + (tan_degrees θ)^2 * tan_half_degrees θ = (θ * Real.pi) / 180 - (θ^2 * Real.pi) / 360 :=
+  sorry
+
+end shaded_region_equality_l79_79618
+
+
+namespace solve_x_l79_79900
+
+theorem solve_x (x : ℝ) (h1 : 8 * x^2 + 7 * x - 1 = 0) (h2 : 24 * x^2 + 53 * x - 7 = 0) : x = 1 / 8 :=
+by
+  sorry
+
+end solve_x_l79_79900
+
+
+namespace largest_pack_size_of_markers_l79_79424
+
+theorem largest_pack_size_of_markers (markers_John markers_Alex : ℕ) (h_John : markers_John = 36) (h_Alex : markers_Alex = 60) : 
+  ∃ (n : ℕ), (∀ (x : ℕ), (∀ (y : ℕ), (x * n = markers_John ∧ y * n = markers_Alex) → n ≤ 12) ∧ (12 * x = markers_John ∨ 12 * y = markers_Alex)) :=
+by 
+  sorry
+
+end largest_pack_size_of_markers_l79_79424
+
+
+namespace sum_arithmetic_sequence_l79_79657
+
+def first_term (k : ℕ) : ℕ := k^2 - k + 1
+
+def sum_of_first_k_plus_3_terms (k : ℕ) : ℕ := (k + 3) * (k^2 + (k / 2) + 2)
+
+theorem sum_arithmetic_sequence (k : ℕ) (k_pos : 0 < k) : 
+    sum_of_first_k_plus_3_terms k = k^3 + (7 * k^2) / 2 + (15 * k) / 2 + 6 := 
+by
+  sorry
+
+end sum_arithmetic_sequence_l79_79657
+
+
+namespace geometric_sequence_value_l79_79799
+
+theorem geometric_sequence_value (a : ℝ) (h₁ : 280 ≠ 0) (h₂ : 35 ≠ 0) : 
+  (∃ r : ℝ, 280 * r = a ∧ a * r = 35 / 8 ∧ a > 0) → a = 35 :=
+by {
+  sorry
+}
+
+end geometric_sequence_value_l79_79799
+
+
+namespace simple_interest_rate_l79_79683
+
+theorem simple_interest_rate (SI : ℝ) (P : ℝ) (T : ℝ) (R : ℝ)
+  (h1 : SI = 130) (h2 : P = 780) (h3 : T = 4) :
+  R = 4.17 :=
+sorry
+
+end simple_interest_rate_l79_79683
+
+
+namespace candy_bar_cost_l79_79935
+
+/-- Problem statement:
+Todd had 85 cents and spent 53 cents in total on a candy bar and a box of cookies.
+The box of cookies cost 39 cents. How much did the candy bar cost? --/
+theorem candy_bar_cost (t c s b : ℕ) (ht : t = 85) (hc : c = 39) (hs : s = 53) (h_total : s = b + c) : b = 14 :=
+by
+  sorry
+
+end candy_bar_cost_l79_79935
+
+
+namespace solve_for_x_l79_79645
+
+theorem solve_for_x (x : ℝ) (h : x + 3 * x = 500 - (4 * x + 5 * x)) : x = 500 / 13 := 
+by 
+  sorry
+
+end solve_for_x_l79_79645
+
+
+namespace inequality_proof_l79_79165
+
+open Real
+
+theorem inequality_proof (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) :
+  sqrt (a^2 + b^2 - sqrt 2 * a * b) + sqrt (b^2 + c^2 - sqrt 2 * b * c)  ≥ sqrt (a^2 + c^2) :=
+by sorry
+
+end inequality_proof_l79_79165
+
+
+namespace value_of_r_minus_p_l79_79680
+
+-- Define the arithmetic mean conditions
+def arithmetic_mean1 (p q : ℝ) : Prop :=
+  (p + q) / 2 = 10
+
+def arithmetic_mean2 (q r : ℝ) : Prop :=
+  (q + r) / 2 = 27
+
+-- Prove that r - p = 34 based on the conditions
+theorem value_of_r_minus_p (p q r : ℝ)
+  (h1 : arithmetic_mean1 p q)
+  (h2 : arithmetic_mean2 q r) :
+  r - p = 34 :=
+by
+  sorry
+
+end value_of_r_minus_p_l79_79680
+
+
+namespace exponent_identity_l79_79404
+
+variable (x : ℝ) (m n : ℝ)
+axiom h1 : x^m = 6
+axiom h2 : x^n = 9
+
+theorem exponent_identity : x^(2 * m - n) = 4 :=
+by
+  sorry
+
+end exponent_identity_l79_79404
+
+
+namespace perpendicular_lines_unique_a_l79_79114
+
+open Real
+
+theorem perpendicular_lines_unique_a (a : ℝ) 
+  (l1 : ∀ x y : ℝ, (a - 1) * x + y - 1 = 0) 
+  (l2 : ∀ x y : ℝ, 3 * x + a * y + 2 = 0) 
+  (perpendicular : True) : 
+  a = 3 / 4 := 
+sorry
+
+end perpendicular_lines_unique_a_l79_79114
+
+
+namespace event_A_probability_l79_79942
+
+theorem event_A_probability (n : ℕ) (m₀ : ℕ) (H_n : n = 120) (H_m₀ : m₀ = 32) (p : ℝ) :
+  (n * p - (1 - p) ≤ m₀) ∧ (n * p + p ≥ m₀) → 
+  (32 / 121 : ℝ) ≤ p ∧ p ≤ (33 / 121 : ℝ) :=
+sorry
+
+end event_A_probability_l79_79942
+
+
+namespace banana_arrangements_l79_79529
+
+theorem banana_arrangements : 
+  let letters := "BANANA".toList
+  let n := letters.length
+  let countA := letters.count (fun c => c = 'A')
+  let countN := letters.count (fun c => c = 'N')
+  let countB := letters.count (fun c => c = 'B')
+  n = 6 ∧ countA = 3 ∧ countN = 2 ∧ countB = 1 → (Nat.factorial n) / ((Nat.factorial countA) * (Nat.factorial countN) * (Nat.factorial countB)) = 60 := 
+by
+  intros letters n countA countN countB h
+  sorry
+
+end banana_arrangements_l79_79529
+
+
+namespace repeating_decimal_as_fraction_l79_79374
+
+theorem repeating_decimal_as_fraction :
+  ∃ x : ℚ, x = 6 / 10 + 7 / 90 ∧ x = 61 / 90 :=
+by
+  sorry
+
+end repeating_decimal_as_fraction_l79_79374
+
+
+namespace find_ks_l79_79721
+
+def is_valid_function (f : ℕ → ℤ) (k : ℤ) : Prop :=
+  ∀ x y : ℕ, f (x * y) = f x + f y + k * f (Nat.gcd x y)
+
+theorem find_ks (f : ℕ → ℤ) :
+  (f 2006 = 2007) →
+  is_valid_function f k →
+  k = 0 ∨ k = -1 :=
+sorry
+
+end find_ks_l79_79721
+
+
+namespace total_surface_area_of_cuboid_l79_79594
+
+variables (l w h : ℝ)
+variables (lw_area wh_area lh_area : ℝ)
+
+def box_conditions :=
+  lw_area = l * w ∧
+  wh_area = w * h ∧
+  lh_area = l * h
+
+theorem total_surface_area_of_cuboid (hc : box_conditions l w h 120 72 60) :
+  2 * (120 + 72 + 60) = 504 :=
+sorry
+
+end total_surface_area_of_cuboid_l79_79594
+
+
+namespace Mike_got_18_cards_l79_79773
+
+theorem Mike_got_18_cards (original_cards : ℕ) (total_cards : ℕ) : 
+  original_cards = 64 → total_cards = 82 → total_cards - original_cards = 18 :=
+by
+  intros h1 h2
+  sorry
+
+end Mike_got_18_cards_l79_79773
+
+
+namespace minimum_broken_lines_cover_all_vertices_l79_79237
+
+-- Define the grid dimensions
+def gridWidth : ℕ := 100
+def gridHeight : ℕ := 100
+
+-- Define the properties of a shortest path from one corner to the other in the grid
+def shortestPath(c1 c2 : ℕ × ℕ) : Prop :=
+  c1.2 = 0 ∧ c2.1 = gridWidth ∧ ∀ i, (i < gridWidth → (i+1, i) = (i, i+1)) ∧
+
+-- Define a function that checks if a vertex is covered by a path
+def isVertexCovered (p : array (ℕ × ℕ)) (v : ℕ × ℕ) : Prop :=
+  ∃ i, p.get? i = some v
+
+-- Define the statement to be proven
+theorem minimum_broken_lines_cover_all_vertices :
+  ∃ n : ℕ, n = 101 ∧ ∀ v : ℕ × ℕ, v.1 ≤ gridWidth ∧ v.2 ≤ gridHeight → 
+    (∃ paths : array (array (ℕ × ℕ)), paths.size ≤ n ∧ 
+    ∀ path, path ∈ paths → shortestPath (0,0) (gridWidth, gridHeight) ∧
+            ∀ pathVertex v, isVertexCovered path pathVertex →
+            isVertexCovered pathVertex v) := by
+  sorry
+
+end minimum_broken_lines_cover_all_vertices_l79_79237
+
+
+namespace pairs_sum_less_than_100_l79_79996
+
+open Nat
+
+def count_pairs_under_100 : ℕ :=
+  card {p : ℕ × ℕ | p.1 < p.2 ∧ p.fst + p.snd < 100 ∧ p.1 ≤ 100 ∧ p.2 ≤ 100}
+
+theorem pairs_sum_less_than_100 :
+  count_pairs_under_100 = 2401 :=
+sorry
+
+end pairs_sum_less_than_100_l79_79996
+
+
+namespace root_of_quadratic_l79_79441
+
+theorem root_of_quadratic (a b c : ℝ) :
+  (4 * a + 2 * b + c = 0) ↔ (a * 2^2 + b * 2 + c = 0) :=
+by
+  sorry
+
+end root_of_quadratic_l79_79441
+
+
+namespace find_a2_l79_79998
+
+-- Definitions from conditions
+def is_arithmetic_sequence (u : ℕ → ℤ) (d : ℤ) : Prop :=
+  ∀ n, u (n + 1) = u n + d
+
+def is_geometric_sequence (a b c : ℤ) : Prop :=
+  b * b = a * c
+
+-- Main theorem statement
+theorem find_a2
+  (u : ℕ → ℤ) (a1 a3 a4 : ℤ)
+  (h1 : is_arithmetic_sequence u 3)
+  (h2 : is_geometric_sequence a1 a3 a4)
+  (h3 : a1 = u 1)
+  (h4 : a3 = u 3)
+  (h5 : a4 = u 4) :
+  u 2 = -9 :=
+by  
+  sorry
+
+end find_a2_l79_79998
+
+
+namespace salary_after_cuts_l79_79912
+
+noncomputable def finalSalary (init_salary : ℝ) (cuts : List ℝ) : ℝ :=
+  cuts.foldl (λ salary cut => salary * (1 - cut)) init_salary
+
+theorem salary_after_cuts :
+  finalSalary 5000 [0.0525, 0.0975, 0.146, 0.128] = 3183.63 :=
+by
+  sorry
+
+end salary_after_cuts_l79_79912
+
+
+namespace c_minus_a_equals_90_l79_79207
+
+variable (a b c : ℝ)
+
+def average_a_b (a b : ℝ) : Prop := (a + b) / 2 = 45
+def average_b_c (b c : ℝ) : Prop := (b + c) / 2 = 90
+
+theorem c_minus_a_equals_90
+  (h1 : average_a_b a b)
+  (h2 : average_b_c b c) :
+  c - a = 90 :=
+  sorry
+
+end c_minus_a_equals_90_l79_79207
+
+
+namespace find_w_l79_79406
+
+theorem find_w (a w : ℕ) (h1 : a = 105) (h2 : a ^ 3 = 21 * 25 * 45 * w) : w = 49 :=
+by
+  sorry
+
+end find_w_l79_79406
+
+
+namespace sum_first_third_numbers_l79_79189
+
+theorem sum_first_third_numbers (A B C : ℕ)
+    (h1 : A + B + C = 98)
+    (h2 : A * 3 = B * 2)
+    (h3 : B * 8 = C * 5)
+    (h4 : B = 30) :
+    A + C = 68 :=
+by
+-- Data is sufficient to conclude that A + C = 68
+sorry
+
+end sum_first_third_numbers_l79_79189
+
+
+namespace compare_negative_fractions_l79_79507
+
+theorem compare_negative_fractions :
+  (-5 : ℝ) / 6 < (-4 : ℝ) / 5 :=
+sorry
+
+end compare_negative_fractions_l79_79507
+
+
+namespace calculate_expression_l79_79506
+
+theorem calculate_expression (m : ℝ) : (-m)^2 * m^5 = m^7 := 
+sorry
+
+end calculate_expression_l79_79506
+
+
+namespace total_bulbs_needed_l79_79905
+
+-- Definitions according to the conditions.
+variables (T S M L XL : ℕ)
+
+-- Conditions
+variables (cond1 : L = 2 * M)
+variables (cond2 : S = 5 * M / 4)  -- since 1.25M = 5/4M
+variables (cond3 : XL = S - T)
+variables (cond4 : 4 * T = 3 * M) -- equivalent to T / M = 3 / 4
+variables (cond5 : 2 * S + 3 * M = 4 * L + 5 * XL)
+variables (cond6 : XL = 14)
+
+-- Prove total bulbs needed
+theorem total_bulbs_needed :
+  T + 2 * S + 3 * M + 4 * L + 5 * XL = 469 :=
+sorry
+
+end total_bulbs_needed_l79_79905
+
+
+namespace onewaynia_road_closure_l79_79417
+
+variable {V : Type} -- Denoting the type of cities
+variable (G : V → V → Prop) -- G represents the directed graph
+
+-- Conditions
+variables (outdegree : V → Nat) (indegree : V → Nat)
+variables (two_ways : ∀ (u v : V), u ≠ v → ¬(G u v ∧ G v u))
+variables (two_out : ∀ v : V, outdegree v = 2)
+variables (two_in : ∀ v : V, indegree v = 2)
+
+theorem onewaynia_road_closure:
+  ∃ n : Nat, n ≥ 1 ∧ (number_of_closures : Nat) = 2 ^ n :=
+by
+  sorry
+
+end onewaynia_road_closure_l79_79417
+
+
+namespace inner_rectangle_length_is_4_l79_79828
+
+-- Define the conditions
+def inner_rectangle_width : ℝ := 2
+def shaded_region_width : ℝ := 2
+
+-- Define the lengths and areas of the respective regions
+def inner_rectangle_length (x : ℝ) : ℝ := x
+def second_rectangle_dimensions (x : ℝ) : (ℝ × ℝ) := (x + 4, 6)
+def largest_rectangle_dimensions (x : ℝ) : (ℝ × ℝ) := (x + 8, 10)
+
+def inner_rectangle_area (x : ℝ) : ℝ := inner_rectangle_length x * inner_rectangle_width
+def second_rectangle_area (x : ℝ) : ℝ := (second_rectangle_dimensions x).1 * (second_rectangle_dimensions x).2
+def largest_rectangle_area (x : ℝ) : ℝ := (largest_rectangle_dimensions x).1 * (largest_rectangle_dimensions x).2
+
+def first_shaded_region_area (x : ℝ) : ℝ := second_rectangle_area x - inner_rectangle_area x
+def second_shaded_region_area (x : ℝ) : ℝ := largest_rectangle_area x - second_rectangle_area x
+
+-- Define the arithmetic progression condition
+def arithmetic_progression (x : ℝ) : Prop :=
+  (first_shaded_region_area x - inner_rectangle_area x) = (second_shaded_region_area x - first_shaded_region_area x)
+
+-- State the theorem
+theorem inner_rectangle_length_is_4 :
+  ∃ x : ℝ, arithmetic_progression x ∧ inner_rectangle_length x = 4 := 
+by
+  use 4
+  -- Proof goes here
+  sorry
+
+end inner_rectangle_length_is_4_l79_79828
+
+
+namespace eval_dollar_expr_l79_79854
+
+noncomputable def dollar (k : ℝ) (a b : ℝ) := k * (a - b) ^ 2
+
+theorem eval_dollar_expr (x y : ℝ) : dollar 3 ((2 * x - 3 * y) ^ 2) ((3 * y - 2 * x) ^ 2) = 0 :=
+by sorry
+
+end eval_dollar_expr_l79_79854
+
+
+namespace perfect_square_expression_5_l79_79846
+
+def is_perfect_square (n : ℕ) : Prop :=
+  ∃ m : ℕ, m * m = n
+
+def expression_1 : ℕ := 3^3 * 4^4 * 7^7
+def expression_2 : ℕ := 3^4 * 4^3 * 7^6
+def expression_3 : ℕ := 3^5 * 4^6 * 7^5
+def expression_4 : ℕ := 3^6 * 4^5 * 7^4
+def expression_5 : ℕ := 3^4 * 4^6 * 7^4
+
+theorem perfect_square_expression_5 : is_perfect_square expression_5 :=
+sorry
+
+end perfect_square_expression_5_l79_79846
+
+
+namespace blue_length_is_2_l79_79405
+
+-- Define the lengths of the parts
+def total_length : ℝ := 4
+def purple_length : ℝ := 1.5
+def black_length : ℝ := 0.5
+
+-- Define the length of the blue part with the given conditions
+def blue_length : ℝ := total_length - (purple_length + black_length)
+
+-- State the theorem we need to prove
+theorem blue_length_is_2 : blue_length = 2 :=
+by 
+  sorry
+
+end blue_length_is_2_l79_79405
+
+
+namespace trihedral_angle_sum_gt_180_l79_79781
+
+theorem trihedral_angle_sum_gt_180
+    (a' b' c' α β γ : ℝ)
+    (Sabc : Prop)
+    (h1 : b' = π - α)
+    (h2 : c' = π - β)
+    (h3 : a' = π - γ)
+    (triangle_inequality : a' + b' + c' < 2 * π) :
+    α + β + γ > π :=
+by
+  sorry
+
+end trihedral_angle_sum_gt_180_l79_79781
+
+
+namespace total_sequences_correct_l79_79324
+
+/-- 
+Given 6 blocks arranged such that:
+1. Block 1 must be removed first.
+2. Blocks 2 and 3 become accessible after Block 1 is removed.
+3. Blocks 4, 5, and 6 become accessible after Blocks 2 and 3 are removed.
+4. A block can only be removed if no other block is stacked on top of it. 
+
+Prove that the total number of possible sequences to remove all the blocks is 10.
+-/
+def total_sequences_to_remove_blocks : ℕ := 10
+
+theorem total_sequences_correct : 
+  total_sequences_to_remove_blocks = 10 :=
+sorry
+
+end total_sequences_correct_l79_79324
+
+
+namespace toby_sharing_proof_l79_79473
+
+theorem toby_sharing_proof (initial_amt amount_left num_brothers : ℕ) 
+(h_init : initial_amt = 343)
+(h_left : amount_left = 245)
+(h_bros : num_brothers = 2) : 
+(initial_amt - amount_left) / (initial_amt * num_brothers) = 1 / 7 := 
+sorry
+
+end toby_sharing_proof_l79_79473
+
+
+namespace total_salary_correct_l79_79882
+
+-- Define the daily salaries
+def owner_salary : ℕ := 20
+def manager_salary : ℕ := 15
+def cashier_salary : ℕ := 10
+def clerk_salary : ℕ := 5
+def bagger_salary : ℕ := 3
+
+-- Define the number of employees
+def num_owners : ℕ := 1
+def num_managers : ℕ := 3
+def num_cashiers : ℕ := 5
+def num_clerks : ℕ := 7
+def num_baggers : ℕ := 9
+
+-- Define the total salary calculation
+def total_daily_salary : ℕ :=
+  (num_owners * owner_salary) +
+  (num_managers * manager_salary) +
+  (num_cashiers * cashier_salary) +
+  (num_clerks * clerk_salary) +
+  (num_baggers * bagger_salary)
+
+-- The theorem we need to prove
+theorem total_salary_correct :
+  total_daily_salary = 177 :=
+by
+  -- Proof can be filled in later
+  sorry
+
+end total_salary_correct_l79_79882
+
+
+namespace problem_l79_79634
+
+variable (x : ℝ)
+
+theorem problem (A B : ℝ) 
+  (h : (A / (x - 3) + B * (x + 2) = (-5 * x^2 + 18 * x + 26) / (x - 3))): 
+  A + B = 15 := by
+  sorry
+
+end problem_l79_79634
+
+
+namespace geometric_sequence_b_l79_79049
+
+theorem geometric_sequence_b (b : ℝ) (h1 : b > 0) (h2 : 30 * (b / 30) = b) (h3 : b * (b / 30) = 9 / 4) :
+  b = 3 * Real.sqrt 30 / 2 :=
+by
+  sorry
+
+end geometric_sequence_b_l79_79049
+
+
+namespace correct_evaluation_at_3_l79_79835
+
+noncomputable def polynomial (x : ℝ) : ℝ := 
+  (4 * x^3 - 6 * x + 5) * (9 - 3 * x)
+
+def expanded_poly (x : ℝ) : ℝ := 
+  -12 * x^4 + 36 * x^3 + 18 * x^2 - 69 * x + 45
+
+theorem correct_evaluation_at_3 :
+  polynomial = expanded_poly →
+  (12 * (-12) + 6 * 36 + 3 * 18 - 69) = 57 := 
+by
+  intro h
+  sorry
+
+end correct_evaluation_at_3_l79_79835
+
+
+namespace ratio_right_to_left_l79_79351
+
+theorem ratio_right_to_left (L C R : ℕ) (hL : L = 12) (hC : C = L + 2) (hTotal : L + C + R = 50) :
+  R / L = 2 :=
+by
+  sorry
+
+end ratio_right_to_left_l79_79351
+
+
+namespace number_of_skew_line_pairs_in_cube_l79_79692
+
+theorem number_of_skew_line_pairs_in_cube : 
+  let vertices := 8
+  let total_lines := 28
+  let sets_of_4_points := Nat.choose 8 4 - 12
+  let skew_pairs_per_set := 3
+  let number_of_skew_pairs := sets_of_4_points * skew_pairs_per_set
+  number_of_skew_pairs = 174 := sorry
+
+end number_of_skew_line_pairs_in_cube_l79_79692
+
+
+namespace speed_of_second_train_l79_79700
+
+def speed_of_first_train := 40 -- speed of the first train in kmph
+def distance_from_mumbai := 120 -- distance from Mumbai where the trains meet in km
+def head_start_time := 1 -- head start time in hours for the first train
+def total_remaining_distance := distance_from_mumbai - speed_of_first_train * head_start_time -- remaining distance for the first train to travel in km after head start
+def time_to_meet_first_train := total_remaining_distance / speed_of_first_train -- time in hours for the first train to reach the meeting point after head start
+def second_train_meeting_time := time_to_meet_first_train -- the second train takes the same time to meet the first train
+def distance_covered_by_second_train := distance_from_mumbai -- same meeting point distance for second train from Mumbai
+
+theorem speed_of_second_train : 
+  ∃ v : ℝ, v = distance_covered_by_second_train / second_train_meeting_time ∧ v = 60 :=
+by
+  sorry
+
+end speed_of_second_train_l79_79700
+
+
+namespace necklace_stand_capacity_l79_79491
+
+def necklace_stand_initial := 5
+def ring_display_capacity := 30
+def ring_display_current := 18
+def bracelet_display_capacity := 15
+def bracelet_display_current := 8
+def cost_per_necklace := 4
+def cost_per_ring := 10
+def cost_per_bracelet := 5
+def total_cost := 183
+
+theorem necklace_stand_capacity : necklace_stand_current + (total_cost - (ring_display_capacity - ring_display_current) * cost_per_ring - (bracelet_display_capacity - bracelet_display_current) * cost_per_bracelet) / cost_per_necklace = 12 :=
+by
+  sorry
+
+end necklace_stand_capacity_l79_79491
+
+
+namespace banana_arrangements_l79_79533
+
+theorem banana_arrangements : 
+  let letters := "BANANA".toList
+  let n := letters.length
+  let countA := letters.count (fun c => c = 'A')
+  let countN := letters.count (fun c => c = 'N')
+  let countB := letters.count (fun c => c = 'B')
+  n = 6 ∧ countA = 3 ∧ countN = 2 ∧ countB = 1 → (Nat.factorial n) / ((Nat.factorial countA) * (Nat.factorial countN) * (Nat.factorial countB)) = 60 := 
+by
+  intros letters n countA countN countB h
+  sorry
+
+end banana_arrangements_l79_79533
+
+
+namespace substitutions_made_in_first_half_l79_79698
+
+-- Definitions based on given problem conditions
+def total_players : ℕ := 24
+def starters : ℕ := 11
+def non_players : ℕ := 7
+def first_half_substitutions (S : ℕ) : ℕ := S
+def second_half_substitutions (S : ℕ) : ℕ := 2 * S
+def total_players_played (S : ℕ) := starters + first_half_substitutions S + second_half_substitutions S
+def remaining_players : ℕ := total_players - non_players
+
+-- Proof problem statement
+theorem substitutions_made_in_first_half (S : ℕ) (h : total_players_played S = remaining_players) : S = 2 :=
+by
+  sorry
+
+end substitutions_made_in_first_half_l79_79698
+
+
+namespace find_a_l79_79280
+
+variable (m n a : ℝ)
+variable (h1 : m = 2 * n + 5)
+variable (h2 : m + a = 2 * (n + 1.5) + 5)
+
+theorem find_a : a = 3 := by
+  sorry
+
+end find_a_l79_79280
+
+
+namespace min_ab_bound_l79_79440
+
+theorem min_ab_bound (a b n : ℕ) (hpos_a : 0 < a) (hpos_b : 0 < b) (hpos_n : 0 < n) 
+                      (h : ∀ i j, i ≤ n → j ≤ n → Nat.gcd (a + i) (b + j) > 1) :
+  ∃ c > 0, min a b > c^n * n^(n/2) :=
+sorry
+
+end min_ab_bound_l79_79440
+
+
+namespace S13_is_52_l79_79320
+
+variable {a : ℕ → ℕ}
+variable {S : ℕ → ℕ}
+variable {n : ℕ}
+
+-- Define the arithmetic sequence
+def is_arithmetic_sequence (a : ℕ → ℕ) : Prop :=
+  ∃ (a1 d : ℕ), ∀ n, a n = a1 + (n - 1) * d
+
+-- Define the sum of the first n terms
+def sum_of_first_n_terms (S : ℕ → ℕ) (a : ℕ → ℕ) : Prop :=
+  ∀ n, S n = n * (a 1 + a n) / 2
+
+theorem S13_is_52 (h1 : is_arithmetic_sequence a)
+                  (h2 : a 3 + a 7 + a 11 = 12)
+                  (h3 : sum_of_first_n_terms S a) :
+  S 13 = 52 :=
+by sorry
+
+end S13_is_52_l79_79320
+
+
+namespace total_annual_gain_l79_79911
+
+theorem total_annual_gain (x : ℝ) 
+    (Lakshmi_share : ℝ) 
+    (Lakshmi_share_eq: Lakshmi_share = 12000) : 
+    (3 * Lakshmi_share = 36000) :=
+by
+  sorry
+
+end total_annual_gain_l79_79911
+
+
+namespace red_button_probability_l79_79284
+
+theorem red_button_probability :
+  let jarA_red := 6
+  let jarA_blue := 9
+  let jarA_total := jarA_red + jarA_blue
+  let jarA_half := jarA_total / 2
+  let removed_total := jarA_total - jarA_half
+  let removed_red := removed_total / 2
+  let removed_blue := removed_total / 2
+  let jarA_red_remaining := jarA_red - removed_red
+  let jarA_blue_remaining := jarA_blue - removed_blue
+  let jarB_red := removed_red
+  let jarB_blue := removed_blue
+  let jarA_total_remaining := jarA_red_remaining + jarA_blue_remaining
+  let jarB_total := jarB_red + jarB_blue
+  (jarA_total = 15) →
+  (jarA_red_remaining = 6 - removed_red) →
+  (jarA_blue_remaining = 9 - removed_blue) →
+  (jarB_red = removed_red) →
+  (jarB_blue = removed_blue) →
+  (jarA_red_remaining + jarA_blue_remaining = 9) →
+  (jarB_red + jarB_blue = 6) →
+  let prob_red_JarA := jarA_red_remaining / jarA_total_remaining
+  let prob_red_JarB := jarB_red / jarB_total
+  prob_red_JarA * prob_red_JarB = 1 / 6 := by sorry
+
+end red_button_probability_l79_79284
+
+
+namespace vector_calculation_l79_79598
+
+def a :ℝ × ℝ := (1, 2)
+def b :ℝ × ℝ := (1, -1)
+def scalar_mult (c : ℝ) (v : ℝ × ℝ) : ℝ × ℝ := (c * v.1, c * v.2)
+def vector_sub (v1 v2 : ℝ × ℝ) : ℝ × ℝ := (v1.1 - v2.1, v1.2 - v2.2)
+
+theorem vector_calculation : scalar_mult (1/3) a - scalar_mult (4/3) b = (-1, 2) :=
+by sorry
+
+end vector_calculation_l79_79598
+
+
+namespace blue_ball_higher_probability_l79_79219
+
+noncomputable def probability_blue_ball_higher : ℝ :=
+  let p (k : ℕ) : ℝ := 1 / (2^k : ℝ)
+  let same_bin_prob := ∑' k : ℕ, (p (k + 1))^2
+  let higher_prob := (1 - same_bin_prob) / 2
+  higher_prob
+
+theorem blue_ball_higher_probability :
+  probability_blue_ball_higher = 1 / 3 :=
+by
+  sorry
+
+end blue_ball_higher_probability_l79_79219
+
+
+namespace pyramid_volume_l79_79782
+
+theorem pyramid_volume 
+(EF FG QE : ℝ) 
+(base_area : ℝ) 
+(volume : ℝ)
+(h1 : EF = 10)
+(h2 : FG = 5)
+(h3 : base_area = EF * FG)
+(h4 : QE = 9)
+(h5 : volume = (1 / 3) * base_area * QE) : 
+volume = 150 :=
+by
+  simp [h1, h2, h3, h4, h5]
+  sorry
+
+end pyramid_volume_l79_79782
+
+
+namespace correct_assignment_l79_79831
+
+-- Definition of conditions
+def is_variable_free (e : String) : Prop := -- a simplistic placeholder
+  e ∈ ["A", "B", "C", "D", "x"]
+
+def valid_assignment (lhs : String) (rhs : String) : Prop :=
+  is_variable_free lhs ∧ ¬(is_variable_free rhs)
+
+-- The statement of the proof problem
+theorem correct_assignment : valid_assignment "A" "A * A + A - 2" :=
+by
+  sorry
+
+end correct_assignment_l79_79831
+
+
+namespace find_other_root_l79_79117
+
+-- Definitions based on conditions
+def quadratic_equation (k : ℝ) (x : ℝ) : Prop := x^2 + 2 * k * x + k - 1 = 0
+
+def is_root (k : ℝ) (x : ℝ) : Prop := quadratic_equation k x = true
+
+-- The theorem to prove
+theorem find_other_root (k x t: ℝ) (h₁ : is_root k 0) : t = -2 :=
+sorry
+
+end find_other_root_l79_79117
+
+
+namespace additional_bureaus_needed_correct_l79_79686
+
+-- The number of bureaus the company has
+def total_bureaus : ℕ := 192
+
+-- The number of offices
+def total_offices : ℕ := 36
+
+-- The additional bureaus needed to ensure each office gets an equal number
+def additional_bureaus_needed (bureaus : ℕ) (offices : ℕ) : ℕ :=
+  let bureaus_per_office := bureaus / offices
+  let rounded_bureaus_per_office := bureaus_per_office + if bureaus % offices = 0 then 0 else 1
+  let total_bureaus_needed := offices * rounded_bureaus_per_office
+  total_bureaus_needed - bureaus
+
+-- Problem Statement: Prove that at least 24 more bureaus are needed
+theorem additional_bureaus_needed_correct : 
+  additional_bureaus_needed total_bureaus total_offices = 24 := 
+by
+  sorry
+
+end additional_bureaus_needed_correct_l79_79686
+
+
+namespace face_opposite_A_l79_79818
+noncomputable def cube_faces : List String := ["A", "B", "C", "D", "E", "F"]
+
+theorem face_opposite_A (cube_faces : List String) 
+  (h1 : cube_faces.length = 6)
+  (h2 : "A" ∈ cube_faces) 
+  (h3 : "B" ∈ cube_faces)
+  (h4 : "C" ∈ cube_faces) 
+  (h5 : "D" ∈ cube_faces)
+  (h6 : "E" ∈ cube_faces) 
+  (h7 : "F" ∈ cube_faces)
+  : ("D" ≠ "A") := 
+by
+  sorry
+
+end face_opposite_A_l79_79818
+
+
+namespace not_divisible_by_n_plus_4_l79_79296
+
+theorem not_divisible_by_n_plus_4 (n : ℕ) (h : n > 0) : ¬ ∃ k : ℕ, n^2 + 8 * n + 15 = k * (n + 4) := by
+  sorry
+
+end not_divisible_by_n_plus_4_l79_79296
+
+
+namespace sequence_bound_l79_79151
+
+noncomputable def sequenceProperties (a : ℕ → ℝ) (c : ℝ) : Prop :=
+  (∀ i, 0 ≤ a i ∧ a i ≤ c) ∧ (∀ i j, i ≠ j → abs (a i - a j) ≥ 1 / (i + j))
+
+theorem sequence_bound (a : ℕ → ℝ) (c : ℝ) (h : sequenceProperties a c) : 
+  c ≥ 1 :=
+by
+  sorry
+
+end sequence_bound_l79_79151
+
+
+namespace total_soda_consumption_l79_79838
+
+variables (c_soda b_soda c_consumed b_consumed b_remaining carol_final bob_final total_consumed : ℕ)
+
+-- Define the conditions
+def carol_soda_size : ℕ := 20
+def bob_soda_25_percent_more : ℕ := carol_soda_size + carol_soda_size * 25 / 100
+def carol_consumed : ℕ := carol_soda_size * 80 / 100
+def bob_consumed : ℕ := bob_soda_25_percent_more * 80 / 100
+def carol_remaining : ℕ := carol_soda_size - carol_consumed
+def bob_remaining : ℕ := bob_soda_25_percent_more - bob_consumed
+def bob_gives_carol : ℕ := bob_remaining / 2 + 3
+def carol_final_consumption : ℕ := carol_consumed + bob_gives_carol
+def bob_final_consumption : ℕ := bob_consumed - bob_gives_carol
+def total_soda_consumed : ℕ := carol_final_consumption + bob_final_consumption
+
+-- The theorem to prove the total amount of soda consumed by Carol and Bob together is 36 ounces
+theorem total_soda_consumption : total_soda_consumed = 36 := by {
+  sorry
+}
+
+end total_soda_consumption_l79_79838
+
+
+namespace number_of_flowers_alissa_picked_l79_79082
+
+-- Define the conditions
+variable (A : ℕ) -- Number of flowers Alissa picked
+variable (M : ℕ) -- Number of flowers Melissa picked
+variable (flowers_gifted : ℕ := 18) -- Flowers given to mother
+variable (flowers_left : ℕ := 14) -- Flowers left after gifting
+
+-- Define that Melissa picked the same number of flowers as Alissa
+axiom pick_equal : M = A
+
+-- Define the total number of flowers they had initially
+axiom total_flowers : 2 * A = flowers_gifted + flowers_left
+
+-- Prove that Alissa picked 16 flowers
+theorem number_of_flowers_alissa_picked : A = 16 := by
+  -- Use placeholders for proof steps
+  sorry
+
+end number_of_flowers_alissa_picked_l79_79082
+
+
+namespace birds_flew_up_l79_79819
+
+-- Definitions based on conditions in the problem
+def initial_birds : ℕ := 29
+def new_total_birds : ℕ := 42
+
+-- The statement to be proven
+theorem birds_flew_up (x y z : ℕ) (h1 : x = initial_birds) (h2 : y = new_total_birds) (h3 : z = y - x) : z = 13 :=
+by
+  -- Proof will go here
+  sorry
+
+end birds_flew_up_l79_79819
+
+
+namespace field_trip_count_l79_79823
+
+theorem field_trip_count (vans: ℕ) (buses: ℕ) (people_per_van: ℕ) (people_per_bus: ℕ)
+  (hv: vans = 9) (hb: buses = 10) (hpv: people_per_van = 8) (hpb: people_per_bus = 27):
+  vans * people_per_van + buses * people_per_bus = 342 := by
+  sorry
+
+end field_trip_count_l79_79823
+
+
+namespace line_through_center_eq_line_bisects_chord_eq_l79_79382
+
+section Geometry
+
+-- Define the circle C
+def circleC (x y : ℝ) : Prop := (x - 1)^2 + y^2 = 16
+
+-- Define the point P
+def P := (2, 2)
+
+-- Define when line l passes through the center of the circle
+def line_through_center (x y : ℝ) : Prop := 2 * x - y - 2 = 0
+
+-- Define when line l bisects chord AB by point P
+def line_bisects_chord (x y : ℝ) : Prop := x + 2 * y - 6 = 0
+
+-- Prove the equation of line l passing through the center
+theorem line_through_center_eq : 
+  (∀ (x y : ℝ), line_through_center x y → circleC x y → (x, y) = (1, 0)) →
+  2 * (2:ℝ) - 2 - 2 = 0 := sorry
+
+-- Prove the equation of line l bisects chord AB by point P
+theorem line_bisects_chord_eq:
+  (∀ (x y : ℝ), line_bisects_chord x y → circleC x y → (2, 2) = P) →
+  (2 + 2 * 2 - 6 = 0) := sorry
+
+end Geometry
+
+end line_through_center_eq_line_bisects_chord_eq_l79_79382
+
+
+namespace find_principal_amount_l79_79076
+
+-- Definitions based on conditions
+def A : ℝ := 3969
+def r : ℝ := 0.05
+def n : ℝ := 1
+def t : ℝ := 2
+
+-- The statement to be proved
+theorem find_principal_amount : ∃ P : ℝ, A = P * (1 + r/n)^(n * t) ∧ P = 3600 :=
+by
+  use 3600
+  sorry
+
+end find_principal_amount_l79_79076
+
+
+namespace find_missing_number_l79_79410
+
+theorem find_missing_number :
+  (12 + x + 42 + 78 + 104) / 5 = 62 →
+  (a + 255 + 511 + 1023 + x) / 5 = 398.2 →
+  a = 128 :=
+by
+  intros h1 h2
+  sorry
+
+end find_missing_number_l79_79410
+
+
+namespace distance_between_houses_l79_79188
+
+theorem distance_between_houses (d d_JS d_QS : ℝ) (h1 : d_JS = 3) (h2 : d_QS = 1) :
+  (2 ≤ d ∧ d ≤ 4) → d = 3 :=
+sorry
+
+end distance_between_houses_l79_79188
+
+
+namespace perm_banana_l79_79560
+
+theorem perm_banana : 
+  let total_letters := 6
+  let A_letters := 3
+  let N_letters := 2
+  (fact total_letters) / ((fact A_letters) * (fact N_letters) * fact (total_letters - A_letters - N_letters)) = 60 :=
+by
+  let total_letters := 6
+  let A_letters := 3
+  let N_letters := 2
+  have h1 : fact total_letters = 720 := by decide
+  have h2 : fact A_letters = 6 := by decide
+  have h3 : fact N_letters = 2 := by decide
+  have h4 : fact (total_letters - A_letters - N_letters) = fact (6 - 3 - 2) := by decide
+  have h5 : fact (total_letters - A_letters - N_letters) = 1 := by decide
+  calc
+    (720 / (6 * 2 * 1) : ℝ)
+    _ = 60 := by norm_num
+
+end perm_banana_l79_79560
+
+
+namespace minimum_value_inequality_l79_79156
+
+theorem minimum_value_inequality (x y z : ℝ) (hx : 2 ≤ x) (hxy : x ≤ y) (hyz : y ≤ z) (hz : z ≤ 5) :
+    (x - 2)^2 + (y / x - 2)^2 + (z / y - 2)^2 + (5 / z - 2)^2 ≥ 4 * (Real.sqrt (Real.sqrt 5) - 2)^2 := 
+    sorry
+
+end minimum_value_inequality_l79_79156
+
+
+namespace complement_set_U_A_l79_79393
+
+-- Definitions of U and A
+def U : Set ℝ := { x : ℝ | x^2 ≤ 4 }
+def A : Set ℝ := { x : ℝ | |x - 1| ≤ 1 }
+
+-- Theorem statement
+theorem complement_set_U_A : (U \ A) = { x : ℝ | -2 ≤ x ∧ x < 0 } := 
+by
+  sorry
+
+end complement_set_U_A_l79_79393
+
+
+namespace proof_problem1_proof_problem2_l79_79707
+
+noncomputable def problem1_lhs : ℝ := 
+  1 / (Real.sqrt 3 + 1) - Real.sin (Real.pi / 3) + Real.sqrt 32 * Real.sqrt (1 / 8)
+
+noncomputable def problem1_rhs : ℝ := 3 / 2
+
+theorem proof_problem1 : problem1_lhs = problem1_rhs :=
+by 
+  sorry
+
+noncomputable def problem2_lhs : ℝ := 
+  2^(-2 : ℤ) - Real.sqrt ((-2)^2) + 6 * Real.sin (Real.pi / 4) - Real.sqrt 18
+
+noncomputable def problem2_rhs : ℝ := -7 / 4
+
+theorem proof_problem2 : problem2_lhs = problem2_rhs :=
+by 
+  sorry
+
+end proof_problem1_proof_problem2_l79_79707
+
+
+namespace min_sum_of_perpendicular_sides_l79_79111
+
+noncomputable def min_sum_perpendicular_sides (a b : ℝ) (h : a * b = 100) : ℝ :=
+a + b
+
+theorem min_sum_of_perpendicular_sides {a b : ℝ} (h : a * b = 100) : min_sum_perpendicular_sides a b h = 20 :=
+sorry
+
+end min_sum_of_perpendicular_sides_l79_79111
+
+
+namespace sin_cos_theta_l79_79856
+
+-- Define the problem conditions and the question as a Lean statement
+theorem sin_cos_theta (θ : ℝ) (h : Real.tan (θ + Real.pi / 2) = 2) : Real.sin θ * Real.cos θ = -2 / 5 := by
+  sorry
+
+end sin_cos_theta_l79_79856
+
+
+namespace minimum_value_of_sum_of_squares_l79_79263
+
+noncomputable def minimum_of_sum_of_squares (a b : ℝ) : ℝ :=
+  a^2 + b^2
+
+theorem minimum_value_of_sum_of_squares (a b : ℝ) (h : |a * b| = 6) :
+  a^2 + b^2 ≥ 12 :=
+by {
+  sorry
+}
+
+end minimum_value_of_sum_of_squares_l79_79263
+
+
+namespace hiking_time_l79_79628
+
+-- Define the conditions
+def Distance : ℕ := 12
+def Pace_up : ℕ := 4
+def Pace_down : ℕ := 6
+
+-- Statement to be proved
+theorem hiking_time (d : ℕ) (pu : ℕ) (pd : ℕ) (h₁ : d = Distance) (h₂ : pu = Pace_up) (h₃ : pd = Pace_down) :
+  d / pu + d / pd = 5 :=
+by sorry
+
+end hiking_time_l79_79628
+
+
+namespace fraction_simplification_l79_79126
+
+theorem fraction_simplification (a b : ℚ) (h : b / a = 3 / 5) : (a - b) / a = 2 / 5 :=
+by
+  sorry
+
+end fraction_simplification_l79_79126
+
+
+namespace simplify_and_evaluate_problem_l79_79038
+
+noncomputable def problem_expression (a : ℤ) : ℚ :=
+  (1 - (3 : ℚ) / (a + 1)) / ((a^2 - 4 * a + 4 : ℚ) / (a + 1))
+
+theorem simplify_and_evaluate_problem :
+  ∀ (a : ℤ), -2 ≤ a ∧ a ≤ 2 → a ≠ -1 → a ≠ 2 →
+  (problem_expression a = 1 / (a - 2 : ℚ)) ∧
+  (a = 0 → problem_expression a = -1 / 2) ∧
+  (a = 1 → problem_expression a = -1) :=
+sorry
+
+end simplify_and_evaluate_problem_l79_79038
+
+
+namespace remainder_of_trailing_zeros_l79_79895
+
+def count_trailing_zeros (n : ℕ) : ℕ :=
+  let rec helper (n : ℕ) (count : ℕ) : ℕ :=
+    if n = 0 then count
+    else helper (n / 10) (count + n % 10 = 0)
+  helper n 0
+
+def product_factorials (n : ℕ) : ℕ :=
+  (List.range (n+1)).map (λ x, Nat.factorial x) |>.foldl (· * ·) 1
+
+theorem remainder_of_trailing_zeros :
+  let n := product_factorials 50 
+  let m := count_trailing_zeros n
+  m % 1000 = 702 := sorry
+
+end remainder_of_trailing_zeros_l79_79895
+
+
+namespace days_considered_l79_79969
+
+theorem days_considered (visitors_current : ℕ) (visitors_previous : ℕ) (total_visitors : ℕ)
+  (h1 : visitors_current = 132) (h2 : visitors_previous = 274) (h3 : total_visitors = 406)
+  (h_total : visitors_current + visitors_previous = total_visitors) :
+  2 = 2 :=
+by
+  sorry
+
+end days_considered_l79_79969
+
+
+namespace cubes_with_painted_faces_l79_79961
+
+theorem cubes_with_painted_faces :
+  ∀ (n : ℕ), (∃ (cubes : ℕ), cubes = 27 ∧ ∃ (face_painted_cubes : ℕ → ℕ), 
+  face_painted_cubes 2 = 12) → 12 * 2 = 24 :=
+by
+  intro n
+  assume h
+  cases h with cubes hc
+  cases hc with hc_painted hc_cubes
+  simp at hc_painted
+  simp at hc_cubes
+  rw [hc_painted, hc_cubes]
+  sorry
+
+end cubes_with_painted_faces_l79_79961
+
+
+namespace cost_to_fix_car_l79_79633
+
+variable {S A : ℝ}
+
+theorem cost_to_fix_car (h1 : A = 3 * S + 50) (h2 : S + A = 450) : A = 350 := 
+by
+  sorry
+
+end cost_to_fix_car_l79_79633
+
+
+namespace apples_in_basket_l79_79018
+
+-- Define the conditions in Lean
+def four_times_as_many_apples (O A : ℕ) : Prop :=
+  A = 4 * O
+
+def emiliano_consumes (O A : ℕ) : Prop :=
+  (2/3 : ℚ) * O + (2/3 : ℚ) * A = 50
+
+-- Formulate the main proposition to prove there are 60 apples
+theorem apples_in_basket (O A : ℕ) (h1 : four_times_as_many_apples O A) (h2 : emiliano_consumes O A) : A = 60 := 
+by
+  sorry
+
+end apples_in_basket_l79_79018
+
+
+namespace johns_percentage_increase_l79_79482
+
+theorem johns_percentage_increase (original_amount new_amount : ℕ) (h₀ : original_amount = 30) (h₁ : new_amount = 40) :
+  (new_amount - original_amount) * 100 / original_amount = 33 :=
+by
+  sorry
+
+end johns_percentage_increase_l79_79482
+
+
+namespace marshmallow_per_smore_l79_79283
+
+theorem marshmallow_per_smore (graham_crackers : ℕ) (initial_marshmallows : ℕ) (additional_marshmallows : ℕ) 
+                               (graham_crackers_per_smore : ℕ) :
+  graham_crackers = 48 ∧ initial_marshmallows = 6 ∧ additional_marshmallows = 18 ∧ graham_crackers_per_smore = 2 →
+  (initial_marshmallows + additional_marshmallows) / (graham_crackers / graham_crackers_per_smore) = 1 :=
+by
+  intro h
+  sorry
+
+end marshmallow_per_smore_l79_79283
+
+
+namespace total_pears_picked_l79_79761
+
+theorem total_pears_picked (keith_pears jason_pears : ℕ) (h1 : keith_pears = 3) (h2 : jason_pears = 2) : keith_pears + jason_pears = 5 :=
+by
+  sorry
+
+end total_pears_picked_l79_79761
+
+
+namespace factor_poly_l79_79398
+
+theorem factor_poly (P Q : ℝ) (h1 : ∃ b c : ℝ, 
+  (x^2 + 3*x + 7) * (x^2 + b*x + c) = x^4 + P*x^2 + Q)
+  : P + Q = 50 :=
+sorry
+
+end factor_poly_l79_79398
+
+
+namespace common_factor_l79_79925
+
+-- Definition of the polynomial
+def polynomial (x y m n : ℝ) : ℝ := 4 * x * (m - n) + 2 * y * (m - n) ^ 2
+
+-- The theorem statement
+theorem common_factor (x y m n : ℝ) : ∃ k : ℝ, k * (m - n) = polynomial x y m n :=
+sorry
+
+end common_factor_l79_79925
+
+
+namespace min_xy_when_a_16_min_expr_when_a_0_l79_79732
+
+-- Problem 1: Minimum value of xy when a = 16
+theorem min_xy_when_a_16 (x y : ℝ) (hx : 0 < x) (hy : 0 < y) (h : 2 * x * y = x + 4 * y + 16) : 16 ≤ x * y :=
+    sorry
+
+-- Problem 2: Minimum value of x + y + 2 / x + 1 / (2 * y) when a = 0
+theorem min_expr_when_a_0 (x y : ℝ) (hx : 0 < x) (hy : 0 < y) (h : 2 * x * y = x + 4 * y) : (11 : ℝ) / 2 ≤ x + y + 2 / x + 1 / (2 * y) :=
+    sorry
+
+end min_xy_when_a_16_min_expr_when_a_0_l79_79732
+
+
+namespace area_of_30_60_90_triangle_l79_79172
+
+theorem area_of_30_60_90_triangle (altitude : ℝ) (h : altitude = 3) : 
+  ∃ (area : ℝ), area = 6 * Real.sqrt 3 := 
+sorry
+
+end area_of_30_60_90_triangle_l79_79172
+
+
+namespace diff_between_percent_and_fraction_l79_79804
+
+theorem diff_between_percent_and_fraction :
+  (0.75 * 800) - ((7 / 8) * 1200) = -450 :=
+by
+  sorry
+
+end diff_between_percent_and_fraction_l79_79804
+
+
+namespace prob_at_least_one_head_is_7_over_8_l79_79224
+
+-- Define the event and probability calculation
+def probability_of_tails_all_three_tosses : ℚ :=
+  (1 / 2) ^ 3
+
+def probability_of_at_least_one_head : ℚ :=
+  1 - probability_of_tails_all_three_tosses
+
+-- Prove the probability of at least one head is 7/8
+theorem prob_at_least_one_head_is_7_over_8 : probability_of_at_least_one_head = 7 / 8 :=
+by
+  sorry
+
+end prob_at_least_one_head_is_7_over_8_l79_79224
+
+
+namespace correct_choice_D_l79_79386
+
+variables {Ω : Type*} {P : ProbabilityMassFunction Ω}
+
+def A : Set Ω := sorry -- define event A
+def B : Set Ω := sorry -- define event B
+
+theorem correct_choice_D (hA : P(A) = 0.2) (hB : P(B) = 0.8) (hInd : P(A ∩ B) = P(A) * P(B)) :
+    P(A ∪ B) = 0.84 ∧ P(A ∩ B) = 0.16 :=
+by
+  rw hInd
+  have hAB : P(A ∩ B) = 0.2 * 0.8, by rw [hA, hB]; ring
+  have hUnion : P(A ∪ B) = P(A) + P(B) - P(A ∩ B), by sorry -- Add calculation steps as needed
+  rw [hAB, hA, hB] at hUnion
+  norm_num at hUnion
+  split
+  · exact hUnion
+  · exact hAB
+
+end correct_choice_D_l79_79386
+
+
+namespace stocks_higher_price_l79_79438
+
+theorem stocks_higher_price (total_stocks lower_price higher_price: ℝ)
+  (h_total: total_stocks = 8000)
+  (h_ratio: higher_price = 1.5 * lower_price)
+  (h_sum: lower_price + higher_price = total_stocks) :
+  higher_price = 4800 :=
+by
+  sorry
+
+end stocks_higher_price_l79_79438
+
+
+namespace people_speak_neither_l79_79748
+
+-- Define the total number of people
+def total_people : ℕ := 25
+
+-- Define the number of people who can speak Latin
+def speak_latin : ℕ := 13
+
+-- Define the number of people who can speak French
+def speak_french : ℕ := 15
+
+-- Define the number of people who can speak both Latin and French
+def speak_both : ℕ := 9
+
+-- Prove that the number of people who don't speak either Latin or French is 6
+theorem people_speak_neither : (total_people - (speak_latin + speak_french - speak_both)) = 6 := by
+  sorry
+
+end people_speak_neither_l79_79748
+
+
+namespace probability_log_product_lt_zero_l79_79844
+
+open Real
+
+noncomputable def chosen_elements : Finset ℝ := {0.3, 0.5, 3.0, 4.0, 5.0, 6.0}
+
+theorem probability_log_product_lt_zero : 
+  let p := 3 / 5 in 
+  ∃ a b c ∈ chosen_elements.to_list, 
+  a ≠ b ∧ a ≠ c ∧ b ≠ c ∧ 
+  (log a) * (log b) * (log c) < 0 :=
+by sorry
+
+end probability_log_product_lt_zero_l79_79844
+
+
+namespace car_distance_l79_79063
+
+theorem car_distance (t : ℚ) (s : ℚ) (d : ℚ) 
+(h1 : t = 2 + 2 / 5) 
+(h2 : s = 260) 
+(h3 : d = s * t) : 
+d = 624 := by
+  sorry
+
+end car_distance_l79_79063
+
+
+namespace simplify_and_evaluate_expression_l79_79302
+
+theorem simplify_and_evaluate_expression (a b : ℝ) (h1 : a = -1) (h2 : a * b = 2) :
+  3 * (2 * a^2 * b + a * b^2) - (3 * a * b^2 - a^2 * b) = -14 := by
+  sorry
+
+end simplify_and_evaluate_expression_l79_79302
+
+
+namespace negate_even_condition_l79_79035
+
+theorem negate_even_condition (a b c : ℤ) :
+  (¬(∀ a b c : ℤ, ∃ x : ℚ, a * x^2 + b * x + c = 0 → Even a ∧ Even b ∧ Even c)) →
+  (¬Even a ∨ ¬Even b ∨ ¬Even c) :=
+by
+  sorry
+
+end negate_even_condition_l79_79035
+
+
+namespace find_a_minus_inv_a_l79_79857
+
+variable (a : ℝ)
+variable (h : a + 1 / a = Real.sqrt 13)
+
+theorem find_a_minus_inv_a : a - 1 / a = 3 ∨ a - 1 / a = -3 := by
+  sorry
+
+end find_a_minus_inv_a_l79_79857
