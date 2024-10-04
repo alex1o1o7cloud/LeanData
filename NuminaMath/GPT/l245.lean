@@ -1,35 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Arithmetic
-import Mathlib.Algebra.Arithmetic.Basic
-import Mathlib.Algebra.GcdMonoid.Basic
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order.Ring
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Analysis.Complex.Basic
-import Mathlib.Analysis.InnerProductSpace.Basic
-import Mathlib.Analysis.SpecialFunctions.ExpLog
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Permutation
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Rat
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Finite
-import Mathlib.Geometry.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.Geometry.Polytope
-import Mathlib.Probability.Distributions.Poisson
-import Mathlib.Tactic
-import Mathlib.Tactic.LibrarySearch
-import Mathlib.Topology.MetricSpace.Basic
-import algebra.big_operators.basic
-import combinatorics.pigeonhole
-import data.real.basic
 
 namespace max_value_fraction_ratio_tangent_line_through_point_l245_245270
 

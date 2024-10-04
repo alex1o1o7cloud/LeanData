@@ -1,31 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Combinatorics.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.NormedSpace.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Parity
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Sqrt
-import Mathlib.Data.Perm.Basic
-import Mathlib.Data.Probability
-import Mathlib.Data.Real.Basic
-import Mathlib.Exponents
-import Mathlib.Functions
-import Mathlib.Init.Data.Nat.Basic
-import Mathlib.Order.Continuity
-import Mathlib.Probability.Basic
-import Mathlib.Probability.Distribution
-import Mathlib.Probability.Expectation
-import Mathlib.Probability.Identity
-import Mathlib.Probability.Independent
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Pigeonhole
-import Mathlib.Tactic.Ring
-import data.real.basic
 
 namespace number_of_three_digit_integers_with_odd_factors_l186_186419
 

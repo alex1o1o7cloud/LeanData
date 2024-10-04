@@ -1,36 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.ArithmeticProgressions
-import Mathlib.Algebra.GeomMean.ArithMean
-import Mathlib.Algebra.GroupPower.Order
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Quadratic
-import Mathlib.Algebra.Ring
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.FDeriv
-import Mathlib.Analysis.Calculus.Fderiv
-import Mathlib.Analysis.Calculus.MeanValue
-import Mathlib.Analysis.SpecialFunctions.ExpLog
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Analysis.SpecificLimits.Basic
-import Mathlib.Classical.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Int.Mod
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Prob.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.MeasureTheory.IntervalIntegral
-import Mathlib.MeasureTheory.ProbabilitySpace
-import Mathlib.Probability.Basic
-import Mathlib.Probability.Distribution
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
 
 namespace midpoint_interval_a_l36_36330
 

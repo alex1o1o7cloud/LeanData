@@ -1,25 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order.AbsoluteValue
-import Mathlib.Analysis.Calculus.Integral
-import Mathlib.Analysis.SpecialFunctions.Pow.Real
-import Mathlib.Analysis.Trigonometry.Basic
-import Mathlib.Combinatorics
-import Mathlib.Combinatorics.Binomial
-import Mathlib.Combinatorics.CombinatorialSpecies
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Nat.Gcd.Basic
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Quad
-import Mathlib.MeasureTheory.Probability.ProbabilityMassFunction
-import Mathlib.ProbabilityTheory.ProbabilitySpace
-import Mathlib.Tactic
 
 namespace shifted_cosine_function_l4_4957
 

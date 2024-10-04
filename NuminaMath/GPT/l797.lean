@@ -1,35 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Combinatorics.Binomial
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.SpecialFunctions.ExpLog
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Combinatorics
-import Mathlib.Combinatorics.Permutations.Basic
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Finset.NatAntidiagonal
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List
-import Mathlib.Data.Matrix.Notation
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Probability.Normal
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean
-import Mathlib.Probability.Basic
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.SetTheory.Cardinal.Basic
-import Mathlib.Tactic
-import Mathlib.Topology.Basic
 
 namespace geometric_series_sum_l797_797751
 

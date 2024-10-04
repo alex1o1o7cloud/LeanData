@@ -1,36 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order.AbsoluteValue
-import Mathlib.Algebra.Order.Field.Basic
-import Mathlib.Analysis.Geometry
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.List.Sort
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Rat.Default
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Circle.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Geometry.Euclidean.Cyclic
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.Geometry.Triangle.Basic
-import Mathlib.LinearAlgebra.Basic
-import Mathlib.LinearAlgebra.Matrix
-import Mathlib.LinearAlgebra.MetricSpace
-import Mathlib.Logic.Basic
-import Mathlib.Probability.Independence
-import Mathlib.Real.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
 
 namespace simplest_form_option_l655_655200
 

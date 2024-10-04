@@ -1,31 +1,4 @@
 import Mathlib
-import Mathlib.
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order.Field
-import Mathlib.Algebra.Polynomial
-import Mathlib.Algebra.Polynomial.Mathlib
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.SpecialFunctions.Pow
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Combinatorics
-import Mathlib.Data.Nat.Digits
-import Mathlib.Data.Probability
-import Mathlib.Data.Rat
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Geometry.Euclidean.Circumcircle
-import Mathlib.NumberTheory.Binomial
-import Mathlib.ProbabilityTheory.ProbabilityMassFunction
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
-import Mathlib.Topology.MetricSpace.Basic
 
 namespace fraction_to_three_decimal_places_l497_497862
 

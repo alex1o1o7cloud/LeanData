@@ -1,32 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Cubic
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Analysis.Calculus.Inverse
-import Mathlib.Analysis.Geometry
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Geometry.Point
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Polynomial.Basic
-import Mathlib.Data.Prob
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Order.ConditionallyCompleteLattice
-import Mathlib.Statistics.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import data.real.basic
 
 namespace dot_product_ab_l14_14684
 

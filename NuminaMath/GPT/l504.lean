@@ -1,32 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.ArithmeticDerivative.Basic
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.Combinatorics.Basic
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.Order.Field
-import Mathlib.Algebra.Order.Roots
-import Mathlib.Algebra.Polynomial
-import Mathlib.Analysis.Calculus.LocalExtr
-import Mathlib.Analysis.Geometry
-import Mathlib.Analysis.SpecialFunctions.ExpLog
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Nat.Combinatorics.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Pi
-import Mathlib.Data.Real.Sqrt
-import Mathlib.Data.Set.Basic
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Tactic
 
 namespace problem_1_problem_2_l504_504436
 

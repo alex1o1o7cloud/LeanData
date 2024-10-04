@@ -1,33 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Finset.Perm
-import Mathlib.Data.Fintype
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Matrix.Notation
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.Factorial.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Sqrt
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Set.Finite
-import Mathlib.Data.Set.Function
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.MeasureTheory.MeasurableSpace
-import Mathlib.Probability
-import Mathlib.Probability.Basic
-import Mathlib.SetTheory.Cardinal.Basic
-import Mathlib.SetTheory.Cardinal.Finite
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
-import Mathlib.Topology.Instances.Real
 
 namespace average_rate_of_change_correct_l136_136859
 

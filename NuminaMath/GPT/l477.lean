@@ -1,37 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Abs
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.Factorial
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Parity
-import Mathlib.Algebra.QuadraticDiscriminant
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Polynomial.Basic
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Time.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.MeasureTheory.Measure.Lebesgue
-import Mathlib.NumberTheory.ArithmeticFunction
-import Mathlib.NumberTheory.Primes
-import Mathlib.Probability
-import Mathlib.Probability.ProbabilityMass
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.Ring
-import Mathlib.Topology.Algebra.Order
-import Mathlib.Topology.Instances.Real
 
 namespace line_to_cartesian_eq_line_and_curve_common_points_l477_477449
 

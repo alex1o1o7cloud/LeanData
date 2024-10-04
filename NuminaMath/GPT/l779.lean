@@ -1,33 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Digitaroot
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Order.Field
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Analysis.InnerProductSpace.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Fin
-import Mathlib.Data.Finset
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Perm
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Factors
-import Mathlib.Data.Nat.Pow
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Polynomial
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Time.Calendar
-import Mathlib.Geometry.Euclidean
-import Mathlib.Probability
-import Mathlib.Probability.Independence
-import Mathlib.Tactic
-import Mathlib.Topology.Basic
-import Mathlib.Topology.ContinuousFunction.Basic
-import Mathlib.Topology.MetricSpace.Polish
-import Mathlib.Trigonometry.Basic
 
 namespace find_circle_center_l779_779024
 

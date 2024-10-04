@@ -1,27 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Module.LinearMap
-import Mathlib.Analysis.InnerProductSpace.Basic
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Analysis.SpecialFunctions.Pow
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.SimpleGraph.Connectivity
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Nat.ModEq
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Rat.Default
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.ProbabilityTheory.Basic
-import Mathlib.Tactic
-import Mathlib.Topology.InfiniteSum
 
 namespace four_digit_number_count_l49_49204
 

@@ -1,34 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.GroupPower.Basic
-import Mathlib.Algebra.Linear
-import Mathlib.Algebra.Order
-import Mathlib.Algebra.QuadraticDiscriminant
-import Mathlib.Algebra.Square
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Data.Bool.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Factorial.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Polynomial
-import Mathlib.Data.Rat
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Geometry.Euclidean.Circumcircle
-import Mathlib.Init.Data.Int.Basic
-import Mathlib.Probability.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Linarith
 
 namespace part_I_part_II_part_III_l692_692540
 

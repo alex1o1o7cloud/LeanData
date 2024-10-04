@@ -1,34 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.ArithmeticSeries
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Matrix
-import Mathlib.Algebra.Order
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.Extrema
-import Mathlib.Analysis.SpecialFunctions.Gaussian
-import Mathlib.Analysis.SpecialFunctions.Log.Base
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.Variance
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Polynomial.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Seq
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Zmod.Basic
-import Mathlib.MeasureTheory.Probability.MassFunction
-import Mathlib.NumberTheory.Prime.Basic
-import Mathlib.Probability
-import Mathlib.Probability.Distribution
-import Mathlib.Probability.Independence
-import Mathlib.Probability.Independent
-import Mathlib.Tactic
-import Mathlib.Topology.Basic
 
 namespace sin_330_eq_neg_half_l175_175756
 

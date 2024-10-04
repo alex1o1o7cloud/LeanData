@@ -1,37 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.BigOperators.Finprod
-import Mathlib.Algebra.Combinatorics
-import Mathlib.Algebra.Factorial
-import Mathlib.Algebra.GeometricSeries
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order
-import Mathlib.Algebra.Parity
-import Mathlib.Algebra.QuadraticDiscriminant
-import Mathlib.Algebra.QuadraticEquation
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.MeanValue
-import Mathlib.Analysis.Geometry.Circle
-import Mathlib.Analysis.Geometry.ConicSection
-import Mathlib.Analysis.SpecialFunctions.Complex.Log
-import Mathlib.Analysis.SpecialFunctions.Exp
-import Mathlib.Analysis.SpecialFunctions.Pow
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Geometry.Triangle.Basic
-import Mathlib.Init.Data.Nat.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Polyrith
-import combinatorics.finite
-import probability.probability_theory
 
 namespace selling_price_is_80_l825_825746
 

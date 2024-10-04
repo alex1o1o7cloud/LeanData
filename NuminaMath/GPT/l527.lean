@@ -1,34 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.CombiBasics
-import Mathlib.Algebra.Factorial
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Polynomial.Basic
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.Fderiv
-import Mathlib.Analysis.Complex.Basic
-import Mathlib.Analysis.InnerProductSpace.Basic
-import Mathlib.Analysis.SpecialFunctions.Integrals
-import Mathlib.Combinatorics.SimpleGraph.Matching
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.List.Perm
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Matrix.Rank
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.ModEq
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.LinearAlgebra.Basis
-import Mathlib.MeasureTheory.Integration
-import Mathlib.Tactic
 
 namespace find_omega_phi_l527_527011
 

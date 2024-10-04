@@ -1,36 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.GeomSum
-import Mathlib.Algebra.NumberTheory.Fibonacci
-import Mathlib.Analysis.Calculus.Cos
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.Derangements.Basic
-import Mathlib.Combinatorics.Ramsey
-import Mathlib.Combinatorics.SimpleGraph.Basic
-import Mathlib.Combinatorics.SimpleGraph.Coloring
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Graph
-import Mathlib.Data.Graph.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Gcd.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Probability
-import Mathlib.Data.Real.Basic
-import Mathlib.Geometry.Euclidean
-import Mathlib.Init.Logic
-import Mathlib.ProbabilityTheory.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
-import Mathlib.Topology.Basic
-import Mathlib.Topology.ContinuousFunction.Basic
-import Mathlib.Topology.More.Structing
-import Probability
-import Real
-import data.finset
-import data.int.basic
 
 namespace two_point_two_five_as_fraction_l673_673761
 

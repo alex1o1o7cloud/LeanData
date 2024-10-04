@@ -1,35 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Arithmetic
-import Mathlib.Algebra.ConicSection.Hyperbola
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Group.Opposite
-import Mathlib.Algebra.Order.Floor
-import Mathlib.Algebra.Polynomial
-import Mathlib.Algebra.Quadratic.Discriminant
-import Mathlib.Algebra.QuadraticDiscriminant
-import Mathlib.Algebra.Quadratics
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.InnerProductSpace.Basic
-import Mathlib.Analysis.InnerProductSpace.PiL2
-import Mathlib.Analysis.SpecialFunctions.ExpLog
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.Trigonometric.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Probability.Normal
-import Mathlib.Data.Real.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.NumberTheory.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Real
-import RealAxis.Basic
 
 namespace arg_cubed_sum_eq_pi_l184_184353
 

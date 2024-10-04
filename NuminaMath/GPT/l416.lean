@@ -1,26 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.ArithSeq
-import Mathlib.Algebra.Order.Field
-import Mathlib.Algebra.Quotient
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.InnerProductSpace.Basic
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Combinatorics.Composition
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Bitwise
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.String.Defs
-import Mathlib.Data.Time
-import Mathlib.Data.Zmod.Basic
-import Mathlib.NumberTheory.ArithmeticFunction.Euler
-import Mathlib.Probability.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
 
 namespace divisor_of_product_of_four_consecutive_integers_l416_416721
 

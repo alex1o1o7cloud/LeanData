@@ -1,37 +1,4 @@
 import Mathlib
-import Mathlib.Algebra
-import Mathlib.Algebra.Arithmetic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.GroupPower.Order
-import Mathlib.Algebra.LCM
-import Mathlib.Analysis.Geometry
-import Mathlib.Analysis.SpecialFunctions.ExpLog
-import Mathlib.Analysis.SpecialFunctions.Integrals
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.List.Ops
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Polynomial.Basic
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Vect
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Circle.Basic
-import Mathlib.Geometry.Euclidean.Angle
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Geometry.Euclidean.Circumcenter
-import Mathlib.Order.Floor
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Linarith
-import Mathlib.Topology.ContinuousFunction.Basic
-import Mathlib.Topology.EuclideanSpace.Basic
 
 namespace count_unique_three_digit_numbers_l25_25965
 

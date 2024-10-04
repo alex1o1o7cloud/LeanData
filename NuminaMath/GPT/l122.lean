@@ -1,35 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Trig
-import Mathlib.Analysis.InnerProductSpace.Basic
-import Mathlib.Analysis.NormedSpace.Basic
-import Mathlib.Analysis.SpecialFunctions.Combinatorics
-import Mathlib.Analysis.SpecialFunctions.Harmonic
-import Mathlib.Data.Digit
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Nat.Gcd
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Rat.Default
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.NumberTheory.Prime
-import Mathlib.Probability.Basic
-import Mathlib.Real.Basic
-import Mathlib.SetTheory.Cardinal.Basic
-import Mathlib.Tactic
-import Mathlib.Topology.MetricSpace.Basic
-import Time
 
 namespace range_of_k_l122_122640
 

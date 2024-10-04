@@ -1,33 +1,4 @@
 import Mathlib
-import Mathlib.Algebra
-import Mathlib.Algebra.Combinatorics.Combination
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.GcdMonoid.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Nat.Combinatorics
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Nat.Gcd
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Nat.Primes
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Irrational
-import Mathlib.Data.Real.Monotone
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.NumberTheory.EuclideanDomain
-import Mathlib.Probability.Basic
-import Mathlib.Set
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Real
 
 namespace tan_frac_sum_eq_l346_346283
 

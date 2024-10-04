@@ -1,29 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.GCDMonoid.Basic
-import Mathlib.Algebra.Group.Definitions
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order.Field.Basic
-import Mathlib.Analysis.Complex.Basic
-import Mathlib.Analysis.Geometry.Ellipse
-import Mathlib.Analysis.SpecialFunctions.ExpLog.Basic
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Combinatorics
-import Mathlib.Data.Complex.Exponential
-import Mathlib.Data.Finset
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Matrix.Notation
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.Combinatorics.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Log
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Zmod.Basic
-import Mathlib.Logic.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Default
 
 namespace complement_union_in_universe_l774_774376
 

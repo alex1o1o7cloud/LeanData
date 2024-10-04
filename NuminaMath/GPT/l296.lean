@@ -1,31 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.Binomial
-import Mathlib.Algebra.Order.Basic
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Geometry.Euclidean.Space
-import Mathlib.Analysis.SpecialFunctions.Basic
-import Mathlib.Analysis.SpecialFunctions.ExpLog
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.GCD
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Combinatorics
-import Mathlib.Data.Nat.Factorial.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.GroupTheory.Perm.Basic
-import Mathlib.NumberTheory.PrimeDivisors
-import Mathlib.Probability.ProbabilityMassFunc
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Tactic
-import data.real.basic
-import function.basic
 
 namespace integral_evaluation_l296_296859
 

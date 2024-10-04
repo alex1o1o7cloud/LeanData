@@ -1,36 +1,4 @@
 import Mathlib
-import Mathlib.Algebra
-import Mathlib.Algebra.Group.FilterLimits
-import Mathlib.Algebra.GroupPower.Basic
-import Mathlib.Algebra.Order.AbsoluteValue
-import Mathlib.Algebra.Order.Field
-import Mathlib.Algebra.Parity
-import Mathlib.Algebra.Squarefree
-import Mathlib.Algebra.Trig.Refresh
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Convex.Basic
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Analysis.SpecialFunctions.Logarithm
-import Mathlib.Analysis.SpecialFunctions.Pow
-import Mathlib.Combinatorics.CombinatorialPrinciples
-import Mathlib.Combinatorics.SimpleGraph
-import Mathlib.Combinatorics.SimpleGraph.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Init.Function
-import Mathlib.ProbabilityTheory
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
-import data.real.basic
 
 namespace number_of_six_digit_palindromes_l202_202019
 

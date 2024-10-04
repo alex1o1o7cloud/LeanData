@@ -1,36 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.Field.Defs
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Polynomial
-import Mathlib.Analysis.Geometry
-import Mathlib.Analysis.SpecialFunctions.Pow.Real
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Nat.Digits
-import Mathlib.Data.Nat.Gcd.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Prob.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Init.Data.Nat.Basic
-import Mathlib.LinearAlgebra.Matrix
-import Mathlib.Logic.Basic
-import Mathlib.Probability.Basic
-import Mathlib.Probability.ProbSpace
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Topology.Algebra.Module
-import Mathlib.Topology.Basic
-import Real
 
 namespace lighthouse_coverage_l161_161546
 

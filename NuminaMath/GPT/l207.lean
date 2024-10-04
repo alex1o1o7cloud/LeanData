@@ -1,44 +1,4 @@
 import Mathlib
-import Mathlib.Algebra
-import Mathlib.Algebra.ArithmeticSequence
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Group.InjSurj
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Quadratic.Basic
-import Mathlib.Analysis.Calculus.Fderiv
-import Mathlib.Analysis.Limits
-import Mathlib.Analysis.SpecialFunctions.ExpLog
-import Mathlib.Analysis.SpecialFunctions.Integrals
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.Binomial
-import Mathlib.Combinatorics.Burnside
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Init.Algebra
-import Mathlib.LinearAlgebra.Matrix
-import Mathlib.MeasureTheory.MeasureSpace
-import Mathlib.Meta.Basic
-import Mathlib.Probability.Distribution
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.Sorry
-import Mathlib.Topology.MetricSpace.Basic
-import Mathlibimportant closed_roadsimportant (set1
-import mathlib.data.real.nnreal
 
 namespace projection_same_on_plane_l207_207600
 

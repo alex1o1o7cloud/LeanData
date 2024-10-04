@@ -1,28 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.ConicSections
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.SpecialFunctions.Combinatorics
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.Trigonometry
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.CombinatorialGame
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.List.Perm
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Combinatorics
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Tactic
-import data.real.basic
-import order.floor
 
 namespace count_3_digit_multiples_of_13_l683_683785
 

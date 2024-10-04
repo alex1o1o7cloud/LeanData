@@ -1,35 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Factorial
-import Mathlib.Algebra.Module.LinearMap
-import Mathlib.Algebra.Order.AbsoluteValue
-import Mathlib.Algebra.Polynomial
-import Mathlib.Analysis.Calculus.Angle
-import Mathlib.Analysis.Complex.Basic
-import Mathlib.Analysis.MeanInequalities
-import Mathlib.Analysis.NormedSpace.Basic
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometry
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Int.Mod
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Matrix.Notation
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Nat.Factors
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Card
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Planar
-import Mathlib.Probability.Basic
-import Mathlib.Probability.ConditionalProbability
-import Mathlib.Probability.Independence
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Tactic
 
 namespace max_f_value_l539_539559
 

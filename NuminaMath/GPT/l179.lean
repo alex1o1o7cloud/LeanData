@@ -1,29 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Parity
-import Mathlib.Algebra.Polynomial.Basic
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Combinatorics.Composition
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Complex.Exponential
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Polynomial
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Rat.Init
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Set.Finite
-import Mathlib.Probability.Independence
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Tactic
-import Mathlib.Topology.Basic
 
 namespace train_speeds_and_distance_l179_179669
 

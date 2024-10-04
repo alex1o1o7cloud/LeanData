@@ -1,36 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Arith.Fixed
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Power
-import Mathlib.Algebra.Group.WithOne
-import Mathlib.Algebra.Order.AbsoluteValue
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.TangentCone
-import Mathlib.Analysis.SpecialFunctions.ExpLog
-import Mathlib.Analysis.SpecialFunctions.Pow.Real
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Gcd
-import Mathlib.Data.Probability
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Hyperbolic
-import Mathlib.Data.Set.Finite
-import Mathlib.Geometry.Euclidean.FeuernachCircle
-import Mathlib.LinearAlgebra.Basic
-import Mathlib.Probability.ContinuousGaussian
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.LibrarySearch
-import Mathlib.Topology.Basic
 
 namespace num_terms_divisible_by_b_eq_gcd_l181_181678
 

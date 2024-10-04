@@ -1,32 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Algebra.Basic
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Group.Principalization
-import Mathlib.Algebra.Operations
-import Mathlib.Algebra.Order.Group
-import Mathlib.Algebra.Quadratic
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.Deriv.Basic
-import Mathlib.Analysis.Calculus.MeanValue
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Analysis.Trigonometry.Basic
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Int.Dvd.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Nat.Prime.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Sqrt
-import Mathlib.Data.Set.Basic
-import Mathlib.Tactic
-import Mathlib.Trigonometry.Basic
-import data.real.basic
 
 namespace smallest_n_l110_110063
 

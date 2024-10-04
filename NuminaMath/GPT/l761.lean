@@ -1,36 +1,4 @@
 import Mathlib
-import Mathlib.Algebra
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.GeomSum
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order.AbsoluteValue
-import Mathlib.Algebra.Parity
-import Mathlib.Algebra.Polynomial.Basic
-import Mathlib.Algebra.QuadraticDiscriminant
-import Mathlib.Algebra.Trig
-import Mathlib.Analysis.InnerProductSpace.Basic
-import Mathlib.Analysis.SpecialFunctions.Complex.Log
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Powerset
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.List.Sort
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Angle
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Logarithm
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Geometry.Euclidean.Sphere
-import Mathlib.MeasureTheory.ProbabilityTheory
-import Mathlib.NumberTheory.Padics.Valuation
-import Mathlib.Probability
-import Mathlib.Probability.ProbabilityBasics
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Tactic
 
 namespace prove_inequality_holds_equality_condition_l761_761859
 

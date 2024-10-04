@@ -1,34 +1,4 @@
 import Mathlib
-import Mathlib.
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.GeomMean
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order
-import Mathlib.Algebra.Trigonometry
-import Mathlib.Analysis.InnerProductSpace.Projection
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Polynomial
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Set.Finite
-import Mathlib.Geometry
-import Mathlib.Meta.Default
-import Mathlib.NumberTheory.Moduli.Basic
-import Mathlib.Probability
-import Mathlib.Set.Basic
-import Mathlib.SetTheory.Cardinal.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.NormNum
-import Mathlib.Topology.Continuity
 
 namespace count_integers_in_range_with_increasing_digits_l639_639406
 

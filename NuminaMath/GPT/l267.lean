@@ -1,32 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Geometry
-import Mathlib.Algebra.Group
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Definitions
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.SimpleGraph
-import Mathlib.Data.Fin.VecNotation
-import Mathlib.Data.FinBasic
-import Mathlib.Data.Finset
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Probability.ProbabilityMeasure
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.ConvexHull.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Probability.Conditional
-import Mathlib.Probability.Distribution.Normal
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Topology.Instances.Real
-import Mathlib.Topology.Trigonometric
-import Real
 
 namespace distance_between_stripes_l267_267123
 

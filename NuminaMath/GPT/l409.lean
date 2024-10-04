@@ -1,35 +1,4 @@
-import Mathbin.Data.Nat.Binomial
 import Mathlib
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Parity
-import Mathlib.Analysis.Calculus.ContDiff
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.Fderiv
-import Mathlib.Analysis.Calculus.Fderiv.Basic
-import Mathlib.Analysis.Calculus.Limits
-import Mathlib.Analysis.Calculus.Monotone
-import Mathlib.Analysis.Calculus.TangentCone
-import Mathlib.Analysis.SpecialFunctions.ExpLog
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Base
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Init.Data.Real.Basic
-import Mathlib.Logic.Basic
-import Mathlib.Probability.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
-import Mathlib.Topology.Basic
 
 namespace exist_two_lines_parallel_at_distance_l409_409803
 

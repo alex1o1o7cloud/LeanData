@@ -1,31 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.GcdLcm.Basic
-import Mathlib.Algebra.GcdMonoid.Basic
-import Mathlib.Algebra.GroupPower
-import Mathlib.Algebra.Order
-import Mathlib.Algebra.Order.Field
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Data.Complex.Exponential
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.ModEq
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Finite
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.LinearAlgebra.FinVecttors
-import Mathlib.Probability
-import Mathlib.Probability.Basic
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
 
 namespace four_divides_sum_of_squares_iff_even_l361_361873
 

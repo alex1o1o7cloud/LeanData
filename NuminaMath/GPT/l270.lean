@@ -1,34 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Floor
-import Mathlib.Algebra.GCDMonoid.Basic
-import Mathlib.Algebra.GeomSum
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Algebra.Slope
-import Mathlib.Analysis.Polynomial
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.SimpleGraph.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Combinatorial
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Rat.Defs
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Sqrt
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.LinearAlgebra.AffineSpace
-import Mathlib.NumberTheory.Basic
-import Mathlib.Probability
-import Mathlib.Probability.Independent
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Linarith
-import Mathlib.Topology.Instances.Real
-import Mathlib.Topology.MetricSpace.Basic
 
 namespace find_m_when_f_odd_l270_270928
 

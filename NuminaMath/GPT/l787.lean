@@ -1,41 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.GcdMonoid.Basic
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.GroupPower
-import Mathlib.Algebra.GroupPower.Basic
-import Mathlib.Algebra.Order
-import Mathlib.Algebra.Order.AbsoluteValue
-import Mathlib.Algebra.Polynomial
-import Mathlib.Algebra.Polynomial.Basic
-import Mathlib.Algebra.Vector
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.ParametricIntegrals
-import Mathlib.Analysis.Geometry.Area
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Complex
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Graph
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.GCD
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.InnerProductSpace.Basic
-import Mathlib.Data.Real.Vectors.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.NumberTheory.Prime
-import Mathlib.Probability.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlibimportant_set Gimportant_set G
 
 namespace cos_gamma_prime_l787_787355
 

@@ -1,26 +1,4 @@
 import Mathlib
-import Mathlib.Algebra
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Analysis.Geometry
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Analysis.SpecialFunctions.Polynomials
-import Mathlib.Combinatorics
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.SimpleGraph.Tree
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Perm
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Circumcenter
-import Mathlib.LinearAlgebra.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Linarith
-import Mathlib.Topology.MetricSpace.Basic
-import Real
-import analysis.special_functions.trigonometric
-import data.real.basic
 
 namespace perpendicular_planes_l203_203155
 -- Importing the necessary library

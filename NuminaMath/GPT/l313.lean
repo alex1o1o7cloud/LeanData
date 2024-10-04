@@ -1,35 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Algebra.Basic
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.Exponential
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Polynomial
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.TangentCone
-import Mathlib.Analysis.SpecialFunctions.Polynomials
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Triangle.Basic
-import Mathlib.Init.Data.Int.Basic
-import Mathlib.NumberTheory.Phi
-import Mathlib.NumberTheory.Powers
-import Mathlib.NumberTheory.Prime
-import Mathlib.Probability.Basic
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.LibrarySearch
-import Mathlib.Tactic.Linarith
 
 namespace sum_of_s_l313_313008
 

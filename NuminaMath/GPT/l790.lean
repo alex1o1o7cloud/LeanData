@@ -1,26 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Arithmetic
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Functional
-import Mathlib.Algebra.Log
-import Mathlib.Analysis.LinearAlgebra.InnerProduct
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.SimpleGraph
-import Mathlib.Data.Finset
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Polygon.Basic
-import Mathlib.Init.Function
-import Mathlib.Logic.Basic
-import Mathlib.MeasureTheory.Integral.SetIntegral
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import data.rat.basic
-import data.set.basic
 
 namespace impossible_partition_12x12_into_L_shapes_l790_790132
 

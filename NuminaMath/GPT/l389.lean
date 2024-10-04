@@ -1,36 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.AbsoluteValue
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.Field.Defs
-import Mathlib.Algebra.GcdMonoid.Basic
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Analysis.Calculus.Fderiv.Basic
-import Mathlib.Analysis.SpecialFunctions.Abs
-import Mathlib.Analysis.Special_Functions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Int.Mod
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Sqrt
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Zmod.Basic
-import Mathlib.Geometry
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Geometry.Euclidean.CircumscribedCircle
-import Mathlib.MeasureTheory.Integral.IntervalIntegral
-import Mathlib.NumberTheory.ArithmeticFunction
-import Mathlib.NumberTheory.Basic
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
 
 namespace price_of_second_tea_l389_389033
 

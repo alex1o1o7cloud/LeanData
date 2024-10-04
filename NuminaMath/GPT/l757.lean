@@ -1,31 +1,4 @@
 import Mathlib
-import Mathlib.Algebra
-import Mathlib.Algebra.ContinuedFractions.Computation
-import Mathlib.Algebra.GCDMonoid.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Analysis.Calculus.Deriv.Basic
-import Mathlib.Analysis.Calculus.LocalExtr
-import Mathlib.Analysis.MeanInequalities
-import Mathlib.Analysis.SpecialFunctions.Integrals
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Combinatorics.CombinatorialBasics
-import Mathlib.Combinatorics.Finset
-import Mathlib.Data.Finset
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Combinatorics
-import Mathlib.Data.Nat.Combinatorics.Basic
-import Mathlib.Data.Polynomial.Basic
-import Mathlib.Data.Rat
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Init.Algebra.Order
-import Mathlib.Logic.Basic
-import Mathlib.NumberTheory.Probability.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
-import Mathlib.Topology.ContinuousFunction.Basic
 
 namespace square_free_odd_integers_count_l757_757658
 

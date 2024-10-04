@@ -1,31 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.LinearEquiv
-import Mathlib.Algebra.Order.Floor
-import Mathlib.Algebra.Order.SpecificGroups
-import Mathlib.Algebra.Quadratic.Discriminant
-import Mathlib.Algebra.VectorGeometry
-import Mathlib.Analysis.Limits.Basic
-import Mathlib.Combinatorics
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.Pigeonhole
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Probability.ProbabilityMassFunction
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Sqrt
-import Mathlib.Data.Set
-import Mathlib.Data.Set.Finite
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.MeasureTheory.MeasurableSpace
-import Mathlib.MeasureTheory.ProbabilityTheory
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
 
 namespace NiE_parallel_AD_l729_729184
 

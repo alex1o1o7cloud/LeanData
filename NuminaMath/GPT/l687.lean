@@ -1,28 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.GeomSum
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Quadratic.Equations
-import Mathlib.Algebra.Vector
-import Mathlib.Analysis.Calculus.LocalExtr
-import Mathlib.Analysis.Calculus.TangentCone
-import Mathlib.Analysis.Geometry.Size.InnerProduct
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Nat.Fib
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Polynomial.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Geometry.Euclidean
-import Mathlib.Probability
-import Mathlib.Probability.Basic
-import Mathlib.Tactic
-import Std.Tactic.Lint.Basic
 
 namespace minimum_distance_between_points_l687_687852
 

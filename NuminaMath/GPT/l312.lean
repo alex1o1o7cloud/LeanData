@@ -1,37 +1,4 @@
 import Mathlib
-import Mathlib.Algebra
-import Mathlib.Algebra.Basic
-import Mathlib.Algebra.Binomial
-import Mathlib.Algebra.Complex.Basic
-import Mathlib.Algebra.GeomSeries
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.InfiniteSum
-import Mathlib.Algebra.Ring
-import Mathlib.Analysis.Geometry.conicsections
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Data.Angle.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Permutation
-import Mathlib.Data.Prime
-import Mathlib.Data.Rat
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Pi
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.MeasureTheory.Probability
-import Mathlib.Probability
-import Mathlib.Probability.Basic
-import Mathlib.Series
-import Mathlib.Trigonometry.Basic
 
 namespace jane_ate_twelve_pieces_l312_312878
 

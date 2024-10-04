@@ -1,34 +1,4 @@
-import Complex
 import Mathlib
-import Mathlib.Algebra.BigOperators
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.IntermediateValue
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.SimpleGraph.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Factorial.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Sqrt
-import Mathlib.Data.Set.Basic
-import Mathlib.MeasureTheory.ProbabilityTheory
-import Mathlib.Order.Floor
-import Mathlib.Probability.Basic
-import Mathlib.Probability.Independent
-import Mathlib.Probability.Notation
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Topology.Basic
 
 namespace symmetric_intersections_l323_323423
 

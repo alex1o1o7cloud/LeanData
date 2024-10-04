@@ -1,30 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Arithmetic
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.VectorSpace
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Combinatorics
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Int.Modulo
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Seq.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.Probability.Basic
-import Mathlib.Tactic.Basic
-import Real
 
 namespace cos_identity_l16_16554
 

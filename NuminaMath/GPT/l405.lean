@@ -1,32 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.EuclideanDomain
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order.Field.Basic
-import Mathlib.Analysis.Calculus.Geometry
-import Mathlib.Analysis.Calculus.Quadrant
-import Mathlib.Analysis.Convex.Parallelogram
-import Mathlib.Analysis.Convex.Simplical
-import Mathlib.Analysis.SpecialFunctions.Pow.Real
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Combinatorics.Probability
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Fintype
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Combinatorics
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Rat.Defs
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Probability.Basic
-import Mathlib.Probability.RandomVariable
-import Mathlib.Tactic
-import Mathlib.Topology.MetricSpace.Basic
-import Mathlib.Topology.Real
 
 namespace maximum_rectangle_area_l405_405806
 

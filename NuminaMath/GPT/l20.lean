@@ -1,30 +1,4 @@
 import Mathlib
-import Mathlib.Algebra
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Real.Basic
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.SpecialFunctions.Exp
-import Mathlib.Data.Complex.Exponential
-import Mathlib.Data.Complex.Module
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Finset.Card
-import Mathlib.Data.List.Basic
-import Mathlib.Data.List.Sort
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Polynomial.Degree
-import Mathlib.Data.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.MeasureTheory.Integral.Basic
-import Mathlib.Probability.Basic
-import Mathlib.Statistics.LinearRegression
-import Mathlib.Statistics.Variance
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
-import Mathlib.Topology.Basic
-import data.real.basic
-import tactic
 
 namespace log_eq_six_implies_x_sixteen_l20_20135
 

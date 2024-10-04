@@ -1,37 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Arithmetic
-import Mathlib.Algebra.Basic
-import Mathlib.Algebra.BigOperators.Finprod
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.GroupPower.Basic
-import Mathlib.Algebra.Order.Field
-import Mathlib.Algebra.Quadratic
-import Mathlib.Analysis.Calculus.Contin.CompareIntermediate
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.SpecialFunctions.ExpLog
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Analysis.SpecialFunctions.Pow
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Complex
-import Mathlib.Analysis.Trigonometry.Inverse
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Finset.Card
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.List.Perm
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.GCD.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Probability
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.NumberTheory.Digits
-import Mathlib.Probability.Basic
-import Mathlib.Probability.Process.Conditional
 
 namespace fewer_seats_on_right_than_left_l160_160365
 

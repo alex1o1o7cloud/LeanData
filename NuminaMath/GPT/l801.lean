@@ -1,31 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Binomial
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Analysis.Calculus.Sqrt
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.Composition
-import Mathlib.Combinatorics.SimpleGraph.Basic
-import Mathlib.Data.Finite.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Finset.Card
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Perm
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.NumberTheory.ModularArithmetic.Basic
-import Mathlib.Probability.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.SolveByElim
 
 namespace triangle_inequality_l801_801885
 

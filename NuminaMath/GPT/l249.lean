@@ -1,25 +1,4 @@
-import Data.List.Perm
 import Mathlib
-import Mathlib.Algebra.ContinuedFractions.Translations
-import Mathlib.Algebra.Factorial
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.GroupPower.Order
-import Mathlib.Analysis.InnerProductSpace.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Combinatorics.Probabilities
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Mod
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Triangle
-import Mathlib.LinearAlgebra.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
 
 namespace equal_area_bisecting_line_slope_l249_249327
 

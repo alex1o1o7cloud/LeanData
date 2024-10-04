@@ -1,37 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.Fraction
-import Mathlib.Algebra.GeomSum
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order.Field
-import Mathlib.Analysis.SpecialFunctions.ExpLog
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.SimpleGraph
-import Mathlib.Combinatorics.SimpleGraph.Basic
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Matrix.Notation
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Combinatorics
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Geometry.Euclidean.Circumcircle
-import Mathlib.NumberTheory.Basic
-import Mathlib.Probability.Theory
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
-import Mathlib.Topology.Algebra.GraphTheory
-import Real.Basic
-import algebra.quadratic_discriminant
 
 namespace intersection_A_B_l753_753661
 

@@ -1,31 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.GCD.Basic
-import Mathlib.Algebra.Module.LinearMap
-import Mathlib.Algebra.Perm.Basic
-import Mathlib.Algebra.Polynomial.Basic
-import Mathlib.Analysis.Calculus.SpecificFunctions
-import Mathlib.Analysis.Complex.Basic
-import Mathlib.Analysis.SpecialFunctions.Logarithm
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.List.Digits
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Prob.Basic
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.NumberTheory.EuclideanDomain
-import Mathlib.Probability.Basic
-import Mathlib.Probability.Conditional
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
 
 namespace triangle_area_l589_589170
 

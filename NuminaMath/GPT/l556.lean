@@ -1,37 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.Floor
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Sequences
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.Fderiv
-import Mathlib.Analysis.Calculus.Integral
-import Mathlib.Analysis.Convex.Cone.Basic
-import Mathlib.Analysis.Geometry
-import Mathlib.Analysis.Probability.Geometry
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.SimpleGraph
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Fintype.Card
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Pnat.Basic
-import Mathlib.Data.Probability.ProbabilitySpace
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.LinearAlgebra.CrossProduct
-import Mathlib.LinearAlgebra.Matrix
-import Mathlib.Probability
-import Mathlib.Probability.Basic
-import Mathlib.Probability.ProbabilityMeasure
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
-import Mathlib.Topology.MetricSpace.Basic
 
 namespace equilateral_triangles_area_l556_556150
 

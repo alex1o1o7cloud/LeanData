@@ -1,34 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Complex.Basic
-import Mathlib.Analysis.SpecialFunctions.Exp
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Permutation
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Digits
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Polynomial.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set
-import Mathlib.Data.Set.Basic
-import Mathlib.Init.Data.Int.Basic
-import Mathlib.Init.Data.Real.Basic
-import Mathlib.LinearAlgebra.AffineSpace.Basic
-import Mathlib.Nat.Basic
-import Mathlib.NumberTheory.Lcm
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Linarith
-import Mathlib.Topology.Algebra.Order
-import Mathlib.Topology.Basic
-import Mathlib.Topology.Instances.Real
 
 namespace range_of_m_l37_37097
 

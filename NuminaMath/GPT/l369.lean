@@ -1,36 +1,4 @@
-import Data.Finset.Basic
-import Data.Nat.Prime
 import Mathlib
-import Mathlib.Algebra.GeomSum
-import Mathlib.Algebra.Order
-import Mathlib.Algebra.Polynomial.Basic
-import Mathlib.Algebra.Probability
-import Mathlib.Algebra.QuadraticDiscriminant
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.Inverse
-import Mathlib.Analysis.Calculus.Polynomials
-import Mathlib.Analysis.SpecificLimits
-import Mathlib.Calculus.Deriv.Basic
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Digits
-import Mathlib.Data.Nat.GCD
-import Mathlib.Data.Probability.ProbabilityTheory
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Sqrt
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Zmod.Basic
-import Mathlib.Init.Data.Int.Basic
-import Mathlib.NumberTheory.LegendreSymbol.Rhizical
-import Mathlib.Set.Basic
-import Mathlib.Tactic
 
 namespace count_ordered_triples_l369_369091
 

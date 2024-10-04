@@ -1,32 +1,4 @@
-import Algebra.Field.Basic
-import Analysis.SpecialFunctions.Trigonometric
-import Geometry.Euclidean.Triangle
 import Mathlib
-import Mathlib.Algebra.GcdMonoid.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.QuadraticDiscriminant
-import Mathlib.Analysis.SpecialFunctions.Exp
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Complex
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Multiset.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Polynomial.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Rat.Init
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.LinearAlgebra.EuclideanSpace
-import Mathlib.Probability
-import Mathlib.Tactic
-import Mathlib.Tactic.Suggest
-import Mathlib.Topology.Instances.Real
-import Real
 
 namespace closest_integer_to_cube_root_of_250_l45_45494
 

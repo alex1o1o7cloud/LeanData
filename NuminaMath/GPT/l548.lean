@@ -1,36 +1,4 @@
-import Data.Real.Basic
 import Mathlib
-import Mathlib.Algebra
-import Mathlib.Algebra.Basic
-import Mathlib.Algebra.Complex
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Group.OrderSynonym
-import Mathlib.Algebra.Order
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.Fderiv.Basic
-import Mathlib.Analysis.SpecialFunctions.ExpLog
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.SimpleGraph.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.ExpLog
-import Mathlib.Data.Set.Basic
-import Mathlib.Logic.Basic
-import Mathlib.MeasureTheory.ProbabilityTheory
-import Mathlib.Probability
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Topology.Basic
 
 namespace optionC_has_min_4_l548_548006
 

@@ -1,30 +1,4 @@
 import Mathlib
-import Mathlib.*
-import Mathlib.Algebra.BigOperators
-import Mathlib.Analysis.Complex.Trigonometry
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Permutation
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Digits
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Face
-import Mathlib.Geometry.Tetrahedron
-import Mathlib.Geometry.Triangle
-import Mathlib.NumberTheory.Basic
-import Mathlib.NumberTheory.GCD
-import Mathlib.NumberTheory.ModularArithmetic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.LibrarySearch
-import Mathlib.Tactic.Linarith
-import Real
-import Real.Basic
 
 namespace min_students_in_class_l0_747
 

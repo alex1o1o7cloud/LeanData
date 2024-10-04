@@ -1,35 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators.Ring
-import Mathlib.Algebra.ModBasic
-import Mathlib.Algebra.Quadratic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.CombinatorialLemmas
-import Mathlib.Combinatorics.GraphTheory
-import Mathlib.Combinatorics.SetLemma
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Digits
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Prob.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Set.Finite
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Geometry.Euclidean.Circumcenter
-import Mathlib.Geometry.Euclidean.Circumcircle
-import Mathlib.Probability
-import Mathlib.ProbabilityTheory.MeasurableSpace
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Linarith
-import data.finset
-import data.fintype.basic
-import data.real.basic
-import tactic
 
 namespace solve_for_a_l155_155025
 

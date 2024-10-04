@@ -1,37 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Binomial
-import Mathlib.Algebra.GeomSum
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.TimesContDiff
-import Mathlib.Analysis.Convex.Basic
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Mod
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Combinations
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Sequence
-import Mathlib.Data.Set
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Set.Finite
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.GroupTheory.Perm.Basic
-import Mathlib.Logic.Basic
-import Mathlib.Probability
-import Mathlib.Probability.Basic
-import Mathlib.Real.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.SolveByElim
 
 namespace expected_flips_is_610_l609_609629
 

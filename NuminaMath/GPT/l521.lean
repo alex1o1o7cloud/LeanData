@@ -1,34 +1,4 @@
-import Lean
 import Mathlib
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.BigOperators.Finprod
-import Mathlib.Algebra.GeomSum
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Order
-import Mathlib.Data.Nat.Parity
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Probability.Basic
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Tactic
-import Mathlib.Tactic.LibrarySearch
-import Mathlib.Tactic.SimpRw
-import Mathlib.Topology.Basic
-import Real
-import Trigonometry
-import set_theory
 
 namespace canvas_bag_lower_carbon_solution_l521_521930
 

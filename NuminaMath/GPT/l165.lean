@@ -1,33 +1,4 @@
 import Mathlib
-import Mathlib.Algebra
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Polynomial.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.GCD
-import Mathlib.Data.Prob.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Sequence.Basic
-import Mathlib.LinearAlgebra.Adjugate
-import Mathlib.MeasureTheory.ProbabilityTheory
-import Mathlib.Probability.Distributions
-import Mathlib.ProbabilityTheory.Independence
-import Mathlib.Tactic
-import Probability.ProbabilityTheory
-import Real
-import algebra.big_operators.basic
-import data.nat.basic
-import data.real.basic
 
 namespace trajectory_equation_no_such_point_l165_165481
 

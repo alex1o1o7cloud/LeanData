@@ -1,35 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Arithmetic
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.GeomSum
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order
-import Mathlib.Algebra.Order.AbsoluteValue
-import Mathlib.Algebra.Parity
-import Mathlib.Analysis.SpecialFunctions.Basic
-import Mathlib.Analysis.SpecialFunctions.Integrals
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.Trigonometry.Basic
-import Mathlib.Combinatorics.Perm
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Finset.Card
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Prob.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Logic.Basic
-import Mathlib.MeasureTheory.Integral.Bochner
-import Mathlib.MeasureTheory.ProbabilityMassFunction
-import Mathlib.Probability
-import Mathlib.Probability.Basic
-import Mathlib.Probability.Independence
-import Mathlib.Probability.Integration
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
 
 namespace measure_angle_ABF_of_regular_octagon_l125_125220
 

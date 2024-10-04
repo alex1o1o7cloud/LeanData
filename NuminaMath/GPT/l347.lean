@@ -1,23 +1,4 @@
-import Lean
 import Mathlib
-import Mathlib.Algebra.EuclideanDomain
-import Mathlib.Algebra.Factorial
-import Mathlib.Algebra.Ring
-import Mathlib.Analysis.SpecialFunctions.ExpLog
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.SimpleGraph.HowManyTriangles
-import Mathlib.Complex.Basic
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Probability.Basic
 
 namespace ways_to_place_balls_in_boxes_l347_347500
 

@@ -1,36 +1,4 @@
 import Mathlib
-import Mathlib.Algebra
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Functional.Iterate
-import Mathlib.Algebra.GeomSum
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Analysis.Calculus.Basic
-import Mathlib.Analysis.InnerProductSpace.Basic
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.List.Sort
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Digits
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Log
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Logic.Basic
-import Mathlib.NumberTheory.ArithmeticFunction
-import Mathlib.NumberTheory.Divisors
-import Mathlib.NumberTheory.EuclideanDomain
-import Mathlib.Probability.Statistics
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Linarith
 
 namespace min_positive_period_and_intervals_mono_increase_cos_2x0_value_l147_147748
 

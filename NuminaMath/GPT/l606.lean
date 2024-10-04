@@ -1,34 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Group.Definitions
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.Perm
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.List.Perm
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Polynomial
-import Mathlib.Data.Probability
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Zmod.Basic
-import Mathlib.Geometry.Euclidean
-import Mathlib.Logic.Basic
-import Mathlib.NumberTheory.Basic
-import Mathlib.NumberTheory.Complex
-import Mathlib.NumberTheory.Prime
-import Mathlib.Probability.Basic
-import Mathlib.ProbabilityTheory.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.Ring
-import Mathlib.Tactic.SolveByElim
-import Mathlib.Topology
 
 namespace cory_can_eat_fruits_in_105_ways_l606_606048
 

@@ -1,37 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.Parabola
-import Mathlib.Algebra.Polynomial
-import Mathlib.Algebra.QuadraticDiscriminant
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Geometry
-import Mathlib.Analysis.Probability.Distribution.BinomialMLE
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.CompleteGraph
-import Mathlib.Combinatorics.SimpleGraph
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Finset.Card
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.ArithSum
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Prob.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Circumcenter
-import Mathlib.NumberTheory.Padics
-import Mathlib.Probability.Distribution
-import Mathlib.Probability.Independence
-import Mathlib.Probability.Notation
-import Mathlib.Probability.Theory
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.SolveByElim
 
 namespace wood_burned_afternoon_l258_258820
 

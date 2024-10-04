@@ -1,24 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Digits
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Nat.GCD
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Time.Calendar
-import Mathlib.SetTheory.Cardinal
-import Mathlib.Tactic
-import Real
 
 namespace sum_max_min_l146_146433
 

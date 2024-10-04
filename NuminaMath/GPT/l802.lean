@@ -1,36 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.CubicDiscriminant
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Analysis.InnerProductSpace.Basic
-import Mathlib.Analysis.Real
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Graph.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Matrix.Notation
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Factorization
-import Mathlib.Data.Nat.Fibonacci
-import Mathlib.Data.Nat.Parity
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Polynomial.Basic
-import Mathlib.Data.Rat
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Circle.Basic
-import Mathlib.Geometry.Circle.Tangent
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Geometry.Trigonometry
-import Mathlib.NumberTheory.ModularArithmetic
-import Mathlib.Probability.Basic
-import Mathlib.Tactic
-import ProbabilityTheory
 
 namespace value_of_a_l802_802287
 

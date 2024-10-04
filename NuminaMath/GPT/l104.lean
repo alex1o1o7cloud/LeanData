@@ -1,38 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Binomial
-import Mathlib.Algebra.Floor
-import Mathlib.Algebra.GeoSeries
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Module.Proj2
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.MeanValue
-import Mathlib.Analysis.NormedSpace.Basic
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.SimpleGraph
-import Mathlib.Data.Finset
-import Mathlib.Data.List.Perm
-import Mathlib.Data.Matrix.Notation
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Power
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Polynomial.Basic
-import Mathlib.Data.Probability
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Basic--
-import Mathlib.Data.Set.Basic
-import Mathlib.Init.Data.Int.Basic
-import Mathlib.Logic.Basic
-import Mathlib.MeasureTheory.MeasurableSpace
-import Mathlib.MeasureTheory.Measure.Counting
-import Mathlib.MeasureTheory.Measure.Lebesgue
-import Mathlib.Probability.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Linarith
-import Mathlibimport_tax_paid V
 
 namespace zeros_at_end_of_100_factorial_l104_104562
 

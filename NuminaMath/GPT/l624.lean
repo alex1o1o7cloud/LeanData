@@ -1,33 +1,4 @@
-import Complex
 import Mathlib
-import Mathlib.Algebra.Arithmetic
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order.Floor
-import Mathlib.Algebra.Quadratic.Discriminant
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.SimpleGraph.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Finset.Comb
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Gcd
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.List.Basic
-import Mathlib.Probability.Basic
-import Mathlib.Probability.ProbabilityMassFunction.Finite
-import Mathlib.SetTheory.Set.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.CaseSimp
-import Mathlib.Topology.Basic
-import Real
-import data.set.basic
 
 namespace gcd_5280_12155_l624_624111
 

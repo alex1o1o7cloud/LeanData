@@ -1,31 +1,4 @@
-import MathLib.Trigonometry.Basic
 import Mathlib
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.GeomSum
-import Mathlib.Algebra.LinearAlgebra.Determinant
-import Mathlib.Algebra.Module.Pi
-import Mathlib.Algebra.Parity
-import Mathlib.Algebra.Quadratic
-import Mathlib.Analysis.Convex.Basic
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.Special_Functions.Trigonometric
-import Mathlib.Data.Complex.Exponential
-import Mathlib.Data.Fin.Fin2
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Divisors
-import Mathlib.Data.Nat.Gcd
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Logic.Basic
-import Mathlib.Statistics
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Linarith
 
 namespace problem_solution_l199_199579
 

@@ -1,27 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Field.Defs
-import Mathlib.Algebra.Functional
-import Mathlib.Algebra.Real
-import Mathlib.Analysis.NormedSpace.Basic
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Lcm
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.GraphTheory.Connected
-import Mathlib.GraphTheory.Euler
-import Mathlib.LinearAlgebra.Matrix
-import Mathlib.Probability.Basic
-import Mathlib.Probability.Expectation
-import Mathlib.Tactic
-import Mathlib.Trigonometry.Sine
-import analysis.special_functions.integrals
 
 namespace possible_values_of_k_l636_636559
 

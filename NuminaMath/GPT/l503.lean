@@ -1,34 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Arithmetic
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.GeomSum
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.GroupPower
-import Mathlib.Algebra.GroupPower.Order
-import Mathlib.Algebra.Logarithm
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Order
-import Mathlib.Analysis.Analytic.Basic
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.TangentSecant
-import Mathlib.Analysis.SpecialFunctions.ExpLog
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.SimpleGraph.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Gcd
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.NumberTheory.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.Ring
-import data.finset
-import data.real.basic
 
 namespace determine_p_l503_503179
 

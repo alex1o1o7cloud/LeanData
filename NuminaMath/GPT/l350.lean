@@ -1,32 +1,4 @@
-import Data.Rat.Basic
 import Mathlib
-import Mathlib.Algebra.Combinations
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Group.Perm
-import Mathlib.Algebra.Group.Powers
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.InnerProductSpace.Basic
-import Mathlib.Analysis.SpecificLimits.Basic
-import Mathlib.Analysis.Trigonometry.Inverse
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.Domino
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Polynomial
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Sqrt
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.NumberTheory.BasicPrime
-import Mathlib.RingTheory.RingHom
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Topology.Algebra.Linear
 
 namespace sum_of_coefficients_l350_350120
 

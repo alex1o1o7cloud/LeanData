@@ -1,36 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.Exponential
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.FiniteModule.Basic
-import Mathlib.Algebra.GeomSum
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Polynomial.Basic
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Integral.Basic
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.CombinatorialAids
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Coe.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Polynomial
-import Mathlib.Data.ProbTheory.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Sqrt
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.NumberTheory.LegendreSymbol.QuadraticReciprocity
-import Mathlib.Probability
-import Mathlib.Probability.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
-import Mathlib.Topology.Basic
-import Real
 
 namespace inscribed_polygon_side_length_ratio_l732_732815
 

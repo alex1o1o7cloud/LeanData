@@ -1,33 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.Combinatorics.Basic
-import Mathlib.Algebra.Field.Defs
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.QuadraticDiscriminant
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.FDeriv.Basic
-import Mathlib.Analysis.Calculus.SpecificFunctions
-import Mathlib.Analysis.Probability.ProbabilityMeasure
-import Mathlib.Analysis.SpecialFunctions.Pow
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Complex
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Fib
-import Mathlib.Data.Polynomial
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.GroupTheory.Subgroup.Basic
-import Mathlib.Probability.MassFunction
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Real
 
 namespace final_result_l342_342575
 

@@ -1,25 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.Group.Definitions
-import Mathlib.Algebra.Order.Arithmetic
-import Mathlib.Algebra.QuadraticEquation
-import Mathlib.Analysis.SpecialFunctions.ExpLog
-import Mathlib.Analysis.SpecialFunctions.Trigonometry
-import Mathlib.Data.Fin
-import Mathlib.Data.Finset
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Fib
-import Mathlib.Data.Nat.ModEq
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Floor
-import Mathlib.Data.Real.Basic
-import Mathlib.NumberTheory.Floor
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Topology.Algebra.InfiniteSum
-import data.nat.parity
-import data.real.basic
 
 namespace tan_45_eq_one_l99_99638
 

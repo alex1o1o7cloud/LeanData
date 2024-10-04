@@ -1,35 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Arithmetic
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.Divisibility
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.Group
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics
-import Mathlib.Combinatorics.Combinations
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Finset.Card
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Probability.MassFunction
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Angle
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Circle.Basic
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.Logic.Basic
-import Mathlib.Probability.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.NonlinearArith
-import Mathlib.Topology.Algebra.Parabola
-import Mathlib.Topology.Basic
-import Mathlib.Trigonometry.Cosine
-import Real
 
 namespace spinner_even_product_probability_l450_450452
 

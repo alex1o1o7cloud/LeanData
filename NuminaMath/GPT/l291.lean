@@ -1,36 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.ArithmeticMean
-import Mathlib.Algebra.CubicDiscriminant
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Order.Ring
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.NormedSpace.Basic
-import Mathlib.Analysis.SpecialFunctions.Pow
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.CombinatorialStirling
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Polynomial
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Zmod.Basic
-import Mathlib.Init.Data.Int.Basic
-import Mathlib.Prob.Basic
-import Mathlib.Probability.Independence
-import Mathlib.Set.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.LinearCombination
-import Mathlib.Tactic.Pigeonhole
-import Mathlib.Utils.UnsafeCast
 
 namespace area_of_triangle_is_168_l291_291491
 

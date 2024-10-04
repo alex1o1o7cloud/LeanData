@@ -1,33 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.GroupPower
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.Slope
-import Mathlib.Analysis.Calculus.Taylor
-import Mathlib.Analysis.Geometry
-import Mathlib.Analysis.Geometry.Trangle
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Data.Factorial.Basic
-import Mathlib.Data.Fin.Perm
-import Mathlib.Data.Finset
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Gcd
-import Mathlib.Data.Nat.PrimeFactors
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.NumberTheory.ArithmeticFunction
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Topology.ContinuousFunction.Basic
-import data.nat.basic
 
 namespace tan_phi_proof_l534_534420
 

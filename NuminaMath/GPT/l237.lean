@@ -1,31 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Arithmetic
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.Combinatorics.Perm
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order.AbsoluteValue
-import Mathlib.Algebra.Polynomial.Basic
-import Mathlib.Algebra.QuadraticDiscriminant
-import Mathlib.Algebra.Trigonometry.CosineRule
-import Mathlib.Analysis.Calculus.LocalExtr
-import Mathlib.Analysis.Convex.Function
-import Mathlib.Analysis.Differentiation.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Equiv.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Trig
-import Mathlib.Geometry.Euclidean.Circumcenter
-import Mathlib.Geometry.Euclidean.Orthocenter
-import Mathlib.MeasureTheory.ProbabilityMassFunctions
-import Mathlib.Probability.IdentDistrib
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
 
 namespace height_increase_each_year_l237_237327
 

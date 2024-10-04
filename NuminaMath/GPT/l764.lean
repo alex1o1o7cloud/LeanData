@@ -1,36 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Factorial
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Geometry
-import Mathlib.Analysis.InnerProductSpace.Basic
-import Mathlib.Analysis.Mean_Inequalities
-import Mathlib.Analysis.SpecialFunctions.Polynomials
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.List.Sort
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Gcd.Basic
-import Mathlib.Data.Nat.Log
-import Mathlib.Data.Polynomial.Basic
-import Mathlib.Data.Probability
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.FieldTheory.PolynomialAlgebra
-import Mathlib.Geometry
-import Mathlib.Logic.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import data.set.finite
 
 namespace inverse_four_times_l764_764845
 

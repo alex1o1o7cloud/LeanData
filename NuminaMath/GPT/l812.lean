@@ -1,37 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Basic
-import Mathlib.Algebra.GCDMonoid.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Polynomial
-import Mathlib.Algebra.QuadraticDiscriminant
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.Fderiv
-import Mathlib.Analysis.SpecialFunctions.Zeta
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.List.Perm
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Combinatorics
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Polynomial.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Init.Data.Nat.Basic
-import Mathlib.Init.Function
-import Mathlib.NumberTheory.PAdicValuation
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Linarith
-import Mathlib.Topology.Basic
-import Real
 
 namespace principal_calculation_l812_812991
 

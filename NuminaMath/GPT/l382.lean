@@ -1,36 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Arithmetic.Basic
-import Mathlib.Algebra.CharZero.Quotient
-import Mathlib.Algebra.Divisibility
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Geometric.Basic
-import Mathlib.Algebra.Order
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Trigonometry
-import Mathlib.Analysis.Trigonometry.Basic
-import Mathlib.Combinatorics.Finset
-import Mathlib.Combinatorics.SimpleGraph
-import Mathlib.Combinatorics.SimpleGraph.Matching
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Matrix.Notation
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Probability.Probability
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.MeasureTheory.Function.LpSpace
-import Mathlib.MeasureTheory.Integral.SetIntegral
-import Mathlib.Probability.ConditionalProbability
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Linarith
 
 namespace B_is_quadratic_l382_382105
 

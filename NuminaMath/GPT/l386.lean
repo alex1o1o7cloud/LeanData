@@ -1,34 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Divisibility
-import Mathlib.Algebra.GeomSum
-import Mathlib.Algebra.Lcm
-import Mathlib.Algebra.Polynomial
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Algebra.Trigonometry
-import Mathlib.Analysis.Calculus.Deriv.Basic
-import Mathlib.Analysis.Calculus.Limits
-import Mathlib.Analysis.Geometry.Ellipsoid
-import Mathlib.Analysis.Integral
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.SimpleGraph.Connectivity
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Gcd.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Polynomial.Basic
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Set.Interval
-import Mathlib.NumberTheory.Basic
-import Mathlib.Probability.Independence
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Real
 
 namespace rooks_symmetric_arrangement_l386_386019
 

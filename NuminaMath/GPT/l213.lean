@@ -1,34 +1,4 @@
-import Analysis.SpecialFunctions.ExpLog
 import Mathlib
-import Mathlib.Algebra.Basic
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.Polynomial
-import Mathlib.Algebra.Polynomial.Basic
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Analysis.Calculus.Deriv.Basic
-import Mathlib.Analysis.Calculus.SpecificFunctions
-import Mathlib.Analysis.Convex.Function
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.SimpleGraph
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Permutation
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.Probability.Basic
-import Mathlib.SetTheory.ZFC
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.ShowTerm
 
 namespace bridge_length_is_correct_l213_213547
 

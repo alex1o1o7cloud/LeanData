@@ -1,32 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Polynomial.Basic
-import Mathlib.Analysis.Calculus.Fderiv
-import Mathlib.Analysis.SpecialFunctions.Pow
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.CombinatorialBasics
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Complex.Exponential
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Combinatorics
-import Mathlib.Data.Permutation
-import Mathlib.Data.Polynomial.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Set.Finite
-import Mathlib.MeasureTheory.Probability
-import Mathlib.Probability.Basic
-import Mathlib.Probability.Distribution
-import Mathlib.Probability.ProbabilitySpace
-import Mathlib.Tactic
-import Mathlib.Tactic.LibrarySearch
-import Real
 
 namespace range_of_a_l174_174339
 

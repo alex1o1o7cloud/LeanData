@@ -1,32 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Group.Definitions
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order.AbsoluteValue
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Analysis.Calculus.ContDiff
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.SpecialFunctions.ExpLog
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Polynomial.Basic
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Seq.Seq
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Order.Monotone.Basic
-import Mathlib.Probability.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Topology.Basic
-import ProbabilityTheory
-import Real
 
 namespace car_Y_average_speed_l302_302299
 

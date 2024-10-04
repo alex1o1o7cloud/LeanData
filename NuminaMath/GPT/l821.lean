@@ -1,30 +1,4 @@
-import Integration
 import Mathlib
-import Mathlib.Algebra.ConicSection
-import Mathlib.Algebra.GeomSum
-import Mathlib.Algebra.Order.Basic
-import Mathlib.Analysis.Calculus.Fderiv
-import Mathlib.Analysis.SpecialFunctions.Integrals
-import Mathlib.Analysis.Trigonometry
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Matrix.Notation
-import Mathlib.Data.Nat.Base
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.LinearAlgebra.FiniteDimensional
-import Mathlib.NumberTheory.GCD
-import Mathlib.Order.Basic
-import Mathlib.Probability.Basic
-import Mathlib.Probability.Distribution
-import Mathlib.Probability.ProbabilityTheory
-import Mathlib.ProbabilityTheory
-import Mathlib.Topology.Instances.Real
-import Real
 
 namespace smallest_repeating_block_digits_l821_821895
 

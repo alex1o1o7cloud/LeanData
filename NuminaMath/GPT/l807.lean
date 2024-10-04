@@ -1,26 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Real
-import Mathlib.Analysis.Calculus.Fderiv.Basic
-import Mathlib.Analysis.Convex.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Finite
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Probability.Theory.Basic
-import Mathlib.Set.Basic
-import Mathlib.Tactic
-import Mathlib.Topology.Basic
 
 namespace regular_octagon_interior_angle_l807_807414
 

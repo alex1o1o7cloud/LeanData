@@ -1,20 +1,4 @@
 import Mathlib
-import Mathlib--
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Group.Defs--
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Order.AbsoluteValue
-import Mathlib.Algebra.Quadratic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.IntervalIntegral
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.Probability.Basic
-import Mathlib.Tactic
 
 namespace binary_representation_of_38_l811_811950
 

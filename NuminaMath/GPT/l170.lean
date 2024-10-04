@@ -1,30 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Arithmetic
-import Mathlib.Algebra.Group.Prod
-import Mathlib.Algebra.GroupPower
-import Mathlib.Algebra.Order
-import Mathlib.Algebra.Polynomial
-import Mathlib.Algebra.Trig
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.MeanValue
-import Mathlib.Analysis.Differentiation.Basic
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Analysis.SpecialFunctions.Pow
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set
-import Mathlib.Data.Set.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Linarith
-import Mathlib.Topology.Basic
 
 namespace graph_not_pass_through_second_quadrant_l170_170752
 

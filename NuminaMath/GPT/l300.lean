@@ -1,32 +1,4 @@
-import Mathbin.Data.Nat.Basic
 import Mathlib
-import Mathlib.Algebra
-import Mathlib.Algebra.Divisibility
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.LinearEquation
-import Mathlib.Algebra.Logarithm
-import Mathlib.Algebra.Parallelogram
-import Mathlib.Algebra.Polynomial.Basic
-import Mathlib.Algebra.Trigonometry
-import Mathlib.Analysis.Calculus.LocalExtr
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finsupp.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Matrix.Notation
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.Positivity
-import Mathlib.Tactic.Sorry
 
 namespace least_k_for_bound_l300_300488
 

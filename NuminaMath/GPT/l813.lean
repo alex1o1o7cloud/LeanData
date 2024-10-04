@@ -1,33 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.ArithmeticSequence
-import Mathlib.Algebra.BigOperators.Fin
-import Mathlib.Algebra.Binomial
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Order.Floor
-import Mathlib.Algebra.Polynomial
-import Mathlib.Algebra.Sequence
-import Mathlib.Analysis.SpecialFunctions.ExpLog
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.Combinations
-import Mathlib.Combinatorics.SimpleGraph.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Fib
-import Mathlib.Data.Polynomial
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.LinearAlgebra.Basic
-import Mathlib.MeasureTheory.Measure
-import Mathlib.Probability.Independence
-import Mathlib.SetTheory.Ordinal.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Sorry
-import Real
-import data.nat.basic
 
 namespace valid_starting_days_count_l813_813304
 

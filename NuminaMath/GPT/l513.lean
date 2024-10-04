@@ -1,28 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Module.LinearMap
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.CombinatorialPrinciples
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Pow
-import Mathlib.Data.PropLogic.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Rational.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Irrational
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Geometry.Euclidean.Space3
-import Mathlib.Probability
-import Mathlib.Probability.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
 
 namespace percentage_bob_is_36_l513_513610
 

@@ -1,23 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.GroupPower.Basic
-import Mathlib.Algebra.Order.AbsoluteValue
-import Mathlib.Algebra.Order.Field
-import Mathlib.Analysis.Complex.Exponential
-import Mathlib.Analysis.SpecialFunctions.Continuous
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Equiv.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.GCD
-import Mathlib.Data.Nat.Order
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Sqrt
-import Mathlib.Data.Set.Finite
-import Mathlib.Tactic
 
 namespace quadratic_expression_value_l551_551827
 

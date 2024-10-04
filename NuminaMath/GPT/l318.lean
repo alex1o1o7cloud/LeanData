@@ -1,30 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.GcdMonoid.Basic
-import Mathlib.Algebra.GeomSum
-import Mathlib.Analysis.SpecialFunctions.ExpLog
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics
-import Mathlib.Combinatorics.CombinatorialHierarchy
-import Mathlib.Combinatorics.Complex4
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Finset.Powerset
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Digits
-import Mathlib.Data.Nat.Fib
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Init.Data.Real.Basic
-import Mathlib.Mathlib.Probability.Theory.Basic
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.SetTheory.Cardinal.Basic
-import Mathlib.Tactic
 
 namespace x_power_2023_zero_or_neg_two_l318_318373
 

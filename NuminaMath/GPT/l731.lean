@@ -1,32 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.GCDMonoid.Basic
-import Mathlib.Algebra.Order
-import Mathlib.Algebra.Parity
-import Mathlib.Algebra.PrimeNums
-import Mathlib.Analysis.SpecialFunctions.Exp
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Combinatorics
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Complex.Module
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Odd
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.ArcTan
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.GroupTheory.OrderOfElement
-import Mathlib.NumberTheory.Primes
-import Mathlib.Probability
-import Mathlib.Probability.Basic
-import Mathlib.Probability.Independence
-import Mathlib.Probability.Notation
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Probability.Theory
-import Mathlib.Tactic
-import Mathlib.Topology.Circles
-import Mathlib.Topology.Instances.Real
 
 namespace absent_minded_scientist_mistake_l731_731734
 

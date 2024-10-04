@@ -1,34 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators.Order
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.GroupPower
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Order
-import Mathlib.Algebra.Order.AbsoluteValue
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Algebra.Trig
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Combinatorics
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Graph.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Polynomial
-import Mathlib.Data.Probability
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Set.Finite
-import Mathlib.NumberTheory.Pi
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Tactic
-import RealFloor
 
 namespace toothpicks_needed_base_1001_l640_640281
 

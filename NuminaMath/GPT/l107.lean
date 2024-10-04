@@ -1,37 +1,4 @@
 import Mathlib
-import Mathlib.Algebra
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.GCD.Basic
-import Mathlib.Algebra.Inverses
-import Mathlib.Algebra.ModularArithmetic
-import Mathlib.Algebra.Polynomial
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.Combinations
-import Mathlib.Combinatorics.SimpleGraph.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Complex.Exponential
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Factorial.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Geometry.Euclidean.Circles
-import Mathlib.Probability.Basic
-import Mathlib.Probability.ProbabilityMeasure
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.LibrarySearch
-import Real
-import algebra.big_operators.basic
-import data.nat.basic
-import data.real.basic
-import tactic
 
 namespace julie_hourly_rate_l107_107490
 

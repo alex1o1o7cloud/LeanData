@@ -1,37 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.GeomSum
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Lcm
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Order.Field
-import Mathlib.Algebra.Parity
-import Mathlib.Algebra.Quadratic.Discriminant
-import Mathlib.Algebra.QuadraticDiscriminant
-import Mathlib.Algebra.Sequences
-import Mathlib.Combinatorics
-import Mathlib.Combinatorics.SimpleGraph.Basic
-import Mathlib.Data.Binomial
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Int.Parity
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.LinearAlgebra.Basic
-import Mathlib.Order.Basic
-import Mathlib.Probability.Basic
-import Mathlib.Tactic
-import Mathlib.Topology.Basic
-import Real
-import Std.Data.Nat.Lemmas
 
 namespace solve_for_y_l247_247194
 

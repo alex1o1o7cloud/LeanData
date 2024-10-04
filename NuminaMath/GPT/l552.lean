@@ -1,34 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Abs
-import Mathlib.Algebra.BigOperators.Prod
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Prod
-import Mathlib.Algebra.Order
-import Mathlib.Algebra.Order.Nonneg
-import Mathlib.Algebra.Order.SquareRoot
-import Mathlib.Algebra.Roots
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finite
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Fintype.Card
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Nat.GCD.Basic
-import Mathlib.Data.Prob.Basic
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.LinearAlgebra.Projection
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
 
 namespace find_angle4_l552_552857
 

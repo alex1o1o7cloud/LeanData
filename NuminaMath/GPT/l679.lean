@@ -1,35 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Polynomial.Basic
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.Limits
-import Mathlib.Analysis.SpecialFunctions.Exp
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Int.Modulo
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Combinatorics
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Angle
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.Geometry.Triangle
-import Mathlib.LinearAlgebra.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Simpa
-import Mathlib.Topology
-import Mathlib.Topology.Basic
-import Mathlib.Topology.Instances.Real
 
 namespace sum_greater_than_zero_l679_679057
 

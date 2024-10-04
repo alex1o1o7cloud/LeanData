@@ -1,36 +1,4 @@
-import Data.Real.Basic
 import Mathlib
-import Mathlib.Algebra.ArithSeq
-import Mathlib.Algebra.Complex.Basic
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Field.Defs
-import Mathlib.Algebra.Group.Definitions
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Analysis.Calculus
-import Mathlib.Analysis.NormedSpace.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set
-import Mathlib.Data.Set.Finite
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Ints.Basic
-import Mathlib.NumberTheory.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Linarith
-import Mathlib.Topology.Basic
-import mathlib
 
 namespace find_a_value_l290_290016
 

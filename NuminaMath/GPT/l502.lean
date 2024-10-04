@@ -1,35 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators.Finset
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order
-import Mathlib.Algebra.Polynomial.BigOperators
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.SpecialFunctions.Pow
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Fin.VecNotation
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Int.Mod
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Prob
-import Mathlib.Data.Probability.CondIndep
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.FieldTheory.Galois
-import Mathlib.Init.Data.Int.Basic
-import Mathlib.Init.Log
-import Mathlib.LinearAlgebra.Basis
-import Mathlib.NumberTheory.Basic
-import Mathlib.Probability.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.NormNum
 
 namespace charlie_laps_l502_502797
 

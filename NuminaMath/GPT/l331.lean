@@ -1,33 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Prime
-import Mathlib.Analysis.SpecialFunctions.ExpLog
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.Combinatorics
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Complex.Exponential
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Polynomial.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Zmod.Basic
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.Init.Data.Int.Basic
-import Mathlib.Logic.Basic
-import Mathlib.NumberTheory.Prime
-import Mathlib.Probability.Basic
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Tactic
 
 namespace maximize_area_CDFE_l331_331707
 

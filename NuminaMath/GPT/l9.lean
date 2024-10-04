@@ -1,37 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Rat
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.NormedSpace
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Base
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Permutation
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Probability.MassFunction
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Set.Intervals.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Geometry.Strategy.Basic
-import Mathlib.GraphTheory.Basic
-import Mathlib.Integration
-import Mathlib.Probability.ConditionalProbability
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
-import Mathlib.Topology.Basic
-import Std.Data.List.Basic
 
 namespace intersection_at_most_one_l9_9334
 

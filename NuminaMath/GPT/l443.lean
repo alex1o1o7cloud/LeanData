@@ -1,33 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.Functions
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.QuadraticDiscriminant
-import Mathlib.Algebra.VectorSpaces
-import Mathlib.Analysis.NormedSpace.Basic
-import Mathlib.Analysis.Polynomial.Roots
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Interval
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.LinearAlgebra.Matrix
-import Mathlib.NumberTheory.Divisors
-import Mathlib.Probability
-import Mathlib.Probability.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Topology.MetricSpace.Basic
-import Mathlib.Trigonometric.Basic
 
 namespace unpainted_area_five_inch_board_l443_443460
 

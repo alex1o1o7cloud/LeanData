@@ -1,32 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.Complex.Basic
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.SpecialFunctions.Integrals
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics
-import Mathlib.Data.Factorial
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Card
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Mod.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Prob
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Vector.Basic
-import Mathlib.Logic.Basic
-import Mathlib.Probability
-import Mathlib.Probability.ProbabilityTheory
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
-import mathlib
 
 namespace coloring_hex_tessellation_l229_229541
 

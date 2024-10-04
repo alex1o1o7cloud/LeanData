@@ -1,35 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Digits
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Logarithms
-import Mathlib.Algebra.Periodic
-import Mathlib.Algebra.Polynomial.Div
-import Mathlib.Analysis.Calculus.ContDiff
-import Mathlib.Analysis.Geometry
-import Mathlib.Combinatorics
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Polynomial
-import Mathlib.Data.Polynomial.Basic
-import Mathlib.Data.Probability.ProdAdapter
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set
-import Mathlib.Data.Set.Basic
-import Mathlib.FieldTheory.PolynomialGaloisGroup
-import Mathlib.NumberTheory.Basic
-import Mathlib.NumberTheory.LucasSequences
-import Mathlib.Probability.Basic
-import Mathlib.Probability.ExpectedValue
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Topology.Basic
-import Real
-import TrigonometricFunctions
 
 namespace count_irrational_numbers_l30_30176
 

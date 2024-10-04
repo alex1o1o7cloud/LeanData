@@ -1,36 +1,4 @@
-import Data.Rat.Basic
 import Mathlib
-import Mathlib.Algebra.ArithMoyers
-import Mathlib.Algebra.Combinatorics.Basic
-import Mathlib.Algebra.Factorial.Basic
-import Mathlib.Algebra.GeomSum
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Analysis.SpecialFunctions.Pow
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Matrix.Notation
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Polynomial
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Floor
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Init.Data.Nat.Basic
-import Mathlib.NumberTheory.ArithmeticFunction
-import Mathlib.Probability.Basic
-import Mathlib.Probability.Independence
-import Mathlib.Tactic
-import Mathlib.Tactic.LibrarySearch
-import Mathlib.Topology.Basic
-import Mathlib.Topology.EuclideanSpace.Basic
 
 namespace annual_return_percentage_l54_54901
 

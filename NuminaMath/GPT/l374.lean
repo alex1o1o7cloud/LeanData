@@ -1,35 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Order
-import Mathlib.Analysis.Calculus.Integral
-import Mathlib.Analysis.Complex.Basic
-import Mathlib.Analysis.MeanInequalities
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.CombinatorialBasics
-import Mathlib.Combinatorics.SimpleGraph.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Graph.Degree
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Combinatorics
-import Mathlib.Data.Nat.Lcm
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Angle
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import algebra.order.field
-import data.complex.basic
-import data.real.basic
 
 namespace infinite_grid_three_colors_has_isosceles_right_triangle_l374_374853
 

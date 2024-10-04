@@ -1,25 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Combinatorics.Perm
-import Mathlib.Algebra.Factorial
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Order
-import Mathlib.Algebra.Trig
-import Mathlib.Combinatorics.CombinatorialAiden
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Sqrt
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.LinearAlgebra.FinVec
-import Mathlib.NumberTheory.PerfectSquare
-import Mathlib.Tactic
-import data.nat.combinatorics
 
 namespace analysis_of_f_and_g_l620_620953
 

@@ -1,36 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.GroupPower
-import Mathlib.Algebra.Order
-import Mathlib.Algebra.Parity
-import Mathlib.Algebra.QuadraticDiscriminant
-import Mathlib.Algebra.Quotient
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.Fderiv.Basic
-import Mathlib.Analysis.InnerProductSpace.basic
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.ModEq
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.Digits
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Nat.Lcm
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Tetrahedron
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.Integral
-import Mathlib.NumberTheory.PythagoreanTriples.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.SolveByElim
-import Mathlib.Tactic.Sorry
-import Mathlib.Topology.MetricSpace.Basic
 
 namespace question_cos_inequality_l78_78603
 

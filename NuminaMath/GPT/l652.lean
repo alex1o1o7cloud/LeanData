@@ -1,31 +1,4 @@
 import Mathlib
-import Mathlib.Algebra
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Logarithm
-import Mathlib.Algebra.Star.Basic
-import Mathlib.Algebra.Trigonometry
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.Fderiv
-import Mathlib.Analysis.SpecialFunctions.Polynomials
-import Mathlib.Analysis.Trigonometry.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.List.Perm
-import Mathlib.Data.Multiset.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Sqrt
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Geometry.Euclidean.Circumcircle
-import Mathlib.Geometry.Euclidean.MiddleBet
-import Mathlib.Probability.Basic
-import Mathlib.SetTheory.Sets.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Topology.Basic
-import Mathlib.Topology.Instances.Real
 
 namespace tangent_intersects_ac_at_midpoint_l652_652579
 

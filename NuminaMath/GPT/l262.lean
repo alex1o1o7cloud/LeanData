@@ -1,36 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.LinearAlgebra
-import Mathlib.Analysis.Calculus
-import Mathlib.Analysis.NormalDistribution
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Combinatorics.SimpleGraph
-import Mathlib.Data.Fin
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Nat.Digits
-import Mathlib.Data.Nat.Fib
-import Mathlib.Data.Nat.Gcd.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.GroupTheory.Subgroup
-import Mathlib.LinearAlgebra.Basic
-import Mathlib.Logarithm
-import Mathlib.NumberTheory.Divisors
-import Mathlib.NumberTheory.Floor
-import Mathlib.NumberTheory.Prime
-import Mathlib.Probability.Distribution
-import Mathlib.Probability.Independent
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Tactic
 
 namespace range_of_k_l262_262484
 

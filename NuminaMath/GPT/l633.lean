@@ -1,33 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.AbsoluteValue
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.Binomial
-import Mathlib.Algebra.GeomSum
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Polynomial
-import Mathlib.Algebra.QuadraticEquation
-import Mathlib.Analysis.Calc.Interval
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.SpecialFunctions.ExpLog
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Combinatorics
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Matrix.Notation
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Probability.ProbabilityMassFunction
-import Mathlib.Data.Real.Basic
-import Mathlib.Geometry.Circle.Basic
-import Mathlib.Geometry.Euclidean.TriangleCyclic
-import Mathlib.Probability.Basic
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Use
 
 namespace average_of_distinct_s_values_l633_633666
 

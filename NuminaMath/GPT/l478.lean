@@ -1,27 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.GcdMonoid.Basic
-import Mathlib.Algebra.Order.AbsoluteValue
-import Mathlib.Algebra.Probability
-import Mathlib.Analysis.Geometry.Convex
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.SimpleGraph.Basic
-import Mathlib.Combinatorics.SimpleGraph.GraphTheory
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.List.Perm
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set
-import Mathlib.MeasureTheory.MeasurableSpace
-import Mathlib.NumberTheory.ModularArithmetic
-import Mathlib.Probability
-import Mathlib.Probability.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Sorry
-import Probability.ProbabilityMassFunction
 
 namespace probability_A_and_B_selected_l478_478518
 

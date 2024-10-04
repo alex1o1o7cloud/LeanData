@@ -1,35 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.GeomSum
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Order
-import Mathlib.Algebra.Polynomial
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Algebra.Ring.Equiv
-import Mathlib.Analysis.Calculus.ContDiff
-import Mathlib.Analysis.Calculus.FDeriv
-import Mathlib.Analysis.Probability.MassFunction
-import Mathlib.Analysis.SpecialFunctions.Pow
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Lcm
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Probability.ProbabilityMassFunction
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Init
-import Mathlib.Probability.Basic
-import Mathlib.ProbabilityTheory.MeasureTheory
-import Mathlib.Tactic
-import Mathlib.Topology.Planar
 
 namespace f_60_value_l379_379569
 

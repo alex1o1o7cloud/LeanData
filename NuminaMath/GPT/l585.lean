@@ -1,31 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Arithmetic
-import Mathlib.Algebra.ArithmeticFunc
-import Mathlib.Algebra.ArithmeticSequence
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.BigOperators.Ring
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Order.Field
-import Mathlib.Algebra.Parity
-import Mathlib.Algebra.Trig
-import Mathlib.Analysis.Calculus.FDeriv.Basic
-import Mathlib.Analysis.InnerProductSpace.Basic
-import Mathlib.Analysis.SpecialFunctions.ExpLog
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Init.Data.Nat.Basic
-import Mathlib.Probability
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Probability.ProbabilityMassFunction.Basic
 
 namespace sum_of_possible_lengths_l585_585120
 

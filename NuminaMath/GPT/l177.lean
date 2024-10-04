@@ -1,26 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.GeomSum
-import Mathlib.Algebra.Order.AbsoluteValue
-import Mathlib.Algebra.Polynomial.Basic
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Complex.Basic
-import Mathlib.Analysis.Complex.Exponential
-import Mathlib.Analysis.Complex.Re
-import Mathlib.Analysis.InnerProductSpace.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Finset.Card
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Interval
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Rat.FractionDef
-import Mathlib.Data.Real.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Probability.Basic
-import Mathlib.Tactic
 
 namespace option1_cost_correct_option2_cost_correct_equal_costs_at_60_more_cost_effective_plan_l177_177469
 

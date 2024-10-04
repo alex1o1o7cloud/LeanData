@@ -1,30 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Arithmetic
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.GroupPower.Basic
-import Mathlib.Algebra.Order.AbsoluteValue
-import Mathlib.Algebra.Parity
-import Mathlib.Analysis.InnerProductSpace.Basic
-import Mathlib.Analysis.Limits
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Matrix.Notation
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Digits
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Geometry.Triangle
-import Mathlib.NumberTheory.ArithmeticFunction
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Sorry
-import data.real.basic
 
 namespace area_swept_by_curve_l588_588157
 

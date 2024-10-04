@@ -1,31 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Arithmetic
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.Commute
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.GroupPower.Basic
-import Mathlib.Algebra.Logarithm
-import Mathlib.Algebra.Order.Field
-import Mathlib.Analysis.SpecialFunctions.Gaussian
-import Mathlib.Analysis.SpecialFunctions.Pow.Real
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.List.Perm
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Combinatorics
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Finite
-import Mathlib.Geometry.Euclidean
-import Mathlib.Geometry.Trigonometry.Basic
-import Mathlib.LinearAlgebra.Basic
-import Mathlib.Probability.Basic
-import Mathlib.SetTheory.Cardinal
-import Mathlib.Tactic
-import data.nat.prime
 
 namespace pascal_triangle_fifth_number_l231_231749
 

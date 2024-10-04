@@ -1,36 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Basic
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order
-import Mathlib.Algebra.QuadraticDiscriminant
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Complex.Basic
-import Mathlib.Analysis.SpecialFunctions.NonPosRoot
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Matrix.Notation
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Polynomial.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Angle
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Logic.Basic
-import Mathlib.Probability
-import Mathlib.Tactic
-import Mathlib.Trigonometry.Basic
-import data.finset
 
 namespace arithmetic_sequence_S2016_l73_73272
 

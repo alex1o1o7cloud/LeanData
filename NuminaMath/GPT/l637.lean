@@ -1,35 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.GroupPower
-import Mathlib.Algebra.Order
-import Mathlib.Algebra.Order.Field
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Geometry.Circle
-import Mathlib.Analysis.SpecialFunctions.Pow
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Catalan
-import Mathlib.Data.Fin.VecNotation
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Fib
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Probability.Conditional
-import Mathlib.Data.Rat
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Cyclic
-import Mathlib.Geometry.Euclidean.Incircle
-import Mathlib.LinearAlgebra.Matrix.Vector
-import Mathlib.NumberTheory.Mod
-import Mathlib.NumberTheory.ModularArithmetic
-import Mathlib.NumberTheory.Prime
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.Positivity
 
 namespace geometric_sequence_tenth_term_l637_637405
 

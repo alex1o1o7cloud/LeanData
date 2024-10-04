@@ -1,33 +1,4 @@
-import Lean
 import Mathlib
-import Mathlib.Algebra.AbsoluteValue
-import Mathlib.Algebra.CharZero.Basic
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.GroupPower.Basic
-import Mathlib.Algebra.Order.Field
-import Mathlib.Algebra.Quadratic_Discriminant
-import Mathlib.Algebra.Trigonometry
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Analysis.SpecificFunctions.Deriv
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Complex.Exponential
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Set.Finite
-import Mathlib.LinearAlgebra.AffineSpace.AffineMap
-import Mathlib.LinearAlgebra.Basic
-import Mathlib.Tactic
-import Mathlib.Topology.TopologicalSpace.Basic
 
 namespace staircase_distance_l756_756452
 

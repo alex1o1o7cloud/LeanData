@@ -1,23 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Quadratic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Data.Fin
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Setoid.Basic
-import Mathlib.Data.Sort
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.Probability
-import Mathlib.Probability.Basic
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Tactic
 
 namespace second_derivative_eq_function_l701_701049
 

@@ -1,30 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Quadratic
-import Mathlib.Algebra.Quadratics.Discriminant
-import Mathlib.Analysis.Calculus.ContDiff
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.SpecialFunctions.ExpLog
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.Combinatorics
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Polynomial
-import Mathlib.Data.Probability
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Probability.Basic
-import Mathlib.Probability.Independence
-import Mathlib.ProbabilityTheory.Basic
-import Mathlib.SetTheory.Basic
-import Mathlib.Tactic
-import Mathlib.Topology.MetricSpace.Basic
-import data.fintype.basic
 
 namespace conclusion_6_l480_480188
 

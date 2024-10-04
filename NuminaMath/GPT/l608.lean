@@ -1,37 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Arithmetic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.GroupPower
-import Mathlib.Algebra.GroupPower.Basic
-import Mathlib.Algebra.Order
-import Mathlib.Algebra.Sequence
-import Mathlib.Analysis.Calculus.Fderiv
-import Mathlib.Analysis.Calculus.Limits
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Analysis.SpecialFunctions.Pow
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Polynomial
-import Mathlib.Data.Prob.ProbabilityMassFunction
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.LinearAlgebra.Basis
-import Mathlib.Probability.Basic
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.Rewrite
-import data.real.basic
 
 namespace ratio_of_areas_l608_608647
 

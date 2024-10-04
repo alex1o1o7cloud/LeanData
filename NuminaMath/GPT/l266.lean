@@ -1,27 +1,4 @@
 import Mathlib
-import Mathlib.Algebra
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order.AbsoluteValue
-import Mathlib.Analysis.Asymptotics.Asymptotics
-import Mathlib.Analysis.SpecialFunctions.Abs
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Data.Fin.VecNotations
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.MeasureTheory.Measure.MeasureSpace
-import Mathlib.ProbTheory.CentralLimit
-import Mathlib.Probability.Independence
-import Mathlib.ProbabilityTheory.Basics
-import Mathlib.ProbabilityTheory.Independence
-import Mathlib.Tactic
-import Mathlib.Topology.InfiniteSum
-import Mathlib.Topology.MetricSpace.Basic
-import Real
-import data.real.basic
-import topology.instances.real
 
 namespace sin_alpha_value_l266_266573
 

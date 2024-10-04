@@ -1,36 +1,4 @@
 import Mathlib
-import Mathlib.Algebra
-import Mathlib.Algebra.FactorialRing
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.GCD
-import Mathlib.Algebra.GeomSum
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.GroupPower.Basic
-import Mathlib.Algebra.Order.Basic
-import Mathlib.Algebra.ProbabilityTheory
-import Mathlib.Algebra.Trig
-import Mathlib.Analysis.NormedSpace.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.SimpleGraph.Basic
-import Mathlib.Data.Complex.Exponential
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.ModEq
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Digits
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Polynomial
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Sqrt
-import Mathlib.Statistics.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Rewrite
-import Mathlib.Topology.Sequences
-import Real
 
 namespace fraction_identity_l685_685294
 

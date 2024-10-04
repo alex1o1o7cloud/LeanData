@@ -1,25 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.ConicSections
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Ring
-import Mathlib.Algebra.Trig
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Binomial
-import Mathlib.Combinatorics.CombinatorialDesigns.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Prob.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Rat.Defs
-import Mathlib.Data.Real.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Logic.Basic
-import Mathlib.Order.ConditionallyCompleteLattice
-import Mathlib.Probability.Basic
-import Mathlib.Tactic
-import Mathlib.Topology.MetricSpace.Baire
 
 namespace problem_1_problem_2_l653_653706
 

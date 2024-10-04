@@ -1,32 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.ContinuedFractions.Computation.Basic
-import Mathlib.Algebra.Factorial
-import Mathlib.Algebra.Functional
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.GroupPower
-import Mathlib.Analysis.Calculus.Continuous
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.Deriv.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Data.Finset
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Int.ModEq
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Nat.Primes
-import Mathlib.Data.Real.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Init.Data.Nat.Basic
-import Mathlib.Probability.Basic
-import Mathlib.ProbabilityTheory.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.Ring
 
 namespace find_K_l505_505146
 

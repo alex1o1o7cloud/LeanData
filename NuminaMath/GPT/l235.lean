@@ -1,30 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Arithmetic
-import Mathlib.Algebra.Fact
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Geometry
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Complex
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Int.Parity
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Probability
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Set.Finite
-import Mathlib.Geometry.Reflection
-import Mathlib.Init.Data.Nat.Basic
-import Mathlib.Probability.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Pigeonhole
-import Mathlib.Topology.ContDiff
-import Mathlib.Topology.EuclideanSpace
-import Mathlib.Topology.Instances.Real
 
 namespace algebraic_identity_l235_235655
 

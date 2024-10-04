@@ -1,32 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order
-import Mathlib.Algebra.Parity
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Polynomial
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Circle
-import Mathlib.GroupTheory.Perm.Cycle
-import Mathlib.Logic.Basic
-import Mathlib.Probability
-import Mathlib.Probability.Conditional
-import Mathlib.Probability.Distribution
-import Mathlib.Probability.Independence
-import Mathlib.Probability.Notation
-import Mathlib.Tactic
-import Mathlib.Topology.TrigonometricFunctions
-import ProbabilityTheory
-import Real
 
 namespace polygon_area_l590_590039
 

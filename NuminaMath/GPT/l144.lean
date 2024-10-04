@@ -1,35 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Arithmetic
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.Field.Universal
-import Mathlib.Algebra.Group.Definitions
-import Mathlib.Algebra.GroupPower
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Geometry.Polygon
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Sequences
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.Factors
-import Mathlib.Data.Polynomial.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Rat.Defs
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Probability.Variance
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Topology.Algebra.Order.Basic
-import tactic
 
 namespace intercepts_sum_eq_seven_l144_144800
 

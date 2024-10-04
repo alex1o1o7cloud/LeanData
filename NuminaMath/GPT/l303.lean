@@ -1,31 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.Binomial
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.GroupPower
-import Mathlib.Algebra.GroupPower.Basic
-import Mathlib.Algebra.Order.Archimedean
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Analysis.Calculus.Conformalism
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Geometry
-import Mathlib.Analysis.SpecialFunctions.Logarithm
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Combinatorics.Category
-import Mathlib.Combinatorics.Composition
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Nat.Enat
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Set.Finite
-import Mathlib.Probability.Basic
-import Mathlib.Tactic
 
 namespace sequence_cycle_reappearance_l303_303254
 

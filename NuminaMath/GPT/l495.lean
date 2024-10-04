@@ -1,33 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.GeomSum
-import Mathlib.Algebra.Group
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.Geometry.Triangle.Basic
-import Mathlib.Init.Function.Meta
-import Mathlib.Logic.Basic
-import Mathlib.Probability
-import Mathlib.Probability.Basic
-import Mathlib.Probability.CondCount
-import Mathlib.Probability.Notation
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.Probability
-import Mathlib.Topology.Algebra.Order
-import Mathlib.Topology.Euclidean.Basic
 
 namespace greatest_integer_radius_l495_495677
 

@@ -1,37 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperations.Basic
-import Mathlib.Algebra.GcdMonoid.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Group.Power
-import Mathlib.Algebra.LCM
-import Mathlib.Algebra.Order
-import Mathlib.Algebra.Order.Ring
-import Mathlib.Algebra.Order.SpecificGrav
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Matrix.Notation
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.Fib
-import Mathlib.Data.Pnat.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.Probability
-import Mathlib.Probability.Basic
-import Mathlib.Probability.Theory.Integration
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Linarith
-import Mathlib.Topology.Algebra.InfiniteSum
-import Mathlib.Topology.Basic
-import Real
 
 namespace camp_cedar_counselors_l638_638507
 

@@ -1,33 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Basic
-import Mathlib.Algebra.Divisibility
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.QuadraticDiscriminant
-import Mathlib.Algebra.Star.Basic
-import Mathlib.Combinatorics.SimpleGraph.Coloring
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Matrix.Notation
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.GCD
-import Mathlib.Data.Nat.ModEq
-import Mathlib.Data.Probability.ProbabilitySpace
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Zmod.Basic
-import Mathlib.Geometry.Euclid
-import Mathlib.GroupTheory.OrderOfElement
-import Mathlib.LinearAlgebra.Matrix
-import Mathlib.NumberTheory.ModularArithmetic.Basic
-import Mathlib.Probability.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Advanced
-import Mathlib.Tactic.Basic
-import Mathlib.Topology.Basic
-import Real
 
 namespace greatest_value_is_B_l188_188565
 

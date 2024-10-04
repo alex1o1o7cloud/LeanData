@@ -1,26 +1,4 @@
-import Data.Set.Basic
 import Mathlib
-import Mathlib.Algebra.Order.Field.Basic
-import Mathlib.Analysis.Calculus.Deriv.Basic
-import Mathlib.Analysis.Geometry.Circle
-import Mathlib.Analysis.InnerProductSpace.Basic
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.ModEq
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Sqrt
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Set.Finite
-import Mathlib.NumberTheory
-import Mathlib.Probability.Independence
-import Mathlib.Probability.Moments
-import Mathlib.Tactic
-import Mathlib.Topology.EuclideanGeometry
 
 namespace p_twice_q_in_future_years_l587_587102
 

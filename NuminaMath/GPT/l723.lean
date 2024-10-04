@@ -1,33 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.Order.Nonneg.Real
-import Mathlib.Algebra.Polynomial
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.SpecialFunctions.Basic
-import Mathlib.Analysis.SpecialFunctions.Pow
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Int.GCD
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Matrix.Notation
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Geometry.Triangle
-import Mathlib.Logic.Basic
-import Mathlib.Mathlib
-import Mathlib.Probability.Basic
-import Mathlib.RingTheory.Determinant
-import Mathlib.Tactic
-import Mathlib.Topology.Basic
-import Mathlib.Topology.Instances.Real
-import Mathlib.Trigonometry.Basic
 
 namespace sum_of_tangency_points_l723_723481
 

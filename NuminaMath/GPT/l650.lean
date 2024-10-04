@@ -1,36 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.AbsoluteValue
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.EuclideanDomain
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.GeomSeries
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Analysis.Calculus.ContDiff
-import Mathlib.Analysis.Calculus.CriticalPoints
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.FDeriv.Basic
-import Mathlib.Analysis.Calculus.Fderiv
-import Mathlib.Analysis.MeanInequalities
-import Mathlib.Analysis.SpecialFunctions.ExpLog
-import Mathlib.Analysis.SpecialFunctions.Limit
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Data.Graph
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Combinatorics
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Rat.Cast
-import Mathlib.Data.Real.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.NumberTheory.Prime
-import Mathlib.Numbers.Basic
-import Mathlib.Order.Floor
-import Mathlib.Probability.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Topology.Basic
 
 namespace volume_of_first_bottle_l650_650710
 

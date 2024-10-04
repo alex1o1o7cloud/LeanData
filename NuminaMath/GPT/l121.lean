@@ -1,37 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Group.Pi
-import Mathlib.Algebra.GroupPower
-import Mathlib.Algebra.Order
-import Mathlib.Algebra.Probability
-import Mathlib.Algebra.Quadratic
-import Mathlib.Algebra.QuadraticDiscriminant
-import Mathlib.Analysis.InnerProductSpace.Basic
-import Mathlib.Analysis.InnerProductSpace.Euclidean
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Gcd.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Prob.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Sqrt
-import Mathlib.Data.Set.Basic
-import Mathlib.Init.Data.Fin
-import Mathlib.LinearAlgebra.Matrix
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.NormNum
-import Mathlib.Topology.Basic
-import Mathlib.Topology.Categoric.Instances
-import data.real.basic
 
 namespace smallest_diff_mod_13_l121_121921
 

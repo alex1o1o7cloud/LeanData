@@ -1,31 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Quadratic.Discr
-import Mathlib.Analysis.Calculus.Fderiv.Basic
-import Mathlib.Analysis.InnerProductSpace.Basic
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Advanced
-import Mathlib.Data.Finset
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Combinatorics
-import Mathlib.Data.Nat.Digits
-import Mathlib.Data.Polynomial
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.LinearAlgebra.Basic
-import Mathlib.NumberTheory.ArithmeticFunction
-import Mathlib.Prob.Basic
-import Mathlib.Probability
-import Mathlib.Probability.Basic
-import Mathlib.Probability.Independence
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Topology.Basic
 
 namespace student_groups_l430_430543
 

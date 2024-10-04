@@ -1,35 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Arithmetic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Quadratic
-import Mathlib.Algebra.QuadraticDiscriminant
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.InnerProductSpace.Basic
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.Trigonometry
-import Mathlib.Combinatorics
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Probability
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Init.Data.Int.Basic
-import Mathlib.LinearAlgebra.CrossProduct
-import Mathlib.LinearAlgebra.Matrix
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Probability.ProbabilityTheory
-import Mathlib.Tactic
-import Mathlib.Tactic.IntervalCases
-import Mathlib.Tactic.Linarith
-import measure_theory.probability_mass_function
 
 namespace count_correct_expressions_l378_378478
 

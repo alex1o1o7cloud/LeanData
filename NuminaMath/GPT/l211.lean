@@ -1,36 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order
-import Mathlib.Algebra.Quadratic.Discriminant
-import Mathlib.Analysis.Calculus.FDeriv.Basic
-import Mathlib.Analysis.Geometry.Circle
-import Mathlib.Analysis.InnerProductSpace.Basic
-import Mathlib.Combinatorics.Pigeonhole
-import Mathlib.Combinatorics.SimpleGraph.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Perm
-import Mathlib.Data.Polynomial
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.InnerProduct
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.GroupTheory.Perm.Basic
-import Mathlib.Logic.Function.Basic
-import Mathlib.MeasureTheory.Integral.IntervalIntegral
-import Mathlib.NumberTheory.ModPow
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.LinearCombination
-import Mathlib.Topology.Basic
-import Mathlib.Topology.MetricSpace.Basic
-import data.real.basic
 
 namespace percentage_change_is_4_percent_l211_211836
 

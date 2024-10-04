@@ -1,35 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Floor
-import Mathlib.Algebra.Function.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Log
-import Mathlib.Algebra.Order.Basic
-import Mathlib.Algebra.Order.Field
-import Mathlib.Algebra.Order.Floor
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Nat.Base
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.NumberTheory.Prime
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
 
 namespace problem_I_problem_II_l365_365393
 

@@ -1,34 +1,4 @@
 import Mathlib
-import Mathlib.Algebra
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.GCD.Basic
-import Mathlib.Algebra.GeomSeries
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Analysis.InnerProductSpace.Basic
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Analysis.Trigonometry.Cosine
-import Mathlib.Analysis.Trigonometry.Tangent
-import Mathlib.Combinatorics.Graph
-import Mathlib.Data.Finset
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Int.GCD
-import Mathlib.Data.List.Basic
-import Mathlib.Data.List.Perm
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Digits
-import Mathlib.Data.Polynomial.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Angle
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.MeasureTheory.Measure.Space
-import Mathlib.NumberTheory.Prime
-import Mathlib.Probability
-import Mathlib.Tactic
-import Mathlibimported\Matrix
 
 namespace joggers_meet_l215_215492
 

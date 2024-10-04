@@ -1,32 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.GcdMonoid.Basic
-import Mathlib.Algebra.Order
-import Mathlib.Algebra.Order.AbsoluteValue
-import Mathlib.Algebra.Polynomial
-import Mathlib.Algebra.Quadratic_Discriminant
-import Mathlib.Analysis.Complex.Basic
-import Mathlib.Analysis.InnerProductSpace.Basic
-import Mathlib.Analysis.MeanInequalities
-import Mathlib.Analysis.SpecialFunctions.Pow
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Combinatorics
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Probability.Basic
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Tactic
-import Mathlib.Tactic.Geometry
-import Mathlib.Tactic.Ring
-import Real
 
 namespace new_average_with_grace_marks_l119_119184
 

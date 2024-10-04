@@ -1,26 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Equiv.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.GroupPower
-import Mathlib.Algebra.Order
-import Mathlib.Analysis.Calculus
-import Mathlib.Analysis.SpecialFunctions.ExpLog
-import Mathlib.Analysis.SpecialFunctions.PowReal
-import Mathlib.Combinatorics.Comb
-import Mathlib.Data.Finset
-import Mathlib.Data.Finsupp.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Set.Finite
-import Mathlib.NumberTheory.ArithmeticFunction
-import Mathlib.Real
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
-import Mathlib.Trigonometry
-import data.real.basic
 
 namespace sum_sequence_2021_l47_47251
 

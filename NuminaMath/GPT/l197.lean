@@ -1,28 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.GroupPower.Basic
-import Mathlib.Algebra.Linear.Equations
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Analysis.Calculus.AbsoluteValue
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.Monotone
-import Mathlib.Analysis.Geometry
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecificFunctions.Log
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Card
-import Mathlib.Data.Multiplicity
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Set.Finite
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Geometry.Euclidean.Simplex
-import Mathlib.Tactic
-import data.nat.prime
 
 namespace equilibrium_stability_l197_197527
 

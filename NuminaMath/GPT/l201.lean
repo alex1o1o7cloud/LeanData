@@ -1,33 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Functions
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Polynomial
-import Mathlib.Algebra.QuadraticForm
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.Integral
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.CombinatorialGame
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Complex.Exponential
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.List.Defs
-import Mathlib.Data.List.Perm
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Rat.Defs
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Circumcenter
-import Mathlib.LinearAlgebra.Det
-import Mathlib.NumberTheory.GCD
-import Mathlib.Probability.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.LibrarySearch
 
 namespace probability_coprime_selected_integers_l201_201286
 

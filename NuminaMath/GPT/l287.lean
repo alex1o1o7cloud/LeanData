@@ -1,29 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.GroupPower.Basic
-import Mathlib.Algebra.Order.Basic
-import Mathlib.Algebra.Order.Field
-import Mathlib.Algebra.Polynomial
-import Mathlib.Analysis.Calculus.MeanValue
-import Mathlib.Analysis.Complex.ReIm
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.Combinatorics
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Probability.Basic
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.SetTheory.Game.Basic
-import Mathlib.Tactic.LibrarySearch
-import Mathlib.Tactic.Linarith
-import Mathlib.Topology.Basic
 
 namespace cost_of_purchase_l287_287760
 

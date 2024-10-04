@@ -1,32 +1,4 @@
 import Mathlib
-import Mathlib.Algebra
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.CharZero.Defs
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Analysis.InnerProductSpace.Basic
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Combinatorics
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Probability
-import Mathlib.Probability.Basic
-import Mathlib.Probability.Distribution
-import Mathlib.RingTheory.Polynomial.Basic
-import Mathlib.Statistics.Regression.LinearLeastSquares
-import Mathlib.Statistics.Test.ChiSquare
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
 
 namespace imaginary_part_of_conjugate_l62_62348
 

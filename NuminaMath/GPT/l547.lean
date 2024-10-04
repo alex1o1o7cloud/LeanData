@@ -1,26 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.ArithmeticSequence
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.Cubic
-import Mathlib.Algebra.GroupPower.Basic
-import Mathlib.Algebra.LinearAlgebra.Basic
-import Mathlib.Combinatorics.Cards
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Matrix.Notation
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.SinCos
-import Mathlib.Data.Set.Basic
-import Mathlib.Probability.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
-import Real
-import data.nat.digits
 
 namespace anna_money_left_l547_547441
 

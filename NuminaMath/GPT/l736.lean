@@ -1,36 +1,4 @@
-import Data.Real.Basic
 import Mathlib
-import Mathlib.Algebra.ArithmeticSequence
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.GCD
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Logarithm
-import Mathlib.Analysis.Calculus.ContDiff
-import Mathlib.Analysis.Calculus.Fderiv.Basic
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Fintype
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Int.Gcd
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Sin
-import Mathlib.Data.Set.Basic
-import Mathlib.MeasureTheory.Measure.MeasureSpace
-import Mathlib.NumberTheory.Binomial
-import Mathlib.Probability
-import Mathlib.Probability.Basic
-import Mathlib.ProbabilityTheory.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Linarith
-import Mathlib.Topology.Basic
-import data.nat.basic
-import data.real.basic
 
 namespace solution_b_l736_736640
 

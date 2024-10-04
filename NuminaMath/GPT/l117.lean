@@ -1,37 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Arithmetic
-import Mathlib.Algebra.GcdMonoid
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.RelationDefs
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.Deriv.Basic
-import Mathlib.Analysis.Calculus.IntermediateValue
-import Mathlib.Analysis.InnerProductSpace.Basic
-import Mathlib.Analysis.SpecialFunctions.Exp
-import Mathlib.Analysis.SpecialFunctions.Integral
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Perm
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Polynomial
-import Mathlib.Data.Polynomial.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Pi
-import Mathlib.Data.Set.Basic
-import Mathlib.NumberTheory.PythagoreanTriples
-import Mathlib.Probability.Basic
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Probability.ProbabilityMeasure
-import Mathlib.Tactic
-import Mathlib.Topology.Probability
-import Real
-import data.finset
-import data.list.perm
 
 namespace probability_product_divisible_by_8_l117_117863
 

@@ -1,36 +1,4 @@
-import Lean.Elab.Command
 import Mathlib
-import Mathlib.Algebra.Divisibility
-import Mathlib.Algebra.GeometricSeries
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.GroupPower.Basic
-import Mathlib.Algebra.Polynomial
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.Deriv.Basic
-import Mathlib.Analysis.Complex.Basic
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.Combination
-import Mathlib.Data.Complex.Determinant
-import Mathlib.Data.Digits
-import Mathlib.Data.Fin.Vec
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Polynomial.Basic
-import Mathlib.Data.Prob.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.LinearAlgebra.Matrix
-import Mathlib.NumberTheory.Basic
-import Mathlib.NumberTheory.Lcm
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Tactic
-import Mathlib.Topology.Algebra.InfiniteSum
 
 namespace marco_paints_8_15_in_32_minutes_l19_19624
 

@@ -1,34 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Basic
-import Mathlib.Algebra.Binomial
-import Mathlib.Algebra.Factorial
-import Mathlib.Algebra.GeomSeries
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Order
-import Mathlib.Algebra.Trigonometry
-import Mathlib.Analysis.Calculus.FundamentalTheorem
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Integrals
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.Binomial
-import Mathlib.Combinatorics.SimpleGraph.Connectivity
-import Mathlib.Data.Complex.Exponential
-import Mathlib.Data.Complex.RoundST
-import Mathlib.Data.Finset
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.MvPolynomial.CommRing
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Rat.Defs
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Triangle.Angle
-import Mathlib.NumberTheory.Primes
-import Mathlib.Tactic.Basic
-import Mathlib.Topology.Basic
 
 namespace max_area_centrally_symmetric_polygon_in_triangle_l604_604980
 

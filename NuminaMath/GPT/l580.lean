@@ -1,37 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Basic
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order
-import Mathlib.Algebra.Prime
-import Mathlib.Algebra.Quotient
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.FalconerSeries
-import Mathlib.Analysis.SpecialFunctions.Integrals
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Analysis.Trigonometry.Tan
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.SimpleGraph.Cycle
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Complex.Exponential
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Base
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Log
-import Mathlib.Geometry.Euclidean.Angle
-import Mathlib.Geometry.Euclidean.Circumcenter
-import Mathlib.Polynomial
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactics.Basic
-import Mathlib.Topology.Affine.Bases
 
 namespace spotted_and_fluffy_cats_l580_580498
 

@@ -1,37 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Arithmetic
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Pi
-import Mathlib.Algebra.GroupPower.Basic
-import Mathlib.Algebra.LCM
-import Mathlib.Algebra.Modular
-import Mathlib.Algebra.Polynomial.GroupRingAction
-import Mathlib.Analysis.Calculus.ParametricForms
-import Mathlib.Analysis.Convex.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.SimpleGraph.Basic
-import Mathlib.Data.Finite
-import Mathlib.Data.Finset
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.List.Perm
-import Mathlib.Data.Nat.Base
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Set.Intervals
-import Mathlib.Init.Data.Int.Basic
-import Mathlib.NumberTheory.ArithmeticFunction
-import Mathlib.Probability.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.LibrarySearch
-import Mathlib.Tactic.Linarith
-import Mathlib.Topology.Angle
 
 namespace rice_quantity_proof_l38_38066
 

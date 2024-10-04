@@ -1,35 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.Combinatorics
-import Mathlib.Algebra.EuclideanDomain
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order.AbsoluteValue
-import Mathlib.Analysis
-import Mathlib.Analysis.Calculus.FDeriv
-import Mathlib.Analysis.Differentiable
-import Mathlib.Analysis.Geometry.Affine.Lines
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Prob.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Rat.Defs
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Sqrt
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.Probability.Independence
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Linarith
-import Mathlib.analysis.special_functions.pow
-import Mathlib.data.real.basic
-import topology.algebra.infinite_sum
 
 namespace gcd_max_digits_l169_169059
 

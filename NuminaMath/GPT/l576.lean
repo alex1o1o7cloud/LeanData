@@ -1,30 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Binom
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order.Floor
-import Mathlib.Algebra.QuadraticDiscriminant
-import Mathlib.Algebra.Trigonometry
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Combinatorics
-import Mathlib.Data.Finset
-import Mathlib.Data.List
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.Log
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Prime
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Rat.Defs
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Logic.Basic
-import Mathlib.NumberTheory.ModularArithmetic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
 
 namespace mingyu_change_l576_576883
 

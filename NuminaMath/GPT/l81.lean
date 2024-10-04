@@ -1,33 +1,4 @@
 import Mathlib
-import Mathlib.Algebra
-import Mathlib.Algebra.EuclideanDomain.Basic
-import Mathlib.Algebra.LinearAlgebra.Basic
-import Mathlib.Algebra.LinearEq
-import Mathlib.Algebra.LinearEquiv
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.NormedSpace.Basic
-import Mathlib.Analysis.SpecialFunctions.Integrals
-import Mathlib.Analysis.SpecialFunctions.Logarithm
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finite.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Int.ModEq
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Init.Data.Rat
-import Mathlib.NumberTheory.Factorial
-import Mathlib.Probability.ProbabilityTheory
-import Mathlib.Tactic
-import Mathlib.Topology.Basic
-import Mathlib.Topology.Instances.Real
 
 namespace median_on_AB_eq_altitude_on_BC_eq_perp_bisector_on_AC_eq_l81_81152
 

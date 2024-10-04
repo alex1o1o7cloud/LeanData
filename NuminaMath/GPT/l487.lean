@@ -1,34 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Divisibility
-import Mathlib.Algebra.GroupPower.Basic
-import Mathlib.Algebra.Order.AM_GM
-import Mathlib.Analysis.Complex.Basic
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Base
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Polynomial.Basic
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Probability.Expectation
-import Mathlib.Data.Probability.ProbabilitySpace
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Nnreal
-import Mathlib.Data.Set.Basic
-import Mathlib.Init.Data.Nat
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.SetTheory.Finite
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Topology.Algebra.UnitBall
-import Mathlib.Topology.Basic
-import Mathlib.Topology.MetricSpace.Basic
-import data.nat.choose.basic
-import data.real.basic
 
 namespace jill_sod_area_needed_l487_487047
 

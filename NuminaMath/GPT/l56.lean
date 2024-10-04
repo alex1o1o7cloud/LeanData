@@ -1,37 +1,4 @@
-import Geometry.Trapezoid.Basic
 import Mathlib
-import Mathlib.Algebra.Arithmetic
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.GCD
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.LinearAlgebra.Basic
-import Mathlib.Algebra.Matrix
-import Mathlib.Algebra.Quaternions
-import Mathlib.Analysis.Calculus.Area
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.MeanValue
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finite.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Rat
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Sqrt
-import Mathlib.Data.Real.Trigonometry
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Angles
-import Mathlib.Geometry.Euclidean.Circle.Tangent
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.NumberTheory.ArithmeticFunctions
-import Mathlib.Probability
-import Mathlib.Probability.Basic
-import Mathlib.Tactic.Linarith
-import Mathlib.Trigonometry.Basic
-import Probability
 
 namespace angle_on_line_y_equals_neg_x_l56_56653
 

@@ -1,27 +1,4 @@
 import Mathlib
-import Mathlib.Algebra
-import Mathlib.Algebra.AdditionGroup
-import Mathlib.Algebra.BigOperators.Fin
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Quadratic
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.Extrema
-import Mathlib.Analysis.Polynomial
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.Derangements
-import Mathlib.Combinatorics.Probability
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.NumberTheory.Basic
-import Mathlib.NumberTheory.Probability.Basic
-import Mathlib.ProbTheory.Basic
-import Mathlib.Probability.ProbabilityMassFunction.Basic
-import Mathlib.Tactic
 
 namespace semi_circle_radius_l311_311332
 

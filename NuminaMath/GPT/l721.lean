@@ -1,36 +1,4 @@
-import Data.Real.Basic
 import Mathlib
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Field.Polynomial
-import Mathlib.Algebra.Polynomial.Basic
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.LHopital
-import Mathlib.Analysis.Calculus.Limits
-import Mathlib.Analysis.SpecialFunctions.Exp
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.List.Sort
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Language.Differentiable.Basic
-import Mathlib.MeasureTheory.Measure.Probability
-import Mathlib.Probability.Basic
-import Mathlib.Probability.Distribution
-import Mathlib.Probability.Distribution.Laws
-import Mathlib.Probability.Distribution.Poisson
-import Mathlib.Probability.Independence
-import Mathlib.ProbabilityTheory.ConditionalExpectation
-import Mathlib.ProbabilityTheory.Independence
-import Mathlib.Statistics.Basic
-import Mathlib.Tactic
-import Mathlib.Topology.Algebra.Group
-import Mathlib.Topology.Basic
-import Mathlib.Topology.ProbabilityMassFunction
 
 namespace pure_imaginary_complex_l721_721624
 

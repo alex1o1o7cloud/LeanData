@@ -1,33 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.GroupPower
-import Mathlib.Algebra.Log
-import Mathlib.Algebra.Predicates
-import Mathlib.Analysis.Calculus.Fderiv
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basics
-import Mathlib.Combinatorics
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Probability
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Rat.Defs
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Vector
-import Mathlib.Geometry.Euclid.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Logic.Basic
-import Mathlib.Probability.Basic
-import Mathlib.Probability.Independence
-import Mathlib.Tactic
-import Mathlib.Topology.Basic
-import data.real.basic
 
 namespace fraction_area_correct_l288_288976
 

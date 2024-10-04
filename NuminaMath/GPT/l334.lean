@@ -1,32 +1,4 @@
-import Complex
 import Mathlib
-import Mathlib.Algebra.GeomSum
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.NormedSpace.Basic
-import Mathlib.Analysis.SpecialFunctions.Log.Base
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Card
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Gcd.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Pi.Lemmas
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Sqrt
-import Mathlib.GraphTheory.Basic
-import Mathlib.NumberTheory.PrimeFactors
-import Mathlib.Prime
-import Mathlib.Probability.Distribution.Normal
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
 
 namespace normal_distribution_prob_l334_334217
 

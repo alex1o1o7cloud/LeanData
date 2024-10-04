@@ -1,36 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Basic
-import Mathlib.Algebra.Binomial
-import Mathlib.Algebra.Cubic
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.GCDMonoid
-import Mathlib.Algebra.Logarithm
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Analysis.Triangle.Basic
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Combinatorics
-import Mathlib.Data.Prob.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Dataset
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.LinearAlgebra.Matrix
-import Mathlib.Mathlib
-import Mathlib.Tactic
-import Real
-import algebra.module.pi
-import data.complex.basic
-import data.list.basic
-import data.nat.basic
 
 namespace gcd_digits_le_3_l705_705801
 

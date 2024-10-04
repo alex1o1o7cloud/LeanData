@@ -1,33 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.ArithmeticSeries
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order.Field
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.SpecialFunctions.Exp
-import Mathlib.Analysis.SpecialFunctions.ExpLog
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.List.Perm
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Lcm
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Real.Angle
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.LinearAlgebra.Determinant
-import Mathlib.LinearAlgebra.Matrix.Basic
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Probability.ProbabilitySpace
-import Mathlib.Real.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Topology.ContinuousFunction.Basic
-import tactic
 
 namespace four_digit_palindrome_prob_divisible_by_11_prob_four_digit_palindrome_divisible_by_11_is_one_l645_645760
 

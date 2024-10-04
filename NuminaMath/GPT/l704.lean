@@ -1,33 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.CharP.Basic
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.FieldPower
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order.Field
-import Mathlib.Algebra.Quadratic
-import Mathlib.Analysis.Asymptotics.Asymptotics
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.NormedSpace.Basic
-import Mathlib.Analysis.SpecialFunctions.ExpLog
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Data.Bool
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Finset.Interval
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Probability.ProbabilityMassFunction
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Rat.Notation
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Intervals
-import Mathlib.Init.Data.Nat.Basic
-import Mathlib.MeasureTheory.Measure.Space
-import Mathlib.Probability.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
-import Mathlib.Time
 
 namespace parabola_directrix_l704_704600
 

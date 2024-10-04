@@ -1,30 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.Combinatorics
-import Mathlib.Algebra.EuclideanDomain.Basic
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Analysis.Calculus.MeanValue
-import Mathlib.Analysis.SpecialFunctions.ExpLog
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.Combinations
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Rat.Defs
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Integral
-import Mathlib.NumberTheory.Factorization.Basic
-import Mathlib.NumberTheory.Wilson
-import Mathlib.Probability.Basic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Linarith
 
 namespace pythagorean_theorem_isosceles_right_triangle_l381_381689
 

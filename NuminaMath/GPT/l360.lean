@@ -1,33 +1,4 @@
-import Analysis.SpecialFunctions.Pow
-import Analysis.SpecialFunctions.Trigonometric
 import Mathlib
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.Combinatorics.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Analysis.Calculus.Graphs
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.List.Perm
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Probability.Conditional
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Angle
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.LinearAlgebra.Basic
-import Mathlib.MeasureTheory.ProbabilityTheory.Basic
-import Mathlib.NumberTheory.ArithmeticFunctions
-import Mathlib.Probability.Conditional
-import Mathlib.Tactic
-import Mathlib.Topology.EuclideanSpace.Basic
 
 namespace people_per_seat_l360_360624
 

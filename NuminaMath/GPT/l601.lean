@@ -1,38 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Combinatorics
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Module.Matrix
-import Mathlib.Algebra.Order
-import Mathlib.Algebra.Order.Group.Defs
-import Mathlib.Analysis.Calculus.Fderiv
-import Mathlib.Analysis.Calculus.Limits
-import Mathlib.Analysis.NormedSpace.Basic
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Data.Complex.Exponential
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Fintype.Perm
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Digits
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Polynomial.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry
-import Mathlib.Probability.Probabilities
-import Mathlib.Probability.Probability_Mass_Function
-import Mathlib.Probability.Probability_Space
-import Mathlib.Tactic
-import Mathlibimportant_rectangles :=
-import data.nat.prime
-import tactic
 
 namespace find_a_and_b_l601_601349
 

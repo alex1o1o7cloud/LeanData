@@ -1,36 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.GroupPower
-import Mathlib.Algebra.Order
-import Mathlib.Algebra.Parity
-import Mathlib.Algebra.Pow
-import Mathlib.Analysis.SpecialFunctions.Series
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Data.Bool.Basic
-import Mathlib.Data.Fin
-import Mathlib.Data.Finset
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Digits
-import Mathlib.Data.Nat.Gcd
-import Mathlib.Data.Nat.Lcm
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.NumberTheory.Lcm
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Tactic
-import Mathlib.Tactic.LibrarySearch
-import ProbabilityTheory
-import data.nat.gcd
 
 namespace milk_left_l182_182057
 

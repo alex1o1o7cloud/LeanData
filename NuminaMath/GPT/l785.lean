@@ -1,33 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.GeometricAlgebra
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Matrix
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Order.AbsoluteValue
-import Mathlib.Algebra.Polynomial.Basic
-import Mathlib.Analysis.Calculus.FDeriv
-import Mathlib.Analysis.Geometry.Geometry2D
-import Mathlib.Analysis.NormedSpace.Basic
-import Mathlib.Analysis.SpecialFunctions.Integrals
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.List.OfFn
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Digits
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Sqrt
-import Mathlib.Data.Set
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.EuclideanDistance
-import Mathlib.LinearAlgebra.Basic
-import Mathlib.Logic.Basic
-import Mathlib.MeasureTheory.AeMeasurable
-import Mathlib.Tactic
-import Mathlib.Topology.Constructions
 
 namespace age_of_B_l785_785305
 

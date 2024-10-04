@@ -1,37 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.Field.Defs
-import Mathlib.Algebra.GCDMonoid.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Log
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.QuadraticDiscriminant
-import Mathlib.Analysis.InnerProductSpace.Basic
-import Mathlib.Analysis.NormedSpace.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.Permutations
-import Mathlib.Combinatorics.Pigeonhole
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Factorial.Basic
-import Mathlib.Data.Polynomial.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Triangle.Basic
-import Mathlib.Geometry.Triangle.Circumcenter
-import Mathlib.GroupTheory.Perm.Group
-import Mathlib.NumberTheory.ModularArithmetic
-import Mathlib.Probability.Basic
-import Mathlib.ProbabilityTheory.Basic
-import Mathlib.Tactic
-import data.real.basic
 
 namespace find_angle_A_max_triangle_area_l776_776252
 

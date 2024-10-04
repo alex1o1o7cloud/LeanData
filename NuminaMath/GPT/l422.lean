@@ -1,36 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Matrix.Determinant
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Order.Floor
-import Mathlib.Algebra.Perfect
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.SpecialFunctions.Combinatorial
-import Mathlib.Analysis.SpecialFunctions.Deriv
-import Mathlib.Analysis.SpecialFunctions.Exp.Log
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Digits
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Circumcenter
-import Mathlib.LinearAlgebra.Basic
-import Mathlib.Logic.Basic
-import Mathlib.MeasureTheory.Integral.IntervalIntegral
-import Mathlib.Probability.Basic
-import Mathlib.Probability.ConditionalProbability
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Linarith
 
 namespace symmetric_point_on_altitude_l422_422540
 

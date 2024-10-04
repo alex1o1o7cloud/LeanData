@@ -1,30 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Arithmetic
-import Mathlib.Algebra.Basic
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Analysis.Trigonometry.Basic
-import Mathlib.Combinatorics.SimpleGraph.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Gcd
-import Mathlib.Data.Int.Parity
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Polynomial.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Rat.Defs
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Time
-import Mathlib.NumberTheory.Prime
-import Mathlib.Probability.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Lint.Library
-import Mathlib.Topology.Algebra.Order.IntermediateValue
-import Real
 
 namespace solution_set_for_inequality_l11_11860
 

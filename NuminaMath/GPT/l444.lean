@@ -1,31 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Arithmetic
-import Mathlib.Algebra.Binomial
-import Mathlib.Algebra.GcdMonoid.Basic
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Weights
-import Mathlib.Algebra.Order.ArithmeticMean
-import Mathlib.Algebra.Order.Field
-import Mathlib.Analysis.Calculus.Continuous
-import Mathlib.Analysis.Geometry.Euclidean.Basic
-import Mathlib.Analysis.SpecialFunctions.Polynomials
-import Mathlib.Analysis.SpecialFunctions.Pow
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Analysis.Trigonometry
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Perm.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Geometry.Euclid.Triangle.Basic
-import Mathlib.Tactic
-import Mathlib.Topology.ContinuousFunction
-import data.real.basic
 
 namespace solve_fx_eq_6_l444_444136
 

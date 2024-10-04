@@ -1,33 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Binomial
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Logarithm
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Algebra.Trigonometry.CosSin
-import Mathlib.Analysis.Calculus.Continuity
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.Combinations
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Nat.GCD.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Polynomial.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.NumberTheory.Basic
-import Mathlib.NumberTheory.ModularArithmetic
-import Mathlib.Probability.ProbabilitySpaces
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
-import data.nat.digits
 
 namespace describe_difference_of_squares_l259_259235
 

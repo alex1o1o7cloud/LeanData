@@ -1,33 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Polynomial
-import Mathlib.Algebra.Sequences.Arithmetic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Matrix.Notation
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Fib
-import Mathlib.Data.Nat.ModEq
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Vec
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Circumcircle
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.Init.Nat
-import Mathlib.LinearAlgebra.Basic
-import Mathlib.LinearAlgebra.Matrix
-import Mathlib.Probability
-import Mathlib.Probability.Basic
-import Mathlib.Probability.Probability
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Simp
 
 namespace total_apples_picked_l823_823497
 

@@ -1,35 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.BigOperators.Fin
-import Mathlib.Algebra.GCDMonoid.Basic
-import Mathlib.Algebra.GroupPower.Basic
-import Mathlib.Algebra.Probability
-import Mathlib.Analysis.Calculus.Extrema
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Partitions
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Prob.Basic
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Set.Finite
-import Mathlib.Data.String.Basic
-import Mathlib.Data.ZMod.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.NumberTheory.Prime
-import Mathlib.Probability.ProbabilityMassFunction.Finite
-import Mathlib.ProbabilityTheory.Independent
-import Mathlib.Tactic
-import Mathlib.Tactic.LibrarySearch
-import analysis.calculus.mean_value
-import data.polynomial
 
 namespace Roe_saved_10_per_month_l511_511809
 

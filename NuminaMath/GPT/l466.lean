@@ -1,33 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order.Floor
-import Mathlib.Analysis.Geometry.PolarCoord
-import Mathlib.Analysis.InnerProductSpace.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Data.Complex.Exponential
-import Mathlib.Data.Equiv.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Mod
-import Mathlib.Data.Int.ModEq
-import Mathlib.Data.List.Permutation
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Geometry.Euclidean.Geometry
-import Mathlib.MeasureTheory.ProbabilityMassFunction
-import Mathlib.Probability.Basic
-import Mathlib.Probability.Independence
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.LibrarySearch
-import Mathlib.Topology.Basic
 
 namespace ad_lt_bc_l466_466010
 

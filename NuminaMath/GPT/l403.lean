@@ -1,33 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order.Archimedean
-import Mathlib.Algebra.Trigonometry
-import Mathlib.Analysis.Calculus.Parametric
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Card
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Int.ModDef
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Nat.ModEq
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Set.Finite
-import Mathlib.Probability.Percent
-import Mathlib.Statistics.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
 
 namespace max_value_of_b_exists_l403_403090
 

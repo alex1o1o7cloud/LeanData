@@ -1,30 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Combinatorics
-import Mathlib.Algebra.Field.Defs
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.GroupPower
-import Mathlib.Algebra.Parity
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.Logarithm
-import Mathlib.Analysis.Calculus.Polynomial
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.Compositions
-import Mathlib.Combinatorics.SimpleGraph.Cycle
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Graph.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.SinCos
-import Mathlib.Data.Set.Basic
-import Mathlib.Order.Floor
-import Mathlib.Probability.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.IntervalCases
 
 namespace number_of_two_digit_primes_with_units_digit_three_l765_765216
 

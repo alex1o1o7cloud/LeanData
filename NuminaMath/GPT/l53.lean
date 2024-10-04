@@ -1,34 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators.Order
-import Mathlib.Algebra.Group
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.LinearAlgebra.Basic
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Order.Field
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.Fderiv
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.Perm
-import Mathlib.Combinatorics.SimpleGraph.Adjacent
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Angle
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Set.Finite
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.LinearAlgebra.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
 
 namespace fraction_sent_afternoon_l53_53304
 

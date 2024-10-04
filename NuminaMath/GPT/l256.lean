@@ -1,30 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.AbsoluteValue
-import Mathlib.Analysis.NormedSpace.Basic
-import Mathlib.Analysis.SmoothMonotone
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Matrix.Finite
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Combinatorics
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Polynomial.Basic
-import Mathlib.Data.Probability
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Sqrt
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.VectorBasis
-import Mathlib.Geometry.Euclidean
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.LinearAlgebra.Matrix.Basis
-import Mathlib.LinearAlgebra.VectorSpace
-import Mathlib.Probability
-import Mathlib.Probability.Independence
-import Mathlib.Tactic
 
 namespace magnitude_a_plus_2b_l256_256877
 

@@ -1,36 +1,4 @@
 import Mathlib
-import Mathlib.Algebra
-import Mathlib.Algebra.Combinatorics
-import Mathlib.Algebra.Factorial
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Order
-import Mathlib.Algebra.Order.Automation
-import Mathlib.Algebra.Order.Function
-import Mathlib.Algebra.Polynomial.BigOperators
-import Mathlib.Algebra.Quadratic
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.Slope
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Data.Complex.Exponential
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Matrix.Notation
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Probability.ProbSpace
-import Mathlib.Data.Rat
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Set.Finite
-import Mathlib.Geometry.Euclidean
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Init.Function
-import Mathlib.LinearAlgebra.AffineSpace.Basic
-import Mathlib.Tactic
-import data.real.basic
 
 namespace correct_conclusions_l166_166004
 

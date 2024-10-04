@@ -1,30 +1,4 @@
-import Lean.Meta
 import Mathlib
-import Mathlib.Algebra
-import Mathlib.Algebra.ArithmeticSeries
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Trigonometry
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.Fderiv
-import Mathlib.Analysis.SpecialFunctions.Basic
-import Mathlib.Combinatorics.Catalan
-import Mathlib.Data.Finset
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Nat.ModEq
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.Logic.Basic
-import Mathlib.NumberTheory.ArithmeticFunction
-import Mathlib.NumberTheory.Basic
-import Mathlib.Probability
-import Mathlib.Tactic
-import Mathlib.Topology.MetricSpace.Basic
 
 namespace trajectory_eq_circle_through_fixed_points_l304_304396
 

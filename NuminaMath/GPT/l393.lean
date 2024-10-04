@@ -1,36 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.Floor
-import Mathlib.Algebra.Group.Commutative
-import Mathlib.Algebra.Order.Field
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.LocalExtr
-import Mathlib.Analysis.SpecialFunctions.Integrals
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Basic
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Complex.Exponential
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Mod
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Perm.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Sqrt
-import Mathlib.Data.Set.Basic
-import Mathlib.LinearAlgebra.Matrix.Determinant
-import Mathlib.Probability.Basic
-import Mathlib.Probability.Conditional
-import Mathlib.Probability.Independence.Basic
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Probability.ProbabilityMassFunction.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
 
 namespace a_n_formula_T_n_sum_l393_393266
 

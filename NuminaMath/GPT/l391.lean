@@ -1,32 +1,4 @@
-import Complex
 import Mathlib
-import Mathlib.Algebra.Factorial.Basic
-import Mathlib.Algebra.GeomSum
-import Mathlib.Analysis.Complex.Basic
-import Mathlib.Analysis.Polynomial.Basic
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.ModEq
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Nat.Factorization.Basic
-import Mathlib.Data.Nat.LCM
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Rat.Defs
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Sqrt
-import Mathlib.Data.Set.Basic
-import Mathlib.Init.Data.Int.Basic
-import Mathlib.Integral
-import Mathlib.NumberTheory.Prime
-import Mathlib.Probability.Basic
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
 
 namespace segments_length_bound_l391_391631
 

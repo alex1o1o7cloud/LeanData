@@ -1,35 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.Group
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order.Field.Basic
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.CombinatorialEquivalences
-import Mathlib.Combinatorics.Permutations
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.ModEq
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.NumberTheory.Basic
-import Mathlib.ProbTheory.Indep
-import Mathlib.Probability.Basic
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.ProbabilityTheory.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.LibrarySearch
-import Mathlib.Tactic.Linarith
-import Real
 
 namespace value_of_M_l306_306711
 

@@ -1,32 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.GCDMonoid.Basic
-import Mathlib.Algebra.Gcd
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Order.Field
-import Mathlib.Algebra.PrimeFactors
-import Mathlib.Analysis.Calculus.ContDiff
-import Mathlib.Analysis.InnerProductSpace.Basic
-import Mathlib.Analysis.Optimization
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.Compositions
-import Mathlib.Data.Finset
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Combinatorics.Basic
-import Mathlib.Data.Prob.Basic
-import Mathlib.Data.Probability
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Rat.Defs
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Set.Finite
-import Mathlib.LinearAlgebra.FiniteDimensional
-import Mathlib.Probability.Basic
-import Mathlib.Tactic
-import ProbabilityTheory
-import Real
 
 namespace find_phi_l781_781195
 

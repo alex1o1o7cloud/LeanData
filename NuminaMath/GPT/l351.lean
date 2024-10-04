@@ -1,27 +1,4 @@
-import Complex
 import Mathlib
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Pigeonhole
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Analysis.Trigonometry.Sin
-import Mathlib.Combinatorics.SimpleGraph.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Int.Mod
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Nat.Lcm
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Logarithm
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Set.Finite
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Linarith
 
 namespace circle_area_l351_351100
 

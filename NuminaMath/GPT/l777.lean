@@ -1,36 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.GroupPower
-import Mathlib.Algebra.Matrix.Determinant
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Analysis.Complex.Basic
-import Mathlib.Analysis.Convex.Basic
-import Mathlib.Analysis.Geometry.Circle
-import Mathlib.Analysis.NormedSpace.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Complex
-import Mathlib.Combinatorics.CombinatorialGame
-import Mathlib.Data.Finset
-import Mathlib.Data.List.Mathlib
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Rat.Defs
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Geometry.Polygon.Basic
-import Mathlib.Geometry.Projective
-import Mathlib.Logic.Basic
-import Mathlib.MeasureTheory.ProbabilityMassFunction
-import Mathlib.Probability
-import Mathlib.Probability.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Topology.Basic
-import Mathlib.Topology.MetricSpace.Basic
-import data.set
 
 namespace subset_three_sum_zero_l777_777574
 

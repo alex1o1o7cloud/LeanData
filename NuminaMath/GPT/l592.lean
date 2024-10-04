@@ -1,28 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.GroupPower
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Combinatorics
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Sum
-import Mathlib.Data.Rat
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Interval
-import Mathlib.Geometry.Euclidean.Triangle.Basic
-import Mathlib.Integration
-import Mathlib.Probability
-import Mathlib.Probability.Basic
-import Mathlib.Set
-import Mathlib.Tactic
-import Mathlib.Topology.Instances.Real
-import Real
 
 namespace circle_center_and_tangency_l592_592382
 

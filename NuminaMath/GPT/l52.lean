@@ -1,25 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Equation
-import Mathlib.Algebra.Group
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.InnerProductSpace.Basic
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.GCD
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.NumberTheory.Basic
-import Mathlib.NumberTheory.Padics
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Linarith
 
 namespace harriet_distance_approx_l52_52360
 

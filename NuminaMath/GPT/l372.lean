@@ -1,37 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.Floor
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order
-import Mathlib.Algebra.Polynomial.Basic
-import Mathlib.Algebra.QuadraticEquation
-import Mathlib.Analysis.Calculus.Translation
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Composition
-import Mathlib.Combinatorics.SimpleGraph.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Int.Gcd
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Polynomial.Basic
-import Mathlib.Data.Polynomial.Vieta
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Time
-import Mathlib.Data.VectorSpace
-import Mathlib.Geometry.Euclidean.Circumcircle
-import Mathlib.Probability.Basic
-import Mathlib.Probability.Distributions
-import Mathlib.Probability.Identities
-import Mathlib.Probability.Independence
-import Mathlib.Probability.ProbabilityTheory
-import Mathlib.Tactic
-import Mathlib.Topology.Basic
-import Mathlib.Trigonometry.Triangle
 
 namespace typing_lines_in_10_minutes_l372_372889
 

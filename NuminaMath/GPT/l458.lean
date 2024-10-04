@@ -1,29 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.LCM
-import Mathlib.Algebra.Polynomial
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.NormedSpace.Basic
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Graph.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Matrix.Notation
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Digits
-import Mathlib.Data.Polynomial
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Probability.Independence
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Tactic
-import Mathlib.Topology.Basic
-import Mathlib.Topology.MetricSpace.Basic
-import Mathlib.Topology.SubsetProperties
-import Std.Data.HashSet
-import tactic
 
 namespace expenditure_on_concrete_blocks_l458_458801
 

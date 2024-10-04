@@ -1,33 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.ArithmeticInfo
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.Divisors
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Vector
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.Limits
-import Mathlib.Analysis.SpecialFunctions.Integrals
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Combinatorics.Combinatorics
-import Mathlib.Combinatorics.Composition
-import Mathlib.Data.Finset
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Matrix.Notation
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Nat.Parity
-import Mathlib.Data.Polynomial.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Logic.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.FieldSimp
-import Mathlib.Tactic.Linarith
 
 namespace lucky_numbers_count_l554_554656
 

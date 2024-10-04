@@ -1,27 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.ContinuedFractions
-import Mathlib.Algebra.Floor
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Quadratics
-import Mathlib.Analysis.Calculus.ContinuousOn
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Sqrt
-import Mathlib.Data.Vector
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.LibrarySearch
-import Mathlib/Data/Matrix/Basic
 
 namespace positive_difference_of_sums_l820_820292
 

@@ -1,26 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Quadratic.Discriminant
-import Mathlib.Analysis.Complex.Basic
-import Mathlib.Analysis.SpecialFunctions.Interval
-import Mathlib.Combinatorics.Pigeonhole
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Polynomial
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Geometry.Euclidean.Circumcircle
-import Mathlib.Geometry.Triangle.IncenterExcenter
-import Mathlib.MeasureTheory.Pigeonhole
-import Mathlib.Probability
-import Mathlib.Probability.Basic
-import Mathlib.RingTheory.Fractions
-import Mathlib.Tactic
 
 namespace line_through_two_points_l93_93275
 

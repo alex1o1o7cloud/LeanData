@@ -1,37 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Binomial
-import Mathlib.Algebra.Factorial
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.GeomSeries
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Probability
-import Mathlib.Algebra.Quaternion
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Analysis.Complex.Basic
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Nat.Pow
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Set.Interval
-import Mathlib.Geometry.Ellipse
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.NumberTheory.GCD
-import Mathlib.Probability.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.LibrarySearch
 
 namespace num_valid_codes_l370_370352
 

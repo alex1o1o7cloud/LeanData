@@ -1,32 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Arithmetic
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.EuclideanDomain.Dvd
-import Mathlib.Algebra.GeomSum
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Group.Powers
-import Mathlib.Algebra.Order.AbsoluteValue
-import Mathlib.Algebra.Order.Field
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Analysis.Calculus.Fderiv
-import Mathlib.Analysis.Calculus.Fderiv.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.LinearAlgebra.Matrix
-import Mathlib.LinearAlgebra.VecStr
-import Mathlib.Order.Basic
-import Mathlib.SetTheory.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
 
 namespace cylinder_volume_ratio_l686_686222
 

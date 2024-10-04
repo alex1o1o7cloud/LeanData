@@ -1,29 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.GeomSum
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Quotients
-import Mathlib.Analysis.Calculus.Deriv.Basic
-import Mathlib.Analysis.Convex.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.List
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Div
-import Mathlib.Data.Polynomial.Basic
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Rat.Defs
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Sqrt
-import Mathlib.Data.Set.Functions
-import Mathlib.Geometry.Circle
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.Geometry.Line
-import Mathlib.Geometry.Triangle
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Real
 
 namespace smallest_number_with_prime_factors_of_24_l100_100933
 

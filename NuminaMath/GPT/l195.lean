@@ -1,34 +1,4 @@
 import Mathlib
-import Mathlib.Algebra
-import Mathlib.Algebra.Arithmetic
-import Mathlib.Algebra.Complex.Basic
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.GcdMonoid.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Order.Field
-import Mathlib.Algebra.Trigonometry
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Combinatorics.Factorial
-import Mathlib.Data.Nat.Digits
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Init.Data.Int.Basic
-import Mathlib.Init.Data.Nat.Lemmas
-import Mathlib.Logic.Basic
-import Mathlib.Probability.Basic
-import Mathlib.Probability.Probability
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.SetTheory.Cardinal
-import Mathlib.Tactic
-import Real
-import data.real.basic
 
 namespace ram_krish_task_completion_l195_195135
 

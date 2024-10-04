@@ -1,35 +1,4 @@
-import Math.Ordinal
 import Mathlib
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Floor
-import Mathlib.Algebra.QuadraticNumberFields
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Analysis.InnerProductSpace.Basic
-import Mathlib.Analysis.MeanInequalities
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Matrix
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Gcd
-import Mathlib.Data.Nat.Parity
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Polynomial.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Set.Finite
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Geometry.Plane
-import Mathlib.Probability
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Topology.MetricSpace.Basic
 
 namespace geometric_seq_necessary_not_sufficient_l7_7160
 

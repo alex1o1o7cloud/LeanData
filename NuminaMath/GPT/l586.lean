@@ -1,28 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.Logarithm
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Squarefree
-import Mathlib.Analysis.Complex.Basic
-import Mathlib.Analysis.Geometry
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Graph.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Finite
-import Mathlib.Data.Set.Pointwise
-import Mathlib.Init.Data.Int.Basic
-import Mathlib.Init.Function
-import Mathlib.Probability.Conditional
-import Mathlib.Probability.Distribution
-import Mathlib.Tactic
-import Mathlib.Topology.Basic
-import Mathlib.Topology.MetricSpace.Basic
 
 namespace probability_less_than_one_third_l586_586130
 

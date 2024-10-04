@@ -1,34 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.GeomSeq
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Order
-import Mathlib.Algebra.Order.Module
-import Mathlib.Algebra.Order.Real
-import Mathlib.Algebra.QuadraticDiscriminant
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.Integral
-import Mathlib.Analysis.NormedSpace.Basic
-import Mathlib.Analysis.SpecialFunctions.ExpectedValue
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Nat.Base
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Log
-import Mathlib.Data.Set
-import Mathlib.Data.Set.Finset
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.LinearAlgebra.Basic
-import Mathlib.MeasureTheory.Measure.Lebesgue
-import Mathlib.Probability.Basic
-import Mathlib.Probability.ConditionalProbability
-import Mathlib.Probability.Distribution.Binomial
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
 
 namespace claire_balloons_l656_656064
 

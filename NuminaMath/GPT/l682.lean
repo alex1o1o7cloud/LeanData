@@ -1,28 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.FactorialRing
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.Fderiv
-import Mathlib.Analysis.Calculus.Integrals
-import Mathlib.Analysis.Calculus.MeanValue
-import Mathlib.Analysis.MeanInequalities
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Data.Finset
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Nat.ModEq
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.NumberTheory.ArithmeticFunction
-import Mathlib.Probability.Basic
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
-import algebra.geom_sum
-import data.real.basic
-import data.real.sqrt
 
 namespace angle_CBA_l682_682251
 

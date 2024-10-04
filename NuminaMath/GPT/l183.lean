@@ -1,33 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Arithmetic
-import Mathlib.Algebra.Floor
-import Mathlib.Algebra.GeomSum
-import Mathlib.Algebra.GroupPower.Basic
-import Mathlib.Analysis.Calculus.Distance
-import Mathlib.Analysis.Calculus.Inverse
-import Mathlib.Analysis.Calculus.MeanValue
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Sort
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Factors
-import Mathlib.Data.Nat.Gcd
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Polynomial.Basic
-import Mathlib.Data.Prob
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Rat.Defs
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Intervals
-import Mathlib.Init.Data.Nat.Basic
-import Mathlib.Integration
-import Mathlib.Probability
-import Mathlib.Probability.Basic
-import Mathlib.Tactic
-import data.nat.gcd
 
 namespace min_area_right_triangle_l183_183203
 

@@ -1,37 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Combinatorics.Factorial
-import Mathlib.Algebra.GeomSum.Basic
-import Mathlib.Algebra.Order.Rounding
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Analysis.Geometry.Circle
-import Mathlib.Analysis.Limits.Basic
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.CombinatorialAlg
-import Mathlib.Combinatorics.CombinatorialLibrary
-import Mathlib.Combinatorics.SimpleGraph
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Fin.FinTuple.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Int.ModEq
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.ModEq
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Polygon.Basic
-import Mathlib.Init.Data.Nat.Basic
-import Mathlib.NumberTheory.GCD
-import Mathlib.Probability
-import Mathlib.Tactic
-import Mathlib.Tactic.SimP
 
 namespace complex_pow_sum_l447_447944
 

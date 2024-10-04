@@ -1,37 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Arithmetic
-import Mathlib.Algebra.EqLemmas
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Polynomial.BigOperators
-import Mathlib.Algebra.Vector
-import Mathlib.Analysis.Calculus.ContDiff
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.Polynomials
-import Mathlib.Analysis.Calculus.TangentCone
-import Mathlib.Analysis.NormedSpace.Basic
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Angle
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Geometry.Manifold.RealCoordinatePlane
-import Mathlib.NumberTheory.Prime
-import Mathlib.Probability.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Linarith
-import Mathlib.Topology.Basic
-import Mathlib.Topology.EuclideanSpace.Basic
 
 namespace valid_pairs_count_l445_445781
 

@@ -1,16 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.ArithmeticSeries
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.Fderiv
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.Permutations
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Probability
-import Mathlib.Tactic.Basic
 
 namespace primes_between_50_and_60_l400_400601
 

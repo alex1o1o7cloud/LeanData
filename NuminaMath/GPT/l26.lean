@@ -1,35 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators.Ring
-import Mathlib.Algebra.Factorial
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.GeomSeq
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.GroupPower.Identities
-import Mathlib.Algebra.Polynomial
-import Mathlib.Analysis.SpecialFunctions.Pow
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.Combination
-import Mathlib.Combinatorics.Combinations
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Int.GCD
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Pi.Algebra
-import Mathlib.Data.Polynomial.Basic
-import Mathlib.Data.Probability.Probability
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean
-import Mathlib.Logic.Basic
-import Mathlib.Logic.Function.Basic
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Tactic
-import Mathlib.Topology.Basic
 
 namespace solve_system_unique_solution_l26_26262
 

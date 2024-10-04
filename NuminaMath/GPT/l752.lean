@@ -1,30 +1,4 @@
-import Algebra.Trig
-import Complex.Basic
 import Mathlib
-import Mathlib.Algebra.Arithmetic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Log
-import Mathlib.Algebra.Logarithm
-import Mathlib.Analysis.SpecialFunctions.Pow
-import Mathlib.Data.Finset
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Factorial.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Defs
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.LinearAlgebra.Matrix
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
-import Mathlib.Topology
-import data.finset.basic
-import data.fintype.basic
-import data.nat.basic
-import data.rat.basic
-import group_theory.perm.cycles
 
 namespace eighth_number_is_148_l752_752869
 

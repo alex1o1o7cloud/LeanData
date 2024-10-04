@@ -1,22 +1,4 @@
-import Lean
 import Mathlib
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Probability.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.SimpleGraph.BasicLub
-import Mathlib.Data.Finset
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set
-import Mathlib.Geometry.Circle.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Geometry.Euclidean.Misc
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.LinearAlgebra.Matrix.Determinant
-import Real
 
 namespace part1_part2_l429_429942
 

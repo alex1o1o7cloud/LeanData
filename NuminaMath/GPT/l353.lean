@@ -1,37 +1,4 @@
-import Data.Int.Basic
-import Data.Real.Basic
 import Mathlib
-import Mathlib.Algebra.ArithmeticSeq
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.Binomial
-import Mathlib.Algebra.Linear.Basic
-import Mathlib.Algebra.Order.Basic
-import Mathlib.Algebra.Order.Field
-import Mathlib.Algebra.Quadratics
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.Monotonicity
-import Mathlib.Analysis.SpecialFunctions.Exponential
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Analysis.SpecialFunctions.Pow.Real
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Analysis.Trigonometry
-import Mathlib.Combinatorics.CombinatorialProofs
-import Mathlib.Data.Complex.Exponential
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Set.Interval
-import Mathlib.LinearAlgebra.Matrix
-import Mathlib.Probability.ProbabilitySpace
-import Mathlib.Tactic
-import Mathlib.Tactic.Sorry
-import Mathlib.Topology.Basic
 
 namespace min_ratio_bd_l353_353310
 

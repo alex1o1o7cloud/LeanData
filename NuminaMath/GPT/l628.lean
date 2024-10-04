@@ -1,34 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.ArithmeticSeries
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.Binomial
-import Mathlib.Algebra.Geometry
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Order.Group
-import Mathlib.Algebra.Polynomial
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.SpecialFunctions.Continuity
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.Derangements.Basic
-import Mathlib.Combinatorics.SimpleGraph.Cliques
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Digits
-import Mathlib.Data.Prob.Probability
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Sqrt
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Set.Finite
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.Tactic
-import Mathlib.Tactic.LibrarySearch
-import Mathlib.Tactic.Linarith
-import Mathlib.Topology.Algebra.Order.Basic
-import Mathlib.Topology.LocalExtr.Set
-import analysis.special_functions.exp_log
-import data.real.sqrt
 
 namespace trailing_zeroes_500_factorial_l628_628493
 

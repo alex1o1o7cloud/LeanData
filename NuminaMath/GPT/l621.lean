@@ -1,33 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Order.Floor
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Complex.Basic
-import Mathlib.Analysis.SpecialFunctions.Log.Base
-import Mathlib.Basic
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.List.Perm
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Combinatorics
-import Mathlib.Data.Nat.ModEq
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Set.Finite
-import Mathlib.Geometry.Euclidean.Circum
-import Mathlib.Geometry.Euclidean.IsodynamicPoint
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.Order.CompleteLattice
-import Mathlib.Probability.Basic
-import Mathlib.Probability.Independence
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Tactic
-import Mathlib.Topology.Basic
 
 namespace average_rate_of_decline_predicted_price_2015_l621_621399
 

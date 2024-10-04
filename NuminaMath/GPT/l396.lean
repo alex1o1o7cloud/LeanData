@@ -1,35 +1,4 @@
-import Data.Nat.ModEq
 import Mathlib
-import Mathlib.Algebra.ArithmeticSequence
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.GCDMonoid.Basic
-import Mathlib.Algebra.GeomSum
-import Mathlib.Algebra.Polynomial
-import Mathlib.Algebra.Set'sComplete
-import Mathlib.Algebra.Trigonometry
-import Mathlib.Analysis
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Sum
-import Mathlib.Data.Nat.Combinatorics.Basic
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Nat.Modulo
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.Probability.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.IntervalCases
-import Mathlib.Tactic.Linarith
-import Real
 
 namespace savings_by_end_of_2019_l396_396633
 

@@ -1,28 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.GeomSum
-import Mathlib.Analysis.NormedSpace.Real
-import Mathlib.Analysis.Probability.ProbabilityMassFunction
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Nat.Base
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Polynomial
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Integration
-import Mathlib.NumberTheory.UniqueFactorizationDomain
-import Mathlib.Probability
-import Mathlib.RingTheory.Polynomial
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
 
 namespace calculate_expression_l711_711122
 

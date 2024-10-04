@@ -1,37 +1,4 @@
-import BigOperators
 import Mathlib
-import Mathlib.Algebra.Arithmetic.Finite
-import Mathlib.Algebra.Combinatorics.Basic
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Order.Basic
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Algebra.SquareRoot
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.DerivBound
-import Mathlib.Analysis.Calculus.Fderiv
-import Mathlib.Analysis.Calculus.FderivAnalytic
-import Mathlib.Analysis.Geometry
-import Mathlib.Analysis.NormedSpace.Basic
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.ModEq
-import Mathlib.Data.Nat.Odd
-import Mathlib.Data.Nat.Pow
-import Mathlib.Data.Probability.MassFunction
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Init.Data.Nat.Basic
-import Mathlib.Logic.Basic
-import Mathlib.MeasureTheory.Integral.IntervalIntegral
-import Mathlib.Probability.Distribution.Normal
-import Mathlib.SetTheory.Sets.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
-import Mathlib.Topology.Trigonometric.Functions
 
 namespace integer_solution_exists_l244_244451
 

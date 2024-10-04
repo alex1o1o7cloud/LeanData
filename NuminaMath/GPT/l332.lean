@@ -1,36 +1,4 @@
-import Complex.Real
 import Mathlib
-import Mathlib.Algebra.AbsoluteValue
-import Mathlib.Algebra.Arithmetic
-import Mathlib.Algebra.Exponent
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order.Field
-import Mathlib.Analysis.Calculus.Inverse
-import Mathlib.Analysis.Convex.Hull.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Complex.Exponential
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Fintype.Card
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.Fib
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Irrational
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Set.Finite
-import Mathlib.Geometry.ConicSection.Basic
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.LinearAlgebra.Basic
-import Mathlib.Logic.Basic
-import Mathlib.Tactic
 
 namespace tan_of_triangle_eqn_l332_332987
 

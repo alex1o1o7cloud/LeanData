@@ -1,27 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Arithmetic
-import Mathlib.Algebra.Combinatorial.Binom
-import Mathlib.Algebra.Factorial.Basic
-import Mathlib.Algebra.Polynomial.Basic
-import Mathlib.Algebra.Ring
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Special_Functions.Trigonometric.Basic
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Polynomial.Division
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Logic.Basic
-import Mathlib.NumberTheory.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.LibrarySearch
-import Real
 
 namespace sum_of_youngest_and_oldest_cousins_l8_8094
 

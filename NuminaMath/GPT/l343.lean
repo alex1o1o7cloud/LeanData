@@ -1,44 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators.Finprod
-import Mathlib.Algebra.BigOperators.Ring
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Order.AbsoluteValue
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Analysis.SpecificLimits.Basic
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.SimpleGraph.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.List.Sort
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Matrix.Notation
-import Mathlib.Data.Nat.Base
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Set.Finite
-import Mathlib.Geometry.Triangle.Basic
-import Mathlib.GraphTheory.ChromaticNumber
-import Mathlib.LinearAlgebra.Matrix
-import Mathlib.Logic.Basic
-import Mathlib.Probability
-import Mathlib.Probability.Basic
-import Mathlib.Probability.Distribution.Bernoulli
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlibimportant_email_count =important_email_count =
 
 namespace solve_inequality_l343_343631
 

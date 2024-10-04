@@ -1,28 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.Limits
-import Mathlib.Analysis.SpecialFunctions
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Data.Graph
-import Mathlib.Data.Int.Mod
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Factors
-import Mathlib.Data.Nat.Pow
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Polynomial
-import Mathlib.Data.Polynomial.Basic
-import Mathlib.Data.Probability
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Tactic
-import Mathlib.Tactic.LibrarySearch
-import Mathlib.Topology.MetricSpace.Basic
 
 namespace max_servings_l472_472027
 

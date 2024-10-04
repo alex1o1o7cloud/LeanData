@@ -1,34 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators.Order
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.GeomSum
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Order
-import Mathlib.Algebra.Order.AbsoluteValue
-import Mathlib.Algebra.Polynomial
-import Mathlib.Analysis.Convex.Function
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Combinatorics.SimpleGraph.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Sqrt
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Geometry.Euclidean.Triangle.Basic
-import Mathlib.Noncomputable
-import Mathlib.NumberTheory.Prime
-import Mathlib.Probability.Independent
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Probability.Theory
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
 
 namespace value_range_l178_178599
 

@@ -1,27 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators.Fin
-import Mathlib.Algebra.Factorial
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Algebra.Trigonometry.Basic
-import Mathlib.Analysis.Calculus.Fderiv.Basic
-import Mathlib.Analysis.Exponential
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Finset.Perm
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Nat.Factorization
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Tactic.Basic
-import Mathlib.Topology.EuclideanSpace.Basic
 
 namespace partial_fraction_product_zero_l579_579861
 

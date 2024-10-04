@@ -1,34 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Arithmetic
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Order.Field
-import Mathlib.Algebra.QuadraticDiscriminant
-import Mathlib.Analysis.Calculus.Basic
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Complex.Real
-import Mathlib.Analysis.SpecialFunctions.Pi
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.SimpleGraph
-import Mathlib.Data.Combinatorics
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.ConicSections.Basic
-import Mathlib.Geometry.Constructions.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Init.Function
-import Mathlib.MeasureTheory.ProbabilityMassFunction
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Topology.Basic
 
 namespace lcm_12_18_l298_298409
 

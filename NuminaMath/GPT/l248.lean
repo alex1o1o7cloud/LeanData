@@ -1,30 +1,4 @@
-import Algebra.Group.Defs
 import Mathlib
-import Mathlib.Algebra
-import Mathlib.Algebra.Divisibility
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.Order
-import Mathlib.Algebra.Polynomial
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Geometry
-import Mathlib.Analysis.Integral.IntervalIntegral
-import Mathlib.Analysis.SpecialFunctions.Exp
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Pi
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Geometry.Circle
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.ProbabilityTheory
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
-import Mathlib.Topology.LocalExtr
 
 namespace sqrt_factorial_product_l248_248114
 

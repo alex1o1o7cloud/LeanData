@@ -1,36 +1,4 @@
-import Complex
 import Mathlib
-import Mathlib.Algebra.AbsoluteValue
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.ConicSection
-import Mathlib.Algebra.Equation
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Quadratic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Pi
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.ArcTan
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Pointwise
-import Mathlib.Data.Real.Sqrt
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Polygon
-import Mathlib.Mathlib.RealCoordSpace.Transformation
-import Mathlib.NumberTheory.ArithmeticFunction
-import Mathlib.Probability.Basic
-import Mathlib.Stats.Probability.Basic
-import Mathlib.Topology.MetricSpace.Basic
 
 namespace lattice_points_on_hyperbola_l484_484487
 

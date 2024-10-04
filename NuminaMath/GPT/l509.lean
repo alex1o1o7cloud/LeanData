@@ -1,34 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Factorial
-import Mathlib.Algebra.FunctionalEquations
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.QuadraticDiscriminant
-import Mathlib.Analysis.Calculus.Fderiv
-import Mathlib.Analysis.Probability.Conditional
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.Trigonometry
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Polynomial
-import Mathlib.Data.Probability.ProbabilityMassFunction
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Rat.Defs
-import Mathlib.Data.Real.Basic
-import Mathlib.Geometry
-import Mathlib.MeasureTheory.Measure.Zero
-import Mathlib.Probability.Basic
-import Mathlib.Probability.Statistics.Normalize
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.LibrarySearch
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.Ring
-import Mathlib.Tactic.SolveByElim
-import Mathlib.Topology.Euclidean.InnerProduct
 
 namespace inverse_function_l509_509041
 

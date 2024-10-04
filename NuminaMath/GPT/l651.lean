@@ -1,26 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Factorial
-import Mathlib.Algebra.GCDMonoid.Basic
-import Mathlib.Algebra.Polynomial
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Geometry.Inversion
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Fintype.Perm
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Irrational
-import Mathlib.Data.Set.Basic
-import Mathlib.Probability.Basic
-import Mathlib.Probability.Conditional
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
-import mathlib
 
 namespace dark_squares_exceed_light_squares_by_one_l651_651030
 

@@ -1,37 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Basic
-import Mathlib.Algebra.Floor
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order
-import Mathlib.Analysis.Calculus.Continuous
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.Mathlib.ComplexAnalysis
-import Mathlib.Analysis.Geometry
-import Mathlib.Analysis.InnerProductSpace.Projection
-import Mathlib.Analysis.SpecialFunctions.Pow.Real
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Composition
-import Mathlib.Combinatorics.SimpleGraph.Basic
-import Mathlib.Data.Complex.Exponent
-import Mathlib.Data.Complex.Exponential
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Matrix
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Rat.Defs
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Finite
-import Mathlib.Data.Set.Pointwise
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.Tactic
-import Mathlib.Topology.Basic
-import Mathlib.Topology.SubsetProperty
-import data.rat.basic
 
 namespace georgie_running_distance_l48_48287
 

@@ -1,30 +1,4 @@
 import Mathlib
-import Mathlib.Algebra
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.Trigonometry.Chebyshev
-import Mathlib.Analysis.Complex.Basic
-import Mathlib.Analysis.Complex.Cauchy
-import Mathlib.Analysis.NormedSpace.Basic
-import Mathlib.Analysis.SpecialFunctions.ExpLog
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.Combinations
-import Mathlib.Combinatorics.Derangements.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.Combinatorics.Basic
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.EuclideanSpace
-import Mathlib.Data.Real.Polynomial
-import Mathlib.Data.Set.Basic
-import Mathlib.Probability.Basic
-import Mathlib.Tactic
 
 namespace jason_books_is_21_l21_21162
 

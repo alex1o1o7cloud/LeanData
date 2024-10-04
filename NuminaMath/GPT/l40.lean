@@ -1,35 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.GCDMonoid.Basic
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.LinearEquiv
-import Mathlib.Algebra.Prime
-import Mathlib.Algebra.Trigonometry.Identities
-import Mathlib.Analysis.Geometry.Euclidean.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.Clique
-import Mathlib.Combinatorics.Combination
-import Mathlib.Combinatorics.CombinatorialStructures
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Finset.Combinations
-import Mathlib.Data.Finset.Powerset
-import Mathlib.Data.Graph.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Probability.Independence
-import Mathlib.Probability.Inference
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Ring
-import Mathlib.Topology.Algebra.Order
-import data.real.basic
 
 namespace digits_difference_l40_40492
 

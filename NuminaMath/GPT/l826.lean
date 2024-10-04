@@ -1,37 +1,4 @@
-import Combinatorics
 import Mathlib
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.GeometryArith
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.ModEq
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Order.Field
-import Mathlib.Algebra.Polynomial
-import Mathlib.Analysis.SpecialFunctions.Exp
-import Mathlib.Combinatorics
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Complex.Exponential
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Sort
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.GCD.Basic
-import Mathlib.Data.Polynomial
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Vector
-import Mathlib.Data.Set.Finite
-import Mathlib.LinearAlgebra.Matrix
-import Mathlib.Logic.Basic
-import Mathlib.Probability.Independence
-import Mathlib.Tactic
-import Mathlib.Tactic.Sorry
-import Real
 
 namespace track_meet_girls_short_hair_l826_826071
 

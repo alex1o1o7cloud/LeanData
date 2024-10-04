@@ -1,29 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators.Ring
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Module.Pi
-import Mathlib.Algebra.Order.Field
-import Mathlib.Analysis.Calculus.Basic
-import Mathlib.Analysis.Calculus.FDeriv
-import Mathlib.Analysis.SpecialFunctions.Polynomial
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Geometry
-import Mathlib.Geometry.Triangle.Isosceles
-import Mathlib.Init.Data.Nat.Basic
-import Mathlib.Probability.Basic
-import Mathlib.Probability.Distribution
-import Mathlib.Probability.RandomVariable
-import Mathlib.Tactic
-import Mathlib.Tactic.LibrarySearch
-import Mathlib.Topology.Algebra.Order
 
 namespace number_of_positive_prime_divisors_of_factorial_l431_431689
 

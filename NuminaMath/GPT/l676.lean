@@ -1,35 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Abs
-import Mathlib.Algebra.Algebra.Basic
-import Mathlib.Algebra.GeomSum
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.LinearAlgebra.Determinant
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Analysis.Convex.Basic
-import Mathlib.Analysis.SpecialFunctions.Pow
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Combinatorics
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Base
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Nat.LCM
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Polynomial
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Geometry
-import Mathlib.Geometry.Euclidean.Angle
-import Mathlib.Geometry.Euclidean.Circle
-import Mathlib.MeasureTheory.ProbabilityTheory
-import Mathlib.Tactic
 
 namespace quadratic_coefficients_l676_676542
 

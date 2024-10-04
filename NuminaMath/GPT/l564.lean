@@ -1,36 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.AbsoluteValue
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Order
-import Mathlib.Algebra.Polynomial
-import Mathlib.Algebra.QuadraticEquations
-import Mathlib.Algebra.Trig
-import Mathlib.Analysis.Geometry.Circle
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.SimpleGraph.Connectivity
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finite
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Polynomial
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Circle.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Init.Data.Nat.Basic
-import Mathlib.Probability.Basic
-import Mathlib.Probability.Independence
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Topology.MetricSpace.Basic
 
 namespace digit_7_count_in_range_100_to_199_l564_564887
 

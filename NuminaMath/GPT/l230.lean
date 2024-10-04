@@ -1,35 +1,4 @@
-import Mathbin.Topology.Basic
 import Mathlib
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.Combinatorics.Basic
-import Mathlib.Algebra.Fractions
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.GroupPower.Basic
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Order
-import Mathlib.Algebra.Polynomial.Basic
-import Mathlib.Analysis.Geometry.Euclidean.Basic
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Combinatorics
-import Mathlib.Combinatorics.SimpleGraph.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Probability
-import Mathlib.Probability.Basic
-import Mathlib.Real.Basic
-import Mathlib.Tactic
-import Mathlib.Topology.Basic
 
 namespace gift_cost_l230_230903
 

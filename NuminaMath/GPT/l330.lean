@@ -1,30 +1,4 @@
-import Float
 import Mathlib
-import Mathlib.Algebra.AbsoluteValue
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Polynomial.GroupRingAction
-import Mathlib.Algebra.Polynomial.RingDivision
-import Mathlib.Analysis.SpecialFunctions.Pow
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.SimpleGraph.Basic
-import Mathlib.Combinatorics.SimpleGraph.Coloring
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Complex.Exponential
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Probability.Probability
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Init.Data.Nat
-import Mathlib.NumberTheory.PrimeFactors
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.SetTheory.Game
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
-import Probability.Gamma
 
 namespace find_n_l330_330359
 

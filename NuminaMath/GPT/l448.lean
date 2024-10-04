@@ -1,31 +1,4 @@
 import Mathlib
-import Mathlib.*
-import Mathlib.Algebra
-import Mathlib.Algebra.Factorial
-import Mathlib.Algebra.GroupPower.Basic
-import Mathlib.Analysis.Calculus.Area
-import Mathlib.Analysis.Geometry.Circumcircle
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Arccos
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Arcsin
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Int.Defs
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Defs
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Circumcircle
-import Mathlib.Init.Function
-import Mathlib.NumberTheory.Basic
-import Mathlib.Statistics.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
 
 namespace average_customers_per_table_l448_448599
 

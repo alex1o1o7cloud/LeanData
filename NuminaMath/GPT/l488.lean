@@ -1,29 +1,4 @@
-import Data.Finset
-import Data.Rat.Basic
 import Mathlib
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.GroupPower.Basic
-import Mathlib.Algebra.Order.Field
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Prob.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean
-import Mathlib.Geometry.Euclidean.Angles
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.MeasureTheory.ProbabilityMassFunction
-import Mathlib.Probability.Basic
-import Mathlib.Probability.Normal
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
 
 namespace probability_correct_l488_488544
 

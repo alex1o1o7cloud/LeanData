@@ -1,36 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Divisors
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.QuotientGroup
-import Mathlib.Analysis.InnerProductSpace.Basic
-import Mathlib.Analysis.SpecialFunctions.Complex
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometry.Basic
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Fintype.Card
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Int.GCD
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Matrix.Notation
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.Geometry.Triangle.Incircle
-import Mathlib.Geometry.Triangle.Median
-import Mathlib.Logic.Function.Basic
-import Mathlib.NumberTheory.Basic
-import Mathlib.NumberTheory.Prime
-import Mathlib.Probability.ProbabilityMassFunction.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Sorry
 
 namespace complex_conjugate_multiplication_l362_362261
 

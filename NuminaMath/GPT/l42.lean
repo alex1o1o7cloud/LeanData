@@ -1,33 +1,4 @@
-import Analysis.Calculus.Deriv.Basic
 import Mathlib
-import Mathlib.Algebra.Arithmetic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.LinearEquiv.Basic
-import Mathlib.Algebra.Polynomial
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.Extrema
-import Mathlib.Analysis.Calculus.Fderiv
-import Mathlib.Analysis.Integral.Integrable
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Integral
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Finset.Combinatorics
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Rat.Cast
-import Mathlib.Data.Real.Basic
-import Mathlib.Geometry.TriangleProperties
-import Mathlib.Init.Data.Int.Basic
-import Mathlib.MeasureTheory.Integral.IntervalIntegral
-import Mathlib.Probability
-import Mathlib.Probability.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.LibrarySearch
-import Mathlib.Topology.Basic
 
 namespace range_of_a_l42_42524
 

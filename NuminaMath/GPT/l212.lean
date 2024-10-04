@@ -1,34 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Basic
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Polynomial
-import Mathlib.Algebra.Ring
-import Mathlib.Analysis.SpecialFunctions.ExpLog
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Fin
-import Mathlib.Data.Finset
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Digits
-import Mathlib.Data.Polynomial.Basic
-import Mathlib.Data.Probability
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Vector
-import Mathlib.Data.Vector.Basic
-import Mathlib.Geometry.Euclidean
-import Mathlib.ProbTheory.Expectation
-import Mathlib.ProbTheory.IdentDistrib
-import Mathlib.ProbTheory.Indep
-import Mathlib.Probability.Basic
-import Mathlib.SetTheory.Cardinal.Basic
-import Mathlib.Tactic
-import ProbabilityTheory
-import data.real.basic
 
 namespace sin_A_value_trigonometric_range_l212_212042
 

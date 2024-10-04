@@ -1,33 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Divisibility
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.GroupPower
-import Mathlib.Algebra.Polynomial
-import Mathlib.Algebra.Series.Arithmetic
-import Mathlib.Analysis.SpecialFunctions.Exponential
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Analysis.SpecificLimits.Basic
-import Mathlib.Combinatorics.SimpleGraph.Trails
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Geometry.Structures
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.MeasureTheory.ProbabilityMeasure
-import Mathlib.NumberTheory.Divisors
-import Mathlib.Probability
-import Mathlib.Probability.Basic
-import Mathlib.ProbabilityTheory.MeasurableSpace
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Linarith
-import Mathlib.Topology.MetricSpace.Basic
-import Probability.ProbabilitySpace
 
 namespace point_to_polar_coordinates_l716_716989
 

@@ -1,35 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.CubicRoot
-import Mathlib.Algebra.Divisibility
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Logarithm
-import Mathlib.Algebra.Order
-import Mathlib.Algebra.Probability
-import Mathlib.Algebra.QuadraticDiscriminant
-import Mathlib.Algebra.SquareRoot
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.Permutations.Factorial
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Digits
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Prob
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Set.Finite
-import Mathlib.Geometry.Euclidean.InscribedAndCircumscribedCircles
-import Mathlib.LinearAlgebra.Matrix
-import Mathlib.NumberTheory.ModularArithmetic
-import Mathlib.Tactic
-import Mathlib.Topology.Basic
 
 namespace fraction_to_decimal_l783_783715
 

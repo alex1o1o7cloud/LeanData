@@ -1,27 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.AbsoluteValue
-import Mathlib.Algebra.Quadratic
-import Mathlib.Analysis.Complex.Basic
-import Mathlib.Analysis.InnerProductSpace.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Graph.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Matrix.Notation
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Rat.Defs
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Geometry
-import Mathlib.Geometry.GeometryBasics
-import Mathlib.Matrix
-import Mathlib.SetTheory.Complement
-import Mathlib.Statistics.Probability.Distribution
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
 
 namespace arithmetic_progression_value_of_x_l670_670500
 

@@ -1,27 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Polynomial
-import Mathlib.Algebra.Polynomial.Basic
-import Mathlib.Algebra.Trig
-import Mathlib.Analysis.SpecialFunctions.Integrals
-import Mathlib.Combinatorics
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Permutation.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.FieldTheory.IsAlgClosed.Basic
-import Mathlib.GroupTheory.Perm.Basic
-import Mathlib.LinearAlgebra.AffineSpace.Basic
-import Mathlib.Logic.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
 
 namespace compare_a_b_c_l410_410909
 

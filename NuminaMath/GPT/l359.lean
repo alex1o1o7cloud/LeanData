@@ -1,35 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.EuclideanDomain
-import Mathlib.Algebra.Field.Defs
-import Mathlib.Algebra.GcdMonoid.Basic
-import Mathlib.Algebra.GroupPower.Basic
-import Mathlib.Analysis.SpecialFunctions.Pi
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Arctan
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Complex
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.SimpleGraph.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Graph.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Gcd
-import Mathlib.Data.Nat.Set
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Probability.ProbabilityMassFunction
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Sqrt
-import Mathlib.Data.Set.Basic
-import Mathlib.MeasureTheory.Measure.Lebesgue
-import Mathlib.Probability.Basic
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Probability.ProbabilityTheory
-import Mathlib.ProbabilityTheory
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
-import Mathlib.Topology.Instances.Real
 
 namespace probability_interval_l359_359134
 

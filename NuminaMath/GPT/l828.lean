@@ -1,13 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Polynomial.Basic
-import Mathlib.Algebra.Quadratic
-import Mathlib.Analysis.SpecialFunctions.Exp
-import Mathlib.Analysis.Trigonometry.Tangent
-import Mathlib.Data.Finset
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.NumberTheory.Basic
-import Mathlib.Topology.Basic
 
 namespace rows_per_shelf_l828_828011
 

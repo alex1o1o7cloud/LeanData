@@ -1,37 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators.Finprod
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.GCDMonoid
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.GroupPower.Basic
-import Mathlib.Algebra.Order.AbsoluteValue
-import Mathlib.Algebra.Order.Field.Basic
-import Mathlib.Algebra.Quadratic
-import Mathlib.Algebra.SetOperations
-import Mathlib.Analysis.SpecialFunctions
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.SimpleGraph.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.Lcm
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.LinearAlgebra.Matrix
-import Mathlib.Probability
-import Mathlib.Probability.Basic
-import Mathlib.Probability.Statistics
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
-import Real
-import algebra.group_power
-import data.real.basic
 
 namespace camel_traversal_impossible_l2_2947
 

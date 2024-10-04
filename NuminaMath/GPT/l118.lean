@@ -1,32 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Arithmetic
-import Mathlib.Algebra.ArithmeticSequence
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.GeometricSequence
-import Mathlib.Algebra.Order
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.MeanInequalities
-import Mathlib.Analysis.NormedSpace.HilbertSpace
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics
-import Mathlib.Data.Complex
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Int.Gcd.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Time
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Geometry.Triangle
-import Mathlib.Probability.Basic
-import Mathlib.Probability.MeasureTheory
-import Mathlib.Tactic
-import Mathlib.Topology.ContinuousFunction.Basic
 
 namespace soccer_team_students_l118_118656
 

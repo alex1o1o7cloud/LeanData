@@ -1,34 +1,4 @@
-import "mathlib".
 import Mathlib
-import Mathlib.Algebra.BigOperators.Ring
-import Mathlib.Algebra.Combinatorics.Binomial
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.GroupPower
-import Mathlib.Algebra.Polynomial
-import Mathlib.Algebra.Ring
-import Mathlib.Analysis.Calculus.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.Binomial
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Complex.Exponential
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Log
-import Mathlib.Data.Set.Basic
-import Mathlib.LinearAlgebra.Matrix
-import Mathlib.Probability.Basic
-import Mathlib.Tactic
-import Mathlib.Topology.Instances.Real
-import approx
 
 namespace largest_subset_size_l618_618977
 

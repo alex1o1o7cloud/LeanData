@@ -1,35 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Arith
-import Mathlib.Algebra.BigOperators.Pi
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order
-import Mathlib.Algebra.Parity
-import Mathlib.Analysis.SpecialFunctions.Complex.Logarithm
-import Mathlib.Analysis.SpecialFunctions.Integrals
-import Mathlib.Combinatorics.Perm
-import Mathlib.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Finset.Noncomputable
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.List
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Factorial.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Rat.Defs
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Init.Data.Int.Default
-import Mathlib.Order.Basic
-import Mathlib.Probability.Basic
-import Mathlib.Probability.Independence
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Topology.Basic
-import Mathlib.Topology.Bounds
 
 namespace probability_of_sum_multiple_of_4_l737_737660
 

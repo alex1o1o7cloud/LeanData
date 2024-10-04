@@ -1,33 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.Binomial
-import Mathlib.Algebra.EuclideanDomain.Basic
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Geometry.Pyramid
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Order.AbsoluteValue
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.LocalExtr
-import Mathlib.Analysis.InnerProductSpace.Basic
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Ineq.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Multiplicity
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Combinatorics
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Tactic
 
 namespace total_skips_correct_l500_500741
 

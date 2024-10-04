@@ -1,18 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.Polynomial.Basic
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Complex.Basic
-import Mathlib.Analysis.Geometry
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Nat.Totient
-import Mathlib.Data.Polynomial.Eval
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Zmod.Basic
-import Mathlib.Tactic
-import data.real.basic
 
 namespace minimum_voters_for_tall_victory_l746_746099
 

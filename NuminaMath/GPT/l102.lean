@@ -1,33 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Factorial
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.GroupPower.Basic
-import Mathlib.Algebra.Polynomial
-import Mathlib.Algebra.Polynomial.BigOperators
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Combinatorics.Combination
-import Mathlib.Combinatorics.Combinations
-import Mathlib.Combinatorics.SimpleGraph
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Matrix.Notation
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Choose.Factorization
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Prob.Prob
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Induction
-import Mathlib.Tactic.Linarith
 
 namespace triangle_cotangent_identity_l102_102386
 

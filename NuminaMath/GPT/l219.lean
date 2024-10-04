@@ -1,31 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Exponential
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Analysis.Calculus.Monotone
-import Mathlib.Analysis.InnerProductSpace.Basic
-import Mathlib.Analysis.SpecialFunctions
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.CombinatorialGame.Basic
-import Mathlib.Combinatorics.Derangement
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.Combinatorics
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.MeasureTheory
-import Mathlib.Probability
-import Mathlib.Probability.ProbabilityTheory
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Linarith
-import Mathlib.Trigonometry.SineCosine
 
 namespace modular_inverse_5_mod_19_l219_219016
 

@@ -1,35 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.GCDMonoid.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Log
-import Mathlib.Analysis.Convex.UnorderedRelations
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Calculus.Deriv
-import Mathlib.Combinatorics
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.PrimeFactors
-import Mathlib.Data.Prob.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Rat.Defs
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set
-import Mathlib.Data.Set.Basic
-import Mathlib.Init.Data.Int.Basic
-import Mathlib.Init.Data.Real.Basic
-import Mathlib.Logic.Basic
-import Mathlib.NumberTheory.Prime
-import Mathlib.Probability.Distribution
-import Mathlib.Probability.Independence
-import Mathlib.ProbabilityTheory
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Topology.Instances.Real
 
 namespace sin_3x_odd_l475_475879
 

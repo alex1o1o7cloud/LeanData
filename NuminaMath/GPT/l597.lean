@@ -1,37 +1,4 @@
-import Lean
 import Mathlib
-import Mathlib.Algebra.Combinatorics.Permutations
-import Mathlib.Algebra.Factorial
-import Mathlib.Algebra.Geometry
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Order.ExpLog
-import Mathlib.Algebra.Ring.Defs
-import Mathlib.Analysis.Geometry.Circle
-import Mathlib.Analysis.Integral
-import Mathlib.Analysis.SpecialFunctions.Logarithm.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Combinatorics.SimpleGraph.Coloring
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Nat.Gcd.Basic
-import Mathlib.Data.Probability
-import Mathlib.Data.Rat
-import Mathlib.Data.Rat.Defs
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.LibrarySearch
-import Mathlib.Tactic.Linarith
 
 namespace largest_prime_divisor_of_2014_l597_597971
 

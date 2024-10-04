@@ -1,35 +1,4 @@
 import Mathlib
-import Mathlib.Algebra
-import Mathlib.Algebra.AbsoluteValue.Basic
-import Mathlib.Algebra.Arithmetic
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order.LinearOrderedField
-import Mathlib.Algebra.Polynomial
-import Mathlib.Algebra.Polynomials
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.Fderiv
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Ball
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.LinearAlgebra.AffineSpace.Independent
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.ProbabilityTheory.ConditionalExpectation
-import Mathlib.RingTheory.Ideal.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.IntervalCases
-import Mathlib.Topology.Basic
 
 namespace find_ratio_CL_AB_l612_612977
 

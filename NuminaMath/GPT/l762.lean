@@ -1,26 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.GroupPower.Basic
-import Mathlib.Algebra.LinearEquiv
-import Mathlib.Algebra.Order.Log
-import Mathlib.Algebra.Probability
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Polynomial
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Rat.Defs
-import Mathlib.Data.Real.Angle
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.NumberTheory.ArithmeticFunction
-import Mathlib.Probability.Basic
-import Mathlib.ProbabilityTheory.Basic
-import Mathlib.Tactic
-import Mathlib/init/data/nat/lemmas
-import Real
 
 namespace soap_usage_l762_762103
 

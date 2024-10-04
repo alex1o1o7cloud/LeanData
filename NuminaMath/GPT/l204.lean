@@ -1,30 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators.Order
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Parity
-import Mathlib.Algebra.Quadratic.Discriminant
-import Mathlib.Algebra.Ring
-import Mathlib.Algebra.Trigonometry
-import Mathlib.Analysis.Calculus.LocalExtr
-import Mathlib.Analysis.Monotonic
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.Graph.Basic
-import Mathlib.Combinatorics.Graph.Matching
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Set.Finite
-import Mathlib.GroupTheory.Group
-import Mathlib.Init.Data.Nat.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.NormNum
-import probability
 
 namespace perpendicularity_in_triangle_l204_204971
 

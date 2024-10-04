@@ -1,35 +1,4 @@
 import Mathlib
-import Mathlib.
-import Mathlib.Algebra.Binomial
-import Mathlib.Algebra.Commute
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order
-import Mathlib.Algebra.Order.Pointwise
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Algebra.Sequences
-import Mathlib.Algebra.Vector
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Combinatorics.Perm
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Matrix.Determinant
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Rat.Defs
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set
-import Mathlib.Geometry
-import Mathlib.NumberTheory.Basic
-import Mathlib.NumberTheory.Lucas
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.Ring
-import MeasureTheory
 
 namespace system_solution_l627_627557
 

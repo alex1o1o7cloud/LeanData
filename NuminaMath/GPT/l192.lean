@@ -1,29 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.EuclideanDomain
-import Mathlib.Algebra.GroupPower.Basic
-import Mathlib.Algebra.Order.Floor
-import Mathlib.Algebra.Real
-import Mathlib.Analysis.SpecialFunctions.Integrals
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Fintype
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Gcd
-import Mathlib.Data.List.Perm
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Logic.Basic
-import Mathlib.MeasureTheory.Integral.IntervalIntegral
-import Mathlib.MeasureTheory.ProbabilityMassFunction
-import Mathlib.Probability
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import ProbabilityTheory
 
 namespace triangle_areas_l192_192514
 

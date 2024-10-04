@@ -1,40 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Binomial
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.Fraction
-import Mathlib.Algebra.GroupPower.Basic
-import Mathlib.Algebra.Order.Field
-import Mathlib.Algebra.Polynomial
-import Mathlib.Algebra.QuadraticDiscriminant
-import Mathlib.Algebra.QuadraticEquation
-import Mathlib.Analysis.NormedSpace.Basic
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Complex.Roots
-import Mathlib.Data.Fin.Permutation
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Finset.Binomial
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Time
-import Mathlib.Geometry.Euclidean.Circumcircle
-import Mathlib.Probability.Basic
-import Mathlib.Probability.Independence
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Tactic
-import Mathlib.Topology.Algebra.Module
-import Mathlib.Topology.Basic
-import Mathlibimport_1996 =import_first_two_months_1997 =import_rate_first_two_months =
 
 namespace count_semi_balanced_integers_l17_17217
 

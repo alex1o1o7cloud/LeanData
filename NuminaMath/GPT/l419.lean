@@ -1,32 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Arithmetic
-import Mathlib.Algebra.GCD
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Polynomial.Basic
-import Mathlib.Algebra.Slope
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.List.Perm
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Probability.Prob
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Init.Data.Int.Basic
-import Mathlib.Logic.Basic
-import Mathlib.NumberTheory.Gcd
-import Mathlib.Probability.Basic
-import Mathlib.Probability.Independence
-import Mathlib.Probability.Variables
-import Mathlib.Tactic
-import Mathlib.Topology.Basic
-import Mathlib.Topology.Circular
 
 namespace max_possible_y_l419_419724
 

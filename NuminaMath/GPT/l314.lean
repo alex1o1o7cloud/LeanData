@@ -1,37 +1,4 @@
-import Lean
 import Mathlib
-import Mathlib.Algebra.GCDMonoid.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Analysis.Calculus.Angle
-import Mathlib.Analysis.Calculus.Deriv.Basic
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.Trigonometry
-import Mathlib.Combinatorics.Simplex
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Gcd
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Lcm
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Pi
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Geometry.Euclidean.Parallelogram
-import Mathlib.Geometry.Euclidean.Square
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.Integration
-import Mathlib.MeasureTheory.Measure.Lebesgue
-import Mathlib.SetTheory.Cardinal
-import Mathlib.Tactic
-import Mathlib.Tactic.LibrarySearch
-import Mathlib.Trigonometry.Basic
-import Real
 
 namespace max_unique_bills_l314_314756
 

@@ -1,23 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Factorial.Basic
-import Mathlib.Analysis.Analytic.Basic
-import Mathlib.Analysis.SpecialFunctions.Polynomials
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Date.Basic
-import Mathlib.Data.Fact
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Prime
-import Mathlib.Data.List.Basic
-import Mathlib.Data.List.Perm
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Probability.Independence
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
 
 namespace banana_arrangements_l578_578891
 

@@ -1,34 +1,4 @@
 import Mathlib
-import Mathlib.Algebra
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.Combinatorics.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Modular
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Order.Ring
-import Mathlib.Algebra.Powers
-import Mathlib.Algebra.Prime
-import Mathlib.Algebra.Ring
-import Mathlib.Analysis.Calculus.Limits
-import Mathlib.Analysis.SpecialFunctions.Integrals
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Zmod.Basic
-import Mathlib.LinearAlgebra.VecSpace
-import Mathlib.MeasureTheory.Integral.IntervalIntegral
-import Mathlib.NumberTheory.Basic
-import Mathlib.ProbTheory.Basic
-import Mathlib.Probability.Basic
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Local
 
 namespace triangle_cosine_l827_827993
 

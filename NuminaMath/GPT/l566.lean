@@ -1,42 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.Combinatorics
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Linear.Equiv
-import Mathlib.Algebra.Order.Sqrt
-import Mathlib.Algebra.Order.Sub
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Algebra.Trig
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.Deriv.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.GCD.Basic
-import Mathlib.Data.Probability.Finite
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Rat.Defs
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Geometry.Euclidean.Circumcenter
-import Mathlib.NumberTheory.Cyclotomic.Basic
-import Mathlib.Order.Basic
-import Mathlib.Probability.Basic
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.ProbabilityTheory
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Topology.Algebra.InfiniteSum
-import Mathlib.Topology.Basic
-import Mathlibimportant_emails :=
-import Mathlibimportant_emails =
-import analysis.special_functions.trigonometric
 
 namespace numbers_satisfy_conditions_l566_566555
 

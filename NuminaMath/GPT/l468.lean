@@ -1,29 +1,4 @@
-import Algebra
 import Mathlib
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Order.Field.Basic
-import Mathlib.Algebra.Trigonometry.Basic
-import Mathlib.Analysis.SpecialFunctions.Pow.Real
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Parity
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Setoid.Basic
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.MeasureTheory.Measure.Space
-import Mathlib.Order.Floor
-import Mathlib.Probability.ConditionalProbability
-import Mathlib.Real
-import Mathlib.Tactic
-import Mathlib.Topology.Algebra.Order
 
 namespace fraction_of_europeans_l468_468396
 

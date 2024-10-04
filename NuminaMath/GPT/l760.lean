@@ -1,35 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Order.Ring
-import Mathlib.Algebra.Polynomial
-import Mathlib.Algebra.Quadratic
-import Mathlib.Analysis.Calculus.Fderiv
-import Mathlib.Analysis.Calculus.LocalExtr
-import Mathlib.Analysis.DifferentialEquations.Linear
-import Mathlib.Analysis.Polynomial.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Combinatorics.Comb
-import Mathlib.Combinatorics.Perm
-import Mathlib.Data.Fin
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Finset.Perm
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Digits
-import Mathlib.Data.Nat.GCD.Basic
-import Mathlib.Data.Polynomial.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Rat.Defs
-import Mathlib.Data.Real.Basic
-import Mathlib.Probability.Basic
-import Mathlib.Probability.EquivFintype
-import Mathlib.Tactic
 
 namespace condition_for_m_l760_760664
 

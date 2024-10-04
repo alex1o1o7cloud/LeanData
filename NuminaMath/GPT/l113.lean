@@ -1,36 +1,4 @@
 import Mathlib
-import Mathlib.Algebra
-import Mathlib.Algebra.Arithmetic
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.BigOperators.Ring
-import Mathlib.Algebra.Field.Defs
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.GroupPower.Basic
-import Mathlib.Algebra.Order.AbsoluteValue
-import Mathlib.Algebra.Order.Field
-import Mathlib.Algebra.Order.Ring.Defs
-import Mathlib.Algebra.Time
-import Mathlib.Analysis.Geometry.Ellipse
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.SimpleGraph.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Fin.Set
-import Mathlib.Data.Finset
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Geometry.Euclidean.Incenter
-import Mathlib.Init.Data.Int.Basic
-import Mathlib.NumberTheory.Basic
-import Mathlib.Tactic
-import Mathlib.Topology.Infinite.Sum
-import ProbabilityTheory
 
 namespace length_of_congruent_side_l113_113704
 

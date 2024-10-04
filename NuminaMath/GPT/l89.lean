@@ -1,27 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.Combinatorics.Combinations
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.Order.Floor
-import Mathlib.Algebra.Series
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.CombinatorialCounting
-import Mathlib.Combinatorics.Composition
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Nat.Gcd
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Probability.Basic
-import Mathlib.Tactic.Basic
-import Mathlib.Topology.Basic
 
 namespace not_irrational_B_l89_89799
 

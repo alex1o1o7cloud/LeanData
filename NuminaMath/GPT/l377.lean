@@ -1,34 +1,4 @@
-import Complex
 import Mathlib
-import Mathlib.Algebra.Binomial
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Mod
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Probability.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.Trigonometry.Basic
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.SimpleGraph.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Fintype.Card
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Polynomial
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Rat.Defs
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Angle
-import Mathlib.NumberTheory.ArithmeticSequence
-import Mathlib.Probability.Conditional
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
-import Real
-import probability_theory.probability
 
 namespace enthalpy_change_correct_l377_377014
 

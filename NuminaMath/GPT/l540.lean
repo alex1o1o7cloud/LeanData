@@ -1,37 +1,4 @@
-import Analysis.Trigonometry.Basic
 import Mathlib
-import Mathlib.Algebra.Arithmetic
-import Mathlib.Algebra.Basic
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.Factorial
-import Mathlib.Algebra.Geometry.Parabola
-import Mathlib.Algebra.Group
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order
-import Mathlib.Algebra.Polynomial
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Combinatorics.NChooseK
-import Mathlib.Data.Finset
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.List.Sort
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.NumberTheory.ArithmeticFunction
-import Mathlib.Probability.ProbabilityMassFunction.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Linarith
-import Mathlib.Topology.Basic
 
 namespace library_books_l540_540069
 

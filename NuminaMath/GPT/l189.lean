@@ -1,32 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Algebra.Basic
-import Mathlib.Algebra.Arithmetic
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.GroupPower.Basic
-import Mathlib.Algebra.LinearEquiv.Basic
-import Mathlib.Algebra.Order
-import Mathlib.Algebra.Prime
-import Mathlib.Analysis.Calculus.Integral
-import Mathlib.Analysis.NormedSpace.Basic
-import Mathlib.Combinatorics.CombinatorialGame.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Parity
-import Mathlib.Data.Real.Arc
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Topology.LinearSpace
-import Mathlib.Topology.MetricSpace.Basic
-import Mathlib.Topology.Sequences
-import Tactic
 
 namespace sum_of_distances_from_points_to_BC_l189_189777
 

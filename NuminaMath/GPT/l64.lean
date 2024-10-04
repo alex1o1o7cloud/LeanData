@@ -1,29 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Arithmetic
-import Mathlib.Algebra.Arithmetic.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.GroupDef
-import Mathlib.Analysis.Calculus
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.Trigonometric.Basic
-import Mathlib.Combinatorics.CombinatorialBasic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Zmod.Basic
-import Mathlib.Geometry.Euclidean.Cyclic
-import Mathlib.Init.Data.Int.Basic
-import Mathlib.Init.Ite
-import Mathlib.LinearAlgebra.Vec3
-import Mathlib.NumberTheory.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Linarith
-import Mathlib.Topology.Basic
-import ProbabilityTheory.CharacteristicFunction
 
 namespace product_of_real_numbers_triple_when_added_to_their_reciprocal_l64_64846
 

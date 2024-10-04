@@ -1,33 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.GeomSeq
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order.Module
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Calculus.Deriv.Basic
-import Mathlib.Analysis.Calculus.LocalExtr
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Fin
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Polynomial.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Trig
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Objects
-import Mathlib.NumberTheory.GCD
-import Mathlib.Probability.Basic
-import Mathlib.Tactic
-import Mathlib.Topology.MetricSpace.Basic
-import Real
-import data.finset
 
 namespace impossible_arrangement_of_seven_nonnegative_integers_l157_157487
 

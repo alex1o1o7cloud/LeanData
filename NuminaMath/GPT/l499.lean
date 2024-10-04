@@ -1,29 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Fraction
-import Mathlib.Algebra.Group.Definitions
-import Mathlib.Algebra.Polynomial.BigOperators
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Combinatorics.SimpleGraph.Basic
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.LinearAlgebra.Matrix
-import Mathlib.LinearAlgebra.Matrix.Determinant
-import Mathlib.LinearAlgebra.Projection
-import Mathlib.Probability.Basic
-import Mathlib.Probability.Conditional
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Topology.Basic
 
 namespace path_area_approximation_l499_499013
 

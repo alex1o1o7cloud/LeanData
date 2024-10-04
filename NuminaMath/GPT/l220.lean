@@ -1,37 +1,4 @@
-import Analysis.SpecialFunctions.Trigonometric.Basic
-import Data.Real.Basic
-import Init.Data.Int.Basic
-import Init.Data.Nat.Basic
 import Mathlib
-import Mathlib.Algebra.Arithmetic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.ModBasic
-import Mathlib.Algebra.Order.Field
-import Mathlib.Algebra.Parabola
-import Mathlib.Algebra.Polynomial
-import Mathlib.Algebra.QuadraticDiscriminant
-import Mathlib.Analysis.Normed.Field.Reflection
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Circumcircle
-import Mathlib.Init.Data.Nat.Basic
-import Mathlib.Init.Data.Nat.Gcd
-import Mathlib.NumberTheory.ArithmeticFunction
-import Mathlib.Probability.Basic
-import Mathlib.Probability.Distribution
-import Mathlib.RingTheory.Polynomial
-import Mathlib.Tactic
-import analysis.calculus.deriv
-import analysis.special_functions.log
-import data.real.basic
 
 namespace total_distance_this_week_l220_220611
 

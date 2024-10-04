@@ -1,32 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Arithmetic.Floor
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Order.Field
-import Mathlib.Algebra.Squarefree
-import Mathlib.Analysis.Normed.Group.Basic
-import Mathlib.Analysis.NormedSpace.Matrix
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Gcd
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Sqrt
-import Mathlib.Data.Set.Basic
-import Mathlib.LinearAlgebra.Projection
-import Mathlib.Probability.Basic
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.ProbabilityTheory
-import Mathlib.Tactic
-import Mathlib.Topology.Basic
-import data.real.basic
 
 namespace traffic_light_probability_l234_234135
 

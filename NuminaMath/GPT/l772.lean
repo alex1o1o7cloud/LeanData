@@ -1,35 +1,4 @@
 import Mathlib
-import Mathlib.Algebra
-import Mathlib.Algebra.Combinatorics
-import Mathlib.Algebra.Factorial
-import Mathlib.Algebra.GeomSum
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.SpecialFunctions.ExpLog
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Combinatorics.Binomial
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Equiprobable
-import Mathlib.Data.Finset
-import Mathlib.Data.List.ProdSigma
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Combinatorics
-import Mathlib.Data.Polynomial
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Init.Algebra
-import Mathlib.NumberTheory.GCD.Basic
-import Mathlib.Probability.Basic
-import Mathlib.Probability.Continuous
-import Mathlib.Probability.ProbabilityTheory
-import Mathlib.ProbabilityTheory.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Linarith
-import Mathlib.Topology.Basic
-import Mathlib.Topology.Complex
-import Mathlib.Topology.ContinuousFunction.Basic
 
 namespace polygon_sides_l772_772292
 

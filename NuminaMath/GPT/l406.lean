@@ -1,36 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators.Fin
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order
-import Mathlib.Algebra.Order.Field
-import Mathlib.Algebra.Order.Nonneg
-import Mathlib.Algebra.Polynomial
-import Mathlib.Algebra.QuadraticEquation
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Algebra.Vector
-import Mathlib.Analysis.Calculus.ContDiff
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.MeasureTheory.IntegrableFunction
-import Mathlib.MeasureTheory.ProbabilityDistribution
-import Mathlib.Probability
-import Mathlib.Probability.Basic
-import Mathlib.Probability.Notation
-import Mathlib.Tactic
-import Mathlib.Tactic.FinCases
-import Mathlib.Topology.Instances.Real
-import analysis.special_functions.pow
 
 namespace average_length_of_two_strings_l406_406108
 

@@ -1,37 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Basic
-import Mathlib.Algebra.Cubic.Root
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Floor
-import Mathlib.Algebra.Order.Ring
-import Mathlib.Algebra.Polynomial
-import Mathlib.Algebra.Polynomial.Basic
-import Mathlib.Algebra.Quadratic
-import Mathlib.Algebra.Quadratic.Discriminant
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Complex
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Totient
-import Mathlib.Data.Polynomial.Basic
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Probability.ProbabilityMassFunc
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Finite
-import Mathlib.LinearAlgebra.Matrix
-import Mathlib.Logic.Basic
-import Mathlib.NumberTheory.ArithmeticFunctions
-import Mathlib.NumberTheory.Prime
-import Mathlib.Probability.Basic
-import Mathlib.Probability.ProbabilityMassFunc
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import data.matrix.basic
 
 namespace find_original_number_l349_349264
 

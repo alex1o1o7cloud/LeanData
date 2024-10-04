@@ -1,32 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Probability
-import Mathlib.Analysis.Calculus.Fderiv.Basic
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Combinatorics
-import Mathlib.Combinatorics.Permutations
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Probability
-import Mathlib.Data.Probability.Discrete
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Rat.Defs
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Sqrt
-import Mathlib.Data.Set.Basic
-import Mathlib.NumberTheory.ArithmeticFunction
-import Mathlib.Probability.Basic
-import Mathlib.Tactic
-import Real
 
 namespace scalene_right_triangle_area_l321_321748
 

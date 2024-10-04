@@ -1,37 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Arithmetic
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Group.Powers
-import Mathlib.Algebra.GroupPower
-import Mathlib.Algebra.Polynomial.Basic
-import Mathlib.Algebra.Quadratic.Discriminant
-import Mathlib.Analysis.Calculus.FDeriv
-import Mathlib.Analysis.Geometry.Circle
-import Mathlib.Analysis.Real
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.PolynomialApplications
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Gcd
-import Mathlib.Data.Nat.Log
-import Mathlib.Data.Polynomial.Basic
-import Mathlib.Data.Polynomial.RingDivision
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Zmod.Basic
-import Mathlib.Geometry.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.GroupTheory.Perm.Basic
-import Mathlib.MeasureTheory.Measure.MeasureSpace
-import Mathlib.Probability.Basic
-import Mathlib.Tactic
-import Mathlib.Topology.Basic
-import Mathlib.Topology.Instances.Real
 
 namespace sum_of_differences_squared_le_one_l490_490241
 

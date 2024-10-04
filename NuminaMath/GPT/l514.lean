@@ -1,27 +1,4 @@
-import Data.Real.Basic
 import Mathlib
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.GroupPower.Basic
-import Mathlib.Analysis.SpecialFunctions.Factorial
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Analysis.SpecialFunctions.Sign
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Probability.ProbabilitySpace
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Rational.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.NumberTheory.GCD
-import Mathlib.Probability.Distribution
-import Mathlib.Probability.ProbabilityBorel
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Topology.MetricSpace.Basic
-import Probability.Probability
 
 namespace circle_chord_square_length_l514_514175
 

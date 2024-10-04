@@ -1,27 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Order.AbsoluteValue
-import Mathlib.Algebra.Order.Floor
-import Mathlib.Algebra.Real
-import Mathlib.Analysis.Calculus.Fderiv
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.Graph
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Trig
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Time.Clock
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.NumberTheory.ZsigersTheorem
-import Mathlib.Probability.Basic
-import Mathlib.Statistics.Regression.Linear
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
-import Mathlib.Topology.Euclidean.EuclideanSpace
-import ProbabilityTheory
 
 namespace product_of_four_consecutive_integers_divisible_by_12_l417_417014
 

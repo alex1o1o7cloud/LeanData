@@ -1,24 +1,4 @@
 import Mathlib
-import Mathlib.Algebra
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order.Floor
-import Mathlib.Algebra.Quadratic
-import Mathlib.Analysis.Calculus.ParametricEqn
-import Mathlib.Analysis.Convex.Combination
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Real.Basic
-import Mathlib.MeasureTheory.Measure.Lebesgue
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
 
 namespace part_a_part_b_l22_22023
 

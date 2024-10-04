@@ -1,32 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.Divisibility
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Polynomial.Basic
-import Mathlib.Algebra.Quadratic
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.NormedSpace.Basic
-import Mathlib.Analysis.SpecialFunctions.ExpLog.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Int.Mod
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Probability
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Irrational
-import Mathlib.Data.Set.Basic
-import Mathlib.NumberTheory.ArithmeticFunction
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Probability.ProbabilityTheory
-import Mathlib.Tactic
-import Mathlib.Tactic.NormNum
-import Mathlib.Tactic.Sorry
-import Mathlib.Topology.Sequences
 
 namespace num_pos_divisors_36_l366_366075
 

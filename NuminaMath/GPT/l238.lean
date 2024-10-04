@@ -1,36 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.ArithmeticSeq
-import Mathlib.Algebra.Combinatorics.Basic
-import Mathlib.Algebra.Cubic
-import Mathlib.Algebra.LinearEquation
-import Mathlib.Algebra.Order.Floor
-import Mathlib.Algebra.Polynomial
-import Mathlib.Algebra.Series
-import Mathlib.Algebra.SquareRoot
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Analysis.SpecialFunctions.Pow
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Asserts
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.List
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Triangle
-import Mathlib.Logic.Basic
-import Mathlib.Plots.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import data.nat.lcm
-import data.rat.basic
-import data.real.basic
 
 namespace sum_powers_of_5_mod_8_l238_238171
 

@@ -1,37 +1,4 @@
 import Mathlib
-import Mathlib.Algebra
-import Mathlib.Algebra.Field.Defs
-import Mathlib.Algebra.Group
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Order.Archimedean
-import Mathlib.Analysis.Complex.Basic
-import Mathlib.Analysis.Polynomial.Bernstein
-import Mathlib.Analysis.SpecialFunctions.Ellipse
-import Mathlib.Analysis.SpecialFunctions.Pow
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.SimpleGraph.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Complex.Exponential
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.List.Sort
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.NumberTheory.Primes
-import Mathlib.Probability.Basic
-import Mathlib.Probability.Bernoulli
-import Mathlib.Probability.ProbabilityMeasure
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.Linarith
-import Real
 
 namespace angle_BDC_is_15_l72_72902
 

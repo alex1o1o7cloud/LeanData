@@ -1,33 +1,4 @@
 import Mathlib
-import Mathlib.Algebra
-import Mathlib.Algebra.BigOperators.Fin
-import Mathlib.Algebra.CharZero
-import Mathlib.Algebra.Combinatorics
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Trigonometry
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Complex
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Fintype.Card
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.List.Perm
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Polynomial
-import Mathlib.Data.Prob.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.Init.Function
-import Mathlib.NumberTheory.Prime
-import Mathlib.Probability.Basic
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Tactic
-import analysis.special_functions.exp_log
 
 namespace shaded_region_perimeter_l810_810665
 

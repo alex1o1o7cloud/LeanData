@@ -1,34 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Algebra.MultiplicativeGroup
-import Mathlib.Algebra.Trig
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Geometry
-import Mathlib.Analysis.LinearAlgebra.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecificLimits.Basic
-import Mathlib.Combinatorics.Combination
-import Mathlib.Combinatorics.Permutations
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Complex.Exponential
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Probability.Probability
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Rat.Init
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Geometry.Euclidean.Basic
-import Mathlib.NumberTheory.PrimeFactors
-import Mathlib.Probability.Basic
-import Mathlib.Probability.Notation
-import Mathlib.Tactic
-import Mathlib.Tactic.Core
-import Mathlib.Topology.Basic
 
 namespace minimize_sum_of_sequence_l79_79004
 

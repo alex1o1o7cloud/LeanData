@@ -1,26 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.EuclideanDomain.Basic
-import Mathlib.Algebra.Field.Basic
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order
-import Mathlib.Algebra.Polynomial
-import Mathlib.Analysis.Complex.Basic
-import Mathlib.Analysis.Geometry.Euclidean.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Combinatorics.Basic
-import Mathlib.Combinatorics.SimpleGraph.Matching
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Finset.Card
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Factorial
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Probability.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Probability.Basic
-import Mathlib.Probability.ProbabilitySpaces
-import Mathlib.Tactic
 
 namespace sum_of_possible_N_l595_595042
 

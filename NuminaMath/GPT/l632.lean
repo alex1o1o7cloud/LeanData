@@ -1,34 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.Field
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order.CeilingFloor
-import Mathlib.Algebra.Order.NonArchimedean
-import Mathlib.Analysis.Calculus.Deriv
-import Mathlib.Analysis.Geometry
-import Mathlib.Analysis.NormedSpace.Basic
-import Mathlib.Analysis.Polynomial.Basic
-import Mathlib.Analysis.Trigonometry.Inverse
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Card
-import Mathlib.Data.List.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose
-import Mathlib.Data.Nat.Digits
-import Mathlib.Data.Prob.Basic
-import Mathlib.Data.Prob.ProbTheory
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.MeasureTheory.Measure.Lebesgue
-import Mathlib.Probability.ProbabilityMassFunction
-import Mathlib.Probability.Statistics.Normal
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
-import Mathlib.Tactic.LibrarySearch
-import Mathlib.Tactic.Linarith
-import Mathlib.Topology.Complex
-import Mathlib.Trigonometry.Basic
-import data.nat.basic
-import tactic
 
 namespace kC_values_l632_632216
 

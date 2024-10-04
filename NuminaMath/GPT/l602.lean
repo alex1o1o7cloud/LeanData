@@ -1,36 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.AbsoluteValue
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Order.Floor
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Combinatorics.Basic
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.List.Basic
-import Mathlib.Data.List.Sort
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Binomial
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Gcd
-import Mathlib.Data.Nat.Prime
-import Mathlib.Data.Probability.Distributions
-import Mathlib.Data.Probability.ProbabilitySpace
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Vector.Basic
-import Mathlib.LinearAlgebra.Basic
-import Mathlib.NumberTheory.Digits
-import Mathlib.NumberTheory.ModularArithmetic
-import Mathlib.NumberTheory.Totient
-import Mathlib.Probability.Basic
-import Mathlib.Probability.ProbabilityTheory
-import Mathlib.Statistics.Basic
-import Mathlib.Tactic
-import Mathlib.Tactic.Basic
 
 namespace correct_propositions_l602_602319
 

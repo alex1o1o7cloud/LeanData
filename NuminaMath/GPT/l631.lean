@@ -1,36 +1,4 @@
 import Mathlib
-import Mathlib.Algebra.BigOperators
-import Mathlib.Algebra.Binomial
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Invertible
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Algebra.Ratio
-import Mathlib.Analysis.SpecialFunctions
-import Mathlib.Analysis.SpecialFunctions.Abs
-import Mathlib.Analysis.SpecialFunctions.Log
-import Mathlib.Analysis.SpecialFunctions.Trigonometric
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Integrals
-import Mathlib.Data.Finset
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Matrix.Notation
-import Mathlib.Data.Nat.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Rat.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Set.Intervals.Basic
-import Mathlib.Geometry
-import Mathlib.Geometry.Euclidean.Sphere.Angle
-import Mathlib.MeasureTheory.Probability
-import Mathlib.MeasureTheory.ProbabilityMassFunction
-import Mathlib.NumberTheory.GCD
-import Mathlib.Tactic
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.Pigeonhole
-import Mathlib.Topology.Basic
-import Real
 
 namespace mapping_f_of_neg2_and_3_l631_631078
 
