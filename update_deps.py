@@ -4,7 +4,8 @@ from multiprocessing import Pool, cpu_count
 from tqdm import tqdm
 
 def process_file(lean_file):
-    source_directory = "NuminaMath/GPT"
+    # source_directory = "NuminaMath/GPT"
+    source_directory = "NuminaMath/CLAUDE"    
     module_path = source_directory.replace('/', '.')
     module_name = lean_file[:-5]  # Remove the '.lean' extension
 
@@ -25,7 +26,8 @@ def process_file(lean_file):
         return None
 
 def main():
-    source_directory = "NuminaMath/GPT"
+    # source_directory = "NuminaMath/GPT"
+    source_directory = "NuminaMath/CLAUDE"
     files = sorted(f for f in os.listdir(source_directory) if f.endswith('.lean'))
     print(f"==== Total number of .lean files: {len(files)} ====")
 
@@ -33,7 +35,7 @@ def main():
     with Pool(processes=num_processes) as pool:
         results = list(tqdm(pool.imap(process_file, files), total=len(files), desc="Processing .lean files"))
 
-    with open("NuminaMath.lean", 'w') as file:
+    with open("NuminaMath.lean", 'a') as file:
         for import_statement in filter(None, results):
             file.write(import_statement)
 
