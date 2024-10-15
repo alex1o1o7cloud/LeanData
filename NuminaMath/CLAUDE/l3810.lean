@@ -1,1526 +1,1537 @@
 import Mathlib
 
-namespace equation_solution_l3810_381093
+namespace NUMINAMATH_CALUDE_range_of_expressions_l3810_381030
 
-theorem equation_solution : 
-  ∃! x : ℚ, (x + 10) / (x - 4) = (x - 3) / (x + 6) ∧ x = -48 / 23 := by
-  sorry
-
-end equation_solution_l3810_381093
-
-
-namespace intersection_and_union_of_sets_l3810_381056
-
-theorem intersection_and_union_of_sets (x : ℝ) 
-  (A : Set ℝ) (B : Set ℝ)
-  (hA : A = {-3, x^2, x+1})
-  (hB : B = {x-3, 2*x-1, x^2+1})
-  (hIntersection : A ∩ B = {-3}) :
-  x = -1 ∧ A ∪ B = {-4, -3, 0, 1, 2} := by
-  sorry
-
-end intersection_and_union_of_sets_l3810_381056
-
-
-namespace factor_implies_m_value_l3810_381044
-
-theorem factor_implies_m_value (x y m : ℝ) : 
-  (∃ k : ℝ, (1 - 2*x + y) * k = 4*x*y - 4*x^2 - y^2 - m) → m = -1 := by
-  sorry
-
-end factor_implies_m_value_l3810_381044
-
-
-namespace at_least_one_passes_l3810_381039
-
-def exam_pool : ℕ := 10
-def A_correct : ℕ := 6
-def B_correct : ℕ := 8
-def test_questions : ℕ := 3
-def passing_threshold : ℕ := 2
-
-def prob_A_pass : ℚ := (Nat.choose A_correct 2 * Nat.choose (exam_pool - A_correct) 1 + Nat.choose A_correct 3) / Nat.choose exam_pool test_questions
-
-def prob_B_pass : ℚ := (Nat.choose B_correct 2 * Nat.choose (exam_pool - B_correct) 1 + Nat.choose B_correct 3) / Nat.choose exam_pool test_questions
-
-theorem at_least_one_passes : 
-  1 - (1 - prob_A_pass) * (1 - prob_B_pass) = 44 / 45 := by sorry
-
-end at_least_one_passes_l3810_381039
-
-
-namespace count_rectangular_subsets_5x5_l3810_381094
-
-/-- The number of ways to select a rectangular subset in a 5x5 grid -/
-def rectangular_subsets_5x5 : ℕ := 225
-
-/-- A proof that there are 225 ways to select a rectangular subset in a 5x5 grid -/
-theorem count_rectangular_subsets_5x5 : rectangular_subsets_5x5 = 225 := by
-  sorry
-
-end count_rectangular_subsets_5x5_l3810_381094
-
-
-namespace triangle_theorem_l3810_381021
-
-/-- Given a triangle ABC with sides a, b, c opposite to angles A, B, C respectively. -/
-structure Triangle where
-  a : ℝ
-  b : ℝ
-  c : ℝ
-  A : ℝ
-  B : ℝ
-  C : ℝ
-
-/-- The theorem states that if b cos C + c cos B = 2a cos A and AB · AC = √3 in a triangle ABC,
-    then the measure of angle A is π/3 and the area of the triangle is 3/2. -/
-theorem triangle_theorem (t : Triangle) 
-  (h1 : t.b * Real.cos t.C + t.c * Real.cos t.B = 2 * t.a * Real.cos t.A)
-  (h2 : t.a * t.c * Real.cos t.A = Real.sqrt 3) : 
-  t.A = π / 3 ∧ (1 / 2 * t.a * t.c * Real.sin t.A = 3 / 2) := by
-  sorry
-
-end triangle_theorem_l3810_381021
-
-
-namespace integral_x_plus_inverse_x_l3810_381080
-
-theorem integral_x_plus_inverse_x : ∫ x in (1 : ℝ)..2, (x + 1/x) = 3/2 + Real.log 2 := by
-  sorry
-
-end integral_x_plus_inverse_x_l3810_381080
-
-
-namespace first_load_pieces_l3810_381034
-
-/-- The number of pieces of clothing in the first load -/
-def first_load (total : ℕ) (num_small_loads : ℕ) (pieces_per_small_load : ℕ) : ℕ :=
-  total - (num_small_loads * pieces_per_small_load)
-
-/-- Theorem stating that the number of pieces of clothing in the first load is 17 -/
-theorem first_load_pieces : first_load 47 5 6 = 17 := by
-  sorry
-
-end first_load_pieces_l3810_381034
-
-
-namespace three_tangent_lines_l3810_381018
-
--- Define the hyperbola
-def hyperbola (x y : ℝ) : Prop := x^2 - y^2/4 = 1
-
--- Define a line passing through (1, 0)
-def line_through_P (m : ℝ) (x y : ℝ) : Prop := y = m * (x - 1)
-
--- Define the condition for a line to intersect the hyperbola at only one point
-def single_intersection (m : ℝ) : Prop :=
-  ∃! (x y : ℝ), hyperbola x y ∧ line_through_P m x y
-
--- Main theorem
-theorem three_tangent_lines :
-  ∃ (m₁ m₂ m₃ : ℝ), 
-    single_intersection m₁ ∧ 
-    single_intersection m₂ ∧ 
-    single_intersection m₃ ∧
-    m₁ ≠ m₂ ∧ m₁ ≠ m₃ ∧ m₂ ≠ m₃ ∧
-    ∀ (m : ℝ), single_intersection m → m = m₁ ∨ m = m₂ ∨ m = m₃ :=
+theorem range_of_expressions (a b : ℝ) 
+  (ha : -6 < a ∧ a < 8) 
+  (hb : 2 < b ∧ b < 3) : 
+  (-10 < 2*a + b ∧ 2*a + b < 19) ∧ 
+  (-9 < a - b ∧ a - b < 6) ∧ 
+  (-2 < a / b ∧ a / b < 4) := by
 sorry
 
-end three_tangent_lines_l3810_381018
+end NUMINAMATH_CALUDE_range_of_expressions_l3810_381030
 
 
-namespace product_zero_implies_factor_zero_unit_circle_sum_one_implies_diff_sqrt_three_l3810_381040
+namespace NUMINAMATH_CALUDE_parabola_x_intercepts_l3810_381019
 
-variables (z₁ z₂ : ℂ)
-
--- Statement B
-theorem product_zero_implies_factor_zero : z₁ * z₂ = 0 → z₁ = 0 ∨ z₂ = 0 := by sorry
-
--- Statement D
-theorem unit_circle_sum_one_implies_diff_sqrt_three : 
-  Complex.abs z₁ = 1 → Complex.abs z₂ = 1 → z₁ + z₂ = 1 → Complex.abs (z₁ - z₂) = Real.sqrt 3 := by sorry
-
-end product_zero_implies_factor_zero_unit_circle_sum_one_implies_diff_sqrt_three_l3810_381040
-
-
-namespace ellipse_tangent_circle_radius_l3810_381041
-
-/-- Given an ellipse with semi-major axis a and semi-minor axis b,
-    and a circle centered at one of its foci and tangent to the ellipse,
-    prove that the radius of the circle is √((a^2 - b^2)/2). -/
-theorem ellipse_tangent_circle_radius 
-  (a b : ℝ) 
-  (h_a : a = 6) 
-  (h_b : b = 3) : 
-  let c := Real.sqrt (a^2 - b^2)
-  let r := Real.sqrt ((a^2 - b^2)/2)
-  ∀ x y : ℝ,
-  (x^2 / a^2 + y^2 / b^2 = 1) →
-  ((x - c)^2 + y^2 = r^2) →
-  r = Real.sqrt 6 :=
-by sorry
-
-
-end ellipse_tangent_circle_radius_l3810_381041
-
-
-namespace bottle_caps_problem_l3810_381004
-
-theorem bottle_caps_problem (sammy janine billie : ℕ) 
-  (h1 : sammy = 8)
-  (h2 : sammy = janine + 2)
-  (h3 : janine = 3 * billie) :
-  billie = 2 := by
-  sorry
-
-end bottle_caps_problem_l3810_381004
-
-
-namespace book_arrangement_count_l3810_381016
-
-/-- The number of ways to arrange two types of indistinguishable objects in a row -/
-def arrangement_count (n m : ℕ) : ℕ :=
-  Nat.choose (n + m) n
-
-/-- Theorem: Arranging 4 copies of one book and 5 copies of another book yields 126 possibilities -/
-theorem book_arrangement_count :
-  arrangement_count 4 5 = 126 := by
-  sorry
-
-end book_arrangement_count_l3810_381016
-
-
-namespace largest_even_number_with_sum_20_l3810_381069
-
-/-- A function that returns the sum of digits of a natural number -/
-def sum_of_digits (n : ℕ) : ℕ := sorry
-
-/-- A function that checks if all digits in a natural number are different -/
-def has_different_digits (n : ℕ) : Prop := sorry
-
-/-- The theorem stating that 86420 is the largest even number with all different digits whose digits add up to 20 -/
-theorem largest_even_number_with_sum_20 : 
-  ∀ n : ℕ, 
-    n % 2 = 0 ∧ 
-    has_different_digits n ∧ 
-    sum_of_digits n = 20 → 
-    n ≤ 86420 := by sorry
-
-end largest_even_number_with_sum_20_l3810_381069
-
-
-namespace triangle_angle_calculation_l3810_381073
-
-theorem triangle_angle_calculation (a b c : ℝ) (A B C : ℝ) :
-  a = 3 * Real.sqrt 2 →
-  c = 3 →
-  C = π / 6 →
-  A = π / 4 ∨ A = 3 * π / 4 :=
-by sorry
-
-end triangle_angle_calculation_l3810_381073
-
-
-namespace spinner_probability_l3810_381048
-
-theorem spinner_probability (p_A p_B p_C p_D : ℚ) : 
-  p_A = 1/2 →
-  p_B = 1/8 →
-  p_C = p_D →
-  p_A + p_B + p_C + p_D = 1 →
-  p_C = 3/16 := by
+theorem parabola_x_intercepts :
+  ∃! x : ℝ, ∃ y : ℝ, x = -3 * y^2 + 2 * y + 3 ∧ y = 0 :=
 sorry
 
-end spinner_probability_l3810_381048
+end NUMINAMATH_CALUDE_parabola_x_intercepts_l3810_381019
 
 
-namespace balloon_ratio_is_seven_l3810_381022
+namespace NUMINAMATH_CALUDE_reflection_across_x_axis_l3810_381075
 
--- Define the number of balloons for Dan and Tim
-def dans_balloons : ℕ := 29
-def tims_balloons : ℕ := 203
+/-- Represents a point in a 2D Cartesian coordinate system -/
+structure Point where
+  x : ℝ
+  y : ℝ
 
--- Define the ratio of Tim's balloons to Dan's balloons
-def balloon_ratio : ℚ := tims_balloons / dans_balloons
+/-- Reflects a point across the x-axis -/
+def reflect_x (p : Point) : Point :=
+  { x := p.x, y := -p.y }
 
--- Theorem stating that the ratio is 7
-theorem balloon_ratio_is_seven : balloon_ratio = 7 := by
+theorem reflection_across_x_axis (p : Point) :
+  p.x = -3 ∧ p.y = 2 → (reflect_x p).x = -3 ∧ (reflect_x p).y = -2 := by
   sorry
 
-end balloon_ratio_is_seven_l3810_381022
+end NUMINAMATH_CALUDE_reflection_across_x_axis_l3810_381075
 
 
-namespace max_product_sum_l3810_381075
+namespace NUMINAMATH_CALUDE_time_difference_steve_jennifer_l3810_381064
 
-theorem max_product_sum (X Y Z : ℕ) (sum_constraint : X + Y + Z = 15) :
-  (∀ X' Y' Z' : ℕ, X' + Y' + Z' = 15 → 
-    X' * Y' * Z' + X' * Y' + Y' * Z' + Z' * X' ≤ X * Y * Z + X * Y + Y * Z + Z * X) →
-  X * Y * Z + X * Y + Y * Z + Z * X = 200 := by
+/-- Represents the time in minutes for various running distances --/
+structure RunningTimes where
+  danny_to_steve : ℝ
+  jennifer_to_danny : ℝ
+
+/-- Theorem stating the difference in time between Steve and Jennifer reaching their respective halfway points --/
+theorem time_difference_steve_jennifer (times : RunningTimes) 
+  (h1 : times.danny_to_steve = 35)
+  (h2 : times.jennifer_to_danny = 10)
+  (h3 : times.jennifer_to_danny * 2 = times.danny_to_steve) : 
+  (2 * times.danny_to_steve) / 2 - times.jennifer_to_danny / 2 = 30 := by
   sorry
 
-end max_product_sum_l3810_381075
+
+end NUMINAMATH_CALUDE_time_difference_steve_jennifer_l3810_381064
 
 
-namespace no_zero_term_l3810_381087
+namespace NUMINAMATH_CALUDE_unique_four_digit_number_l3810_381011
 
-/-- An arithmetic progression is defined by its first term and common difference -/
-structure ArithmeticProgression where
-  a : ℝ  -- first term
-  d : ℝ  -- common difference
-
-/-- The nth term of an arithmetic progression -/
-def nthTerm (ap : ArithmeticProgression) (n : ℕ) : ℝ :=
-  ap.a + (n - 1 : ℝ) * ap.d
-
-/-- The condition given in the problem -/
-def satisfiesCondition (ap : ArithmeticProgression) : Prop :=
-  nthTerm ap 5 + nthTerm ap 21 = nthTerm ap 8 + nthTerm ap 15 + nthTerm ap 13
-
-/-- The main theorem -/
-theorem no_zero_term (ap : ArithmeticProgression) 
-    (h : satisfiesCondition ap) : 
-    ¬∃ (n : ℕ), n > 0 ∧ nthTerm ap n = 0 :=
-  sorry
-
-end no_zero_term_l3810_381087
-
-
-namespace maci_blue_pens_l3810_381096
-
-/-- The number of blue pens Maci needs -/
-def num_blue_pens : ℕ := sorry
-
-/-- The number of red pens Maci needs -/
-def num_red_pens : ℕ := 15
-
-/-- The cost of a blue pen in cents -/
-def blue_pen_cost : ℕ := 10
-
-/-- The cost of a red pen in cents -/
-def red_pen_cost : ℕ := 2 * blue_pen_cost
-
-/-- The total cost of all pens in cents -/
-def total_cost : ℕ := 400
-
-theorem maci_blue_pens :
-  num_blue_pens * blue_pen_cost + num_red_pens * red_pen_cost = total_cost ∧
-  num_blue_pens = 10 :=
+theorem unique_four_digit_number : ∃! n : ℕ, 
+  (1000 ≤ n ∧ n < 10000) ∧ 
+  (∃ d₁ d₂ : ℕ, d₁ ≠ d₂ ∧ d₁ < 10 ∧ d₂ < 10 ∧
+    (∃ x y : ℕ, x < 10 ∧ y < 10 ∧ 10 + (n / 100 % 10) = x * y) ∧
+    (10 + (n / 100 % 10) - (n / d₂ % 10) = 1)) ∧
+  n = 1014 :=
 sorry
 
-end maci_blue_pens_l3810_381096
+end NUMINAMATH_CALUDE_unique_four_digit_number_l3810_381011
 
 
-namespace unique_solution_l3810_381005
+namespace NUMINAMATH_CALUDE_total_geckos_sold_l3810_381031
 
-def f (d : ℝ) (x : ℝ) : ℝ := 4 * x^3 - d * x
+def geckos_sold_last_year : ℕ := 86
 
-def g (a b c : ℝ) (x : ℝ) : ℝ := 4 * x^3 + a * x^2 + b * x + c
+theorem total_geckos_sold (geckos_sold_before : ℕ) 
+  (h : geckos_sold_before = 2 * geckos_sold_last_year) : 
+  geckos_sold_last_year + geckos_sold_before = 258 := by
+  sorry
 
-theorem unique_solution :
-  ∃! (a b c d : ℝ),
-    (∀ x ∈ Set.Icc (-1 : ℝ) 1, |f d x| ≤ 1) ∧
-    (∀ x ∈ Set.Icc (-1 : ℝ) 1, |g a b c x| ≤ 1) ∧
-    a = 0 ∧ b = -3 ∧ c = 0 ∧ d = 3 :=
+end NUMINAMATH_CALUDE_total_geckos_sold_l3810_381031
+
+
+namespace NUMINAMATH_CALUDE_rental_cost_calculation_l3810_381093
+
+def base_daily_rate : ℚ := 30
+def per_mile_rate : ℚ := 0.25
+def discount_rate : ℚ := 0.1
+def discount_threshold : ℕ := 5
+def rental_days : ℕ := 6
+def miles_driven : ℕ := 500
+
+def calculate_total_cost : ℚ :=
+  let daily_cost := if rental_days > discount_threshold
+                    then base_daily_rate * (1 - discount_rate) * rental_days
+                    else base_daily_rate * rental_days
+  let mileage_cost := per_mile_rate * miles_driven
+  daily_cost + mileage_cost
+
+theorem rental_cost_calculation :
+  calculate_total_cost = 287 :=
 by sorry
 
-end unique_solution_l3810_381005
+end NUMINAMATH_CALUDE_rental_cost_calculation_l3810_381093
 
 
-namespace triangle_area_equation_l3810_381068
+namespace NUMINAMATH_CALUDE_two_pizzas_not_enough_l3810_381046
 
-theorem triangle_area_equation : ∃! (x : ℝ), x > 3 ∧ (1/2 : ℝ) * (x - 3) * (3*x + 7) = 12*x - 9 := by
+/-- Represents a pizza with its toppings -/
+structure Pizza where
+  hasTomatoes : Bool
+  hasMushrooms : Bool
+  hasSausage : Bool
+
+/-- Represents a child's pizza preference -/
+structure Preference where
+  wantsTomatoes : Option Bool
+  wantsMushrooms : Option Bool
+  wantsSausage : Option Bool
+
+/-- Checks if a pizza satisfies a child's preference -/
+def satisfiesPreference (pizza : Pizza) (pref : Preference) : Bool :=
+  (pref.wantsTomatoes.isNone || pref.wantsTomatoes == some pizza.hasTomatoes) &&
+  (pref.wantsMushrooms.isNone || pref.wantsMushrooms == some pizza.hasMushrooms) &&
+  (pref.wantsSausage.isNone || pref.wantsSausage == some pizza.hasSausage)
+
+def masha : Preference := { wantsTomatoes := some true, wantsMushrooms := none, wantsSausage := some false }
+def vanya : Preference := { wantsTomatoes := none, wantsMushrooms := some true, wantsSausage := none }
+def dasha : Preference := { wantsTomatoes := some false, wantsMushrooms := none, wantsSausage := none }
+def nikita : Preference := { wantsTomatoes := some true, wantsMushrooms := some false, wantsSausage := none }
+def igor : Preference := { wantsTomatoes := none, wantsMushrooms := some false, wantsSausage := some true }
+
+theorem two_pizzas_not_enough : 
+  ∀ (pizza1 pizza2 : Pizza), 
+  ¬(satisfiesPreference pizza1 masha ∨ satisfiesPreference pizza2 masha) ∨
+  ¬(satisfiesPreference pizza1 vanya ∨ satisfiesPreference pizza2 vanya) ∨
+  ¬(satisfiesPreference pizza1 dasha ∨ satisfiesPreference pizza2 dasha) ∨
+  ¬(satisfiesPreference pizza1 nikita ∨ satisfiesPreference pizza2 nikita) ∨
+  ¬(satisfiesPreference pizza1 igor ∨ satisfiesPreference pizza2 igor) :=
+sorry
+
+end NUMINAMATH_CALUDE_two_pizzas_not_enough_l3810_381046
+
+
+namespace NUMINAMATH_CALUDE_product_of_ab_is_one_l3810_381088
+
+theorem product_of_ab_is_one (a b : ℝ) 
+  (h1 : a + 1/b = 4) 
+  (h2 : 1/a + b = 16/15) : 
+  (a * b) * (a * b) - 34/15 * (a * b) + 1 = 0 := by
   sorry
 
-end triangle_area_equation_l3810_381068
+end NUMINAMATH_CALUDE_product_of_ab_is_one_l3810_381088
 
 
-namespace rectangle_locus_l3810_381055
+namespace NUMINAMATH_CALUDE_cos_12_cos_18_minus_sin_12_sin_18_l3810_381012
 
-/-- Given a rectangle with length l and width w, and a fixed number b,
-    this theorem states that the locus of all points P(x, y) in the plane of the rectangle
-    such that the sum of the squares of the distances from P to the four vertices
-    of the rectangle equals b is a circle if and only if b > l^2 + w^2. -/
-theorem rectangle_locus (l w b : ℝ) :
-  (∃ (c : ℝ × ℝ) (r : ℝ),
-    ∀ (x y : ℝ),
-      (x - 0)^2 + (y - 0)^2 + (x - l)^2 + (y - 0)^2 +
-      (x - l)^2 + (y - w)^2 + (x - 0)^2 + (y - w)^2 = b ↔
-      (x - c.1)^2 + (y - c.2)^2 = r^2) ↔
-  b > l^2 + w^2 := by sorry
-
-end rectangle_locus_l3810_381055
-
-
-namespace sum_of_cubes_l3810_381010
-
-theorem sum_of_cubes (x y : ℝ) (h1 : x + y = 12) (h2 : x * y = 20) : x^3 + y^3 = 1008 := by
+theorem cos_12_cos_18_minus_sin_12_sin_18 :
+  Real.cos (12 * π / 180) * Real.cos (18 * π / 180) - 
+  Real.sin (12 * π / 180) * Real.sin (18 * π / 180) = 
+  Real.sqrt 3 / 2 := by
   sorry
 
-end sum_of_cubes_l3810_381010
+end NUMINAMATH_CALUDE_cos_12_cos_18_minus_sin_12_sin_18_l3810_381012
 
 
-namespace min_chicken_hits_l3810_381037
+namespace NUMINAMATH_CALUDE_parabola_vertex_below_x_axis_l3810_381055
 
-def ring_toss (chicken monkey dog : ℕ) : Prop :=
-  chicken * 9 + monkey * 5 + dog * 2 = 61 ∧
-  chicken + monkey + dog = 10 ∧
-  chicken ≥ 1 ∧ monkey ≥ 1 ∧ dog ≥ 1
+/-- A parabola with equation y = x^2 + 2x + a has its vertex below the x-axis -/
+def vertex_below_x_axis (a : ℝ) : Prop :=
+  ∃ (x y : ℝ), y = x^2 + 2*x + a ∧ y < 0 ∧ ∀ (x' : ℝ), x'^2 + 2*x' + a ≥ y
 
-theorem min_chicken_hits :
-  ∀ chicken monkey dog : ℕ,
-    ring_toss chicken monkey dog →
-    chicken ≥ 5 :=
+theorem parabola_vertex_below_x_axis (a : ℝ) :
+  vertex_below_x_axis a → a < 1 := by
+  sorry
+
+end NUMINAMATH_CALUDE_parabola_vertex_below_x_axis_l3810_381055
+
+
+namespace NUMINAMATH_CALUDE_quadratic_inequality_empty_solution_l3810_381043
+
+theorem quadratic_inequality_empty_solution (b : ℝ) : 
+  (∀ x : ℝ, x^2 + b*x + 1 > 0) ↔ -2 < b ∧ b < 2 :=
+by sorry
+
+end NUMINAMATH_CALUDE_quadratic_inequality_empty_solution_l3810_381043
+
+
+namespace NUMINAMATH_CALUDE_division_simplification_l3810_381022
+
+theorem division_simplification (a b : ℝ) (h : a ≠ 0) :
+  (-4 * a^2 + 12 * a^3 * b) / (-4 * a^2) = 1 - 3 * a * b :=
+by sorry
+
+end NUMINAMATH_CALUDE_division_simplification_l3810_381022
+
+
+namespace NUMINAMATH_CALUDE_power_equality_l3810_381097
+
+theorem power_equality (q : ℕ) : 81^10 = 3^q → q = 40 := by
+  sorry
+
+end NUMINAMATH_CALUDE_power_equality_l3810_381097
+
+
+namespace NUMINAMATH_CALUDE_initial_bags_calculation_l3810_381036
+
+/-- Given the total number of cookies, total number of candies, and current number of bags,
+    calculate the initial number of bags. -/
+def initialBags (totalCookies : ℕ) (totalCandies : ℕ) (currentBags : ℕ) : ℕ :=
+  sorry
+
+theorem initial_bags_calculation (totalCookies totalCandies currentBags : ℕ) 
+    (h1 : totalCookies = 28)
+    (h2 : totalCandies = 86)
+    (h3 : currentBags = 2)
+    (h4 : totalCookies % currentBags = 0)  -- Ensures equal distribution of cookies
+    (h5 : totalCandies % (initialBags totalCookies totalCandies currentBags) = 0)  -- Ensures equal distribution of candies
+    (h6 : totalCookies / currentBags = totalCandies / (initialBags totalCookies totalCandies currentBags))  -- Cookies per bag equals candies per bag
+    : initialBags totalCookies totalCandies currentBags = 6 :=
+  sorry
+
+end NUMINAMATH_CALUDE_initial_bags_calculation_l3810_381036
+
+
+namespace NUMINAMATH_CALUDE_hyperbola_eccentricity_l3810_381044
+
+/-- The eccentricity of a hyperbola with the given properties is 2 -/
+theorem hyperbola_eccentricity (a b : ℝ) (ha : a > 0) (hb : b > 0) : 
+  let C : ℝ → ℝ → Prop := λ x y => x^2 / a^2 - y^2 / b^2 = 1
+  let F₁ : ℝ × ℝ := (-c, 0)
+  let F₂ : ℝ × ℝ := (c, 0)
+  let asymptote₁ : ℝ → ℝ := λ x => (b / a) * x
+  let asymptote₂ : ℝ → ℝ := λ x => -(b / a) * x
+  ∃ (G H : ℝ × ℝ) (c : ℝ),
+    (∃ x, G.1 = x ∧ G.2 = asymptote₁ x) ∧ 
+    (∃ x, H.1 = x ∧ H.2 = asymptote₂ x) ∧
+    (G.2 - F₁.2) * (G.1 - F₂.1) = -(G.1 - F₁.1) * (G.2 - F₂.2) ∧
+    H = ((G.1 + F₁.1) / 2, (G.2 + F₁.2) / 2) →
+    c = 2 * a :=
 by
   sorry
 
-end min_chicken_hits_l3810_381037
+end NUMINAMATH_CALUDE_hyperbola_eccentricity_l3810_381044
 
 
-namespace gain_percentage_calculation_l3810_381060
+namespace NUMINAMATH_CALUDE_square_area_problem_l3810_381006
 
-def cost_price : ℝ := 180
-def selling_price : ℝ := 216
-
-theorem gain_percentage_calculation : 
-  let gain_percentage := (selling_price / cost_price - 1) * 100
-  gain_percentage = 20 := by sorry
-
-end gain_percentage_calculation_l3810_381060
-
-
-namespace specific_arrangement_probability_l3810_381074
-
-def num_red_lamps : ℕ := 4
-def num_blue_lamps : ℕ := 4
-def num_lamps_on : ℕ := 4
-
-def probability_specific_arrangement : ℚ := 3/49
-
-theorem specific_arrangement_probability :
-  let total_lamps := num_red_lamps + num_blue_lamps
-  let total_arrangements := (total_lamps.choose num_red_lamps) * (total_lamps.choose num_lamps_on)
-  let favorable_outcomes := (total_lamps - 2).choose (num_red_lamps - 1) * (total_lamps - 2).choose (num_lamps_on - 1)
-  (favorable_outcomes : ℚ) / total_arrangements = probability_specific_arrangement :=
-sorry
-
-end specific_arrangement_probability_l3810_381074
-
-
-namespace min_value_trig_expression_l3810_381062
-
-theorem min_value_trig_expression (α β : Real) :
-  ∃ (min : Real),
-    (∀ (α' β' : Real), (3 * Real.cos α' + 4 * Real.sin β' - 7)^2 + (3 * Real.sin α' + 4 * Real.cos β' - 12)^2 ≥ min) ∧
-    ((3 * Real.cos α + 4 * Real.sin β - 7)^2 + (3 * Real.sin α + 4 * Real.cos β - 12)^2 = min) ∧
-    min = 36 := by
+theorem square_area_problem (s : ℝ) : 
+  (2 / 5 : ℝ) * s * 10 = 140 → s^2 = 1225 := by
   sorry
 
-end min_value_trig_expression_l3810_381062
+end NUMINAMATH_CALUDE_square_area_problem_l3810_381006
 
 
-namespace son_age_l3810_381020
+namespace NUMINAMATH_CALUDE_total_candies_l3810_381065
 
-theorem son_age (father_age son_age : ℕ) : 
-  father_age = son_age + 24 →
-  father_age + 2 = 2 * (son_age + 2) →
-  son_age = 22 := by
-sorry
+/-- The number of candies each person has -/
+structure Candies where
+  adam : ℕ
+  james : ℕ
+  rubert : ℕ
+  lisa : ℕ
+  chris : ℕ
+  max : ℕ
+  emily : ℕ
 
-end son_age_l3810_381020
+/-- The conditions of the candy distribution -/
+def candy_conditions (c : Candies) : Prop :=
+  c.adam = 6 ∧
+  c.james = 3 * c.adam ∧
+  c.rubert = 4 * c.james ∧
+  c.lisa = 2 * c.rubert - 5 ∧
+  c.chris = c.lisa / 2 + 7 ∧
+  c.max = c.rubert + c.chris + 2 ∧
+  c.emily = 3 * c.chris - (c.max - c.lisa)
 
-
-namespace gcd_lcm_sum_18_30_45_l3810_381000
-
-/-- The sum of the greatest common factor and least common multiple of 18, 30, and 45 is 93 -/
-theorem gcd_lcm_sum_18_30_45 : 
-  (Nat.gcd 18 (Nat.gcd 30 45) + Nat.lcm 18 (Nat.lcm 30 45)) = 93 := by
+/-- The theorem stating the total number of candies -/
+theorem total_candies (c : Candies) (h : candy_conditions c) : 
+  c.adam + c.james + c.rubert + c.lisa + c.chris + c.max + c.emily = 678 := by
   sorry
 
-end gcd_lcm_sum_18_30_45_l3810_381000
-
-
-namespace outfits_count_l3810_381019
-
-/-- The number of possible outfits given the number of shirts, pants, and shoes. -/
-def number_of_outfits (shirts : ℕ) (pants : ℕ) (shoes : ℕ) : ℕ :=
-  shirts * pants * shoes
-
-/-- Theorem stating that the number of outfits from 4 shirts, 5 pants, and 2 shoes is 40. -/
-theorem outfits_count : number_of_outfits 4 5 2 = 40 := by
-  sorry
-
-end outfits_count_l3810_381019
-
-
-namespace two_zeros_neither_necessary_nor_sufficient_l3810_381064
-
-open Real
-
--- Define the function f and its derivative f'
-variable (f : ℝ → ℝ) (f' : ℝ → ℝ)
-
--- Define the property of f' having exactly two zeros in (0, 2)
-def has_two_zeros (f' : ℝ → ℝ) : Prop :=
-  ∃ x₁ x₂, 0 < x₁ ∧ x₁ < x₂ ∧ x₂ < 2 ∧ f' x₁ = 0 ∧ f' x₂ = 0 ∧
-  ∀ x, 0 < x ∧ x < 2 ∧ f' x = 0 → x = x₁ ∨ x = x₂
-
--- Define the property of f having exactly two extreme points in (0, 2)
-def has_two_extreme_points (f : ℝ → ℝ) (f' : ℝ → ℝ) : Prop :=
-  ∃ x₁ x₂, 0 < x₁ ∧ x₁ < x₂ ∧ x₂ < 2 ∧ f' x₁ = 0 ∧ f' x₂ = 0 ∧
-  (∀ x, 0 < x ∧ x < x₁ → f' x ≠ 0) ∧
-  (∀ x, x₁ < x ∧ x < x₂ → f' x ≠ 0) ∧
-  (∀ x, x₂ < x ∧ x < 2 → f' x ≠ 0)
-
--- Theorem stating that has_two_zeros is neither necessary nor sufficient for has_two_extreme_points
-theorem two_zeros_neither_necessary_nor_sufficient :
-  ¬(∀ f f', has_two_zeros f' → has_two_extreme_points f f') ∧
-  ¬(∀ f f', has_two_extreme_points f f' → has_two_zeros f') :=
-sorry
-
-end two_zeros_neither_necessary_nor_sufficient_l3810_381064
-
-
-namespace perfect_squares_problem_l3810_381098
-
-theorem perfect_squares_problem (m n a b c d : ℕ) :
-  2000 + 100 * a + 10 * b + 9 = n^2 →
-  2000 + 100 * c + 10 * d + 9 = m^2 →
-  m > n →
-  10 ≤ 10 * a + b →
-  10 * a + b ≤ 99 →
-  10 ≤ 10 * c + d →
-  10 * c + d ≤ 99 →
-  m + n = 100 ∧ (10 * a + b) + (10 * c + d) = 100 := by
-  sorry
-
-end perfect_squares_problem_l3810_381098
-
-
-namespace count_integers_in_range_l3810_381053
-
-theorem count_integers_in_range : 
-  (Finset.filter (fun x => 30 < x^2 + 8*x + 16 ∧ x^2 + 8*x + 16 < 60) (Finset.range 100)).card = 2 := by
-  sorry
-
-end count_integers_in_range_l3810_381053
-
-
-namespace choir_members_count_l3810_381099
-
-theorem choir_members_count : ∃! n : ℕ, 200 ≤ n ∧ n ≤ 300 ∧ n % 10 = 6 ∧ n % 11 = 6 := by
-  sorry
-
-end choir_members_count_l3810_381099
-
-
-namespace boat_distance_downstream_l3810_381095
-
-/-- Calculates the distance traveled downstream by a boat -/
-theorem boat_distance_downstream 
-  (boat_speed : ℝ) 
-  (stream_speed : ℝ) 
-  (time : ℝ) 
-  (h1 : boat_speed = 22) 
-  (h2 : stream_speed = 5) 
-  (h3 : time = 5) : 
-  boat_speed + stream_speed * time = 135 := by
-  sorry
-
-#check boat_distance_downstream
-
-end boat_distance_downstream_l3810_381095
-
-
-namespace quadratic_symmetry_l3810_381084
-
-/-- A quadratic function with axis of symmetry at x = 6 and p(0) = -3 -/
-def p (a b c : ℝ) : ℝ → ℝ := fun x ↦ a * x^2 + b * x + c
-
-theorem quadratic_symmetry (a b c : ℝ) :
-  (∀ x, p a b c (6 + x) = p a b c (6 - x)) →  -- axis of symmetry at x = 6
-  p a b c 0 = -3 →                           -- p(0) = -3
-  p a b c 12 = -3 :=                         -- p(12) = -3
-by
-  sorry
-
-end quadratic_symmetry_l3810_381084
-
-
-namespace security_system_probability_l3810_381082
-
-theorem security_system_probability (p : ℝ) : 
-  (1/8 : ℝ) * (1 - p) + (7/8 : ℝ) * p = 9/40 → p = 2/15 := by
-  sorry
-
-end security_system_probability_l3810_381082
-
-
-namespace expression_value_l3810_381088
-
-theorem expression_value (x y : ℤ) (hx : x = 3) (hy : y = 2) :
-  3 * x - 4 * y + 2 * y = 5 := by
-  sorry
-
-end expression_value_l3810_381088
-
-
-namespace slow_clock_catch_up_l3810_381083
-
-/-- Represents the number of minutes in an hour -/
-def minutes_per_hour : ℕ := 60
-
-/-- Represents how many minutes the clock is slow per hour -/
-def slow_rate : ℕ := 4
-
-/-- Represents the current time on the slow clock in minutes past 11:00 -/
-def current_slow_time : ℕ := 46
-
-/-- Represents the target time on the slow clock in minutes past 11:00 -/
-def target_slow_time : ℕ := 60
-
-/-- Theorem stating that it takes 15 minutes of correct time for the slow clock to reach 12:00 -/
-theorem slow_clock_catch_up :
-  (target_slow_time - current_slow_time) * minutes_per_hour / (minutes_per_hour - slow_rate) = 15 := by
-  sorry
-
-end slow_clock_catch_up_l3810_381083
-
-
-namespace perpendicular_lines_direction_vectors_l3810_381050
-
-theorem perpendicular_lines_direction_vectors (b : ℝ) :
-  let v1 : Fin 2 → ℝ := ![- 5, 11]
-  let v2 : Fin 2 → ℝ := ![b, 3]
-  (∀ i : Fin 2, (v1 • v2) = 0) → b = 33 / 5 := by
-  sorry
-
-end perpendicular_lines_direction_vectors_l3810_381050
-
-
-namespace simplify_algebraic_expression_l3810_381026
-
-theorem simplify_algebraic_expression (a b : ℝ) (h : a ≠ b) :
-  (a^3 - b^3) / (a * b) - (a * b^2 - b^3) / (a * b - a^3) = 2 * a * (a - b) / b :=
-sorry
-
-end simplify_algebraic_expression_l3810_381026
-
-
-namespace ring_arrangement_count_l3810_381024
-
-/-- The number of ways to arrange 6 rings out of 10 on 5 fingers -/
-def ring_arrangements : ℕ := sorry
-
-/-- The number of ways to choose 6 rings out of 10 -/
-def choose_rings : ℕ := sorry
-
-/-- The number of ways to order 6 rings -/
-def order_rings : ℕ := sorry
-
-/-- The number of ways to distribute 6 rings among 5 fingers -/
-def distribute_rings : ℕ := sorry
-
-theorem ring_arrangement_count :
-  ring_arrangements = choose_rings * order_rings * distribute_rings ∧
-  ring_arrangements = 31752000 :=
-sorry
-
-end ring_arrangement_count_l3810_381024
-
-
-namespace product_of_primes_in_final_positions_l3810_381066
-
--- Define the colors
-inductive Color
-| Red
-| Yellow
-| Green
-| Blue
-
--- Define the positions in a 2x2 grid
-inductive Position
-| TopLeft
-| TopRight
-| BottomLeft
-| BottomRight
-
--- Define the transformation function
-def transform (c : Color) : Position → Position
-| Position.TopLeft => 
-    match c with
-    | Color.Red => Position.TopRight
-    | Color.Yellow => Position.TopRight
-    | Color.Green => Position.BottomLeft
-    | Color.Blue => Position.BottomRight
-| Position.TopRight => 
-    match c with
-    | Color.Red => Position.TopRight
-    | Color.Yellow => Position.TopRight
-    | Color.Green => Position.BottomRight
-    | Color.Blue => Position.BottomRight
-| Position.BottomLeft => 
-    match c with
-    | Color.Red => Position.TopLeft
-    | Color.Yellow => Position.TopLeft
-    | Color.Green => Position.BottomLeft
-    | Color.Blue => Position.BottomLeft
-| Position.BottomRight => 
-    match c with
-    | Color.Red => Position.TopLeft
-    | Color.Yellow => Position.TopLeft
-    | Color.Green => Position.BottomRight
-    | Color.Blue => Position.BottomRight
-
--- Define the numbers in Figure 4
-def figure4 (p : Position) : Nat :=
-  match p with
-  | Position.TopLeft => 6
-  | Position.TopRight => 7
-  | Position.BottomLeft => 5
-  | Position.BottomRight => 8
-
--- Define primality
-def isPrime (n : Nat) : Prop := n > 1 ∧ ∀ m : Nat, m > 1 → m < n → ¬(n % m = 0)
-
--- Theorem statement
-theorem product_of_primes_in_final_positions : 
-  let finalRedPosition := transform Color.Red (transform Color.Red Position.TopLeft)
-  let finalYellowPosition := transform Color.Yellow (transform Color.Yellow Position.TopRight)
-  (isPrime (figure4 finalRedPosition) ∧ isPrime (figure4 finalYellowPosition)) →
-  figure4 finalRedPosition * figure4 finalYellowPosition = 55 := by
-  sorry
-
-
-end product_of_primes_in_final_positions_l3810_381066
-
-
-namespace watch_cost_price_l3810_381013
-
-/-- The cost price of a watch given specific selling conditions -/
-theorem watch_cost_price (C : ℚ) : 
-  (0.9 * C = C - 0.1 * C) →  -- Selling price at 10% loss
-  (1.04 * C = C + 0.04 * C) →  -- Selling price at 4% gain
-  (1.04 * C - 0.9 * C = 200) →  -- Difference between selling prices
-  C = 10000 / 7 := by
-sorry
-
-end watch_cost_price_l3810_381013
-
-
-namespace vector_combination_l3810_381001
-
-/-- Given three points A, B, and C in a plane, prove that the coordinates of 1/2 * AC - 1/4 * BC are (-3, 6) -/
-theorem vector_combination (A B C : ℝ × ℝ) (h1 : A = (2, -4)) (h2 : B = (0, 6)) (h3 : C = (-8, 10)) :
-  (1 / 2 : ℝ) • (C - A) - (1 / 4 : ℝ) • (C - B) = (-3, 6) := by
-  sorry
-
-end vector_combination_l3810_381001
-
-
-namespace tangent_slope_circle_l3810_381023
-
-/-- Slope of the line tangent to a circle -/
-theorem tangent_slope_circle (center : ℝ × ℝ) (point : ℝ × ℝ) : 
-  center = (3, 2) → point = (5, 5) → 
-  (let radius_slope := (point.2 - center.2) / (point.1 - center.1);
-   -1 / radius_slope) = -2/3 := by sorry
-
-end tangent_slope_circle_l3810_381023
-
-
-namespace sum_of_x_and_y_l3810_381051
-
-theorem sum_of_x_and_y (x y : ℝ) : 
-  |x - 2*y - 3| + (y - 2*x)^2 = 0 → x + y = -3 := by
-  sorry
-
-end sum_of_x_and_y_l3810_381051
-
-
-namespace lcm_of_25_35_50_l3810_381029
-
-theorem lcm_of_25_35_50 : Nat.lcm 25 (Nat.lcm 35 50) = 350 := by
-  sorry
-
-end lcm_of_25_35_50_l3810_381029
-
-
-namespace quadratic_equation_solution_l3810_381017
-
-theorem quadratic_equation_solution : ∃ x₁ x₂ : ℝ, 
-  x₁^2 - 4*x₁ - 5 = 0 ∧ 
-  x₂^2 - 4*x₂ - 5 = 0 ∧ 
-  x₁ = 5 ∧ 
-  x₂ = -1 := by
-  sorry
-
-end quadratic_equation_solution_l3810_381017
-
-
-namespace min_bilingual_students_l3810_381047
-
-theorem min_bilingual_students (total : ℕ) (hindi : ℕ) (english : ℕ) 
-  (h_total : total = 40)
-  (h_hindi : hindi = 30)
-  (h_english : english = 20) :
-  ∃ (both : ℕ), both ≥ hindi + english - total ∧ 
-    ∀ (x : ℕ), x ≥ hindi + english - total → x ≥ both :=
+end NUMINAMATH_CALUDE_total_candies_l3810_381065
+
+
+namespace NUMINAMATH_CALUDE_ellipse_line_intersection_range_l3810_381087
+
+-- Define the ellipse and line
+def ellipse (a b x y : ℝ) : Prop := x^2 / a^2 + y^2 / b^2 = 1
+def line (x y : ℝ) : Prop := x - y = 1
+
+-- Define the theorem
+theorem ellipse_line_intersection_range (a b : ℝ) (P Q : ℝ × ℝ) :
+  a > 0 → b > 0 → a > b →
+  ellipse a b P.1 P.2 →
+  ellipse a b Q.1 Q.2 →
+  line P.1 P.2 →
+  line Q.1 Q.2 →
+  (P.1 * Q.1 + P.2 * Q.2 = 0) →
+  Real.sqrt 2 / 2 * a ≤ b →
+  b ≤ Real.sqrt 6 / 3 * a →
+  Real.sqrt 5 / 2 ≤ a ∧ a ≤ Real.sqrt 6 / 2 :=
 by sorry
 
-end min_bilingual_students_l3810_381047
+#check ellipse_line_intersection_range
+
+end NUMINAMATH_CALUDE_ellipse_line_intersection_range_l3810_381087
 
 
-namespace shift_function_unit_shift_l3810_381059
+namespace NUMINAMATH_CALUDE_point_in_unit_circle_l3810_381060
 
-/-- A function satisfying specific inequalities for shifts of 24 and 77 -/
-def ShiftFunction (f : ℝ → ℝ) : Prop :=
-  (∀ x : ℝ, f (x + 24) ≤ f x + 24) ∧ (∀ x : ℝ, f (x + 77) ≥ f x + 77)
-
-/-- Theorem stating that a ShiftFunction satisfies f(x+1) = f(x)+1 for all real x -/
-theorem shift_function_unit_shift (f : ℝ → ℝ) (hf : ShiftFunction f) :
-  ∀ x : ℝ, f (x + 1) = f x + 1 := by
-  sorry
-
-end shift_function_unit_shift_l3810_381059
-
-
-namespace polka_dot_price_is_67_l3810_381065
-
-def checkered_price : ℝ := 75
-def plain_price : ℝ := 45
-def striped_price : ℝ := 63
-def total_price : ℝ := 250
-
-def checkered_per_yard : ℝ := 7.5
-def plain_per_yard : ℝ := 6
-def striped_per_yard : ℝ := 9
-def polka_dot_per_yard : ℝ := 4.5
-
-def discount_rate : ℝ := 0.1
-def discount_threshold : ℝ := 10
-
-def polka_dot_price : ℝ := total_price - (checkered_price + plain_price + striped_price)
-
-theorem polka_dot_price_is_67 : polka_dot_price = 67 := by
-  sorry
-
-end polka_dot_price_is_67_l3810_381065
-
-
-namespace point_on_number_line_l3810_381061
-
-/-- Given points P, Q, and R on a number line, where Q is halfway between P and R,
-    P is at -6, and Q is at -1, prove that R is at 4. -/
-theorem point_on_number_line (P Q R : ℝ) : 
-  Q = (P + R) / 2 → P = -6 → Q = -1 → R = 4 := by
-  sorry
-
-end point_on_number_line_l3810_381061
-
-
-namespace quarter_circles_sum_limit_l3810_381071
-
-/-- The sum of the lengths of quarter-circles approaches a value between the diameter and semi-circumference -/
-theorem quarter_circles_sum_limit (D : ℝ) (h : D > 0) :
-  ∃ (L : ℝ), (∀ ε > 0, ∃ N, ∀ n ≥ N, |2 * n * (π * D / (8 * n)) - L| < ε) ∧
-             D < L ∧ L < π * D / 2 := by
-  sorry
-
-end quarter_circles_sum_limit_l3810_381071
-
-
-namespace square_roots_theorem_l3810_381012
-
-theorem square_roots_theorem (a : ℝ) :
-  (3 - a) ^ 2 = (2 * a + 1) ^ 2 → (3 - a) ^ 2 = 49 := by
-  sorry
-
-end square_roots_theorem_l3810_381012
-
-
-namespace factorization_equality_l3810_381036
-
-theorem factorization_equality (x y : ℝ) : 
-  4 * (x - y + 1) + y * (y - 2 * x) = (y - 2) * (y - 2 - 2 * x) := by
-  sorry
-
-end factorization_equality_l3810_381036
-
-
-namespace provider_choice_count_l3810_381003
-
-/-- The total number of service providers --/
-def total_providers : ℕ := 25
-
-/-- The number of providers available to the youngest child --/
-def restricted_providers : ℕ := 15
-
-/-- The number of children --/
-def num_children : ℕ := 4
-
-/-- The number of ways to choose service providers for the children --/
-def choose_providers : ℕ := total_providers * (total_providers - 1) * (total_providers - 2) * restricted_providers
-
-theorem provider_choice_count :
-  choose_providers = 207000 :=
+theorem point_in_unit_circle (z : ℂ) (h : Complex.abs z ≤ 1) :
+  (z.re)^2 + (z.im)^2 ≤ 1 := by
 sorry
 
-end provider_choice_count_l3810_381003
+end NUMINAMATH_CALUDE_point_in_unit_circle_l3810_381060
 
 
-namespace square_division_theorem_l3810_381002
+namespace NUMINAMATH_CALUDE_ellipse_chord_slope_l3810_381056
 
-theorem square_division_theorem :
-  ∃ (s : ℝ) (a b : ℝ) (n m : ℕ),
-    s > 0 ∧ a > 0 ∧ b > 0 ∧
-    b / a ≤ 1.25 ∧
-    n + m = 40 ∧
-    s * s = n * a * a + m * b * b :=
+/-- Given an ellipse with equation 4x^2 + 9y^2 = 144 containing a point P(3, 2),
+    the slope of the line containing the chord with P as its midpoint is -2/3. -/
+theorem ellipse_chord_slope :
+  let ellipse := {(x, y) : ℝ × ℝ | 4 * x^2 + 9 * y^2 = 144}
+  let P : ℝ × ℝ := (3, 2)
+  P ∈ ellipse →
+  ∃ (A B : ℝ × ℝ),
+    A ∈ ellipse ∧ B ∈ ellipse ∧
+    P = ((A.1 + B.1) / 2, (A.2 + B.2) / 2) ∧
+    (B.2 - A.2) / (B.1 - A.1) = -2/3 :=
 by sorry
 
-end square_division_theorem_l3810_381002
+end NUMINAMATH_CALUDE_ellipse_chord_slope_l3810_381056
 
 
-namespace expensive_gimbap_count_l3810_381078
+namespace NUMINAMATH_CALUDE_total_slices_today_l3810_381000
 
-def basic_gimbap : ℕ := 2000
-def tuna_gimbap : ℕ := 3500
-def red_pepper_gimbap : ℕ := 3000
-def beef_gimbap : ℕ := 4000
-def rice_gimbap : ℕ := 3500
+def lunch_slices : ℕ := 7
+def dinner_slices : ℕ := 5
 
-def gimbap_prices : List ℕ := [basic_gimbap, tuna_gimbap, red_pepper_gimbap, beef_gimbap, rice_gimbap]
-
-def count_expensive_gimbap (prices : List ℕ) : ℕ :=
-  (prices.filter (λ price => price ≥ 3500)).length
-
-theorem expensive_gimbap_count : count_expensive_gimbap gimbap_prices = 3 := by
+theorem total_slices_today : lunch_slices + dinner_slices = 12 := by
   sorry
 
-end expensive_gimbap_count_l3810_381078
+end NUMINAMATH_CALUDE_total_slices_today_l3810_381000
 
 
-namespace prob_two_non_defective_pens_l3810_381032
+namespace NUMINAMATH_CALUDE_smallest_angle_solution_l3810_381003
 
-/-- The probability of selecting two non-defective pens from a box of 8 pens, where 2 are defective -/
-theorem prob_two_non_defective_pens (total_pens : ℕ) (defective_pens : ℕ) (selected_pens : ℕ) :
-  total_pens = 8 →
-  defective_pens = 2 →
-  selected_pens = 2 →
-  (total_pens - defective_pens : ℚ) / total_pens *
-  ((total_pens - defective_pens - 1 : ℚ) / (total_pens - 1)) = 15 / 28 :=
-by sorry
-
-end prob_two_non_defective_pens_l3810_381032
-
-
-namespace quadratic_roots_at_minimum_l3810_381043
-
-/-- Given a quadratic function y = ax² + bx + c with a ≠ 0 and its lowest point at (1, -1),
-    the roots of ax² + bx + c = -1 are both equal to 1. -/
-theorem quadratic_roots_at_minimum (a b c : ℝ) (ha : a ≠ 0) :
-  (∀ x, a * x^2 + b * x + c ≥ a * 1^2 + b * 1 + c) →
-  (a * 1^2 + b * 1 + c = -1) →
-  (∀ x, a * x^2 + b * x + c = -1 → x = 1) :=
-by sorry
-
-end quadratic_roots_at_minimum_l3810_381043
-
-
-namespace max_sum_cubes_max_sum_cubes_achieved_l3810_381006
-
-theorem max_sum_cubes (a b c d e : ℝ) (h : a^2 + b^2 + c^2 + d^2 + e^2 = 5) :
-  a^3 + b^3 + c^3 + d^3 + e^3 ≤ 5 * Real.sqrt 5 :=
-by sorry
-
-theorem max_sum_cubes_achieved (h : ∃ a b c d e : ℝ, a^2 + b^2 + c^2 + d^2 + e^2 = 5 ∧ a^3 + b^3 + c^3 + d^3 + e^3 = 5 * Real.sqrt 5) :
-  ∃ a b c d e : ℝ, a^2 + b^2 + c^2 + d^2 + e^2 = 5 ∧ a^3 + b^3 + c^3 + d^3 + e^3 = 5 * Real.sqrt 5 :=
-by sorry
-
-end max_sum_cubes_max_sum_cubes_achieved_l3810_381006
-
-
-namespace expression_evaluation_l3810_381072
-
-theorem expression_evaluation :
-  let x : ℚ := 2
-  let y : ℚ := -1/3
-  (4*x^2 - 2*x*y + y^2) - 3*(x^2 - x*y + 5*y^2) = 16/9 := by
-  sorry
-
-end expression_evaluation_l3810_381072
-
-
-namespace tan_75_deg_l3810_381076
-
-/-- Proves that tan 75° = 2 + √3 given tan 60° and tan 15° -/
-theorem tan_75_deg (tan_60_deg : Real.tan (60 * π / 180) = Real.sqrt 3)
-                   (tan_15_deg : Real.tan (15 * π / 180) = 2 - Real.sqrt 3) :
-  Real.tan (75 * π / 180) = 2 + Real.sqrt 3 := by
-  sorry
-
-end tan_75_deg_l3810_381076
-
-
-namespace labourerPayCorrect_l3810_381067
-
-/-- Calculates the total amount received by a labourer given the engagement conditions and absence -/
-def labourerPay (totalDays : ℕ) (payRate : ℚ) (fineRate : ℚ) (absentDays : ℕ) : ℚ :=
-  let workedDays := totalDays - absentDays
-  let totalEarned := (workedDays : ℚ) * payRate
-  let totalFine := (absentDays : ℚ) * fineRate
-  totalEarned - totalFine
-
-/-- The labourer's pay calculation is correct for the given conditions -/
-theorem labourerPayCorrect :
-  labourerPay 25 2 0.5 5 = 37.5 := by
-  sorry
-
-#eval labourerPay 25 2 0.5 5
-
-end labourerPayCorrect_l3810_381067
-
-
-namespace xy_less_18_implies_x_less_2_or_y_less_9_l3810_381038
-
-theorem xy_less_18_implies_x_less_2_or_y_less_9 :
-  ∀ x y : ℝ, x * y < 18 → x < 2 ∨ y < 9 := by
-  sorry
-
-end xy_less_18_implies_x_less_2_or_y_less_9_l3810_381038
-
-
-namespace expression_evaluation_l3810_381007
-
-theorem expression_evaluation (x : ℝ) (hx : x ≠ 0) :
-  Real.sqrt (1 + ((x^6 - 2) / (3 * x^3))^2) = 
-  (Real.sqrt ((x^6 + 4) * (x^6 + 1))) / (3 * x^3) := by
-  sorry
-
-end expression_evaluation_l3810_381007
-
-
-namespace park_orchid_bushes_after_planting_l3810_381079
-
-/-- The number of orchid bushes in the park after planting -/
-def total_orchid_bushes (current : ℕ) (newly_planted : ℕ) : ℕ :=
-  current + newly_planted
-
-/-- Theorem: The park will have 35 orchid bushes after planting -/
-theorem park_orchid_bushes_after_planting :
-  total_orchid_bushes 22 13 = 35 := by
-  sorry
-
-end park_orchid_bushes_after_planting_l3810_381079
-
-
-namespace total_students_at_competition_l3810_381045
-
-/-- The number of students from each school at a science fair competition --/
-structure SchoolAttendance where
-  quantum : ℕ
-  schrodinger : ℕ
-  einstein : ℕ
-  newton : ℕ
-  galileo : ℕ
-  pascal : ℕ
-  faraday : ℕ
-
-/-- The conditions of the science fair competition --/
-def scienceFairConditions (s : SchoolAttendance) : Prop :=
-  s.quantum = 90 ∧
-  s.schrodinger = (2 * s.quantum) / 3 ∧
-  s.einstein = (4 * s.schrodinger) / 9 ∧
-  s.newton = (5 * s.einstein) / 12 ∧
-  s.galileo = (11 * s.newton) / 20 ∧
-  s.pascal = (13 * s.galileo) / 50 ∧
-  s.faraday = 4 * (s.quantum + s.schrodinger + s.einstein + s.newton + s.galileo + s.pascal)
-
-/-- The theorem stating the total number of students at the competition --/
-theorem total_students_at_competition (s : SchoolAttendance) 
-  (h : scienceFairConditions s) : 
-  s.quantum + s.schrodinger + s.einstein + s.newton + s.galileo + s.pascal + s.faraday = 980 := by
-  sorry
-
-end total_students_at_competition_l3810_381045
-
-
-namespace circle_equation_l3810_381033
-
--- Define the circle
-def Circle (center : ℝ × ℝ) (radius : ℝ) :=
-  {p : ℝ × ℝ | (p.1 - center.1)^2 + (p.2 - center.2)^2 = radius^2}
-
--- Define the points M and N
-def M : ℝ × ℝ := (-2, 2)
-def N : ℝ × ℝ := (-1, -1)
-
--- Define the line equation x - y - 1 = 0
-def LineEquation (p : ℝ × ℝ) : Prop := p.1 - p.2 - 1 = 0
-
--- Theorem statement
-theorem circle_equation :
-  ∃ (center : ℝ × ℝ) (radius : ℝ),
-    LineEquation center ∧
-    M ∈ Circle center radius ∧
-    N ∈ Circle center radius ∧
-    center = (3, 2) ∧
-    radius = 5 :=
-  sorry
-
-end circle_equation_l3810_381033
-
-
-namespace area_of_JKLMNO_l3810_381054
-
-/-- Represents a polygon with 6 vertices -/
-structure Hexagon :=
-  (J K L M N O : ℝ × ℝ)
-
-/-- Represents a point in 2D space -/
-def Point := ℝ × ℝ
-
-/-- Calculate the area of a rectangle given its width and height -/
-def rectangleArea (width height : ℝ) : ℝ := width * height
-
-/-- The given polygon JKLMNO -/
-def polygon : Hexagon := sorry
-
-/-- The intersection point P -/
-def P : Point := sorry
-
-/-- Theorem: The area of polygon JKLMNO is 62 square units -/
-theorem area_of_JKLMNO : 
-  let JK : ℝ := 8
-  let KL : ℝ := 10
-  let OP : ℝ := 6
-  let PM : ℝ := 3
-  let area_JKLMNP := rectangleArea JK KL
-  let area_PMNO := rectangleArea PM OP
-  area_JKLMNP - area_PMNO = 62 := by sorry
-
-end area_of_JKLMNO_l3810_381054
-
-
-namespace runners_in_picture_probability_l3810_381090
-
-/-- Represents a runner on a circular track -/
-structure Runner where
-  lapTime : ℝ
-  direction : Bool  -- True for counterclockwise, False for clockwise
-
-/-- Represents the track and photograph setup -/
-structure TrackSetup where
-  rachelLapTime : ℝ
-  robertLapTime : ℝ
-  totalTime : ℝ
-  photographerPosition : ℝ
-  pictureWidth : ℝ
-
-/-- Calculates the probability of both runners being in the picture -/
-def probabilityBothInPicture (setup : TrackSetup) : ℝ :=
-  sorry  -- Proof omitted
-
-theorem runners_in_picture_probability (setup : TrackSetup) 
-  (h1 : setup.rachelLapTime = 75)
-  (h2 : setup.robertLapTime = 100)
-  (h3 : setup.totalTime = 12 * 60)
-  (h4 : setup.photographerPosition = 1/3)
-  (h5 : setup.pictureWidth = 1/5) :
-  probabilityBothInPicture setup = 4/15 := by
-  sorry
-
-#check runners_in_picture_probability
-
-end runners_in_picture_probability_l3810_381090
-
-
-namespace cube_volume_from_surface_area_l3810_381025
-
-theorem cube_volume_from_surface_area :
-  ∀ (side : ℝ), 
-    side > 0 →
-    6 * side^2 = 486 →
-    side^3 = 729 :=
-by
-  sorry
-
-end cube_volume_from_surface_area_l3810_381025
-
-
-namespace multiples_of_5_or_7_not_35_l3810_381089
-
-def count_multiples (n : ℕ) (d : ℕ) : ℕ := (n / d : ℕ)
-
-theorem multiples_of_5_or_7_not_35 : 
-  (count_multiples 3000 5) + (count_multiples 3000 7) - (count_multiples 3000 35) = 943 := by
-  sorry
-
-end multiples_of_5_or_7_not_35_l3810_381089
-
-
-namespace pizza_order_count_l3810_381042
-
-theorem pizza_order_count (slices_per_pizza : ℕ) (total_slices : ℕ) (h1 : slices_per_pizza = 8) (h2 : total_slices = 168) :
-  total_slices / slices_per_pizza = 21 := by
-  sorry
-
-end pizza_order_count_l3810_381042
-
-
-namespace blue_to_yellow_ratio_l3810_381009
-
-/-- Represents the number of fish of each color in the aquarium -/
-structure FishCount where
-  yellow : ℕ
-  blue : ℕ
-  green : ℕ
-  other : ℕ
-
-/-- The conditions of the aquarium -/
-def aquariumConditions (f : FishCount) : Prop :=
-  f.yellow = 12 ∧
-  f.green = 2 * f.yellow ∧
-  f.yellow + f.blue + f.green + f.other = 42
-
-/-- The theorem stating the ratio of blue to yellow fish -/
-theorem blue_to_yellow_ratio (f : FishCount) 
-  (h : aquariumConditions f) : 
-  f.blue * 2 = f.yellow := by sorry
-
-end blue_to_yellow_ratio_l3810_381009
-
-
-namespace integer_pair_conditions_l3810_381058
-
-theorem integer_pair_conditions (a b : ℕ+) : 
-  (∃ k : ℕ, a^3 = k * b^2) ∧ 
-  (∃ m : ℕ, b - 1 = m * (a - 1)) → 
-  (a = b) ∨ (b = 1) := by
+theorem smallest_angle_solution (θ : Real) : 
+  (θ > 0) → 
+  (θ < 360) → 
+  (Real.cos (θ * π / 180) = Real.sin (70 * π / 180) + Real.cos (50 * π / 180) - Real.sin (20 * π / 180) - Real.cos (10 * π / 180)) → 
+  (∀ φ, 0 < φ ∧ φ < θ → Real.cos (φ * π / 180) ≠ Real.sin (70 * π / 180) + Real.cos (50 * π / 180) - Real.sin (20 * π / 180) - Real.cos (10 * π / 180)) → 
+  θ = 50 := by
 sorry
 
-end integer_pair_conditions_l3810_381058
+end NUMINAMATH_CALUDE_smallest_angle_solution_l3810_381003
 
 
-namespace quadratic_equation_solution_l3810_381027
+namespace NUMINAMATH_CALUDE_problem_solution_l3810_381039
 
-theorem quadratic_equation_solution (a b : ℕ+) :
-  (∃ x : ℝ, x^2 + 14*x = 24 ∧ x > 0 ∧ x = Real.sqrt a - b) →
-  a + b = 80 := by
+def p (a : ℝ) : Prop := (1 + a)^2 + (1 - a)^2 < 4
+
+def q (a : ℝ) : Prop := ∀ x : ℝ, x^2 + a*x + 1 ≥ 0
+
+theorem problem_solution (a : ℝ) :
+  (¬(p a ∧ q a) ∧ (p a ∨ q a)) ↔ a ∈ Set.Icc (-2) (-1) ∪ Set.Icc 1 2 :=
 sorry
 
-end quadratic_equation_solution_l3810_381027
+end NUMINAMATH_CALUDE_problem_solution_l3810_381039
 
 
-namespace factorization_problem_l3810_381070
+namespace NUMINAMATH_CALUDE_jared_earnings_proof_l3810_381054
 
-theorem factorization_problem (C D : ℤ) :
-  (∀ y : ℝ, 15 * y^2 - 76 * y + 48 = (C * y - 16) * (D * y - 3)) →
-  C * D + C = 20 := by
-  sorry
+/-- The monthly salary of a diploma holder in dollars -/
+def diploma_salary : ℕ := 4000
 
-end factorization_problem_l3810_381070
+/-- The ratio of a degree holder's salary to a diploma holder's salary -/
+def degree_to_diploma_ratio : ℕ := 3
 
+/-- The number of months in a year -/
+def months_in_year : ℕ := 12
 
-namespace regina_farm_correct_l3810_381011
+/-- Jared's annual earnings after graduating with a degree -/
+def jared_annual_earnings : ℕ := degree_to_diploma_ratio * diploma_salary * months_in_year
 
-/-- Represents the farm animals and their selling prices -/
-structure Farm where
-  cows : ℕ
-  pigs : ℕ
-  cow_price : ℕ
-  pig_price : ℕ
+theorem jared_earnings_proof :
+  jared_annual_earnings = 144000 :=
+sorry
 
-/-- Regina's farm satisfying the given conditions -/
-def regina_farm : Farm where
-  cows := 20  -- We'll prove this is correct
-  pigs := 80  -- Four times the number of cows
-  cow_price := 800
-  pig_price := 400
-
-/-- The total sale value of all animals on the farm -/
-def total_sale_value (f : Farm) : ℕ :=
-  f.cows * f.cow_price + f.pigs * f.pig_price
-
-theorem regina_farm_correct :
-  regina_farm.pigs = 4 * regina_farm.cows ∧
-  total_sale_value regina_farm = 48000 := by
-  sorry
-
-#eval regina_farm.cows  -- Should output 20
-
-end regina_farm_correct_l3810_381011
+end NUMINAMATH_CALUDE_jared_earnings_proof_l3810_381054
 
 
-namespace extended_segment_endpoint_l3810_381086
+namespace NUMINAMATH_CALUDE_second_class_size_l3810_381049
 
-/-- Given a segment with endpoints A(-3, 5) and B(9, -1) extended through B to point C,
-    where BC = 1/2 * AB, prove that the coordinates of C are (15, -4). -/
-theorem extended_segment_endpoint (A B C : ℝ × ℝ) : 
-  A = (-3, 5) →
-  B = (9, -1) →
-  C - B = (1/2 : ℝ) • (B - A) →
-  C = (15, -4) := by
-  sorry
-
-end extended_segment_endpoint_l3810_381086
-
-
-namespace sqrt_calculation_l3810_381015
-
-theorem sqrt_calculation : 
-  Real.sqrt 48 / Real.sqrt 3 + Real.sqrt (1/2) * Real.sqrt 12 - Real.sqrt 24 = 4 - Real.sqrt 6 := by
-  sorry
-
-end sqrt_calculation_l3810_381015
+theorem second_class_size (students1 : ℕ) (avg1 : ℕ) (avg2 : ℕ) (avg_total : ℕ) :
+  students1 = 12 →
+  avg1 = 40 →
+  avg2 = 60 →
+  avg_total = 54 →
+  ∃ students2 : ℕ, 
+    students2 = 28 ∧
+    (students1 * avg1 + students2 * avg2) = (students1 + students2) * avg_total :=
+by sorry
 
 
-namespace distinct_convex_polygons_l3810_381057
+end NUMINAMATH_CALUDE_second_class_size_l3810_381049
 
-/-- Represents a triangle with side lengths --/
+
+namespace NUMINAMATH_CALUDE_actual_journey_equation_hypothetical_journey_equation_distance_AB_l3810_381037
+
+/-- The distance between dock A and dock B in kilometers -/
+def distance : ℝ := 270
+
+/-- The initial speed of the steamboat in km/hr -/
+noncomputable def initial_speed : ℝ := distance / 22.5
+
+/-- Time equation for the actual journey -/
+theorem actual_journey_equation :
+  distance / initial_speed + 3.5 = 3 + (distance - 2 * initial_speed) / (0.8 * initial_speed) :=
+sorry
+
+/-- Time equation for the hypothetical journey with later stop -/
+theorem hypothetical_journey_equation :
+  distance / initial_speed + 1.5 = 3 + 180 / initial_speed + (distance - 2 * initial_speed - 180) / (0.8 * initial_speed) :=
+sorry
+
+/-- The distance AB is 270 km -/
+theorem distance_AB : distance = 270 :=
+sorry
+
+end NUMINAMATH_CALUDE_actual_journey_equation_hypothetical_journey_equation_distance_AB_l3810_381037
+
+
+namespace NUMINAMATH_CALUDE_obtuse_triangle_equilateral_triangle_l3810_381059
+
+-- Define a triangle ABC
 structure Triangle :=
-  (side1 side2 side3 : ℝ)
+  (A B C : ℝ)
+  (angle_sum : A + B + C = π)
+  (positive_angles : 0 < A ∧ 0 < B ∧ 0 < C)
 
-/-- Represents a convex polygon --/
-structure ConvexPolygon :=
-  (vertices : List (ℝ × ℝ))
-
-/-- Checks if a polygon is convex --/
-def isConvex (p : ConvexPolygon) : Prop :=
-  sorry
-
-/-- Counts the number of distinct convex polygons that can be formed --/
-def countConvexPolygons (triangles : List Triangle) : ℕ :=
-  sorry
-
-/-- The main theorem --/
-theorem distinct_convex_polygons :
-  let triangles : List Triangle := [
-    ⟨3, 3, 3⟩, ⟨3, 3, 3⟩,  -- Two equilateral triangles
-    ⟨3, 4, 5⟩, ⟨3, 4, 5⟩   -- Two scalene triangles
-  ]
-  countConvexPolygons triangles = 16 := by
-  sorry
-
-end distinct_convex_polygons_l3810_381057
-
-
-namespace fraction_inequality_l3810_381097
-
-theorem fraction_inequality (x : ℝ) : (x + 4) / (x^2 + 4*x + 13) ≥ 0 ↔ x ≥ -4 := by
-  sorry
-
-end fraction_inequality_l3810_381097
-
-
-namespace inequality_proof_l3810_381081
-
-theorem inequality_proof (a b c : ℝ) 
-  (h_pos_a : a > 0) (h_pos_b : b > 0) (h_pos_c : c > 0)
-  (h_sum_squares : a^2 + b^2 + c^2 = 1) : 
-  Real.sqrt (1/a - a) + Real.sqrt (1/b - b) + Real.sqrt (1/c - c) ≥ 
-  Real.sqrt (2*a) + Real.sqrt (2*b) + Real.sqrt (2*c) := by
-  sorry
-
-end inequality_proof_l3810_381081
-
-
-namespace linear_function_unique_l3810_381031
-
-/-- A function f: ℝ → ℝ is increasing if for all x, y ∈ ℝ, x < y implies f(x) < f(y) -/
-def Increasing (f : ℝ → ℝ) : Prop :=
-  ∀ x y, x < y → f x < f y
-
-theorem linear_function_unique
-  (f : ℝ → ℝ)
-  (h1 : ∀ x, f (f x) = 4 * x + 6)
-  (h2 : Increasing f) :
-  ∀ x, f x = 2 * x + 2 :=
+-- Theorem 1: If cos A * cos B * cos C < 0, then the triangle is obtuse
+theorem obtuse_triangle (t : Triangle) :
+  Real.cos t.A * Real.cos t.B * Real.cos t.C < 0 →
+  (t.A > π/2 ∨ t.B > π/2 ∨ t.C > π/2) :=
 sorry
 
-end linear_function_unique_l3810_381031
+-- Theorem 2: If cos(A-C) * cos(B-C) * cos(C-A) = 1, then the triangle is equilateral
+theorem equilateral_triangle (t : Triangle) :
+  Real.cos (t.A - t.C) * Real.cos (t.B - t.C) * Real.cos (t.C - t.A) = 1 →
+  t.A = π/3 ∧ t.B = π/3 ∧ t.C = π/3 :=
+sorry
+
+end NUMINAMATH_CALUDE_obtuse_triangle_equilateral_triangle_l3810_381059
 
 
-namespace divisibility_pairs_l3810_381028
+namespace NUMINAMATH_CALUDE_square_root_sum_l3810_381004
 
-def satisfies_condition (a b : ℕ) : Prop :=
-  (a + 1) % b = 0 ∧ (b + 1) % a = 0
+theorem square_root_sum (x y : ℝ) : (x + 2)^2 + Real.sqrt (y - 18) = 0 → Real.sqrt (x + y) = 4 := by
+  sorry
 
-theorem divisibility_pairs :
-  ∀ a b : ℕ, satisfies_condition a b ↔ ((a = 1 ∧ b = 1) ∨ (a = 1 ∧ b = 2) ∨ (a = 2 ∧ b = 3)) :=
+end NUMINAMATH_CALUDE_square_root_sum_l3810_381004
+
+
+namespace NUMINAMATH_CALUDE_tangent_intersection_x_coordinate_l3810_381042
+
+/-- Given two circles with radii 3 and 5, centered at (0, 0) and (12, 0) respectively,
+    the x-coordinate of the point where a common tangent line intersects the x-axis is 9/2. -/
+theorem tangent_intersection_x_coordinate :
+  let circle1_radius : ℝ := 3
+  let circle1_center : ℝ × ℝ := (0, 0)
+  let circle2_radius : ℝ := 5
+  let circle2_center : ℝ × ℝ := (12, 0)
+  ∃ x : ℝ, x > 0 ∧ 
+    (x / (12 - x) = circle1_radius / circle2_radius) ∧
+    x = 9 / 2 := by
+  sorry
+
+end NUMINAMATH_CALUDE_tangent_intersection_x_coordinate_l3810_381042
+
+
+namespace NUMINAMATH_CALUDE_complex_number_problem_l3810_381015
+
+theorem complex_number_problem (z : ℂ) :
+  (∃ (a : ℝ), z = Complex.I * a) →
+  (∃ (b : ℝ), (z + 2)^2 - Complex.I * 8 = Complex.I * b) →
+  z = -2 * Complex.I :=
 by sorry
 
-end divisibility_pairs_l3810_381028
+end NUMINAMATH_CALUDE_complex_number_problem_l3810_381015
 
 
-namespace quadratic_reducible_conditions_l3810_381052
+namespace NUMINAMATH_CALUDE_jace_travel_distance_l3810_381025
 
-def is_quadratic_or_reducible (a b : ℚ) : Prop :=
-  ∃ (p q r : ℚ), ∀ x : ℚ, x ≠ 1 ∧ x ≠ 2 ∧ x ≠ 3 ∧ x ≠ 4 ∧ x ≠ 5 →
-    (a / (1 - x) - 2 / (2 - x) + 3 / (3 - x) - 4 / (4 - x) + b / (5 - x) = 0) ↔
-    (p * x^2 + q * x + r = 0)
+/-- Calculates the total distance traveled given a constant speed and two driving periods -/
+def total_distance (speed : ℝ) (time1 : ℝ) (time2 : ℝ) : ℝ :=
+  speed * (time1 + time2)
 
-theorem quadratic_reducible_conditions :
-  ∀ a b : ℚ, is_quadratic_or_reducible a b ↔
-    ((a, b) = (1, 2) ∨
-     (a, b) = (13/48, 178/48) ∨
-     (a, b) = (9/14, 5/2) ∨
-     (a, b) = (1/2, 5/2) ∨
-     (a, b) = (0, 0)) := by sorry
+/-- Theorem stating that given the specified conditions, the total distance traveled is 780 miles -/
+theorem jace_travel_distance :
+  let speed : ℝ := 60
+  let time1 : ℝ := 4
+  let time2 : ℝ := 9
+  total_distance speed time1 time2 = 780 := by
+  sorry
 
-end quadratic_reducible_conditions_l3810_381052
+end NUMINAMATH_CALUDE_jace_travel_distance_l3810_381025
 
 
-namespace set_union_problem_l3810_381035
+namespace NUMINAMATH_CALUDE_b_plus_3b_squared_positive_l3810_381008
 
-theorem set_union_problem (a b : ℕ) : 
-  let A : Set ℕ := {5, 2^a}
-  let B : Set ℕ := {a, b}
-  A ∩ B = {8} →
-  A ∪ B = {3, 5, 8} := by
+theorem b_plus_3b_squared_positive (b : ℝ) (h1 : -0.5 < b) (h2 : b < 0) : 
+  b + 3 * b^2 > 0 := by
+  sorry
+
+end NUMINAMATH_CALUDE_b_plus_3b_squared_positive_l3810_381008
+
+
+namespace NUMINAMATH_CALUDE_payment_problem_l3810_381057
+
+/-- The payment problem -/
+theorem payment_problem (a_days b_days total_days : ℕ) (total_payment : ℚ) : 
+  a_days = 6 →
+  b_days = 8 →
+  total_days = 3 →
+  total_payment = 3680 →
+  let a_work_per_day : ℚ := 1 / a_days
+  let b_work_per_day : ℚ := 1 / b_days
+  let ab_work_in_total_days : ℚ := (a_work_per_day + b_work_per_day) * total_days
+  let c_work : ℚ := 1 - ab_work_in_total_days
+  let c_payment : ℚ := c_work * total_payment
+  c_payment = 460 :=
 sorry
 
-end set_union_problem_l3810_381035
+end NUMINAMATH_CALUDE_payment_problem_l3810_381057
 
 
-namespace polynomial_factorization_l3810_381046
+namespace NUMINAMATH_CALUDE_haley_tree_count_l3810_381070
 
-theorem polynomial_factorization (x : ℤ) : 
-  (x^3 - x^2 + 2*x - 1) * (x^3 - x - 1) = x^6 - x^5 + x^4 - x^3 - x^2 - x + 1 := by
+/-- The number of trees Haley has after growing some, losing some to a typhoon, and growing more. -/
+def final_tree_count (initial : ℕ) (lost : ℕ) (new : ℕ) : ℕ :=
+  initial - lost + new
+
+/-- Theorem stating that with 9 initial trees, 4 lost, and 5 new, the final count is 10. -/
+theorem haley_tree_count : final_tree_count 9 4 5 = 10 := by
   sorry
 
-end polynomial_factorization_l3810_381046
+end NUMINAMATH_CALUDE_haley_tree_count_l3810_381070
 
 
-namespace sin_30_degrees_l3810_381091
+namespace NUMINAMATH_CALUDE_solution_value_l3810_381052
 
-/-- Sine of 30 degrees is 1/2 -/
-theorem sin_30_degrees : Real.sin (π / 6) = 1 / 2 := by
+theorem solution_value (m : ℝ) : 
+  (∃ x : ℝ, x = 1 ∧ 2 * x - m = -3) → m = 5 :=
+by sorry
+
+end NUMINAMATH_CALUDE_solution_value_l3810_381052
+
+
+namespace NUMINAMATH_CALUDE_exists_valid_coloring_l3810_381061
+
+/-- A coloring function that satisfies the given conditions -/
+def valid_coloring (n : ℕ) (S : Finset ℕ) (f : Finset ℕ → Fin 8) : Prop :=
+  (S.card = 3 * n) ∧
+  ∀ A B C : Finset ℕ,
+    A ⊆ S ∧ B ⊆ S ∧ C ⊆ S →
+    A.card = n ∧ B.card = n ∧ C.card = n →
+    A ≠ B ∧ A ≠ C ∧ B ≠ C →
+    (A ∩ B).card ≤ 1 ∧ (A ∩ C).card ≤ 1 ∧ (B ∩ C).card ≤ 1 →
+    f A ≠ f B ∨ f A ≠ f C ∨ f B ≠ f C
+
+/-- There exists a valid coloring for any set S with 3n elements -/
+theorem exists_valid_coloring (n : ℕ) :
+  ∀ S : Finset ℕ, S.card = 3 * n → ∃ f : Finset ℕ → Fin 8, valid_coloring n S f := by
   sorry
 
-end sin_30_degrees_l3810_381091
+end NUMINAMATH_CALUDE_exists_valid_coloring_l3810_381061
 
 
-namespace half_angle_in_second_quadrant_l3810_381014
+namespace NUMINAMATH_CALUDE_smallest_d_for_injective_g_l3810_381007
 
-open Real
+def g (x : ℝ) : ℝ := (x - 3)^2 - 7
 
-/-- An angle is in the third quadrant if it's between π and 3π/2 -/
-def in_third_quadrant (θ : ℝ) : Prop := π < θ ∧ θ < 3*π/2
-
-/-- An angle is in the second quadrant if it's between π/2 and π -/
-def in_second_quadrant (θ : ℝ) : Prop := π/2 < θ ∧ θ < π
-
-theorem half_angle_in_second_quadrant (θ : ℝ) 
-  (h1 : in_third_quadrant θ) 
-  (h2 : |cos θ| = -cos (θ/2)) : 
-  in_second_quadrant (θ/2) := by
-  sorry
-
-end half_angle_in_second_quadrant_l3810_381014
-
-
-namespace multiple_of_number_l3810_381092
-
-theorem multiple_of_number (n : ℝ) (h : n = 6) : ∃ k : ℝ, 3 * n - 6 = k * n ∧ k = 2 := by
-  sorry
-
-end multiple_of_number_l3810_381092
-
-
-namespace expected_value_fair_12_sided_die_l3810_381077
-
-def fair_12_sided_die : Finset ℕ := Finset.range 12
-
-theorem expected_value_fair_12_sided_die : 
-  (fair_12_sided_die.sum (λ x => (x + 1) * (1 : ℚ)) / 12) = (13 : ℚ) / 2 := by
-  sorry
-
-end expected_value_fair_12_sided_die_l3810_381077
-
-
-namespace not_prime_sum_products_l3810_381049
-
-theorem not_prime_sum_products (a b c d : ℤ) 
-  (h1 : a > b) (h2 : b > c) (h3 : c > d) (h4 : d > 0) 
-  (h5 : a * c + b * d = (b + d + a - c) * (b + d - a + c)) : 
-  ¬ Prime (a * b + c * d) := by
+theorem smallest_d_for_injective_g :
+  ∀ d : ℝ, (∀ x y, x ≥ d → y ≥ d → g x = g y → x = y) ↔ d ≥ 3 :=
 sorry
 
-end not_prime_sum_products_l3810_381049
+end NUMINAMATH_CALUDE_smallest_d_for_injective_g_l3810_381007
 
 
-namespace vehicle_value_last_year_l3810_381063
+namespace NUMINAMATH_CALUDE_grid_filling_ways_l3810_381040
 
-theorem vehicle_value_last_year 
-  (value_this_year : ℝ) 
-  (value_ratio : ℝ) 
-  (h1 : value_this_year = 16000)
-  (h2 : value_ratio = 0.8)
-  (h3 : value_this_year = value_ratio * value_last_year) :
-  value_last_year = 20000 :=
+/-- Represents a 6x6 grid with special cells -/
+structure Grid :=
+  (size : Nat)
+  (specialCells : Nat)
+  (valuesPerSpecialCell : Nat)
+
+/-- Calculates the number of ways to fill the grid -/
+def numberOfWays (g : Grid) : Nat :=
+  (g.valuesPerSpecialCell ^ g.specialCells) ^ 4
+
+/-- Theorem: The number of ways to fill the grid is 16 -/
+theorem grid_filling_ways (g : Grid) 
+  (h1 : g.size = 6)
+  (h2 : g.specialCells = 4)
+  (h3 : g.valuesPerSpecialCell = 2) :
+  numberOfWays g = 16 := by
+  sorry
+
+#eval numberOfWays { size := 6, specialCells := 4, valuesPerSpecialCell := 2 }
+
+end NUMINAMATH_CALUDE_grid_filling_ways_l3810_381040
+
+
+namespace NUMINAMATH_CALUDE_dividend_divisor_quotient_remainder_l3810_381071
+
+theorem dividend_divisor_quotient_remainder (n : ℕ) : 
+  n / 9 = 6 ∧ n % 9 = 4 → n = 58 := by
+  sorry
+
+end NUMINAMATH_CALUDE_dividend_divisor_quotient_remainder_l3810_381071
+
+
+namespace NUMINAMATH_CALUDE_ice_cream_cost_calculation_l3810_381084
+
+/-- Calculates the cost of each ice-cream cup given the order details and total amount paid --/
+theorem ice_cream_cost_calculation
+  (chapati_count : ℕ)
+  (rice_count : ℕ)
+  (vegetable_count : ℕ)
+  (ice_cream_count : ℕ)
+  (chapati_cost : ℕ)
+  (rice_cost : ℕ)
+  (vegetable_cost : ℕ)
+  (total_paid : ℕ)
+  (h1 : chapati_count = 16)
+  (h2 : rice_count = 5)
+  (h3 : vegetable_count = 7)
+  (h4 : ice_cream_count = 6)
+  (h5 : chapati_cost = 6)
+  (h6 : rice_cost = 45)
+  (h7 : vegetable_cost = 70)
+  (h8 : total_paid = 961) :
+  (total_paid - (chapati_count * chapati_cost + rice_count * rice_cost + vegetable_count * vegetable_cost)) / ice_cream_count = 25 := by
+  sorry
+
+
+end NUMINAMATH_CALUDE_ice_cream_cost_calculation_l3810_381084
+
+
+namespace NUMINAMATH_CALUDE_school_sample_theorem_l3810_381091
+
+theorem school_sample_theorem (total_students sample_size : ℕ) 
+  (h_total : total_students = 1200)
+  (h_sample : sample_size = 200)
+  (h_stratified : ∃ (boys girls : ℕ), boys + girls = sample_size ∧ boys = girls + 10) :
+  ∃ (school_boys : ℕ), 
+    school_boys * sample_size = 105 * total_students ∧
+    school_boys = 630 := by
+sorry
+
+end NUMINAMATH_CALUDE_school_sample_theorem_l3810_381091
+
+
+namespace NUMINAMATH_CALUDE_problem_solution_l3810_381066
+
+noncomputable def f (x : ℝ) : ℝ := Real.sin (x - Real.pi/6) + Real.cos (x - Real.pi/3)
+
+noncomputable def g (x : ℝ) : ℝ := 2 * (Real.sin (x/2))^2
+
+theorem problem_solution (θ : ℝ) (k : ℤ) :
+  (0 < θ ∧ θ < Real.pi/2) →  -- θ is in the first quadrant
+  f θ = 3 * Real.sqrt 3 / 5 →
+  g θ = 1/5 ∧
+  (∀ x, f x ≥ g x ↔ ∃ k, 2 * k * Real.pi ≤ x ∧ x ≤ 2 * k * Real.pi + 2 * Real.pi / 3) :=
+by sorry
+
+end NUMINAMATH_CALUDE_problem_solution_l3810_381066
+
+
+namespace NUMINAMATH_CALUDE_simplest_quadratic_radical_l3810_381045
+
+-- Define a function to check if a number is a perfect square
+def isPerfectSquare (n : ℕ) : Prop :=
+  ∃ m : ℕ, m * m = n
+
+-- Define what it means for a quadratic radical to be in its simplest form
+def isSimplestQuadraticRadical (x : ℝ) : Prop :=
+  x > 0 ∧ ¬∃ (a b : ℕ), (b > 1) ∧ (¬isPerfectSquare b) ∧ (x = (a : ℝ) * Real.sqrt b)
+
+-- Theorem statement
+theorem simplest_quadratic_radical :
+  isSimplestQuadraticRadical (Real.sqrt 7) ∧
+  ¬isSimplestQuadraticRadical (Real.sqrt 12) ∧
+  ¬isSimplestQuadraticRadical (Real.sqrt (2/3)) ∧
+  ¬isSimplestQuadraticRadical (Real.sqrt 0.3) :=
+sorry
+
+end NUMINAMATH_CALUDE_simplest_quadratic_radical_l3810_381045
+
+
+namespace NUMINAMATH_CALUDE_fish_count_l3810_381021
+
+/-- The number of fish per white duck -/
+def fish_per_white_duck : ℕ := 5
+
+/-- The number of fish per black duck -/
+def fish_per_black_duck : ℕ := 10
+
+/-- The number of fish per multicolor duck -/
+def fish_per_multicolor_duck : ℕ := 12
+
+/-- The number of white ducks -/
+def white_ducks : ℕ := 3
+
+/-- The number of black ducks -/
+def black_ducks : ℕ := 7
+
+/-- The number of multicolor ducks -/
+def multicolor_ducks : ℕ := 6
+
+/-- The total number of fish in the lake -/
+def total_fish : ℕ := fish_per_white_duck * white_ducks + 
+                      fish_per_black_duck * black_ducks + 
+                      fish_per_multicolor_duck * multicolor_ducks
+
+theorem fish_count : total_fish = 157 := by
+  sorry
+
+end NUMINAMATH_CALUDE_fish_count_l3810_381021
+
+
+namespace NUMINAMATH_CALUDE_percentage_reduction_l3810_381063
+
+theorem percentage_reduction (initial : ℝ) (increase_percent : ℝ) (final : ℝ) : 
+  initial = 1500 →
+  increase_percent = 20 →
+  final = 1080 →
+  let increased := initial * (1 + increase_percent / 100)
+  (increased - final) / increased * 100 = 40 := by
+sorry
+
+end NUMINAMATH_CALUDE_percentage_reduction_l3810_381063
+
+
+namespace NUMINAMATH_CALUDE_lance_reading_plan_l3810_381085
+
+/-- Given a book with a certain number of pages, calculate the number of pages 
+    to read on the third day to finish the book, given the pages read on the 
+    first two days and constraints for the third day. -/
+def pagesOnThirdDay (totalPages : ℕ) (day1Pages : ℕ) (day2Reduction : ℕ) : ℕ :=
+  let day2Pages := day1Pages - day2Reduction
+  let remainingPages := totalPages - (day1Pages + day2Pages)
+  ((remainingPages + 9) / 10) * 10
+
+theorem lance_reading_plan :
+  pagesOnThirdDay 100 35 5 = 40 := by sorry
+
+end NUMINAMATH_CALUDE_lance_reading_plan_l3810_381085
+
+
+namespace NUMINAMATH_CALUDE_evans_class_enrollment_l3810_381074
+
+theorem evans_class_enrollment (q1 q2 both not_taken : ℕ) 
+  (h1 : q1 = 19)
+  (h2 : q2 = 24)
+  (h3 : both = 19)
+  (h4 : not_taken = 5) :
+  q1 + q2 - both + not_taken = 29 := by
+sorry
+
+end NUMINAMATH_CALUDE_evans_class_enrollment_l3810_381074
+
+
+namespace NUMINAMATH_CALUDE_power_seven_137_mod_nine_l3810_381017
+
+theorem power_seven_137_mod_nine : 7^137 % 9 = 7 := by
+  sorry
+
+end NUMINAMATH_CALUDE_power_seven_137_mod_nine_l3810_381017
+
+
+namespace NUMINAMATH_CALUDE_total_people_in_tribes_l3810_381041
+
+theorem total_people_in_tribes (cannoneers : ℕ) (women : ℕ) (men : ℕ) : 
+  cannoneers = 63 → 
+  women = 2 * cannoneers → 
+  men = 2 * women → 
+  cannoneers + women + men = 378 := by
+  sorry
+
+end NUMINAMATH_CALUDE_total_people_in_tribes_l3810_381041
+
+
+namespace NUMINAMATH_CALUDE_hyperbola_properties_l3810_381018
+
+/-- Given a hyperbola with standard equation x²/36 - y²/64 = 1, 
+    prove its asymptote equations and eccentricity. -/
+theorem hyperbola_properties :
+  let a : ℝ := 6
+  let b : ℝ := 8
+  let c : ℝ := (a^2 + b^2).sqrt
+  let asymptote (x : ℝ) : ℝ := (b / a) * x
+  let eccentricity : ℝ := c / a
+  (∀ x y : ℝ, x^2 / 36 - y^2 / 64 = 1 → 
+    (y = asymptote x ∨ y = -asymptote x) ∧ eccentricity = 5/3) :=
+by sorry
+
+end NUMINAMATH_CALUDE_hyperbola_properties_l3810_381018
+
+
+namespace NUMINAMATH_CALUDE_parabola_line_tangency_l3810_381069
+
+theorem parabola_line_tangency (m : ℝ) : 
+  (∃ x y : ℝ, y = x^2 ∧ x + y = Real.sqrt m ∧ 
+   (∀ x' y' : ℝ, y' = x'^2 → x' + y' = Real.sqrt m → (x', y') = (x, y))) → 
+  m = 1/16 := by
+sorry
+
+end NUMINAMATH_CALUDE_parabola_line_tangency_l3810_381069
+
+
+namespace NUMINAMATH_CALUDE_red_black_red_probability_l3810_381053
+
+/-- Represents a standard deck of 52 cards -/
+def StandardDeck : ℕ := 52
+
+/-- Number of red cards in a standard deck -/
+def RedCards : ℕ := 26
+
+/-- Number of black cards in a standard deck -/
+def BlackCards : ℕ := 26
+
+/-- Probability of drawing a red card, then a black card, then a red card from a standard deck -/
+theorem red_black_red_probability :
+  (RedCards : ℚ) * BlackCards * (RedCards - 1) / (StandardDeck * (StandardDeck - 1) * (StandardDeck - 2)) = 13 / 102 := by
+  sorry
+
+end NUMINAMATH_CALUDE_red_black_red_probability_l3810_381053
+
+
+namespace NUMINAMATH_CALUDE_protein_percentage_in_mixture_l3810_381089
+
+/-- Calculates the protein percentage in a mixture of soybean meal and cornmeal. -/
+theorem protein_percentage_in_mixture 
+  (soybean_protein_percent : ℝ)
+  (cornmeal_protein_percent : ℝ)
+  (total_mixture_weight : ℝ)
+  (soybean_weight : ℝ)
+  (cornmeal_weight : ℝ)
+  (h1 : soybean_protein_percent = 0.14)
+  (h2 : cornmeal_protein_percent = 0.07)
+  (h3 : total_mixture_weight = 280)
+  (h4 : soybean_weight = 240)
+  (h5 : cornmeal_weight = 40)
+  (h6 : total_mixture_weight = soybean_weight + cornmeal_weight) :
+  (soybean_weight * soybean_protein_percent + cornmeal_weight * cornmeal_protein_percent) / total_mixture_weight = 0.13 := by
+  sorry
+
+
+end NUMINAMATH_CALUDE_protein_percentage_in_mixture_l3810_381089
+
+
+namespace NUMINAMATH_CALUDE_shaniqua_earnings_l3810_381076
+
+/-- Calculates the total earnings for Shaniqua's hair services -/
+def total_earnings (haircut_price : ℕ) (style_price : ℕ) (num_haircuts : ℕ) (num_styles : ℕ) : ℕ :=
+  haircut_price * num_haircuts + style_price * num_styles
+
+/-- Proves that Shaniqua's total earnings for 8 haircuts and 5 styles are $221 -/
+theorem shaniqua_earnings : total_earnings 12 25 8 5 = 221 := by
+  sorry
+
+end NUMINAMATH_CALUDE_shaniqua_earnings_l3810_381076
+
+
+namespace NUMINAMATH_CALUDE_max_volume_right_prism_l3810_381067
+
+theorem max_volume_right_prism (b c : ℝ) (h1 : b + c = 8) (h2 : b > 0) (h3 : c > 0) :
+  let volume := fun x => (1/2) * b * x^2
+  let x := Real.sqrt (64 - 16*b)
+  (∀ y, volume y ≤ volume x) ∧ volume x = 32 := by
+  sorry
+
+end NUMINAMATH_CALUDE_max_volume_right_prism_l3810_381067
+
+
+namespace NUMINAMATH_CALUDE_intersection_empty_iff_k_greater_than_six_l3810_381035
+
+def M : Set ℝ := {x | -1 ≤ x ∧ x ≤ 7}
+def N (k : ℝ) : Set ℝ := {x | k + 1 ≤ x ∧ x ≤ 2*k - 1}
+
+theorem intersection_empty_iff_k_greater_than_six (k : ℝ) : 
+  M ∩ N k = ∅ ↔ k > 6 := by sorry
+
+end NUMINAMATH_CALUDE_intersection_empty_iff_k_greater_than_six_l3810_381035
+
+
+namespace NUMINAMATH_CALUDE_det_eq_ten_l3810_381082
+
+/-- The matrix for which we need to calculate the determinant -/
+def A (x : ℝ) : Matrix (Fin 2) (Fin 2) ℝ := !![3*x, 2; 3, 2*x]
+
+/-- The theorem stating the condition for the determinant to be 10 -/
+theorem det_eq_ten (x : ℝ) : 
+  Matrix.det (A x) = 10 ↔ x = Real.sqrt (8/3) ∨ x = -Real.sqrt (8/3) := by
+  sorry
+
+end NUMINAMATH_CALUDE_det_eq_ten_l3810_381082
+
+
+namespace NUMINAMATH_CALUDE_mean_score_remaining_students_l3810_381098
+
+theorem mean_score_remaining_students 
+  (n : ℕ) 
+  (h1 : n > 20) 
+  (h2 : (15 : ℝ) * 10 = (15 : ℝ) * mean_first_15)
+  (h3 : (5 : ℝ) * 16 = (5 : ℝ) * mean_next_5)
+  (h4 : ((15 : ℝ) * mean_first_15 + (5 : ℝ) * mean_next_5 + (n - 20 : ℝ) * mean_remaining) / n = 11) :
+  mean_remaining = (11 * n - 230) / (n - 20) := by
+  sorry
+
+end NUMINAMATH_CALUDE_mean_score_remaining_students_l3810_381098
+
+
+namespace NUMINAMATH_CALUDE_range_of_m_l3810_381028
+
+theorem range_of_m (p q : Prop) (h1 : p ↔ ∀ x : ℝ, x^2 - 2*x + 1 - m ≥ 0)
+  (h2 : q ↔ ∃ a b : ℝ, a ≠ 0 ∧ b ≠ 0 ∧ ∀ x y : ℝ, x^2 / a^2 - y^2 / b^2 = 1 ∧ a^2 = 1 ∧ b^2 = 1 / (m + 2))
+  (h3 : (p ∨ q) ∧ ¬(p ∧ q)) :
+  m ≤ -2 ∨ m > 0 := by sorry
+
+end NUMINAMATH_CALUDE_range_of_m_l3810_381028
+
+
+namespace NUMINAMATH_CALUDE_equation_solution_l3810_381072
+
+theorem equation_solution : ∃ f : ℝ, 
+  ((10 * 0.3 + 2) / 4 - (3 * 0.3 - 6) / f = (2 * 0.3 + 4) / 3) ∧ 
+  (abs (f - 18) < 0.01) := by
+  sorry
+
+end NUMINAMATH_CALUDE_equation_solution_l3810_381072
+
+
+namespace NUMINAMATH_CALUDE_contour_area_ratio_l3810_381090
+
+theorem contour_area_ratio (r₁ r₂ : ℝ) (A₁ A₂ : ℝ) (h₁ : 0 < r₁) (h₂ : r₁ < r₂) (h₃ : 0 < A₁) :
+  A₂ / A₁ = (r₂ / r₁)^2 :=
+sorry
+
+end NUMINAMATH_CALUDE_contour_area_ratio_l3810_381090
+
+
+namespace NUMINAMATH_CALUDE_cos_identity_l3810_381016
+
+theorem cos_identity : Real.cos (70 * π / 180) + 8 * Real.cos (20 * π / 180) * Real.cos (40 * π / 180) * Real.cos (80 * π / 180) = 2 * (Real.cos (35 * π / 180))^2 := by
+  sorry
+
+end NUMINAMATH_CALUDE_cos_identity_l3810_381016
+
+
+namespace NUMINAMATH_CALUDE_driver_net_hourly_rate_l3810_381099
+
+/-- Calculates the driver's net hourly rate after deducting gas expenses -/
+theorem driver_net_hourly_rate
+  (travel_time : ℝ)
+  (speed : ℝ)
+  (gasoline_efficiency : ℝ)
+  (gasoline_cost : ℝ)
+  (driver_compensation : ℝ)
+  (h1 : travel_time = 3)
+  (h2 : speed = 50)
+  (h3 : gasoline_efficiency = 25)
+  (h4 : gasoline_cost = 2.5)
+  (h5 : driver_compensation = 0.6)
+  : (driver_compensation * speed * travel_time - 
+     (speed * travel_time / gasoline_efficiency) * gasoline_cost) / travel_time = 25 :=
+by sorry
+
+end NUMINAMATH_CALUDE_driver_net_hourly_rate_l3810_381099
+
+
+namespace NUMINAMATH_CALUDE_sugar_amount_proof_l3810_381077
+
+/-- Recipe proportions and conversion factors -/
+def butter_to_flour : ℚ := 5 / 7
+def salt_to_flour : ℚ := 3 / 1.5
+def sugar_to_flour : ℚ := 2 / 2.5
+def butter_multiplier : ℚ := 4
+def salt_multiplier : ℚ := 3.5
+def sugar_multiplier : ℚ := 3
+def butter_used : ℚ := 12
+def ounce_to_gram : ℚ := 28.35
+def cup_flour_to_gram : ℚ := 125
+def tsp_salt_to_gram : ℚ := 5
+def tbsp_sugar_to_gram : ℚ := 15
+
+/-- Theorem stating that the amount of sugar needed is 604.8 grams -/
+theorem sugar_amount_proof :
+  let flour_cups := butter_used / butter_to_flour
+  let flour_grams := flour_cups * cup_flour_to_gram
+  let sugar_tbsp := (sugar_to_flour * flour_cups * sugar_multiplier)
+  sugar_tbsp * tbsp_sugar_to_gram = 604.8 := by
+  sorry
+
+end NUMINAMATH_CALUDE_sugar_amount_proof_l3810_381077
+
+
+namespace NUMINAMATH_CALUDE_amount_left_after_pool_l3810_381009
+
+-- Define the given conditions
+def total_earned : ℝ := 30
+def cost_per_person : ℝ := 2.5
+def number_of_people : ℕ := 10
+
+-- Define the theorem
+theorem amount_left_after_pool : 
+  total_earned - (cost_per_person * number_of_people) = 5 := by
+  sorry
+
+end NUMINAMATH_CALUDE_amount_left_after_pool_l3810_381009
+
+
+namespace NUMINAMATH_CALUDE_prob_A_and_B_selected_is_three_tenths_l3810_381068
+
+def total_students : ℕ := 5
+def students_to_select : ℕ := 3
+
+def probability_A_and_B_selected : ℚ :=
+  (total_students - students_to_select + 1 : ℚ) / (total_students.choose students_to_select)
+
+theorem prob_A_and_B_selected_is_three_tenths :
+  probability_A_and_B_selected = 3 / 10 := by
+  sorry
+
+end NUMINAMATH_CALUDE_prob_A_and_B_selected_is_three_tenths_l3810_381068
+
+
+namespace NUMINAMATH_CALUDE_exactly_one_common_course_l3810_381079
+
+/-- The number of ways two people can choose 2 courses each from 4 courses with exactly one course in common -/
+def common_course_choices (n : ℕ) (k : ℕ) : ℕ :=
+  Nat.choose n k * Nat.choose n k - Nat.choose n k - Nat.choose n k
+
+theorem exactly_one_common_course :
+  common_course_choices 4 2 = 24 := by
+  sorry
+
+end NUMINAMATH_CALUDE_exactly_one_common_course_l3810_381079
+
+
+namespace NUMINAMATH_CALUDE_usb_drive_available_space_l3810_381038
+
+theorem usb_drive_available_space (total_capacity : ℝ) (used_percentage : ℝ) 
+  (h1 : total_capacity = 16)
+  (h2 : used_percentage = 50)
+  : total_capacity * (1 - used_percentage / 100) = 8 := by
+  sorry
+
+end NUMINAMATH_CALUDE_usb_drive_available_space_l3810_381038
+
+
+namespace NUMINAMATH_CALUDE_existence_of_polynomial_l3810_381027
+
+/-- The polynomial a(x, y) -/
+def a (x y : ℝ) : ℝ := x^2 * y + x * y^2
+
+/-- The polynomial b(x, y) -/
+def b (x y : ℝ) : ℝ := x^2 + x * y + y^2
+
+/-- The statement to be proved -/
+theorem existence_of_polynomial (n : ℕ) : 
+  ∃ (p : ℝ → ℝ → ℝ), ∀ (x y : ℝ), 
+    p (a x y) (b x y) = (x + y)^n + (-1)^n * (x^n + y^n) := by
+  sorry
+
+end NUMINAMATH_CALUDE_existence_of_polynomial_l3810_381027
+
+
+namespace NUMINAMATH_CALUDE_quadratic_monotone_increasing_iff_l3810_381014
+
+/-- A quadratic function f(x) = x^2 + bx + c is monotonically increasing 
+    on the interval [0, +∞) if and only if b ≥ 0 -/
+theorem quadratic_monotone_increasing_iff (b c : ℝ) :
+  (∀ x₁ x₂ : ℝ, 0 ≤ x₁ ∧ x₁ < x₂ → x₁^2 + b*x₁ + c < x₂^2 + b*x₂ + c) ↔ b ≥ 0 := by
+  sorry
+
+end NUMINAMATH_CALUDE_quadratic_monotone_increasing_iff_l3810_381014
+
+
+namespace NUMINAMATH_CALUDE_probability_of_one_each_item_l3810_381080
+
+def drawer_items : ℕ := 8
+
+def total_items : ℕ := 4 * drawer_items
+
+def items_removed : ℕ := 4
+
+def total_combinations : ℕ := Nat.choose total_items items_removed
+
+def favorable_outcomes : ℕ := drawer_items^items_removed
+
+theorem probability_of_one_each_item : 
+  (favorable_outcomes : ℚ) / total_combinations = 128 / 1125 := by sorry
+
+end NUMINAMATH_CALUDE_probability_of_one_each_item_l3810_381080
+
+
+namespace NUMINAMATH_CALUDE_congruence_solutions_count_l3810_381078
+
+theorem congruence_solutions_count : 
+  (Finset.filter (fun x : ℕ => x < 150 ∧ (x + 17) % 46 = 75 % 46) (Finset.range 150)).card = 3 := by
+  sorry
+
+end NUMINAMATH_CALUDE_congruence_solutions_count_l3810_381078
+
+
+namespace NUMINAMATH_CALUDE_linear_dependence_iff_k_eq_8_l3810_381010
+
+def vector1 : ℝ × ℝ × ℝ := (1, 4, -1)
+def vector2 (k : ℝ) : ℝ × ℝ × ℝ := (2, k, 3)
+
+def is_linearly_dependent (v1 v2 : ℝ × ℝ × ℝ) : Prop :=
+  ∃ (c1 c2 : ℝ), (c1 ≠ 0 ∨ c2 ≠ 0) ∧ 
+    c1 • v1 + c2 • v2 = (0, 0, 0)
+
+theorem linear_dependence_iff_k_eq_8 :
+  ∀ k : ℝ, is_linearly_dependent vector1 (vector2 k) ↔ k = 8 := by
+  sorry
+
+end NUMINAMATH_CALUDE_linear_dependence_iff_k_eq_8_l3810_381010
+
+
+namespace NUMINAMATH_CALUDE_decimal_8543_to_base7_l3810_381005
+
+def decimal_to_base7 (n : ℕ) : List ℕ :=
+  if n < 7 then [n]
+  else (n % 7) :: decimal_to_base7 (n / 7)
+
+def base7_to_decimal (digits : List ℕ) : ℕ :=
+  digits.foldr (fun d acc => d + 7 * acc) 0
+
+theorem decimal_8543_to_base7 :
+  decimal_to_base7 8543 = [3, 2, 6, 3, 3] ∧
+  base7_to_decimal [3, 2, 6, 3, 3] = 8543 := by
+  sorry
+
+end NUMINAMATH_CALUDE_decimal_8543_to_base7_l3810_381005
+
+
+namespace NUMINAMATH_CALUDE_intersection_range_l3810_381083
+
+open Set Real
+
+theorem intersection_range (m : ℝ) : 
+  let A : Set ℝ := {x | |x - 1| + |x + 1| ≤ 3}
+  let B : Set ℝ := {x | x^2 - (2*m + 1)*x + m^2 + m < 0}
+  (A ∩ B).Nonempty → m > -3/2 ∧ m < 3/2 := by
+  sorry
+
+end NUMINAMATH_CALUDE_intersection_range_l3810_381083
+
+
+namespace NUMINAMATH_CALUDE_smallest_solution_floor_equation_l3810_381092
+
+theorem smallest_solution_floor_equation :
+  ∃ (x : ℝ), x = 3 * Real.sqrt 2 ∧
+  (∀ y : ℝ, y > 0 → ⌊y^2⌋ - ⌊y⌋^2 = 12 → y ≥ x) ∧
+  ⌊x^2⌋ - ⌊x⌋^2 = 12 :=
+by sorry
+
+end NUMINAMATH_CALUDE_smallest_solution_floor_equation_l3810_381092
+
+
+namespace NUMINAMATH_CALUDE_real_roots_imply_b_equals_one_l3810_381058
+
+theorem real_roots_imply_b_equals_one (b : ℝ) : 
+  (∃ x : ℝ, x^2 - 2*I*x + b = 1) → b = 1 := by
+  sorry
+
+end NUMINAMATH_CALUDE_real_roots_imply_b_equals_one_l3810_381058
+
+
+namespace NUMINAMATH_CALUDE_rectangular_fence_length_l3810_381024
+
+/-- A rectangular fence with a perimeter of 30 meters and a length that is twice its width has a length of 10 meters. -/
+theorem rectangular_fence_length (width : ℝ) (length : ℝ) : 
+  width > 0 → 
+  length > 0 → 
+  length = 2 * width → 
+  2 * length + 2 * width = 30 → 
+  length = 10 := by
+sorry
+
+end NUMINAMATH_CALUDE_rectangular_fence_length_l3810_381024
+
+
+namespace NUMINAMATH_CALUDE_parabola_chord_constant_sum_l3810_381096
+
+/-- A point in the 2D plane -/
+structure Point where
+  x : ℝ
+  y : ℝ
+
+/-- The parabola y = x^2 -/
+def parabola (p : Point) : Prop :=
+  p.y = p.x^2
+
+/-- Point C on the y-axis -/
+def C : Point :=
+  ⟨0, 2⟩
+
+/-- Distance squared between two points -/
+def distanceSquared (p1 p2 : Point) : ℝ :=
+  (p1.x - p2.x)^2 + (p1.y - p2.y)^2
+
+/-- The theorem to be proved -/
+theorem parabola_chord_constant_sum :
+  ∀ A B : Point,
+  parabola A → parabola B →
+  (C.y - A.y) / (C.x - A.x) = (B.y - A.y) / (B.x - A.x) →
+  (1 / distanceSquared A C + 1 / distanceSquared B C) = 3/2 :=
+by sorry
+
+end NUMINAMATH_CALUDE_parabola_chord_constant_sum_l3810_381096
+
+
+namespace NUMINAMATH_CALUDE_bottles_left_l3810_381023
+
+theorem bottles_left (initial_bottles drunk_bottles : ℕ) :
+  initial_bottles = 17 →
+  drunk_bottles = 3 →
+  initial_bottles - drunk_bottles = 14 :=
+by sorry
+
+end NUMINAMATH_CALUDE_bottles_left_l3810_381023
+
+
+namespace NUMINAMATH_CALUDE_horse_speed_around_square_field_l3810_381095
+
+theorem horse_speed_around_square_field 
+  (field_area : ℝ) 
+  (time_to_run_around : ℝ) 
+  (horse_speed : ℝ) : 
+  field_area = 400 ∧ 
+  time_to_run_around = 4 → 
+  horse_speed = 20 :=
 by
   sorry
 
-end vehicle_value_last_year_l3810_381063
+end NUMINAMATH_CALUDE_horse_speed_around_square_field_l3810_381095
 
 
-namespace power_function_quadrant_propositions_l3810_381030
+namespace NUMINAMATH_CALUDE_smallest_marble_count_l3810_381081
 
--- Define a power function
-def is_power_function (f : ℝ → ℝ) : Prop := 
-  ∃ a b : ℝ, ∀ x : ℝ, f x = a * x ^ b
+def is_valid_marble_count (n : ℕ) : Prop :=
+  n > 2 ∧ n % 6 = 2 ∧ n % 7 = 2 ∧ n % 8 = 2 ∧ n % 11 = 2
 
--- Define the property of not passing through the fourth quadrant
-def not_in_fourth_quadrant (f : ℝ → ℝ) : Prop :=
-  ∀ x y : ℝ, f x = y → ¬(x > 0 ∧ y < 0)
-
--- The main theorem
-theorem power_function_quadrant_propositions :
-  let P : (ℝ → ℝ) → Prop := λ f => is_power_function f → not_in_fourth_quadrant f
-  let contrapositive : (ℝ → ℝ) → Prop := λ f => ¬(not_in_fourth_quadrant f) → ¬(is_power_function f)
-  let converse : (ℝ → ℝ) → Prop := λ f => not_in_fourth_quadrant f → is_power_function f
-  let inverse : (ℝ → ℝ) → Prop := λ f => ¬(is_power_function f) → ¬(not_in_fourth_quadrant f)
-  (∀ f : ℝ → ℝ, P f) ∧
-  (∀ f : ℝ → ℝ, contrapositive f) ∧
-  ¬(∀ f : ℝ → ℝ, converse f) ∧
-  ¬(∀ f : ℝ → ℝ, inverse f) :=
-by sorry
-
-end power_function_quadrant_propositions_l3810_381030
-
-
-namespace marj_wallet_remaining_l3810_381008
-
-/-- Calculates the remaining money in Marj's wallet after expenses --/
-def remaining_money (initial_usd : ℚ) (initial_euro : ℚ) (initial_pound : ℚ) 
-  (euro_to_usd : ℚ) (pound_to_usd : ℚ) (cake_cost : ℚ) (gift_cost : ℚ) (donation : ℚ) : ℚ :=
-  initial_usd + initial_euro * euro_to_usd + initial_pound * pound_to_usd - cake_cost - gift_cost - donation
-
-/-- Theorem stating that Marj will have $64.40 left in her wallet after expenses --/
-theorem marj_wallet_remaining : 
-  remaining_money 81.5 10 5 1.18 1.32 17.5 12.7 5.3 = 64.4 := by
+theorem smallest_marble_count :
+  ∃ (n : ℕ), is_valid_marble_count n ∧ ∀ (m : ℕ), is_valid_marble_count m → n ≤ m :=
+by
+  use 3698
   sorry
 
-end marj_wallet_remaining_l3810_381008
+end NUMINAMATH_CALUDE_smallest_marble_count_l3810_381081
 
 
-namespace smallest_three_digit_palindrome_non_palindromic_product_l3810_381085
+namespace NUMINAMATH_CALUDE_min_value_of_f_l3810_381034
 
-/-- A function that checks if a number is a three-digit palindrome -/
-def isThreeDigitPalindrome (n : ℕ) : Prop :=
-  100 ≤ n ∧ n ≤ 999 ∧ (n / 100 = n % 10)
+open Real
 
-/-- A function that checks if a number is a five-digit palindrome -/
-def isFiveDigitPalindrome (n : ℕ) : Prop :=
-  10000 ≤ n ∧ n ≤ 99999 ∧ (n / 10000 = n % 10) ∧ ((n / 1000) % 10 = (n / 10) % 10)
+noncomputable def f (x : ℝ) := 2 * x - log x
 
-/-- The main theorem stating that 707 is the smallest three-digit palindrome
-    whose product with 103 is not a five-digit palindrome -/
-theorem smallest_three_digit_palindrome_non_palindromic_product :
-  (∀ n : ℕ, isThreeDigitPalindrome n ∧ n < 707 → isFiveDigitPalindrome (n * 103)) ∧
-  isThreeDigitPalindrome 707 ∧
-  ¬isFiveDigitPalindrome (707 * 103) :=
+theorem min_value_of_f :
+  ∃ (x : ℝ), x ∈ Set.Ioo 0 (exp 1) ∧
+  (∀ (y : ℝ), y ∈ Set.Ioo 0 (exp 1) → f y ≥ f x) ∧
+  f x = 1 + log 2 := by
+  sorry
+
+end NUMINAMATH_CALUDE_min_value_of_f_l3810_381034
+
+
+namespace NUMINAMATH_CALUDE_power_sum_equality_l3810_381033
+
+theorem power_sum_equality (a b : ℕ+) (h1 : 2^(a:ℕ) = 8^(b:ℕ)) (h2 : a + 2*b = 5) :
+  2^(a:ℕ) + 8^(b:ℕ) = 16 := by
+  sorry
+
+end NUMINAMATH_CALUDE_power_sum_equality_l3810_381033
+
+
+namespace NUMINAMATH_CALUDE_fraction_equivalence_l3810_381086
+
+theorem fraction_equivalence : 
+  ∃ (n : ℤ), (4 + n) / (7 + n) = 6 / 7 :=
+by
+  use 14
+  sorry
+
+end NUMINAMATH_CALUDE_fraction_equivalence_l3810_381086
+
+
+namespace NUMINAMATH_CALUDE_quadratic_inequality_solution_sets_l3810_381073
+
+theorem quadratic_inequality_solution_sets 
+  (a b c : ℝ) 
+  (h1 : ∀ x, ax^2 + b*x + c ≥ 0 ↔ -1/3 ≤ x ∧ x ≤ 2) :
+  ∀ x, c*x^2 + b*x + a < 0 ↔ -3 < x ∧ x < 1/2 :=
+by sorry
+
+end NUMINAMATH_CALUDE_quadratic_inequality_solution_sets_l3810_381073
+
+
+namespace NUMINAMATH_CALUDE_road_repair_hours_l3810_381047
+
+/-- Given that 39 persons can repair a road in 12 days working h hours a day,
+    and 30 persons working 6 hours a day can complete the same work in 26 days,
+    prove that h = 10. -/
+theorem road_repair_hours (h : ℝ) : 
+  39 * h * 12 = 30 * 6 * 26 → h = 10 := by
 sorry
 
-end smallest_three_digit_palindrome_non_palindromic_product_l3810_381085
+end NUMINAMATH_CALUDE_road_repair_hours_l3810_381047
+
+
+namespace NUMINAMATH_CALUDE_birds_and_storks_l3810_381002
+
+/-- Given a fence with birds and storks, prove that the initial number of birds
+    is equal to the initial number of storks plus 3. -/
+theorem birds_and_storks (initial_birds initial_storks : ℕ) : 
+  initial_storks = 3 → 
+  (initial_birds + initial_storks + 2 = initial_birds + 1) → 
+  initial_birds = initial_storks + 3 := by
+sorry
+
+end NUMINAMATH_CALUDE_birds_and_storks_l3810_381002
+
+
+namespace NUMINAMATH_CALUDE_unitsDigitOfSumOfSquares2023_l3810_381050
+
+/-- The units digit of the sum of the squares of the first n odd, positive integers -/
+def unitsDigitOfSumOfSquares (n : ℕ) : ℕ :=
+  (n * 1 + n * 9 + (n / 2 + n % 2) * 5) % 10
+
+/-- The theorem stating that the units digit of the sum of the squares 
+    of the first 2023 odd, positive integers is 5 -/
+theorem unitsDigitOfSumOfSquares2023 : 
+  unitsDigitOfSumOfSquares 2023 = 5 := by
+  sorry
+
+#eval unitsDigitOfSumOfSquares 2023
+
+end NUMINAMATH_CALUDE_unitsDigitOfSumOfSquares2023_l3810_381050
+
+
+namespace NUMINAMATH_CALUDE_rectangle_area_perimeter_l3810_381048
+
+/-- Represents a rectangle with given length and width -/
+structure Rectangle where
+  length : ℝ
+  width : ℝ
+
+/-- Calculates the area of a rectangle -/
+def area (r : Rectangle) : ℝ := r.length * r.width
+
+/-- Calculates the perimeter of a rectangle -/
+def perimeter (r : Rectangle) : ℝ := 2 * (r.length + r.width)
+
+/-- Theorem: A rectangle with length 5 and width 3 has area 15 and perimeter 16 -/
+theorem rectangle_area_perimeter :
+  let r : Rectangle := ⟨5, 3⟩
+  area r = 15 ∧ perimeter r = 16 := by
+  sorry
+
+end NUMINAMATH_CALUDE_rectangle_area_perimeter_l3810_381048
+
+
+namespace NUMINAMATH_CALUDE_simple_interest_calculation_l3810_381029
+
+/-- Simple interest calculation -/
+theorem simple_interest_calculation
+  (principal : ℝ)
+  (rate : ℝ)
+  (time : ℝ)
+  (h1 : principal = 400)
+  (h2 : rate = 15)
+  (h3 : time = 2) :
+  (principal * rate * time) / 100 = 60 :=
+by sorry
+
+end NUMINAMATH_CALUDE_simple_interest_calculation_l3810_381029
+
+
+namespace NUMINAMATH_CALUDE_B_is_largest_l3810_381032
+
+def A : ℚ := 2010 / 2009 + 2010 / 2011
+def B : ℚ := 2010 / 2011 + 2012 / 2011
+def C : ℚ := 2011 / 2010 + 2011 / 2012
+
+theorem B_is_largest : B > A ∧ B > C := by
+  sorry
+
+end NUMINAMATH_CALUDE_B_is_largest_l3810_381032
+
+
+namespace NUMINAMATH_CALUDE_equal_edge_length_relation_l3810_381001
+
+/-- Represents a hexagonal prism -/
+structure HexagonalPrism :=
+  (edge_length : ℝ)
+  (total_edge_length : ℝ)
+  (h_total : total_edge_length = 18 * edge_length)
+
+/-- Represents a quadrangular pyramid -/
+structure QuadrangularPyramid :=
+  (edge_length : ℝ)
+  (total_edge_length : ℝ)
+  (h_total : total_edge_length = 8 * edge_length)
+
+/-- 
+Given a hexagonal prism and a quadrangular pyramid with equal edge lengths,
+if the total edge length of the hexagonal prism is 81 cm,
+then the total edge length of the quadrangular pyramid is 36 cm.
+-/
+theorem equal_edge_length_relation 
+  (prism : HexagonalPrism) 
+  (pyramid : QuadrangularPyramid) 
+  (h_equal_edges : prism.edge_length = pyramid.edge_length) 
+  (h_prism_total : prism.total_edge_length = 81) : 
+  pyramid.total_edge_length = 36 := by
+  sorry
+
+end NUMINAMATH_CALUDE_equal_edge_length_relation_l3810_381001
+
+
+namespace NUMINAMATH_CALUDE_problem_solution_l3810_381062
+
+theorem problem_solution (x y : ℝ) 
+  (h1 : x * y + x + y = 17) 
+  (h2 : x^2 * y + x * y^2 = 66) : 
+  x^4 + x^3 * y + x^2 * y^2 + x * y^3 + y^4 = 12499 := by
+  sorry
+
+end NUMINAMATH_CALUDE_problem_solution_l3810_381062
+
+
+namespace NUMINAMATH_CALUDE_inequality_solution_one_inequality_solution_two_l3810_381094
+
+-- Part 1
+theorem inequality_solution_one : 
+  {x : ℝ | 1 < x^2 - 3*x + 1 ∧ x^2 - 3*x + 1 < 9 - x} = 
+  {x : ℝ | (-2 < x ∧ x < 0) ∨ (3 < x ∧ x < 4)} := by sorry
+
+-- Part 2
+def solution_set (a : ℝ) : Set ℝ :=
+  {x : ℝ | (x - a) / (x - a^2) < 0}
+
+theorem inequality_solution_two (a : ℝ) : 
+  (a = 0 ∨ a = 1 → solution_set a = ∅) ∧
+  (0 < a ∧ a < 1 → solution_set a = {x : ℝ | a^2 < x ∧ x < a}) ∧
+  ((a < 0 ∨ a > 1) → solution_set a = {x : ℝ | a < x ∧ x < a^2}) := by sorry
+
+end NUMINAMATH_CALUDE_inequality_solution_one_inequality_solution_two_l3810_381094
+
+
+namespace NUMINAMATH_CALUDE_unique_intersection_main_theorem_l3810_381020
+
+/-- The curve C generated by rotating P(t, √(2)t^2 - 2t) by 45° anticlockwise -/
+def C : Set (ℝ × ℝ) :=
+  {p : ℝ × ℝ | p.1^2 + 2*p.1*p.2 + p.2^2 - p.1 - 3*p.2 = 0}
+
+/-- The line y = -1/8 -/
+def L : Set (ℝ × ℝ) :=
+  {p : ℝ × ℝ | p.2 = -1/8}
+
+/-- The intersection of C and L is a singleton -/
+theorem unique_intersection : (C ∩ L).Finite ∧ (C ∩ L).Nonempty := by
+  sorry
+
+/-- The main theorem stating that y = -1/8 intersects C at exactly one point -/
+theorem main_theorem : ∃! p : ℝ × ℝ, p ∈ C ∧ p ∈ L := by
+  sorry
+
+end NUMINAMATH_CALUDE_unique_intersection_main_theorem_l3810_381020
+
+
+namespace NUMINAMATH_CALUDE_ababab_divisible_by_101_l3810_381051
+
+/-- Represents a 6-digit number of the form ababab -/
+def ababab_number (a b : Nat) : Nat :=
+  100000 * a + 10000 * b + 1000 * a + 100 * b + 10 * a + b
+
+/-- Theorem stating that 101 is a factor of any ababab number -/
+theorem ababab_divisible_by_101 (a b : Nat) (h : 0 < a ∧ a ≤ 9 ∧ b ≤ 9) :
+  101 ∣ ababab_number a b :=
+sorry
+
+end NUMINAMATH_CALUDE_ababab_divisible_by_101_l3810_381051
+
+
+namespace NUMINAMATH_CALUDE_policeman_catches_gangster_l3810_381026
+
+-- Define the square
+def Square := {p : ℝ × ℝ | -3 ≤ p.1 ∧ p.1 ≤ 3 ∧ -3 ≤ p.2 ∧ p.2 ≤ 3}
+
+-- Define the perimeter of the square
+def Perimeter := {p : ℝ × ℝ | (p.1 = -3 ∨ p.1 = 3) ∧ -3 ≤ p.2 ∧ p.2 ≤ 3} ∪
+                 {p : ℝ × ℝ | (p.2 = -3 ∨ p.2 = 3) ∧ -3 ≤ p.1 ∧ p.1 ≤ 3}
+
+-- Define the center of the square
+def Center : ℝ × ℝ := (0, 0)
+
+-- Define a vertex of the square
+def Vertex : ℝ × ℝ := (3, 3)
+
+-- Define the theorem
+theorem policeman_catches_gangster (u v : ℝ) (hu : u > 0) (hv : v > 0) :
+  ∃ (t : ℝ) (p g : ℝ × ℝ), t ≥ 0 ∧ p ∈ Square ∧ g ∈ Perimeter ∧ p = g ↔ u/v > 1/3 :=
+sorry
+
+end NUMINAMATH_CALUDE_policeman_catches_gangster_l3810_381026
+
+
+namespace NUMINAMATH_CALUDE_fixed_point_exponential_function_l3810_381013
+
+theorem fixed_point_exponential_function (a : ℝ) (h1 : a > 0) (h2 : a ≠ 1) :
+  let f : ℝ → ℝ := λ x => a^(2*x - 1) - 2
+  f (1/2) = -1 := by
+  sorry
+
+end NUMINAMATH_CALUDE_fixed_point_exponential_function_l3810_381013
