@@ -44,7 +44,7 @@ def main():
 
 
 # SOURCE_DIRECTORY = "NuminaMath/GPT"
-SOURCE_DIRECTORY = "NuminaMath/CLAUDE" 
+SOURCE_DIRECTORY = "NuminaMath/CLAUDE_EF" 
 
 
 if __name__ == "__main__":
